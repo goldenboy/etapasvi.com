@@ -1,0 +1,8 @@
+.htaccess
+.sf
+frontend_devdev.php
+www/cgi-bin
+www/uploads
+cache/
+#data/
+log/

@@ -1,0 +1,1 @@
+<?php include_partial('news/list', array('news_list'=>array($newsitem))); ?>

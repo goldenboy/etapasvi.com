@@ -1,0 +1,325 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+        <source>A message of Peace to our World today - eTapasvi.com</source>
+        <target>Poselství míru pro náš dnešní svět - eTapasvi.com</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Om Namo Guru Buddha Gyani</source>
+        <target>Om Namo Guru Buddha Gyani</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Please, enable JavaScript!</source>
+        <target>Prosím, JavaScript!</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Copyright</source>
+        <target>Copyright</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>All Rights Reserved</source>
+        <target>Všechna práva vyhrazena</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Home</source>
+        <target>Domů</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy</source>
+        <target>Malý Buddha</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Palden Dorje</source>
+        <target>Palden Dordže</target>
+      </trans-unit>      
+      <trans-unit id="1">
+        <source>Buddha Boy News</source>
+        <target>Malý Buddha Zprávy</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>News</source>
+        <target>Zprávy</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Palden Dorje Photo</source>
+        <target>Palden Dordže Fotografie</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Photo</source>
+        <target>Fotografie</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Ram Bahadur Bomjan Video</source>
+        <target>Ram Bahadur Bomjan Videa</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Video</source>
+        <target>Video</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Om Namo Guru Buddha Gyani Biography</source>
+        <target>Om Namo Guru Buddha Gyáni Životopis</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Biography</source>
+        <target>Životopis</target>
+      </trans-unit>      
+	  <trans-unit id="1">
+        <source>Teachings</source>
+        <target>Učení</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Encyclopedia</source>
+        <target>Encyklopedie</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy Live Stream</source>
+        <target>Malý Buddha Živé vysílání</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Live Stream</source>
+        <target>Živé vysílání</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Hall</source>
+        <target>Dharma Hall</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Social Tools</source>
+        <target>Sociální sítě</target>
+      </trans-unit>      
+      <trans-unit id="1">
+        <source>Other</source>
+        <target>Jiné</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Member</source>
+        <target>Členství</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Twitter</source>
+        <target>Twitter</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>LJ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Live Journal</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Feed</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Search</source>
+        <target>Hledat</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Contact Us</source>
+        <target>Kontakty</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Forum</source>
+        <target>Fórum</target>
+      </trans-unit>  
+      <trans-unit id="1">
+        <source>Blessing</source>
+        <target></target>
+      </trans-unit>  
+      <trans-unit id="1">
+        <source>FAQ</source>
+        <target></target>
+      </trans-unit>   
+      <trans-unit id="1">
+        <source>Translation Fundraising</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Audio</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Religious Forest</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
+        <target>Malý Buddha: Zprávy, Fotografie, Video, Životopis, Projevy. Ram Bahadur Bomjan: Meditující Malý Buddha z Nepálu. Palden Dordže: Poselství míru na náš dnešní svět.</target>
+      </trans-unit>
+
+<!-- form -->
+<!-- hint:login as username -->
+      <trans-unit id="7">
+        <source>Login </source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Password</source>
+        <target>Heslo</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Time Zone</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must be at least %min_length% characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must not exceed %max_length% characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must not exceed 20 characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Required</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email must be at least %min_length% characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email must not exceed %max_length% characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Invalid Email</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Password must not exceed %max_length% characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login is already in use, please choose another</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>E-mail is already in use, please choose another</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Please enter a valid email address</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must be alphanumeric (only letters and digits avaible)</source>
+        <target></target>
+      </trans-unit>
+
+<!-- _thinkingtime -->
+      <trans-unit id="7">
+        <source>Hello</source>
+        <target></target>
+      </trans-unit>
+
+<!-- _login -->
+      <trans-unit id="7">
+        <source>Remember me</source>
+        <target>Zapamatovat</target>
+      </trans-unit>
+
+<!-- comments -->
+      <trans-unit id="1">
+        <source>Add comment</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Please enter comment</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Error occurred posting comment</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Post</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>show/hide</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Comments</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe To Thread</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>If you choose to subscribe to a thread, you will be notified when someone posts a new comment to the article which you subscribed to. You can unsubscribe at any point by unchecking the subscription checkbox.</source>
+        <target></target>
+      </trans-unit>
+
+<!-- News _show -->
+      <trans-unit id="1">
+        <source>Read more</source>
+        <target>Čtěte více</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Comments</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Source</source>
+        <target></target>
+      </trans-unit>
+
+<!-- misc -->
+      <trans-unit id="1">
+        <source>Go to top</source>
+        <target>Nahoru</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Text</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Author</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>teaching</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Translated by</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Download</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Date</source>
+        <target></target>
+      </trans-unit>
+      
+<!-- audio -->
+      <trans-unit id="1">
+        <source>Size</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Duration</source>
+        <target></target>
+      </trans-unit>
+      
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,13 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Alert
+    theme:            default
+
+    list:
+      max_per_page: 100
+      display: [created_at, user_related_by_user_id, _item_type_name, item_id, item_lang, user_related_by_item_by_user, is_comment, _status_name]
+      sort: [created_at, desc]
+      object_actions:
+        _edit:
+        _delete:

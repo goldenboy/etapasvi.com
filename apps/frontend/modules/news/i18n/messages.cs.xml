@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - News - eTapasvi.com</source>
+        <target>Dharma Sangha - Zprávy - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- indexSuccess -->
+      <trans-unit id="1">
+        <source>Start from</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>newest</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>oldest</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>No News</source>
+        <target></target>
+      </trans-unit>
+
+<!-- mainSuccess -->
+      <trans-unit id="1">
+        <source>A message</source>
+        <target>Poselství</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>of Peace to our World today</source>
+        <target>míru pro náš dnešní svět</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Photos</source>
+        <target>Nejnovější Fotografie</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Video</source>
+        <target>Nejnovější Videa</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Audio</source>
+        <target>Nejnovější Audio</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>view all</source>
+        <target>zobrazit všechny</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe to News</source>
+        <target>Přihlásit se k novinkám</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe</source>
+        <target>Přihlásit</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Unsubscribe</source>
+        <target>Odhlásit</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>or</source>
+        <target>nebo</target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Original text</source>
+        <target>Původní text</target>
+      </trans-unit>
+      
+<!-- teachingsSuccess -->
+      <trans-unit id="1">
+        <source>Dharma Sangha - Teachings - eTapasvi.com</source>
+        <target>Dharma Sangha - Učení - eTapasvi.com</target>
+      </trans-unit>
+
+	  <trans-unit id="1">
+        <source>Dictionary</source>
+        <target>Slovník</target>
+      </trans-unit>
+     
+	 <trans-unit id="1">
+        <source>by Andy Good/LTJ</source>
+        <target>poskytnuté Andy Good/LTJ</target>
+      </trans-unit>
+
+<!-- feedSuccess -->
+      <trans-unit id="1">
+        <source>Feed - eTapasvi.com</source>
+        <target></target>
+      </trans-unit>  
+
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,107 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Text
+    theme:            default
+
+    list:
+      peer_method: doSelectWithI18n
+      max_per_page: 100
+      display: [id, =title, body]
+      object_actions:
+        _edit:
+
+    edit:
+
+      display:
+        "NONE":
+          - id
+        "EN":
+          - title_i18n_en
+          - body_i18n_en
+        "RU":
+          - title_i18n_ru
+          - body_i18n_ru
+        "CS":
+          - title_i18n_cs
+          - body_i18n_cs
+        "HU":
+          - title_i18n_hu
+          - body_i18n_hu
+        "PL":
+          - title_i18n_pl
+          - body_i18n_pl
+        "FR":
+          - title_i18n_fr
+          - body_i18n_fr         
+        "zh_CN":
+          - title_i18n_zh_CN
+          - body_i18n_zh_CN
+        "VI":
+          - title_i18n_vi
+          - body_i18n_vi         
+
+      fields:
+        title_i18n_en:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_en:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6	
+
+        title_i18n_ru:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_ru:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        title_i18n_cs:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_cs:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        title_i18n_hu:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_hu:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        title_i18n_pl:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_pl:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+          
+        title_i18n_fr:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_fr:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6          
+          
+        title_i18n_zh_cn:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_zh_cn:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6          
+          
+        title_i18n_vi:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_vi:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6

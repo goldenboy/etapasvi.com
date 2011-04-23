@@ -1,0 +1,16 @@
+rendering: ~
+security:  ~
+
+# insert your own filters here
+supercache:
+  class: sfSuperCacheFilter
+  param:
+    cache_dir: cache
+    with_host: false
+    check_lifetime: false
+    minify: true
+cache:   
+  enabled: false
+common:
+  class: sfCommonFilter
+execution: ~

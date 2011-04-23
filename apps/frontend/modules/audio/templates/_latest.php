@@ -1,0 +1,1 @@
+<?php include_partial('audio/list', array('audio_list'=>$audio_list)); ?>

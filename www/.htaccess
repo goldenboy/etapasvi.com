@@ -1,0 +1,78 @@
+Options +ExecCGI
+
+Action php-cgi /cgi-bin/php-wrapper-s3r.fcgi
+Action php5-cgi /cgi-bin/php-wrapper-s3r.fcgi
+AddHandler php5-cgi .php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule .* - [L]
+
+  # uncomment the following line, if you are having trouble
+  # getting no_script_name to work
+  #RewriteBase /
+
+  # we skip all files with .something
+  #RewriteCond %{REQUEST_URI} \..+$
+  #RewriteCond %{REQUEST_URI} !\.html$
+  #RewriteRule .* - [L]
+ 
+  RewriteCond %{HTTP:Accept-Language} ^ru.* [NC]
+  RewriteRule ^$ http://www.etapasvi.com/ru/ [L,R=301]
+
+  RewriteCond %{HTTP:Accept-Language} ^en.* [NC]
+  RewriteRule ^$ http://www.etapasvi.com/en/ [L,R=301]
+
+  RewriteCond %{HTTP:Accept-Language} ^cs.* [NC]
+  RewriteRule ^$ http://www.etapasvi.com/cs/ [L,R=301]
+
+  RewriteCond %{HTTP:Accept-Language} ^hu.* [NC]
+  RewriteRule ^$ http://www.etapasvi.com/hu/ [L,R=301]
+
+  RewriteCond %{HTTP:Accept-Language} ^pl.* [NC]
+  RewriteRule ^$ http://www.etapasvi.com/pl/ [L,R=301]
+
+  RewriteCond %{HTTP:Accept-Language} ^fr.* [NC]
+  RewriteRule ^$ http://www.etapasvi.com/fr/ [L,R=301]
+  
+  RewriteCond %{HTTP:Accept-Language} ^zh.* [NC]
+  RewriteRule ^$ http://www.etapasvi.com/zh_CN/ [L,R=301]  
+  
+  RewriteCond %{HTTP:Accept-Language} ^vi.* [NC]
+  RewriteRule ^$ http://www.etapasvi.com/vi/ [L,R=301]  
+  
+  RewriteCond %{HTTP:Accept-Language} ^es.* [NC]
+  RewriteRule ^$ http://www.etapasvi.com/es/ [L,R=301]
+  
+  RewriteCond %{HTTP:Accept-Language} ^it.* [NC]
+  RewriteRule ^$ http://www.etapasvi.com/it/ [L,R=301]
+
+  RewriteCond %{HTTP:Accept-Language} !^(en.*|ru.*|cs.*|hu.*|pl.*|fr.*|zh.*|vi.*|es.*|it.*) [NC]
+  RewriteRule ^$ http://www.etapasvi.com/en/ [L,R=301]
+
+  # /ru -> /ru/
+  RewriteCond %{REQUEST_URI} ^/(en|ru|cs|hu|pl|fr|zh_CN|vi|es|it)$ [NC]
+  RewriteRule ^ http://www.etapasvi.com%{REQUEST_URI}/ [L,R=301]
+
+  # stats
+  #RewriteCond %{REQUEST_URI} ^/(stats/|missing\.html|failed_auth\.html) [NC]
+  #RewriteRule . - [L]
+
+  # we check if the .html version is here (caching)
+  #RewriteRule ^$ index.html [QSA]
+  #RewriteRule ^([^.]+)$ $1.html [QSA]
+
+  #RewriteCond %{REQUEST_FILENAME} !-f  
+
+  # sfSuperCachePlugin 
+  RewriteCond %{REQUEST_METHOD} GET
+  RewriteCond %{DOCUMENT_ROOT}/cache/%{REQUEST_URI}i.html -f
+
+  RewriteRule ^(.*) cache/$1i.html [L]
+
+  # no, so we redirect to our front web controller 
+  RewriteRule ^(.*)$ frontfrontend.php [QSA,L]
+
+</IfModule>

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - News - eTapasvi.com</source>
+        <target>Dharma Sangha - Wydarzenia - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- indexSuccess -->
+      <trans-unit id="1">
+        <source>Start from</source>
+        <target>Zacznij od</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>newest</source>
+        <target>najnowszego</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>oldest</source>
+        <target>najstarszego</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>No News</source>
+        <target>Brak Wydarzeń</target>
+      </trans-unit>
+
+<!-- mainSuccess -->
+      <trans-unit id="1">
+        <source>A message</source>
+        <target>Przesłanie Pokoju </target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>of Peace to our World today</source>
+        <target>dla naszego dzisiejszego Świata</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Photos</source>
+        <target>Ostatnie Zdjęcia</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Video</source>
+        <target>Ostatnie Wideo</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Audio</source>
+        <target>Ostatnie Audio</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>view all</source>
+        <target>pokaż wszystkie</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe to News</source>
+        <target>Subskrybuj nowości</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe</source>
+        <target>Subskrybuj</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Unsubscribe</source>
+        <target>Wypisz</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>or</source>
+        <target>lub</target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Original text</source>
+        <target>Tekst źródłowy</target>
+      </trans-unit>
+
+<!-- teachingsSuccess -->
+      <trans-unit id="1">
+        <source>Dharma Sangha - Teachings - eTapasvi.com</source>
+        <target></target>
+      </trans-unit>  
+
+	  <trans-unit id="1">
+        <source>Dictionary</source>
+        <target></target>
+      </trans-unit>	  
+
+	 <trans-unit id="1">
+        <source>by Andy Good/LTJ</source>
+        <target></target>
+      </trans-unit>
+      
+<!-- feedSuccess -->
+      <trans-unit id="1">
+        <source>Feed - eTapasvi.com</source>
+        <target></target>
+      </trans-unit>  
+
+    </body>
+  </file>
+</xliff>

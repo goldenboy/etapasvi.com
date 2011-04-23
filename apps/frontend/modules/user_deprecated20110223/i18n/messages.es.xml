@@ -1,0 +1,240 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Member - eTapasvi.com</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Member - Sign up - eTapasvi.com</source>
+        <target>Usuario - Registrarse - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - Login - eTapasvi.com</source>
+        <target>Usuario - Ingresar - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - Login or Sign up - eTapasvi.com</source>
+        <target>Usuario - Ingresar o Registrarse - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - Profile - eTapasvi.com</source>
+        <target>Usuario - Perfil - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - eTapasvi.com</source>
+        <target>Usuario - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - Forgot Password? - eTapasvi.com</source>
+        <target>Usuario - Olvidó su Contraseña - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - New Password - eTapasvi.com</source>
+        <target>Usuario - Nueva Contraseña - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- profileSuccess -->
+      <trans-unit id="7">
+        <source>Profile</source>
+        <target>Perfil</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Profile has been successfully updated</source>
+        <target>El perfil ha sido actualizado exitosamente</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must be at least 2 characters</source>
+        <target>El nombre de usuario debe de ser de al menos 2 caracteres</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Leave these fields blank to keep current password</source>
+        <target>Deje estos espacios en blanco para mantener la contraseña actual</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Confirm Password</source>
+        <target>Confirmar Contraseña </target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Passwords do not match</source>
+        <target>Las contraseñas no coinciden</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Save</source>
+        <target>Guardar</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Subscribe to</source>
+        <target>Suscribirse a</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Manage Subscriptions</source>
+        <target>Administrar Suscripciones</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>show/hide subscriptions</source>
+        <target>mostrar/esconder suscripciones</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Language</source>
+        <target>Idioma</target>
+      </trans-unit>
+
+<!-- _login -->
+      <trans-unit id="7">
+        <source>Wrong login or password</source>
+        <target>Nombre de usuario o contraseña incorrecta</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Enter login</source>
+        <target>Ingrese su nombre de usuario</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Password</source>
+        <target>Contraseña</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Enter password</source>
+        <target>Ingresar contraseña</target>
+      </trans-unit>
+
+<!-- loginorsignupSuccess -->
+      <trans-unit id="7">
+        <source>Login or Sign Up</source>
+        <target>Ingresar o Registrarse</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Back</source>
+        <target>Regresar</target>
+      </trans-unit>
+
+<!-- _signup -->
+      <trans-unit id="7">
+        <source>Confirm Password</source>
+        <target>Confirmar Contraseña</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Passwords do not match</source>
+        <target>Las contraseñas no coinciden</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Sign Up</source>
+        <target>Registrarse</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Incorrect code</source>
+        <target>Código incorrecto</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Profile URL</source>
+        <target>Perfil</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>(optional)</source>
+        <target>(opcional)</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Example</source>
+        <target>Ejemplo</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Please enter a valid URL</source>
+        <target>Por favor, introduzca una URL válida</target>
+      </trans-unit>
+
+<!-- signupSuccess -->
+
+<!-- signedupSuccess -->
+<!--
+      <trans-unit id="7">
+        <source>you have been successfully registered</source>
+        <target>usted se ha registrado exitosamente</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>You can talk to other users on</source>
+        <target>Usted puede hablar con otros usuarios en</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Forum </source>
+        <target>Forum</target>
+      </trans-unit>
+-->
+<!-- loginSuccess -->
+      <trans-unit id="7">
+        <source>Sign  up</source>
+        <target>Registrarse</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source> if you do not have an account</source>
+        <target>si usted ya tiene una cuenta</target>
+      </trans-unit>
+
+<!-- forgotpasswordSuccess -->
+      <trans-unit id="7">
+        <source>Forgot password?</source>
+        <target>Olvidó su contraseña?</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>To get a new Password for your account please enter E-mail</source>
+        <target>Para obtener una nueva contraseña para su cuenta, por favor ingrese su Correo Electrónico</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>A letter with further instructions has been sent to your e-mail</source>
+        <target>Un mensaje con más instrucciones ha sido enviado a su dirección de correo electrónico</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>User with e-mail</source>
+        <target>Usuario con e-mail</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>not found</source>
+        <target>no encontrado</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Remind</source>
+        <target>Recordar</target>
+      </trans-unit>
+
+<!-- newpasswordSuccess -->
+      <trans-unit id="7">
+        <source>Please enter the same password as above</source>
+        <target>Por favor ingrese la misma contraseña que arriba</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>New Password</source>
+        <target>Nueva Contraseña</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Your password successfully changed. Now you can</source>
+        <target>Su contraseña ha sido cambiada exitosamente. Ahora usted puede</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>login </source>
+        <target>ingresar</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Enter your new Password</source>
+        <target>Ingrese su nueva contraseña</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Passwords do not match</source>
+        <target>Las claves no coincided</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Confirm New Password</source>
+        <target>Confirmar la Nueva Contraseña</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Change</source>
+        <target>Cambiar</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,2 @@
+default:
+  stylesheets:    [/sf/sf_admin/css/main.css]

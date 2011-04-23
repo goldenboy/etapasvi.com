@@ -1,0 +1,17 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Subscribe
+    theme:            default
+
+    list:
+      max_per_page: 100
+      sort: [created_at, desc]
+      display: [created_at, user, item_id, _item_type_name, item_lang]
+      object_actions:
+        _edit:
+        _delete:
+
+    edit:
+      display:
+        "NONE": [created_at, user_id, item_id, item_type, item_lang]        

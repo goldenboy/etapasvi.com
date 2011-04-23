@@ -1,0 +1,19 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        eTapasvi
+    description:  Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.
+
+    #keywords:     symfony, project
+    #language:     en, ru
+    #robots:       index, follow
+
+  stylesheets:    [/css/css.css]
+#, /css/jquery.countdown.css]
+
+  javascripts:    [http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js, /js/js.js]
+#, jquery.countdown.min.js,
+  has_layout:     true
+  layout:         layout

@@ -1,0 +1,92 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Comments
+    theme:            default
+
+    list:
+#      peer_method: doSelectWithI18n
+      max_per_page: 5
+      sort: [created_at, desc]
+      filters: [user_id, show]
+      display: [ id, created_at, user, _user_email, _comment_text, _url, _full_url, _on_site, show ]
+      object_actions:
+        _edit:
+        _delete:
+
+    edit:
+      display:
+        "NONE": [ created_at, user_id, show, status ]
+        "EN":
+          - body_i18n_en
+        "RU":
+          - body_i18n_ru
+        "CZ":
+          - body_i18n_cz
+        "HU":
+          - body_i18n_hu
+        "PL":
+          - body_i18n_pl
+        "FR":
+          - body_i18n_fr
+        "zh_CN":
+          - body_i18n_zh_CN
+        "vi":
+          - body_i18n_vi
+        "de":
+          - body_i18n_de
+        "it":
+          - body_i18n_it
+        "JA":
+          - body_i18n_ja
+        "ES":
+          - body_i18n_es
+      fields:       
+        body_i18n_en:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_ru:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_cz:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_hu:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_pl:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_fr:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_zh_cn:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_vi:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_de:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_it:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_ja:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_es:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6

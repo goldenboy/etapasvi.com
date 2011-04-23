@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - News - eTapasvi.com</source>
+        <target>Dharma Sangha - Noticias - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- indexSuccess -->
+      <trans-unit id="1">
+        <source>No News</source>
+        <target>No hay Noticias</target>
+      </trans-unit>
+
+<!-- mainSuccess -->
+      <trans-unit id="1">
+        <source>A message</source>
+        <target>Un mensaje</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>of Peace to our World today</source>
+        <target>de Paz a nuestro Mundo hoy</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Photos</source>
+        <target>Fotos más recientes</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Video</source>
+        <target>Video más reciente</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Audio</source>
+        <target>Audio más reciente</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>view all</source>
+        <target>ver todos</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe to News</source>
+        <target>Gerast áskrifandi að Fréttir</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe</source>
+        <target>Gerast áskrifandi</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Unsubscribe</source>
+        <target>Segja upp áskrift</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>or</source>
+        <target>o</target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Original text</source>
+        <target>Texto original</target>
+      </trans-unit>
+      
+<!-- teachingsSuccess -->
+      <trans-unit id="1">
+        <source>Dharma Sangha - Teachings - eTapasvi.com</source>
+        <target>Dharma Sangha - Enseñanzas - eTapasvi.com</target>
+      </trans-unit>  
+
+	  <trans-unit id="1">
+        <source>Dictionary</source>
+        <target>Diccionario</target>
+      </trans-unit>	  
+
+	 <trans-unit id="1">
+        <source>by Andy Good/LTJ</source>
+        <target>por Andy Good/LTJ</target>
+      </trans-unit>
+
+<!-- feedSuccess -->
+      <trans-unit id="1">
+        <source>Feed - eTapasvi.com</source>
+        <target></target>
+      </trans-unit>  
+
+    </body>
+  </file>
+</xliff>      

@@ -1,0 +1,363 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="2">
+        <source>Idea of the Week - eTapasvi.com</source>
+        <target>Идея недели - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Idea of the Week - My - eTapasvi.com</source>
+        <target>Идея недели - Моя - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Idea of the Week - Idea - eTapasvi.com</source>
+        <target>Идея недели - Идея - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Idea of the Week - All - eTapasvi.com</source>
+        <target>Идея недели - Все - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Idea of the Week - Best - eTapasvi.com</source>
+        <target>Идея недели - Лучшая - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Think Right Now! - eTapasvi.com</source>
+        <target>Думай прямо сейчас! - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Idea of the Week - Archive - eTapasvi.com</source>
+        <target>Идея недели - Архив - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- mainSuccess -->
+      <trans-unit id="8">
+        <source>Our thoughts are powerful. One man alone can do</source>
+        <target>Сила мысли велика. Один человек способен творить</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Meditating Buddha Boy</source>
+        <target>Медитирующий Мальчик Будда</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>miracles</source>
+        <target>чудеса</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>using power of thought</source>
+        <target>с помощью мысли</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>What would happen if a lot of</source>
+        <target>А что если </target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Meditation Ideas</source>
+        <target>Идеи для медитации</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>people</source>
+        <target>люди</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>think about the same at one time? Let's check out</source>
+        <target>будут думать об одном и том же одновременно? Давайте проверим</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>This is global experiment, flashmob, collective consciousness, world meditation.</source>
+        <target>Это глобальный эксперимент, флэшмоб, коллективный разум, всемирная медитация.</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Spread the message of World Peace to all</source>
+        <target>Передавайте всем весть мира во всём Мире</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Time for thinking has come</source>
+        <target>Время думать пришло</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Please send this link to your relatives and friends</source>
+        <target>Пожалуйста отправляйте эту ссылку родным, близким, друзьям</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>How it Works</source>
+        <target>Как это работает</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Every week you offer</source>
+        <target>Каждую неделю вы предлагаете</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>new Idea</source>
+        <target>новую Идею</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Offer Idea for Meditation</source>
+        <target>Предложить Идею для медитации</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>You can offer</source>
+        <target>Вы можете предлагать</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>'Help my friend to survive after crash' or 'Stop Killing Animals for Fur'</source>
+        <target>'Помочь моему другу выжить после аварии' или 'Прекратить убийство животных для меха'</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>any Ideas</source>
+        <target>любые Идеи</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>excepting</source>
+        <target>за исключением</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>causing harm to someone</source>
+        <target>приносящих вред кому-либо</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>negative Ideas</source>
+        <target>негативных</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Every week you</source>
+        <target>Каждую неделю вы</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Vote for Idea</source>
+        <target>Голосовать за Идею</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>choose</source>
+        <target>выбираете</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>the best one</source>
+        <target>лучшую</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Every week we together think of one Idea at one time</source>
+        <target>Каждую неделю мы вместе думаем об одной Идее в одно время</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>When time for thinking has come</source>
+        <target>Когда пришло время думать</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Check</source>
+        <target>Узнайте</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Best meditation idea</source>
+        <target>Лучшая идея для медитации</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>the best Idea</source>
+        <target>лучшую Идею</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>of the week.</source>
+        <target>недели.</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Try to imagine the benefit of this Idea for all beings</source>
+        <target>Постарайтесь представить пользу этой Идеи для всех живых существ</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Think about this Idea for a few minutes dedicating the positive energy</source>
+        <target>Обдумывайте эту идею в течение нескольких минут, посылая в Мир позитивную энергию</target>
+      </trans-unit>
+
+<!-- newSuccess -->
+      <trans-unit id="7">
+        <source>Idea</source>
+        <target>Идея</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>New Idea</source>
+        <target>Новая Идея</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>You can create new Idea only once a week and you can't edit your Idea after creation.</source>
+        <target>Вы можете создавать новую Идею только раз в неделю и не сможете отредактировать её после создания.</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Please enter an Idea</source>
+        <target>Пожалуйста введите Идею</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Error occured creating an Idea</source>
+        <target>Произошла ошибка при создании Идеи</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Create</source>
+        <target>Создать</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Create an Idea</source>
+        <target>Создать Идею</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Please read the</source>
+        <target>Пожалуйста, прочтите</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>rules</source>
+        <target>правила</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>before creation.</source>
+        <target>перед созданием.</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Preview</source>
+        <target>Просмотр</target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="7">
+        <source>Your Idea</source>
+        <target>Ваша Идея</target>
+      </trans-unit>
+
+<!--  _show -->
+      <trans-unit id="7">
+        <source>Votes</source>
+        <target>Голоса</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Report abuse</source>
+        <target>Пожаловаться</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Vote FOR</source>
+        <target>Голосовать</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Show Medtation Idea</source>
+        <target>Показать Идею для медитации</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Comments</source>
+        <target>Комментарии</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Meditation Idea Comments</source>
+        <target>Комментарии к Идее для медитации</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Read more</source>
+        <target>Читать далее</target>
+      </trans-unit>
+
+<!-- indexSuccess -->
+      <trans-unit id="7">
+        <source>Total</source>
+        <target>Всего</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Order by</source>
+        <target>Сортировать по</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>date</source>
+        <target>дате</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>date</source>
+        <target>дате</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>votes</source>
+        <target>голосам</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Create an Idea</source>
+        <target>Создать Идею</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>No Ideas</source>
+        <target>Нет Идей</target>
+      </trans-unit>
+
+<!-- bestSuccess -->
+      <trans-unit id="7">
+        <source>Best Idea</source>
+        <target>Лучшая Идея</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>All Meditation Ideas</source>
+        <target>Все Идеи для медитации</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>All Ideas</source>
+        <target>Все Идеи</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Create an Idea for Meditation</source>
+        <target>Создать Идею для медитации</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>No best Idea</source>
+        <target>Нет лучшей Идеи</target>
+      </trans-unit>
+
+<!-- detailsSuccess -->
+      <trans-unit id="7">
+        <source>Idea of</source>
+        <target>Идея от</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Go to top</source>
+        <target>Наверх</target>
+      </trans-unit>
+
+<!-- detailsideaotherlangSuccess -->
+      <trans-unit id="7">
+        <source>Idea</source>
+        <target>Идея</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>have an Idea in another language</source>
+        <target>имеет Идею на другом языке</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Switch to another language or</source>
+        <target>Переключитесь на другой язык или</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>click here</source>
+        <target>нажмите здесь</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>to view an Idea</source>
+        <target>чтобы просмотреть Идею</target>
+      </trans-unit>
+
+<!-- ideaotherlangSuccess -->
+      <trans-unit id="7">
+        <source>You have an Idea in another language</source>
+        <target>У вас есть Идея на другом языке</target>
+      </trans-unit>
+
+<!-- thinkingnowSuccess -->
+      <trans-unit id="7">
+        <source>You can't create new Idea now. Please think about</source>
+        <target>Вы не можете сейчас создать Идею. Пожалуйста, подумайте об</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>this</source>
+        <target>этой</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Idea for a few minutes</source>
+        <target>Идее в течение нескольких минут</target>
+      </trans-unit>
+
+<!-- archiveSuccess -->
+
+    </body>
+  </file>
+</xliff>

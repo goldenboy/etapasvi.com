@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - Blessing - eTapasvi.com</source>
+        <target>Dharma Sangha - Bénédiction - eTapasvi.com</target>
+      </trans-unit>      
+
+     <trans-unit id="1">
+        <source>Though Dharma Sangha is extremely busy with his meditation approaching its final phase, Dharma Sangha is truly happy to bless everyone and has requested that we group together as much as possible to receive blessings in the most efficient manner.</source>
+        <target>Bien que Dharma Sangha soit très occupé avec sa méditation qui tire à sa fin, Il est vraiment très heureux de bénir tout le monde et nous a demandé de nous regrouper autant que possible pour recevoir les bénédictions de la manière la plus efficace.</target>
+      </trans-unit>     
+
+      <trans-unit id="1">
+        <source>You can send your photos, names and messages to</source>
+        <target>Vous pouvez envoyer vos photos, noms et des messages à</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>with subject "For blessing", Dharma Sangha will see all received requests and bless them.</source>
+        <target>avec le sujet «For blessing – Pour la bénédiction».  Dharma Sangha prendra le temps de regarder toutes les demandes reçues et de les bénir.</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

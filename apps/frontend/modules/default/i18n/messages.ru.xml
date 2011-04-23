@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated - eTapasvi.com</source>
+        <target>Страница не найдена или не переведена - eTapasvi.com</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated</source>
+        <target>Страница не найдена или не переведена</target>
+      </trans-unit> 
+      <trans-unit id="1">
+        <source>Error</source>
+        <target>Ошибка</target>
+      </trans-unit>    
+      <trans-unit id="1">
+        <source>Page Not Transalated</source>
+        <target>Страница не переведена</target>
+      </trans-unit> 
+	  <trans-unit id="1">
+        <source>If you can translate this page into your language please email us at</source>
+        <target>Если вы можете перевести страницу на ваш язык, пожалуйста напишите нам на</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Page Not Found</source>
+        <target>Страница не найдена</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>You may have typed the address (URL) incorrectly. Check it to make sure you've got the exact right spelling, capitalization or switch to another lamguage</source>
+        <target>Возможно вы неверно набрали адрес. Проверьте точность написания, регистр или переключитесь на другой язык</target>
+      </trans-unit>
+     
+      <trans-unit id="1">
+        <source>Back to previous page</source>
+        <target>К предыдущей странице</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

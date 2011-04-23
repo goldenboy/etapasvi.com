@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated - eTapasvi.com</source>
+        <target>Página No Encontrada o No Traducida - eTapasvi.com</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated</source>
+        <target>Página No Encontrada o No Traducida</target>
+      </trans-unit> 
+      <trans-unit id="1">
+        <source>Error</source>
+        <target>Error</target>
+      </trans-unit>    
+      <trans-unit id="1">
+        <source>Page Not Transalated</source>
+        <target>Página No Traducida</target>
+      </trans-unit> 
+	  <trans-unit id="1">
+        <source>If you can translate this page into your language please email us at</source>
+        <target>Si usted puede traducir esta página a su idioma por favor envíenos un mensaje de correo electrónico a</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Page Not Found</source>
+        <target>Página No Encontrada</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>You may have typed the address (URL) incorrectly. Check it to make sure you've got the exact right spelling, capitalization or switch to another lamguage</source>
+        <target>Usted puede haber excrito la dirección (URL) incorrectamente. Verifíquela para poder asegurarse de que no cometió fallas ortográficas, mayúsculas o que no cambió de idioma</target>
+      </trans-unit>
+     
+      <trans-unit id="1">
+        <source>Back to previous page</source>
+        <target>Regresar a la página anterior</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

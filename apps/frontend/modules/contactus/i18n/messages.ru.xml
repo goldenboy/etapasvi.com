@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Contact Us - eTapasvi.com</source>
+        <target>Контакты - eTapasvi.com</target>
+      </trans-unit>
+  
+      <trans-unit id="1">
+        <source>Official website</source>
+        <target>Официальный сайт</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>News and Teachings</source>
+        <target>Новости и учения</target>
+      </trans-unit>
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

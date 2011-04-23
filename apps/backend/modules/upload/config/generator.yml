@@ -1,0 +1,30 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Upload
+    theme:            default
+
+    list:
+      title: Upload
+      max_per_page: 50
+      display: [=id, title, _fullurl, _preview]
+      fields:
+        _code:
+        name: Link
+      object_actions:
+        _edit:
+        _delete:
+
+    edit:
+      display:
+        "NONE": [ title, url, _preview ]
+      fields:
+        url:
+          name: URL
+          type: admin_input_file_tag
+          upload_dir: all
+          params: 
+            include_link: all
+            include_remove: true
+        _preview:
+          name: File

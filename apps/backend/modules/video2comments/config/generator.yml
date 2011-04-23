@@ -1,0 +1,13 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Video2comments
+    theme:            default
+
+    list:
+      display: [video_id, comments_id, _comment_text]
+      filters:  [video_id]
+      sort: [comments_id, desc]
+      object_actions:
+        _edit:  ~
+        _delete: ~

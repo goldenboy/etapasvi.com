@@ -1,0 +1,31 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Timezone
+    theme:            default
+
+    list:
+      peer_method: doSelectWithI18n
+      max_per_page: 1000
+      display: [ id, value, title ]
+      object_actions:
+        _edit:
+        _delete:
+
+    edit:
+
+      display:
+        "NONE": [ value ]
+        "EN":
+          - title_i18n_en
+        "RU":
+          - title_i18n_ru
+
+      fields:       
+        title_i18n_en:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_ru:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"

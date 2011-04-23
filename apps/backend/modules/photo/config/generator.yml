@@ -1,0 +1,207 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Photo
+    theme:            default
+
+    list:
+      peer_method: doSelectWithI18n
+      max_per_page: 100000
+      sort: [order, asc]
+      filters: [photoalbum_id, show, img]
+      display: [=id, photoalbum, show, order, _img, img, title, created_at]
+      object_actions:
+        _edit:
+        _delete:
+
+    edit:
+      display:
+        "NONE": [photoalbum_id, show, order, img, _img, full_path, _full_link, preview_path, _preview_link, thumb_path, _thumb_link, created_at, link]
+        "EN":
+          - title_i18n_en
+          - body_i18n_en
+          - author_i18n_en
+        "RU":
+          - title_i18n_ru
+          - body_i18n_ru
+          - author_i18n_ru
+        "CS":
+          - title_i18n_cs
+          - body_i18n_cs
+          - author_i18n_cs
+        "HU":
+          - title_i18n_hu
+          - body_i18n_hu
+          - author_i18n_hu
+        "PL":
+          - title_i18n_pl
+          - body_i18n_pl
+          - author_i18n_pl
+        "FR":
+          - title_i18n_fr
+          - body_i18n_fr
+          - author_i18n_fr
+        "zh_CN":
+          - title_i18n_zh_CN
+          - body_i18n_zh_CN
+          - author_i18n_zh_CN
+        "VI":
+          - title_i18n_vi
+          - body_i18n_vi
+          - author_i18n_vi
+        "DE":
+          - title_i18n_de
+          - body_i18n_de
+          - author_i18n_de
+        "IT":
+          - title_i18n_it
+          - body_i18n_it
+          - author_i18n_it
+        "JA":
+          - title_i18n_ja
+          - body_i18n_ja
+          - author_i18n_ja
+        "ES":
+          - title_i18n_es
+          - body_i18n_es
+          - author_i18n_es
+      fields:
+        img:
+          name: Image
+          type: admin_input_file_tag
+          upload_dir: photo
+          params: 
+            include_link: photo
+            include_remove: true           
+        
+        title_i18n_en:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_en:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_en:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_ru:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_ru:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_ru:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_cs:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_cs:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_cs:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_hu:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_hu:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_hu:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_pl:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_pl:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_pl:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_fr:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_fr:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_fr:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_zh_cn:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_zh_cn:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_zh_cn:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_vi:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_vi:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_vi:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_de:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_de:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_de:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_it:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_it:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_it:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_ja:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_ja:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_ja:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_es:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_es:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_es:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"

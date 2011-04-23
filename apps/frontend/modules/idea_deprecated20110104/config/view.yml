@@ -1,0 +1,40 @@
+ideaoftheweekSuccess:
+  metas:
+    title:        Idea of the Week - eTapasvi.com
+
+newSuccess:
+  metas:
+    title:        Idea of the Week - My - eTapasvi.com
+  javascripts:    [/js/jquery.validate.min.js]
+
+showSuccess:
+  metas:
+    title:        Idea of the Week - My - eTapasvi.com
+
+indexSuccess:
+  metas:
+    title:        Idea of the Week - All - eTapasvi.com
+
+bestSuccess:
+  metas:
+    title:        Idea of the Week - Best - eTapasvi.com
+
+detailsSuccess:
+  metas:
+    title:        Idea of the Week - Idea - eTapasvi.com
+
+ideaotherlangSuccess:
+  metas:
+    title:        Idea of the Week - Idea - eTapasvi.com
+
+thinkingnowSuccess:
+  metas:
+    title:        Think Right Now! - eTapasvi.com
+
+archiveSuccess:
+  metas:
+    title:        Idea of the Week - Archive - eTapasvi.com
+
+archivedetailsSuccess:
+  metas:
+    title:        Idea of the Week - Archive - eTapasvi.com

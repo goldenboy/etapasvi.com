@@ -1,0 +1,23 @@
+mainSuccess:
+  metas:
+    title:        A message of Peace to our World today - eTapasvi.com
+
+indexSuccess:
+  metas:
+    title:        Dharma Sangha - News - eTapasvi.com
+
+showSuccess:
+  metas:
+    title:        Dharma Sangha - News - eTapasvi.com
+    
+teachingsSuccess:
+  metas:
+    title:        Dharma Sangha - Teachings - eTapasvi.com
+
+feedSuccess:
+  metas:
+    title:        Feed - eTapasvi.com
+
+rssSuccess:
+  has_layout:     off
+#  layout:         clear

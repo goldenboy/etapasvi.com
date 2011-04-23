@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - Teachings - eTapasvi.com</source>
+        <target>Дхарма Сангха - Учения - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Text</source>
+        <target>Текст</target>
+      </trans-unit>      
+
+	  <trans-unit id="1">
+        <source>Dictionary</source>
+        <target>Словарь</target>
+      </trans-unit>	  
+
+	 <trans-unit id="1">
+        <source>by Andy Good/LTJ</source>
+        <target>предоставлен Андреа Гуд/LTJ</target>
+      </trans-unit>
+     
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,13 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      User
+    theme:            default
+    list:
+      max_per_page: 10000
+      sort: [created_at, desc]
+      display: [=id, created_at, name, email, is_active, _ip, last_login, lang, phpbb_id]
+      filters: [name, email, lang ]
+      object_actions:
+        _edit:
+        _delete:

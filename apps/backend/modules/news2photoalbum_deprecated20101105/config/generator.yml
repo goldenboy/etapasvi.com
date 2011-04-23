@@ -1,0 +1,13 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      News2photoalbum
+    theme:            default
+
+    list:
+      filters:  [news_id, photoalbum_id]
+      sort: [news_id, desc]
+      display: [news_id, news, photoalbum_id, photoalbum]
+      object_actions:
+        _edit:  ~
+        _delete: ~

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated - eTapasvi.com</source>
+        <target>Strona nie znaleziona lub nie przetłumaczona - eTapasvi.com</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated</source>
+        <target>Strona nie znaleziona lub nie przetłumaczona</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Error</source>
+        <target>Błąd</target>
+      </trans-unit>    
+      <trans-unit id="1">
+        <source>Page Not Transalated</source>
+        <target>Strona nie przetłumaczona</target>
+      </trans-unit> 
+	  <trans-unit id="1">
+        <source>If you can translate this page into your language please email us at</source>
+        <target>Jeśli możesz przetłumaczyć tę stronę na twój język, proszę napisz do nas email na adres</target>
+      </trans-unit> 
+      <trans-unit id="1">
+        <source>Page Not Found</source>
+        <target>Strona nie znaleziona</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>You may have typed the address (URL) incorrectly. Check it to make sure you've got the exact right spelling, capitalization or switch to another lamguage</source>
+        <target>Być może adres (URL) nie został prawidłowo wprowadzony. Sprawdź, czy go prawidłowo przeliterowałeś, z małej czy dużej litery, lub zmień język.</target>
+      </trans-unit>  
+
+
+    </body>
+  </file>
+</xliff>

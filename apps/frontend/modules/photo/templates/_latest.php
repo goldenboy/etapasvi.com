@@ -1,0 +1,1 @@
+<?php include_partial('photo/list', array('photo_list'=>$photo_list)); ?>

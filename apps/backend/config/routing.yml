@@ -1,0 +1,19 @@
+#sf_job_queue:
+#  url:   /sf_job_queue
+#  param: { module: sfJobQueue, action: index }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: news, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+
+#sf_guard_signout:
+#  url:   /logout
+#  param: { module: sfGuardAuth, action: signout }

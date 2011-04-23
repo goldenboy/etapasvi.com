@@ -1,0 +1,1498 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - Encyclopedia - eTapasvi.com</source>
+        <target>Dharma Sangha - Encyklopedia - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Encyclopedia</source>
+        <target>Encyklopedia</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Gautama Buddha (Siddhartha, Sakyamuni, Tathagata)</source>
+        <target>Gautama Budda (Siddhartha, Siakjamuni, Tathagata)</target>
+      </trans-unit> 
+    
+      <trans-unit id="1">
+        <source>Ten Characteristics of Buddha</source>
+        <target>Dziesięć Atrybutów Buddy</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Middle Way</source>
+        <target>Środkowa Droga</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Four Noble Truths</source>
+        <target>Cztery Szlachetne Prawdy</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Noble Eightfold Path</source>
+        <target>Ośmiokrotna Ścieżka</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Three marks of existence</source>
+        <target>Trzy cechy egzystencji</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Ten negative actions</source>
+        <target></target>
+      </trans-unit>  
+      
+      <trans-unit id="1">
+        <source>Samsara</source>
+        <target>Samsara</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Nirvana</source>
+        <target>Nirwana</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Parinirvana</source>
+        <target>Parinirwana</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Moksha</source>
+        <target>Moksza</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Klesha</source>
+        <target>Splamienia (Klesha)</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Mara</source>
+        <target>Mara</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Dharma</source>
+        <target>Dharma</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Sangha</source>
+        <target>Sangha</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Refuge</source>
+        <target>Schronienie</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Schools and traditions of Buddhism</source>
+        <target>Szkoły i tradycje Buddyzmu</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Mahayana ("Great Vehicle")</source>
+        <target>Mahayana ("Wielki Pojazd")</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Tibetan Buddhism</source>
+        <target>Tybetański Buddyzm</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Vajrayana</source>
+        <target>Vadżrajana</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>The Sakya Tradition in Tibetan Buddhism</source>
+        <target>Tradycja Sakja Buddyzmu Tybetańskiego</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Tamang</source>
+        <target>Tamang</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Tummo</source>
+        <target>Tummo</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Bodhisattva</source>
+        <target>Bodhisattva</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Six paramitas (perfections)</source>
+        <target>Sześć paramit (doskonałości)</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Dhyana</source>
+        <target>Dhyana</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Arhat</source>
+        <target>Arhat</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Samyak Sambodhi (Anuttara-samyak-sambodhi)</source>
+        <target>Samyak Sambodhi (Anuttara-samyak-sambodhi)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Maitreya</source>
+        <target>Maitreya</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Asanga</source>
+        <target>Asanga</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>The future coming of Maitreya</source>
+        <target>Przyszłe nadejście Maitreyi</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Atman (Buddhism)</source>
+        <target>Atman (Buddyzm)</target>
+      </trans-unit>       
+
+	  <trans-unit id="1">
+        <source>Atman (Hinduism)</source>
+        <target>Atman (Hinduizm)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Paramatman (Supersoul)</source>
+        <target>Paramatman (Naddusza)</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>God in Buddhism</source>
+        <target>Bóg w Buddyzmie</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Bhagavan</source>
+        <target>Бхагаван</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Gyani</source>
+        <target>Gyani</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Kali Yuga</source>
+        <target>Kalijuga</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Kunchusum</source>
+        <target>Kunchusum</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Siddhartha Gautama, also known as Sakyamuni or Shakyamuni  ("sage of the Sakyas"), or Tathagata ("one who has thus gone" and "one who has thus come") was a spiritual teacher who founded Buddhism.</source>
+        <target>Siddhartha Gautama, znany również jako Sakyamuni lub Shakyamuni ("mędrzec rodu Sakya), lub Tathagata ("ten, który tak odszedł" i "ten, który tak przybył") był duchowym nauczycielem, który zapoczątkował Buddyzm.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Gautama was born in 563 BCE in Lumbini (modern day Nepal). His mother was Queen Maya Devi. On the night Gautama was conceived, she dreamt that a white elephant with six white tusks entered her right side, and ten months later Gautama was born. Various sources hold that the Buddha's mother died at his birth, a few days or seven days later. The infant was given the name Siddhartha, meaning "he who achieves his aim". During the birth celebrations, the hermit seer Asita announced that the child would either become a great king or a great holy man.</source>
+        <target>Gautama urodził się w 563 p.n.e. w Lumbini (dzisiejszy Nepal). Jego matką była Królowa Maya Devi. Tej nocy, kiedy Gautama został poczęty śniła, że biały słoń z sześcioma białymi kłami wszedł w jej prawy bok, a dziesięć miesięcy później urodził się Gautama. Wiele źródeł podaje, że matka Buddy zmarła przy jego narodzinach, kilka dni, lub 7 dni później. Noworodkowi nadano imię Siddhartha, znaczące "ten, który osiąga swój cel". Podczas świętowania urodzin, jasnowidz pustelnik Asita ogłosił, że dziecko to zostanie albo wielkim królem, albo wielkią świętobliwością.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Siddhartha, said to have been destined to a luxurious life as a prince, had three palaces (for seasonal occupation) especially built for him. His father, King Suddhodana, wishing for Siddhartha to be a great king, shielded his son from religious teachings or knowledge of human suffering.</source>
+        <target>Siddhartha, któremu przeznaczone było luksusowe życie księcia, miał trzy pałace (na sezonowe zajęcia) specjalnie dla niego wybudowane. Jego ojciec, Król Suddhodana, życzący sobie, by Siddhartha został wielkim królem, chronił syna od religijnych nauk czy wiedzy o ludzkim cierpieniu.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>At the age of 29, Siddhartha left his palace in order to meet his subjects. Siddhartha was said to have seen an old man. Disturbed by this, when told that all people would eventually grow old by his charioteer Channa, the prince went on further trips where he encountered, variously, a diseased man, a decaying corpse, and an ascetic. Deeply depressed by these sights, he sought to overcome old age, illness, and death by living the life of an ascetic.</source>
+        <target>W wieku 29 lat, Siddhartha opuścił swój pałac w celu spotkania się ze swymi poddanymi. Zobaczywszy staruszka, Siddhartha posmutniał. Poruszony tym, gdy dowiedział się od swego woźnicy, że wszyscy ludzie ostatecznie zestarzeją się, książę kontynuował dalsze podróże, podczas których napotkał schorowanego człowieka, rozkładające się ciało i ascetę. Głęboko przygnębiony tymi widokami, szukał sposobów na przezwyciężenie starości, choroby i śmierci, żyjąc jak asceta.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>After asceticism and concentrating on meditation Siddhartha is said to have discovered what Buddhists call the Middle Way. Sitting under a pipal tree, now known as the Bodhi tree, he vowed never to arise until he had found the Truth. At the age of 35, he attained enlightenment in the fifth lunar month. Gautama, from then on, was known as the Buddha or "Awakened One." Buddha is also sometimes translated as "The Enlightened One."</source>
+        <target>Po ascetyźmie i koncentrowaniu się na medytacji, Siddhartha odkrył to, co buddyści nazywają Środkową Drogą. Siedząc pod drzewem figowym, znanym teraz jako drzewo Bodhi, przysiągł nie powstać dopóki nie odnajdzie Prawdy. W wieku 35 lat, doznał oświecenia w piątym miesiącu księżycowym. Gautama, od tego czasu znany jest jako Budda lub "Przebudzony". Budda jest również często tłumaczony jako "Oświecony".</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>At this point, he is believed to have realized complete awakening and insight into the nature and cause of human suffering which was ignorance, along with steps necessary to eliminate it. This was then categorized into "Four Noble Truths"; the state of supreme liberation — possible for any being — was called Nirvana. He then allegedly came to possess the Ten Characteristics, which are said to belong to every Buddha.</source>
+        <target>Uważa się, że w tym momencie Gautama Budda doznał całkowitego przebudzenia i zrozumienia natury i powodu ludzkiego cierpienia, którym była niewiedza, wespół z krokami koniecznymi do jej eliminacji. Później zostało to sformułowane w "Cztery Szlachetne Prawdy"; stan najwyższego wyzwolenia - możliwego dla każdej istoty - nazwano Nirwana. Następnie, domniemuje się, że doszedł do posiadania Dziesięciu Atrybutów, które przypisuje się każdemu Buddzie.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>thus gone (tathāgata)</source>
+        <target>tak odszedłszy (tathāgata)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>a worthy one (arhat)</source>
+        <target>godny (arhat)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>perfectly self-enlightened (samyak-sambuddha)</source>
+        <target>doskonale samo-oświecony (samyak-sambuddha)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>perfected in knowledge and conduct (vidyā-carana-sampanna )</source>
+        <target>udoskonalony w wiedzy i zachowaniu (vidyā-carana-sampanna)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>well gone (sugata)</source>
+        <target>odszedłszy daleko</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>unsurpassed (anuttara)</source>
+        <target>niezwyciężony (anuttara)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>knower of the world (loka-vid)</source>
+        <target>znawca świata (loka-vid)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>leader of persons to be tamed (purusa-damya-sārathi)</source>
+        <target>przewodzący osobami wymagającymi poskromienia (purusa-damya-sārathi)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>teacher of the gods and humans (śāsta deva-manusyānam)</source>
+        <target>nauczyciel bogów i ludzi(śāsta deva-manusyānam)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>the Blessed One or fortunate one (bhagavat)</source>
+        <target>Błogosławiony lub mający szczęście (bhagavat)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Buddhism teaches a Middle Way, i.e. avoiding the extreme views of eternalism and nihilism.</source>
+        <target>Buddyzm uczy Środkowej Drogi, to jest unikania ekstremalnych poglądów na temat eternalizmu i nihilizmu.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Four Noble Truths formulated by Sakyamuni Buddha</source>
+        <target>Cztery Szlachetne Prawdy sformułowane przez Buddę Sakyamuni</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Nature of Suffering.</source>
+        <target>Natura Cierpienia</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Birth is suffering, aging is suffering, illness is suffering, death is suffering; sorrow, lamentation, pain, grief and despair are suffering; union with what is displeasing is suffering; separation from what is pleasing is suffering; not to get what one wants is suffering. In brief, the five aggregates subject to clinging are suffering.</source>
+        <target>Narodziny są cierpieniem, starzenie się jest cierpieniem, choroba jest cierpieniem, śmierć jest cierpieniem; smutek, narzekanie, ból, żal i rozpacz są cierpieniem; związek z czymś nieprzyjemnym jest cierpieniem; separacja od czegoś przyjemnego jest cierpieniem; nie otrzymanie czegoś, czego się pragnie jest cierpieniem. Krótko, tych pięć agregatów podlegających przylgnięciu jest cierpieniem.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Suffering's Origin.</source>
+        <target>Źródło cierpienia</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Cause of suffering is craving, which leads to a cycle of birth and death (samsara). The source of suffering is attachment and hatred. All the rest detrimental emotions are usually generated by them. Their effects lead to suffering. The source of attachment and hatred is ignorance, ignorance of the true nature of all beings and inanimate objects. This is not simply a consequence of a lack of knowledge, but a false world view, wrong understanding of reality.</source>
+        <target>Powodem cierpienia jest pragnienie, które prowadzi do cyklu narodzin i śmierci (samsara). Źródłem cierpienia jest przywiązanie i nienawiść. Wszystkie pozostałe szkodliwe emocje są zazwyczaj przez nie generowane. Ich skutki prowadzą do cierpienia. Źródłem przywiązania i nienawiści jest niewiedza, nieznajomość prawdziwej natury wszystkich istot i rzeczy nieożywionych . Nie jest to po prostu konsekwencją braku wiedzy, lecz fałszywą wizją świata, błędnym rozumieniem rzeczywistości.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Suffering's Cessation.</source>
+        <target>Ustanie cierpienia</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>State, in which there is no suffering, is achievable. Elimination of attachment, hatred, envy, and intolerance is the way to a state beyond suffering.</source>
+        <target>Stan, w którym nie ma cierpienia, jest osiągalny. Wyeliminowanie przywiązania, nienawiści, zazdrości i nietolerancji jest drogą do stanu ponad cierpieniem.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Way (marga) Leading to the Cessation of Suffering.</source>
+        <target>Droga (marga) prowadząca do ustania cierpienia.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>It is the Noble Eightfold Path.</source>
+        <target>Jest to Szlachetna Ośmiokrotna Ścieżka.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Noble Eightfold Path is one of the principal teachings of the Buddha, who described it as the way leading to the cessation of suffering (dukkha) and the achievement of self-awakening. It is used to develop insight into the true nature of phenomena (or reality) and to eradicate greed, hatred, and delusion. The Noble Eightfold Path is the fourth of the Buddha's Four Noble Truths; the first element of the Noble Eightfold Path is, in turn, an understanding of the Four Noble Truths. It is also known as the Middle Path or Middle Way.</source>
+        <target>Ośmiokrotna Ścieżka jest jedną z głównych nauk Buddy, który określił ją jako drogę prowadzącą do ustania cierpienia (dukkha) i osiągnięcia swego przebudzenia. Jest ona praktykowana do rozwinięcia zrozumienia istoty prawdziwej natury zjawisk (lub rzeczywistości) i do wyeliminowania chciwości, nienawiści i złudzenia. Szlachetna Ośmiokrotna Ścieżka jest czwartą z Czterech Szlachetnych Prawd Buddy; pierwszym elementem Szlachetnej Ośmiokrotnej Ścieżki jest, z kolei, rozumienie Czterech Szlachetnych Prawd. Jest to również znane jako Środkowa Ścieżka lub Środkowa Droga.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>All eight elements of the Path begin with the word "right", which translates the word samyañc (in Sanskrit) or sammā (in Pāli). These denote completion, togetherness, and coherence, and can also suggest the senses of "perfect" or "ideal":</source>
+        <target>Każdy z ośmiu elementów zaczyna się słowem "prawy" (należyty), który tłumaczy słowo samyañc (w Sanskrycie) lub sammā (w pali). Oznaczają one spełnienie, wspólnotę, spójność, i mogą także sugerować znaczenia takie jak "doskonały" czy "idealny":</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In Buddhist symbolism, the Noble Eightfold Path is often represented by means of the dharma wheel, whose eight spokes represent the eight elements of the path.</source>
+        <target>W buddyjskim symbolizmie szlachetna Ośmiokrotna Ścieżka jest często reprezentowana za pomocą koła Dharma, którego osiem szprych reprezentuje osiem elementów tej ścieżki.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Right view</source>
+        <target>Prawa wizja</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Right intention</source>
+        <target>Prawa intencja</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Right speech</source>
+        <target>Prawa wypowiedź</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Right action</source>
+        <target>Prawe działanie</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Right livelihood</source>
+        <target>Prawe utrzymywanie się</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Right effort</source>
+        <target>Prawy wysiłek</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Right mindfulness</source>
+        <target>Prawa świadomość</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Right concentration</source>
+        <target>Prawa koncentracja</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>According to the Buddha there are "three characteristics" of existence</source>
+        <target>Według Buddy istnieją "trzy cechy charakterystyczne" egzystencji</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Anicca (Sanskrit anitya) "inconstancy" or "impermanence". This refers to the fact that all conditioned things are in a constant state of flux. In reality there is no thing that ultimately ceases to exist; only the appearance of a thing ceases as it changes from one form to another. Imagine a leaf that falls to the ground and decomposes. While the appearance and relative existence of the leaf ceases, the components that formed the leaf become particulate material that may go on to form new plants.</source>
+        <target>Anicca (anitya - Sanskryt) "niestałość" lub "nietrwałość". To odnosi się do faktu, że wszystkie uwarunkowane rzeczy są w stałym stanie zmienności. W rzeczywistości nie ma niczego, co ostatecznie przestaje egzystować; tylko powierzchowność rzeczy zanika gdy zmienia się ona z jednej formy na drugą. Wyobraź sobie liść, który spada na ziemię i gnije. Podczas gdy wygląd i względna egzystencja tego liścia zanika, składniki, które ukształtowały ten liść stają się cząsteczkowym materiałem, który może dalej tworzyć nowe rośliny.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Dukkha (Sanskrit duhkha) or "unsatisfactoriness". Nothing found in the physical world or even the psychological realm can bring lasting deep satisfaction.</source>
+        <target>Dukkha (sanskryt - duhkha) lub "nieusatysfakcjonowanie". Nic znajdującego się w świecie fizycznym, czy nawet w domenie psychologicznej nie może przynieść trwałej, głębokiej satysfakcji.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Anatta (Sanskrit anatman) or "non-Self".</source>
+        <target>Anatta (sanskryt - anatman) lub "nie-ja"</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>3 of the body: killing, stealing, sexual misconduct</source>
+        <target></target>
+      </trans-unit>      
+      
+      <trans-unit id="1">
+        <source>4 of the speech: lie, words that divide, bad words and twaddle</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>3 of the mind: desire (to have something what belongs to an other), malevolence and mistaken visions</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Samsara is the cycle of birth, death and rebirth (i.e. reincarnation). The concept of samsara is closely associated with the belief that one continues to be born and reborn in various realms in the form of a human, god, animal, or other being, depending on karma ("action" or "doing"; whatever one does, says, or thinks). Thus Samsara is the cycle of cause and effect.</source>
+        <target>Samsara to cykl narodzin, śmierci i odrodzenia (tzn. reinkarnacji). Koncepcja samsary jest blisko spokrewniona z wiarą, że wciąż na nowo rodzimy się i odradzamy w różnych sferach w formie człowieka, boga, zwierzęcia, czy innej istoty, w zależności od karmy ("działanie" lub "robienie"; cokolwiek robimy, mówimy, czy myślimy). Tak, Samsara jest cyklem przyczyny i skutku.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Buddha described nirvana (nibbāna) as the perfect peace of the state of mind that is free from craving, anger and other afflictive states.</source>
+        <target>Budda opisał nirwanę (nibbāna) jako perfekcyjny pokój stanu umysłu, wolnego od pragnienia, złości i innych nieprzyjemnych stanów.</target>
+      </trans-unit>
+
+<trans-unit id="1">
+        <source>The Buddha explains nirvana as "the unconditioned" mind, a mind that has come to a point of perfect lucidity and clarity due to the cessation of the production of volitional formations. This is described by the Buddha as "deathlessness" and as the highest spiritual attainment, the natural result that accrues to one who lives a life of virtuous conduct and practice in accordance with the Noble Eightfold Path. Such a life engenders increasing control over the generation of karma. It produces wholesome karma with positive results and finally allows the cessation of the origination of karma altogether with the attainment of nirvana. Otherwise, beings forever wander through the impermanent and suffering-generating realms of desire, form, and formlessness, collectively termed samsara.</source>
+        <target>Budda tłumaczy nirwanę jako "nieuwarunkowany" umysł, umysł który przeszedł do punktu doskonałej przejrzystości i jasności wskutek ustania wytwarzania dobrowolnych formacji. Jest to opisane przez Buddę jako "nieśmiertelność" (deathlessness) i jako najwyższe duchowe osiągnięcie, naturalny rezultat, który przypada temu, kto wiedzie życie działając i prowadząc się moralnie i cnotliwie, zgodnie ze Szlachetną Ośmiokrotną Ścieżką. Takie życie powoduje wzrastającą kontrolę nad tworzeniem karmy. Pozytywnymi wynikami wytwarza ono zdrową karmę i w końcu pozwala na zakończenie powstawania karmy razem z osiągnięciem nirwany. W przeciwnym razie, istoty wiecznie wędrują poprzez tymczasowość i wytwarzające cierpienie królestwa pragnienia, kształtu i bezkształtności, nazwane wspólnie samsarą.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>A person can attain nirvana without dying.</source>
+        <target>Człowiek może osiągnąć nirwanę bez umierania.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>When a person who has realized nirvana dies, his death is referred as parinirvāna, his fully passing away, as his life was his last link to the cycle of death and rebirth (samsara), and he will not be reborn again. What happens to a person after his parinirvāna cannot be explained, as it is outside of all conceivable experience.</source>
+        <target>Gdy osoba, która urzeczywistniła nirwanę umiera, do jej śmierci odnosi się jako do paranirwany, jej całkowitego odejścia, ponieważ jej życie było jej ostatnim łączem w cyklu śmierci i odrodzenia (samsara) i już nie narodzi się ponownie. Co dzieje się z osobą po jej paranirwanie nie można wytłumaczyć, gdyż wychodzi to poza wszystkie wyobrażalne doznania.</target>
+      </trans-unit>  
+
+      <trans-unit id="1">
+        <source>In Indian religions, Moksha or Mukti, literally "release" (both from a root muc "to let loose, let go"), is the liberation from samsara, the cycle of death and rebirth or reincarnation and all of the suffering and limitation of worldly existence after the realization that the Atman is in fact Paramatman in Advaita philosophy.</source>
+        <target>W indyjskich religiach, Moksha lub Mukti, dosłownie "uwolnienie" (obie mające rdzeń 'muc' "wypuścić, uwolnić"), jest wyzwoleniem od samsary, cyklu śmierci i odrodzenia, lub reinkarnacji i wszelkiego cierpienia i ograniczenia światowej egzystencji po uświadomieniu sobie, że Atman jest to w rzeczywistości Paramatman w filozofii Advaita.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Moksha's meaning is similar to that of Nirvana in Buddhism.</source>
+        <target>Znaczeniowo, Moksha jest podobna do Nirwany w Buddyzmie.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Buddhist term klesha (kilesa) is typically translated as "defilement" or "poison". In early Buddhist texts the kleshas generally referred to mental states which temporarily cloud the mind and manifest in unskillful actions. Over time the kleshas came to be seen as the very roots of samsaric existence.</source>
+        <target>Buddyjski termin klesha - splamienia (kilesa) jest zazwyczaj tłumaczony jako "skalanie" lub "trucizna". We wczesnych buddyjskich tekstach kleshe - splamienia ogólnie odnosiły się do stanów mentalnych, które tymczasowo zachmurzają umysł i manifestują się w niezręcznych czynach. Z czasem splamienia zaczęto interpretować jako pierwsze korzenie egzystencji samsarycznej.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Three Poisons</source>
+        <target>Тrzy Trucizny</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>ignorance;</source>
+        <target>niewiedza;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>attachment;</source>
+        <target>przywiązanie;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>craving.</source>
+        <target>pragnienie.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Five Poisons, also known as the Five Disturbing Emotions are</source>
+        <target>Pięć Trucizn, znanych także jako Pięć Szkodliwych Emocji to</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Passion (desire, greed, lust);</source>
+        <target>Pożądanie (pragnienie, chciwość, żądza);</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Aggression (anger, hatred, resentment);</source>
+        <target>Agresja (złość, nienawiść, uraza);</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Ignorance (bewilderment, confusion, apathy);</source>
+        <target>Niewiedza (oszołomienie, zamęt, apatia);</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Pride (wounded pride, low-self esteem);</source>
+        <target>Duma (zraniona duma, niska samo-ocena);</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Jealousy (envy, paranoia).</source>
+        <target>Zazdrość (zawiść, paranoja).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In Buddhism, Māra is the demon who tempted Siddartha Gautama the Buddha by trying to seduce him with the vision of beautiful women who, in various legends, are often said to be Mara's daughters. In Buddhist cosmology, Mara personifies unskillfulness, the "death" of the spiritual life. He is a tempter, distracting humans from practicing the spiritual life by making the mundane alluring or the negative seem positive.</source>
+        <target>W Buddyzmie, Māra jest demonem, który kusił Buddę Siddhartha Gautama próbując znęcić go widokiem pięknych kobiet, które w wielu legendach często interpretuje się jako córki Mary. W buddyjskiej kosmologii Mara uosabia nieumiejętność, "śmierć" duchowego życia. Jest kusicielem, odciągającym ludzi od praktykowania duchowego życia czyniąc to, co nudne pociągającym, bądź powodując, że to, co jest negatywne wydaje się być pozytywnym.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The early Buddhists, however, rather than seeing Mara as a demonic, virtually all-powerful Lord of Evil, regarded him as more of a nuisance. Many episodes concerning his interactions with the Buddha have a decidedly humorous air to them.</source>
+        <target>Pierwsi Buddyści, jednak, zamiast postrzegać Marę jako demonicznego, pozornie wszechpotężnego Pana Zła, postrzegali go bardziej jako utrapienie. Wiele epizodów dotyczących jego wzajemnych relacji z Buddą miały zdecydowanie humorystyczne zabarwienie.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In traditional Buddhism four senses of the word "mara" are given:</source>
+        <target>W tradycyjnym Buddyzmie podaje się cztery znaczenia słowa "mara":</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Klesa-mara, or Mara as the embodiment of all unskillful emotions.</source>
+        <target>Klesha-mara (Splamienia), lub Mara jako ucieleśnienie wszystkich nieokiełznanych emocji.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mrityu-mara, or Mara as death, in the sense of the ceaseless round of birth and death.</source>
+        <target>Mrityu-mara, lub Mara jako śmierć, w sensie niekończącej się rundy narodzin i śmierci.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mrityu-mara, or Mara as death, in the sense of the ceaseless round of birth and death.</source>
+        <target>Mrityu-Mara, lub Mara jako śmierć, w sensie niekończącej się rundy narodzin i śmierci.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Skandha-mara, or Mara as metaphor for the entirety of conditioned existence.</source>
+        <target>Skandha-mara, lub Mara jako metafora całości uwarunkowanej egzystencji.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Devaputra-mara, or Mara the son of a deva (god), that is, Mara as an objectively existent being rather than as a metaphor.</source>
+        <target>Devaputra-mara, lub mara syn devy (boga), to jest, Mara bardziej jako obiektywnie egzystująca istota, niż jako metafora.</target>
+      </trans-unit>       
+
+	  <trans-unit id="1">
+        <source>Dharma (dhamma) is the term that means one's righteous duty, or any virtuous path. In Indian languages it can be equivalent simply to religion, depending on context. The word dharma translates as that which upholds or supports, and is generally translated into English as law.</source>
+        <target>Dharma (dhamma) jest terminem oznaczającym czyjąś prawą (szlachetną) służbę, lub jakąkolwiek prawą (słuszną) ścieżkę. W językach indyjskich może to być po prostu równoznaczne z religią, w zależności od kontekstu. Słowo dharma tłumaczy się jako to, co podnosi czy podpiera (wspiera, popiera, umacnia). http://pl.wikipedia.org/wiki/Dharma</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Dharma, as the liberating law discovered and proclaimed by the Buddha, is summed up in the Four Noble Truths. Beings that live in accordance with Dharma proceed more quickly toward nirvana (personal liberation).</source>
+        <target>Dharma jako wyzwalające prawo odkryte i głoszone przez Buddę, jest streszczone w Czterech Szlachetnych Prawdach. Istoty, które żyją zgodnie z Dharmą szybciej zdążają ku nirwanie (własnemu, osobistemu wyzwoleniu).</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>"Dharma" usually refers not only to the sayings of the Buddha, but also to the later traditions of interpretation and addition that the various schools of Buddhism have developed to help explain and to expand upon the Buddha's teachings. Dharma in the Buddhist scriptures has a variety of meanings, including "phenomenon" and "nature" or "characteristic".</source>
+        <target>"Dharma" często odnosi się nie tylko do przypowieści Buddy, lecz również do późniejszych tradycji interpretowania i dopowiadania, które zostały rozwinięte przez różne szkoły Buddyzmu, aby pomóc wyjaśnić i rozwinąć nauki Buddy. Dharma w buddyjskich pismach świętych ma wiele znaczeń, w tym "fenomen" i "natura", lub "atrybut".</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>For others still, they see the Dharma as referring to the "truth," or the ultimate reality of "the way that things really are". Dharma with a capital "D" (as opposed to thousands of dharmas or little ways and methods, with a little "d") means universal or absolute truth.</source>
+        <target>Jeszcze inni pojmują Dharmę jako odniesienie do "prawdy", lub ostatecznej rzeczywistości "tego, jak naprawdę jest". Dharma z wielkiej litery "D" (w przeciwności do tysięcy dharm, czy sposobów i metod, z małej litery "d") oznacza uniwersalną i absolutną prawdę.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Sangha is a word in Pali or Sanskrit that can be translated roughly as "association" or "assembly," "company" or "community" with common goal, vision or purpose.</source>
+        <target>Sangha jest słowem w języku Pali lub w sanskrycie, który może być pobieżnie przetłumaczone na "stowarzyszenie" lub "zgromadzenie", lub "społeczność" mającą wspólny cel, wizję czy zamysł.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>There are three distinct definitions of Sangha</source>
+        <target>Rozróżnia się trzy odmienne definicje Sanghi</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>all Buddhist practitioners;</source>
+        <target>wszyscy praktykujący buddyzm;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>community of ordained monks and nuns;</source>
+        <target>społeczność wyświęconych mnichów i zakonnic;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>community of those who have attained enlightenment, who may help a practicing Buddhist to do the same.</source>
+        <target>społeczność tych, którzy dostąpili oświecenia, którzy mogą pomóc praktykującemu buddyście osiągnąć to samo.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In Buddhism, instead of looking for any external savior, most Buddhists believe one can take refuge in oneself.</source>
+        <target>W buddyzmie, zamiast szukać zewnętrznego zbawcy, większość buddystów wierzy, że można znaleźć schronienie w samym sobie.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Buddhists are said to "take refuge" in, or to "go for refuge" to, the Three Jewels ("Three Refuges")</source>
+        <target>Mówi się, że Buddyści "przyjmują schronienie" w, lub "idą po schronienie" do, Trzech Klejnotów ("Trzech Schronień")</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>the Buddha, who, depending on one's interpretation, can mean the historical Buddha, Shakyamuni, or the Buddha nature — the ideal or highest spiritual potential that exists within all beings;</source>
+        <target>Budda, który, w zależności od interpretacji, może oznaczać historycznego Buddę, Siakjamuni, lub naturę Buddy - idealny lub najwższy duchowy potencjał jaki istnieje wewnątrz wszystkich istot;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>the Dharma;</source>
+        <target>Dharma;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>the Sangha.</source>
+        <target>Sangha.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The idea behind taking refuge is that when it starts to rain, we like to find a shelter. The Buddhist shelter from the rain of problems and pain of life is threefold: the Buddha, his teachings (the Dharma) and the spiritual community (the Sangha). Taking refuge means that we have some understanding about suffering, and we have confidence that the Buddha, Dharma and Sangha (the "Three Jewels") can help us.</source>
+        <target>Ideą przyjmowania schronienia jest to, że gdy zaczyna padać, chcemy znaleźć schronienie. Buddyjskie schronienie przed deszczem problemów i trudem życia jest trzykrotne: Budda, jego nauki (Dharma) i społeczność duchowa (Sanhga). Przyjęcie schronienia znaczy, że mamy pewne zrozumienie cierpienia, i ufamy, że Budda, Dharma i Sangha ("Trzy Klejnoty") mogą nam pomóc.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The analogy of sickness is often used: Buddha is the doctor, Dharma is the medicine, Sangha is the nurse, we are the patient, the cure is taking the medicine, which means practicing the methods. Taking refuge is like unpacking the medicine and deciding to follow the doctor's advice.</source>
+        <target>Często używa się analogii do choroby: Budda jest lekarzem, Dharma lekarstwem, Sangha jest pielęgniarką, my jesteśmy pacjentem, leczenie to przyjmowanie lekarstwa, co oznacza praktykowanie danych metod. Przyjmowanie schronienia jest jak wyjmowanie lekarstwa i podjęcie decyzji o zastosowaniu się do zaleceń lekarza.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Often, one who takes refuge will make vows as well, typically vows to adhere to the Five Precepts (panca-sila). The Five Precepts are not given in the form of commands such as "thou shall not ...", but rather are promises to oneself: "I will (try) ..."</source>
+        <target>Często, ten, kto przyjmuje schronienie składa również przysięgi, zazwyczaj przysięgi przestrzegania Pięciu Wskazań (panca-sila). Pięć Wskazań nie jest podane w formie przykazań takich jak "nie powinieneś...", lecz są raczej przysięgami składanymi samemu sobie: "Będę (starał się)... "</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>To refrain from harming living creatures (killing).</source>
+        <target>Powstrzymywać się od krzywdzenia żyjących stworzeń (zabijania).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>To refrain from taking that which is not given (stealing).</source>
+        <target> Powstrzymywać się od zabierania tego, co nie zostało ofiarowane (kradzeż).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>To refrain from sexual misconduct.</source>
+        <target>Powstrzymywać się od nieodpowiedniego zachowania seksualnego.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>To refrain from false speech.</source>
+        <target>Powstrzymywać się od kłamania.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>To refrain from intoxicants which lead to loss of mindfulness.</source>
+        <target>Powstrzymywać się od środków odurzających, które prowadzą do utraty świadomego myślenia.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Buddhists generally classify themselves as either Theravada or Mahayana. An alternative scheme used by some scholars divides Buddhism into the following three traditions or geographical or cultural areas: Theravada, East Asian Buddhism and Tibetan Buddhism.</source>
+        <target>Buddyści na ogół klasyfikują się na Theravada(Therawada) lub Mahayana (Mahajana). Alternatywny schemat używany przez niektórych uczonych dzieli Buddyzm na trzy następujące tradycje bądź geograficzne lub kulturalne obszary: Theravada, buddyzm wschodnio-azjatycki i buddyzm tybetański.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Hinayana ("Lesser Vehicle") is used by Mahayana followers to name the family of early philosophical schools and traditions from which contemporary Theravada emerged, but as this term is rooted in the Mahayana viewpoint and can be considered derogatory, a variety of other terms are increasingly used instead, including Nikaya Buddhism, early Buddhist schools, sectarian Buddhism, conservative Buddhism.</source>
+        <target>Теrmin Hinayana ("Mniejszy Wóz") jest używany przez zwolenników Mahajany do nazwania rodziny wczesnych szkół filozoficznych i tradycji, z których wyłoniła się współczesna Theravada, ale jako że termin ten jest zakorzeniony w mahajańskim punkcie widzenia i może być uważany za pejoratywny, używa się w zamian co raz to więcej innych różnorakich nazw, w tym Buddyzm Nikaya, wczesne szkoły buddyjskie, Buddyzm wyznaniowy, Buddyzm konserwatywny.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Despite differences among the Theravada and Mahayana schools there are several concepts common to both major Buddhist branches</source>
+        <target>Mimo różnic między szkołami Therawada i Mahajana, wiele koncepcji jest wspólnych dla obu tych buddyjskich odgałęzień.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Both accept the Buddha as their teacher.</source>
+        <target>Obie przyjmują Buddę jako ich nauczyciela.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Both accept the Middle way, Dependent origination (nothing exists independently of other things), the Four Noble Truths, the Noble Eightfold Path and the Three marks of existence.</source>
+        <target>Obie przyjmują Środkową Drogę, zależne pochodzenie (nic nie istnieje niezależnie od innych rzeczy), Cztery Szlachetne Prawdy, Szlachetną Ośmiokrotną Ścieżkę i Trzy właściwości istnienia.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Both accept that members of the laity and of the sangha can pursue the path toward enlightenment (bodhi).</source>
+        <target>Obie przyjmują, iż członkowie laiccy, jak i ci pochodzący z sangha, mogą podążać ścieżką w kierunku oświecenia (bodhi).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Both consider buddhahood to be the highest attainment</source>
+        <target>Obie uznają dostąpienie etapu buddy za najwyższe osiągnięcie</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>There is Third Vehicle, Vajrayana, which is practiced in Tibetan Buddhism.</source>
+        <target>Istnieje Trzeci Wóz, Vajrayana (Wadżrajana), którą praktykuje się w buddyzmie tybetańskim.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mahayana is one of two major divisions of Buddhism, along with Theravada.</source>
+        <target>Mahajana jest jednym z dwóch głównych członów podziałowych, równocześnie z Therawadą.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The origins of Mahayana are still not completely understood. Although the Mahayana movement traces its origin to Gautama Buddha, scholars believe that it originated in India.</source>
+        <target>Początki Mahajany wciąż nie są do końca rozumiane. Chociaż ruch Mahajana ustala swe pochodzenie od Buddy Gautama, uczeni twierdzą, że miał on swój początek w Indiach.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mahayana Buddhism in India can be divided into two periods: early Mahayana Buddhism and late Mahayana Buddhism. The earliest sutras which show some Mahayana influence are called the Proto-Mahayana Sutras such as the Ajitasena Sutra. These sutras contains a mixture of Mahayana and pre-Mahayana ideas. During the period of Late Mahayana Buddhism, four major types of thought developed: Madhyamaka, Yogacara, Tathagatagarbha, and Buddhist Logic as the last and most recent.</source>
+        <target>Buddyzm Mahajana w Indiach można podzielić na dwa okresy: wczesny buddyzm Mahajana i późny buddyzm Mahajana. Najwcześniejsze sutry, które ukazują pewien wpływ Mahajany nazywane są Sutrami Proto-Mahajana, takimi jak Sutra Ajitasena. Sutry te zawierają mieszankę mahajańskich i pre-mahajańskich idei. Podczas okresu Późnego Buddyzmu Mahajana, rozwinęły się cztery główne rodzaje poglądów: Madhjamaka, Yogacara (Czittamatra), Tathagatagarbha (Natura Buddy) i Logika Buddyjska jako ostatni i najnowszy.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mahayana Buddhist schools de-emphasize the ideal of the release from Suffering and the attainment of Nirvana, found in the Early Buddhist Schools. The fundamental principles of Mahayana doctrine were based around the possibility of universal liberation from suffering for all beings (hence "Great Vehicle") and the existence of Buddhas and Bodhisattva embodying Buddha-nature. Some Mahayana schools simplify the expression of faith by allowing salvation to be alternatively obtained through the grace of the Buddha Amitabha by having faith and devoting oneself to chanting to Amitabha.</source>
+        <target>Szkoły buddyzmu Mahajana nie podkreślają tak ideału uwolnienia od Cierpienia i osiągnięcia Nirwany, które spotyka się we Wczesnych Szkołach Buddyjskich. Fundamentalne zasady doktryny Mahajana opierały się na możliwości uniwersalnego uwolnienia się od cierpienia dla wszystkich istnień (stąd "Wielki Wóz") i istnienia Buddów oraz Bodhisattwy ucieleśniającego naturę Buddy. Niektóre szkoły Mahajana upraszczają wyrażenie wiary dopuszczając, aby zbawienie było alternatywnie osiągalne dzęki łasce Buddy Amitabha poprzez posiadanie wiary i oddaniu się czczeniu Amitabhy w pieśni.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mahayana Buddhism can in general be characterized by</source>
+        <target>Buddyzm Mahajana można ogólnie scharakteryzować poprzez</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Universalism, in that everyone will become a Buddha (Lotus Sutra);</source>
+        <target>Uniwersalność, w tym, że każdy stanie się Buddą (Sutra Lotosu);</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Bodhicitta (a wish to attain complete enlightenment, that is, Buddhahood) as the main focus of realization (Prajnaparamita Sutras);</source>
+        <target>Bodhiczittę (pragnienie osiągnięcia pełnego oświecenia, to jest stanu Buddy) jako główny cel do realizacji (Sutra Serca);</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Compassion through the transferral of merit;</source>
+        <target>Współczucie poprzez przeniesienie wartości;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Transcendental immanence, in that the immortal Buddha Principle is present within all beings (Mahaparinirvana Sutra, Angulimaliya Sutra, Srimala Sutra, Tathagatagarbha Sutra).</source>
+        <target>Transendentalną obecność, w tym, że nieśmiertelna Zasada Buddy jest obecna we wszystkich istotach. (Nirwana Sutra, Angulimaliya Sutra, Srimala Sutra, Sutra Natura Buddy).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mahayana developed a rich cosmography, with various Buddhas and Bodhisattvas residing in paradisiacal realms. The concept of trinity, or trikaya, supports these constructions, making the Buddha himself into a transcendental figure.</source>
+        <target>Mahajana rozwinęła bogatą kosmografię, z licznymi Buddami i Bodhisattwami rezydującymi w rajskich królestwach. Koncept trójcy, lub trikaya, podpiera te konstrukcje, tworząc z samego Buddy postać transcendentalną.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Trikaya doctrine ("Three bodies or personalities") is an important Buddhist teaching both on the nature of reality, and what a Buddha is. Briefly, the doctrine says that a Buddha has three kayas or bodies</source>
+        <target>Doktryna Trikaya ("Trzy Ciała lub osobowości") jest ważną buddyjską nauką zarówno o naturze rzeczywistości, jak i co to jest Budda. W skrócie, doktryna ta mówi, że Budda ma trzy kaje lub ciała.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Nirmanakāya is a physical body of a Buddha. An example would be Gautama Buddha's body.</source>
+        <target>Nirmanakaja jest fizycznym ciałem Buddy. Przykładem byłoby ciało Buddy Gautama (Siakjamuni).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Sambhogakāya is the reward-body, whereby a bodhisattva completes his vows and becomes a Buddha. Amitabha, Vajrasattva and Manjushri are examples of Buddhas with the Sambhogakaya body.</source>
+        <target>Sambhogakaja jest ciałem - nagrodą(radością), w którym bodhisattwa dopełnia jego przysiąg i staje się Buddą. Amitabha (Budda Nieograniczonego Światła), Wadźrasattwa i Manjushri (Budda Mądrości) są Buddami o ciałach Sambhogakaja.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>the Dharmakaya (Truth body, Diamond body) which embodies the very principle of enlightenment and knows no limits or boundaries.</source>
+        <target>Dharmakaja (ciało Prawdy, Diamentowe ciało), które ucieleśnia prawo oświecenia i nie zna żadnych ograniczeń i granic.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In the course of its history, Mahayana spread throughout Inner Asia and East Asia, where it took on two principal forms: Tibetan Buddhism and East Asian Buddhism. The late stage of Mahayana Buddhism in India are largely Vajrayana schools.</source>
+        <target>Z biegiem swej historii, Mahajana rozprzestrzeniła się po Azji Środkowej i Azji Wschodniej, gdzie przyjęła z kolei dwie główne formy: Buddyzm Tybetański i Buddyzm Wschodnio Azjatycki. Późny etap Buddyzmu Mahajana w Indiach są w większości szkołami Wadżrajana.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Tibetan Buddhism is the body of Buddhist religious doctrine and institutions. It is practiced in Tibet, Nepal, Bhutan, India, Mongolia, Northeast China and parts of Russia (Kalmykia, Buryatia, and Tuva).</source>
+        <target>Buddyzm tybetański jest korpusem buddyjskiej doktryny religijnej i instytucji. Jest on praktykowany w Tybecie, Nepalu, Butanie, Indiach, Mongolii, Północno-Wschodnich Chinach i pewnych części Rosji (Kałmucja, Buriacja i Tuwa)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Tibetan Buddhism includes the teachings of the three vehicles of Buddhism: the Theravada, Mahayana, and Vajrayana.</source>
+        <target>Buddyzm tybetański zawiera nauki trzech pojazdów buddyzmu: Therawada, Mahajana i Wadżrajana.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In the 8th century, King Trisong Detsen (755-797) established Buddhism as the official religion of Tibet. He invited Indian Buddhist scholars to his court. In his age the famous tantric mystic Padmasambhava arrived in Tibet according to the Tibetan tradition. In addition to writing a number of important scriptures (some of which he hid for future tertons to find), Padmasambhava established the Nyingma school ("the old school").</source>
+        <target>W 8 wieku, Król Trisong Detsen (755-797) ustanowił buddyzm oficjalną religią Tybetu. Zaprosił indyjskich naukowców buddyjskich do swojego dworu. Znany w jego wieku tantryczmy mistyk Padmasambhava przybył do Tybetu, według tradycji tybetańskiej.  W dodatku do napisania licznych ważnych pism świętych (z których kilka ukrył, by zostały znalezione przez przyszłych tertonów), Padmasambhava założył szkołę Nyingma ("starą szkołę").</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Four schools of Tibetan Buddhism (Nyingma, Kagyu, Gelug, and Sakya) are using Vajrayana today.</source>
+        <target>Cztery szkoły buddyzmu tybetańskiego (Ningma, Kagyu, Gelug i Sakja) korzystają dziś z Wadżrajany.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Though based upon Mahayana, Tibetan Buddhism is one of the schools that practice Vajrayana, also known as Tantric Buddhism, Secret Mantra, Esoteric Buddhism and the Diamond Vehicle. The term "vajra" denoted the thunderbolt, a legendary weapon and divine attribute that was made from an adamantine, or indestructible substance and which could therefore pierce and penetrate any obstacle or obfuscation. As a secondary meaning, "vajra" refers to this indestructible substance, and so is sometimes translated as "adamantine" or "diamond". A vajra (dorje) is also a scepter-like ritual object, which has a sphere at its centre, and a variable number of spokes, enfolding either end of the rod. The vajra is often traditionally employed in tantric rituals. Symbolically, the vajra may represent method as well as great bliss.</source>
+        <target>Chociaż oparte na Mahajanie, buddyzm tybetański jest jedną ze szkół praktykujących Wadżrajanę, znaną również jako buddyzm tantr, sekretnej mantry, buddyzmu ezoterycznego i Diamentoweg Wozu. Termin "vajra" oznacza piorun/grom, legendarną broń i boski atrybut, który zrobiony był z adamantu, lub niezniszczalnej substancji, i która mogła wobec tego przekłuć i zagłębić się w jakąkolwiek przeszkodę, czy zagmatwanie. Jako drugie znaczenie, "varja" odnosi się do owej niezniszczalnej substancji, więc czasami tłumaczona jest jako "adamant" lub "diament". Vajra (wadżra lub dorje - dordże) jest także berło-podobnym rytualnym przedmiotem, który ma w części centralnej sferę, i różną ilość szczebli odchodzących do obydwu krańców trzonka (http://pl.wikipedia.org/wiki/Dord%C5%BCe). Często używa się Wadżrę tradycyjnie podczas rytuałów tantrycznych. Symbolicznie, wadżra może reprezentować metodę, jak i wielkie szczęście (błogość).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The goal of spiritual practice within the Mahayana and Vajrayana traditions is to become a bodhisattva, whereas the goal for Theravada practice is not specific to which type of enlightened being to become. As with the Mahayana, motivation is a vital component of Vajrayana practice, and Vajrayana teaches that all practices are to be undertaken with the motivation to achieve Buddhahood for the benefit of all sentient beings. Whereas Mahayana seeks to destroy the poisons of craving, aggression, and ignorance, Vajrayana places an emphasis on transmuting them directly into wisdom.</source>
+        <target>Celem duchowej praktyki w tradycjach Mahajana i Wadżrajana jest zostanie boddhisattwą, gdy tymczasem cel praktyki Therawady nie jest sprecyzowany co do osiągnięcia specyficznego statusu oświeconej istoty. Jak przy Mahajanie, motywacja jest istotnym członem praktyki Wadżrajany, i Wadżrajana naucza, iż wszystkie praktyki mają być przedsięwzięte z motywacją do osiągnięcia statusu Buddy, z korzyścią dla wszystkich czujących istot. Podczas gdy Mahajana szuka sposobu na zniszczenie jadów-trucizn pragnienia, agresji i niewiedzy, Wadżrajana skupia się na przemienieniu ich bezpośrednio w mądrość.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In addition to the Mahayana scriptures, Vajrayana Buddhists recognise a large body of Buddhist Tantras. The scriptures containing the esoteric teachings for yogic practices (such as meditative visualizations) are called tantras, and are part of a larger body of Buddhist sacred texts, based on the public teachings of the Buddha, called sutras. In the Tibetan tradition, it is claimed that the historical Śākyamuni Buddha taught tantra, but as these are esoteric teachings, they were passed on orally first and only written down long after the Buddha's other teachings. One component of the Vajrayana is harnessing psycho-physical energy through ritual, tantric visualization, physical exercises, and meditation as a means of developing the mind.</source>
+        <target>W dodatku do pism sakralnych Mahajana, Вuddyści Wadżrajana rozpoznają wielką ilość Tantr Buddyjskich. Pisma zawierające nauki ezoteryczne dla praktyk jogicznych (takich jak wizualizacje medytacyjne) zwane są tantrami i są częścią większej całości Buddyjskich pism religijnych, opartych na publicznych naukach Buddy, zwanych sutrami. W tradycji tybetańskiej, uważa się, że historyczny Budda Siakjamuni nauczał tantry, lecz jako że są to nauki ezoteryczne, zostały one najpierw przekazywane ustnie a dopiero potem spisane, długo po innych naukach Buddy. Jednym z komponentów Wadżrajany jest okiełznanie psycho-fizycznej energii poprzez rytuał, tantryczną wizualizację, ćwiczenia fizyczne i medytację jako środek do rozwijania umysłu.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Using Vajrayana techniques, it is claimed that a practitioner can achieve Buddhahood in one lifetime, or even as little as three years. Vajrayana is said to be the fastest method for attaining Buddhahood but for unqualified practitioners it can be dangerous. To engage in Vajrayana one must receive an appropriate initiation (also known as an "empowerment") from a lama who is fully qualified to give it.</source>
+        <target>Używając technik Wadżrajana, sądzi się, że praktykujący może osiągnąć etap Buddy w jednym życiu, albo nawet w taki niedługi czas jak trzy lata. Mówi się, że Wadżrajana jest najszybszą metodą do osięgnięcia stanu Buddy lecz dla niewykwalifikowanych praktykujących może to być niebezpieczne. By zaangażować się w Wadżajranę należy otrzymać inicjację (znaną również jako "upełnomocnienie") od lamy, który jest w pełni kompetentny do jej nadania.</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Vajrayana Buddhism is esoteric, in the sense that the transmission of certain teachings only occurs directly from teacher to student during an initiation or empowerment and cannot be simply learned from a book. Many techniques are also commonly said to be secret. The degree to which information on Vajrayana is now public in western languages is controversial among Tibetan Buddhists. In Buddhist teachings generally, too, there is caution about revealing information to people who may be unready for it.</source>
+        <target>Buddyzm Wadżrajana jest ezoteryczny, w tym sensie, że przekazanie pewnych nauk następuje tylko bezpośrednio od nauczyciela do ucznia podczas inicjacji, bądź upełnomocnienia i nie może być przyswojony z książki.Powszechnie mówi się, że wiele technik jest tajnych. Stopień, do którego informacja na temat Wadżrajany jest upubliczniona w językach zachodnich jest wśród tybetańskich buddystów kontrowersyjny. Ogólnie w naukach buddyjskich, również, widnieje ostrożność co do ujawniania informacji ludziom, którzy mogą być na to nie gotowi.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Sakya school is one of four major schools of Tibetan Buddhism. It rose to play a significant role in the development and spread of the new Tantras that came to Tibet in the 11th century.</source>
+        <target>Szkoła Sakja jest jedną z czterech głównych szkół buddyzmu tybetańskiego. Urosła ona do znaczącej roli w rozwoju i rozprzestrzenianiu nowych Tantr, które przybyły do Tybetu w 11 wieku.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The origins of the Sakya tradition are closely connected with the ancestral lineage of the Khön family: a family which itself originated from celestial beings.</source>
+        <target>Początki tradycji Sakja są ściśle powiązane z rodowym pochodzeniem rodziny Khön: rodziny, która sama pochodzi od istot niebiańskich.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The name Sakya ("pale earth") derives from the unique grey landscape of Ponpori Hills in southern Tibet near Shigatse, where Sakya Monastery, the first monastery of this tradition, and the seat of the Sakya School was built by Khon Konchog Gyalpo (1034-1102) in 1073.</source>
+        <target>Nazwa Sakja ("blada ziemia") wywodzi się z unikalnego szarego krajobrazu Wzgórz Pompori w południowym Tybecie koło Shigatse, gdzie Klasztor Sakja, pierwszy klasztor w tej tradycji, i siedziba szkoły Sakja, została zbudowana przez Khon Konchog Gyalpo (1034-1102) w 1073 roku.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Five Patriarchs of the Sakya Traditon: Sachen Künga Nyingpo, Loppön Sonam Tsemo, Jetsün Drakpa Gyaltsen, Sakya Pandita, and Drogön Chogyal Phagpa.</source>
+        <target>Pięć Patriarchów Tradycji Sakja: Sachen Künga Nyingpo, Loppön Sonam Tsemo, Jetsün Drakpa Gyaltsen, Sakya Pandita i Drogön Chogyal Phagpa.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The head of the Sakya school, known as Sakya Trizin ("holder of the Sakya throne"), is always drawn from the male line of the Khön family. The present Sakya Trizin, Ngawang Kunga Tegchen Palbar Samphel Wanggi Gyalpo, born in Tsedong in 1945, is the forty-first to hold that office. 41st Sakya Trizin is the reincarnation of two great Tibetan masters: a Nyingmapa lama known as Apong Terton (Orgyen Thrinley Lingpa), who is famous for his Red Tara cycle, and his grandfather, the 39th Kyabgon Sakya Trizin Dhagtshul Thrinley Rinchen (1871 - 1936).</source>
+        <target>Zwierzchnikiem szkoły Sakja, znanym jako Sakja Trizin ("obejmujący tron Sakja"), wywodzi się zawsze z męskiej linii rodziny Khön. Obecny Sakja Trizin, Ngawang Kunga Tegchen Palbar Samphel Wanggi Gyalpo, urodzony w Tsedong w 1945 roku, jest czterdziesto-pierwszym sprawującym ten urząd. 41-szy Sakja Trizin jest reinkarnacją dwóch wielkich mistrzów tybetańskich: lama Nyingmapa znanego jako Apong Terton (Orgyen Thrinley Lingpa), który słynie z jego cyklu Czerwona Tara, i jego dziadka, 39-go Kyabgon Sakja Trizin Dhagtshul Thrinley Rinchen (1871 - 1936).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The teaching and practice that is the essence of the Sakya tradition is called “Lamdre” or “The Path and its Fruit.” Fundamentally, the philosophical viewpoint expressed in “The Path and its Fruit,” is the “Non differentiation of Samsara and Nirvana.” According to this view, an individual cannot attain Nirvana or cyclic existence, because the mind is the root of both Samara and Nirvana. When the mind is obscured, it takes the form of Samsara and when the mind is freed of obstructions, it takes the form of Nirvana. The ultimate reality is that a person must strive to realize this fundamental inseparability through mediation.</source>
+        <target>Nauczanie i praktykowanie, które jest essencją tradycji Sakja, nosi nazwę "Lamdre" lub "Ścieżka i jej Owoce". Zasadniczo, filozoficzny punkt widzenia wyrażony w dziele "Ścieżka i jej Owoce" to "Nie zróżnicowanie Samsary i Nirwany". Według takiego poglądu, indywidualna osoba nie może osiągnąć Nirwany lub cyklicznej egzystencji, ponieważ umysł jest korzeniem zarówno Samsary jak i Nirwany. Kiedy umysł jest zamroczony, przybiera on formę Samsary, a gdy umysł zostaje uwolniony od przeszkód, przybiera formę Nirwany. Podstawową rzeczywistością jest to, że osoba musi dążyć do urzeczywistnienia tej fundamentalnej nierozłączności poprzez medytację.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Tummo (Tibetan: gtum-mo, also spelled Tumo, or Tum-mo; Sanskrit: caṇḍālī) is a Tibetan word, literally meaning fierce, inner fire. The Sanskrit terms caṇḍālī and kuṇḍalinī are clearly etymologically related.</source>
+        <target>Tummo (tybetański: gtum-mo, wypowiadane Tumo lub Tum-mo; sanskryt: caṇḍālī) jest tybetańskim słowem, znaczącym dosłownie gwałtowny, wewnętrzny ogień. Terminy sanskrytu caṇḍālī i kuṇḍalinī są wyraźnie powiązane etymologicznie.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The practices are taught in a suite of Six Yogas of Naropa, which describe contemplative practices, spiritual energetic work or meditations such as those used in the Himalayan traditions of Vajrayana and Bön. This discipline is key to all advanced (completion stage) spiritual practices in Tibetan Buddhism.</source>
+        <target>Praktyki te nauczane są w serii sześciu Jog Naropa, które opisują praktyki kontemplacyjne, energetyczną pracę duchową, czy medytacje takie jak te używane w tradycjach himalajskich Wadżrajany i Bön. Ta dyscyplina jest kluczem do wszystkich zaawansowanych (końcowy etap) praktyk duchowych w Buddyzmie tybetańskim.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Tummo practices were first described in writing by the Indian yogi and Buddhist scholar Naropa, although the Tibetan Buddhist tradition holds that the practice was actually taught by Shakyamuni Buddha and passed down orally until the time of Naropa. The Tummo practice is also found in the Tibetan Bön lineage. One of the most famous practitioners of Tummo according to the Tibetan tradition was held to be Milarepa.</source>
+        <target>Praktyki Tummo były najpierw opisane w pismach indyjskiego jogina i buddyjskiego uczonego Naropa, chociaż tybetańska tradycja buddyjska utrzymuje, że praktyka ta była w rzeczywistości nauczana przez Buddę Siakjamuni i przekazywana ustnie aż do czasów Naropy. Praktykę Tummo znajduje się także w tybetańskim rodowodzie Bön. Za jednego z najbardziej sławnych praktyków Tumo, według tradycji tybetańskiej, uważano Milarepa.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Tummo-meditation is commonly associated with descriptions of intense sensations of body heat, which are a partial effect, rather than a goal, of the practice. Stories and eyewitness accounts abound of yogi practitioners being able to generate sufficient heat to dry wet sheets draped around their naked bodies while sitting outside in the freezing cold. While the physiological effects of Tummo are well known, they are not the primary purpose of the meditation practice. Tummo is a tantric meditation practice that transforms and evolves the consciousness of the practitioner so that "wisdom" (prajna) and "compassion" (karuna) are manifested in the individual.</source>
+        <target>Medytacja Tummo jest zwykle związana z opisami intensywnych odczuć gorąca ciała, które są raczej częściowym skutkiem, aniżeli celem praktyki. Historie i relacje świadków obfitują w przykłady praktykujących joginów będących w stanie wygenerować ciepło wystarczające na wysuszenie mokrych nakryć owiniętych wokół ich nagich ciał, podczas gdy siedzą na zewnątrz w lodowatym chłodzie. Podczas gdy fizjologiczne efekty Tummo są dobrze znane, nie są one pierwszorzędnym celem praktyki medytacji. Tumo jest tantryczną praktyką medytacyjną, która przemienia i angażuje świadomość praktykującego tak, aby "mądrość" (prajna) i "współczucie" (karuna) zamanifestowały się w tej osobie.</target>
+	  </trans-unit>
+      
+	  <trans-unit id="1">
+        <source>Not unproblematic, Tummo must be practiced in conjunction with appropriate empowerment and under the direction of a traditionally qualified Tantric Guru. Extensive preparation and pure motivation, most specifically bodhichitta, are absolutely essential both to beneficial results and to the avoidance of physical pain and discomfort in rlung (wind or breath) disorder or other imbalances.</source>
+        <target>Nie bezproblematyczne, Tummo musi być praktykowane razem z odpowiednim uprawomocnieniem i pod kierunkiem tradycyjnie wykwalifikowanego Guru tantrycznego. Rozległe przygotowanie i czysta motywacja, w szczególności bodhiczitta, są absolutnie konieczne zarówno do uzyskania korzystnych rezultatów, ale też do uniknięcia bólu i dyskomfortu w zaburzeniach rlung (wiatr lub oddech) lub innych braków równowagi.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Buddhist tantric systems present several different models of the chakras, and for tummo the "energetic winds" (prana, rlung) are being accumulated at the navel chakra, four fingers below the navel. In Tibetan Buddhism the primary purpose of Tummo is to gain control over subtle body processes as a foundation for very advanced mystical practices analogous to Completion stages of "highest yoga tantra" (Anuttarayoga Tantra). Such refined internalized yogas are practices to support entry into the highest contemplative systems, for example the Dzogchen or Mahamudra systems.</source>
+        <target>Buddyjskie systemy tantryczne prezentują kilka różnych modeli czakr, a dla tummo owe "wiatry energetyczne" (prana, rlung) są akumulowane w czakrze sakralnej, cztery palce poniżej pępka. W buddyzmie tybetańskim głównym celem Tumo jest uzyskanie kontroli nad procesami ciała subtelnego jako podstawy do bardzo zaawansowanych mistycznych praktyk analogicznych do końcowych etapów "najwyższej tantry jogi" (Tantra Anuttarayoga). Takie udoskonalone internalizowane jogi są praktykami wspierającymi dostęp do najwyższych systemów kontemplacyjnych, na przykład systemów Dzogchen lub Mahamudra.</target>
+		</trans-unit>
+
+      <trans-unit id="1">
+        <source>The Tamang (also known as Murmi) are one of the several ethnic groups from north central hilly region of Nepal. The word Tamang may be derived from the Tibetan words "ta" and "mang", meaning horse and soldier respectively. Living mainly north and east of the country, they constitute 5.6% of Nepal's population, which places their population at 1,280,000, slightly higher than the Newars.</source>
+        <target>Tamangowie (znani również jako Murmi) są jedną z licznych grup etnicznych z północno-centralnego górzystego regionu Nepalu. Słowo Tamang może wywodzić się od tybetańskich słów "ta" i "mang", znaczące odpowiednio koń i żołnierz. Mieszkając głównie na północy i wschodzie państwa, tworzą oni 5.6% nepalskiej populacji, co stanowi 1 280 000 liczby ludności, nieco wyżej od ludności Newars.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The name Tamang, normally it is Tamag in Tibetan, means horse warriors, Tamags were border police sent by king Trisong of Tibet around 755. They are also good mountaineers and trekking guides. Many of Tamang have been recruited to serve in Indian and British Gurkha regiments since British Raj.</source>
+        <target>Nazwa Tamang, zazwyczaj Tamag w języku tybetańskim, oznacza konnych wojowników, Tamagowie byli graniczną policją wysłaną przez króla Tybetu Trisonga około 755 roku. Są oni również dobrymi alpinistami i przewodnikami trekkingu. Wielu Tamangów rekrutuje się do służby w indyjskich i brytyjskich pułkach Gurkha od czasu brytyjskiego panowania.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Tamang generally follow Tibetan Buddhism mixed with elements of the pre-Buddhist Bön and the Tambaist religion. Due to their proximity to the Newar, a slight Hindu influence can be seen in their practices. According to the 2001 census, 88.26% of the ethnic Tamang in Nepal were Buddhists and 7.69% were Hindus. The typical song and dance of the Tamangs is "tamang selo" in which they dance to the beat of a drum called "damphu." Damphu is the traditional drum of the Tamangs.</source>
+        <target>Tamangowie zazwyczaj są wyznawcami tybetańskiego buddyzmu z elementami przed-buddyjskiego Bön i religii tambaistycznej. Z powodu ich bliskości z Newarami, w ich praktykach można dostrzec lekki hinduistyczny wpływ. Według spisu ludności z 2001 roku, 88.26%  etnicznych Tamangów w Nepalu było Buddystami i 7.69% Hindusami. Typowym utworem muzycznym i tańcem Tamangów jest "tamang selo", w którym tańczy się w takt bębna zwanego "damphu". Damphu jest tradycyjnym bębnem Tamangów.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Bodhisattva means either "enlightened (bodhi) existence (sattva)" or "enlightenment-being" or "heroic-minded one (satva) for enlightenment (bodhi)". Another translation is "Wisdom-Being". It is the name given to anyone who, motivated by great compassion, has generated bodhicitta, which is a spontaneous wish to attain Buddhahood for the benefit of all living beings.</source>
+        <target>Bodhisattwa znaczy albo "oświecona (bodhi) egzystencja (sattva)", albo "istnienie-oświecenie" albo "ten o heroicznym umyśle (satva) do oświecenia (bodhi)". Innym tłumaczeniem jest "Istota-Mądrość". Jest to nazwa nadana komuś, kto motywowany wielkim współczuciem, wytworzył bodhicitta, co jest spontanicznym pragnieniem osiągnięcia stanu Buddy z korzyścią dla wszystkich żyjących istot.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The various divisions of Buddhism understand the word Bodhisattva in different ways. Theravada and some Mahayana sources consider a Bodhisattva as someone on the path to Buddhahood, while other Mahayana sources speak of Bodhisattvas renouncing Buddhahood. But especially in Mahayana Buddhism, it mainly refers to a being that compassionately refrains from entering nirvana in order to save others. So the Bodhisattva is a person who already has a considerable degree of enlightenment and seeks to use their wisdom to help other sentient beings to become liberated themselves.</source>
+        <target>Różne odmiany Buddyzmu rozumieją słowo Bodhisattva odmiennie. Therawada i pewne źródła Mahajany uważają Bodhisattwę za kogoś, kto jest na drodze do osiągnięcia stanu Buddy, podczas gdy inne źródła Mahajany mówią o Bodhisattwach odrzucających stan Buddy. Ale, zwłaszcza w Buddyzmie Mahajana, odnosi się głównie do istoty, która miłosiernie wstrzymuje się od wejścia w Nirwanę w celu ocalenia innych. Tak więc Bodhisattwa jest osobą, która ma już znaczący stopień oświecenia i stara się użyć swej wiedzy, by pomóc innym czującym istotom w osiągnięciu ich własnego wyzwolenia.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>While Theravada regards it as an option, Mahayana encourages everyone to follow a Bodhisattva path and to take the Bodhisattva vows. With these vows, one makes the promise to work for the complete enlightenment of all sentient beings.</source>
+        <target>Podczas gdy Therawada patrzy na to jako na opcję, Mahajana zachęca każdego do podążania ścieżką Bodhisattwy i złożenia przysiąg Bodhissatwy. Przysięgami tymi skałada się obietnicę pracowania nad całkowitym oświeceniem wszystkich świadomych istot.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Bodhisattva Path</source>
+        <target>Droga Bodhisattwy</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>One hears the Dharma.</source>
+        <target>Słyszy się Dharmę.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Inspired by the Dharma, one performs good deeds and accepts the grace of others (e.g., teachers, bodhisattvas), thus benefiting from their merit and building one's own merit.</source>
+        <target>Będąc zainspirowanym Dharmą, sprawia się dobre uczynki i akceptuje się łaskę innych (np. nauczycieli, bodhisattwów), korzystając w ten sposób z ich wartości i budując swą własną wartość.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>One develops the "thought of enlightenment" (bodhicitta), which</source>
+        <target>Rozwija się "myśl oświecenia" (bodhicitta), która</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>cancels previous bad karma</source>
+        <target>przekreśla poprzednią złą karmę</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>stimulates the development of merit</source>
+        <target>stymuluje rozwój zasług</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>ensures good rebirths.</source>
+        <target>zapewnia dobre ponowne narodziny.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>One takes the bodhisattva vows, which become a driving force - a personal destiny that leads one higher and higher.</source>
+        <target>Skada się przysięgi bodhissatwa, które stają się siłą napędową - osobistym przeznaczeniem prowadzącym coraz to wyżej.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>One practices the six perfections.</source>
+        <target>Praktykuje się sześć doskonałości.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Dāna paramita - self-sacrifice, transfer of one's own merit to others;</source>
+        <target>Dāna paramita - własne poświęcenie się, przekazanie swej własnej wartości innym;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Śīla paramita - virtue, morality, discipline, proper conduct;</source>
+        <target>Śīla paramita - cnota, moralność, dyscyplina, właściwe prowadzenie się;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Ksānti (kshanti) paramita (patience) - not becoming disturbed or agitated by anyone or anything, having faith in such doctrines as shunyata, "emptiness", practicing forgiveness;</source>
+        <target>Ksānti (kshanti) paramita (cierpliwość) - nie stawanie się poruszonym, czy zdenerwowanym przez kogokolwiek lub cokolwiek, wierzenie w takie doktryny jak shunyata, "pustka", praktykowanie przebaczenia;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Vīrya paramita (right effort);</source>
+        <target>Vīrya paramita (prawy wysiłek);</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Dhyāna paramita (meditation);</source>
+        <target>Dhyāna paramita (medytacja);</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Prajñā paramita (wisdom) - at this stage ("the Perfection of Wisdom"), the bodhisattva could, if he/she chose to do so, leave samsara and enter nirvana. But out of compassion for others, he/she continues to work in this world...;</source>
+        <target>Prajñā paramita (mądrość) - na tym etapie ("Doskonałość Mądrości"), bodhisattwa mógłby, gdyby zdecydował/a się tak uczynić, opuścić samsarę i wejść w nirwanę. Jednak poprzez współczucie dla innych, kontynuuje on/ona pracę na tym świecie...;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Stages one through six of the bodhisattva path constitute the practices of ordinary bodhisattvas, e.g., humans like us who are trying to perfect ourselves in hopes of nirvana. But, once one has freed oneself from the attachments that bind one in samsara, there are four additional stages, which constitute the practices of "cosmic bodhisattvas" (such as Avalokitesvara and Manjushri)</source>
+        <target>Etapy od jeden do sześciu ścieżki bodhisattwy tworzą praktyki zwyczajnych bodhisattw, np. ludzi takich jak my, którzy starają się udoskonalić się w nadziei na nirwanę. Jednak, z wyzwoleniem się od przywiązań, które wiążą nas w samsarę, istnieją cztery dodatkowe etapy, które składają się na praktyki "kosmicznych bodhisattw" (takich jak Avalokitesvara i Manjushri)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"going far" - practicing the ten perfections, i.e., the six mentioned above and four more:</source>
+        <target>"zdążanie daleko" - praktykowanie dziesięciu doskonałości, np. tych sześciu wcześniej wspomnianych i czterech więcej:</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Upāya (skillful means, contrivances, devices) - any method used to help others progress along the path. For instance, one might describe the Pure Land as though it is a material place where jewels hang from trees, in order to arouse the listener's interest. The successful bodhisattva is said to practice "skill in means" (upaya-kaushalya), continually leading others toward perfection. Ultimately, of course, all presentations of the Dharma - inwords or symbols - merely constitute upaya, expediencies.</source>
+        <target>Upāya (umiejętne środki, pomysły, sposoby) - jakakolwiek metoda użyta w celu pomocy innym czynienia postępu na ścieżce. Przykładowo, możnaby opisać Czystą Krainę jakoby była miejscem materialnym, gdzie klejnoty wiszą na drzewach, w celu wzniecenia zainteresowania słuchacza. Mówi się, że doskonały bodhisattwa praktykuje "umiejętność w środkach" (upaya-kaushalaya), stale prowadząc innych ku doskonałości. Ostatecznie, wszystkie prezentacje Dharmy - wewnątrz lub symbole - jedynie składają się na upaya, korzyści.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Pranidhāna (pranidhana) paramita - steadfastness in one's "vow".</source>
+        <target>Pranidhāna (pranidhana) paramita - nieugiętość we własnej "przysiędze".</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Bala - "strength" in practicing the perfections.</source>
+        <target>Bala - "siła" w praktykowaniu doskonałości.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Jñāna - "knowledge", that one's practices are correct and effective.</source>
+        <target>Jñāna - "wiedza", że czyjeś praktyki są prawidłowe i skuteczne.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>acala - "immovable", the ability to achieve one's goals spontaneously, by pure will;</source>
+        <target>аcala - "niewzruszony", zdolność osiągnięcia własnych celów spontanicznie, poprzez czystą wolę;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>sadhumati - "good intelligence", apparently, a higher order of prajñā paramita;</source>
+        <target>sadhumati - "dobra inteligencja", właściwie, wyższy porządek prajñā paramita;</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>dharmamegha - "clouds of Dharma": total perfection, like that of the Tathagata, bathed (as it were) in clouds of wisdom and virtue.</source>
+        <target>dharmamegha - "chmury Dharmy": całkowita doskonałość, jak ta z Tathagata, skąpana (tak jak to było) w chmurach wiedzy i prawości.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Dhyāna is usually translated as "concentration," "meditation," or "meditative stability." Dhyāna is the fifth of six pāramitās (perfections).</source>
+        <target>Dhyāna często tłumaczona jest jako "koncentracja", "medytacja", lub "medytacyjna stałość". Dhyāna jest piątą z sześciu pāramit (doskonałości).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In the Pali Canon the Buddha describes eight progressive states of absorption meditation or jhāna. Four are considered to be meditations of form and four are formless meditations. The first four jhānas are said by the Buddha to be conducive to a pleasant abiding and freedom from suffering. The deeper jhānas can last for many hours. When a meditator emerges from jhāna, his or her mind is empowered and able to penetrate into the deepest truths of existence.</source>
+        <target>W Kanonie Pali Budda opisuje osiem progresywnych stanów absorpcji medytacji lub jhāny. Cztery uważa się za medytację kształtu, a cztery za medytacje bezkształtne. Pierwsze cztery jhāny są określone przez Buddę jako sprzyjające przyjemnemu posłuszeństwu i wolności od cierpienia. Głębsze jhāny mogą trwać kilka godzin. Gdy medytujący powstaje z jhāny, jego lub jej umysł jest wzmocniony i zdolny do wglądu w najgłębsze prawdy egzystencji.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Arhat (Sanskrit) or arahant (Pali) is a spiritual practitioner who had "laid down the burden", realizing the goal of nirvana, the culmination of the spiritual life. In early Buddhist scriptures, the word arahant refers to an enlightened being. The exact interpretation and etymology this word remains disputed.</source>
+        <target>Arhat (sanskryt) lub arahant (pali) jest duchowym praktykującym, który "złożył ciężar", realizując cel nirwany, kulminację życia duchowego. We wczesnych skryptach buddyjskich, słowo arahant odnosi się do istoty oświeconej. Dokładna interpretacja i etymologia tego słowa pozostaje dyskusyjna.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In Theravada, it means anyone who has reached the total Awakening and attained Nibbana, including the Buddha. Arahant is a person who has destroyed greed, hatred and delusion, the unwholesome roots which underlie all fetters. Who upon decease will not be reborn in any world, having wholly cut off all fetters that bind a person to the samsara. In the Pali Canon, the word is sometimes used as a synonym for tathagata.</source>
+        <target>W Therawadzie, oznacza to każdego, kto dosięgnął całkowitego Przebudzenia i osiągnął Nibbana, łącznie z Buddą. Arahant jest osobą, która zniszczyła chciwość, nienawiść i złudzenie, owe niezdrowe korzenie, które leżą pod wszystkimi pętami . Która przy śmierci nie urodzi się już ponownie w żadnym świecie, całkowicie odciąwszy się uprzednio od wszystkich kajdanów, które wiążą osobę z samsarą. W kanonie pali, słowo to jest czasem używane jako synonim tathagaty.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In Mahayana, it usually means anyone who has destroyed greed and hatred, but is still subject to delusion. According to most, but not all, Mahayana authorities, an Arhat must go on to become a Bodhisattva. If they fail to do so in the lifetime in which they attain the enlightenment, they will go to some sort of dormant state, thence to be roused and taught the Bodhisattva path, presumably when ready.</source>
+        <target>W Mahajanie, zazwyczaj oznacza to kogokolwiek, kto zniszczył chytrość i nienawiść, lecz wciąż podlega złudzeniu . Według większości, lecz nie wszystkich, autorytetów Mahajany, Arhat musi zdążać dalej ku dostąpieniu Bodhisattwy. Jeśli im się to nie uda w życiu, w którym osiągnęli oświecenie, przejdą do czegoś w rodzaju stanu uśpienia, by zostać stąd wznieconym i nauczonym ścieżki Bodhisattwy, prawdopodobnie gdy będzie do tego gotowy.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Anuttara means supreme, highest, incomparable, unsurpassed, or peerless. Samyak means right, correct, true, accurate, complete, or perfect, and sambodhi means enlightenment. The expression Samyak Sambodhi by itself is also used to mean perfect enlightenment. Bodhi and sambodhi also mean wisdom or perfect wisdom. In this sense, anuttara-samyak-sambodhi means supreme perfect wisdom.</source>
+        <target>Аnuttara znaczy nadrzędny, najwyższy, nieporównywalny, niepokonany, lub bezkonkurencyjny. Samyak znaczy prawy, właściwy, prwdziwy, należyty, pełny, lub doskonały, a sambodhi znaczy oświecenie. Zwrot Samyak Sambodhi sam w sobie jest również używany w znaczeniu doskonałego oświecenia. Bodhi i sambodhi znaczą także mądrość lub doskonałą mądrość. W takim sensie, anuttara-samyak-sambodhi oznacza najwyższą doskonałą wiedzę.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Anuttara-samyak-sambodhi (Sanskrit) is a supreme perfect enlightenment, the unsurpassed enlightenment of a Buddha; the unsurpassingly merciful and enlightened heart; applied to liberated, perfected beings collectively, who then may "pass through all the six worlds of Being (Rupaloka) and get into the first three worlds of Arupa."</source>
+        <target>Anuttara-samyak-sambodhi (sanskryt) jest najwyższym doskonałym oświeceniem, nieprześcignionym oświeceniem Buddy; niepokonanie miłosiernym i oświeconym sercem; stosuje się do wyzwolonych, udoskonalonych istot wspólnie, które następnie mogą "przejść przez sześć światów Istnienia (Rupaloka) i dostać się do pierwszych trzech światów Arupa."</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Diamond Sutra:</source>
+        <target>Diamentowa Sutra:</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"The Bodhisattva Way is cultivated by those who seek the great fruit. Foreign lands are not sought after, because Bodhisattvas are not small landlords who set about conquering other countries in order to build an empire. Only Anuttarasamyaksambodhi, the highest fruit of cultivation, is the goal of great beings."</source>
+        <target>"Droga Bodhisattva kultywowana jest przez tych, którzy szukają wielkiego owocu. Obce ziemie nie są poszukiwane, gdyż Bodhisattwowie nie są małymi posiadaczami ziemskimi, którzy zabierają się za podbijanie państw w celu zbudowania imperium. Jedynie Anuttarasamyaksambodhi, najwyższy owoc kultywacji, jest celem wielkich istot."</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Maitreya (Sanskrit), Metteyya (Pāli), or Yampa (Tibetan) is a bodhisattva who in the Buddhist tradition is to appear on Earth, achieve complete enlightenment, and teach the pure dharma. According to scriptures, Maitreya will be a successor of the historic Śākyamuni Buddha, the founder of Buddhism.</source>
+        <target>Maitreya (sanskryt), Metteyya (Pāli), lub Yampa (tybetański) jest bodhisattwą, który w buddyjskiej tradycji ma pojawić się na Ziemi, osiągnąć całkowite oświecenie, i nauczać czystej dharmy. Według skryptów, Maitreja będzie następcą historycznego Buddy Śākyamuni, założyciela Buddyzmu.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The name Maitreya is derived from the word Maitri (Sanskrit) or Metta (Pali) meaning "loving-kindness".</source>
+        <target>Nazwa Maitreya wywodzi się od słowa Maitri (sanskryt) lub Metta (pali) oznaczającego "kochającą-dobroć?".</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Maitreya currently resides in the Tusita Heaven, said to be reachable through meditation. Sakyamuni Buddha also lived here before he was born into the world as all bodhisattvas live in the Tusita Heaven before they descend to the human realm to become Buddhas.</source>
+        <target>Maitreya obecnie rezyduje w Niebiosach Tusita, które, mówi się, można dosięgnąć poprzez medytację. Buddha Siakjamuni również tam przebywał przed swymi narodzinami w tym świecie, jako że wszyscy bodhisattwowie żyją w Niebiosach Trusita przed zejściem do królestwa ludzi, by staś się Buddami.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Asanga was one of the most famous Indian Buddhist saints, and lived in the fourth century. He went to the mountains to do a solitary retreat, concentrating all his meditation practice on the Buddha Maitreya, in the fervent hope that he would be blessed with a vision of this Buddha and receive teachings from him.</source>
+        <target>Аsanga był jednym z najbardziej sławnych indyjskich świętych buddyjskich, i żył w czwartym wieku. Udał się w góry w celu odbycia samotnego ustronia, koncentrując całą swą praktykę medytacyjną na Buddzie Maitreya, w gorącej nadziei, że będzie pobłogosławiony wizją tego Buddy i otrzyma od niego nauki.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>For several years Asanga meditated in extreme hardship without the slightest sign from the Buddha Maitreya.</source>
+        <target>Przez kilka lat Asanga medytował w ekstremalnym trudzie bez najmniejszego znaku od Buddy Maitreya.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The day wore on, he came across a dog lying by the side of the road. It had only its front legs, and the whole of the lower part of its body was rotting and covered with maggots. Despite its pitiful condition, the dog was snapping at passers-by and pathetically trying to bite them by dragging itself along the ground with its two good legs.</source>
+        <target>Dzień zmierzchał, a on naszedł na psa leżącego na uboczu drogi. Miał tylko swe przednie łapy, i całość dolnej części ciała gniła i pokryta była larwami. Mimo swejo żałosnego stanu, pies warczał na przechodniów i patetycznie próbował ich ugryźć, ciągnąc się wzdłuż ziemi swymi dwiema dobrymi kończynami.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Asanga was overwhelmed with a vivid and unbearable feeling of compassion. He cut a piece of flesh off his own body and gave it to the dog to eat. Then he bent down to take off the maggots that were consuming the dog's body. But he suddenly thought he might hurt them if he tried to pull them out with his fingers, and realized that the only way to remove them would be on his tongue. Asanga knelt on the ground, and looking at the horrible festering, writhing mass, closed his eyes. He leant closer and put out his tongue. The next thing he knew, his tongue was touching the ground. He opened his eyes and looked up. The dog was gone; there in its place was the Buddha Maitreya, ringed by a shimmering aura of light.</source>
+        <target>Аsanga był przytłoczony żywym i nieznośnym uczuciem współczucia. Odciął część swego ciała i dał go psu do zjedzenia. Następnie, zgiął się by pozbierać larwy , które konsumowały ciało psa. Lecz nagle pomyślał, że może je skrzywdzić próbując wyciągnąć je palcami, i uświadomił sobie, że jedynym sposobem na ich wyjęcie byłoby posłużenie się swym jązykiem. Asanga ukląkł na ziemi, i patrząc na okropną gnijącą , wijącą  masę, zamknął oczy. Schylił się niżej i wyciągnął swój język. Kolejna rzecz, którą wiedział, to jego język dotykający ziemi. Otworzył swe oczy i spojrzał w górę. Psa nie było; na jego miejscu był Budda Maitreja, otoczony migocącą aurą światła.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"At last," said Asanga, "why did you never appear to me before?"</source>
+        <target>"Wreszcie" - rzekł Asanga - "dlaczego nigdy wcześniej nie ujawiłeś mi się?"</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Maitreya spoke softly: "It is not true that I have never appeared to you before. I was with you all the time, but your negative karma and obscurations prevented you from seeing me. Your twelve years of practice dissolved them slightly so that you were at last able to see the dog. Then, thanks to your genuine and heartfelt compassion, all those obscurations were completely swept away and you can see me before you with your very own eyes."</source>
+        <target>Maitreja łagodnie odpowiedział: "Nieprawda, że nigdy wcześniej nie ujawiłem się tobie. Byłem z tobą cały czas, ale twa negatywna karma i zaciemnienia uniemożliwiły ci widzenie mnie. Twoje dwanaście lat praktyki rozmyły je nieco, tak że w końcu byłeś w stanie zobaczyć psa. Potem, dzięki twemu szczeremu i serdecznemu współczuciu, wszystkie te zaciemnienia zostały całkowicie wymiecione i widzisz mnie przed sobą swymi własnymi oczami".</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Then the Buddha Maitreya took Asanga to the Tusita Heaven, and there gave him many sublime teachings that are among the most important in the whole of Buddhism.</source>
+        <target>Potem Budda Maitreja wziął Asanga do Niebios Tusita, a tam dał mu inspirujące nauki, które plasują się wśród najważniejszych w całym buddyzmie.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Maitreya is prophesied by the Buddha Shakyamuni to be the next Buddha to appear in our world system. He will be last of the the five Buddhas to gain Supreme Enlightenment in this kalpa (aeon, long period of time).</source>
+        <target>Maitreja jest przepowiedziany przez Buddę Siakjamuni jako kolejny Budda mający się pojawić w naszym systemie światowym. Będzie on ostatnim z pięciu Buddów mających osiągnąć Najwyższe Oświecenie w tym kalpa (aeon, długi okres czasu).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Maitreya's coming will occur after the teachings of the current Gautama Buddha, the Dharma, are no longer taught and are completely forgotten. Gautama predicts that when man's life span is eighty thousand years he who is named Maitreya shall arise in the world.</source>
+        <target>Nadejście Matrei nastąpi po tym jak nauki obecnego Buddy Gautama, Dharma, nie będą już nauczane i będą całkowicie zapomniane. Gautama przewiduje, że gdy zasięg życia człowieka wynosić będzie osiemdziesiąt tysięcy lat, on, który nosi imię Maitreja, pojawi się na tym świecie.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Gautama Buddha prophesied the advent of a future Buddha who would restore the true teaching and establish the next golden age. He shall proclaim the Teaching pleasant in its beginning, pleasant in the middle, and pleasant in the end thereof, and shall make known its spirit and its letter: in its perfection and in all its purity.</source>
+        <target>Budda Gautama prorokował nadejście przyszłego Buddy, który odnowiłby prawdziwe nauki i ustanowił kolejny złoty wiek. Proklamuje on Nauki przyjemne w ich początku, przyjemne w środku, i przyjemne na końcu tego, i da poznać jego duszę i jego pismo: w jego doskonałości i całej jego czystości.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Sutra of Maitreya Bodhisattva's Attainment of Buddhahood:</source>
+        <target>Sutra o Osiągnięciu Stanu Buddy przez Bodhisattwa Maitreja:</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The one with unsurpassed virtue</source>
+        <target>Ten o nieprześcignionej cnocie</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Will rightfully appear in the world.</source>
+        <target>odpowiednio pojawi się na świecie.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>That one will pronounce the wondrous Dharma,</source>
+        <target>Tenże ogłosi cudowną Dharmę,</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>And all will be infused with it,</source>
+        <target>I wszystko będzie nią nasycone,</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Like the thirsty drinking the sweet nectar.</source>
+        <target>Jak spragniony pijący słodki nektar.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>All will swiftly set off on the Liberation Path.</source>
+        <target>Wszystko szybko wyruszy Ścieżką Wyzwolenia.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Many Buddhist texts contain variations of the legend that Mahakasyapa, a disciple of Gautama Buddha who took over the leadership of the Sangha after Gautama's passing, is in deep meditation inside a mountain awaiting the coming of Maitreya so that he can pass him Gautama's robe. Gautama Buddha instructed four of his disciples, Mahakasyapa, Kundopadhaniya, Pindola, and Rahula, not to enter nirvana, but instead to remain in the world until Maitreya appears: "You must wait for my Law to come to its end, then you may enter nirvana." Sakyamuni particularly singles out Mahakasyapa.</source>
+        <target>Wiele tekstów buddyjskich zawiera odmiany legendy, której Mahakasyapa, uczeń Buddy Gautama, który przejął prowadzenie Sanghi po odejściu Gautamy, jest w głębokiej medytacji wewnątrz góry, oczekując na nadejście Maitrei, tak by ten mógł mu przekazać szatę Gautamy. Budda Gautama poinstruował czterech ze swych uczniów, Mahakasyapa, Kundopadhaniya, Pindola i Rahula, aby nie wchodzili w nirwanę, lecz zamiast tego pozostali na tym świecie do czasu nadejścia Maitrei. "Musicie czekać na moje Prawo, by dojść do jego końca, potem możecie wejść w nirwanę." Siakjamuni wyodrębnia szczególnie Mahakasyapę.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Buddha-nature</source>
+        <target>Budda-natura</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Within many schools of Mahayana Buddhism, the Buddha-nature or Buddha Principle (Buddha-dhātu), is taught to be a truly real and pure, but internally hidden immortal potency or element within the mind of all beings, for awakening and becoming a Buddha. Other terms for the Buddha-nature are Tathāgatagarbha and Sugatagarbha.</source>
+        <target>Wewnątrz wielu szkół Buddyzmu Mahajana, Budda-natura lub Budda-Zasada (Budda-dhātu), nauczana jest jako prawdziwie realny i czysty, ale wewnętrznie schowany nieśmiertelny potencjał lub element wewnątrz umysłu wszystkich istot, na przebudzenie i stanie się Buddą. Innymi terminami na określenie Buddy-natury są Tathāgatagarbha i Sugatagarbha.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Mahayana Uttaratantra Shastra, one of the "Five Treatises" said to have been dictated to Asanga by the Maitreya, presents the Buddha's definitive teachings on how we should understand this ground of enlightenment and clarifies the nature and qualities of buddhahood.</source>
+        <target>Mahayana Uttaratatntra Shastra, jeden z "Pięciu Traktatów?", które ?rzekomo zostały podyktowane Asandze przez Maitreję, ukazuje definitywne nauki Buddy na temat jak powinniśmy rozumieć owy teren? oświecenia i wyjaśnia naturę i cechy? stanu buddy.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Buddha-nature is completely rejected by Theravada Buddhism due to the fact that the concept comes from later Mahayana sutras which it sees as inauthentic.</source>
+        <target>Budda-natura jest całkowicie odrzucony przez Buddyzm Therawada ze względu na fakt, że koncept ten pochodzi z późniejszych sutr Mahajany, który postrzega to jako coś nieautentycznego.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>One of the central tenets of Buddhism, is the denial of a separate permanent "I", and is outlined in the three marks of existence.</source>
+        <target>Jednym z centralnych dogmatów Buddyzmu jest zaprzeczenie odrębnego stałego "Ja", i jest zarysowany w trzech znakach egzystencji.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Anattā: "not-self," egolessness, impersonality. This doctrine teaches that neither in the material phenomena of the body, which are of four kinds (referred to collectively as "form" or materiality):</source>
+        <target>Anattā: "nie-ja", brak ego, bezosobowość. Ta doktryna naucza, iż ani w materialnych zjawiskach ciała, które są w czerech rodzajach (do których zbiorowo odnosi się jako "forma" lub materialność):</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>fluidity</source>
+        <target>płynność</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>heat</source>
+        <target>ciepło</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>support</source>
+        <target>podpora</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>solidity</source>
+        <target>solidność</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>nor in the mental phenomena (referred to as "mind" or mentality), which are of four kinds:</source>
+        <target>ani w zjawiskach mentalnych (do których odnosi się jako "umysł" lub mentalność), które występują w czerach rodzajach:</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>sensation</source>
+        <target>doznanie</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>perception</source>
+        <target>percepcja</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>intention</source>
+        <target>intencja</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>consciousness</source>
+        <target>świadomość</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>is there to be found anything that in the ultimate sense can be regarded as an enduring self, ego, soul, identity, essence, or personality. There is no abiding substance.</source>
+        <target>nie można znaleźć niczego, co w ostatecznym sensie może być postrzegane jako trwające bycie sobą, ego, dusza, tożsamość, essencja lub osobowość. Nie ma trwałych substancji.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Whosoever has not penetrated the impersonality of all existence, and does not comprehend that in reality there exists only this continually self-consuming process of arising and passing bodily and mental phenomena, and that there is no separate ego-entity within or without this process, will not be able to understand Buddhism, that is, the teaching of the Four Noble Truths, in the right light.</source>
+        <target>Ktokolwiek nie spenetrował bezosobowości całej egzystencji, i nie rozumie, że w rzeczywistości istnieje tylko ten stale samo-konsumujący się proces powstawania i przechodzenia cielesnych i mentalnych zjawisk, i że nie ma oddzielej ego-bytu wewnątrz lub bez tego procesu, nie będzie mógł zrozumieć Buddyzmu, to jest nauki Ctzerech Szlachetnych Prawd, we właściwym świetle.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Instead, one will think that it is one's ego, one's personality that experiences suffering, one's personality that performs wholesome and unwholesome actions (karma), and that will be reborn according to these actions. One will think that it is one's personality that will "enter" into nirvana, one's personality that walks the Noble Eightfold Path.</source>
+        <target>Zamiast tego, będzie myślał, że jest to jego ego, jego osobowość, która doświadcza cierpienia, jego osobowość, która dokonuje zdrowych i niezdrowych czynów (karma), i że odrodzi się ponownie podług tych czynów. Będzie sądził, że to jego osobowość "wejdzie" w stan nirwany, jego osobowość, która kroczy Szlachetną Ośmiokrotną Ścieżką.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Discourse on the Characteristic of Not-self was the Buddha's second discourse after enlightenment, delivered the first five disciples. After hearing it, they attained full enlightenment (arhatship).</source>
+        <target>Mowa na temat Charakterystyki Nie-siebie bądąca drugą mową Buddy po oświeceniu, dostarczyła pięciu pierwszych uczniów. Po usłyszeniu jej, osiągnęli oni pełne oświecenie (stan arhat).</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The contemplation of not-self leads to the emptiness liberation. Herein the faculty of wisdom is outstanding. And one who attains the path of stream-entry in that way is called a Dharma-devotee. At the next two stages of enlightenment, one becomes a vision-attainer. And at the highest stage (arhatship) one is called "liberated by wisdom".</source>
+        <target>Kontemplacja nie-siebie prowadzi do wyzwolenia pustki. Tu, dar mądrości jest wyjątkowy. I ten, kto dotrze do ścieżki wejścia strumienia w ten sposób zwany jest wielbicielem Dharmy. W kolejnych dwóch etapach oświecenia, staje się osiągającym wizje. Na najwyższym etapie natomiast (stan arthat), jest się zwanym "wyzwolony mądrością"</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In the Diamond Sūtra it says: "If a bodhisattva abides in the signs of self, person, sentient being, or life-span, she or he is not a bodhisattva."</source>
+        <target>W Diamentowej Sūtrze stwierdza się: "Jeśli bodhisattwa trwa przy oznakach siebie, osoby, czującego istnienia, lub przeciągu życia, ona lub on nie jest bodhisattwą."</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Atman or Atta (Pāli) literally means "self", but is sometimes translated as "soul" or "ego". In Buddhism, the belief in the existence of an unchanging ātman is the prime consequence of ignorance, which is itself the cause of all misery and the foundation of samsāra.</source>
+        <target>Atman lub Atta (pāli) znaczy dosłownie "sam-a", ale czasem tłumaczy się jako "dusza" lub "ego". W Buddyzmie, wiara w istnienie niezmieniającego się ātman jest czołową konsekwencją niewiedzy, która sama w sobie jest powodem całego cierpienia i podstawą samsāry.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>With the doctrine of anatta Buddhism maintains that the concept of atman is unnecessary and counterproductive as an explanatory device for analyzing action, causality, karma, and rebirth. Buddhists regard postulating the existence of atman as undesirable, as they believe it provides the psychological basis for attachment and aversion.</source>
+        <target>Doktryną anatta Buddyzm utrzymuje, że koncept atmanu jest niekonieczny i szkodliwy jako środek wyjaśniający do analizowania czynu, przyczynowości, karmy i ponownych narodzin. Buddyści postrzegają postulowanie istnienia atmanu jako niepożadane, jako że uważają, że dostarcza on psychologiczną podstawę do przywiązania i awersji.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>While the suttas criticize notions of an eternal, unchanging Self, they see an enlightened being as one whose changing, empirical self is highly developed. One with great self has a mind which is not at the mercy of outside stimuli or its own moods, but is imbued with self-control, and self-contained. The mind of such a one is without boundaries, not limited by attachment or I-identification. One can transform one's self from an "insignificant self" into a "great self" through practices such as loving-kindness and mindfulness. The suttas portray one disciple who has developed his mind through loving-kindness saying: "Formerly this mind of mine was limited, but now my mind is immeasurable."</source>
+        <target>Podczas gdy sutty krytykują pojęcie wiecznego, niezmieniającego się Siebie, widzą one oświeconą istotę jako tą, której zmieniające się, empiryczne 'samo' jest wysoko rozwinięte. Ktoś kto ma wielkie 'samo' ma umysł, który nie jest na łasce zewnętrznych bodźców czy swych własnych nastrojów, ale jest przepełnione samokontrolą i samowystarczalne. Umysł takiego kogoś jest bez limitów, nieograniczony przez przywiązanie lub identyfikację z Ja. Może przekształcić swoje siebie z "nieznaczącego siebie" w "wielkie siebie" poprzez praktyki takie jak kochająca-dobroć i rozumność. Sutty portretują pewnego ucznia, który rozwinął swój umysł poprzez kochającą-dobroć mówiąc: "Uprzednio ten mój umysł był ograniczony i niewymierny".</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>At the culmination of the path is the Arahant, described as "one of developed self", who has carried the process of personal development and self-reliance to its perfection. Such a person has developed all the good aspects of their personality. An arahant is described as "one with a mind like a diamond", it can "cut" anything and is itself uncuttable; nothing can affect it.</source>
+        <target>W kulminacji ścieżki jest Arahant, opisany jako "ten o rozwiniętym sobie", który przeprowadził proces osobistego rozwoju i poleganiu na samym sobie do perfekcji. Taka osoba rozwinęła wszystkie dobre aspekty swej osobowości. Arahant jest określany jako "ten o umyśle jak diament", może "ciąć" cokolwiek, a sam nie jest w stanie być ciętym; nic nie może go poruszyć.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Śāntideva (an 8th-century Indian Buddhist philosopher and practitioner) informs us that in order to be able to deny something, we first of all need to know what it is that we are denying:</source>
+        <target>Śāntideva (indyjski filozof i praktyk buddyjski z ósmego wieku) informuje nas, że aby być w stanie coś zaprzeczyć, najpierw należy wiedzieć czym jest to co zaprzeczamy:</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"Without contacting the entity that is imputed</source>
+        <target>"Bez kontaktowania się z istotą, która jest oskarżoną</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>You will not apprehend the absence of that entity"</source>
+        <target>Nie pojmiecie nieobecności tej istoty?"</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In 2005, commenting on the Tibetan Book of the Dead, the 14th Dalai Lama explains how Highest Yoga Tantra Buddhism (of which the Tibetan Book of the Dead is a manifestation) conceives both of a temporary person, and a subtle person or self, which Highest Yoga Tantra - the Dalai Lama states - links to the Buddha Nature. He writes:</source>
+        <target>W 2005 roku, komentując Tybetańską Księgę Zmarłych, 14-ty Dalai Lama wyjaśnia jak Najwyższy Buddyzm Joga Tantra (którego Tybetańska Księga Zmarłych jest menifestacją) rozumie zarówno tymczasową osobę jak i subtelną osobę lub siebie, które Najwyższa Joga Tantra - stwierdza Dalai Lama - łączy z Budda Naturą. Pisze on:</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>‘… when we look at [the] interdependence of mental and physical constituents from the perspective of Highest Yoga Tantra, there are two concepts of a person. One is the temporary person or self, that is as we exist at the moment, and this is labeled on the basis of our coarse or gross physical body and conditioned mind, and, at the same time, there is a subtle person or self which is designated in dependence on the subtle body and subtle mind. This subtle body and subtle mind are seen as a single entity that has two facets. The aspect which has the quality of awareness, which can reflect and has the power of cognition, is the subtle mind. Simultaneously, there is its energy, the force that activates the mind towards its object – this is the subtle body or subtle wind. These two inextricably conjoined qualities are regarded, in Highest Yoga Tantra, as the ultimate nature of a person and are identified as buddha nature, the essential or actual nature of mind.’</source>
+        <target>"... gdy patrzymy na [tą] międzyzależność mentalnych i fizycznych składnych z perspektywy Najwyższej Jogi Tantry, istnieją dwa koncepty osoby. Jednym jest tymczasowa osoba lub sam, to jest jak teraz istniejemy, i jest to nazwane na podstawie naszego szorstkiego lub ordynarnego ciała fizycznego i uwarunkowanego umysłu, i, w tym samym momencie, istnieje osoba subtelna lub samo, które jest desygnowane w zależności od subtelnego ciała i subtelnego umysłu. To subtelne ciało i subtelny umysł widziane są jako oddzielna istota , która ma dwie cechy. Aspekt, który ma jakość świadomości, który może rozumować i ma moc poznawczą, jest umysłem subtelnym. Równocześnie, istnieje jego energia, siła która uaktywnia umysł w kierunku jego celu - jest to subtelne ciało lub subtelny wiatr. Te dwie nierozwikłanie połączone cechy są postrzegane, w Najwyższej Jodze Tantrze, jako ostateczna natura osoby i są identyfikowane jako natura buddy, istotna lub rzeczywista natura umysłu.'</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Moreover, the Buddhist tantric scripture entitled "Chanting the Names of Mañjusri", as quoted by the great Tibetan Buddhist master, Dolpopa, repeatedly exalts not the non-Self but the Self and applies the following terms to this ultimate reality:</source>
+        <target>Co więcej, buddyjski skrypt tantryczny zatytułowany "Śpiewając Imiona Mañjusri", jak cytowane przez wielkiego tybetańskiego mistrza buddyjskiego, Dolpopa, powtarzająco się wychwala nie nie-Siebie, ale Siebie i stosuje następujące terminy do tej ostatecznej rzeczywistości:</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the pervasive Lord" (vibhu)</source>
+        <target>"wszechobecny Władca" (vibhu)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"Buddha-Self"</source>
+        <target>"Budda-Ja"</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the beginningless Self" (anādi-ātman)</source>
+        <target>"bezpoczątkowe Ja" (anādi-ātman)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the Self of Thusness" (tathatā-ātman)</source>
+        <target>"Ja takowości"(tathatā-ātman)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the Self of primordial purity" (śuddha-ātman)</source>
+        <target>"Ja pierwotnej czystości"(śuddha-ātman)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the Source of all"</source>
+        <target>"Źródło wszystkiego"</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the Self pervading all"</source>
+        <target>"Ja wszystko ogarniające"</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the Single Self" (eka-ātman)</source>
+        <target>"Ja Pojedyncze" (eka-ātman)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the Diamond Self" (vajra-ātman)</source>
+        <target>"Diamentowe Ja" (vajra-ātman)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the Solid Self" (ghana-ātman)</source>
+        <target>"Stałe Ja" (ghana-ātman)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the Holy, Immovable Self"</source>
+        <target>"Święte, Niewzruszone Ja"</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>"the Supreme Self"</source>
+        <target>"Najwyższe Ja"</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The Mahayana Mahaparinirvana Sutra has the Buddha speak of four essential elements which make up Nirvana. One of these is ‘Self’ (atman), which is construed as the enduring Self of the Buddha.</source>
+        <target>Mahajana Mahaparinirwana Sutra głosi Buddę mówiącego o czterech istotnych elementach, które składają się na Nirwanę. Jednym z nich jest 'Ja' (atman), który jest interpretowany jako nieprzemijające Ja Buddy.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Within the Mahayana there exists an important class of sutras, generally known as Tathagatagarbha sutras, a number of which affirm that, in contradistinction to the impermanent "mundane self" of the five "skandhas"(the physical and mental components of the mutable ego), there does exist an eternal True Self, which is in fact none other than the Buddha himself in his ultimate "Nirvanic" nature. This is the "true self" in the self of each being, the ideal personality, attainable by all beings due to their inborn potential for enlightenment. The "tathagatagarbha"/Buddha nature does not represent a substantial self (atman); rather, it is a positive language and expression of "sunyata" (emptiness) and represents the potentiality to realize Buddhahood through Buddhist practices.</source>
+        <target>Wewnątrz Mahajany istnieje ważna klasa sutr, ogólnie znanych jako sutry Tathagatagarbha, z których liczne deklarują, że w przeciwieństwie do niestałego "nudnego ja" pięciu "skandh" (fizyczne i mentalne komponenty zmiennego ego), istnieje naprawdę wieczne Prawdziwe Ja, które jest w rzeczywistości niczym innym jak samym Buddą w jego ostatecznej "Nirwanicznej" naturze. Jest to "prawdziwe ja" w ja każdej istoty, idealna osobowość, osiągalna przez wszystkich dzięki ich wrodzonemu potencjałowi na oświecenie. "Tathagatagarbha"/Budda natura nie reprezentuje cielesnego siebie (ja - atman); jest to raczej pozytywny język i ekspresja "sunyata" (pustka) i reprezentuje potencjalność realizacji stanu Buddy poprzez praktyki buddyjskie.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In the Dhammapada, one of the most respected texts of the Southern Buddhists, we read: "The self is the master of the self, for who else could be its master?".</source>
+        <target>W Dhammapada, jednym z respektowanych tekstów Południowych Buddystów, czytamy: "Ja jest mistrzem siebie, dla kogo innego mógłby być mistrzem?".</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Acharya Nagarjuna, one of the most important figures of early Buddhism, sometimes referred to as "the Second Buddha", in his commentary on the Prajnaparamita wrote: "Sometimes the Tathagata taught that the Atman verily exists, and yet at other times he taught that the Atman does not exist".</source>
+        <target>Acharya Nagarjuna, jedna z najważniejszych figur wczesnego Buddyzmu, do którego czasem odnosi się jako "Drugi Budda", w swoim komentarzu do Prajnaparamita napisał: "Czasami Tathagata nauczał, że Atman w istocie istnieje, a jednocześnie innymi razy nauczał, że Atman nie istnieje."</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Buddhism greatly influenced the development of the Hindu Advaita Vedanta school of philosophy. There too there the individual self is deconstructed. Advaita however postulates the existence of a monistic metaphysical being in itself, i.e. Brahman or Paramatman as part of its interpretation of the Upanishads, while Buddhism does not.</source>
+        <target>Buddyzm wielce wpłynął na rozwój hinduskiej szkoły filozofii Advaita. Tam też indywidualne ja jest zdekonstruowane. Jednakże Advaita postuluje istnienie monistycznej metafizycznej istoty w sobie, tzn. Brahmana lub Paramatmana, jako część interpretacji Upanishadów, podczas gdy Buddyzm nie czyni tego.</target>
+      </trans-unit>
+
+	  <trans-unit id="1">
+        <source>The Ātman is a philosophical term used within Hinduism, especially in the Vedanta school to identify the soul whether in global sense (world's soul) or in individual sense (of a person own soul). It is one's true self (hence generally translated as "Self") beyond identification with the phenomenal reality of worldly existence.</source>
+        <target>Atman jest filozoficznym terminem używanym w hinduizmie, zwłaszcza w szkole Vedanta do utożsamiania duszy albo w sensie globalnym (dusza świata), albo w sensie indywidualnym ( własna dusza danej osoby). Jest to czyjeś prawdziwe ja (stąd generalnie tłumaczone jako 'ja' ) poza identyfikacją z fenomenalną rzeczywistością światowej egzystencji.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In Hindu theology, Paramatman or Paramātmā is the Absolute Atman or Supreme Soul or Spirit (also known as Supersoul or Oversoul) in the Vedanta and Yoga philosophies of India.</source>
+        <target>W teologii hinduskiej, Paramatman lub Paramātmā jest Absolutnym Atmanem lub Najwyższą Duszą lub Duchem (znanym też jako Superdusza lub Naddusza) w filozofiach Indii Vedanta i Joga.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Paramatman is one of the aspects of Brahman. The Upanishads compare Atman and Paramatman to two birds sitting like friends on the branch of a tree (body). The Atman eats its fruits (karma), and the Paramatman only observes the Atman as a witness of His friend's actions.</source>
+        <target>Paramatman jest jednym z aspektów Brahmana. Upanishadowie porównują Atman i Paramatman do dwóch ptaków siedzących jak przyjaciele na gałęzi drzewa (ciało). Atman spożywa swe owoce (karma), a Paramatman tylko obserwuje Atmana jako świadek czynów Swego przyjaciela.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>A common misconception among non-Buddhists is that the Buddha is the Buddhist counterpart to "God." Buddhism however, is in general non-theistic, in the sense of not teaching the existence of a supreme creator god or depending on any supreme being for enlightenment. The Buddha is a guide and teacher who points the way to enlightenment, however the struggle for enlightenment is one's own. The commonly accepted definition of the term "God" is of a being who rules and created the universe. The Buddha of the early texts gives arguments refuting the existence of such a being.</source>
+        <target>Powszechnym błędnym wyobrażeniem pośród nie-Buddystów jest to, że Budda jest buddyjskim odpowiednikiem "Boga". Jednakże Buddyzm, jest ogólnie nie-teistyczny, w sensie nie nauczania o egzystencji najwyższwego stwórcy boga lub byciu zależnym od jakiejkolwiek najwyższej istoty by dostąpić oświecenia. Budda jest przewodnikiem i nauczycielem, który wskazuje drogę ku oświeceniu, jednak walka o oświecenie jest własna. Powszechnie przyjmowaną definicją terminu "Bóg" jest ta o istocie, która panuje i stworzyła wszechświat. Budda wczesnych swych tekstów podaje argumenty obalające istnienie takiej istoty.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In early Buddhism, the Buddha clearly states that "reliance and belief" in creation by a supreme being leads to lack of effort and inaction. This is a significant hindrance in the path to liberation in the Buddha's view. It may be noted that the Buddha did not criticize veneration of the God, but only said that the belief in the existence of a creator God fetters the mind to samsara.</source>
+        <target>We wczesnym Buddyzmie, Budda jasno stwierdza, że "poleganie i wiara" w tworzenie przez najwyższą istotę prowadzi do braku wysiłku i bezczynności. Jest to znacząca przeszkoda na ścieżce do wyzwolenia według Buddy. Na co można zwrócić uwagę, to to, że Budda nie krytykował czczenia Boga, ale jedynie stwierdził, że wiara w istnienie Boga stwórcy skrępowuje umysł w samsarę.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mahayana Buddhism (like Theravada Buddhism) posits no Creator or ruler God. In the Avatamsaka Sutra it says, "If you want to understand all the Buddhas of the past, present, and future, then you should view the whole universe as being created by Heart." In some major traditions of Mahayana Buddhism (the Tathagatagarbha and Pure Land streams of teaching) there is a notion of the Buddha as the omnipresent, omniscient, liberative essence of reality, and Buddhas are spoken of as generators of vast "pure lands", "Buddha lands", or "Buddha paradises", in which beings will unfailingly attain Nirvana. And thus, to some extent, this conception of the Buddha draws close to pantheistic conceptions of godhead, yet it differs in that in the Mahayana tradition, anyone can become a Buddha, as compared to general theistic religions in which it is generally considered impossible to become a god or God.</source>
+        <target>Buddyzm Mahajana (tak jak Buddyzm Theravada) nie przyjmuje żadnego Stórcy, czy panującego Boga. Sutra Avatamsaka mówi: "Jeśli chcesz zrozumieć wszystkich Buddów przeszłości, teraźniejszości i przyszłości, powinieneś wobec tego spojrzeć na cały wszechświat tak, jakby był stworzony przez Serce." W niektórych głównych tradycjach Buddyzmu Mahajana (prądy nauki Tathagatagarbha i Czystej Ziemi) jest pojęcie Buddy jako wszechobecnej, wszechwiedzącej, wyzwalającej essencji rzeczywistości, a o Buddach mówi się jako o generatorach rozległych "czystych ziem", lub "rajów Buddy", w których istoty niezawodnie osiągają Nirwanę. I tak, do pewnego stopnia, ta koncepcja Buddy sięga blisko panteistycznych koncepcji czołowego boga, wciąż jednak różni się tym, że w tradycji Mahajana każdy może stać się Buddą, w porównaniu z ogólnymi teistycznymi religiami, w których generalnie uważa się za niemożliwe zostanie bogiem czy też Bogiem.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Buddhism is neither atheistical nor theistical, and Buddhism is not a mixture of both either. Because the Buddhist teachings do not dwell in either one, thus it is called the Middle Way.</source>
+        <target>Buddyzm nie jest ani ateistyczny, ani teistyczny i nie jest też mieszanką tych obydwu. Jakoże nauki buddyjskie nie zajmują się żadnym z nich, jest to wobec tego nazwane Środkową Drogą.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>In the Hindu religion, Gyani is a person trying to perceive Absolute Truth (Bhagavan or Brahman) relying just on the strength of his mind.</source>
+        <target>W religii hinduskiej Gyani jest osobą starającą się uświadomić sobie Absolutną Prawdę (Bhagavan lub Brahman) polegając jedynie na sile swego umysłu.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>The word "Ghian" in Punjabi means knowledge. So a "Ghiani" is someone who has spiritual and religious knowledge and can help the congregation.</source>
+        <target>Słowo "Ghian" w języku punjabi znaczy wiedza. Tak więc "Ghiani" to ktoś, kto posiada duchową i religijną wiedzę i może pomóc kongregacji.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Kali Yuga ("age of vice") is the last of the four stages that the world goes through as part of the cycle of yugas described in the Indian scriptures. The "Kali" of Kali Yuga means "strife, discord, quarrel, or contention." The other ages are Satya Yuga, Treta Yuga and Dvapara Yuga. Most interpreters of Hindu scriptures believe that earth is currently in Kali Yuga. The Kali Yuga is traditionally thought to last 432,000 years.</source>
+        <target>Kali Yuga ("wiek niemoralności") jest ostatnim z czterech etapów, przez które przechodzi świat jako część cyklu yug opisanych w indyjskich skryptach. "Kali" z Kali Yuga znaczy "konflikt, niezgodę, kłótnię, lub spór". Innymi wiekami są Satya Yuga, Treta Yuga i Dvapara Yuga. Większość interpretatorów hinduskich skryptów wierzy, że ziemia jest obecnie w Kali Yuga. Tradycyjnie Kali Yugę uważa się jako trwającą 432 200 lat.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Hindus believe that human civilization degenerates spiritually during the Kali Yuga, which is referred to as the Dark Age because in it people are as far removed as possible from God. Hinduism often symbolically represents morality (dharma) as a bull. In Satya Yuga, the first stage of development, the bull has four legs, but in each age morality is reduced by one quarter. By the age of Kali, morality is reduced to only a quarter of that of the golden age, so that the bull of Dharma has only one leg.</source>
+        <target>Hindusi wierzą, że ludzka cywilizacja degeneruje się duchowo podczas Kali Yugi, do którego odnosi się jako do Ciemnego Wieku, ponieważ w nim ludzie odsunięci są tak daleko jak to tylko możliwe od Boga. Hinduizm często symbolicznie reprezentuje moralność (dharma) jako byka. W Satya Yuga, pierwszym etapie rozwoju, byk ma cztery kończyny, lecz w każdym wieku moralność redukuje się o jedną czwartą. Do wieku Kali, moralność jest zredukowana jedynie do jednej czwartej tej ze złotego wieku, tak więc byk Dharmy ma tylko jedną kończynę.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Kunchu means "Divine Being", while Sum means "Three", thus Kunchusum is "the Three Buddha".</source>
+        <target>Kunchu znaczy "Boska Istota", podczas gdy Sum znaczy "Trzy", tak więc Kunchusum to "Trzech Buddów".</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Kunchusum Lhakhang is a rural looking temple, in a short distance from Tamshing Lhakhang (the most important Nyingma school temple in Bhutan). The temple dates back to 7th century, it was discovered and restored by the treasurer in 15th century. The temple is famous for its bell, which bears an inscription from the 8th century. It was stolen from Tibet and transported to Bhutan. Perhaps the Tibetan Royal Family had cats which could hear the "sound of Buddhism".</source>
+        <target>Kunchusum Lhakhang jest świątynią o wiejskim wyglądzie, znajdującą się nieopodal Tamshing Lhakhang (najważniejszej świątyni szkoły Nyingma w Butanie). Świątynia ta datuje się na 7 wiek i została odkryta i odnowiona przez skarbnika w 15 wieku. Świątynia owa znana jest ze swego dzwona, który nosi napis z 8 wieku. Został on skradziony z Tybetu i przetransportowany do Butanu. Być może tybetańska Rodzina Królewska miała koty, które mogły słyszeć "dźwięk Buddyzmu".</target>
+      </trans-unit>      
+
+    </body>
+  </file>
+</xliff>

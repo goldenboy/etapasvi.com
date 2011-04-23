@@ -1,0 +1,295 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Video
+    theme:            default
+
+    list:
+      peer_method: doSelectWithI18n
+      max_per_page: 50
+      sort: [order, desc]
+      display: [=id, show, order, created_at, _img, title]
+      object_actions:
+        _edit:
+        _delete:
+
+    edit:
+      display:
+        "NONE": [show, order, created_at]
+        "EN":
+          - img_i18n_en
+          - _img_i18n_en
+          - code_i18n_en
+          - title_i18n_en
+          - body_i18n_en
+        "RU":
+          - img_i18n_ru
+          - _img_i18n_ru
+          - code_i18n_ru
+          - title_i18n_ru
+          - body_i18n_ru
+        "CS":
+          - img_i18n_cs
+          - _img_i18n_cs
+          - code_i18n_cs
+          - title_i18n_cs
+          - body_i18n_cs
+        "HU":
+          - img_i18n_hu
+          - _img_i18n_hu
+          - code_i18n_hu
+          - title_i18n_hu
+          - body_i18n_hu
+        "PL":
+          - img_i18n_pl
+          - _img_i18n_pl
+          - code_i18n_pl
+          - title_i18n_pl
+          - body_i18n_pl
+        "FR":
+          - img_i18n_fr
+          - _img_i18n_fr
+          - code_i18n_fr
+          - title_i18n_fr
+          - body_i18n_fr
+        "zh_CN":
+          - img_i18n_zh_CN
+          - _img_i18n_zh_CN
+          - code_i18n_zh_CN
+          - title_i18n_zh_CN
+          - body_i18n_zh_CN
+        "VI":
+          - img_i18n_vi
+          - _img_i18n_vi
+          - code_i18n_vi
+          - title_i18n_vi
+          - body_i18n_vi
+        "DE":
+          - img_i18n_de
+          - _img_i18n_de
+          - code_i18n_de
+          - title_i18n_de
+          - body_i18n_de
+        "IT":
+          - img_i18n_it
+          - _img_i18n_it
+          - code_i18n_it
+          - title_i18n_it
+          - body_i18n_it
+        "JA":
+          - img_i18n_ja
+          - _img_i18n_ja
+          - code_i18n_ja
+          - title_i18n_ja
+          - body_i18n_ja
+        "ES":
+          - img_i18n_es
+          - _img_i18n_es
+          - code_i18n_es
+          - title_i18n_es
+          - body_i18n_es
+      fields:
+
+        img_i18n_en:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_en:
+          name: Image   
+        code_i18n_en:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_en:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_en:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        img_i18n_ru:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_ru:
+          name: Image   
+        code_i18n_ru:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_ru:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_ru:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        img_i18n_cs:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_cs:
+          name: Image   
+        code_i18n_cs:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_cs:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_cs:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        img_i18n_hu:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_hu:
+          name: Image   
+        code_i18n_hu:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_hu:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_hu:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        img_i18n_pl:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_pl:
+          name: Image   
+        code_i18n_pl:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_pl:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_pl:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        img_i18n_fr:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_fr:
+          name: Image   
+        code_i18n_fr:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_fr:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_fr:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+          
+        img_i18n_zh_cn:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_zh_cn:
+          name: Image   
+        code_i18n_zh_cn:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_zh_cn:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_zh_cn:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6          
+          
+        img_i18n_vi:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_vi:
+          name: Image   
+        code_i18n_vi:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_vi:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_vi:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+          
+        img_i18n_de:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_de:
+          name: Image   
+        code_i18n_de:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_de:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_de:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+          
+        img_i18n_it:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_it:
+          name: Image   
+        code_i18n_it:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_it:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_it:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        img_i18n_ja:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_ja:
+          name: Image   
+        code_i18n_ja:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_ja:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_ja:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        img_i18n_es:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_es:
+          name: Image   
+        code_i18n_es:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_es:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_es:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6

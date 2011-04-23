@@ -1,0 +1,39 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Idea
+    theme:            default
+
+    list:
+      peer_method: doSelectWithI18n
+      max_per_page: 50
+      sort: [created_at, desc]
+      display: [ id, user_id, user, created_at, body_i18n_en, body_i18n_ru, votes, show ]
+      object_actions:
+        _edit:
+        _delete:
+
+      fields:       
+        title_i18n_en:
+          name: Title EN
+        title_i18n_ru:
+          name: Title RU
+
+    edit:
+      display:
+        "NONE": [ user_id, created_at, votes, show ]
+        "EN":
+          - body_i18n_en
+        "RU":
+          - body_i18n_ru
+
+      fields:       
+        body_i18n_en:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+
+        body_i18n_ru:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6

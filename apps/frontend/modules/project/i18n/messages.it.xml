@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - Dharma Hall - eTapasvi.com</source>
+        <target>Dharma Sangha - Dharma Hall - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Dharma Hall</source>
+        <target>Dharma Hall</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Donation</source>
+        <target>Donazioni</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Yandex Money</source>
+        <target>Yandex Money</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Location</source>
+        <target>Ubicazione</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>View Larger Map</source>
+        <target>Ingrandisci mappa</target>
+      </trans-unit>    
+      
+      <trans-unit id="1">
+        <source>Bank account (Nepal)</source>
+        <target>Conto corrente (Непал)</target>
+      </trans-unit>        
+
+      <trans-unit id="1">
+        <source>Bank account (Europe)</source>
+        <target>Conto corrente (Europa)</target>
+      </trans-unit>
+
+	  <trans-unit id="1">
+        <source>ACCOUNT</source>
+        <target>CONTO</target>
+      </trans-unit>
+
+	  <trans-unit id="1">
+        <source>A/C HOLDER</source>
+        <target>TITOLARE CONTO</target>
+      </trans-unit>
+     
+	  <trans-unit id="1">
+        <source>A/C NO</source>
+        <target>NUMERO DI CONTO</target>
+      </trans-unit>	  
+
+	  <trans-unit id="1">
+        <source>SWIFT CODE</source>
+        <target>CODICE SWIFT</target>
+      </trans-unit>	  
+
+	 <trans-unit id="1">
+        <source>Donations Received</source>
+        <target>Donazioni ricevute</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

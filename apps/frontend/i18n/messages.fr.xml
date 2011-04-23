@@ -1,0 +1,328 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+        <source>A message of Peace to our World today - eTapasvi.com</source>
+        <target>Un message de paix destiné à notre monde aujourd'hui - eTapasvi.com</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Om Namo Guru Buddha Gyani</source>
+        <target>Om Namo Guru Buddha Gyani</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Please, enable JavaScript!</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Copyright</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>All Rights Reserved</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Palden Dorje</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Sangha</source>
+        <target></target>
+      </trans-unit>     
+      <trans-unit id="1">
+        <source>Buddha Boy News</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>News</source>
+        <target>Nouvelles</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Palden Dorje Photo</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Photo</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Ram Bahadur Bomjan Video</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Video</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Om Namo Guru Buddha Gyani Biography</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Biography</source>
+        <target>Biographie</target>
+      </trans-unit>      
+		<trans-unit id="1">
+        <source>Teachings</source>
+        <target>Enseignements</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Encyclopedia</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy Live Stream</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Live Stream</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Hall</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Social Tools</source>
+        <target>Communication</target>
+      </trans-unit> 
+      <trans-unit id="1">
+        <source>Other</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Member</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Twitter</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>LJ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Live Journal</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Feed</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Search</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Contact Us</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Forum</source>
+        <target></target>
+      </trans-unit>     
+      <trans-unit id="1">
+        <source>Blessing</source>
+        <target>Bénédiction</target>
+      </trans-unit>  
+      <trans-unit id="1">
+        <source>FAQ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Translation Fundraising</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Audio</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Religious Forest</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
+        <target></target>
+      </trans-unit>
+
+<!-- form -->
+      <trans-unit id="7">
+        <source>Login </source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Password</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Time Zone</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must be at least %min_length% characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must not exceed %max_length% characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must not exceed 20 characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Required</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email must be at least %min_length% characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email must not exceed %max_length% characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Invalid Email</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Password must not exceed %max_length% characters</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login is already in use, please choose another</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>E-mail is already in use, please choose another</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Please enter a valid email address</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must be alphanumeric (only letters and digits avaible)</source>
+        <target></target>
+      </trans-unit>
+
+<!-- _thinkingtime -->
+      <trans-unit id="7">
+        <source>Hello</source>
+        <target></target>
+      </trans-unit>
+
+<!-- _login -->
+      <trans-unit id="7">
+        <source>Remember me</source>
+        <target></target>
+      </trans-unit>
+
+<!-- comments -->
+      <trans-unit id="1">
+        <source>Add comment</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Please enter comment</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Error occurred posting comment</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Post</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>show/hide</source>
+        <target>Показать/скрыть</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Comments</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe To Thread</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>If you choose to subscribe to a thread, you will be notified when someone posts a new comment to the article which you subscribed to. You can unsubscribe at any point by unchecking the subscription checkbox.</source>
+        <target></target>
+      </trans-unit>
+
+<!-- News _show -->
+      <trans-unit id="1">
+        <source>Read more</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Comments</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Source</source>
+        <target></target>
+      </trans-unit>
+
+<!-- misc -->
+      <trans-unit id="1">
+        <source>Go to top</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Text</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Author</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>teaching</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Translated by</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Download</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Date</source>
+        <target></target>
+      </trans-unit>
+      
+<!-- audio -->
+      <trans-unit id="1">
+        <source>Size</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Duration</source>
+        <target></target>
+      </trans-unit>
+      
+    </body>
+  </file>
+</xliff>

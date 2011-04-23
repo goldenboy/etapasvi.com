@@ -1,0 +1,13 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Photo2comments
+    theme:            default
+
+    list:
+      display: [photo_id, comments_id, _comment_text]
+      filters:  [photo_id]
+      sort: [comments_id, desc]
+      object_actions:
+        _edit:  ~
+        _delete: ~

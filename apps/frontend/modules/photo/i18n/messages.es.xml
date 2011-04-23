@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - Photo Albums - eTapasvi.com</source>
+        <target>Dharma Sangha - Albumes de Fotos - eTapasvi.com</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Dharma Sangha - Photo Album - eTapasvi.com</source>
+        <target>Dharma Sangha - Album de Fotos - eTapasvi.com</target>
+      </trans-unit>
+    
+      <trans-unit id="1">
+        <source>Dharma Sangha - Photo - eTapasvi.com</source>
+        <target>Dharma Sangha - Foto - eTapasvi.com</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Photo Album</source>
+        <target>Album de Fotos</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Photo Albums</source>
+        <target>Albumes de Fotos</target>
+      </trans-unit>
+      
+<!-- indexSuccess -->
+      <trans-unit id="1">
+        <source>No Photos</source>
+        <target>No hay Fotos</target>
+      </trans-unit>
+
+<!-- _show -->
+      <trans-unit id="1">
+        <source>Next</source>
+        <target>Siguiente</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Prev</source>
+        <target>Anterior</target>
+      </trans-unit>      
+
+      <trans-unit id="1">
+        <source>Full size</source>
+        <target>Tamaсo completo</target>
+      </trans-unit>
+
+
+    </body>
+  </file>
+</xliff>

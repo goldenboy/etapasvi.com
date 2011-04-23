@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - Photo Albums - eTapasvi.com</source>
+        <target>Дхарма Сангха - Фотоальбомы - eTapasvi.com</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Dharma Sangha - Photo Album - eTapasvi.com</source>
+        <target>Дхарма Сангха - Фотоальбом - eTapasvi.com</target>
+      </trans-unit>
+    
+      <trans-unit id="1">
+        <source>Dharma Sangha - Photo - eTapasvi.com</source>
+        <target>Дхарма Сангха - Фото - eTapasvi.com</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Photo Album</source>
+        <target>Фотоальбом</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Photo Albums</source>
+        <target>Фотоальбомы</target>
+      </trans-unit>
+      
+<!-- indexSuccess -->
+      <trans-unit id="1">
+        <source>No Photos</source>
+        <target>Нет Фото</target>
+      </trans-unit>
+
+<!-- _show -->
+      <trans-unit id="1">
+        <source>Next</source>
+        <target>Следующая</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Prev</source>
+        <target>Предыдущая</target>
+      </trans-unit>      
+
+      <trans-unit id="1">
+        <source>Full size</source>
+        <target>В полном размере</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

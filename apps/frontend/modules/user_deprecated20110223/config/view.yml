@@ -1,0 +1,35 @@
+memberSuccess:
+  metas:
+    title:        Member - eTapasvi.com
+    
+signupSuccess:
+  metas:
+    title:        Member - Sign up - eTapasvi.com
+
+signedupSuccess:
+  metas:
+    title:        Member - Sign up - eTapasvi.com
+
+loginSuccess:
+  metas:
+    title:        Member - Login - eTapasvi.com
+
+loginorsignupSuccess:
+  metas:
+    title:        Member - Login or Sign up - eTapasvi.com
+
+profileSuccess:
+  metas:
+    title:        Member - Profile - eTapasvi.com
+
+#userwithoutideaSuccess:
+#  metas:
+#    title:        Member - User - eTapasvi.com
+
+forgotpasswordSuccess:
+  metas:
+    title:        Member - Forgot Password? - eTapasvi.com
+
+newpasswordSuccess:
+  metas:
+    title:        Member - New Password - eTapasvi.com

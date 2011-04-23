@@ -1,0 +1,14 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      News2video
+    theme:            default
+
+    list:
+      filters:  [news_id, video_id]
+      sort: [news_id, desc]
+      display: [news_id, news, video_id, video]
+      object_actions:
+        _edit:  ~
+        _delete: ~
+     

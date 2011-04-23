@@ -1,0 +1,11 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Bestidea
+    theme:            default
+
+    list: 
+      display: [id, created_at, idea_id_i18n_en, idea_id_i18n_ru]
+      object_actions:
+        _edit:
+        _delete:

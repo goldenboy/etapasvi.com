@@ -1,0 +1,238 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Member - eTapasvi.com</source>
+        <target>Пользователь - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Member - Sign up - eTapasvi.com</source>
+        <target>Пользователь - Регистрация - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - Login - eTapasvi.com</source>
+        <target>Пользователь - Вход - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - Login or Sign up - eTapasvi.com</source>
+        <target>Пользователь - Войдите или Зарегистрируйтесь - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - Profile - eTapasvi.com</source>
+        <target>Пользователь - Профиль - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - eTapasvi.com</source>
+        <target>Пользователь - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - Forgot Password? - eTapasvi.com</source>
+        <target>Пользователь - Забыли пароль? - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Member - New Password - eTapasvi.com</source>
+        <target>Пользователь - Новый пароль - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- profileSuccess -->
+      <trans-unit id="7">
+        <source>Profile</source>
+        <target>Профиль</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Profile has been successfully updated</source>
+        <target>Профиль успешно обновлён</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must be at least 2 characters</source>
+        <target>Логин должен быть не короче 2 символов</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Leave these fields blank to keep current password</source>
+        <target>Оставьте эти поля пустыми, чтобы оставить пароль без изменений</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Confirm Password</source>
+        <target>Повторите Пароль</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Passwords do not match</source>
+        <target>Пароли не совпадают</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Save</source>
+        <target>Сохранить</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Subscribe to</source>
+        <target>Подписаться на</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Manage Subscriptions</source>
+        <target>Управление подпиской</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>show/hide subscriptions</source>
+        <target>показать/скрыть подписки</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Language</source>
+        <target>Язык</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Are you shure you want to delete your account?</source>
+        <target>Вы действительно хотите удалить свою учётную запись?</target>
+      </trans-unit>      
+      <trans-unit id="7">
+        <source>Delete account</source>
+        <target>Удаление учётной записи</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Delete</source>
+        <target>Удалить</target>
+      </trans-unit>
+
+<!-- _login -->
+      <trans-unit id="7">
+        <source>Wrong login or password</source>
+        <target>Неверный логин или пароль</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Enter login</source>
+        <target>Введите логин</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Password</source>
+        <target>Пароль</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Enter password</source>
+        <target>Введите пароль</target>
+      </trans-unit>
+
+<!-- loginorsignupSuccess -->
+      <trans-unit id="7">
+        <source>Login or Sign Up</source>
+        <target>Войдите или Зарегистрируйтесь</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Back</source>
+        <target>Назад</target>
+      </trans-unit>
+
+<!-- _signup -->
+      <trans-unit id="7">
+        <source>Confirm Password</source>
+        <target>Подтвердите пароль</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Passwords do not match</source>
+        <target>Пароли не совпадают</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Sign Up</source>
+        <target>Регистрация</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Incorrect code</source>
+        <target>Введён неверный код</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Profile URL</source>
+        <target>Ссылка на профайл</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>(optional)</source>
+        <target>(необяз.)</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Example</source>
+        <target>Пример</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Please enter a valid URL</source>
+        <target>Пожалуйста, введите корректный адрес</target>
+      </trans-unit>
+
+<!-- signupSuccess -->
+
+
+<!-- loginSuccess -->
+      <trans-unit id="7">
+        <source>Sign  up</source>
+        <target>Зарегистрируйтесь</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source> if you do not have an account</source>
+        <target>, если у вас нет учётной записи</target>
+      </trans-unit>
+
+<!-- forgotpasswordSuccess -->
+      <trans-unit id="7">
+        <source>Forgot password?</source>
+        <target>Забыли пароль?</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>To get a new Password for your account please enter E-mail</source>
+        <target>Чтобы получить новый Пароль, пожалуйста, введите E-mail</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>A letter with further instructions has been sent to your e-mail</source>
+        <target>Письмо с дальнейшими инструкциями отправлено на ваш e-mail</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>User with e-mail</source>
+        <target>Пользователь адресом</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>not found</source>
+        <target>не найден</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Remind</source>
+        <target>Напомнить</target>
+      </trans-unit>
+
+<!-- newpasswordSuccess -->
+      <trans-unit id="7">
+        <source>Please enter the same password as above</source>
+        <target>Пароли не совпадают</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>New Password</source>
+        <target>Новый пароль</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Your password successfully changed. Now you can</source>
+        <target>Ваш пароль успешно изменён. Теперь вы можете</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>login </source>
+        <target>войти</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Enter your new Password</source>
+        <target>Введите ваш новый пароль</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Passwords do not match</source>
+        <target>Пароли не совпадают</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Confirm New Password</source>
+        <target>Подтверждение пароля</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Change</source>
+        <target>Изменить</target>
+      </trans-unit>
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

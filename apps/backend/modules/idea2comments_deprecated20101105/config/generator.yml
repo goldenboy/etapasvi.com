@@ -1,0 +1,14 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Idea2comments
+    theme:            default
+
+    list:
+      filters:  [idea_id]
+      max_per_page: 50
+      sort: [comments_id, desc]
+      display: [idea_id, comments_id, _comment_text]
+      object_actions:
+        _edit:
+        _delete:

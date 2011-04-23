@@ -1,0 +1,329 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+        <source>A message of Peace to our World today - eTapasvi.com</source>
+        <target>Послание Мира нашему сегодняшнему Миру - eTapasvi.com</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Om Namo Guru Buddha Gyani</source>
+        <target>Ом Намо Гуру Будда Гьяни</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Please, enable JavaScript!</source>
+        <target>Для корректной работы сайта необходимо активировать JavaScript!</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Copyright</source>
+        <target> </target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>All Rights Reserved</source>
+        <target>Все права защищены</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Home</source>
+        <target>Главная</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy</source>
+        <target>Мальчик Будда</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Palden Dorje</source>
+        <target>Палден Дордже</target>
+      </trans-unit>     
+      <trans-unit id="1">
+        <source>Dharma Sangha</source>
+        <target>Дхарма Сангха</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy News</source>
+        <target>Новости о Мальчике Будде</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>News</source>
+        <target>Новости</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Palden Dorje Photo</source>
+        <target>Фотографии Палден Доржи</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Photo</source>
+        <target>Фото</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Ram Bahadur Bomjan Video</source>
+        <target>Видео Мальчика Будды</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Video</source>
+        <target>Видео</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Om Namo Guru Buddha Gyani Biography</source>
+        <target>Биография Мальчика Будды</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Biography</source>
+        <target>Биография</target>
+      </trans-unit>      
+		<trans-unit id="1">
+        <source>Teachings</source>
+        <target>Учения</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Encyclopedia</source>
+        <target>Энциклопедия</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy Live Stream</source>
+        <target>Видео Live Мальчика Будды</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Live Stream</source>
+        <target>Live Видео</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Hall</source>
+        <target>Зал Дхармы</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Social Tools</source>
+        <target>Сервисы</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Other</source>
+        <target>Прочее</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Member</source>
+        <target>Пользователь</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Twitter</source>
+        <target>Твиттер</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>LJ</source>
+        <target>ЖЖ</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Live Journal</source>
+        <target>Живой Журнал</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Feed</source>
+        <target>Лента обновлений</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Search</source>
+        <target>Поиск</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Contact Us</source>
+        <target>Контакты</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Forum</source>
+        <target>Форум</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Blessing</source>
+        <target>Благословение</target>
+      </trans-unit>  
+      <trans-unit id="1">
+        <source>FAQ</source>
+        <target>Вопросы-ответы</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Translation Fundraising</source>
+        <target>Средства для перевода</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Audio</source>
+        <target>Аудио</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Religious Forest</source>
+        <target>Религиозный Лес</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
+        <target>Дхарма Сангха (Палден Дордже, Рам Бахадур Бомджан, Мальчик Будда из Непала): Новости, Фото, Видео, Биография, Речи.</target>
+      </trans-unit>
+
+<!-- form -->
+      <trans-unit id="7">
+        <source>Login </source>
+        <target>Логин</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Password</source>
+        <target>Пароль</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Time Zone</source>
+        <target>Часовой пояс</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must be at least %min_length% characters</source>
+        <target>Логин должен быть не короче %min_length% символов</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must not exceed %max_length% characters</source>
+        <target>Логин не должен превышать %max_length% символов</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must not exceed 20 characters</source>
+        <target>Логин не должен превышать 20 символов</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Required</source>
+        <target>Обязательное</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email must be at least %min_length% characters</source>
+        <target>E-mail должен быть не короче %min_length% символов</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Email must not exceed %max_length% characters</source>
+        <target>E-mail не должен превышать %min_length% символов</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Invalid Email</source>
+        <target>Некорректный e-mail</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Password must not exceed %max_length% characters</source>
+        <target>Пароль не должен превышать %max_length% символов</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login is already in use, please choose another</source>
+        <target>Логин занят, пожалуйста выберите другой</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>E-mail is already in use, please choose another</source>
+        <target>E-mail занят, пожалуйста выберите другой</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Please enter a valid email address</source>
+        <target>Пожалуйста, введите корректный E-mail</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Login must be alphanumeric (only letters and digits avaible)</source>
+        <target>Логин должен состоять только из букв и цифр</target>
+      </trans-unit>
+
+<!-- _thinkingtime -->
+      <trans-unit id="7">
+        <source>Hello</source>
+        <target>Привет</target>
+      </trans-unit>
+
+<!-- _login -->
+      <trans-unit id="7">
+        <source>Remember me</source>
+        <target>Запомнить меня</target>
+      </trans-unit>
+
+<!-- comments -->
+      <trans-unit id="1">
+        <source>Add comment</source>
+        <target>Добавить комментарий</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Please enter comment</source>
+        <target>Пожалуйста введите комментарий</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Error occurred posting comment</source>
+        <target>Ошибка при добавлении комментария</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Post</source>
+        <target>Добавить</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>show/hide</source>
+        <target>Показать/скрыть</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Comments</source>
+        <target>Комментарии</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe To Thread</source>
+        <target>Подписаться</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>If you choose to subscribe to a thread, you will be notified when someone posts a new comment to the article which you subscribed to. You can unsubscribe at any point by unchecking the subscription checkbox.</source>
+        <target>Если вы подписаны, то получаете уведомления по электронной почте при добавлении новых комментариев. Вы можете в любой момент отказаться от подписки, сняв галочку.</target>
+      </trans-unit>
+
+<!-- News _show -->
+      <trans-unit id="1">
+        <source>Read more</source>
+        <target>Читать далее</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Comments</source>
+        <target>Комментарии</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Source</source>
+        <target>Источник</target>
+      </trans-unit>
+
+<!-- misc -->
+      <trans-unit id="1">
+        <source>Go to top</source>
+        <target>Наверх</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Text</source>
+        <target>Текст</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Author</source>
+        <target>Автор</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>teaching</source>
+        <target>учение</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Translated by</source>
+        <target>Перевод</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Download</source>
+        <target>Скачать</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Date</source>
+        <target>Дата</target>
+      </trans-unit>
+
+<!-- audio -->
+      <trans-unit id="1">
+        <source>Size</source>
+        <target>Размер</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Duration</source>
+        <target>Время</target>
+      </trans-unit>
+      
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

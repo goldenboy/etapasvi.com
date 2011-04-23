@@ -1,0 +1,52 @@
+The Picasa Plugin.
+=============================
+
+Access the Google Picasa API
+
+**Info**
+
+Basically this is a wrapper for the work done by Cameron Hinkle. He made a PHP wrapper
+for Google's Picasa Data API, which is implemented using Atom feeds in XML.
+The package is meant to make it easy for PHP developers to integrate their
+own applications with Picasa.
+
+This Plugin gives symfony users access to that.
+
+
+**Installation**
+
+
+    symfony plugin:install sfPicasaPlugin
+
+
+**Example Basic Usage**
+
+  action:
+
+    $username = 'xxx';
+    $album    = 'Holiday Vacation Photos';
+
+    $pic = new Picasa();
+
+    try
+    {
+      $album = $pic->getAlbumById($username, $album);
+      $this->images = $album->getImages();
+      $this->title  = $album->getTitle();
+    }
+    catch( Exception $e )
+    {
+      $this->images = array();
+      $this->title = '';
+    }
+
+
+  template:
+
+    <h2>
+      <?php echo $title; ?>
+    </h2>
+
+    <?php foreach($images as $image): ?>
+      <img src="<?php echo htmlentities($image->getSmallThumb()); ?>" alt="" />
+    <?php endforeach; ?>

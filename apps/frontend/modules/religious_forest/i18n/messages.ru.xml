@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>International petition for a Dharmik Ban (Religious Forest) - eTapasvi.com</source>
+        <target>Международная петиция за Дхармик Бан (Религиозный Лес) - eTapasvi.com</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>International petition for a Dharmik Ban (Religious Forest)</source>
+        <target>Международная петиция за Дхармик Бан (Религиозный Лес)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>View signers</source>
+        <target>Список подписавшихся</target>
+      </trans-unit>
+  
+    </body>
+  </file>
+</xliff>

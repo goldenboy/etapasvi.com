@@ -1,0 +1,25 @@
+main:
+  enabled:     true
+#  lifetime:    3600
+
+index:
+  enabled:     true
+#  lifetime:    3600
+  
+rss:
+  enabled:     true
+
+show:
+  enabled:     true
+
+teachings:
+  enabled:     true
+
+teachings_show:
+  enabled:     true
+
+feed:
+  enabled:     true
+
+#_showwrapper:
+#  enabled:     true

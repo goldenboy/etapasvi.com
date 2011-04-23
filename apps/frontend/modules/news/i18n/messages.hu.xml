@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - News - eTapasvi.com</source>
+        <target></target>
+      </trans-unit>
+
+<!-- indexSuccess -->
+      <trans-unit id="1">
+        <source>Buddha Boy - News</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Start from</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>newest</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>oldest</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>No News</source>
+        <target></target>
+      </trans-unit>
+
+<!-- mainSuccess -->
+      <trans-unit id="1">
+        <source>A message</source>
+        <target>Békeüzenet</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>of Peace to our World today</source>
+        <target>a mai világnak</target>
+      </trans-unit>      
+      <trans-unit id="14">
+        <source>Latest Photos</source>
+        <target>Új képek</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Video</source>
+        <target>Legfrissebb video</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Audio</source>
+        <target>Legfrissebb Audio</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>view all</source>
+        <target>az összes megtekintése</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe to News</source>
+        <target>Feliratkozás a hírekre</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe</source>
+        <target>Feliratkozás</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Unsubscribe</source>
+        <target>Leiratkozás</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>or</source>
+        <target>vagy</target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Original text</source>
+        <target>Eredeti szöveg</target>
+      </trans-unit>
+      
+<!-- teachingsSuccess -->
+      <trans-unit id="1">
+        <source>Dharma Sangha - Teachings - eTapasvi.com</source>
+        <target></target>
+      </trans-unit>  
+
+	  <trans-unit id="1">
+        <source>Dictionary</source>
+        <target></target>
+      </trans-unit>	  
+
+	 <trans-unit id="1">
+        <source>by Andy Good/LTJ</source>
+        <target></target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

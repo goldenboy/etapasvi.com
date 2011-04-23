@@ -1,0 +1,17 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Ideaabuse
+    theme:            default
+
+    list:
+      max_per_page: 50
+      sort: [created_at, desc]
+      display: [ idea, idea_id, user, created_at ]
+      object_actions:
+        _edit:
+        _delete:
+
+    edit:
+      display:
+        "NONE": [ idea, idea_id, user, created_at ]

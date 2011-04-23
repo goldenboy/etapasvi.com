@@ -1,0 +1,414 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      News
+    theme:            default
+
+    list:
+      peer_method: doSelectWithI18n
+      max_per_page: 50
+      sort: [order, desc]
+      filters: [show, type]
+      display: [id, show, order, _img, date, extradate, =title, type_name]
+      object_actions:
+        _edit:
+        _delete:
+
+    edit:
+      display:
+        "NONE": [show, order, date, img, _img, full_path, _full_link, thumb_path, _thumb_link, type, original]
+        "EN":
+          - title_i18n_en
+          - extradate_i18n_en
+          - shortbody_i18n_en
+          - body_i18n_en
+          - author_i18n_en
+          - translated_by_i18n_en
+          - link_i18n_en
+        "RU":
+          - title_i18n_ru
+          - extradate_i18n_ru
+          - shortbody_i18n_ru
+          - body_i18n_ru
+          - author_i18n_ru
+          - translated_by_i18n_ru
+          - link_i18n_ru
+        "CS":
+          - title_i18n_cs
+          - extradate_i18n_cs
+          - shortbody_i18n_cs
+          - body_i18n_cs
+          - author_i18n_cs
+          - translated_by_i18n_cs
+          - link_i18n_cs
+        "HU":
+          - title_i18n_hu
+          - extradate_i18n_hu
+          - shortbody_i18n_hu
+          - body_i18n_hu
+          - author_i18n_hu
+          - translated_by_i18n_hu
+          - link_i18n_hu
+        "PL":
+          - title_i18n_pl
+          - extradate_i18n_pl
+          - shortbody_i18n_pl
+          - body_i18n_pl
+          - author_i18n_pl
+          - translated_by_i18n_pl
+          - link_i18n_pl
+        "FR":
+          - title_i18n_fr
+          - extradate_i18n_fr
+          - shortbody_i18n_fr
+          - body_i18n_fr
+          - author_i18n_fr
+          - translated_by_i18n_fr
+          - link_i18n_fr
+        "zh_CN":
+          - title_i18n_zh_CN
+          - extradate_i18n_zh_CN
+          - shortbody_i18n_zh_CN
+          - body_i18n_zh_CN
+          - author_i18n_zh_CN
+          - translated_by_i18n_zh_CN
+          - link_i18n_zh_CN
+        "vi":
+          - title_i18n_vi
+          - extradate_i18n_vi
+          - shortbody_i18n_vi
+          - body_i18n_vi
+          - author_i18n_vi
+          - translated_by_i18n_vi
+          - link_i18n_vi
+        "de":
+          - title_i18n_de
+          - extradate_i18n_de
+          - shortbody_i18n_de
+          - body_i18n_de
+          - author_i18n_de
+          - translated_by_i18n_de
+          - link_i18n_de
+        "it":
+          - title_i18n_it
+          - extradate_i18n_it
+          - shortbody_i18n_it
+          - body_i18n_it
+          - author_i18n_it
+          - translated_by_i18n_it
+          - link_i18n_it
+        "jp":
+          - title_i18n_ja
+          - extradate_i18n_ja
+          - shortbody_i18n_ja
+          - body_i18n_ja
+          - author_i18n_ja
+          - translated_by_i18n_ja
+          - link_i18n_ja
+        "ES":
+          - title_i18n_es
+          - extradate_i18n_es
+          - shortbody_i18n_es
+          - body_i18n_es
+          - author_i18n_es
+          - translated_by_i18n_es
+          - link_i18n_es
+      fields:
+        img:
+          name: Image
+          type: admin_input_file_tag
+          upload_dir: news
+          params: 
+            include_link: news
+            include_remove: true
+
+        original:
+          params: disabled=false size=118x6
+        
+        title_i18n_en:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_en:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_en:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_en:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_en:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_en:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_en:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_ru:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_ru:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_ru:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_ru:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_ru:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_ru:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_ru:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_cs:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_cs:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_cs:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_cs:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_cs:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_cs:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_cs:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_hu:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_hu:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_hu:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_hu:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_hu:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_hu:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_hu:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"                 
+
+        title_i18n_pl:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_pl:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_pl:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_pl:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_pl:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_pl:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_pl:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_fr:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_fr:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_fr:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_fr:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_fr:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_fr:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_fr:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_zh_cn:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_zh_cn:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_zh_cn:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_zh_cn:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_zh_cn:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_zh_cn:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_zh_cn:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"          
+          
+        title_i18n_vi:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_vi:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_vi:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_vi:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_vi:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_vi:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_vi:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_de:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_de:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_de:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_de:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_de:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_de:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_de:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_it:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_it:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_it:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_it:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_it:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_it:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_it:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_ja:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_ja:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_ja:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_ja:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_ja:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_ja:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_ja:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_es:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_es:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_es:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_es:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_es:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_es:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_es:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"

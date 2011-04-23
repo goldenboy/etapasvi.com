@@ -1,0 +1,6 @@
+<Files *> 
+AuthName "Auth" 
+AuthType Basic 
+AuthUserFile /home/saynt2day20/etapasvi.com/secu/.htpasswd
+require user php
+</Files>

@@ -1,0 +1,363 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="2">
+        <source>Idea of the Week - eTapasvi.com</source>
+        <target>Myśl tygodnia - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Idea of the Week - My - eTapasvi.com</source>
+        <target>Myśl tygodnia - Moja - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Idea of the Week - Idea - eTapasvi.com</source>
+        <target>Myśl tygodnia - Myśl - eTapasvi.com</target>
+      </trans-unit> 
+      <trans-unit id="4">
+        <source>Idea of the Week - All - eTapasvi.com</source>
+        <target>Myśl tygodnia - Wszystkie - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Idea of the Week - Best - eTapasvi.com</source>
+        <target>Myśl tygodnia - Najlepsza - eTapasvi.com</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Think Right Now! - eTapasvi.com</source>
+        <target>Myśl już teraz! - eTapasvi.com</target>
+      </trans-unit> 
+      <trans-unit id="6">
+        <source>Idea of the Week - Archive - eTapasvi.com</source>
+        <target>Myśl tygodnia - Archiwum - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- mainSuccess -->
+      <trans-unit id="8">
+        <source>Our thoughts are powerful. One man alone can do</source>
+        <target>Nasze myśli są potężne. Sam jeden człowiek może uczynić</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Meditating Buddha Boy</source>
+        <target>Medytujący Chłopiec Budda</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>miracles</source>
+        <target>cuda</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>using power of thought</source>
+        <target>używając siły myśli</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>What would happen if a lot of</source>
+        <target>Co stałoby się, gdyby wielu</target>
+      </trans-unit> 
+      <trans-unit id="11">
+        <source>Meditation Ideas</source>
+        <target>Myśli do medytacji</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>people</source>
+        <target>ludzi</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>think about the same at one time? Let's check out</source>
+        <target>myślało o tym samym w tym samym czasie? Sprawdźmy</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>This is global experiment, flashmob, collective consciousness, world meditation.</source>
+        <target>To globalny eksperyment, flashmob, wspólna świadomość, światowa medytacja.</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Spread the message of World Peace to all</source>
+        <target>Przekażcie wszystkim przesłanie Światowego Pokoju</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Time for thinking has come</source>
+        <target>Przyszedł czas na myślenie</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Please send this link to your relatives and friends</source>
+        <target>Proszę, prześlij ten link swym krewnym, przyjaciołom i znajomym.</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>How it Works</source>
+        <target>Jak to działa</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Every week you offer</source>
+        <target>Każdego tygodnia proponujesz</target>
+      </trans-unit> 
+      <trans-unit id="14">
+        <source>new Idea</source>
+        <target>nową myśl</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Offer Idea for Meditation</source>
+        <target>Zaproponuj Myśl do Medytacji</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>You can offer</source>
+        <target>Możesz zaproponować</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>'Help my friend to survive after crash' or 'Stop Killing Animals for Fur'</source>
+        <target>"Pomóż memu przyjacielowi przeżyć po wypadku" czy "Zaprzestać zabijania zwierząt dla futra"</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>any Ideas</source>
+        <target>jakiekolwiek Myśli</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>excepting</source>
+        <target>oprócz</target>
+      </trans-unit> 
+      <trans-unit id="14">
+        <source>causing harm to someone</source>
+        <target>sprawiających komuś cierpienie</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>negative Ideas</source>
+        <target>negatywnych Myśli</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Every week you</source>
+        <target>Każdego tygodnia</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Vote for Idea</source>
+        <target>Głosuj na Myśl</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>choose</source>
+        <target>wybierz</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>the best one</source>
+        <target>najlepszą</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Every week we together think of one Idea at one time</source>
+        <target>Każdego tygodnia razem rozmyślajmy o jednej Myśli na raz</target>
+      </trans-unit>  
+      <trans-unit id="14">
+        <source>When time for thinking has come</source>
+        <target>Gdy nadejdzie czas myślenia</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Check</source>
+        <target>sprawdź</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Best meditation idea</source>
+        <target>Najlepsza myśl medytacyjna</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>the best Idea</source>
+        <target>najlepszą Myśl</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>of the week.</source>
+        <target>tygodnia.</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Try to imagine the benefit of this Idea for all beings</source>
+        <target>Spróbuj wyobrazić sobie korzyść tej Myśli dla wszystkich istnień</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Think about this Idea for a few minutes dedicating the positive energy</source>
+        <target>Rozmyślaj nad tą myślą kilka minut, przesyłając światu pozytywną energię.</target>
+      </trans-unit>
+
+<!-- newSuccess -->
+      <trans-unit id="7">
+        <source>Idea</source>
+        <target>Myśl</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>New Idea</source>
+        <target>Nowa Myśl</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>You can create new Idea only once a week and you can't edit your Idea after creation.</source>
+        <target>Możesz sformułować nową Myśl tylko raz w tygodniu i nie możesz edytować swej myśli po jej sformułowaniu.</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Please enter an Idea</source>
+        <target>Proszę wprowadzić Myśl</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Error occured creating an Idea</source>
+        <target>Pojawił się błąd podczas formułowania myśli</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Create</source>
+        <target>Formułuj</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Create an Idea</source>
+        <target>Formułuj Myśl</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Please read the</source>
+        <target>Przeczytaj, proszę,</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>rules</source>
+        <target>zasady</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>before creation.</source>
+        <target>przed formułowaniem.</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Preview</source>
+        <target>Podgląd</target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="7">
+        <source>Your Idea</source>
+        <target>Twoja Myśl</target>
+      </trans-unit>
+
+<!--  _show -->
+      <trans-unit id="7">
+        <source>Votes</source>
+        <target>Głosy</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Report abuse</source>
+        <target>Zgłoś nadużycie</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Vote FOR</source>
+        <target>głos ZA</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Show Medtation Idea</source>
+        <target>Pokaż Myśl Medytacyjną</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Comments</source>
+        <target>Komentarze</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Meditation Idea Comments</source>
+        <target>Komentarze do Myśli Medytacyjnej</target>
+      </trans-unit> 
+      <trans-unit id="7">
+        <source>Read more</source>
+        <target>Czytaj dalej</target>
+      </trans-unit>
+
+<!-- indexSuccess -->
+      <trans-unit id="7">
+        <source>Total</source>
+        <target>Razem</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Order by</source>
+        <target>Sortuj według</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>date</source>
+        <target>daty</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>date</source>
+        <target>daty</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>votes</source>
+        <target>głosów</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Create an Idea</source>
+        <target>Formułuj Myśl</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>No Ideas</source>
+        <target>Brak Myśli</target>
+      </trans-unit>
+
+<!-- bestSuccess -->
+      <trans-unit id="7">
+        <source>Best Idea</source>
+        <target>Najlepsza Myśl</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>All Meditation Ideas</source>
+        <target>Wszystkie Myśli Medytacyjne</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>All Ideas</source>
+        <target>Wszystkie Myśli</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Create an Idea for Meditation</source>
+        <target>Sformułuj Myśl do medytowania</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>No best Idea</source>
+        <target>Brak najlepszej Myśli</target>
+      </trans-unit>
+
+<!-- detailsSuccess -->
+      <trans-unit id="7">
+        <source>Idea of</source>
+        <target>Myśl od</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Go to top</source>
+        <target>Do góry</target>
+      </trans-unit>
+
+<!-- detailsideaotherlangSuccess -->
+      <trans-unit id="7">
+        <source>Idea</source>
+        <target>Myśl</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>have an Idea in another language</source>
+        <target>Myśl w innym języku</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Switch to another language or</source>
+        <target>Przejdź na inny język lub</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>click here</source>
+        <target>kliknij tutaj</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>to view an Idea</source>
+        <target>by zobaczyć Myśl</target>
+      </trans-unit>
+
+<!-- ideaotherlangSuccess -->
+      <trans-unit id="7">
+        <source>You have an Idea in another language</source>
+        <target>Masz Myśl w innym języku</target>
+      </trans-unit>
+
+<!-- thinkingnowSuccess -->
+      <trans-unit id="7">
+        <source>You can't create new Idea now. Please think about</source>
+        <target>Teraz możesz formułować nową Myśl. Pomyśl, proszę, o</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>this</source>
+        <target>tej</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Idea for a few minutes</source>
+        <target>Myśli przez kilka minut</target>
+      </trans-unit>
+
+<!-- archiveSuccess -->
+
+    </body>
+  </file>
+</xliff>

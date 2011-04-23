@@ -1,0 +1,8 @@
+default:
+  enabled:     false
+  with_layout: true
+  lifetime:    86400
+
+#_menu:
+#  enabled:     true
+#  lifetime:    604800

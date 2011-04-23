@@ -1,0 +1,88 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Quote
+    theme:            default
+
+    list:
+      peer_method: doSelectWithI18n
+      max_per_page: 100
+      display: [id, =title]
+      object_actions:
+        _edit:
+        _delete:
+
+    edit:
+      display:
+        "EN":
+          - title_i18n_en         
+        "RU":
+          - title_i18n_ru  
+        "CS":
+          - title_i18n_cs
+        "HU":
+          - title_i18n_hu 
+        "PL":
+          - title_i18n_pl
+        "FR":
+          - title_i18n_fr
+        "zh_CN":
+          - title_i18n_zh_CN
+        "VI":
+          - title_i18n_vi
+        "DE":
+          - title_i18n_de
+        "IT":
+          - title_i18n_it
+        "JA":
+          - title_i18n_ja
+        "ES":
+          - title_i18n_es
+      fields:        
+        title_i18n_en:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_ru:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_cs:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_hu:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_pl:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_fr:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_zh_cn:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"          
+          
+        title_i18n_vi:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_de:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_it:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_ja:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_es:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
