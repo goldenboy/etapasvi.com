@@ -220,4 +220,9 @@ religious_forest:
 audio_index:
   url:   /:sf_culture/audio
   param: { module: audio, action: index }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }z
+  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  
+donation:
+  url:   /:sf_culture/donation
+  param: { module: donation, action: show }
+  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }  

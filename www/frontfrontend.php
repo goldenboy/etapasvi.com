@@ -36,6 +36,12 @@ if ($cache_page) {
 }
 */
 
+/*
+$f_log = fopen('/home/saynt2day20/etapasvi.com/log/page_views.log', 'a+');
+fputs($f_log, $_SERVER['REQUEST_URI'] . "\r\n");
+fclose($f_log);*/
+
+
 require_once(dirname(__FILE__).'/../config/ProjectConfiguration.class.php');
 
 $configuration = ProjectConfiguration::getApplicationConfiguration('frontend', 'prod', false);

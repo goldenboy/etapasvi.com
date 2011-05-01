@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha - Donation - eTapasvi.com</source>
+        <target>Дхарма Сангха - Пожертвования - eTapasvi.com</target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Purpose</source>
+        <target>Цель</target>
+      </trans-unit>      
+      
+      <trans-unit id="1">
+        <source>Bodhi Shrawan Dharma Sangha is planning for the auspicious day, when Dharma Sangha's meditation will end on May 17, Buddha Jayanti's day. After that Dharma Sangha will be giving blessings to devotees for 15 days from 9am to 6pm tentatively.</source>
+        <target>Бодхи Шраван Дхарма Сангха готовится к важному дню, когда медитация Дхарма Сангхи подойдёт к концу, 17 мая, день Будда-Джайанти. После этого Дхарма Сангха будет давать благословения в течение 15 дней с 9:00 до 18:00.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>We need to raise donation to cover meals for different religious leaders, who will be praying for world peace, prayer mandala, making tents for the religious leaders, devotees, bringing drinking water, medicines, road traffic, 500 volunteers (whom we are providing meals) for smooth process of getting blessings, projectors on hire, sound systems, flex, toilet facilities, etc.</source>
+        <target>Пожертвования необходимы для оплаты питания различных религиозных лидеров, которые будут молиться о мире во всём мире, молитвенную мандалу, установку шатров для религиозных лидеров, паломников, доставку питьевой воды, медикаменты, дорожные расходы, 500 добровольцев (которые обеспечиваются пропитанием) для организации благословения, аренда проекторов, звуковые системы, кабеля, туалеты и т.д.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>This is once in a lifetime way of giving offerings to this kind of auspicious ceremony and you will earn many merits in this lifetime, if you can help in this noble cause where about 300,000 people will get blessings.</source>
+        <target>Это как раз тот случай в жизни, когда пожертвовав на благую церемонию, вы обретёте огромное количество заслуг в этой жизни, если сможете помочь в этом благородном мероприятии, на котором около 300.000 человек получит благословение.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Bank account</source>
+        <target>Банковский счёт</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

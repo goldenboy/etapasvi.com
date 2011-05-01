@@ -148,6 +148,10 @@
         <target></target>
       </trans-unit>
       <trans-unit id="1">
+        <source>Donation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
         <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
         <target>Buddha Fiú: Hír, Fotó, Videót, Élete, Beszédekben. Ram Bahadur Bomjon: A meditáló Buddha Fiú nepál. Palden Dordzse: Egy üzenet a béke a mi mai világban.</target>
       </trans-unit>
