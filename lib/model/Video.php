@@ -102,7 +102,8 @@ class Video extends BaseVideo
 	 * @return unknown
 	 */
 	public function getRssDescription() {
-	  return TextPeer::subStr($this->getBody(), NewsPeer::RSS_DESCRIPTION_LENGTH);
+	  //return TextPeer::subStr($this->getBody(), NewsPeer::RSS_DESCRIPTION_LENGTH);
+	  return '<img src="' . $this->getImgPrepared() . '">';
 	}
 	
 	/**
