@@ -71,6 +71,8 @@
                 <span class="date"><?php echo format_datetime( $photo->getCreatedAt(), 'd MMMM yyyy'); ?></span>             
                 <?php 
                     $photoalbum = $photo->getPhotoalbum();
+                    $author     = $photo->getAuthor($sf_user->getCulture(), true);
+                    /*
                     if ($photo->getAuthor()) :
                         $author = $photo->getAuthor();
                     elseif ($sf_user->getCulture() != UserPeer::DEFAULT_CULTURE && !$photo->getAuthor() && $photo->getAuthor(UserPeer::DEFAULT_CULTURE)):
@@ -81,7 +83,7 @@
                         $author = $photoalbum->getAuthor();
                     else:
                         $author = '';
-                    endif
+                    endif*/
                 ?>
                 
                 <?php if ($author): ?>

@@ -55,6 +55,34 @@ class Photo extends BasePhoto
       return trim($title);
 	}
 	
+	/**
+	 * Расширенный метод для получения автора.
+	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
+	 * Если у фото не указан автор, то ищется в Фотоальбоме
+	 */	
+	public function getAuthor($culture = null, $use_default_culture_if_empty = false)
+	{
+	  $author     = parent::getAuthor($culture);
+	  	  
+	  if ($use_default_culture_if_empty) {
+	    $photoalbum = $this->getPhotoalbum();
+	    $culture    = sfContext::getInstance()->getUser()->getCulture();
+	  
+	    if ($this->getAuthor()) {
+            $author = $this->getAuthor();
+	    } elseif ($culture != UserPeer::DEFAULT_CULTURE && !$this->getAuthor() && $this->getAuthor(UserPeer::DEFAULT_CULTURE)) {
+            $author = $this->getAuthor(UserPeer::DEFAULT_CULTURE);
+	    } elseif ($culture != UserPeer::DEFAULT_CULTURE && $photoalbum && !$photoalbum->getAuthor() && $photoalbum->getAuthor(UserPeer::DEFAULT_CULTURE)) {
+            $author = $photoalbum->getAuthor(UserPeer::DEFAULT_CULTURE);
+	    } elseif ($photoalbum && $photoalbum->getAuthor()) {
+            $author = $photoalbum->getAuthor();
+	    } else {
+            $author = '';
+	    }
+	  }
+      return $author;
+	}
+	
 	public function getCommentsCount()
 	{		
 		return (int)CommentsPeer::getCommentsCount( ItemtypesPeer::ITEM_TYPE_NAME_PHOTO, $this->getId() );
