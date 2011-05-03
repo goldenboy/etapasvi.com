@@ -16,9 +16,9 @@
 	<?php endif ?>
 
 		<?php if (!empty($short)): ?>
-			<?php if ($video->getImg()): ?>
+			<?php /*if ($video->getImg()):*/ ?>
 				<a href="<?php echo $href; ?>" title="<?php echo $title; ?>">
-					<img src="<?php echo $video->getImg(); ?>" 
+					<img src="<?php echo $video->getImgPrepared(); ?>" 
 					alt="<?php echo $title; ?>" />
 				</a>
 				<?php if ( $title ): ?>
@@ -28,7 +28,7 @@
 					</a>				
 				</p>
 				<?php endif ?>
-			<?php endif ?>	
+			<?php /* endif */ ?>	
 		<?php else: ?>		
 			<h1 class="title">
 				<?php echo $title; ?>

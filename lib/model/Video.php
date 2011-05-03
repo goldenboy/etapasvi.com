@@ -113,4 +113,28 @@ class Video extends BaseVideo
 	public function getRssPubDate() {
 	  return max($this->getUpdatedAt(), $this->getUpdatedAtExtra());
 	}
+	
+	/**
+	 * Обработанный адрес img
+	 *
+	 * @return unknown
+	 */
+	public function getImgPrepared($culture = null) {
+	  $img = $this->getImg($culture);
+	  
+	  // берём img из code
+	  if (!$img) {
+	  	$img = $this->getCode($culture);
+	  }
+	  
+	  if (!$img) {
+	  	return '';
+	  }
+	  
+	  // YouTube
+	  if (!strstr($img, 'http://')) {
+	  	$img = 'http://i2.ytimg.com/vi/' . $img . '/hqdefault.jpg';
+	  }
+	  return $img;
+	}
 }

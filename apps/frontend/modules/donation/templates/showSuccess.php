@@ -17,9 +17,9 @@
     <input type="hidden" value="_donations" name="cmd" />
     <input type="hidden" value="pld.hall@zoznam.sk" name="business" />
     <input type="hidden" value="US" name="lc" />
-    <input type="hidden" value="dharmasangha.org" name="item_name" />
+    <input type="hidden" value="dharmasangha.org.np" name="item_name" />
     <input type="hidden" value="0" name="no_note" />
-    <input type="hidden" value="USD" name="currency_code" />
+    <input type="hidden" value="EUR" name="currency_code" />
     <input type="hidden" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest" name="bn" />
     <input type="image" alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/WEBSCR-640-20110401-1/en_US/i/btn/btn_donateCC_LG.gif" style="border:0" />
 </form>
