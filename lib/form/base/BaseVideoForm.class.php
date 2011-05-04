@@ -19,6 +19,7 @@ abstract class BaseVideoForm extends BaseFormPropel
       'updated_at' => new sfWidgetFormDateTime(),
       'show'       => new sfWidgetFormInputCheckbox(),
       'order'      => new sfWidgetFormInputText(),
+      'link'       => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -27,6 +28,7 @@ abstract class BaseVideoForm extends BaseFormPropel
       'updated_at' => new sfValidatorDateTime(array('required' => false)),
       'show'       => new sfValidatorBoolean(array('required' => false)),
       'order'      => new sfValidatorInteger(array('min' => -2147483648, 'max' => 2147483647)),
+      'link'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('video[%s]');

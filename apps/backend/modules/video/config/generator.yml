@@ -15,79 +15,91 @@ generator:
 
     edit:
       display:
-        "NONE": [show, order, created_at]
+        "NONE": [show, order, created_at, link]
         "EN":
           - img_i18n_en
           - _img_i18n_en
           - code_i18n_en
           - title_i18n_en
           - body_i18n_en
+          - author_i18n_en
         "RU":
           - img_i18n_ru
           - _img_i18n_ru
           - code_i18n_ru
           - title_i18n_ru
           - body_i18n_ru
+          - author_i18n_ru
         "CS":
           - img_i18n_cs
           - _img_i18n_cs
           - code_i18n_cs
           - title_i18n_cs
           - body_i18n_cs
+          - author_i18n_cs
         "HU":
           - img_i18n_hu
           - _img_i18n_hu
           - code_i18n_hu
           - title_i18n_hu
           - body_i18n_hu
+          - author_i18n_hu
         "PL":
           - img_i18n_pl
           - _img_i18n_pl
           - code_i18n_pl
           - title_i18n_pl
           - body_i18n_pl
+          - author_i18n_pl
         "FR":
           - img_i18n_fr
           - _img_i18n_fr
           - code_i18n_fr
           - title_i18n_fr
           - body_i18n_fr
+          - author_i18n_fr
         "zh_CN":
           - img_i18n_zh_CN
           - _img_i18n_zh_CN
           - code_i18n_zh_CN
           - title_i18n_zh_CN
           - body_i18n_zh_CN
+          - author_i18n_zh_CN
         "VI":
           - img_i18n_vi
           - _img_i18n_vi
           - code_i18n_vi
           - title_i18n_vi
           - body_i18n_vi
+          - author_i18n_vi
         "DE":
           - img_i18n_de
           - _img_i18n_de
           - code_i18n_de
           - title_i18n_de
           - body_i18n_de
+          - author_i18n_de
         "IT":
           - img_i18n_it
           - _img_i18n_it
           - code_i18n_it
           - title_i18n_it
           - body_i18n_it
+          - author_i18n_it
         "JA":
           - img_i18n_ja
           - _img_i18n_ja
           - code_i18n_ja
           - title_i18n_ja
           - body_i18n_ja
+          - author_i18n_ja
         "ES":
           - img_i18n_es
           - _img_i18n_es
           - code_i18n_es
           - title_i18n_es
           - body_i18n_es
+          - author_i18n_es
       fields:
 
         img_i18n_en:
@@ -106,6 +118,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_en:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
 
         img_i18n_ru:
           name: Image
@@ -123,6 +138,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_ru:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
 
         img_i18n_cs:
           name: Image
@@ -140,6 +158,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_cs:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
 
         img_i18n_hu:
           name: Image
@@ -157,6 +178,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_hu:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
 
         img_i18n_pl:
           name: Image
@@ -174,6 +198,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_pl:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
 
         img_i18n_fr:
           name: Image
@@ -191,6 +218,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_fr:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
           
         img_i18n_zh_cn:
           name: Image
@@ -208,6 +238,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6          
+        author_i18n_zh_cn:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
           
         img_i18n_vi:
           name: Image
@@ -225,6 +258,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_vi:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
           
         img_i18n_de:
           name: Image
@@ -242,6 +278,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_de:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
           
         img_i18n_it:
           name: Image
@@ -259,6 +298,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_it:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
 
         img_i18n_ja:
           name: Image
@@ -276,6 +318,9 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_ja:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
 
         img_i18n_es:
           name: Image
@@ -293,3 +338,6 @@ generator:
           name: Body
           type: textarea_tag
           params: disabled=false size=118x6
+        author_i18n_es:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"

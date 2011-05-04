@@ -187,6 +187,7 @@ propel:
     updated_at:       ~
     show:             { type: boolean, defaultValue: true }
     order:            { type: integer, required: true }
+    link:             { type: varchar(255) }
     _indexes:
       updated_at:     [updated_at]
 
@@ -196,6 +197,7 @@ propel:
     code:             { type: longvarchar, required: true }
     title:            { type: longvarchar }
     body:             { type: longvarchar }
+    author:           { type: varchar(255) }
     _indexes:
       updated_at_extra:     [updated_at_extra]
 

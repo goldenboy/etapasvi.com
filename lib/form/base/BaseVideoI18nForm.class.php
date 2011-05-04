@@ -19,6 +19,7 @@ abstract class BaseVideoI18nForm extends BaseFormPropel
       'code'             => new sfWidgetFormTextarea(),
       'title'            => new sfWidgetFormTextarea(),
       'body'             => new sfWidgetFormTextarea(),
+      'author'           => new sfWidgetFormInputText(),
       'id'               => new sfWidgetFormInputHidden(),
       'culture'          => new sfWidgetFormInputHidden(),
     ));
@@ -29,6 +30,7 @@ abstract class BaseVideoI18nForm extends BaseFormPropel
       'code'             => new sfValidatorString(),
       'title'            => new sfValidatorString(array('required' => false)),
       'body'             => new sfValidatorString(array('required' => false)),
+      'author'           => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'id'               => new sfValidatorPropelChoice(array('model' => 'Video', 'column' => 'id', 'required' => false)),
       'culture'          => new sfValidatorChoice(array('choices' => array($this->getObject()->getCulture()), 'empty_value' => $this->getObject()->getCulture(), 'required' => false)),
     ));

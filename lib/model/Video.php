@@ -138,4 +138,20 @@ class Video extends BaseVideo
 	  }
 	  return $img;
 	}
+	
+	/**
+	 * Расширенный метод для получения автора.
+	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
+	 */	
+	public function getAuthor($culture = null, $use_default_culture_if_empty = false)
+	{
+	  $author     = parent::getAuthor($culture);
+	  	  
+	  if ($use_default_culture_if_empty) {
+        if (!$author) {
+          $author = $this->getAuthor(UserPeer::DEFAULT_CULTURE);
+        }
+	  }
+      return $author;
+	}
 }

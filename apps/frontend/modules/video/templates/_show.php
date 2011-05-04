@@ -53,7 +53,9 @@
 				<?php echo html_entity_decode($video->getBodyPrepared()); ?>
 				<?php endif ?>
                 <br/>
-				<?php /*if (!empty($news_list) && count($news_list)): ?>
+				<?php 
+                $author     = $video->getAuthor($sf_user->getCulture(), true);
+                    /*if (!empty($news_list) && count($news_list)): ?>
 					<p>
 						<strong><?php echo __('Text'); ?>:</strong>
                         <br/>
@@ -62,6 +64,11 @@
 					<?php endforeach ?>				
 					</p>
 				<?php endif */?>
+                <?php if ($author): ?>
+                    <p class="author">				
+                        <strong><?php echo __('Author') ?>:</strong> <?php echo $author; ?>
+                    </p>
+                <?php endif ?>
                 <?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_VIDEO, 'item_id'=>$video->getId())) ?> 
 			</div>
 		<?php endif ?>

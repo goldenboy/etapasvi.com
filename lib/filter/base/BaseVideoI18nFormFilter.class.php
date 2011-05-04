@@ -17,6 +17,7 @@ abstract class BaseVideoI18nFormFilter extends BaseFormFilterPropel
       'code'             => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'title'            => new sfWidgetFormFilterInput(),
       'body'             => new sfWidgetFormFilterInput(),
+      'author'           => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -25,6 +26,7 @@ abstract class BaseVideoI18nFormFilter extends BaseFormFilterPropel
       'code'             => new sfValidatorPass(array('required' => false)),
       'title'            => new sfValidatorPass(array('required' => false)),
       'body'             => new sfValidatorPass(array('required' => false)),
+      'author'           => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('video_i18n_filters[%s]');
@@ -47,6 +49,7 @@ abstract class BaseVideoI18nFormFilter extends BaseFormFilterPropel
       'code'             => 'Text',
       'title'            => 'Text',
       'body'             => 'Text',
+      'author'           => 'Text',
       'id'               => 'ForeignKey',
       'culture'          => 'Text',
     );

@@ -1,6 +1,6 @@
 <?php 
 if ($video) {
-	echo image_tag($video->getImg(), array("width"=>150) );
+	echo image_tag($video->getImgPrepared(), array("width"=>150) );
 }
 
 ?>
