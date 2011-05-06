@@ -5,5 +5,7 @@
 /www/cache/*
 /lib/model/om/*
 /lib/model/map/*
+/lib/filter/base/*
+/lib/form/base/*
 /plugins/sfGuardPlugin/lib/model/map/*
 /plugins/sfGuardPlugin/lib/model/om/*

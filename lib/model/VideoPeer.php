@@ -38,6 +38,11 @@ class VideoPeer extends BaseVideoPeer
   {  
     $c->add( VideoPeer::SHOW, 1 );
     $c->add( VideoI18nPeer::CODE, '', Criteria::NOT_EQUAL );
+    
+    $c_all_cultueres = $c->getNewCriterion(VideoI18nPeer::CODE, '', Criteria::NOT_EQUAL);
+    $c_all_cultueres->addOr( $c->getNewCriterion(VideoPeer::ALL_CULTURES, 1) );
+
+	$c->add($c_all_cultueres);
   }
   
   /**

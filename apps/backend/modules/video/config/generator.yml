@@ -8,14 +8,14 @@ generator:
       peer_method: doSelectWithI18n
       max_per_page: 50
       sort: [order, desc]
-      display: [=id, show, order, created_at, _img, title]
+      display: [=id, show, order, created_at, _img, title, all_cultures]
       object_actions:
         _edit:
         _delete:
 
     edit:
       display:
-        "NONE": [show, order, created_at, link]
+        "NONE": [show, order, created_at, link, all_cultures]
         "EN":
           - img_i18n_en
           - _img_i18n_en

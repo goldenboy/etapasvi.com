@@ -37,22 +37,18 @@ class Video extends BaseVideo
 
 	public function __toString() {
 		return $this->getTitle();
-	}
-    
-    public function getTitle($culture = null) {
-		return trim(parent::getTitle($culture));
-	}
+	}    
 	
 	public function getCommentsCount()
 	{		
 		return (int)CommentsPeer::getCommentsCount( ItemtypesPeer::ITEM_TYPE_NAME_VIDEO, $this->getId() );
 	}
-	public function getBodyPrepared() {
+	public function getBodyPrepared($culture = null, $use_default_culture_if_empty = false) {
 		/*$body = $this->getBody();
 		$body = nl2br($body);
 		$body = str_ireplace( '<br />', '&nbsp;</p><p>', $body );
 		return $body;*/
-		return TextPeer::prepareText( $this->getBody() );
+		return TextPeer::prepareText( $this->getBody($culture = null, $use_default_culture_if_empty) );
 	}	
 
 	public function getTitlePrepared($title = '') {
@@ -120,12 +116,17 @@ class Video extends BaseVideo
 	 *
 	 * @return unknown
 	 */
-	public function getImgPrepared($culture = null) {
-	  $img = $this->getImg($culture);
+	public function getImgPrepared($culture = null, $use_default_culture_if_empty = false) {
+	  $img = $this->getImg($culture);	 	 
+	  
+	  // берём картинку из языка по умолчанию
+	  if (!$img) {
+	    $img = $this->getImg($culture, $use_default_culture_if_empty);
+	  }
 	  
 	  // берём img из code
 	  if (!$img) {
-	  	$img = $this->getCode($culture);
+	  	$img = $this->getCode($culture, $use_default_culture_if_empty);
 	  }
 	  
 	  if (!$img) {
@@ -137,6 +138,70 @@ class Video extends BaseVideo
 	  	$img = 'http://i2.ytimg.com/vi/' . $img . '/hqdefault.jpg';
 	  }
 	  return $img;
+	}
+	
+	/**
+	 * Расширенный метод для получения заголовка.
+	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
+	 */	
+	public function getTitle($culture = null, $use_default_culture_if_empty = false)
+	{
+	  $title = parent::getTitle($culture);
+
+	  if ($use_default_culture_if_empty) {
+        if (!$title) {
+          $title = $this->getTitle(UserPeer::DEFAULT_CULTURE);
+        }
+	  }
+      return trim($title);
+	}
+	
+	/**
+	 * Расширенный метод для получения картинки.
+	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
+	 */	
+	public function getImg($culture = null, $use_default_culture_if_empty = false)
+	{
+	  $img = parent::getImg($culture);
+
+	  if ($use_default_culture_if_empty) {
+        if (!$img) {
+          $img = $this->getImg(UserPeer::DEFAULT_CULTURE);
+        }
+	  }
+      return $img;
+	}
+	
+	/**
+	 * Расширенный метод для получения картинки.
+	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
+	 */	
+	public function getCode($culture = null, $use_default_culture_if_empty = false)
+	{
+	  $code = parent::getCode($culture);
+
+	  if ($use_default_culture_if_empty) {
+        if (!$code) {
+          $code = $this->getCode(UserPeer::DEFAULT_CULTURE);
+        }
+	  }
+      return $code;
+	}
+	
+	/**
+	 * Расширенный метод для получения заголовка.
+	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
+	 */	
+	public function getBody($culture = null, $use_default_culture_if_empty = false)
+	{
+	  $body = parent::getBody($culture);
+
+	  if ($use_default_culture_if_empty) {
+        if (!$body) {
+          $body = $this->getBody(UserPeer::DEFAULT_CULTURE);
+        }
+	  }
+      return $body;
 	}
 	
 	/**

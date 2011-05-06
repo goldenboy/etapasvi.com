@@ -188,6 +188,7 @@ propel:
     show:             { type: boolean, defaultValue: true }
     order:            { type: integer, required: true }
     link:             { type: varchar(255) }
+    all_cultures:     { type: boolean, default: 0 }
     _indexes:
       updated_at:     [updated_at]
 

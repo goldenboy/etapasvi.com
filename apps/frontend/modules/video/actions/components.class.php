@@ -27,7 +27,9 @@ class videoComponents extends sfComponents
   {  	
 	$this->video = VideoPeer::retrieveByPk( $this->id );
   	//$this->forward404Unless( $this->video && $this->video->getCode() && $this->video->getShow() );  
-  	if (!$this->video || !$this->video->getCode() || !$this->video->getShow()) {
+  	$culture = sfContext::getInstance()->getUser()->getCulture();
+  	
+  	if (!$this->video || !$this->video->getCode($culture, $this->video->getAllCultures()) || !$this->video->getShow()) {
   		//@sfActions::forward('default', 'error404');
   		throw new sfError404Exception();
   	}	

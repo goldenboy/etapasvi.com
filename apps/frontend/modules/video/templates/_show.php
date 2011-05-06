@@ -1,14 +1,8 @@
-<?php if ($video && $video->getCode() != ''): ?>	
+<?php if ($video): ?>	
 	<?php 
-        $title = $video->getTitle();
-        if (!$title && $sf_user->getCulture() != UserPeer::DEFAULT_CULTURE) {
-            $title = $video->getTitle(UserPeer::DEFAULT_CULTURE);
-        }
-		if ($title):
-			$href = url_for('video/show?id='.$video->getId() . '&title=' . TextPeer::urlTranslit($video->getTitle()) ); 
-		else:
-			$href = url_for('video/show?id='.$video->getId() ); 
-		endif
+    $title          = $video->getTitle($sf_user->getCulture(), true);
+    $code           = $video->getCode($sf_user->getCulture(), true);
+    $href           = $video->getUrl();
 	?>
 
 	<?php if (empty($short)): ?>	
@@ -16,29 +10,27 @@
 	<?php endif ?>
 
 		<?php if (!empty($short)): ?>
-			<?php /*if ($video->getImg()):*/ ?>
-				<a href="<?php echo $href; ?>" title="<?php echo $title; ?>">
-					<img src="<?php echo $video->getImgPrepared(); ?>" 
-					alt="<?php echo $title; ?>" />
-				</a>
-				<?php if ( $title ): ?>
-				<p class="p1_no_top">
-					<a href="<?php echo $href; ?>" title="<?php echo $title; ?>">
-						<?php echo html_entity_decode( $video->getTitlePrepared($title) ); ?>...
-					</a>				
-				</p>
-				<?php endif ?>
-			<?php /* endif */ ?>	
+            <a href="<?php echo $href; ?>" title="<?php echo $title; ?>">
+                <img src="<?php echo $video->getImgPrepared($sf_user->getCulture(), true); ?>" 
+                alt="<?php echo $title; ?>" />
+            </a>
+            <?php if ( $title ): ?>
+            <p class="p1_no_top">
+                <a href="<?php echo $href; ?>" title="<?php echo $title; ?>">
+                    <?php echo html_entity_decode( $video->getTitlePrepared($title) ); ?>...
+                </a>				
+            </p>
+            <?php endif ?>	
 		<?php else: ?>		
 			<h1 class="title">
 				<?php echo $title; ?>
 			</h1>
 			
 			<p class="center_text p1_no_bottom">
-                <?php if (strlen($video->getCode()) <20): ?>
-				<object width="480" height="385"><param name="movie" value="http://www.youtube-nocookie.com/v/<?php echo $video->getCode(); ?>&amp;hl=<?php echo $sf_user->getCulture(); ?>&amp;fs=1&amp;"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube-nocookie.com/v/<?php echo $video->getCode(); ?>&amp;hl=<?php echo $sf_user->getCulture(); ?>&amp;fs=1&amp;" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+                <?php if (strlen($code) <20): ?>
+				<object width="480" height="385"><param name="movie" value="http://www.youtube-nocookie.com/v/<?php echo $code; ?>&amp;hl=<?php echo $sf_user->getCulture(); ?>&amp;fs=1&amp;"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube-nocookie.com/v/<?php echo $code; ?>&amp;hl=<?php echo $sf_user->getCulture(); ?>&amp;fs=1&amp;" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
                 <?php else: ?>
-                    <?php echo html_entity_decode($video->getCode()); ?>
+                    <?php echo html_entity_decode($code); ?>
                 <?php endif ?>
 			</p>
 
@@ -49,9 +41,9 @@
 				<p class="date right_text p1_no_both">
 					<?php echo format_date( $video->getCreatedAt(), 'd MMMM yyyy' ); ?>
 				</p>
-				<?php if ($video->getBody()): ?>
-				<?php echo html_entity_decode($video->getBodyPrepared()); ?>
-				<?php endif ?>
+				<?php /*if ($video->getBody()):*/ ?>
+				<?php echo html_entity_decode($video->getBodyPrepared($sf_user->getCulture(), true)); ?>
+				<?php /*endif */ ?>
                 <br/>
 				<?php 
                 $author     = $video->getAuthor($sf_user->getCulture(), true);

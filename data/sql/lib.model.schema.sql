@@ -421,6 +421,7 @@ CREATE TABLE `video`
 	`show` TINYINT default 1,
 	`order` INTEGER  NOT NULL,
 	`link` VARCHAR(255),
+	`all_cultures` TINYINT default 0,
 	PRIMARY KEY (`id`),
 	KEY `updated_at`(`updated_at`)
 )Type=InnoDB;
