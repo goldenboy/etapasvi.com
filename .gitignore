@@ -3,3 +3,7 @@
 /cache/*
 /log/*
 /www/cache/*
+/lib/model/om/*
+/lib/model/map/*
+/plugins/sfGuardPlugin/lib/model/map/*
+/plugins/sfGuardPlugin/lib/model/om/*
