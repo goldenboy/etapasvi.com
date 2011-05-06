@@ -69,6 +69,11 @@
                         <strong><?php echo __('Author') ?>:</strong> <?php echo $author; ?>
                     </p>
                 <?php endif ?>
+                <?php if ($video->getLink()): ?>
+                    <p class="p1_no_bottom source">
+                        <strong><?php echo __('Source') ?>:</strong> <a href="<?php echo $video->getLink(); ?>"><?php echo $video->getLink(); ?></a>
+                    </p>
+                <?php endif ?>
                 <?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_VIDEO, 'item_id'=>$video->getId())) ?> 
 			</div>
 		<?php endif ?>
