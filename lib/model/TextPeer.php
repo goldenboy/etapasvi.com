@@ -262,14 +262,29 @@ class TextPeer extends BaseTextPeer
 	}
 	
 	/**
-	 * Подготавливает текст, введённый в админке, к выводу
+	 * Подготавливает текст, введённый в админке, к выводу.
+	 * 
+	 * Если в тексте содержится ссылка на Google Docs, возвращается текст документа
 	 *
 	 * @param unknown_type $text
 	 * @return unknown
 	 */
 	public static function prepareText($text) {
-		$text = nl2br($text);
-		$text = str_ireplace( '<br />', '<br /><br />', $text );
+		
+		if (preg_match("/^https\:\/\/docs.google.com/", $text)) {
+			// получаем документ Google Docs
+			$text = file_get_contents($text);
+			
+			// вырезаем лишние теги
+			$text = preg_replace("/(<\/?html>|<\/?head>|<meta [^>]+>|<title>[^<]+<\/title>|<\/?body[^>]*>)/", '', $text);
+			// удаляем стили body и заголовков, обычно идут в конце
+			$text = preg_replace("/<\/?body[^>]*>|body{[^>]+<\/style>/", '</style>', $text);
+			$text = preg_replace("/(font-family:[^;]+;|font-size:[^;]+;|p{margin\:0})/", '', $text);
+		} else {
+			$text = nl2br($text);
+			$text = str_ireplace( '<br />', '<br /><br />', $text );
+		}		
+
 		return $text;
 	}
 	

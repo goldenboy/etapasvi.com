@@ -35,7 +35,8 @@
     <div class="related video_list">
     <?php foreach($video_list as $video_index=>$video_item): ?>
         <div>
-            <a href="<?php echo url_for('video/show?id=' . $video_item->getId()); ?>"><?php /*echo __('Video'); ?><?php if (count($video_list) > 1): ?> <?php echo ($video_index + 1); ?><?php endif */?><img src="<?php echo $video_item->getImg(); ?>" /></a>
+        <?php /* ?>
+            <a href="<?php echo url_for('video/show?id=' . $video_item->getId()); ?>"><?php /echo __('Video'); ?><?php if (count($video_list) > 1): ?> <?php echo ($video_index + 1); ?><?php endif /?><img src="<?php echo $video_item->getImg(); ?>" /></a>
             <?php if ( $video_item->getTitle() ): ?>
             <p class="p1_no_top">
                 <a href="<?php echo url_for('video/show?id=' . $video_item->getId()); ?>" title="<?php echo $video_item->getTitle(); ?>">
@@ -43,6 +44,8 @@
                 </a>
             </p>
             <?php endif ?>
+        */ ?>
+            <?php include_partial('video/show', array('video'=>$video_item, 'short'=>true) ); ?>
         </div>
     <?php endforeach ?>				
     </div>
