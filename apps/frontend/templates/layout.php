@@ -208,7 +208,8 @@ _gaq.push(
     ["_addOrganic","gogo.ru", "q"],
     ["_addOrganic","gde.ru", "keywords"],
     ["_addOrganic","quintura.ru", "request"],
-    ['_trackPageview']
+    ['_trackPageview'],
+    ['_trackPageLoadTime']
 );
 (function() {
  var ga = document.createElement('script');
