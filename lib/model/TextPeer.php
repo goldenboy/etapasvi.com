@@ -273,7 +273,7 @@ class TextPeer extends BaseTextPeer
 		
 		if (preg_match("/^https\:\/\/docs.google.com/", $text)) {
 			// получаем документ Google Docs
-			$text = file_get_contents($text);
+			$text = file_get_contents($text . '&t=' . time());
 			
 			// вырезаем лишние теги
 			$text = preg_replace("/(<\/?html>|<\/?head>|<meta [^>]+>|<title>[^<]+<\/title>|<\/?body[^>]*>)/", '', $text);
