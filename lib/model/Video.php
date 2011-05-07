@@ -119,6 +119,10 @@ class Video extends BaseVideo
 	public function getImgPrepared($culture = null, $use_default_culture_if_empty = false) {
 	  $img = $this->getImg($culture);	 	 
 	  
+	  if ($this->getAllCultures()) {
+	  	$use_default_culture_if_empty = true;
+	  }
+	  
 	  // берём картинку из языка по умолчанию
 	  if (!$img) {
 	    $img = $this->getImg($culture, $use_default_culture_if_empty);
