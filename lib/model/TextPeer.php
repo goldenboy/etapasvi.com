@@ -266,10 +266,11 @@ class TextPeer extends BaseTextPeer
 	 * 
 	 * Если в тексте содержится ссылка на Google Docs, возвращается текст документа
 	 *
-	 * @param unknown_type $text
+	 * @param текст $text
+	 * @param кол-во переводов строк <br/> $br_count
 	 * @return unknown
 	 */
-	public static function prepareText($text) {
+	public static function prepareText($text, $br_count = 2) {
 		
 		if (preg_match("/^https\:\/\/docs.google.com/", $text)) {
 			// получаем документ Google Docs
@@ -282,7 +283,8 @@ class TextPeer extends BaseTextPeer
 			$text = preg_replace("/(font-family:[^;]+;|font-size:[^;]+;|p{margin\:0})/", '', $text);
 		} else {
 			$text = nl2br($text);
-			$text = str_ireplace( '<br />', '<br /><br />', $text );
+			$br_repeated = str_repeat('<br />', $br_count);
+			$text = str_ireplace( '<br />', $br_repeated, $text );
 		}		
 
 		return $text;

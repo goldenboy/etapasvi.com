@@ -73,7 +73,7 @@ class Audio extends BaseAudio
 	 * @return unknown
 	 */
 	public function getBodyPrepared($culture = null, $use_default_culture_if_empty = false) {
-		return TextPeer::prepareText( $this->getBody($culture, $use_default_culture_if_empty) );
+		return TextPeer::prepareText( $this->getBody($culture, $use_default_culture_if_empty), 1 );
 	}
 	
 	/**
