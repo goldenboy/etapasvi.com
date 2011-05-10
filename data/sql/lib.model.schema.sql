@@ -540,6 +540,7 @@ CREATE TABLE `audio_i18n`
 (
 	`updated_at_extra` DATETIME,
 	`title` TEXT,
+	`body` TEXT,
 	`author` TEXT,
 	`id` INTEGER  NOT NULL,
 	`culture` VARCHAR(7)  NOT NULL,
