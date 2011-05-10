@@ -1,4 +1,4 @@
-var ap_stopAll = function(){};
+ar ap_stopAll = function(){};
 var audioplayer  = false;
 
 $(document).ready(function(){
@@ -46,25 +46,6 @@ $(document).ready(function(){
 	);
 });
 
-function showComments() 
-{
-	if ( $("#elComments").is(":hidden") ) {
-		$("#elComments").slideDown("slow");
-	} else {
-		$("#elComments").slideUp("slow");
-	}
-}
-
-function showComment(id)
-{
-    var comment_el = $("#comment_body_"+id);
-	if ( comment_el.is(":hidden") ) {
-		comment_el.slideDown("slow");
-	} else {
-		comment_el.slideUp("slow");
-	}
-}
-
 // оформляем или отключаем подписку
 function subscribeClick( subscribeCheckbox, url ) 
 {
@@ -82,11 +63,24 @@ function subscribeClick( subscribeCheckbox, url )
 	});
 }
 
+// исходный текст учения
 function showOriginal() 
 {
 	if ( $("#elOriginal").is(":hidden") ) {
 		$("#elOriginal").slideDown("slow");
 	} else {
 		$("#elOriginal").slideUp("slow");
+	}
+}
+
+// текст аудиозаписи
+function showAudioBody(id) 
+{    
+    var element_id = "#elAudioBody" + id;
+
+	if ( $(element_id).is(":hidden") ) {
+		$(element_id).slideDown("slow");
+	} else {
+		$(element_id).slideUp("slow");
 	}
 }

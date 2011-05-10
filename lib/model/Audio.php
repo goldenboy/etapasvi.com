@@ -52,6 +52,31 @@ class Audio extends BaseAudio
 	}
 	
 	/**
+	 * Расширенный метод для получения заголовка.
+	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
+	 */	
+	public function getBody($culture = null, $use_default_culture_if_empty = false)
+	{
+	  $body = parent::getBody($culture);
+
+	  if ($use_default_culture_if_empty) {
+        if (!$body) {
+          $body = $this->getBody(UserPeer::DEFAULT_CULTURE);
+        }
+	  }
+      return trim($body);
+	}
+	
+	/**
+	 * Получение тела, подготовленного к выводу
+	 *
+	 * @return unknown
+	 */
+	public function getBodyPrepared($culture = null, $use_default_culture_if_empty = false) {
+		return TextPeer::prepareText( $this->getBody($culture, $use_default_culture_if_empty) );
+	}
+	
+	/**
 	 * Расширенный метод для получения автора.
 	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
 	 */	

@@ -229,6 +229,7 @@ propel:
   audio_i18n:
     updated_at_extra: ~
     title:            { type: longvarchar }
+    body:             { type: longvarchar }
     author:           { type: longvarchar }
     _indexes:
       updated_at_extra:     [updated_at_extra]
