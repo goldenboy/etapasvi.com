@@ -2,7 +2,7 @@
 
 class VideoPeer extends BaseVideoPeer
 { 
-  const ITEMS_PER_PAGE = 9;
+  const ITEMS_PER_PAGE = 12;
   const TITLE_LENGTH   = 55; //38;
   
   /**
