@@ -1,5 +1,6 @@
 <?php
-
+//phpinfo();
+//exit();
 /*
 Header("Cache-Control: must-revalidate");
 
@@ -10,7 +11,7 @@ Header($ExpStr);*/
 // this check prevents access to debug front controllers that are deployed by accident to production servers.
 // feel free to remove this, extend it or make something more sophisticated.
 
-if (!in_array(@$_SERVER['REMOTE_ADDR'], array('94.241.18.221', '::1')))
+if (!in_array(@$_SERVER['REMOTE_ADDR'], array('94.241.27.10', '::1')))
 {
   die('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }
