@@ -273,6 +273,13 @@ class TextPeer extends BaseTextPeer
 	public static function prepareText($text, $br_count = 2) {
 		
 		if (preg_match("/^https\:\/\/docs.google.com/", $text)) {
+			
+			// выводим Google-Документ
+			
+			$text = '<iframe width="100%" id="gd" style="border:0;height:600px" border="0" frameBorder="0" src="' 
+					. $text . '" class="autoHeight" ></iframe>';
+			
+			/*
 			// получаем документ Google Docs
 			$text = file_get_contents($text . '&t=' . time());
 			
@@ -280,7 +287,7 @@ class TextPeer extends BaseTextPeer
 			$text = preg_replace("/(<\/?html>|<\/?head>|<meta [^>]+>|<title>[^<]+<\/title>|<\/?body[^>]*>)/", '', $text);
 			// удаляем стили body и заголовков, обычно идут в конце
 			$text = preg_replace("/<\/?body[^>]*>|body{[^>]+<\/style>/", '</style>', $text);
-			$text = preg_replace("/(font-family:[^;]+;|font-size:[^;]+;|p{margin\:0})/", '', $text);
+			$text = preg_replace("/(font-family:[^;]+;|font-size:[^;]+;|p{margin\:0})/", '', $text);*/
 		} else {
 			$text = nl2br($text);
 			$br_repeated = str_repeat('<br />', $br_count);
