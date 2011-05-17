@@ -69,9 +69,12 @@ AddHandler php5-cgi .php
   # sfSuperCachePlugin 
   RewriteCond %{REQUEST_METHOD} GET
   RewriteCond %{DOCUMENT_ROOT}/cache/%{REQUEST_URI}i.html -f
-
   RewriteRule ^(.*) cache/$1i.html [L]
 
+  # experiments with URL rewrite led to URL rewrite in PHP
+  #RewriteCond %{REMOTE_ADDR} ^94.241.0.228
+  #RewriteRule ^(.*)$ frontend_devdev.php?$1 [QSA,L]
+  
   # no, so we redirect to our front web controller 
   RewriteRule ^(.*)$ frontfrontend.php [QSA,L]
 
