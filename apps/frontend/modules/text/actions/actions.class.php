@@ -34,8 +34,12 @@ class textActions extends sfActions
     
     if ($this->embed) {
     	$this->embed = base64_encode(str_replace(
+    		/*
     		'if(DISQUS.config.language){if(DISQUS.config.language!="en")', 
     		'if(typeof disqus_language!="undefined"){DISQUS.config.language=disqus_language;}if(DISQUS.config.language){if(DISQUS.config.language!="en")',
+    		*/
+    		'if(g.config.language){',
+    		'if(typeof disqus_language!="undefined"){g.config.language=disqus_language;}if(g.config.language){',
     		$this->embed
     	));
 
