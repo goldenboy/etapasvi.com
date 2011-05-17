@@ -8,8 +8,8 @@ class CommentsPeer extends BaseCommentsPeer
 	const STATUS_VISIBLE = 0;
 	const STATUS_HIDDEN  = 1;
 	
-	//const DISQUS_EMBED  = 'etapasvi.disqus.com/embed.js';
-	const DISQUS_EMBED  = 'http://mediacdn.disqus.com/1299805542/build/system/embed.js';
+	const DISQUS_EMBED  = 'http://etapasvi.disqus.com/embed.js';
+	//const DISQUS_EMBED  = 'http://mediacdn.disqus.com/1299805542/build/system/embed.js';
 	
 	/*
 	// Для чего выбираем комментарии

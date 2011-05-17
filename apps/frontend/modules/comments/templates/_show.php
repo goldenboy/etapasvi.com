@@ -4,17 +4,19 @@
     var disqus_identifier   = '<?php echo $comments_identifier?>';
     var disqus_category_id  = '<?php echo UserPeer::getCultureCommentsCategoryId() ?>';
     var disqus_language     = '<?php echo UserPeer::getCultureMain() ?>';
-    
     <?php /*
-    // var disqus_url = 'http://example.com/permalink-to-page.html';
     $(document).ready(function(){
-        //var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.cache = true;
-        //dsq.src = '/js/disqus_embed.js';
-        //dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        //dsq.src = '/<?php echo $sf_user->getCulture(); ?>/text/disqusembed';
-        //(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);                
-        
-        //$.getScript = function(url, callback, cache){
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.cache = true;
+        <?php /* //dsq.src = '/js/disqus_embed.js';
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        //dsq.src = '/<?php echo $sf_user->getCulture(); ?>/text/disqusembed'; 
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);                                
+    });
+    */ ?>
+</script>
+<?php
+/*
+//$.getScript = function(url, callback, cache){
         //    $.ajax({
         //            type: "GET",
         //            url: url,
@@ -45,11 +47,10 @@
         
         //}
         //$("#disqus_script").attr("src", "/<?php echo $sf_user->getCulture(); ?>/text/disqusembed");
-    });
-    */
-    ?>
-</script>
-<?php /*<iframe src="/<?php echo $sf_user->getCulture(); ?>/text/disqusembed" width="0" height="0" id="disqus_iframe"></iframe> */ ?>
+*/ 
+?>
+<?php /*<iframe src="/<?php echo $sf_user->getCulture(); ?>/text/disqusembed" width="0" height="0" id="disqus_iframe"></iframe> 
+*/ ?>
 <script type="text/javascript" src="/<?php echo $sf_user->getCulture(); ?>/text/disqusembed" ></script>
 
 <?php
