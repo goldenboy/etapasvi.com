@@ -38,8 +38,12 @@ class textActions extends sfActions
     		'if(DISQUS.config.language){if(DISQUS.config.language!="en")', 
     		'if(typeof disqus_language!="undefined"){DISQUS.config.language=disqus_language;}if(DISQUS.config.language){if(DISQUS.config.language!="en")',
     		*/
+    		/*
     		'if(g.config.language){',
     		'if(typeof disqus_language!="undefined"){g.config.language=disqus_language;}if(g.config.language){',
+    		*/
+    		'o=[o];',
+    		'if(typeof disqus_language!="undefined"){a.config.language=disqus_language;}o=[o];',
     		$this->embed
     	));
 
