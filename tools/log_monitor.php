@@ -22,7 +22,7 @@ $logs = array(
 	),
 	'server' => array(
 		//'path'        => '/home/saynt2day20/logs/etapasvi.com/http.16681366/error.log',
-		'path'        => '/home/saynt2day20/logs/etapasvi.com/http.16681366/error.log.2011-05-14',
+		'path'        => '/home/saynt2day20/logs/etapasvi.com/http.16681366/error.log',
 		'date_start'  => 1,
 		'date_length' => 24
 	)
