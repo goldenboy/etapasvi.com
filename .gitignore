@@ -1,6 +1,7 @@
 .svn
 .git
 /cache/*
+/www/uploads/photo/*
 /log/*
 /www/cache/*
 /lib/model/om/*
