@@ -278,22 +278,24 @@ class sfRoute implements Serializable
     // 
     // при тестировании учитывать, что маршруты кэшируются
     
-    $url_info = parse_url($url);
-    
-    preg_match("/^\/([^\/]+)\/([^\/]+)\/show\/id\/([\d]+)\/?(title\/(.+))?/", $url_info['path'], $matches);
-    if (count($matches) >= 3) {
-    	$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3];
-    	if ($matches[4]) {
-    		$url .= '/' . $matches[5];
-    	}
-    } else {
-	    // /en/photo/album/id/43
-	    // в
-	    // /en/photo/album/43  
-    	preg_match("/^\/([^\/]+)\/([^\/]+)\/([^\/]+)\/id\/([\d]+)\/?$/", $url, $matches);
-    	if (count($matches) >= 3) {
-    		$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3] . '/' . $matches[4];
-    	}
+    if ( sfContext::getInstance()->getConfiguration()->getApplication() == 'frontend' ) {
+	    $url_info = parse_url($url);
+	    
+	    preg_match("/^\/([^\/]+)\/([^\/]+)\/show\/id\/([\d]+)\/?(title\/(.+))?/", $url_info['path'], $matches);
+	    if (count($matches) >= 3) {
+	    	$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3];
+	    	if ($matches[4]) {
+	    		$url .= '/' . $matches[5];
+	    	}
+	    } else {
+		    // /en/photo/album/id/43
+		    // в
+		    // /en/photo/album/43  
+	    	preg_match("/^\/([^\/]+)\/([^\/]+)\/([^\/]+)\/id\/([\d]+)\/?$/", $url, $matches);
+	    	if (count($matches) >= 3) {
+	    		$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3] . '/' . $matches[4];
+	    	}
+	    }
     }
 
     return $url;
