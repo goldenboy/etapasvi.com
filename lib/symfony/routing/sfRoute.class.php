@@ -206,7 +206,10 @@ class sfRoute implements Serializable
    *
    * @return string The generated URL
    */
-  public function generate($params, $context = array(), $absolute = false)
+  // saynt2day
+  // url rewrite
+  //public function generate($params, $context = array(), $absolute = false)
+  public function generate($params, $context = array(), $absolute = false, $culture = '')
   {
     if (!$this->compiled)
     {
@@ -217,6 +220,12 @@ class sfRoute implements Serializable
 
     $defaults = $this->mergeArrays($this->getDefaultParameters(), $this->defaults);
     $tparams = $this->mergeArrays($defaults, $params);
+    
+    // saynt2day
+  	// url rewrite
+  	if ($culture) {
+  		$tparams['sf_culture'] = $culture;
+  	}  	
 
     // all params must be given
     if ($diff = array_diff_key($this->variables, $tparams))
@@ -254,6 +263,37 @@ class sfRoute implements Serializable
       {
         $url .= '?'.http_build_query($extra);
       }
+    }    
+
+    // saynt2day
+    // URL rewrite
+    //
+    // /ru/news/show/id/83/title/novosti-s-mahadarshana 
+    // превращается в
+    // /ru/news/83/novosti-s-mahadarshana
+    //
+    // /en/photo/album/id/43
+    // в
+    // /en/photo/album/43    
+    // 
+    // при тестировании учитывать, что маршруты кэшируются
+    
+    $url_info = parse_url($url);
+    
+    preg_match("/^\/([^\/]+)\/([^\/]+)\/show\/id\/([\d]+)\/?(title\/(.+))?/", $url_info['path'], $matches);
+    if (count($matches) >= 3) {
+    	$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3];
+    	if ($matches[4]) {
+    		$url .= '/' . $matches[5];
+    	}
+    } else {
+	    // /en/photo/album/id/43
+	    // в
+	    // /en/photo/album/43  
+    	preg_match("/^\/([^\/]+)\/([^\/]+)\/([^\/]+)\/id\/([\d]+)\/?$/", $url, $matches);
+    	if (count($matches) >= 3) {
+    		$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3] . '/' . $matches[4];
+    	}
     }
 
     return $url;

@@ -30,9 +30,9 @@
         </p>		
     <?php endif ?>
 
-    <?php if ($newsitem->getAuthor()): ?>
+    <?php if ($newsitem->getAuthor($sf_user->getCulture(), true)): ?>
         <p class="author">				
-            <strong><?php echo __('Author') ?>:</strong> <?php echo $newsitem->getAuthor(); ?>
+            <strong><?php echo __('Author') ?>:</strong> <?php echo $newsitem->getAuthor($sf_user->getCulture(), true); ?>
         </p>
     <?php endif ?>
     

@@ -39,7 +39,10 @@ class sfPathInfoRouting extends sfRouting
  /**
   * @see sfRouting
   */
-  public function generate($name, $params = array(), $absolute = false)
+  // saynt2day
+  // url rewrite
+  //public function generate($name, $params = array(), $absolute = false)
+  public function generate($name, $params = array(), $absolute = false, $culture = '')
   {
     $parameters = $this->mergeArrays($this->defaultParameters, $params);
     if ($this->getDefaultParameter('module') == $parameters['module'])

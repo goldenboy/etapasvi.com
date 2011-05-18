@@ -289,7 +289,10 @@ class sfPatternRouting extends sfRouting
   /**
    * @see sfRouting
    */
-  public function generate($name, $params = array(), $absolute = false)
+  // saynt2day
+  // url rewrite
+  //public function generate($name, $params = array(), $absolute = false)
+  public function generate($name, $params = array(), $absolute = false, $culture = '')
   {
     // fetch from cache
     if (null !== $this->cache)
@@ -324,7 +327,9 @@ class sfPatternRouting extends sfRouting
       }
     }
 
-    $url = $route->generate($params, $this->options['context'], $absolute);
+    // saynt2day
+    // url rewrite
+    $url = $route->generate($params, $this->options['context'], $absolute, $culture);
 
     // store in cache
     if (null !== $this->cache)
@@ -513,6 +518,40 @@ class sfPatternRouting extends sfRouting
     // remove multiple /
     $url = preg_replace('#/+#', '/', $url);
 
+    // saynt2day
+    // URL rewrite
+    //
+    // /ru/news/83/novosti-s-mahadarshana
+    // превращается в
+    // /ru/news/show/id/83/title/novosti-s-mahadarshana
+    //
+    // /en/photo/album/43
+    // в
+    // /en/photo/album/id/43
+    //
+    // при тестировании учитывать, что маршруты кэшируются
+
+    preg_match("/^\/([^\/]+)\/([^\/]+)\/([\d]+)\/?([^\/]+)?$/", $url, $matches);
+    // если URL подлежит перезаписи, собираем его из частей
+    if (count($matches) >= 3) {
+	    // /ru/news/83/novosti-s-mahadarshana
+	    // превращается в
+	    // /ru/news/show/id/83/title/novosti-s-mahadarshana
+    	$url = '/' . $matches[1] . '/' . $matches[2] . '/show/id/' . $matches[3];
+    	if ($matches[4]) {
+    		$url .= '/title/' . $matches[4];
+    	}
+    } else{
+	    // /en/photo/album/43
+	    // в
+	    // /en/photo/album/id/43
+    	preg_match("/^\/([^\/]+)\/([^\/]+)\/([^\/]+)\/([\d]+)\/?$/", $url, $matches);
+    	if (count($matches) >= 3) {
+    		$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3] . '/id/' . $matches[4];
+    	}
+    }
+    
+    
     return $url;
   }
 

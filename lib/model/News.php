@@ -192,12 +192,16 @@ class News extends BaseNews
 	  }
 	  $module = $this->getTypeName();
 	  
-	  $url = UserPeer::SITE_PROTOCOL  . '://' . UserPeer::SITE_ADDRESS . '/' . $culture . '/' . $module . '/show/id/' . $this->getId();	  
+	  //$url = UserPeer::SITE_PROTOCOL  . '://' . UserPeer::SITE_ADDRESS . '/' . $culture . '/' . $module . '/show/id/' . $this->getId();	  
+	  $url_pattern = $module . '/show?id=' . $this->getId();
 	  
 	  $title_translit = TextPeer::urlTranslit($this->getTitle( $culture ), $culture );
 	  if (!empty($title_translit)) {
-	    $url .= '/title/' . $title_translit;
+	    $url_pattern .= '&title=' . $title_translit;
 	  }
+
+	  $url = sfContext::getInstance()->getController()->genUrl($url_pattern, true, $culture);
+	  
 	  return $url;
 	}
 
@@ -239,7 +243,23 @@ class News extends BaseNews
 	}
 	
 	/**
-	 * Расширенный метод для получения заголовка.
+	 * Расширенный метод для получения автора.
+	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
+	 */	
+	public function getAuthor($culture = null, $use_default_culture_if_empty = false)
+	{
+	  $author = parent::getAuthor($culture);
+
+	  if ($use_default_culture_if_empty) {
+        if (!$author) {
+          $author = $this->getAuthor(UserPeer::DEFAULT_CULTURE);
+        }
+	  }
+      return $author;
+	}	
+	
+	/**
+	 * Расширенный метод для получения ссылки.
 	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
 	 */	
 	public function getLink($culture = null, $use_default_culture_if_empty = false)

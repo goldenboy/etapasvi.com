@@ -41,7 +41,8 @@ class videoComponents extends sfComponents
   		// если на траницу перешли с другого языка, то title неверный
   		$video_title_translit = TextPeer::urlTranslit($video_title);
   		if ( $this->title != $video_title_translit ) {
-  			sfActions::redirect( 'video/show?id=' . (int)$this->id . '&title=' . $video_title_translit );
+  			//sfActions::redirect( 'video/show?id=' . (int)$this->id . '&title=' . $video_title_translit );
+  			sfActions::redirect( $this->video->getUrl() );
   		}
   		
 	    $context = sfContext::getInstance();

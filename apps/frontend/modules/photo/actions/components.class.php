@@ -89,7 +89,8 @@ class photoComponents extends sfComponents
   	    $photo_title_translit = TextPeer::urlTranslit($photo_title);
   	    if ( $this->title != $photo_title_translit ) {
     	  //$this->redirect( 'photo/show?id=' . (int)$this->id . '&title=' . $photo_title_translit );
-    	  sfActions::redirect( 'photo/show?id=' . (int)$this->id . '&title=' . $photo_title_translit );
+    	  //sfActions::redirect( 'photo/show?id=' . (int)$this->id . '&title=' . $photo_title_translit );
+    	  sfActions::redirect( $this->photo->getUrl() );
     	}
   		
 	    $context = sfContext::getInstance();

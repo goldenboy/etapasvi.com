@@ -161,7 +161,10 @@ abstract class sfRouting
   *
   * @return string The generated URL
   */
-  abstract public function generate($name, $params = array(), $absolute = false);
+  // saynt2day
+  // url rewrite
+  //abstract public function generate($name, $params = array(), $absolute = false);
+  abstract public function generate($name, $params = array(), $absolute = false, $culture = '');
 
  /**
   * Parses a URL to find a matching route and sets internal state.
