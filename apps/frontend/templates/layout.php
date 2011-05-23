@@ -119,6 +119,13 @@
 		}
 
 		$params = str_replace( $user_cultures, '/', $uri);
+        // всё, что идёт после #
+        /*preg_match('/#.*$/', $uri, $matches);
+        if (!empty($matches[0])) {
+            $anchor = $matches[0];
+        } else {
+            $anchor = '';
+        }*/
 		$i = 0;
 	?>
 
@@ -133,7 +140,7 @@
 			
 			<?php $i++ ?>
 			<?php if ($i > count(UserPeer::getCultures())) break; ?>
-			<a href="http://<?php echo $_SERVER['HTTP_HOST'] .url_for('/'.$culture.$params) ?>" title="<?php echo $culture_data['name']?>"><?php echo $culture_data['name']?></a><br/>
+			<a href="http://<?php echo $_SERVER['HTTP_HOST'] . url_for('/'.$culture.$params) ?>" title="<?php echo $culture_data['name']?>"><?php echo $culture_data['name']?></a><br/>
 		<?php endforeach ?>		
 	</div>	
 </div>
