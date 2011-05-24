@@ -1100,7 +1100,9 @@ class Picasa {
 	public function postImage ($username, $albumid, $locationOnDisk, $type, $title, $summary="", $keywords="", $commentingEnabled="true", $timestamp=null, $gmlPosition=null) {
 	    	$fileContents = @file_get_contents($locationOnDisk);
 		if ($fileContents === false) {
-		    	throw new Picasa_Exception_FileNotFoundException("The specified file could not be found.");
+				// saynt2day
+		    	//throw new Picasa_Exception_FileNotFoundException("The specified file could not be found.");		    	
+		    	throw new Picasa_Exception_FileNotFoundException("The specified file could not be found: " . $locationOnDisk);
 		}
 		$size = strlen($fileContents);
 
