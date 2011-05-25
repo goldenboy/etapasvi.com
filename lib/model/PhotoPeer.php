@@ -35,7 +35,7 @@ class PhotoPeer extends BasePhotoPeer
   );
   
   const REMOTE_STORAGE_USERNAME = 'etapasvi';
-  const REMOTE_STORAGE_URL      = 'http://lh3.ggpht.com/_h_ndBu6jdk8/';
+  const REMOTE_STORAGE_URL      = 'http://lh3.ggpht.com/';
   
   public static $remote_storage;
   

@@ -101,7 +101,6 @@ propel:
 #    is_teaching:      { type: boolean, default: 0 }
     original:         { type: longvarchar, required: true }
     type:             { type: integer, required: true, foreignTable: newstypes, foreignReference: id, index: true, default: 1 }
-    prev_img:         { type: varchar(255) }
     _indexes:
       index_order:    [order]
       updated_at:     [updated_at]
@@ -154,7 +153,6 @@ propel:
     preview_path:     { type: varchar(255) }
     thumb_path:       { type: varchar(255) }
     link:             { type: varchar(255) }
-    prev_img:         { type: varchar(255) }
     _indexes:
       updated_at:     [updated_at]
 
