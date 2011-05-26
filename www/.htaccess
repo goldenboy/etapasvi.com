@@ -1,8 +1,8 @@
 Options +ExecCGI
 
-Action php-cgi /cgi-bin/php-wrapper-s3r.fcgi
-Action php5-cgi /cgi-bin/php-wrapper-s3r.fcgi
-AddHandler php5-cgi .php
+#Action php-cgi /cgi-bin/php-wrapper-s3r.fcgi
+#Action php5-cgi /cgi-bin/php-wrapper-s3r.fcgi
+#AddHandler php5-cgi .php
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
