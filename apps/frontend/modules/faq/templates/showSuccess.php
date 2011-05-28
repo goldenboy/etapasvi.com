@@ -5,7 +5,7 @@
 <h1 id="up"><?php echo __('FAQ') ?></h1>
 
 <ol class="in_text">
-	<li><a href="#where_is_he"><?php echo __('Where is Dharma Sangha now?') ?></a></li>
+	<?php /*<li><a href="#where_is_he"><?php echo __('Where is Dharma Sangha now?') ?></a></li> */ ?>
 	<li><a href="#why_is_he_meditating"><?php echo __('Why is he meditating? What does he want to achieve?') ?></a></li>
 	<li><a href="#is_he_enlightened"><?php echo __('Is Dharma Sangha already enlightened?') ?></a></li>
 	<li><a href="#buddha"><?php echo __('Has he already become a Buddha?') ?></a></li>
@@ -15,6 +15,7 @@
 	<li><a href="#get_to_halkoriya"><?php echo __('How can I get to Halkoriya Jungle?') ?></a></li>
 </ol>
 
+<?php /*
 <h2 id="where_is_he"><?php echo ++$counter; ?>. <?php echo __('Where is Dharma Sangha now?') ?></h2>
 <p>
 <?php echo __('He is meditating in Halkoriya Jungle, Nepal\'s Bara District.') ?>
@@ -22,7 +23,7 @@
 <center>
 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?source=s_q&amp;f=q&amp;hl=ru&amp;geocode=&amp;q=Dharma+Sangha+Meditation+Site&amp;sll=37.0625,-95.677068&amp;sspn=52.152749,79.013672&amp;ie=UTF8&amp;hnear=&amp;radius=15000&amp;t=h&amp;cid=11992413955635615183&amp;oi=map_misc&amp;hq=Dharma+Sangha+Meditation+Sitel&amp;ll=27.202436,85.089074&amp;spn=0.001341,0.002411&amp;iwloc=A&amp;output=embed"></iframe>
 </center>
-
+*/ ?>
 <h2 id="why_is_he_meditating"><?php echo ++$counter; ?>. <?php echo __('Why is he meditating? What does he want to achieve?') ?></h2>
 <p>
 <?php echo __('Dharma Sangha wants to liberate the whole world by spreading Dharma and insight he’ve gained through his meditation.') ?>
