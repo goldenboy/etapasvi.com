@@ -72,6 +72,10 @@
                 <?php 
                     $photoalbum = $photo->getPhotoalbum();
                     $author     = $photo->getAuthor($sf_user->getCulture(), true);
+                    
+                    if ($author == '?') {
+                        $author = __('If this photo has been made by you, please, let us know');
+                    }
                     /*
                     if ($photo->getAuthor()) :
                         $author = $photo->getAuthor();
@@ -91,7 +95,7 @@
                 <?php endif ?>
                  | 
                 <a href="<?php echo $photo->getFullUrl(); ?>" 	
-                    title="<?php echo __('Full size') ?>" target="_blank" ><?php echo __('Full size') ?></a>		
+                    title="<?php echo __('Download') ?>" target="_blank" ><?php echo __('Download') ?></a>		
             </p>
             <p id="photo_loader" class="hidden center_text" ><img src="/i/loader.gif" /></p>
             <?php if ($photo->getBody()): ?>

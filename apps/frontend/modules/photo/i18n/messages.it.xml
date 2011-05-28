@@ -44,10 +44,10 @@
         <source>Prev</source>
         <target>Precedente</target>
       </trans-unit>      
-
+      
       <trans-unit id="1">
-        <source>Full size</source>
-        <target>Dimensioni standard</target>
+        <source>If this photo has been made by you, please, let us know</source>
+        <target></target>
       </trans-unit>
 
 

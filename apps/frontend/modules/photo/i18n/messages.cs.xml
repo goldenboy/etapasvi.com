@@ -43,10 +43,10 @@
       <trans-unit id="1">
         <source>Prev</source>
         <target></target>
-      </trans-unit>
-
+      </trans-unit>     
+      
       <trans-unit id="1">
-        <source>Full size</source>
+        <source>If this photo has been made by you, please, let us know</source>
         <target></target>
       </trans-unit>
 
