@@ -87,7 +87,10 @@ class photoComponents extends sfComponents
   		
   	    // если на траницу перешли с другого языка, то title неверный
   	    $photo_title_translit = TextPeer::urlTranslit($photo_title);
-  	    if ( $this->title != $photo_title_translit ) {
+  	    
+  	    // чтобы в том случае, если со страницы фото был запрос за content и title изменился,
+  	    // редиректить content на этот title не надо
+  	    if ( $this->title != $photo_title_translit && sfContext::getInstance()->getActionName() != 'content') {
     	  //$this->redirect( 'photo/show?id=' . (int)$this->id . '&title=' . $photo_title_translit );
     	  //sfActions::redirect( 'photo/show?id=' . (int)$this->id . '&title=' . $photo_title_translit );
     	  sfActions::redirect( $this->photo->getUrl() );

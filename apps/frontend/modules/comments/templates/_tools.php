@@ -5,13 +5,9 @@ $social_title 		= str_replace( array("'", "\""), '', html_entity_decode( html_en
 ?>
 
 <div class="social">
-<?php /*
-    <script language="javascript" type="text/javascript">
-        $(document).ready(function(){
-            $("#comments_count").text( $("#elComments .comments_author").size() );
-        });
-    </script>
-*/ ?>    
+
+<?php if (!$empty): ?>	
+  
 <?php if ($sf_user->getCulture() != 'ru'): ?>	
 
 <?php
@@ -96,25 +92,5 @@ $social_title 		= str_replace( array("'", "\""), '', html_entity_decode( html_en
         var addthis_config = { ui_click: true, ui_hover_direction: -1 }
     </script>
 <?php endif ?>
+<?php endif ?>
 </div>
-<?php /*
-<div class="comments_link small">
-	<div class="left">
-		<a name="comments" href="javascript:showComments();" title="<?php echo __('show/hide') ?>"><?php echo __('Comments') ?></a> (<span id="comments_count"></span>)
-        <?php /*( echo count($comments_list); )123 ?>
-	</div>
-	<div class="right">
-		<acronym title="<?php echo __('If you choose to subscribe to a thread, you will be notified when someone posts a new comment to the article which you subscribed to. You can unsubscribe at any point by unchecking the subscription checkbox.') ?>"><?php echo __('Subscribe To Thread') ?></acronym>
-		 &nbsp;
-		<input type="checkbox" value="1" <?php if (SubscribePeer::isSubscribed($id, ItemtypesPeer::getItemTypeId($for), $sf_user->getCulture()) ): ?>checked="checked" <?php endif ?> 
-			onclick = "subscribeClick(
-				this, 
-				'<?php echo url_for('subscribe/update?item_id='.$id.'&item_type='.ItemtypesPeer::getItemTypeId($for).'&from_location='.
-				base64_encode('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) ); ?>' 
-			)"
-		/>
-
-	</div>
-</div>
-*/ 
-?>

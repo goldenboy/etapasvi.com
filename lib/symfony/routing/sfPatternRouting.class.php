@@ -545,9 +545,18 @@ class sfPatternRouting extends sfRouting
 		    // /en/photo/album/43
 		    // в
 		    // /en/photo/album/id/43
-	    	preg_match("/^\/([^\/]+)\/([^\/]+)\/([^\/]+)\/([\d]+)\/?$/", $url, $matches);
+		    
+		    // /ru/photo/content/611/dharma-sangha-17-go-maya
+		    // в
+		    // /ru/photo/content/id/611/title/dharma-sangha-17-go-maya
+		    
+	    	preg_match("/^\/([^\/]+)\/([^\/]+)\/([^\/]+)\/([\d]+)\/?([^\/]+)?$/", $url, $matches);
+
 	    	if (count($matches) >= 3) {
 	    		$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3] . '/id/' . $matches[4];
+    	    	if ($matches[5]) {
+    	    		$url .= '/title/' . $matches[5];
+    	    	}
 	    	}
 	    }
 	}

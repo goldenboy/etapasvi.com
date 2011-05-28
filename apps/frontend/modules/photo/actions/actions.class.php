@@ -55,11 +55,28 @@ class photoActions extends sfActions
   	}
   }*/
   
+ /**
+  * Страница фото
+  *
+  * @param sfWebRequest $request
+  */
   public function executeShow(sfWebRequest $request)
   {  	
   	$this->id 	 = $request->getParameter('id');
   	$this->title = $request->getParameter('title');
   }
+  
+  /**
+   * Содержимое страницы фото
+   *
+   * @param sfWebRequest $request
+   */
+  public function executeContent(sfWebRequest $request)
+  {  	
+  	$this->id 	 = $request->getParameter('id');
+  	$this->title = $request->getParameter('title');
+  }
+  
   /*
   public function executeIndex(sfWebRequest $request)
   {  	

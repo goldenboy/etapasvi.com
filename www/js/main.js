@@ -1,4 +1,4 @@
-ar ap_stopAll = function(){};
+var ap_stopAll = function(){};
 var audioplayer  = false;
 
 $(document).ready(function(){
@@ -83,4 +83,80 @@ function showAudioBody(id)
 	} else {
 		$(element_id).slideUp("slow");
 	}
+}
+
+//  модификация ссылок для подгрузки содержимого
+function preparePhotoContent()
+{    
+    $(document).ready(function(){
+        var href;
+        $("#photo_content a.photo_content_link").each(function(index) {
+            href = $(this).attr('href');
+
+            href = "javascript: loadPhotoContent('" + href + "'); void(0)";
+            $(this).attr('href', href);
+        });
+    });
+}
+
+// ссылка на текущую фотографию
+var global_photo_href;
+
+// подгрузка содрежимого фото
+function loadPhotoContent(href, hide_content, domain)
+{
+    if (!href || $("#photo_loader").is("visible")) {
+        return;
+    }
+    // получаем домен
+    if (!domain) {
+        domain = href.replace(/http:\/\/([^\/]+).*/, '$1');
+    }
+    if (!domain) {
+        return;
+    }
+
+    // домен не включается
+    href = href.replace(/http:\/\/[^\/]+\//, '');
+
+    if (hide_content) {
+        $("#photo_content .photofull").html( '<p id="photo_loader" class="hidden center_text" ><img src="/i/loader.gif" /></p>' );
+        $("#disqus_thread").hide();
+        $("#photo_content div.social").remove();
+        $("#photo_content .dsq-brlink").remove();
+    }
+    global_photo_href = 'http://' + domain + '/' + href;
+
+    var content_href = '/' + href.replace(/\/photo\//, '/photo/content/');
+    $("#photo_loader").show();
+
+    $("#photo_content").load(content_href, function(response, status, xhr) {
+
+        if (status == "error") {
+            $("#photo_loader").hide();
+            if (global_photo_href) {
+                window.location = global_photo_href;
+                return;
+            }            
+        } else {            
+            var content_title = $("#photo_content_title").text();
+            if (history && history.pushState) {
+                history.pushState({isMine:true}, 'title',  global_photo_href );
+            } else {
+                $.address.value('/!' + href); 
+            }
+            if (content_title) {
+                document.title = content_title;
+            }
+        }
+    });
+}
+
+// получение адреса из хэша и загрузка фото
+function loadPhotoContentFromHash(domain)
+{    
+    var hash_url = $.address.value();
+    if (hash_url && hash_url.substr(0, 2) == '/!') {            
+        loadPhotoContent( hash_url.substr(2, hash_url.length), true, domain );
+    }
 }

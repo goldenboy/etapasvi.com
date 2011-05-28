@@ -13,5 +13,8 @@ index:
 show:
   enabled:     true
 
+content:
+  enabled:     true
+
 #_show:
 #  enabled:     true

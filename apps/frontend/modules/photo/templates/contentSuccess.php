@@ -1,0 +1,1 @@
+<?php include_partial('photo/content', array('id'=>$id, 'title'=>$title)) ?>

@@ -13,3 +13,6 @@ albumSuccess:
 showSuccess:
   metas:
     title:        Dharma Sangha - Photo - eTapasvi.com
+
+contentSuccess:
+  has_layout:     false

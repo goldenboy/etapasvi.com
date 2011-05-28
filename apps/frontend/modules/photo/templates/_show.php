@@ -3,7 +3,7 @@
 	<?php 
     // если есть «аголовок на €зыке пользовател€, выводим, его
     // если есть «аголовок на английском, выводим его   
-    $title = $photo->getTitle($sf_user->getCulture(), true);
+    $title = $photo->getTitle($sf_user->getCulture(), true);    
     ?>
 
 	<?php if ($photo->getImg()): ?>
@@ -30,25 +30,25 @@
 				if ($prev_photo && $photo->getShow()):
                     $prev_url = $prev_photo->getUrl();
 				?>
-					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" class="prev_icon"></a>
+					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" class="prev_icon photo_content_link"></a>
 				<?php endif ?>
 
 				<?php 
 				if ($next_photo && $photo->getShow()): 
                     $next_url = $next_photo->getUrl();
 				?>
-					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>">
+					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="photo_content_link">
 						<img src="<?php echo $photo->getPreviewUrl(); ?>" 
-						alt="<?php echo $title; ?>" class="photoitem_img"/></a>
+						alt="<?php echo $title; ?>" id="photoitem_img"/></a>
 				<?php else: ?>
 					<img src="<?php echo $photo->getPreviewUrl(); ?>" 
-					alt="<?php echo $title; ?>" class="photoitem_img"/>
+					alt="<?php echo $title; ?>" id="photoitem_img"/>
 				<?php endif ?>
 
 				<?php 
 				if ($next_photo && $photo->getShow()): 
 				?>
-					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="next_icon"></a>
+					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="next_icon photo_content_link"></a>
 				<?php endif ?>
 			</div>
 		<?php endif ?>
@@ -93,6 +93,7 @@
                 <a href="<?php echo $photo->getFullUrl(); ?>" 	
                     title="<?php echo __('Full size') ?>" target="_blank" ><?php echo __('Full size') ?></a>		
             </p>
+            <p id="photo_loader" class="hidden center_text" ><img src="/i/loader.gif" /></p>
             <?php if ($photo->getBody()): ?>
             <?php echo html_entity_decode($photo->getBodyPrepared()); ?><br/>
             <?php endif ?>
@@ -132,7 +133,7 @@
 			<?php if ($prev_photo && $photo->getShow()): ?>
 				<img src="<?php echo $prev_photo->getPreviewUrl(); ?>" style="display:none;"/>
 
-				<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>"><img src="<?php echo $prev_photo->getThumbUrl(); ?>" alt="<?php echo __('Prev') ?>"/></a>				
+				<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" class="photo_content_link"><img src="<?php echo $prev_photo->getThumbUrl(); ?>" alt="<?php echo __('Prev') ?>"/></a>				
 			<?php endif ?>
             </td>
             <td>
@@ -140,7 +141,7 @@
             </td>
             <td>
 			<?php if ($next_photo && $photo->getShow()): ?>				
-				<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>">
+				<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="photo_content_link">
 					<img src="<?php echo $next_photo->getThumbUrl(); ?>" alt="<?php echo __('Next') ?>"/></a>				
 				<img src="<?php echo $next_photo->getPreviewUrl(); ?>" style="display:none;"/>
 			<?php endif ?>
@@ -148,4 +149,5 @@
 		</tr>
 	</table>
 	<?php endif ?>
+    <div id="photo_content_title" class="hidden"><?php echo $sf_response->getTitle(); ?></div>
 <?php endif ?>

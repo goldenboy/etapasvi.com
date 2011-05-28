@@ -288,6 +288,11 @@ class CommentsPeer extends BaseCommentsPeer
 			} else {
 				$action      = $sf_context->getActionName();
 			}
+			
+			// хардкод для подгружаемых фото
+			if ($module == 'photo' && $action == 'content') {
+			    $action = 'show';
+			}
 		  	
 		  	$parameters  = array('id' => $sf_context->getRequest()->getParameter('id'));
 		}
