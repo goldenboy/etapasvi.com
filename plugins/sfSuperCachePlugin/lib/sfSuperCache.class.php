@@ -129,7 +129,7 @@ class sfSuperCache
   	// количество файлов (минус .htaccess)
 	// [vaduz]$ find /home/saynt2day20/etapasvi.com/www/cache -type f | wc -l
 	// 15
-  	$files = system('find ' . $cacheDir . '  -type f | wc -l');
+  	$files = system('find ' . $cacheDir . '  -type f | wc -l') - 1;
   	ob_clean();
   	return array(
 	  'size'  => $size,
