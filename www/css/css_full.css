@@ -1298,9 +1298,7 @@ img.newsitem_img {
 
 /* video */
 .video_list td {
-	border: 1px solid #DDDDDD;
-	}
-.video_list td {
+    border: 1px solid #DDDDDD;
 	height:150px;
 	padding:10px;
 	text-align:center;
@@ -1442,3 +1440,7 @@ label.error {
     margin: 0;
     text-align: left;
     }   
+.related .video_list td {
+    border: 0;
+    padding: 5px;
+}

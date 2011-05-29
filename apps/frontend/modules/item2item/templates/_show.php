@@ -32,23 +32,17 @@
     <p class="p1_no_bottom">
         <strong><?php echo __('Video'); ?>:</strong>
     </p>
-    <div class="related video_list">
+    <div class="related">
+        <?php include_partial( 'video/list', array('video_list' => $video_list)); ?>
+    </div>
+    <?php /* <div class="related video_list">
     <?php foreach($video_list as $video_index=>$video_item): ?>
         <div>
-        <?php /* ?>
-            <a href="<?php echo url_for('video/show?id=' . $video_item->getId()); ?>"><?php /echo __('Video'); ?><?php if (count($video_list) > 1): ?> <?php echo ($video_index + 1); ?><?php endif /?><img src="<?php echo $video_item->getImg(); ?>" /></a>
-            <?php if ( $video_item->getTitle() ): ?>
-            <p class="p1_no_top">
-                <a href="<?php echo url_for('video/show?id=' . $video_item->getId()); ?>" title="<?php echo $video_item->getTitle(); ?>">
-                    <?php echo $video_item->getTitlePrepared(); ?>...
-                </a>
-            </p>
-            <?php endif ?>
-        */ ?>
             <?php include_partial('video/show', array('video'=>$video_item, 'short'=>true) ); ?>
         </div>
     <?php endforeach ?>				
     </div>
+    */ ?>
 <?php endif ?>
 
 <?php if (!empty($audio_list) && count($audio_list)): ?>
