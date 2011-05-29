@@ -84,7 +84,7 @@ class sfSuperCache
 		$culture_list = array('fake');
 	}
 	
-	$full_path = sfConfig::get('sf_web_dir').'/cache/'.$path;
+	$full_path =  self::getCacheDir().'/'.$path;
 	$full_path = preg_replace("/\/+/", '/', $full_path);
 	
 	foreach ($culture_list as $culture ) { 		
@@ -100,5 +100,40 @@ class sfSuperCache
 		}		
 	}
 	return $result;
+  }
+  
+  /**
+   * Получение директории, где хранится кэш
+   *
+   */
+  public static function getCacheDir()
+  {
+	$cacheDir = sfConfig::get('sf_web_dir').'/cache';
+	
+	return $cacheDir;
+  }
+  
+  /**
+   * Получение информации об объёме кэша на диске
+   *
+   */
+  public static function getInfo()
+  {
+  	$cacheDir = self::getCacheDir();
+  	
+  	// объём кэша на диске
+  	// [vaduz]$ du -ch /home/saynt2day20/etapasvi.com/www/cache | grep total
+	// 20M     total
+  	$size = system('du -ch ' . $cacheDir . ' | grep total');
+  	
+  	// количество файлов (минус .htaccess)
+	// [vaduz]$ find /home/saynt2day20/etapasvi.com/www/cache -type f | wc -l
+	// 15
+  	$files = system('find ' . $cacheDir . '  -type f | wc -l');
+  	ob_clean();
+  	return array(
+	  'size'  => $size,
+	  'files' => $files
+  	);
   }
 }

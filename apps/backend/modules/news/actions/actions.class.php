@@ -671,6 +671,10 @@ class newsActions extends autonewsActions
   	  }
 	  $this->clear_pathes = sfSuperCache::clearCacheByPath($_POST['path'], $all_cultures);		
   	}
+  	
+  	if (!empty($_POST['info'])) {
+	  $this->cache_info = sfSuperCache::getInfo();	
+  	}
   }
   
 }

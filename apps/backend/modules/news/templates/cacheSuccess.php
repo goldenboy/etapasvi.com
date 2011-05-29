@@ -12,3 +12,12 @@
     <?php echo $path; ?><br/>
 <?php endforeach; ?>
 <?php endif ?>
+<br/>
+<form action="" method="post" >  
+	<input type="submit" value="Info" name="info" />
+</form>
+<?php if (!empty($cache_info)): ?>
+<?php foreach($cache_info as $param=>$value): ?>
+    <?php echo $param; ?>: <?php echo $value; ?><br/>
+<?php endforeach; ?>
+<?php endif ?>
