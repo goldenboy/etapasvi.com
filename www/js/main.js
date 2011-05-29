@@ -139,15 +139,24 @@ function loadPhotoContent(href, hide_content, domain)
                 return;
             }            
         } else {            
-            var content_title = $("#photo_content_title").text();
+            // модификация URL
             if (history && history.pushState) {
                 history.pushState({isMine:true}, 'title',  global_photo_href );
             } else {
                 $.address.value('/!' + href); 
             }
+            // title
+            var content_title = $("#photo_content_title").text();
             if (content_title) {
                 document.title = content_title;
             }
+            // culture switcher
+            cur_href_no_culture = href.replace(/[^\/]+\//, '');
+            $("#lang_list a").each(function(index) {
+                culture_href = $(this).attr('href').replace(/(http:\/\/[^\/]+\/[^\/]+\/).*/, '$1' + cur_href_no_culture);
+                
+                $(this).attr('href', culture_href);
+            });
         }
     });
 }
