@@ -33,7 +33,7 @@ class textActions extends sfActions
     $this->embed = file_get_contents( CommentsPeer::DISQUS_EMBED );
     
     if ($this->embed) {
-    	$this->embed = base64_encode(str_replace(
+    	$this->embed = base64_encode(preg_replace(
     		/*
     		'if(DISQUS.config.language){if(DISQUS.config.language!="en")', 
     		'if(typeof disqus_language!="undefined"){DISQUS.config.language=disqus_language;}if(DISQUS.config.language){if(DISQUS.config.language!="en")',
@@ -42,8 +42,8 @@ class textActions extends sfActions
     		'if(g.config.language){',
     		'if(typeof disqus_language!="undefined"){g.config.language=disqus_language;}if(g.config.language){',
     		*/
-    		'o=[o];',
-    		'if(typeof disqus_language!="undefined"){a.config.language=disqus_language;}o=[o];',
+    		'/[a-z]=\[[a-z]\];/',
+    		'if(typeof disqus_language!="undefined"){a.config.language=disqus_language;}$0;',
     		$this->embed
     	));
 
