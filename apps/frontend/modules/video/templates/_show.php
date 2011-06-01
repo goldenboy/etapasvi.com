@@ -41,10 +41,14 @@
 				<p class="date right_text p1_no_both">
 					<?php echo format_date( $video->getCreatedAt(), 'd MMMM yyyy' ); ?>
 				</p>
-				<?php /*if ($video->getBody()):*/ ?>
-				<?php echo html_entity_decode($video->getBodyPrepared($sf_user->getCulture(), true)); ?>
-				<?php /*endif */ ?>
-                <br/>
+				<?php 
+                    $body = html_entity_decode($video->getBodyPrepared($sf_user->getCulture(), true));
+                ?>
+                <?php if ($body): ?>
+                    <?php echo $body; ?>
+                    <br/><br/>
+                <?php endif?>
+                
 				<?php 
                 $author     = $video->getAuthor($sf_user->getCulture(), true);
                     /*if (!empty($news_list) && count($news_list)): ?>
@@ -57,7 +61,7 @@
 					</p>
 				<?php endif */?>
                 <?php if ($author): ?>
-                    <p class="author">				
+                    <p class="p1_no_top author">				
                         <strong><?php echo __('Author') ?>:</strong> <?php echo $author; ?>
                     </p>
                 <?php endif ?>
