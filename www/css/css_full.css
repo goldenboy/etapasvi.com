@@ -1442,5 +1442,7 @@ label.error {
     }   
 .related .video_list td {
     border: 0;
-    padding: 5px;
+    padding: 0;
+    text-align: left;
+}
 }
