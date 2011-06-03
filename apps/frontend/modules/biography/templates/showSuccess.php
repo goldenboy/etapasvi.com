@@ -329,6 +329,9 @@
         case 'es':
             echo 'Vinicio Rivadeneira';
             break;
+        case 'it':
+            echo 'Paolo Bignardi';
+            break;
      }
 ?>
 </p>
