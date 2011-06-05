@@ -10,14 +10,14 @@ setcookie( 'symfony', "", time() - 3600, '/');*/
 
 <center>
 
-<img src="http://www.etapasvi.com/i/bg_circle.jpg" />
+<a href="http://www.etapasvi.com" ><img src="http://www.etapasvi.com/i/bg_circle.jpg" style="border:0"/></a>
 
 <h5 style="color:#555753">
-This website is temporarily unavailable. Contact e-mail: <a href="mailto:etapasvi@gmail.com">etapasvi@gmail.com</a> <br/>We apologize for any inconvenience this causes, and thank you for your patience during this time.
+<a href="http://www.etapasvi.com" >www.eTapasvi.com</a> is temporarily unavailable. Contact e-mail: <a href="mailto:etapasvi@gmail.com">etapasvi@gmail.com</a> <br/>We apologize for any inconvenience this causes, and thank you for your patience during this time.
 </h5>
 
 <h5 style="color:#555753">
-Сайт временно недоступен. Ведутся технические работы. E-mail для связи: <a href="mailto:etapasvi@gmail.com">etapasvi@gmail.com</a> <br/>Приносим извинения за причинённые неудобства и благодарим за терпение.
+Сайт <a href="http://www.etapasvi.com" >www.eTapasvi.com</a> временно недоступен. Ведутся технические работы. E-mail для связи: <a href="mailto:etapasvi@gmail.com">etapasvi@gmail.com</a> <br/>Приносим извинения за причинённые неудобства и благодарим за терпение.
 </h5>
 
 </center>

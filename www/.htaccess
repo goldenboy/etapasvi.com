@@ -4,6 +4,17 @@ Options +ExecCGI
 #Action php5-cgi /cgi-bin/php-wrapper-s3r.fcgi
 #AddHandler php5-cgi .php
 
+# если используется PHP Дримхоста, замечено, что выводятся ошибки
+# непомогло
+#php_flag display_errors off
+#php_value error_reporting 0 
+
+ErrorDocument 400 /home/saynt2day20/etapasvi.com/lib/symfony/exception/data/error.html.php
+ErrorDocument 401 /home/saynt2day20/etapasvi.com/lib/symfony/exception/data/error.html.php
+ErrorDocument 403 /home/saynt2day20/etapasvi.com/lib/symfony/exception/data/error.html.php
+ErrorDocument 404 /home/saynt2day20/etapasvi.com/lib/symfony/exception/data/error.html.php
+ErrorDocument 500 /home/saynt2day20/etapasvi.com/lib/symfony/exception/data/error.html.php
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
