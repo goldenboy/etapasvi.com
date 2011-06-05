@@ -56,9 +56,9 @@ Options +ExecCGI
   RewriteCond %{REQUEST_URI} ^/(en|ru|cs|hu|pl|fr|zh_CN|vi|es|it)$ [NC]
   RewriteRule ^ http://www.etapasvi.com%{REQUEST_URI}/ [L,R=301]
 
-  # stats
-  #RewriteCond %{REQUEST_URI} ^/(stats/|missing\.html|failed_auth\.html) [NC]
-  #RewriteRule . - [L]
+  # disable rewrite for 
+  RewriteCond %{REQUEST_URI} ^/(stats/|missing\.html|failed_auth\.html|php_backend|backup_download) [NC]
+  RewriteRule . - [L]
 
   # we check if the .html version is here (caching)
   #RewriteRule ^$ index.html [QSA]
