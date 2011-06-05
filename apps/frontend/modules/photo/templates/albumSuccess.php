@@ -22,5 +22,7 @@ $photo_list = $pager->getResults();
 
 <?php echo $navigation_html; ?>
 
+<?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photoalbum->getId())) ?> 
+
 <br />
 <?php include_component('comments', 'show'); ?>	
