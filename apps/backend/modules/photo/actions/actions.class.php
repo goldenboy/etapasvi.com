@@ -59,7 +59,7 @@ class photoActions extends autophotoActions
     }
 
     
-    if (isset($photo['created_at']) && !empty($photo['created_at']))
+    if (isset($photo['created_at']))
     {
       if ($photo['created_at'])
       {

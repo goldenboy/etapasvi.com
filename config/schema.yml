@@ -144,7 +144,7 @@ propel:
   photo:
     id:               ~
     photoalbum_id:    ~
-    created_at:       ~
+    created_at:       { type: timestamp }
     updated_at:       ~
     show:             { type: boolean, defaultValue: true }
     order:            { type: integer, required: true }

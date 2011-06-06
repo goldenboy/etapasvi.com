@@ -254,4 +254,30 @@ class Photo extends BasePhoto
 	public function getRssPubDate() {
 	  return max($this->getUpdatedAt(), $this->getUpdatedAtExtra());
 	}
+	
+	/**
+	 * Расширенный метод получения даты.
+	 * Если передан $derive_from_photoalbum = true, и у фото не установлена дата, дата берётся из фотоальбома.
+	 * Get the [optionally formatted] temporal [created_at] column value.
+	 * 
+	 *
+	 * @param      string $format The date/time format string (either date()-style or strftime()-style).
+	 *							If format is NULL, then the raw DateTime object will be returned.
+	 * @return     mixed Formatted date/time value as string or DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00
+	 * @throws     PropelException - if unable to parse/validate the date/time value.
+	 */
+	public function getCreatedAt($format = 'Y-m-d H:i:s', $derive_from_photoalbum = false)
+	{
+	    $created_at = parent::getCreatedAt($format);
+	    
+	    // если дата не уставнолена, берём из фотоальбома
+	    if ($derive_from_photoalbum && empty($created_at)) {
+	        $photoalbum = $this->getPhotoalbum();
+	        if ($photoalbum) {
+	            $created_at = $photoalbum->getCreatedAt();
+	        }
+	    }
+	    
+	    return $created_at;
+	}
 }

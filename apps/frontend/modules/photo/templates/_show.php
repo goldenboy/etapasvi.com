@@ -68,7 +68,7 @@
                 </p>
             <?php endif ?>	
             <p class="center_text small light">
-                <span class="date"><?php echo format_datetime( $photo->getCreatedAt(), 'd MMMM yyyy'); ?></span>             
+                <span class="date"><?php echo format_datetime( $photo->getCreatedAt('Y-m-d H:i:s', true), 'd MMMM yyyy'); ?></span>             
                 <?php 
                     $photoalbum = $photo->getPhotoalbum();
                     $author     = $photo->getAuthor($sf_user->getCulture(), true);
@@ -134,19 +134,30 @@
 	<table class="photo_list">
 		<tr>			
             <td>
-			<?php if ($prev_photo && $photo->getShow()): ?>
+			<?php if ($prev_photo && $prev_photo->getShow()): ?>
 				<img src="<?php echo $prev_photo->getPreviewUrl(); ?>" style="display:none;"/>
-
-				<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" class="photo_content_link"><img src="<?php echo $prev_photo->getThumbUrl(); ?>" alt="<?php echo __('Prev') ?>"/></a>				
+                <?php 
+                    $prev_title = $prev_photo->getTitle($sf_user->getCulture(), true);
+                    if (!$prev_title) {
+                        $prev_title = __('Prev');
+                    }
+                ?>
+				<a href="<?php echo $prev_url; ?>" title="<?php echo $prev_title ?>" class="photo_content_link"><img src="<?php echo $prev_photo->getThumbUrl(); ?>" alt="<?php echo $prev_title ?>"/></a>				
 			<?php endif ?>
             </td>
             <td>
 				<img src="<?php echo $photo->getThumbUrl(); ?>" class="current_photo"/>
             </td>
             <td>
-			<?php if ($next_photo && $photo->getShow()): ?>				
-				<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="photo_content_link">
-					<img src="<?php echo $next_photo->getThumbUrl(); ?>" alt="<?php echo __('Next') ?>"/></a>				
+			<?php if ($next_photo && $next_photo->getShow()): ?>	
+                <?php 
+                    $next_title = $next_photo->getTitle($sf_user->getCulture(), true);
+                    if (!$next_title) {
+                        $next_title = __('Next');
+                    }
+                ?>
+				<a href="<?php echo $next_url; ?>" title="<?php echo $next_title ?>" class="photo_content_link">
+					<img src="<?php echo $next_photo->getThumbUrl(); ?>" alt="<?php echo $next_title ?>"/></a>				
 				<img src="<?php echo $next_photo->getPreviewUrl(); ?>" style="display:none;"/>
 			<?php endif ?>
             </td>	
