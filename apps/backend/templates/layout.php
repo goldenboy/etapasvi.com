@@ -24,7 +24,7 @@
 		  <?php /*<li><?php echo link_to('Best Ideas', 'bestidea/index') ?></li>*/ ?>
 	
 	      <li><?php echo link_to('News', 'news/index') ?></li>	      
-	      <li><?php echo link_to('Photo', 'photo/index') ?></li>
+	      <li><?php echo link_to('Photo', 'photo/index?filters%5Bphotoalbum_id%5D=1&filters%5Bshow%5D=&filters%5Bimg%5D=&filter=filter') ?></li>
 	      <li><?php echo link_to('Photo Albums', 'photoalbum/index') ?></li>
 	      <li><?php echo link_to('Video', 'video/index') ?></li>
 	      <li><?php echo link_to('Item2item', 'item2item/index') ?></li>	      
