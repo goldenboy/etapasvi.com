@@ -22,12 +22,11 @@ ErrorDocument 500 /errors/500.html
 
   # Перезапись отключена для:
   # - запрошенный файл существует на диске
-  # - служебная директория
-  # в запросе есть "." - запрашивается файл
+  # - запрашиваемый файл находится в специальной директории
   #RewriteCond %{REQUEST_URI} ^/(stats/|missing\.html|failed_auth\.html|php_backend|backup_download) [OR] 
   RewriteCond %{REQUEST_FILENAME} -f [OR] 
-  RewriteCond %{REQUEST_URI} ^/(stats/|php_backend|backup_download) [OR] 
-  RewriteCond %{REQUEST_URI} ^.*\..*  
+  RewriteCond %{REQUEST_URI} ^/(css|errors|i|js|php_backend|sf_data_lsdfkr|swf|uploads|stats|backup_download)/
+  #RewriteCond %{REQUEST_URI} ^.*\..*  
   RewriteRule .* - [L]
 
   # uncomment the following line, if you are having trouble
