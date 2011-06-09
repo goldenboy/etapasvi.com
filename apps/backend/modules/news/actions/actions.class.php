@@ -663,6 +663,16 @@ class newsActions extends autonewsActions
    */
   public function executeCache($request)
   {
+    // обновление кэша
+    $this->refresh_processes = sfSuperCache::listRefreshProcesses();
+    
+    // запуск обновления кэша
+    if (!empty($_POST['refresh_cache'])) {
+    	
+      sfSuperCache::runRefreshCacheTask();      
+    }
+      
+    // очистка кэша
   	if (!empty($_POST['path'])) {
   	  if (!empty($_POST['al_cultures'])) {
   	    $all_cultures = true;
@@ -670,8 +680,9 @@ class newsActions extends autonewsActions
   	  	$all_cultures = false;
   	  }
 	  $this->clear_pathes = sfSuperCache::clearCacheByPath($_POST['path'], $all_cultures);		
-  	}
+  	}  	  	
   	
+  	// информация об объёме и кол-ве файлов
   	if (!empty($_POST['info'])) {
 	  $this->cache_info = sfSuperCache::getInfo();	
   	}

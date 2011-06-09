@@ -1,6 +1,6 @@
-#!www/cgi-bin/php-wrapper-s3r.fcgi
+#!/usr/local/php5/bin/php
 <?php
-// #!/usr/local/php5/bin/php
+// #!www/cgi-bin/php-wrapper-s3r.fcgi
 
 /*
  * This file is part of the symfony package.

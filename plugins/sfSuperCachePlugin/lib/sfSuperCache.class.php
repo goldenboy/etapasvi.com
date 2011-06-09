@@ -18,6 +18,11 @@
  */
 class sfSuperCache
 {
+    
+  // расширение файла кэша    
+  const CACHE_FILE_EXT = 'i.html';    
+  
+    
   /**
    * Clears the super cache by listening to the task.cache.clear event.
    *
@@ -89,17 +94,63 @@ class sfSuperCache
 	
 	foreach ($culture_list as $culture ) { 		
 		$path_translated = str_replace('sf_culture', $culture, $full_path);
- 			
+ 					
 		if (substr($path_translated, strlen($path_translated)-1, 1) == '*') {
-			system('rm -rf ' . $path_translated);  			
+			// удаляем по маске
+			self::removeCacheFile( $path_translated );
 			$result[] = $path_translated;			
 		} else {  				
-			system('rm -f ' . $path_translated . 'i.html');
-			//system('rm -f ' . $path_translated . 'i.js');  	
-			$result[] = $path_translated . 'i.html';		
+			// удаляем отдельный файл
+			self::removeCacheFile( $path_translated . self::CACHE_FILE_EXT );
+			$result[] = $path_translated . self::CACHE_FILE_EXT;		
 		}		
 	}
 	return $result;
+  }
+  
+  /**
+   * Удаление файла кэша. Поддерживает маски
+   *
+   * @param unknown_type $file_path
+   * @return unknown
+   */
+  public static function removeCacheFile($file_path)
+  {
+  	if (!$file_path) {  		
+  	  return false;
+  	}
+  	system('rm -rf ' . $file_path); 
+  	return true;
+  }
+  
+  /**
+   * Кэширование страницы
+   *
+   * @param unknown_type $url
+   * @return unknown
+   */
+  public static function cacheUrl($url)
+  {
+    if (!$url) {
+    	return false;
+    }
+  	
+	$ch = curl_init();
+	
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_HEADER, false);
+	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
+	// не получаем тело ответа
+	//curl_setopt($ch, CURLOPT_NOBODY, true);	
+	
+	curl_exec($ch);
+	
+	curl_close($ch);
+	
+	return true;
   }
   
   /**
@@ -135,5 +186,103 @@ class sfSuperCache
 	  'size'  => $size,
 	  'files' => $files
   	);
+  }
+  
+  /**
+   * Получение адреса страницы для файла кэша
+   *
+   * @param string $file_path путь к файлу на диске
+   * @return string адрес страницы
+   */
+  public static function fileToUrl($file_path)
+  {
+    $cacheDir = self::getCacheDir();
+    if (!strstr($file_path, $cacheDir)) {
+      return '';
+    }
+    return UserPeer::SITE_PROTOCOL . '://' . UserPeer::SITE_ADDRESS . str_replace(self::CACHE_FILE_EXT, '', str_replace($cacheDir, '', $file_path));
+  } 
+   
+  
+  /**
+   * Обновление кэша: удаление файлов кэша и открытие страниц сайта, чтобы создался новый файл
+   * @todo сделать защёлку
+   *
+   * @return unknown
+   */
+  public static function refreshCache()
+  {
+  	
+  	$result = array(
+  	  'files' => 0
+  	);  	
+  	
+  	$cacheDir = self::getCacheDir();
+  	if (!$cacheDir) {
+  	    return $result;
+  	}
+  	
+  	// получение списка файлов кэша
+  	ob_clean();
+  	ob_start();
+  	$command = 'find ' . $cacheDir . '  -type f -name "*' . self::CACHE_FILE_EXT . '"';
+  	system($command);  	  	
+  	$file_list_str = ob_get_contents();
+  	ob_clean();
+
+  	$file_list = explode("\n", $file_list_str);  	
+  	
+  	// удаление и создание кэша страниц
+  	foreach ($file_list as $file_path) {
+
+  	  // проверка расширения файла
+  	  $remove_result = self::removeCacheFile($file_path);
+  	  
+  	  if ($remove_result) {
+	  	  // кэширование страницы
+	  	  $cache_result = self::cacheUrl( self::fileToUrl($file_path) );
+	  	  if ($cache_result) {
+	  	  	$result['files']++;
+	  	  }
+  	  }
+    }
+  	 	
+	return $result;
+  }
+  
+  /**
+   * Запуск задачи на обновления кэша в фоне
+   *
+   */
+  public static function runRefreshCacheTask()
+  {
+      ob_start();
+      system( self::getRefreshCacheTaskCommand() );
+      ob_clean();
+  }
+  
+  /**
+   * Получение команды на запуск обновления кэша
+   *
+   * @return unknown
+   */
+  public static function getRefreshCacheTaskCommand()
+  {
+  	return 'cd ' . sfConfig::get('sf_root_dir') . ' && ./symfony project:refreshcache > /dev/null &';
+  }
+  
+  public static function listRefreshProcesses()
+  {
+    $process_list = array();
+    
+  	ob_clean();
+  	ob_start();
+  	exec('ps aux | grep ' . self::getRefreshCacheTaskCommand());
+  	$process_list_str = ob_get_contents();
+  	ob_clean();
+  	
+    $process_list = explode("\r\n", $process_list_str);    
+  	
+	return $process_list;
   }
 }

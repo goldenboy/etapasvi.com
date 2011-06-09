@@ -1,5 +1,18 @@
 
 <h1>cache</h1>
+
+<?php if (!empty($refresh_processes)): ?>
+<?php foreach($refresh_processes as $param=>$value): ?>
+    <?php echo $param; ?>: <?php echo $value; ?><br/>
+<?php endforeach; ?>
+<?php endif ?>
+
+<form action="" method="post" >  
+	<input type="submit" value="Refresh" name="refresh_cache" />
+</form>
+<hr/>
+<br/>
+
 <form action="" method="post" >
     Path: <input type="text" name="path" value="<?php if (!empty($_POST['path'])): echo $_POST['path']; endif; ?>" size="100"/>    
 	<br/>
@@ -12,7 +25,11 @@
     <?php echo $path; ?><br/>
 <?php endforeach; ?>
 <?php endif ?>
+
 <br/>
+<hr/>
+<br/>
+
 <form action="" method="post" >  
 	<input type="submit" value="Info" name="info" />
 </form>
