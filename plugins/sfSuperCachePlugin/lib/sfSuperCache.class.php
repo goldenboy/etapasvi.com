@@ -119,7 +119,7 @@ class sfSuperCache
   	if (!$file_path) {  		
   	  return false;
   	}
-  	system('rm -rf ' . $file_path); 
+  	shell_exec('rm -rf ' . $file_path); 
   	return true;
   }
   
@@ -175,13 +175,13 @@ class sfSuperCache
   	// объём кэша на диске
   	// [vaduz]$ du -ch /home/saynt2day20/etapasvi.com/www/cache | grep total
 	// 20M     total
-  	$size = system('du -ch ' . $cacheDir . ' | grep total');
+  	$size = shell_exec('du -ch ' . $cacheDir . ' | grep total');
   	
   	// количество файлов (минус .htaccess)
 	// [vaduz]$ find /home/saynt2day20/etapasvi.com/www/cache -type f | wc -l
 	// 15
-  	$files = system('find ' . $cacheDir . '  -type f | wc -l') - 1;
-  	ob_clean();
+  	$files = shell_exec('find ' . $cacheDir . '  -type f | wc -l') - 1;
+
   	return array(
 	  'size'  => $size,
 	  'files' => $files
@@ -223,12 +223,8 @@ class sfSuperCache
   	}
   	
   	// получение списка файлов кэша
-  	ob_clean();
-  	ob_start();
   	$command = 'find ' . $cacheDir . '  -type f -name "*' . self::CACHE_FILE_EXT . '"';
-  	system($command);  	  	
-  	$file_list_str = ob_get_contents();
-  	ob_clean();
+  	$file_list_str = shell_exec($command);  	  	
 
   	$file_list = explode("\n", $file_list_str);  	
   	
@@ -256,9 +252,10 @@ class sfSuperCache
    */
   public static function runRefreshCacheTask()
   {
-      ob_start();
-      system( self::getRefreshCacheTaskCommand() );
-      ob_clean();
+  	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' . self::getRefreshCacheTaskCommand() . ' > /dev/null 2>&1 &';
+    //shell_exec( );
+    pclose(popen($command, "r"));
+
   }
   
   /**
@@ -268,20 +265,35 @@ class sfSuperCache
    */
   public static function getRefreshCacheTaskCommand()
   {
-  	return 'cd ' . sfConfig::get('sf_root_dir') . ' && ./symfony project:refreshcache > /dev/null &';
+  	return './symfony project:refreshcache';
   }
   
+  /**
+   * Получение списка процессов, обновляющих кэш
+   *
+   * @return unknown
+   */
   public static function listRefreshProcesses()
   {
     $process_list = array();
+    // команда для поиска команды, обновляющей кэш  
+    $grep_command = 'grep "' . self::getRefreshCacheTaskCommand() . '"';
     
-  	ob_clean();
-  	ob_start();
-  	exec('ps aux | grep ' . self::getRefreshCacheTaskCommand());
-  	$process_list_str = ob_get_contents();
-  	ob_clean();
+  	//ob_clean();
+  	//ob_start();
   	
-    $process_list = explode("\r\n", $process_list_str);    
+  	$process_list_str = shell_exec('ps aux | ' . $grep_command);
+  	//ob_clean();
+  	
+    $process_list = explode("\n", $process_list_str);    
+    
+    // убираем из списка процессов ищущий процесс
+  	foreach ($process_list as $k=>$v) {
+	  if ( (strstr($v, self::getRefreshCacheTaskCommand()) && strstr($v, 'sh -c') || strstr($v, 'grep')) 
+	  		|| !$v) {
+		unset($process_list[$k]);
+	  }
+  	}
   	
 	return $process_list;
   }

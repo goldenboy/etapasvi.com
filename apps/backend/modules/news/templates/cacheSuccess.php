@@ -3,7 +3,7 @@
 
 <?php if (!empty($refresh_processes)): ?>
 <?php foreach($refresh_processes as $param=>$value): ?>
-    <?php echo $param; ?>: <?php echo $value; ?><br/>
+    <?php echo $value; ?><br/>
 <?php endforeach; ?>
 <?php endif ?>
 

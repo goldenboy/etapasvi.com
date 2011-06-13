@@ -662,15 +662,15 @@ class newsActions extends autonewsActions
    * @param unknown_type $request
    */
   public function executeCache($request)
-  {
-    // обновление кэша
-    $this->refresh_processes = sfSuperCache::listRefreshProcesses();
-    
+  {    
     // запуск обновления кэша
     if (!empty($_POST['refresh_cache'])) {
     	
       sfSuperCache::runRefreshCacheTask();      
     }
+    
+    // информация о процессах, обновляющих кэш
+    $this->refresh_processes = sfSuperCache::listRefreshProcesses();
       
     // очистка кэша
   	if (!empty($_POST['path'])) {
