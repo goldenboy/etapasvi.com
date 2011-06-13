@@ -252,10 +252,27 @@ class sfSuperCache
    */
   public static function runRefreshCacheTask()
   {
+  	// если уже идёт обновление кэша, выходим
+  	if (count(self::listRefreshProcesses())) {
+  	  return;
+  	}
+  	
   	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' . self::getRefreshCacheTaskCommand() . ' > /dev/null 2>&1 &';
-    //shell_exec( );
     pclose(popen($command, "r"));
-
+  }
+  
+  /**
+   * Остановка задачи, обновляющей кэш в фоне
+   *
+   * @param int $pid PID процесса
+   */
+  public static function stopRefershCacheTask($pid)
+  {
+  	if (!$pid) {
+  	  return;
+  	}
+  	$command = 'kill -s 9 ' . $pid;
+    pclose(popen($command, "r"));
   }
   
   /**
@@ -297,4 +314,6 @@ class sfSuperCache
   	
 	return $process_list;
   }
+  
+  
 }

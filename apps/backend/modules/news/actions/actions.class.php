@@ -664,8 +664,12 @@ class newsActions extends autonewsActions
   public function executeCache($request)
   {    
     // запуск обновления кэша
+    if (!empty($_POST['kill']) && !empty($_POST['pid'])) {    	
+      sfSuperCache::stopRefershCacheTask($_POST['pid']);      
+    }
+    
+    // запуск обновления кэша
     if (!empty($_POST['refresh_cache'])) {
-    	
       sfSuperCache::runRefreshCacheTask();      
     }
     

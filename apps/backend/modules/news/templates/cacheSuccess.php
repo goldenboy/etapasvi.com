@@ -1,10 +1,13 @@
-
 <h1>cache</h1>
 
 <?php if (!empty($refresh_processes)): ?>
+<form action="" method="post" >
 <?php foreach($refresh_processes as $param=>$value): ?>
-    <?php echo $value; ?><br/>
+    <?php $process_info = explode(" ", $value); ?>
+    <input type="submit" value="Kill" name="kill">
+    <input type="hidden" value="<?php echo $process_info[2]; ?>" name="pid"> <?php echo $value; ?><br/>
 <?php endforeach; ?>
+</form>
 <?php endif ?>
 
 <form action="" method="post" >  
