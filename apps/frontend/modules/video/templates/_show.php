@@ -20,6 +20,9 @@
                     <?php echo html_entity_decode( $video->getTitlePrepared($title) ); ?>...
                 </a>				
             </p>
+            <p class="date left_text p1_no_both">
+                <?php echo format_date( $video->getCreatedAt(), 'd MMMM yyyy' ); ?>
+            </p>
             <?php endif ?>	
 		<?php else: ?>		
 			<h1 class="title">

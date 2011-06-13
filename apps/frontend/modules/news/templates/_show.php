@@ -4,7 +4,7 @@
     <h1 class="title">
         <?php echo $newsitem->getTitle(); ?><?php /*if ($newsitem->isTypeTeachings()): ?>[<?php echo __('teaching') ?>]<?php endif */?>
     </h1>
-    <p class="date p1_no_top">
+    <p class="date p1_no_top center_text">
         <?php if ($newsitem->getExtradate()): ?>
             <?php echo $newsitem->getExtradate(); ?>
         <?php else: ?>

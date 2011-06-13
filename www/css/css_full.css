@@ -1182,8 +1182,7 @@ img.newsitem_img {
 	/*color:#555753;*/
 	color:#988F5E;
 	}
-.newsfull .title,
-.newsfull .date {
+.newsfull .title {
 	text-align: center;
 	}
 .newsfull img.news_img {
