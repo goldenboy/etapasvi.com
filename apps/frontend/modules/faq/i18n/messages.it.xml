@@ -38,11 +38,23 @@
         <source>How can I receive blessing from Dharma Sangha?</source>
         <target>Come posso avere una benedizione di Dharma Sangha?</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>How to reach Ratanpuri and Terthup?</source>
+        <target></target>
+      </trans-unit>
             
+<!--
+      <trans-unit id="1">
+        <source>I am going to Halkoriya Jungle. I would like to bring some gifts, what is the best choice?</source>
+        <target></target>
+      </trans-unit>
+      
       <trans-unit id="1">
         <source>How can I get to Halkoriya Jungle?</source>
         <target></target>
       </trans-unit>
+-->
 
 <!--answers-->
 
@@ -76,6 +88,7 @@
         <target>Vai a</target>
       </trans-unit>
 
+<!--      
  <trans-unit id="1">
         <source>Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. If you still wish to contribute somehow, below is a list of small practical things, which are needed regularly in the jungle, and are of great value here. So if you really want to take something from your country or buy it in Kathmandu before you come, you can make things smooth at the site by bringing the following:</source>
         <target></target>
@@ -145,7 +158,7 @@
         <source>The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.</source>
         <target></target>
       </trans-unit>
-      
+-->      
     </body>
   </file>
 </xliff>

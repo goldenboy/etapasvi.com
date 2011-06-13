@@ -38,7 +38,13 @@
         <source>How can I receive blessing from Dharma Sangha?</source>
         <target>Jak mogę doświadczyć błogosławieństwa Dharma Sanghi?</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>How to reach Ratanpuri and Terthup?</source>
+        <target></target>
+      </trans-unit>
 
+<!--      
       <trans-unit id="1">
         <source>I am going to Halkoriya Jungle. I would like to bring some gifts, what is the best choice?</source>
         <target>Wybieram się do Dżungli Halkoriya. Chciał/a/bym ofiarować jakieś podarki, co jest najlepszym wyborem?</target>
@@ -48,6 +54,7 @@
         <source>How can I get to Halkoriya Jungle?</source>
         <target></target>
       </trans-unit>
+-->
 
 <!--answers-->
 
@@ -81,6 +88,7 @@
         <target>Skonsultuj, proszę sekcję</target>
       </trans-unit>
       
+<!--
       <trans-unit id="1">
         <source>Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. If you still wish to contribute somehow, below is a list of small practical things, which are needed regularly in the jungle, and are of great value here. So if you really want to take something from your country or buy it in Kathmandu before you come, you can make things smooth at the site by bringing the following:</source>
         <target>Niepraktyczne podarki nie są doprawdy dobre do wzięcia (zdjęcia, wazy itp). Dharma Sangha nie akceptuje prezentów. Jeśli nadal pragniesz się w jakiś sposób dołożyć, poniżej znajduje się lista małych praktycznych przedmiotów, na które jest regularnie zapotrzebowanie w dżungli, i są tutaj wielce cenione. Więc jeśli naprawdę chcesz wziąść coś ze swego kraju lub kupić to w Katmandu przed przybyciem na miejsce, możesz usprawnić tutejsze sprawy biorąc takie oto artykuły:</target>
@@ -150,6 +158,7 @@
         <source>The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.</source>
         <target></target>
       </trans-unit>
+-->
 
 <!-- утф -->
     </body>

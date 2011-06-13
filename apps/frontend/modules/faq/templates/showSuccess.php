@@ -11,8 +11,9 @@
 	<li><a href="#buddha"><?php echo __('Has he already become a Buddha?') ?></a></li>
 	<li><a href="#teaching"><?php echo __('Is his teaching based on Buddhism or any other religions like Hinduism?') ?></a></li>
 	<li><a href="#blessing"><?php echo __('How can I receive blessing from Dharma Sangha?') ?></a></li>
-	<li><a href="#gifts"><?php echo __('I am going to Halkoriya Jungle. I would like to bring some gifts, what is the best choice?') ?></a></li>
-	<li><a href="#get_to_halkoriya"><?php echo __('How can I get to Halkoriya Jungle?') ?></a></li>
+	<?php /*<li><a href="#gifts"><?php echo __('I am going to Halkoriya Jungle. I would like to bring some gifts, what is the best choice?') ?></a></li>
+	<li><a href="#get_to_halkoriya"><?php echo __('How can I get to Halkoriya Jungle?') ?></a></li> */ ?>
+	<li><a href="#ratanpuri_and_terthup"><?php echo __('How to reach Ratanpuri and Terthup?') ?></a></li>
 </ol>
 
 <?php /*
@@ -50,6 +51,7 @@
 <?php echo __('Please go to') ?> "<a href="<?php echo url_for('@blessing'); ?>"><?php echo __('Blessing') ?></a>".
 </p>
 
+<?php /*
 <h2 id="gifts"><?php echo ++$counter; ?>. <?php echo __('I am going to Halkoriya Jungle. I would like to bring some gifts, what is the best choice?') ?></h2>
 <p>
 <?php echo __('Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. If you still wish to contribute somehow, below is a list of small practical things, which are needed regularly in the jungle, and are of great value here. So if you really want to take something from your country or buy it in Kathmandu before you come, you can make things smooth at the site by bringing the following:') ?>
@@ -73,9 +75,15 @@
 <p>
 <?php echo __('The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.') ?>
 </p>
+*/ ?>
+
+<h2 id="ratanpuri_and_terthup"><?php echo ++$counter; ?>. <?php echo __('How to reach Ratanpuri and Terthup?') ?></h2>
+<p class="center_text">
+<a href="/uploads/all/how_to_reach_ratanpuri_and_therthup.jpg" target="_blank" title="<?php echo __('Download') ?>"><img src="/uploads/all/how_to_reach_ratanpuri_and_therthup.jpg" alt="<?php echo __('How to reach Ratanpuri and Terthup?') ?>" width="565"/></a>
+</p>
 
 <br/>
-<?php include_component('comments', 'show'); ?>	
+<?php include_component('comments', 'show'); ?>
 
 <p class="right_text">
 	<a href="#up"><?php echo __('Go to top') ?></a>
