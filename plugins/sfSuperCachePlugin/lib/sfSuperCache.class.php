@@ -111,7 +111,7 @@ class sfSuperCache
 			$result[] = $path_translated;			
 		} else {  				
 			// удаляем отдельный файл
-			self::removeCacheFile( $path_translated . self::CACHE_FILE_EXT );
+ 			self::removeCacheFile( $path_translated . self::CACHE_FILE_EXT );
 			$result[] = $path_translated . self::CACHE_FILE_EXT;		
 		}		
 	}
@@ -136,31 +136,45 @@ class sfSuperCache
   /**
    * Кэширование страницы
    *
-   * @param unknown_type $url
-   * @return unknown
+   * @param string $url адрес страницы
+   * @param bool $console выполнять обращение не через браузер, а через консоль
+   * @return bool результат обновления кэша
    */
-  public static function cacheUrl($url)
+  public static function cacheUrl($url, $console = false)
   {
     if (!$url) {
     	return false;
+    }  	
+    
+    if ($console) {
+      // обращение через консоль
+      // баг - в переключателе языка http://www.etapasvi.com/ru/frontfrontend.php/
+      $path_info = parse_url($url);
+      $html = shell_exec('php /home/saynt2day20/etapasvi.com/www/frontfrontend.php ' . $path_info['path']);
+    } else {
+      // обращение через браузер
+      $ch = curl_init();
+
+      curl_setopt($ch, CURLOPT_URL, $url);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt($ch, CURLOPT_HEADER, false);
+      curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+      curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
+      // не получаем тело ответа
+      // не сработало
+      //curl_setopt($ch, CURLOPT_NOBODY, true);	
+
+      $html = curl_exec($ch);
+
+      curl_close($ch);      
     }
-  	
-	$ch = curl_init();
 	
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($ch, CURLOPT_HEADER, false);
-	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-	curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
-	// не получаем тело ответа
-	//curl_setopt($ch, CURLOPT_NOBODY, true);	
-	
-	curl_exec($ch);
-	
-	curl_close($ch);
-	
-	return true;
+    if ($html) {
+  	  return true;
+    } else {
+  	  return false;
+    }
   }
   
   /**
@@ -204,13 +218,17 @@ class sfSuperCache
    * @param string $file_path путь к файлу на диске
    * @return string адрес страницы
    */
-  public static function fileToUrl($file_path)
+  public static function fileToUrl($file_path, $relative = false)
   {
     $cacheDir = self::getCacheDir();
     if (!strstr($file_path, $cacheDir)) {
       return '';
     }
-    return UserPeer::SITE_PROTOCOL . '://' . UserPeer::SITE_ADDRESS . str_replace(self::CACHE_FILE_EXT, '', str_replace($cacheDir, '', $file_path));
+    $url = str_replace(self::CACHE_FILE_EXT, '', str_replace($cacheDir, '', $file_path));
+    if (!$relative) {
+    	$url = UserPeer::SITE_PROTOCOL . '://' . UserPeer::SITE_ADDRESS . $url;
+    }
+    return $url;
   } 
    
   
@@ -243,7 +261,11 @@ class sfSuperCache
   	  pcntl_signal(SIGCHLD, array(__CLASS__, "refreshCacheChildSignalHandler"));
   	}
   	
-  	// удаление и создание кэша страниц
+  	// лог
+  	$log_name = self::refreshCacheGetLogPath();
+  	$log_handle = fopen($log_name, "w+");
+  	
+  	// удаление и создание кэша страниц  	  	
   	foreach ($file_list as $file_path) {
 
   	  if ($multi_process) {
@@ -285,9 +307,10 @@ class sfSuperCache
     	  $result['files']++;
       	}
   	  }
-      //$log = file_get_contents('/home/saynt2day20/tmp/refresh_cache.txt');
-      //file_put_contents('/home/saynt2day20/tmp/refresh_cache.txt', $log . "\r\n" . $file_path );
+  	  // пишем в лог
+      fputs($log_handle, $file_path . "\r\n");
     }
+    fclose($log_handle);
     
     // в многопоточном режиме ожидаем, пока все процессы закончат свою работу
     if ($multi_process) {
@@ -312,7 +335,7 @@ class sfSuperCache
 
     if ($remove_result) {
       // кэширование страницы
-      $cache_result = self::cacheUrl( self::fileToUrl($file_path) );
+      $cache_result = self::cacheUrl( self::fileToUrl($file_path), false );
       if ($cache_result) {
   	    return true;
       }
@@ -418,13 +441,44 @@ class sfSuperCache
     
     // убираем из списка процессов ищущий процесс
   	foreach ($process_list as $k=>$v) {
-	  if ( (strstr($v, self::getRefreshCacheTaskCommand()) && strstr($v, 'sh -c') || strstr($v, 'grep')) 
-	  		|| !$v) {
+	  if ( (strstr($v, self::getRefreshCacheTaskCommand()) && strstr($v, 'sh -c') || strstr($v, 'grep')) || !$v) {
 		unset($process_list[$k]);
-	  }
+		continue;
+	  }	  
+
+      $process_info = explode(" ", $v);
+      if ($process_info[1]) {
+        $pid = $process_info[1];
+      } else {
+        $pid = $process_info[2];
+      }	
+      
+      $process_list[ $k ] = array();
+      
+      // PID
+      $process_list[ $k ][ 'pid' ] = $pid;
+      // Done
+      $process_list[ $k ][ 'done' ] = count(@file(self::refreshCacheGetLogPath($pid)));
   	}
   	
 	return $process_list;
+  }
+  
+  /**
+   * Получение пути к логу обновления кэша.
+   * Формат:
+   * /tmp/refresh_cache_PID.log,
+   * где PID - ID процесса
+   *
+   * @param unknown_type $pid
+   * @return unknown
+   */
+  public static function refreshCacheGetLogPath($pid = '')
+  {
+  	if (!$pid) {
+  	  $pid = getmypid();
+  	}
+  	return dirname( tempnam("dummy","") ) . '/refresh_cache_' . $pid . '.log';
   }
   
   

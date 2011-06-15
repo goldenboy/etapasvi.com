@@ -1,18 +1,28 @@
 <h1>cache</h1>
 
-<?php if (!empty($refresh_processes)): ?>
+<?php if (count($refresh_processes)): ?>
 <form action="" method="post" >
+<table>
+    <tr>
+        <th>Action</th>
+        <th>PID</th>
+        <th>Done</th>
+    </tr>
 <?php foreach($refresh_processes as $param=>$value): ?>
-    <?php $process_info = explode(" ", $value);
-        if ($process_info[1]) {
-            $pid = $process_info[1];
-        } else {
-            $pid = $process_info[2];
-        }
-    ?>
-    <input type="submit" value="Kill" name="kill">
-    <input type="hidden" value="<?php echo $pid; ?>" name="pid"> <?php echo $value; ?><br/>
+    <tr>
+        <td>
+            <input type="submit" value="Kill" name="kill">
+            <input type="hidden" value="<?php echo $value['pid']; ?>" name="pid"> 
+        </td>
+        <td>
+            <?php echo $value['pid']; ?>
+        </td>
+        <td>
+            <?php echo $value['done']; ?>
+        </td>
+    </tr>
 <?php endforeach; ?>
+</table>
 </form>
 <?php endif ?>
 
