@@ -32,7 +32,7 @@ EOF;
 
   protected function execute($arguments = array(), $options = array())
   {
-    $result = sfSuperCache::refreshCache();		
+    $result = sfSuperCache::refreshCache(false);		
     print_r( $result );
   }
   

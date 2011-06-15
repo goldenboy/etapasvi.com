@@ -3,9 +3,15 @@
 <?php if (!empty($refresh_processes)): ?>
 <form action="" method="post" >
 <?php foreach($refresh_processes as $param=>$value): ?>
-    <?php $process_info = explode(" ", $value); ?>
+    <?php $process_info = explode(" ", $value);
+        if ($process_info[1]) {
+            $pid = $process_info[1];
+        } else {
+            $pid = $process_info[2];
+        }
+    ?>
     <input type="submit" value="Kill" name="kill">
-    <input type="hidden" value="<?php echo $process_info[2]; ?>" name="pid"> <?php echo $value; ?><br/>
+    <input type="hidden" value="<?php echo $pid; ?>" name="pid"> <?php echo $value; ?><br/>
 <?php endforeach; ?>
 </form>
 <?php endif ?>

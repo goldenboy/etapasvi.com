@@ -8,6 +8,9 @@
  * file that was distributed with this source code.
  */
 
+// без этого не вызывается refreshCacheChildSignalHandler
+declare(ticks=1);
+
 /**
  * sfSuperCache base class.
  *
@@ -21,6 +24,13 @@ class sfSuperCache
     
   // расширение файла кэша    
   const CACHE_FILE_EXT = 'i.html';    
+  
+  // переменные, используемые при обновлении кэша в многопоточном режиме
+  
+  // список процессов 
+  private static $refersh_cache_process_list = array();
+  // очередь сигналов
+  private static $refersh_cache_queue        = array();
   
     
   /**
@@ -210,11 +220,12 @@ class sfSuperCache
    *
    * @return unknown
    */
-  public static function refreshCache()
-  {
-  	
+  public static function refreshCache($multi_process = false, $threads_count = 15)
+  {  	
   	$result = array(
-  	  'files' => 0
+  	  // в многопоточном режиме не подсчитывается
+  	  'files' => 0,
+  	  'error' => ''
   	);  	
   	
   	$cacheDir = self::getCacheDir();
@@ -228,22 +239,123 @@ class sfSuperCache
 
   	$file_list = explode("\n", $file_list_str);  	
   	
+  	if ($multi_process) {
+  	  pcntl_signal(SIGCHLD, array(__CLASS__, "refreshCacheChildSignalHandler"));
+  	}
+  	
   	// удаление и создание кэша страниц
   	foreach ($file_list as $file_path) {
 
-  	  // проверка расширения файла
-  	  $remove_result = self::removeCacheFile($file_path);
-  	  
-  	  if ($remove_result) {
-	  	  // кэширование страницы
-	  	  $cache_result = self::cacheUrl( self::fileToUrl($file_path) );
-	  	  if ($cache_result) {
-	  	  	$result['files']++;
-	  	  }
+  	  if ($multi_process) {
+        // ожидание, пока количество процессов уменьшится и можно будет создать новый
+        while(count(self::$refersh_cache_process_list) >= $threads_count){    
+          sleep(1);
+        }
+
+        $pid = pcntl_fork();
+        // генерация ID задачи
+        $job_id = rand(2000, 10000000000000);
+                
+        if ($pid == -1) {
+          // Ошибка при запуске процесса   
+          $result['error'] = 'Ошибка при запуске процесса';
+          return $result;
+        } else if ($pid){
+          // Родительский процесс
+          // добавляем процесс в список
+          self::$refersh_cache_process_list[$pid] = $job_id;
+        
+          // In the event that a signal for this pid was caught before we get here, it will be in our signalQueue array
+          // So let's go ahead and process it now as if we'd just received the signal
+          if (isset(self::$refersh_cache_queue[$pid])){
+            self::refreshCacheChildSignalHandler(SIGCHLD, $pid, self::$refersh_cache_queue[$pid]);
+            unset(self::$refersh_cache_queue[$pid]);
+          }
+        } else {
+          $exitStatus = 0;
+          // кэширование файла кэша
+          $refresh_result = self::refreshCacheFile($file_path);
+          exit($exitStatus);
+        }
+  	  } else {
+  	    
+        // кэширование файла кэша
+      	$refresh_result = self::refreshCacheFile($file_path);      	  
+      	if ($refresh_result) {
+    	  $result['files']++;
+      	}
   	  }
+      //$log = file_get_contents('/home/saynt2day20/tmp/refresh_cache.txt');
+      //file_put_contents('/home/saynt2day20/tmp/refresh_cache.txt', $log . "\r\n" . $file_path );
+    }
+    
+    // в многопоточном режиме ожидаем, пока все процессы закончат свою работу
+    if ($multi_process) {
+      while(count(self::refersh_cache_list)){
+        sleep(1);
+      }
     }
   	 	
 	return $result;
+  }
+  
+  /**
+   * Кэширование файла кэша
+   *
+   * @param string $file_path локальный путь к файлу
+   * @return bool результат обновления файла кэша
+   */
+  public static function refreshCacheFile($file_path)
+  {
+    // удаление файла кэша
+    $remove_result = self::removeCacheFile($file_path);
+
+    if ($remove_result) {
+      // кэширование страницы
+      $cache_result = self::cacheUrl( self::fileToUrl($file_path) );
+      if ($cache_result) {
+  	    return true;
+      }
+    }
+    return false;
+  }
+  
+  /**
+   * Обработка сигналов дочерним поцессом обновления кэша
+   *
+   * @param unknown_type $signo
+   * @param unknown_type $pid
+   * @param unknown_type $status
+   * @return unknown
+   */
+  public static function refreshCacheChildSignalHandler($signo, $pid = null, $status = null)
+  {      
+    // If no pid is provided, that means we're getting the signal from the system.  Let's figure out
+    // which child process ended
+    if (!$pid){
+      $pid = pcntl_waitpid(-1, $status, WNOHANG);
+    }
+    
+    //$log = file_get_contents('/home/saynt2day20/tmp/refresh_cache_signals.txt');
+    //file_put_contents('/home/saynt2day20/tmp/refresh_cache_signals.txt', $log . "\r\nsigno=" . $signo . ', pid=' . $pid . ', status=' . $status );
+
+    // Make sure we get all of the exited children
+    while ($pid > 0) {
+      if ($pid && isset(self::$refersh_cache_process_list[$pid])) {
+        $exitCode = pcntl_wexitstatus($status);
+        if ($exitCode != 0){
+          //echo "$pid exited with status ".$exitCode."\n";
+        }
+        unset(self::$refersh_cache_process_list[$pid]);
+      } elseif ($pid) {
+        // Oh no, our job has finished before this parent process could even note that it had been launched!
+        // Let's make note of it and handle it when the parent process is ready for it
+        //echo "..... Adding $pid to the signal queue ..... \n";
+        self::$refersh_cache_queue[$pid] = $status;
+      }
+      $pid = pcntl_waitpid(-1, $status, WNOHANG);
+    }
+    return true;
   }
   
   /**
