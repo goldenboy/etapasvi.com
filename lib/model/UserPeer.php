@@ -214,6 +214,12 @@ class UserPeer extends BaseUserPeer
 		return self::$cultures[ $culture ][ 'comments_category_id' ];
 	}
 	
+	/**
+	 * Получение языка интерфейса FeedBurner для языка
+	 *
+	 * @param unknown_type $culture
+	 * @return unknown
+	 */
 	public static function getCultureFeedburderLoc( $culture = '' )
 	{
 		if (!$culture) {
@@ -245,265 +251,265 @@ class UserPeer extends BaseUserPeer
 	}
 		
 	
-	/**
-	 * Проверка и авторизация пользователя
-	 * Не делаем static, чтобы можно было устанавливать куки
-	 */
-	public function authLogin( $name, $password, $remember_me = false ) {
-  		
-  		$c = new Criteria();
-  		
-  		$c->add( UserPeer::NAME, trim($name) );
-  		$c->add( UserPeer::PASSWORD, sha1(md5(trim($password))) );
-  		$c->add( UserPeer::IS_ACTIVE, 1 );
-  		$user_records = UserPeer::doSelect($c);
-  		
-  		if ( count($user_records) == 1 ) {
-  			// успешный вход
-  			$user = $user_records[0];
-  			self::authCacheUser( $user );  			
-  		
-  			if ($remember_me) {
-  				self::authSetCookies();
-  			}
-  			// запоминаем время входа
-  			$user->saveLastLogin();
-  			// вход в PHPBB
-  			//$user->phpbbLogin();
-  			return true;
-  		} else {
-  			self::authUnsetCookies();	  			
-  			return false;  			
-  		}  	
-	}
-	
-	/**
-	 * Сохранение пользователя
-	 *
-	 * @param unknown_type $user
-	 */
-	public function authCacheUser( $user ) {		
-		unset($_SESSION['user_cached']);			
-  		$_SESSION['user_cached'] = $user;
-	}
-	
-	/**
-	 * Авторизуем пользователя
-	 */
-	public function authForcedLogin( $user, $remember_me ) {		
-  		if ( $user->getId() ) {  			  			
-  			self::authCacheUser( $user ); 
-  			if ($remember_me) {
-  				self::authSetCookies();
-  			}
-  			// запоминаем время входа
-  			//$user = UserPeer::retrieveByPk( $user_id );
-  			//if ($user) {
-  			$user->saveLastLogin();
-  			// вход в PHPBB
-  			//$user->phpbbLogin();
-  			//}
-  		}
-	}	
-	
-	/**
-	 * Проверка, авторизован ли пользователь
-	 *
-	 * @return unknown
-	 */
-	public static function authIsLoggedIn() {
-  		// проверка Remember me
-  		if ( ( !self::authUserId() ) 
-  		     && isset($_COOKIE[self::REMEMBER_ME_COOKIE]) && $_COOKIE[self::REMEMBER_ME_COOKIE] != '') 
-  		{
-	  		$c = new Criteria();
-	  		$c->add( UserPeer::REMEMBER_ME_CODE, $_COOKIE[self::REMEMBER_ME_COOKIE] );
-	  		$c->add( UserPeer::IS_ACTIVE, 1 );
-	  		$user_records = UserPeer::doSelect($c);
-	  		
-	  		if ( count($user_records) == 1 ) {
-	  			
-	  			self::authCacheUser( $user_records[0] ); 
-	  			
-	  			// переход на язык, сохранённый в cookie только если открыли морду
-	  			/*$culture = substr($_SERVER['REQUEST_URI'], 1, 2);
-	  			if ( in_array($_COOKIE[self::CULTURE_COOKIE], array('en', 'ru')) 
-	  			     && $culture != $_COOKIE[self::CULTURE_COOKIE] ) 
-	  			{
-	  				$uri 	= $_SERVER['REQUEST_URI'];
-					$params = str_replace( array('/ru','/ru/', '/en', '/en/'), '', $uri);
-					//$this->redirect( '/' . $_COOKIE[self::CULTURE_COOKIE] . $params);
-					header( 'Location: http://' . $_SERVER['SERVER_NAME'] . '/' . $_COOKIE[self::CULTURE_COOKIE] . $params  );
-	  				exit();
-	  			}*/
-	  			
-	  			// отключён 2010.08.27, т.к. при если язык URL отличался от языка пользователя
-	  			// при открытии http://www.etapasvi.com/en/news/show/id/49 кидало на главную на языке пользователя
-	  			/*  			
-	  			$uri 	 = $_SERVER['REQUEST_URI'];
-	  			$culture = substr($uri, 1, 2);
-	  			
-	  			if ( $_SERVER['PATH_INFO'] < 4 && !empty($_COOKIE[self::CULTURE_COOKIE]) && $culture != $_COOKIE[self::CULTURE_COOKIE] ) {
-					header( 'Location: http://' . $_SERVER['SERVER_NAME'] . '/' . $_COOKIE[self::CULTURE_COOKIE] );
-	  				exit();	  				
-	  			}*/
-	  		} else {
-	  			self::authUnsetCookies();
-	  		}
-  		}  		
-  		return self::authUserId();  		
-	}
-	
-	/**
-	 * Получение ID пользователя
-	 *
-	 * @return unknown
-	 */
-	public static function authUserId() {
-		if ( !empty($_SESSION['user_cached']) ) {
-			return $_SESSION['user_cached']->getId();
-		} else {
-  			return '';
-		}
-	}	
-	
-	/**
-	 * Получение логина пользователя
-	 *
-	 * @return unknown
-	 */
-	public static function authUserName() {
-		$user = self::authGetUser();
-		if ($user) {
-			return $user->getName();
-		}
-		return '';
-	}	
-	
-	/**
-	 * Получение текущего пользователя
-	 *
-	 * @return unknown
-	 */
-	public static function authGetUser() {	  		
-  		return $_SESSION['user_cached'];
-	}		
-	
-	/**
-	 * Выход
-	 *
-	 */
-	public static function authLogout() {
-		self::authUnsetCookies();
-		session_unset();
-		@session_destroy();
-		@session_start();
-		$_SESSION = array();
-		session_commit();		
-	}
-	
-	/**
-	 * Установка кук посла авторизации
-	 *
-	 */
-	public static function authSetCookies() {
-
-		$remember_me_code = md5( time() );
-
-  		$c = new Criteria();
-  		$c->add( UserPeer::ID, self::authUserId() );
-  		$c->add( UserPeer::IS_ACTIVE, 1 );
-  		$user_records = UserPeer::doSelect($c);
-
-  		if (count($user_records)) {
-  			$user = $user_records[0];
-  			$user->setRememberMeCode( $remember_me_code );
-  			$user->save();  			
-  			// remember me
-  			setcookie( self::REMEMBER_ME_COOKIE, $remember_me_code, time() + 3600 * 24 * 365, '/' );  			
-  			// язык
-  			setcookie( self::CULTURE_COOKIE, sfContext::getInstance()->getUser()->getCulture(), time() + 3600 * 24 * 365, '/' );
-  		}
-	}
-	
-	/**
-	 * Удаление кук
-	 *
-	 */
-	public static function authUnsetCookies() {
-  		setcookie( self::REMEMBER_ME_COOKIE, "", time() - 3600, '/');
-  		setcookie( self::CULTURE_COOKIE, "", time() - 3600, '/');  		
-	}		
-	
-	/**
-	 * Валидация e-mail
-	 *
-	 * @param unknown_type $email
-	 * @return unknown
-	 */
-	public static function validateEmail($email)
-	{
-	   $isValid = true;
-	   $atIndex = strrpos($email, "@");
-	   if (is_bool($atIndex) && !$atIndex)
-	   {
-	      $isValid = false;
-	   }
-	   else
-	   {
-	      $domain = substr($email, $atIndex+1);
-	      $local = substr($email, 0, $atIndex);
-	      $localLen = strlen($local);
-	      $domainLen = strlen($domain);
-	      if ($localLen < 1 || $localLen > 64)
-	      {
-	         // local part length exceeded
-	         $isValid = false;
-	      }
-	      else if ($domainLen < 1 || $domainLen > 255)
-	      {
-	         // domain part length exceeded
-	         $isValid = false;
-	      }
-	      else if ($local[0] == '.' || $local[$localLen-1] == '.')
-	      {
-	         // local part starts or ends with '.'
-	         $isValid = false;
-	      }
-	      else if (preg_match('/\\.\\./', $local))
-	      {
-	         // local part has two consecutive dots
-	         $isValid = false;
-	      }
-	      else if (!preg_match('/^[A-Za-z0-9\\-\\.]+$/', $domain))
-	      {
-	         // character not valid in domain part
-	         $isValid = false;
-	      }
-	      else if (preg_match('/\\.\\./', $domain))
-	      {
-	         // domain part has two consecutive dots
-	         $isValid = false;
-	      }
-	      else if(!preg_match('/^(\\\\.|[A-Za-z0-9!#%&`_=\\/$\'*+?^{}|~.-])+$/',
-	                 str_replace("\\\\","",$local)))
-	      {
-	         // character not valid in local part unless 
-	         // local part is quoted
-	         if (!preg_match('/^"(\\\\"|[^"])+"$/',
-	             str_replace("\\\\","",$local)))
-	         {
-	            $isValid = false;
-	         }
-	      }
-	      if ($isValid && !(checkdnsrr($domain,"MX") || checkdnsrr($domain,"A")))
-	      {
-	         // domain not found in DNS
-	         $isValid = false;
-	      }
-	   }
-	   return $isValid;
-	}			
+//	/**
+//	 * Проверка и авторизация пользователя
+//	 * Не делаем static, чтобы можно было устанавливать куки
+//	 */
+//	public function authLogin( $name, $password, $remember_me = false ) {
+//  		
+//  		$c = new Criteria();
+//  		
+//  		$c->add( UserPeer::NAME, trim($name) );
+//  		$c->add( UserPeer::PASSWORD, sha1(md5(trim($password))) );
+//  		$c->add( UserPeer::IS_ACTIVE, 1 );
+//  		$user_records = UserPeer::doSelect($c);
+//  		
+//  		if ( count($user_records) == 1 ) {
+//  			// успешный вход
+//  			$user = $user_records[0];
+//  			self::authCacheUser( $user );  			
+//  		
+//  			if ($remember_me) {
+//  				self::authSetCookies();
+//  			}
+//  			// запоминаем время входа
+//  			$user->saveLastLogin();
+//  			// вход в PHPBB
+//  			//$user->phpbbLogin();
+//  			return true;
+//  		} else {
+//  			self::authUnsetCookies();	  			
+//  			return false;  			
+//  		}  	
+//	}
+//	
+//	/**
+//	 * Сохранение пользователя
+//	 *
+//	 * @param unknown_type $user
+//	 */
+//	public function authCacheUser( $user ) {		
+//		unset($_SESSION['user_cached']);			
+//  		$_SESSION['user_cached'] = $user;
+//	}
+//	
+//	/**
+//	 * Авторизуем пользователя
+//	 */
+//	public function authForcedLogin( $user, $remember_me ) {		
+//  		if ( $user->getId() ) {  			  			
+//  			self::authCacheUser( $user ); 
+//  			if ($remember_me) {
+//  				self::authSetCookies();
+//  			}
+//  			// запоминаем время входа
+//  			//$user = UserPeer::retrieveByPk( $user_id );
+//  			//if ($user) {
+//  			$user->saveLastLogin();
+//  			// вход в PHPBB
+//  			//$user->phpbbLogin();
+//  			//}
+//  		}
+//	}	
+//	
+//	/**
+//	 * Проверка, авторизован ли пользователь
+//	 *
+//	 * @return unknown
+//	 */
+//	public static function authIsLoggedIn() {
+//  		// проверка Remember me
+//  		if ( ( !self::authUserId() ) 
+//  		     && isset($_COOKIE[self::REMEMBER_ME_COOKIE]) && $_COOKIE[self::REMEMBER_ME_COOKIE] != '') 
+//  		{
+//	  		$c = new Criteria();
+//	  		$c->add( UserPeer::REMEMBER_ME_CODE, $_COOKIE[self::REMEMBER_ME_COOKIE] );
+//	  		$c->add( UserPeer::IS_ACTIVE, 1 );
+//	  		$user_records = UserPeer::doSelect($c);
+//	  		
+//	  		if ( count($user_records) == 1 ) {
+//	  			
+//	  			self::authCacheUser( $user_records[0] ); 
+//	  			
+//	  			// переход на язык, сохранённый в cookie только если открыли морду
+//	  			/*$culture = substr($_SERVER['REQUEST_URI'], 1, 2);
+//	  			if ( in_array($_COOKIE[self::CULTURE_COOKIE], array('en', 'ru')) 
+//	  			     && $culture != $_COOKIE[self::CULTURE_COOKIE] ) 
+//	  			{
+//	  				$uri 	= $_SERVER['REQUEST_URI'];
+//					$params = str_replace( array('/ru','/ru/', '/en', '/en/'), '', $uri);
+//					//$this->redirect( '/' . $_COOKIE[self::CULTURE_COOKIE] . $params);
+//					header( 'Location: http://' . $_SERVER['SERVER_NAME'] . '/' . $_COOKIE[self::CULTURE_COOKIE] . $params  );
+//	  				exit();
+//	  			}*/
+//	  			
+//	  			// отключён 2010.08.27, т.к. при если язык URL отличался от языка пользователя
+//	  			// при открытии http://www.etapasvi.com/en/news/show/id/49 кидало на главную на языке пользователя
+//	  			/*  			
+//	  			$uri 	 = $_SERVER['REQUEST_URI'];
+//	  			$culture = substr($uri, 1, 2);
+//	  			
+//	  			if ( $_SERVER['PATH_INFO'] < 4 && !empty($_COOKIE[self::CULTURE_COOKIE]) && $culture != $_COOKIE[self::CULTURE_COOKIE] ) {
+//					header( 'Location: http://' . $_SERVER['SERVER_NAME'] . '/' . $_COOKIE[self::CULTURE_COOKIE] );
+//	  				exit();	  				
+//	  			}*/
+//	  		} else {
+//	  			self::authUnsetCookies();
+//	  		}
+//  		}  		
+//  		return self::authUserId();  		
+//	}
+//	
+//	/**
+//	 * Получение ID пользователя
+//	 *
+//	 * @return unknown
+//	 */
+//	public static function authUserId() {
+//		if ( !empty($_SESSION['user_cached']) ) {
+//			return $_SESSION['user_cached']->getId();
+//		} else {
+//  			return '';
+//		}
+//	}	
+//	
+//	/**
+//	 * Получение логина пользователя
+//	 *
+//	 * @return unknown
+//	 */
+//	public static function authUserName() {
+//		$user = self::authGetUser();
+//		if ($user) {
+//			return $user->getName();
+//		}
+//		return '';
+//	}	
+//	
+//	/**
+//	 * Получение текущего пользователя
+//	 *
+//	 * @return unknown
+//	 */
+//	public static function authGetUser() {	  		
+//  		return $_SESSION['user_cached'];
+//	}		
+//	
+//	/**
+//	 * Выход
+//	 *
+//	 */
+//	public static function authLogout() {
+//		self::authUnsetCookies();
+//		session_unset();
+//		@session_destroy();
+//		@session_start();
+//		$_SESSION = array();
+//		session_commit();		
+//	}
+//	
+//	/**
+//	 * Установка кук посла авторизации
+//	 *
+//	 */
+//	public static function authSetCookies() {
+//
+//		$remember_me_code = md5( time() );
+//
+//  		$c = new Criteria();
+//  		$c->add( UserPeer::ID, self::authUserId() );
+//  		$c->add( UserPeer::IS_ACTIVE, 1 );
+//  		$user_records = UserPeer::doSelect($c);
+//
+//  		if (count($user_records)) {
+//  			$user = $user_records[0];
+//  			$user->setRememberMeCode( $remember_me_code );
+//  			$user->save();  			
+//  			// remember me
+//  			setcookie( self::REMEMBER_ME_COOKIE, $remember_me_code, time() + 3600 * 24 * 365, '/' );  			
+//  			// язык
+//  			setcookie( self::CULTURE_COOKIE, sfContext::getInstance()->getUser()->getCulture(), time() + 3600 * 24 * 365, '/' );
+//  		}
+//	}
+//	
+//	/**
+//	 * Удаление кук
+//	 *
+//	 */
+//	public static function authUnsetCookies() {
+//  		setcookie( self::REMEMBER_ME_COOKIE, "", time() - 3600, '/');
+//  		setcookie( self::CULTURE_COOKIE, "", time() - 3600, '/');  		
+//	}		
+//	
+//	/**
+//	 * Валидация e-mail
+//	 *
+//	 * @param unknown_type $email
+//	 * @return unknown
+//	 */
+//	public static function validateEmail($email)
+//	{
+//	   $isValid = true;
+//	   $atIndex = strrpos($email, "@");
+//	   if (is_bool($atIndex) && !$atIndex)
+//	   {
+//	      $isValid = false;
+//	   }
+//	   else
+//	   {
+//	      $domain = substr($email, $atIndex+1);
+//	      $local = substr($email, 0, $atIndex);
+//	      $localLen = strlen($local);
+//	      $domainLen = strlen($domain);
+//	      if ($localLen < 1 || $localLen > 64)
+//	      {
+//	         // local part length exceeded
+//	         $isValid = false;
+//	      }
+//	      else if ($domainLen < 1 || $domainLen > 255)
+//	      {
+//	         // domain part length exceeded
+//	         $isValid = false;
+//	      }
+//	      else if ($local[0] == '.' || $local[$localLen-1] == '.')
+//	      {
+//	         // local part starts or ends with '.'
+//	         $isValid = false;
+//	      }
+//	      else if (preg_match('/\\.\\./', $local))
+//	      {
+//	         // local part has two consecutive dots
+//	         $isValid = false;
+//	      }
+//	      else if (!preg_match('/^[A-Za-z0-9\\-\\.]+$/', $domain))
+//	      {
+//	         // character not valid in domain part
+//	         $isValid = false;
+//	      }
+//	      else if (preg_match('/\\.\\./', $domain))
+//	      {
+//	         // domain part has two consecutive dots
+//	         $isValid = false;
+//	      }
+//	      else if(!preg_match('/^(\\\\.|[A-Za-z0-9!#%&`_=\\/$\'*+?^{}|~.-])+$/',
+//	                 str_replace("\\\\","",$local)))
+//	      {
+//	         // character not valid in local part unless 
+//	         // local part is quoted
+//	         if (!preg_match('/^"(\\\\"|[^"])+"$/',
+//	             str_replace("\\\\","",$local)))
+//	         {
+//	            $isValid = false;
+//	         }
+//	      }
+//	      if ($isValid && !(checkdnsrr($domain,"MX") || checkdnsrr($domain,"A")))
+//	      {
+//	         // domain not found in DNS
+//	         $isValid = false;
+//	      }
+//	   }
+//	   return $isValid;
+//	}			
 
 	/**
 	 * Отправка уведомления администратору
@@ -522,34 +528,34 @@ class UserPeer extends BaseUserPeer
 				. $user_phpbb_id . '&lang=' . sfContext::getInstance()->getUser()->getCulture();
 	}*/
 
-	/**
-	 * Получение администратора
-	 *
-	 * @return unknown
-	 */
-	public static function getAdminUser()
-	{
-		$c = new Criteria();
-		$c->add(UserPeer::NAME, UserPeer::ADMIN_NAME);
-		return UserPeer::doSelectOne($c);
-	}
-	
-	/**
-	 * Проверка e-mail на уникальность
-	 *
-	 * @param unknown_type $email
-	 * @return unknown
-	 */
-	public static function isEmailUnique($email) {
-  		$c = new Criteria();
-  		$c->add(UserPeer::EMAIL, $email);
-  		$c->add(UserPeer::ID, self::authUserId(), Criteria::NOT_EQUAL);
-  		if (UserPeer::doCount($c)) {
-  			return false;
-  		} else {
-  			return true;
-  		}
-	}
+//	/**
+//	 * Получение администратора
+//	 *
+//	 * @return unknown
+//	 */
+//	public static function getAdminUser()
+//	{
+//		$c = new Criteria();
+//		$c->add(UserPeer::NAME, UserPeer::ADMIN_NAME);
+//		return UserPeer::doSelectOne($c);
+//	}
+//	
+//	/**
+//	 * Проверка e-mail на уникальность
+//	 *
+//	 * @param unknown_type $email
+//	 * @return unknown
+//	 */
+//	public static function isEmailUnique($email) {
+//  		$c = new Criteria();
+//  		$c->add(UserPeer::EMAIL, $email);
+//  		$c->add(UserPeer::ID, self::authUserId(), Criteria::NOT_EQUAL);
+//  		if (UserPeer::doCount($c)) {
+//  			return false;
+//  		} else {
+//  			return true;
+//  		}
+//	}
 	
 	/**
 	 * Управление кэшированием

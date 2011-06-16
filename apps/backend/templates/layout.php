@@ -9,7 +9,32 @@
   <body>
 	<div id="container" style="margin:0 auto;padding:10px">
 	  <div id="navigation" style="display:inline;float:right">
-        Language: <?php echo sfContext::getInstance()->getUser()->getCulture(); ?>
+        
+        <?php
+        // установка языка
+        if ($_POST['culture_selector']) {            
+            $sf_user->setCulture($_POST['culture_selector']);
+            Header('Location: ' . $_SERVER['SCRIPT_URI']);
+        }
+        ?>
+        
+        Language: <?php /*echo sfContext::getInstance()->getUser()->getCulture(); */ ?>
+        <form action="<?php echo $_SERVER['SCRIPT_URI'] ?>" method="POST" id="culture_selector_form">
+            <select name="culture_selector" onchange="document.getElementById('culture_selector_form').submit();">
+                <?php $user_culture = $sf_user->getCulture(); ?>
+                <?php foreach(UserPeer::getCulturesData() as $culture => $culture_data): ?>                               
+                    <?php $i++ ?>
+                    <?php if ($i > count(UserPeer::getCultures())) break; ?>
+                    <option value="<?php echo $culture ?>"  
+                        <?php if ($user_culture == $culture): ?>
+                            selected="selected"
+                        <?php endif ?> 
+                    ><?php echo $culture ?></option>
+                <?php endforeach ?>	
+            </select>
+
+        </form>
+        
 	    <ul style="list-style-type:none;">
 		  <?php /*<li><?php echo link_to('Users', 'user/index') ?></li>*/ ?>
 	      <?php /* <li><?php echo link_to('Ideas', 'idea/index') ?></li>	*/ ?>

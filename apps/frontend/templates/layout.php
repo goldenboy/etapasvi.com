@@ -82,7 +82,7 @@
 </div>
 
 <div id="menu">
-	<?php include_partial('global/menu', array('body_id'=>$body_id, 'is_logged_in'=>UserPeer::authIsLoggedIn()) ); ?>	
+	<?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	
 </div>
 
 <div id="bubble_click">
