@@ -113,7 +113,7 @@
 <div id="bubble_lang">	
 	<?php 
 		$user_culture = $user_culture;
-		$uri = $_SERVER['REQUEST_URI'];
+		$uri          = $sf_request->getPathInfo();
 		foreach( UserPeer::getCultures() as $culture) {
 			$user_cultures[] = '/' . $culture . '/';
 		}
@@ -140,7 +140,7 @@
 			
 			<?php $i++ ?>
 			<?php if ($i > count(UserPeer::getCultures())) break; ?>
-			<a href="http://<?php echo $_SERVER['HTTP_HOST'] . url_for('/'.$culture.$params) ?>" title="<?php echo $culture_data['name']?>"><?php echo $culture_data['name']?></a><br/>
+			<a href="http://<?php echo $_SERVER['HTTP_HOST'] . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name']?>"><?php echo $culture_data['name']?></a><br/>
 		<?php endforeach ?>		
 	</div>	
 </div>
