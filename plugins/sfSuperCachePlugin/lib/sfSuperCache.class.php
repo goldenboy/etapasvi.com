@@ -25,6 +25,9 @@ class sfSuperCache
   // расширение файла кэша    
   const CACHE_FILE_EXT = 'i.html';    
   
+  // количество потоков для обновления кэша
+  const REFRESH_CACHE_THREADS_COUNT = 5;    
+  
   // переменные, используемые при обновлении кэша в многопоточном режиме
   
   // список процессов 
@@ -238,7 +241,7 @@ class sfSuperCache
    *
    * @return unknown
    */
-  public static function refreshCache($multi_process = false, $threads_count = 15)
+  public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT)
   {  	
   	$result = array(
   	  // в многопоточном режиме не подсчитывается
@@ -335,7 +338,7 @@ class sfSuperCache
 
     if ($remove_result) {
       // кэширование страницы
-      $cache_result = self::cacheUrl( self::fileToUrl($file_path), false );
+      $cache_result = self::cacheUrl( self::fileToUrl($file_path), true );
       if ($cache_result) {
   	    return true;
       }
