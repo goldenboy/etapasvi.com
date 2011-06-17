@@ -103,7 +103,7 @@
             <?php endif ?>
             <?php if ($photo->getLink()): ?>
                 <p class="p1_no_bottom source">
-                    <strong><?php echo __('Source') ?>:</strong> <a href="<?php echo $photo->getLink(); ?>"><?php echo $photo->getLink(); ?></a>
+                    <strong><?php echo __('Source') ?>:</strong> <a href="<?php echo $photo->getLink(); ?>"><?php echo TextPeer::cropLink($photo->getLink()); ?></a>
                 </p>
             <?php endif ?>
             <?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photo->getPhotoalbumId())) ?> 
