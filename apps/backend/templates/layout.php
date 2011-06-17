@@ -12,7 +12,7 @@
         
         <?php
         // установка языка
-        if ($_POST['culture_selector']) {            
+        if (!empty($_POST['culture_selector'])) {            
             $sf_user->setCulture($_POST['culture_selector']);
             Header('Location: ' . $_SERVER['SCRIPT_URI']);
         }
