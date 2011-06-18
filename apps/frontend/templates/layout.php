@@ -25,6 +25,9 @@
 	<div id="content">
 		<?php echo $sf_content ?>
 	</div>
+    <div id="menu">
+        <?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	
+    </div>
 	<div id="footer">
 		<?php if ($user_culture != 'ru'): ?>
             If you would like to translate information into another language, please email us at <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a><br/><br/>
@@ -79,10 +82,6 @@
 		<br/><?php echo __('All Rights Reserved') ?>.
 		<?php /*<br/><a href="mailto:saynt2day@gmail.com" title="saynt2day/Semyon/etapasvi">saynt2day</a>		*/?>
 	</div>
-</div>
-
-<div id="menu">
-	<?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	
 </div>
 
 <div id="bubble_click">
