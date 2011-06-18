@@ -27,7 +27,6 @@
 </p>
 <?php $mail_id = UserPeer::getCultureMailId(); ?>
 <?php if ($mail_id): ?>
-    <br/>
     <h2><?php echo __('Subscribe to News') ?></h2>
 <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=<?php echo $sf_user->getCulture(); ?>/etapasvi', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
 E-mail: <input type="text" style="width:140px" name="email"/> &nbsp;<input type="hidden" value="<?php echo $sf_user->getCulture(); ?>/etapasvi" name="uri"/><input type="hidden" name="loc" value="<?php echo UserPeer::getCultureFeedburderLoc(); ?>"/><input type="submit" value="<?php echo __('Subscribe') ?>" />
