@@ -1,7 +1,7 @@
 <?php slot('body_id') ?>body_donation<?php end_slot() ?>
 
 <h1 id="up"><?php echo __('Donation') ?></h1>
-
+<?php /*
 <h2 class="center"><?php echo __('Purpose') ?></h2>
 <p>
 <?php echo __('Bodhi Shrawan Dharma Sangha is planning for the auspicious day, when Dharma Sangha\'s meditation will end on May 17, Buddha Jayanti\'s day. After that Dharma Sangha will be giving blessings to devotees for 15 days from 9am to 6pm tentatively.') ?>
@@ -10,7 +10,8 @@
 <br/><br/>
 <?php echo __('This is once in a lifetime way of giving offerings to this kind of auspicious ceremony and you will earn many merits in this lifetime, if you can help in this noble cause where about 300,000 people will get blessings.') ?>
 </p>
-
+*/
+?>
 <h2 class="center"><?php echo __('PayPal') ?></h2>
 <div class="center_text">
 <form method="post" action="https://www.paypal.com/cgi-bin/webscr">

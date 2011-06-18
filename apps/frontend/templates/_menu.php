@@ -15,7 +15,7 @@
 		<li><a href="<?php echo url_for('@project', true); ?>" title="<?php echo __('Dharma Hall') ?>" id="mi_project"><?php echo __('Dharma Hall') ?></a></li>
 		<li><a href="<?php echo url_for('@religious_forest', true); ?>" title="<?php echo __('Religious Forest') ?>" id="mi_religious_forest"><?php echo __('Religious Forest') ?></a></li>
 		<li><a href="<?php echo url_for('@encyclopedia', true); ?>" title="<?php echo __('Encyclopedia') ?>" id="mi_encyclopedia"><?php echo __('Encyclopedia') ?></a></li>
-        <li><a href="<?php echo url_for('@donation', true); ?>" title="<?php echo __('Donation') ?>" id="mi_donation" class="alert"><?php echo __('Donation') ?></a></li>
+        <li><a href="<?php echo url_for('@donation', true); ?>" title="<?php echo __('Donation') ?>" id="mi_donation" x><?php echo __('Donation') ?></a></li>
 		<?php /*<li><a href="<?php echo url_for('@livestream', true); ?>" title="<?php echo __('Buddha Boy Live Stream') ?>" id="mi_livestream"><?php echo __('Live Stream') ?></a></li>	*/ ?>
 		<?php /* <li><a href="<?php echo url_for('@translation_fundraising', true); ?>" title="<?php echo __('Buddha Boy Live Stream') ?>" id="mi_ltj_fundraising"><?php echo __('Translation Fundraising') ?></a></li>	*/ ?>
 
