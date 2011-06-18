@@ -321,7 +321,7 @@ p.p2{
 	left: 584px;
     position: absolute;
     text-align: left;
-    top: 130px;
+    top: 83px;
     width: 210px;
 	}
     
@@ -580,7 +580,7 @@ p.p2{
     /*margin-left: -11px;*/
     margin-top: 3px;
     position: relative;
-    left: -11px;
+    /*left: -11px;*/
     }
 .save {
     background-image: url("/i/interface_sprite.jpg");
