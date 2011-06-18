@@ -160,118 +160,6 @@
         <target>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjon, Niño Buda de Nepal) : Noticias, Foto, Video, Biografía, Discursos.</target>
       </trans-unit>
 
-<!-- form -->
-      <trans-unit id="7">
-        <source>Login </source>
-        <target>Ingresar</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Email</source>
-        <target>Email</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Password</source>
-        <target>Contraseña</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Time Zone</source>
-        <target>Zona Horaria</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Login must be at least %min_length% characters</source>
-        <target>El nombre de usuario debe tener por lo menos caracteres</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Login must not exceed %max_length% characters</source>
-        <target>El nombre de usuario debe tener máximo %max_length% caracteres</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Login must not exceed 20 characters</source>
-        <target>El nombre de usuario no debe exceder 20 caracteres</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Required</source>
-        <target>Obligatorio</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Email must be at least %min_length% characters</source>
-        <target>La direccióe correo electrónico debe tener un mínimo %min_length% de caracteres</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Email must not exceed %max_length% characters</source>
-        <target>La dirección de correo electrónico debe tener un máximo %max_length%  de caracteres</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Invalid Email</source>
-        <target>Dirección de correo electrónico inválida</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Password must not exceed %max_length% characters</source>
-        <target>La clave no debe exceder un máximo %max_length% de caracteres</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Login is already in use, please choose another</source>
-        <target>El nombre de usuario ya se encuentra en uso, por favor escoja otro</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>E-mail is already in use, please choose another</source>
-        <target>La dirección de correo electrónico ya está en uso, por favor escoja otra</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Please enter a valid email address</source>
-        <target>Por favor ingrese una dirección de correo electrónico válida</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Login must be alphanumeric (only letters and digits avaible)</source>
-        <target>El nombre de usuario debe ser alfanumérico (disponible solo para letras y dítos)</target>
-      </trans-unit>
-
-<!-- _thinkingtime -->
-      <trans-unit id="7">
-        <source>Hello</source>
-        <target>Hola</target>
-      </trans-unit>
-
-<!-- _login -->
-      <trans-unit id="7">
-        <source>Remember me</source>
-        <target>Recordarme</target>
-      </trans-unit>
-
-<!-- comments -->
-      <trans-unit id="1">
-        <source>Add comment</source>
-        <target>Añadir comentario</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Please enter comment</source>
-        <target>Por favor escriba un comentario</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Error occurred posting comment</source>
-        <target>Ocurrió un error al publicar el comentario</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Post</source>
-        <target>Publicar</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>show/hide</source>
-        <target>mostrar/esconder</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Comments</source>
-        <target>Comentarios</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Subscribe To Thread</source>
-        <target>Suscribirse a la cadena de mensajes</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>If you choose to subscribe to a thread, you will be notified when someone posts a new comment to the article which you subscribed to. You can unsubscribe at any point by unchecking the subscription checkbox.</source>
-        <target>Si usted decide suscribirse a esta cadena de mensajes, usted será notificado cuando alguien publique un comentario del artículo con el cual usted se suscribio. Usted puede cancelar la suscripción en cualquier momento al desmarcar el cuadro de suscripción.</target>
-      </trans-unit>
-
 <!-- News _show -->
       <trans-unit id="1">
         <source>Read more</source>
@@ -315,7 +203,15 @@
         <source>Date</source>
         <target>Fecha</target>
       </trans-unit>
-
+      <trans-unit id="1">
+        <source>Enlarge</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Terthup Dharma Hall</source>
+        <target></target>
+      </trans-unit>
+      
 <!-- audio -->
       <trans-unit id="1">
         <source>Size</source>

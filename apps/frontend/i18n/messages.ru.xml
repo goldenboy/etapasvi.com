@@ -160,118 +160,6 @@
         <target>Дхарма Сангха (Палден Дордже, Рам Бахадур Бомджан, Мальчик Будда из Непала): Новости, Фото, Видео, Биография, Речи.</target>
       </trans-unit>
 
-<!-- form -->
-      <trans-unit id="7">
-        <source>Login </source>
-        <target>Логин</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Email</source>
-        <target>E-mail</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Password</source>
-        <target>Пароль</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Time Zone</source>
-        <target>Часовой пояс</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Login must be at least %min_length% characters</source>
-        <target>Логин должен быть не короче %min_length% символов</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Login must not exceed %max_length% characters</source>
-        <target>Логин не должен превышать %max_length% символов</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Login must not exceed 20 characters</source>
-        <target>Логин не должен превышать 20 символов</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Required</source>
-        <target>Обязательное</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Email must be at least %min_length% characters</source>
-        <target>E-mail должен быть не короче %min_length% символов</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Email must not exceed %max_length% characters</source>
-        <target>E-mail не должен превышать %min_length% символов</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Invalid Email</source>
-        <target>Некорректный e-mail</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Password must not exceed %max_length% characters</source>
-        <target>Пароль не должен превышать %max_length% символов</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Login is already in use, please choose another</source>
-        <target>Логин занят, пожалуйста выберите другой</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>E-mail is already in use, please choose another</source>
-        <target>E-mail занят, пожалуйста выберите другой</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Please enter a valid email address</source>
-        <target>Пожалуйста, введите корректный E-mail</target>
-      </trans-unit>
-      <trans-unit id="7">
-        <source>Login must be alphanumeric (only letters and digits avaible)</source>
-        <target>Логин должен состоять только из букв и цифр</target>
-      </trans-unit>
-
-<!-- _thinkingtime -->
-      <trans-unit id="7">
-        <source>Hello</source>
-        <target>Привет</target>
-      </trans-unit>
-
-<!-- _login -->
-      <trans-unit id="7">
-        <source>Remember me</source>
-        <target>Запомнить меня</target>
-      </trans-unit>
-
-<!-- comments -->
-      <trans-unit id="1">
-        <source>Add comment</source>
-        <target>Добавить комментарий</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Please enter comment</source>
-        <target>Пожалуйста введите комментарий</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Error occurred posting comment</source>
-        <target>Ошибка при добавлении комментария</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Post</source>
-        <target>Добавить</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>show/hide</source>
-        <target>Показать/скрыть</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Comments</source>
-        <target>Комментарии</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Subscribe To Thread</source>
-        <target>Подписаться</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>If you choose to subscribe to a thread, you will be notified when someone posts a new comment to the article which you subscribed to. You can unsubscribe at any point by unchecking the subscription checkbox.</source>
-        <target>Если вы подписаны, то получаете уведомления по электронной почте при добавлении новых комментариев. Вы можете в любой момент отказаться от подписки, сняв галочку.</target>
-      </trans-unit>
-
 <!-- News _show -->
       <trans-unit id="1">
         <source>Read more</source>
@@ -315,7 +203,15 @@
         <source>Date</source>
         <target>Дата</target>
       </trans-unit>
-
+      <trans-unit id="1">
+        <source>Enlarge</source>
+        <target>Увеличить</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Terthup Dharma Hall</source>
+        <target>Зал Дхарма Тертхуп</target>
+      </trans-unit>
+      
 <!-- audio -->
       <trans-unit id="1">
         <source>Size</source>

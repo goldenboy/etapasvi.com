@@ -49,12 +49,12 @@
         <source>I am going to Halkoriya Jungle. I would like to bring some gifts, what is the best choice?</source>
         <target>Wybieram się do Dżungli Halkoriya. Chciał/a/bym ofiarować jakieś podarki, co jest najlepszym wyborem?</target>
       </trans-unit>
-      
+-->      
       <trans-unit id="1">
         <source>How can I get to Halkoriya Jungle?</source>
         <target></target>
       </trans-unit>
--->
+
 
 <!--answers-->
 
@@ -153,12 +153,16 @@
         <source>Mosquito nets and natural sprays.</source>
         <target>Moskitiery i naturalne spraye.</target>
       </trans-unit>
-      
+-->
       <trans-unit id="1">
         <source>The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.</source>
         <target></target>
       </trans-unit>
--->
+
+      <trans-unit id="1">
+        <source>Gompa, Ratanpuri</source>
+        <target></target>
+      </trans-unit>
 
 <!-- утф -->
     </body>

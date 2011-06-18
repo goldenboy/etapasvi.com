@@ -67,7 +67,7 @@
                     <strong><?php echo $title; ?></strong>
                 </p>
             <?php endif ?>	
-            <p class="center_text small light">
+            <p class="center_text small light p1_no_bottom">
                 <span class="date"><?php echo format_datetime( $photo->getCreatedAt('Y-m-d H:i:s', true), 'd MMMM yyyy'); ?></span>             
                 <?php 
                     $photoalbum = $photo->getPhotoalbum();
@@ -95,7 +95,7 @@
                 <?php endif ?>
                  | 
                 <a href="<?php echo $photo->getFullUrl(); ?>" 	
-                    title="<?php echo __('Download') ?>" target="_blank" ><?php echo __('Download') ?></a>		
+                    title="<?php echo __('Enlarge') ?>" target="_blank" ><?php echo __('Enlarge') ?></a>		
             </p>
             <p id="photo_loader" class="hidden center_text" ><img src="/i/loader.gif" /></p>
             <?php if ($photo->getBody()): ?>
