@@ -25,14 +25,16 @@ class sfSuperCache
   // расширение файла кэша    
   const CACHE_FILE_EXT = 'i.html';    
   
-  // количество потоков для обновления кэша
+  // количество потоков для обновления кэша при обновлении кэша в многопоточном режиме
   const REFRESH_CACHE_THREADS_COUNT = 5;    
   
-  // переменные, используемые при обновлении кэша в многопоточном режиме
-  
-  // список процессов 
+  // коды возврата при обновлении кэша в многопоточном режиме
+  const REFRESH_CACHE_EXIT_STATUS_OK    = 0;    
+  const REFRESH_CACHE_EXIT_STATUS_ERROR = 1;    
+
+  // список процессов при обновлении кэша в многопоточном режиме
   private static $refersh_cache_process_list = array();
-  // очередь сигналов
+  // очередь сигналов при обновлении кэша в многопоточном режиме
   private static $refersh_cache_queue        = array();
   
     
@@ -153,7 +155,7 @@ class sfSuperCache
       // обращение через консоль
       // баг - в переключателе языка http://www.etapasvi.com/ru/frontfrontend.php/
       $path_info = parse_url($url);
-      $html = shell_exec('php /home/saynt2day20/etapasvi.com/www/frontfrontend.php ' . $path_info['path']);
+      $html = shell_exec('php ' . $_SERVER['PWD'] . '/www/frontfrontend.php ' . $path_info['path']);
     } else {
       // обращение через браузер
       $ch = curl_init();
@@ -245,7 +247,7 @@ class sfSuperCache
   {  	
   	$result = array(
   	  // в многопоточном режиме не подсчитывается
-  	  'files' => 0,
+  	  //'files' => 0,
   	  'error' => ''
   	);  	
   	
@@ -284,7 +286,11 @@ class sfSuperCache
         if ($pid == -1) {
           // Ошибка при запуске процесса   
           $result['error'] = 'Ошибка при запуске процесса';
-          return $result;
+          
+          // кэширование файла кэша в основном процессе
+      	  self::refreshCacheFile($file_path);
+          
+          exit(self::REFRESH_CACHE_EXIT_STATUS_ERROR);
         } else if ($pid){
           // Родительский процесс
           // добавляем процесс в список
@@ -297,18 +303,17 @@ class sfSuperCache
             unset(self::$refersh_cache_queue[$pid]);
           }
         } else {
-          $exitStatus = 0;
           // кэширование файла кэша
-          $refresh_result = self::refreshCacheFile($file_path);
-          exit($exitStatus);
+          self::refreshCacheFile($file_path);
+          exit(self::REFRESH_CACHE_EXIT_STATUS_OK);
         }
   	  } else {
   	    
         // кэширование файла кэша
       	$refresh_result = self::refreshCacheFile($file_path);      	  
-      	if ($refresh_result) {
+      	/*if ($refresh_result) {
     	  $result['files']++;
-      	}
+      	}*/
   	  }
   	  // пишем в лог
       fputs($log_handle, $file_path . "\r\n");
@@ -317,7 +322,7 @@ class sfSuperCache
     
     // в многопоточном режиме ожидаем, пока все процессы закончат свою работу
     if ($multi_process) {
-      while(count(self::refersh_cache_list)){
+      while(count(self::$refersh_cache_process_list)){
         sleep(1);
       }
     }
