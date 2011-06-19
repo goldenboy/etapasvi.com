@@ -49,7 +49,7 @@ class Photo extends BasePhoto
 
 	  if ($use_default_culture_if_empty) {
         if (!$title) {
-          $title = $this->getTitle(UserPeer::DEFAULT_CULTURE);
+          $title = $this->getTitle(sfConfig::get('sf_default_culture'));
         }
 	  }
       return trim($title);
@@ -70,10 +70,10 @@ class Photo extends BasePhoto
 	  
 	    if ($this->getAuthor()) {
             $author = $this->getAuthor();
-	    } elseif ($culture != UserPeer::DEFAULT_CULTURE && !$this->getAuthor() && $this->getAuthor(UserPeer::DEFAULT_CULTURE)) {
-            $author = $this->getAuthor(UserPeer::DEFAULT_CULTURE);
-	    } elseif ($culture != UserPeer::DEFAULT_CULTURE && $photoalbum && !$photoalbum->getAuthor() && $photoalbum->getAuthor(UserPeer::DEFAULT_CULTURE)) {
-            $author = $photoalbum->getAuthor(UserPeer::DEFAULT_CULTURE);
+	    } elseif ($culture != sfConfig::get('sf_default_culture') && !$this->getAuthor() && $this->getAuthor(sfConfig::get('sf_default_culture'))) {
+            $author = $this->getAuthor(sfConfig::get('sf_default_culture'));
+	    } elseif ($culture != sfConfig::get('sf_default_culture') && $photoalbum && !$photoalbum->getAuthor() && $photoalbum->getAuthor(sfConfig::get('sf_default_culture'))) {
+            $author = $photoalbum->getAuthor(sfConfig::get('sf_default_culture'));
 	    } elseif ($photoalbum && $photoalbum->getAuthor()) {
             $author = $photoalbum->getAuthor();
 	    } else {
@@ -131,7 +131,7 @@ class Photo extends BasePhoto
 
 	  if ($path && $file) {
 	    //return PhotoPeer::remoteStorageGetUrl( $this->getThumbPath(), $this->getImg() );
-	    //return UserPeer::SITE_PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . PhotoPeer::PHOTO_DIR . '/' . $path . '/' . $file;
+	    //return UserPeer::SITE_123PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . PhotoPeer::PHOTO_DIR . '/' . $path . '/' . $file;
 	    return PhotoPeer::REMOTE_STORAGE_URL . $path . '/' . $file;
 	  } else {
 	    return '';	
@@ -147,7 +147,7 @@ class Photo extends BasePhoto
 
 	  if ($path && $file) {
 	    //return PhotoPeer::remoteStorageGetUrl( $this->getThumbPath(), $this->getImg() );
-	    //return UserPeer::SITE_PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . PhotoPeer::PHOTO_DIR . '/' . $path . '/' . $file;
+	    //return UserPeer::SITE_123PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . PhotoPeer::PHOTO_DIR . '/' . $path . '/' . $file;
 	    return PhotoPeer::REMOTE_STORAGE_URL . $path . '/' . $file;
 	  } else {
 	    return '';	
@@ -163,7 +163,7 @@ class Photo extends BasePhoto
 
 	  if ($path && $file) {
 	    //return PhotoPeer::remoteStorageGetUrl( $this->getThumbPath(), $this->getImg() );
-	    //return UserPeer::SITE_PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . PhotoPeer::PHOTO_DIR . '/' . $path . '/' . $file;
+	    //return UserPeer::SITE_123PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . PhotoPeer::PHOTO_DIR . '/' . $path . '/' . $file;
 	    return PhotoPeer::REMOTE_STORAGE_URL . $path . '/' . $file;
 	  } else {
 	    return '';	

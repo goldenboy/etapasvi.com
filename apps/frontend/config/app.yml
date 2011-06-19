@@ -1,2 +1,9 @@
 # default values
-#all:
+all:
+  site_name: etapasvi
+  protocol: http
+  domain_name: www.etapasvi.com
+  admin_email: saynt2day@gmail.com
+  
+mobile:
+  domain_name: m.etapasvi.com

@@ -162,7 +162,7 @@ class newsActions extends sfActions
   	
   	$user_culture = $this->getUser()->getCulture();
   	 	
-  	$this->link 			 = $_SERVER['HTTP_HOST']; //UserPeer::SITE_ADDRESS;
+  	$this->link 			 = sfConfig::get('app_domain_name');
   	$this->last_build_date   = date( 'r', time());
   	$this->language          = UserPeer::getCultureIso( $user_culture );
   	

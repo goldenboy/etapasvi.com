@@ -49,7 +49,7 @@ class ItemtypesPeer extends BaseItemtypesPeer
 //   */
 //  public static function getItemUrl( $item_lang, $item_id, $item_type )
 //  {         	
-//	$url = UserPeer::SITE_PROTOCOL . '://' . UserPeer::SITE_ADDRESS . '/' 
+//	$url = UserPeer::SITE_123PROTOCOL . '://' . UserPeer::SITE_XXX_ADDRESS . '/' 
 //			. $item_lang . '/' . self::getItemTypeNameLower( $item_type ) 
 //			. '/show/id/' . $item_id . '/';       
 //	return $url;

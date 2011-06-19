@@ -76,18 +76,6 @@
                     if ($author == '?') {
                         $author = __('If this photo has been made by you, please, let us know');
                     }
-                    /*
-                    if ($photo->getAuthor()) :
-                        $author = $photo->getAuthor();
-                    elseif ($sf_user->getCulture() != UserPeer::DEFAULT_CULTURE && !$photo->getAuthor() && $photo->getAuthor(UserPeer::DEFAULT_CULTURE)):
-                        $author = $photo->getAuthor(UserPeer::DEFAULT_CULTURE);
-                    elseif ($sf_user->getCulture() != UserPeer::DEFAULT_CULTURE && $photoalbum && !$photoalbum->getAuthor() && $photoalbum->getAuthor(UserPeer::DEFAULT_CULTURE)):
-                        $author = $photoalbum->getAuthor(UserPeer::DEFAULT_CULTURE);
-                    elseif ($photoalbum && $photoalbum->getAuthor()):
-                        $author = $photoalbum->getAuthor();
-                    else:
-                        $author = '';
-                    endif*/
                 ?>
                 
                 <?php if ($author): ?>

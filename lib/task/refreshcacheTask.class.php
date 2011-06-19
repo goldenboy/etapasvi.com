@@ -14,10 +14,12 @@ class refreshcacheTask extends sfBaseTask
   
   protected function configure()
   {
+  	// чтобы можно было получить настройки с помощью sfConfig::get() указываем application = frontend
+  	
     $this->addOptions(array(
       new sfCommandOption('path', null, sfCommandOption::PARAMETER_OPTIONAL, 'Path'),
-      //new sfCommandOption('application', null, sfCommandOption::PARAMETER_REQUIRED, 'The application name'),
-      //new sfCommandOption('env', null, sfCommandOption::PARAMETER_REQUIRED, 'The environment', 'dev'),
+      new sfCommandOption('application', null, sfCommandOption::PARAMETER_REQUIRED, 'The application name', 'frontend'),
+      new sfCommandOption('env', null, sfCommandOption::PARAMETER_REQUIRED, 'The environment', 'prod'),
       //new sfCommandOption('connection', null, sfCommandOption::PARAMETER_REQUIRED, 'The connection name', 'propel'),
       // add your own options here
     ));

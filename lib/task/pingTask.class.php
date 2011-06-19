@@ -18,9 +18,11 @@ class pingTask extends sfBaseTask
     
   protected function configure()
   {
+  	// чтобы можно было получить настройки с помощью sfConfig::get() указываем application = frontend
+  	
     $this->addOptions(array(
-      new sfCommandOption('application', null, sfCommandOption::PARAMETER_REQUIRED, 'The application name'),
-      new sfCommandOption('env', null, sfCommandOption::PARAMETER_REQUIRED, 'The environment', 'dev'),
+      new sfCommandOption('application', null, sfCommandOption::PARAMETER_REQUIRED, 'The application name', 'frontend'),
+      new sfCommandOption('env', null, sfCommandOption::PARAMETER_REQUIRED, 'The environment', 'prod'),
       new sfCommandOption('connection', null, sfCommandOption::PARAMETER_REQUIRED, 'The connection name', 'propel'),
       // add your own options here
     ));
@@ -45,7 +47,7 @@ EOF;
 			
 	$msg = '';
 	foreach(UserPeer::getCultures() as $culture) {
-		$url = 'http://' . UserPeer::SITE_ADDRESS . '/' . $culture . '/';
+		$url = 'http://' . sfConfig::get('app_domain_name') . '/' . $culture . '/';
 		curl_setopt( $ch, CURLOPT_URL, $url ); // set url to post to 
 		$response = curl_exec( $ch );
 	
@@ -62,7 +64,7 @@ EOF;
 		
 	if ($msg) {	  	  
 	  // уведомление отправляется раз в час
-  	  UserPeer::adminNotify($msg, 'pinger');	  
+  	  UserPeer::adminNotify($msg, sfConfig::get('app_site_name') . ': pinger');	  
   	  echo $msg;
 	} else {
 	    echo 'Пинг успешно выполнен';

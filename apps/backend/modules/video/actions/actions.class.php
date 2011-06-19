@@ -10,9 +10,5 @@
  */
 class videoActions extends autovideoActions
 {
-	public function executeList(sfWebRequest $request)
-	{
-		$this->getUser()->setCulture(UserPeer::DEFAULT_CULTURE);
-		parent::executeList($request);
-	}		
+	
 }

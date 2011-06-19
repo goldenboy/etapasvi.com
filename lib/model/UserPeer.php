@@ -8,7 +8,7 @@ class UserPeer extends BaseUserPeer
 		'en' => array('name'    			 => 'en - English',
 		              'iso'     			 => 'en',
 		              //http://us2.admin.mailchimp.com/lists/settings/?id=428077
-		              'mail_id' 			 => '39719cc12b',
+		              //'mail_id' 			 => '39719cc12b',
 		              // категория Disqus
 		              'comments_category_id' => 668704,
 		              // язык интерфейса FeedBurner
@@ -16,31 +16,31 @@ class UserPeer extends BaseUserPeer
 		),		              
 		'ru' => array('name'    			 => 'ru - Русский',
 		              'iso'     			 => 'ru',		              
-		              'mail_id' 			 => '25b1a7f858',
+		              //'mail_id' 			 => '25b1a7f858',
 		              'comments_category_id' => 686465,
 		              'feedburner_loc' 		 => 'ru_RU'
 		),
 		'cs' => array('name'    			 => 'cz - Čeština',
 		              'iso'     			 => 'cz',
-		              'mail_id' 			 => '876c7e23a7',
+		              //'mail_id' 			 => '876c7e23a7',
 		              'comments_category_id' => 686584,
 		              'feedburner_loc' 		 => ''
 		),
 		'hu' => array('name'    			 => 'hu - Magyar',
 		              'iso'     			 => 'hu',
-		              'mail_id' 			 => 'e8a86fd73d',
+		              //'mail_id' 			 => 'e8a86fd73d',
 		              'comments_category_id' => 686585,
 		              'feedburner_loc' 		 => ''
 		),
 		'pl' => array('name'    			 => 'pl - Polski',
 		              'iso'     			 => 'pl',
-		              'mail_id' 			 => '99862a8230',
+		              //'mail_id' 			 => '99862a8230',
 		              'comments_category_id' => 686580,
 		              'feedburner_loc' 		 => ''
 		),
 		'fr' => array('name'    			 => 'fr - Français',
 		              'iso'     			 => 'fr',
-		              'mail_id' 			 => '430d7d6d8b',
+		              //'mail_id' 			 => '430d7d6d8b',
 		              'comments_category_id' => 686581,
 		              'feedburner_loc' 		 => 'fr_FR'
 		),
@@ -49,32 +49,32 @@ class UserPeer extends BaseUserPeer
 					  'name'          		 => 'zh-cn - 简体中文',
 		              'iso'           		 => 'zh-cn',
 		              'hieroglyphic'  		 => true,
-		              'mail_id' 	  		 => '33bb475372',
+		              //'mail_id' 	  		 => '33bb475372',
 		              'comments_category_id' => 686582,
 		              'feedburner_loc' 		 => ''
 		),
 		'vi' => array('name'    			 => 'vn - Tiếng Việt',
 		              'iso'     			 => 'vn',
-		              'mail_id' 			 => '68f2a2996d',
+		              //'mail_id' 			 => '68f2a2996d',
 		              'comments_category_id' => 686583,
 		              'feedburner_loc' 		 => ''
 		),       
 		'ja' => array('name'    			 => 'jp - 日本語',
 		              'iso'     			 => 'jp',
 		              'hieroglyphic'  		 => true,
-		              'mail_id' 			 => '77a5eb7cd2',
+		              //'mail_id' 			 => '77a5eb7cd2',
 		              'comments_category_id' => 686578,
 		              'feedburner_loc' 		 => 'ja_JP'
 		),
 		'es' => array('name'    			 => 'es - Español',
 		              'iso'     			 => 'es',
-		              'mail_id' 			 => '6f9b50c196',
+		              //'mail_id' 			 => '6f9b50c196',
 		              'comments_category_id' => 686579,
 		              'feedburner_loc' 		 => 'es_ES'
 		),
 		'it' => array('name'    			 => 'it - Italiano',
 		              'iso'     			 => 'it',
-		              'mail_id' 			 => 'ddd87d0746',
+		              //'mail_id' 			 => 'ddd87d0746',
 		              'comments_category_id' => 686577,
 		              'feedburner_loc' 		 => ''
 		)
@@ -90,15 +90,15 @@ class UserPeer extends BaseUserPeer
 	);
 	
 	 
-	const DEFAULT_CULTURE = 'en';
+	//const DEFAULT_CULTURE = 'en';
 	
-	const SITE_ADDRESS    = 'www.etapasvi.com';
-	const SITE_NAME       = 'eTapasvi';
-	const SITE_PROTOCOL   = 'http';
+	//const SITE_ADDRESS    = 'www.etapasvi.com';
+	//const SITE_NAME       = 'eTapasvi';
+	//const SITE_PROTOCOL   = 'http';
 		
 	// имена cookie
-	const REMEMBER_ME_COOKIE = 'sdfgjlk';
-	const CULTURE_COOKIE	 = '307c73fdf6de7';
+	//const REMEMBER_ME_COOKIE = 'sdfgjlk';
+	//const CULTURE_COOKIE	 = '307c73fdf6de7';
 	
 	// указатели что добавляем при добавления комментариев
 	// Не делать нулевыми, т.к. идёт проверка
@@ -110,8 +110,8 @@ class UserPeer extends BaseUserPeer
 	const FROM_PHOTO_COMMENT	= 6; // комментарий к фото
 	const FROM_VIDEO_COMMENT	= 7; // комментарий к видео*/
 	
-	const ADMIN_MAIL 	   = 'saynt2day@gmail.com';
-	const ADMIN_NAME 	   = 'eTapasvi';
+	//const ADMIN_MAIL 	   = 'saynt2day@gmail.com';
+	//const ADMIN_NAME 	   = 'eTapasvi';
 	
 	// PHPBB
 	//const PHPBB_SECRET = 'f6de7e7537acc69fc9072bef307c73fdf6de7e7537acc69fc9072bef307c73fdf6de7e7537acc69fc9072bef307c73fdf6de7e7537acc69fc9072bef307c73fdf6de7e7537acc69fc9072bef307c73fdf6de7e7537acc69fc9072bef307c73fdf6de7e7537acc69fc9072bef307c73fdf6de7e7537acc69fc9072bef307c73fdf6de7e7537acc69fc9072bef307c73fdf6de7e7537acc69fc9072bef307c73fd';	
@@ -227,7 +227,7 @@ class UserPeer extends BaseUserPeer
 		}
 		$loc = self::$cultures[ $culture ][ 'feedburner_loc' ];
 		if (!$loc) {
-			$loc = self::$cultures[ UserPeer::DEFAULT_CULTURE ][ 'feedburner_loc' ];
+			$loc = self::$cultures[ sfConfig::get('sf_default_culture') ][ 'feedburner_loc' ];
 		}
 		return $loc;
 	}
@@ -519,7 +519,7 @@ class UserPeer extends BaseUserPeer
 	 */
 	public static function adminNotify( $msg, $subject = 'mailer' ) 
 	{			
-		mail(self::ADMIN_MAIL, $subject . ' (' . UserPeer::SITE_ADDRESS . ')', $msg );	
+		mail(sfConfig::get('app_admin_email'), $subject . ' (' . sfConfig::get('app_domain_name') . ')', $msg );	
 	}
 	
 	/*

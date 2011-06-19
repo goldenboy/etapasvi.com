@@ -45,7 +45,7 @@ class Audio extends BaseAudio
 
 	  if ($use_default_culture_if_empty) {
         if (!$title) {
-          $title = $this->getTitle(UserPeer::DEFAULT_CULTURE);
+          $title = $this->getTitle(sfConfig::get('sf_default_culture'));
         }
 	  }
       return trim($title);
@@ -61,7 +61,7 @@ class Audio extends BaseAudio
 
 	  if ($use_default_culture_if_empty) {
         if (!$body) {
-          $body = $this->getBody(UserPeer::DEFAULT_CULTURE);
+          $body = $this->getBody(sfConfig::get('sf_default_culture'));
         }
 	  }
       return trim($body);
@@ -86,7 +86,7 @@ class Audio extends BaseAudio
 
 	  if ($use_default_culture_if_empty) {
         if (!$author) {
-          $author = $this->getAuthor(UserPeer::DEFAULT_CULTURE);
+          $author = $this->getAuthor(sfConfig::get('sf_default_culture'));
         }
 	  }
       return trim($author);

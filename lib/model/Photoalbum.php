@@ -68,7 +68,7 @@ class Photoalbum extends BasePhotoalbum
 
 	  if ($use_default_culture_if_empty) {
         if (!$title) {
-          $title = $this->getTitle(UserPeer::DEFAULT_CULTURE);
+          $title = $this->getTitle(sfConfig::get('sf_default_culture'));
         }
 	  }
       return trim($title);

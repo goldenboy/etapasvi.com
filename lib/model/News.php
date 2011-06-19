@@ -130,7 +130,7 @@ class News extends BaseNews
 
 	  if ($path && $file) {
 	    //return PhotoPeer::remoteStorageGetUrl( $this->getThumbPath(), $this->getImg() );
-	    //return UserPeer::SITE_PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . NewsPeer::PHOTO_DIR . '/' . $path . '/' . $file;
+	    //return UserPeer::SITE_123PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . NewsPeer::PHOTO_DIR . '/' . $path . '/' . $file;
 	    return PhotoPeer::REMOTE_STORAGE_URL . $path . '/' . $file;
 	  } else {
 	    return '';	
@@ -146,7 +146,7 @@ class News extends BaseNews
 
 	  if ($path && $file) {
 	    //return PhotoPeer::remoteStorageGetUrl( $this->getThumbPath(), $this->getImg() );
-	    //return UserPeer::SITE_PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . NewsPeer::PHOTO_DIR . '/' . $path . '/' . $file;
+	    //return UserPeer::SITE_123PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . NewsPeer::PHOTO_DIR . '/' . $path . '/' . $file;
 	    return PhotoPeer::REMOTE_STORAGE_URL . $path . '/' . $file;
 	  } else {
 	    return '';	
@@ -251,7 +251,7 @@ class News extends BaseNews
 
 	  if ($use_default_culture_if_empty) {
         if (!$author) {
-          $author = $this->getAuthor(UserPeer::DEFAULT_CULTURE);
+          $author = $this->getAuthor(sfConfig::get('sf_default_culture'));
         }
 	  }
       return $author;
@@ -267,7 +267,7 @@ class News extends BaseNews
 
 	  if ($use_default_culture_if_empty) {
         if (!$link) {
-          $link = $this->getLink(UserPeer::DEFAULT_CULTURE);
+          $link = $this->getLink(sfConfig::get('sf_default_culture'));
         }
 	  }
       return trim($link);

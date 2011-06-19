@@ -231,7 +231,7 @@ class sfSuperCache
     }
     $url = str_replace(self::CACHE_FILE_EXT, '', str_replace($cacheDir, '', $file_path));
     if (!$relative) {
-    	$url = UserPeer::SITE_PROTOCOL . '://' . UserPeer::SITE_ADDRESS . $url;
+    	$url = sfConfig::get('app_protocol'). '://' . sfConfig::get('app_domain_name') . $url;
     }
     return $url;
   } 
