@@ -653,60 +653,59 @@ hr.dashed {
 input,
 select,
 textarea,
+#body_search input.gsc-input,
 #body_search input.gsc-search-button {
-	border:1px solid #ADACBD;
+	border: 1px solid gray;
+    padding: 1px 2px;
 	font-family: "Lucida Grande",Verdana,Helvetica,sans-serif;
 	font-weight: normal;
 	font-size: 1em;
-	padding: 1px;
-	color: gray;
 	}
 input[type="checkbox"], 
 input[type="radio"] {
     border: 0;
     }
-.input_submit,
-input.gsc-search-button {
-	color: #555753;
-	cursor:pointer;
-	background-color:#E6E1EE;
-	border:1px solid gray;
-	padding: 0px 10px 0px;
-	width: auto;
-	height: 18px;
+.input_button,
+#body_search input.gsc-search-button {	
+    border: 1px outset #CCCCCC;
+    cursor: pointer;
+    padding: 1px 4px;
 	}
-.hieroglyphic .input_submit {
+/*
+.hieroglyphic .input_button {
     height: 21px;
     }
-#body_search input.gsc-search-button {
-	height: 20px;
-	}
+*/    
+
 /* IE 6 не работает перед буквами a, b, c, d, e, f */
-* html .input_submit,
+/*
+* html .input_button,
 * html #body_search input.gsc-search-button {
 	padding: 0px 5px 0px;
 	}
+    */
 /* IE 7 */
-*:first-child+html .input_submit,
+*:first-child+html .input_button,
 *:first-child+html #body_search input.gsc-search-button {
-	padding:0 5px;
+	padding: 0;
 	}
 /* IE 8 */
-.input_submit,
+/*
+.input_button,
 #body_search input.gsc-search-button {
-	padding-bottom /*\**/:0\9
-	}
+	padding-bottom /*\**:0\9
+	}*/
 /* Firefox */
-.input_submit:default,
+/*
+.input_button:default,
 #body_search input.gsc-search-button:default {
 	padding-bottom: 2px;
-	}
-
-
-.input_submit:hover,
+	}*/
+/*
+.input_button:hover,
 #body_search input.gsc-search-button:hover {
 	background-color:#F9F9F9;
-	}
+	}*/
 .error_list {
 	list-style: none;
 	list-style-position:outside;
@@ -997,7 +996,7 @@ input.gsc-search-button {
 .checkbox_container input{
 	width:auto;
 	}
-.signup .input_submit {
+.signup .input_button {
 	width: auto;
 	}
 .captcha {
@@ -1012,7 +1011,7 @@ input.gsc-search-button {
 .login_form input {
 	width:200px;
 	}
-.login_form .input_submit {
+.login_form .input_button {
 	width: auto;
 	}
 .login_form_element label {
@@ -1029,7 +1028,7 @@ input.gsc-search-button {
 #bubble_login .login_form input {
 	width:87px;
 	}
-#bubble_login .login_form .input_submit {
+#bubble_login .login_form .input_button {
 	width: auto;
 	}
 #bubble_login  p {
