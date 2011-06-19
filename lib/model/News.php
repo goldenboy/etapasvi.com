@@ -192,7 +192,6 @@ class News extends BaseNews
 	  }
 	  $module = $this->getTypeName();
 	  
-	  //$url = UserPeer::SITE_PROTOCOL  . '://' . UserPeer::SITE_ADDRESS . '/' . $culture . '/' . $module . '/show/id/' . $this->getId();	  
 	  $url_pattern = $module . '/show?id=' . $this->getId();
 	  
 	  $title_translit = TextPeer::urlTranslit($this->getTitle( $culture ), $culture );

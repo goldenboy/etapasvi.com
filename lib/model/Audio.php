@@ -119,9 +119,8 @@ class Audio extends BaseAudio
 	public function getUrl($culture = '') {
 	  if (empty($culture)){
 		$culture = sfContext::getInstance()->getUser()->getCulture();
-	  }	 
-	  
-	  return UserPeer::SITE_PROTOCOL  . '://' . UserPeer::SITE_ADDRESS . '/' . $culture . '/audio#' . $this->getFile();	   
+	  }	 	  
+	  return sfContext::getInstance()->getController()->genUrl('@audio_index', true, $culture) . '#' . $this->getFile();	   
 	}
 	
 	

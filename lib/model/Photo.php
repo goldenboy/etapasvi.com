@@ -111,12 +111,6 @@ class Photo extends BasePhoto
 		$culture = sfContext::getInstance()->getUser()->getCulture();
 	  }	 
 	  
-	  /*$url = UserPeer::SITE_PROTOCOL  . '://' . UserPeer::SITE_ADDRESS . '/' . $culture . '/photo/show/id/' . $this->getId();
-	  $title_translit = TextPeer::urlTranslit($this->getTitle($culture), $culture);
-	  if (!empty($title_translit)) {
-	    $url .= '/title/' . $title_translit;
-	  }*/
-	  
       $url_pattern = 'photo/show?id=' . $this->getId();
 	  
 	  $title_translit = TextPeer::urlTranslit($this->getTitle( $culture ), $culture );

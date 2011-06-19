@@ -66,13 +66,6 @@ class Video extends BaseVideo
 		$culture = sfContext::getInstance()->getUser()->getCulture();
 	  }	 
 	  
-	  /*
-	  $url = UserPeer::SITE_PROTOCOL  . '://' . UserPeer::SITE_ADDRESS . '/' . $culture . '/video/show/id/' . $this->getId();
-	  $title_translit = TextPeer::urlTranslit($this->getTitle($culture), $culture);
-	  if (!empty($title_translit)) {
-	    $url .= '/title/' . $title_translit;
-	  }*/
-	  
       $url_pattern = 'video/show?id=' . $this->getId();
 	  
 	  $title_translit = TextPeer::urlTranslit($this->getTitle( $culture ), $culture );
