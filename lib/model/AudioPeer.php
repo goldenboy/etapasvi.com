@@ -9,7 +9,7 @@ class AudioPeer extends BaseAudioPeer
   const REMOTE_URL 		= 'http://k002.kiwi6.com/uploads/hotlink/';
   
   // ссылка на скачивание из удалённого хранилища
-  const REMOTE_DOWNLOAD_URL		= 'http://k002.kiwi6.com/uploads/download/';
+  const REMOTE_DOWNLOAD_URL		= 'http://k002.kiwi6.com/download/';
   
   /**
    * Добавляет условие, при котором элемент отображается на языке пользователя
