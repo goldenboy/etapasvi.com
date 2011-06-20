@@ -18,9 +18,14 @@
 class sfSuperCacheFilter extends sfFilter
 {
   public function execute ($filterChain)
-  {
+  {     
     // execute next filter
     $filterChain->execute();
+    
+    // в мобильной версии пока не кэшируем
+    if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' ) {
+      return;
+    }  
     
     $response = $this->getContext()->getResponse();    
 

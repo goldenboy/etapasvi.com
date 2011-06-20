@@ -145,7 +145,14 @@ class sfPHPView extends sfView
     // check to see if the decorator template exists
     if (!is_readable($this->getDecoratorDirectory().'/'.$this->getDecoratorTemplate()))
     {
-      throw new sfRenderException(sprintf('The decorator template "%s" does not exist or is unreadable in "%s".', $this->decoratorTemplate, $this->decoratorDirectory));
+      // saynt2day
+      // если файл не найден - берём файл без формата          
+      $template   = preg_replace("/(.*)\.[^.]+(\.php)/", '$1$2', $this->getDecoratorTemplate());      
+      $this->setDecoratorTemplate($template);
+      
+      if (!is_readable($this->getDecoratorDirectory().'/'.$this->getDecoratorTemplate())) {
+        throw new sfRenderException(sprintf('The decorator template "%s" does not exist or is unreadable in "%s".', $this->decoratorTemplate, $this->decoratorDirectory));
+      }
     }
 
     // render the decorator template and return the result

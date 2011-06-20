@@ -122,6 +122,7 @@ abstract class sfView
     $request = $context->getRequest();
 
     $format = $request->getRequestFormat();
+  
     if (null !== $format)
     {
       if ('html' != $format)
@@ -359,7 +360,7 @@ abstract class sfView
     }
 
     if (!is_readable($this->directory.'/'.$this->template))
-    {
+    {      
       // 404?
       if ('404' == $this->context->getResponse()->getStatusCode())
       {
@@ -508,6 +509,17 @@ abstract class sfView
       $this->directory = $this->context->getConfiguration()->getTemplateDir($this->moduleName, $template);
       $this->template = $template;
     }
+    
+    // saynt2day
+    // В мобильной версии, если файл не найден - берём файл без формата          
+    if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' ) {
+      if (preg_match("/\.[^.]+\.[^.]+/", $this->template ) && !is_readable($this->directory.'/'.$this->template)) {
+        $template   = preg_replace("/(.*)\.[^.]+(\.php)/", '$1$2', $this->template);
+        //$this->extension  = '.php';
+        $this->setTemplate($template);
+      }
+    }
+
   }
 
   /**

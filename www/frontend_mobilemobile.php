@@ -1,4 +1,15 @@
 <?php
+/**
+ * Контроллер мобильной версии 
+ *
+ */
+
+if (!in_array(@$_SERVER['REMOTE_ADDR'], array('109.197.73.109', '::1')))
+{
+  die('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
+}
+
+
 // если к скрипту обратились из консоли, подменяем пермененные в $_SERVER
 if ($_SERVER['SHELL'] || !$_SERVER['DOCUMENT_ROOT']) {
 	
@@ -145,5 +156,5 @@ fclose($f_log);*/
 
 require_once(dirname(__FILE__).'/../config/ProjectConfiguration.class.php');
 
-$configuration = ProjectConfiguration::getApplicationConfiguration('frontend', 'prod', false);
+$configuration = ProjectConfiguration::getApplicationConfiguration('frontend', 'mobile', false);
 sfContext::createInstance($configuration)->dispatch();

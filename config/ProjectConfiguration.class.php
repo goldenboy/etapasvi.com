@@ -16,8 +16,8 @@ class ProjectConfiguration extends sfProjectConfiguration
 	sfConfig::add(array(
 		'sf_upload_dir_name' => 'uploads'
 	));
-    $this->enablePlugins('sfGuardPlugin');
-    $this->enablePlugins('sfThumbnailPlugin');
-    $this->enablePlugins('sfImageTransformPlugin');
+    //$this->enablePlugins('sfGuardPlugin');
+    //$this->enablePlugins('sfThumbnailPlugin');
+    //$this->enablePlugins('sfImageTransformPlugin');
   }
 }
