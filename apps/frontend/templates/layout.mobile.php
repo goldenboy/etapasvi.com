@@ -1,17 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php /*<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">*/ ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php $user_culture = $sf_user->getCulture(); echo $user_culture; ?>" >
 <head>
-<?php if (UserPeer::isCultureHieroglyphic()):?><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><?php endif ?>
-<?php include_http_metas() ?>
-<?php include_metas() ?>
-<?php include_slot('meta') ?>
-<?php /*include_title()*/ ?>	
-<title><?php echo __($sf_response->getTitle()); ?> - <?php echo sfConfig::get('app_site_name'); ?></title>
+<?php include_title() ?>
+<link rel="stylesheet" type="text/css" href="/css/m_css.css" />	
 <link rel="shortcut icon" type="image/x-icon" href="http://<?php echo sfConfig::get('app_domain_name'); ?>/favicon.ico" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script> 
-<script type="text/javascript" src="/js/js.js"></script> 
-<link rel="stylesheet" type="text/css" media="screen" href="/css/css.css" /> 
 </head>
 
 <?php $body_id = get_slot('body_id'); ?>
@@ -28,14 +20,8 @@
 	<div id="content">
 		<?php echo $sf_content ?>
 	</div>
-    <div id="menu">
-        <?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	
-    </div>
-	<div id="footer">
-		<?php if ($user_culture != 'ru'): ?>
-            If you would like to translate information into another language, please email us at <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a><br/><br/>
-        <?php endif ?>
-        
+
+	<div id="footer">        
         <table id="share">
         <tr>
         <td align="right" class="share_item">
@@ -48,23 +34,10 @@
                 <script type="text/javascript">document.write(VK.Share.button(false,{type: "round", text: "Сохранить"}));</script>   
             </td>
 
-<?php /*
-            <td align="center" class="share_item">           
-            <link href="http://stg.odnoklassniki.ru/share/odkl_share.css" rel="stylesheet" /> 
-            <script src="http://stg.odnoklassniki.ru/share/odkl_share.js" type="text/javascript" ></script> 
-            <a class="odkl-klass-oc" href="<?php echo $_SERVER['SCRIPT_URI'] ?>" onclick="ODKL.Share(this);return false;" ><span>0</span></a> 
-            <script type="text/javascript">jQuery(document).ready(function(){ODKL.init();});</script> 
-            </td>
-            */ ?>
             <td align="center" class="share_item">           
             <a target="_blank" class="mrc__plugin_like_button" href="http://connect.mail.ru/share" rel="{'type' : 'button', 'width' : '108'}">Нравится</a>
             <script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="UTF-8"></script>
             </td>
-
-            <?php /*<td>            
-            <td align="right" class="share_item">                
-            <a target="_blank" class="mrc__plugin_like_button " href="http://connect.mail.ru/share" rel="{'type' : 'button', 'width' : '150'}">Нравится</a><script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="utf-8"></script>
-            </td>*/ ?>
         <?php else: ?>
             <td align="center" class="share_item">           
             <script src="http://www.stumbleupon.com/hostedbadge.php?s=1" type="text/javascript"></script>
@@ -83,34 +56,10 @@
 
 		<?php echo __('Copyright') ?> &copy; 2009-<?php echo date("Y"); ?>, www.eTapasvi.com
 		<br/><?php echo __('All Rights Reserved') ?>.
-		<?php /*<br/><a href="mailto:saynt2day@gmail.com" title="saynt2day/Semyon/etapasvi">saynt2day</a>		*/?>
+		<strong><?php echo __('Mobile') ?></strong> | <a href="http://<?php echo sfConfig::get('app_domain_name'); ?>"><?php echo __('Classic') ?></a>
 	</div>
 </div>
 
-<div id="bubble_click">
-	<map name="bubble_click_map" id="bubble_click_map">
-	<area shape="circle" coords="154,135,135" href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" />
-	</map>
-	<img usemap="#bubble_click_map" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" width="300" height="308" alt=""/>	
-</div>
-
-<div id="bubble_mantra">
-	<img src="/i/om_namo_guru_buddha_gyani.gif" title="<?php echo __('Om Namo Guru Buddha Gyani') ?>" />
-<?php
-/*
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var time = new Date(Date.parse('<?php include_component( 'idea', 'getthinkingtime' ); ?>')); 
-			$('#countdown').countdown(
-				{until: time, compact: true, compactLabels: ['y', 'm', 'w', '<?php echo __('d') ?>']}
-			); 
-		});
-	</script>
-	<acronym id="countdown" title="<?php echo __('Time remaining until meditation') ?>">
-	</acronym>	
-*/
-?>	
-</div>
 
 <div id="bubble_lang">	
 	<?php 
@@ -121,18 +70,10 @@
 		}
 
 		$params = str_replace( $user_cultures, '/', $uri);
-        // всё, что идёт после #
-        /*preg_match('/#.*$/', $uri, $matches);
-        if (!empty($matches[0])) {
-            $anchor = $matches[0];
-        } else {
-            $anchor = '';
-        }*/
+
 		$i = 0;
 	?>
 
-	<span class="lang_name lang_selector" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><?php echo UserPeer::getCultureIso( $user_culture );?></span> 
-	<span class="slide_arrow lang_selector">▼</span>
 
 	<div id="lang_list" class="box">
 		<?php foreach(UserPeer::getCulturesData() as $culture => $culture_data): ?>
@@ -147,44 +88,7 @@
 	</div>	
 </div>
 
-<div id="bubble_quote">
 
-<?php /*if (IdeaPeer::isThinkingNow()): ?>
-	<?php include_component( 'user', 'thinkingnow' ); ?>
-<? else: */?>
-	<?php /*if (!UserPeer::authIsLoggedIn() ): ?>
-		<?php include_component( 'user', 'minilogin' ); ?>
-	<?php else: ?>
-		<?php include_component( 'user', 'thinkingtime' ); ?>
-	<?php endif */?>
-<?php /*endif */?>    
-    <p id="quote_p"><?php /*
-        $quote = include_component( 'quote', 'showtitle' ); 
-        if ($quote) {
-            echo $quote;
-        }*/
-    ?>&nbsp;</p>
-</div>
-
-<div id="bubble_sound">
-<?php /*if ($_GET['debug'] != 1): ?>
-    <?php 
-        $song = get_component( 'song', 'randomsong' );
-    ?>
-	<div id="mp3" title="<?php echo $song; ?>" class="audio_player"><span><?php echo $song; ?></span></div>
-<?php else: */?>
-    <?php 
-        //$audio = get_component( 'audio', 'random' );
-    ?>
-	<div id="mp3" title="<?php /*echo $audio;*/ ?>" class="audio_item"><span><?php /*echo $audio;*/ ?>&nbsp;</span></div>
-<?php /*endif */?>
-</div>
-
-<noscript>
-	<div id="enable_javascript">
-		<p class="error_list p1 center_text"><?php echo __('Please, enable JavaScript!') ?></p>
-	</div>
-</noscript>
 
 </div>
 
@@ -226,6 +130,5 @@ _gaq.push(
  ga.setAttribute('async', 'true');
  document.documentElement.firstChild.appendChild(ga);
 })();</script>
-<img style="width:0px;height:0px" src="http://www.maploco.com/vm24/s/3901457.png" />
 </body>
 </html>

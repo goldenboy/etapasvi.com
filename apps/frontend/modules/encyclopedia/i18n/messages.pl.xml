@@ -3,11 +3,6 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
 
-      <trans-unit id="1">
-        <source>Dharma Sangha - Encyclopedia - eTapasvi.com</source>
-        <target>Dharma Sangha - Encyklopedia - eTapasvi.com</target>
-      </trans-unit>
-
 <!-- showSuccess -->
       <trans-unit id="1">
         <source>Encyclopedia</source>

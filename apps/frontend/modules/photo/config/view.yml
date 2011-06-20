@@ -1,10 +1,10 @@
 albumsSuccess:
   metas:
-    title:        Dharma Sangha - Photo Albums - eTapasvi.com
+    title:        Photo Albums
 
 albumSuccess:
   metas:
-    title:        Dharma Sangha - Photo Album - eTapasvi.com
+    title:        Photo Album
     
 #indexSuccess:
 #  metas:
@@ -12,7 +12,7 @@ albumSuccess:
 
 showSuccess:
   metas:
-    title:        Dharma Sangha - Photo - eTapasvi.com
+    title:        Photo
 
 contentSuccess:
   has_layout:     false

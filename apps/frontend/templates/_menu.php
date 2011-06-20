@@ -1,8 +1,8 @@
 <ul>
 		<li><a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" id="mi_main"><?php echo __('Home') ?></a></li>
-	</ul>
-	<h3><?php echo __('Dharma Sangha') ?></h3>
-	<ul>
+	<?php /*</ul>
+	<h3><?php echo __('Dharma Sangha') ?></h3> 
+	<ul>*/ ?>
 		<?php /*<li><a href="<?php echo url_for('@intro', true); ?>" title="<?php echo __('Buddha Boy Nepal') ?>" id="mi_intro"><?php echo __('Intro') ?></a></li> */ ?>
         		<li><a href="<?php echo url_for('@biography', true); ?>" title="<?php echo __('Om Namo Guru Buddha Gyani Biography') ?>" id="mi_bio"><?php echo __('Biography') ?></a></li>
 		<li><a href="<?php echo url_for('@news_index', true); ?>" title="<?php echo __('Buddha Boy News') ?>" id="mi_news"><?php echo __('News') ?></a></li>
@@ -10,6 +10,7 @@
 		<li><a href="<?php echo url_for('@video_index', true); ?>" title="<?php echo __('Ram Bahadur Bomjan Video') ?>" id="mi_video"><?php echo __('Video') ?></a></li>
 		<li><a href="<?php echo url_for('@audio_index', true); ?>" title="<?php echo __('Audio') ?>" id="mi_audio"><?php echo __('Audio') ?></a></li>
         <li><a href="<?php echo url_for('@teachings_index', true); ?>" title="<?php echo __('Teachings') ?>" id="mi_teachings"><?php echo __('Teachings') ?></a></li>
+        <li><a href="<?php echo url_for('@feed', true); ?>" title="<?php echo __('Feed') ?>" id="mi_feed"><?php echo __('Feed') ?></a></li>
 		<li><a href="<?php echo url_for('@faq', true); ?>" title="<?php echo __('FAQ') ?>" id="mi_faq"><?php echo __('FAQ') ?></a></li>
 		<li><a href="<?php echo url_for('@blessing', true); ?>" title="<?php echo __('Blessing') ?>" id="mi_blessing"><?php echo __('Blessing') ?></a></li>
 		<li><a href="<?php echo url_for('@project', true); ?>" title="<?php echo __('Dharma Hall') ?>" id="mi_project"><?php echo __('Dharma Hall') ?></a></li>
@@ -19,9 +20,9 @@
 		<?php /*<li><a href="<?php echo url_for('@livestream', true); ?>" title="<?php echo __('Buddha Boy Live Stream') ?>" id="mi_livestream"><?php echo __('Live Stream') ?></a></li>	*/ ?>
 		<?php /* <li><a href="<?php echo url_for('@translation_fundraising', true); ?>" title="<?php echo __('Buddha Boy Live Stream') ?>" id="mi_ltj_fundraising"><?php echo __('Translation Fundraising') ?></a></li>	*/ ?>
 
-	</ul>
+	<?php /*</ul>
 
-	<?php /*<h3><?php echo __('Member') ?></h3> 
+	<h3><?php echo __('Member') ?></h3> 
 	<ul>
 		<?php if (!UserPeer::authIsLoggedIn() ): ?>
 			<li><a href="<?php echo url_for('@user_signup', true); ?>" title="<?php echo __('Sign up') ?>" id="mi_signup"><?php echo __('Sign up') ?></a></li>		
@@ -52,10 +53,9 @@
 		<li><a href="<?php echo url_for('@news_rss', true); ?>" ><?php echo __('RSS') ?></a></li>
 	</ul>
 */?>
-	<h3><?php echo __('Other') ?></h3>
-	<ul>
-		<?php /*<li><a href="<?php echo url_for('@user_member', true); ?>" title="<?php echo __('Member') ?>" id="mi_member"><?php echo __('Member') ?></a></li> */?>
-        <li><a href="<?php echo url_for('@feed', true); ?>" title="<?php echo __('Feed') ?>" id="mi_feed"><?php echo __('Feed') ?></a></li>
+	<?php /*<h3><?php echo __('Other') ?></h3>
+	<ul>*/?>
+		<?php /*<li><a href="<?php echo url_for('@user_member', true); ?>" title="<?php echo __('Member') ?>" id="mi_member"><?php echo __('Member') ?></a></li> */?>        
 		<li><a href="<?php echo url_for('@social_tools', true); ?>" title="<?php echo __('Social Tools') ?>" id="mi_social_tools"><?php echo __('Social Tools') ?></a></li>
 		<li><a href="<?php echo url_for('@search', true); ?>" title="<?php echo __('Search') ?>" id="mi_search"><?php echo __('Search') ?></a></li>
 		<li><a href="<?php echo url_for('@contactus', true); ?>" title="<?php echo __('Contact Us') ?>" id="mi_contactus"><?php echo __('Contact Us') ?></a></li>

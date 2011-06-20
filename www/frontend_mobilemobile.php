@@ -4,7 +4,7 @@
  *
  */
 
-if (!in_array(@$_SERVER['REMOTE_ADDR'], array('109.197.73.109', '::1')))
+if (!in_array(@$_SERVER['REMOTE_ADDR'], array('94.241.41.3', '::1')))
 {
   die('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }

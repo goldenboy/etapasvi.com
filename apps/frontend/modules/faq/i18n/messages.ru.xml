@@ -4,10 +4,6 @@
     <body>
 
 <!--questions -->
-      <trans-unit id="1">
-        <source>Dharma Sangha - FAQ - eTapasvi.com</source>
-        <target>Дхарма Сангха - Вопросы-ответы - eTapasvi.com</target>
-      </trans-unit>
 
       <trans-unit id="1">
         <source>Where is Dharma Sangha now?</source>

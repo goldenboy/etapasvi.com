@@ -3,8 +3,8 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
       <trans-unit id="1">
-        <source>A message of Peace to our World today - eTapasvi.com</source>
-        <target>有个和平讯息，要带给这个世界 - eTapasvi.com</target>
+        <source>A message of peace to our world today</source>
+        <target>有个和平讯息，要带给这个世界</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -69,7 +69,7 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Biography</source>
-        <target></target>
+        <target>自传</target>
       </trans-unit>      
 		<trans-unit id="1">
         <source>Teachings</source>

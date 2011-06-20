@@ -3,11 +3,6 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
 
-      <trans-unit id="1">
-        <source>Dharma Sangha - Dharma Hall - eTapasvi.com</source>
-        <target>Дхарма Сангха - Зал Дхармы - eTapasvi.com</target>
-      </trans-unit>
-
 <!-- showSuccess -->
       <trans-unit id="1">
         <source>Donation</source>

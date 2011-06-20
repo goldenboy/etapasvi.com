@@ -3,18 +3,15 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
       <trans-unit id="1">
-        <source>A message of Peace to our World today - eTapasvi.com</source>
-        <target>Békeüzenet a mai világnak - eTapasvi.com</target>
+        <source>A message of peace to our world today</source>
+        <target>Békeüzenet a mai világnak</target>
       </trans-unit>
+      
       <trans-unit id="1">
-        <source>Buddha Boy -</source>
-        <target>Buddha Fiú -</target>
+        <source>Om Namo Guru Buddha Gyani</source>
+        <target>Om Namo Guru Buddha Gyani</target>
       </trans-unit>
-
-      <trans-unit id="1">
-        <source>World Meditation</source>
-        <target>Világ Meditáció</target>
-      </trans-unit>
+      
       <trans-unit id="1">
         <source>Please, enable JavaScript!</source>
         <target>Kérjük, engedélyezze a JavaScript használatát!</target>

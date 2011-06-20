@@ -3,11 +3,6 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
 
-      <trans-unit id="1">
-        <source>Dharma Sangha - News - eTapasvi.com</source>
-        <target></target>
-      </trans-unit>
-
 <!-- indexSuccess -->
       <trans-unit id="1">
         <source>Buddha Boy - News</source>
@@ -36,7 +31,7 @@
         <target>Békeüzenet</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>of Peace to our World today</source>
+        <source>of peace to our world today</source>
         <target>a mai világnak</target>
       </trans-unit>      
       <trans-unit id="14">
@@ -79,11 +74,6 @@
       </trans-unit>
       
 <!-- teachingsSuccess -->
-      <trans-unit id="1">
-        <source>Dharma Sangha - Teachings - eTapasvi.com</source>
-        <target></target>
-      </trans-unit>  
-
 	  <trans-unit id="1">
         <source>Dictionary</source>
         <target></target>
@@ -94,6 +84,8 @@
         <target></target>
       </trans-unit>
 
+<!-- feedSuccess -->
+      
     </body>
   </file>
 </xliff>

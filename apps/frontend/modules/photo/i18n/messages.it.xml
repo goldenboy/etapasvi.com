@@ -4,21 +4,6 @@
     <body>
 
       <trans-unit id="1">
-        <source>Dharma Sangha - Photo Albums - eTapasvi.com</source>
-        <target>Dharma Sangha - Album fotografici - eTapasvi.com</target>
-      </trans-unit>
-      
-      <trans-unit id="1">
-        <source>Dharma Sangha - Photo Album - eTapasvi.com</source>
-        <target>Dharma Sangha - Album fotografico - eTapasvi.com</target>
-      </trans-unit>
-    
-      <trans-unit id="1">
-        <source>Dharma Sangha - Photo - eTapasvi.com</source>
-        <target>Dharma Sangha - Foto - eTapasvi.com</target>
-      </trans-unit>
-
-      <trans-unit id="1">
         <source>Photo Album</source>
         <target>Album fotografico</target>
       </trans-unit>

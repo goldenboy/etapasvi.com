@@ -65,9 +65,9 @@ class newsComponents extends sfComponents
 	  $context = sfContext::getInstance();
 	  $i18n =  $context->getI18N();
 	
-	  $title = $i18n->__('Dharma Sangha') . ' -';
+	  //$title = $i18n->__('Dharma Sangha') . ' -';
 	  $response = $this->getResponse(); 
-	  $response->setTitle($title . ' ' . $news_title . ' - eTapasvi.com');       	
+	  $response->setTitle($news_title);       	
   	}
   }
 }

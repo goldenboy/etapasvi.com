@@ -4,11 +4,6 @@
     <body>
 
       <trans-unit id="1">
-        <source>Contact Us - eTapasvi.com</source>
-        <target>Contatti - eTapasvi.com</target>
-      </trans-unit>
-      
-      <trans-unit id="1">
         <source>Official website</source>
         <target></target>
       </trans-unit>

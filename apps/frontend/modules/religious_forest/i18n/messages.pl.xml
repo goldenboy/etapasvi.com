@@ -3,12 +3,7 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
 
-      <trans-unit id="1">
-        <source>International petition for a Dharmik Ban (Religious Forest) - eTapasvi.com</source>
-        <target>Międzynarodowa petycja o Dharmik Ban (Religijny Las) - eTapasvi.com</target>
-      </trans-unit>
-      
-      <trans-unit id="1">
+    <trans-unit id="1">
         <source>International petition for a Dharmik Ban (Religious Forest)</source>
         <target>Międzynarodowa petycja o Dharmik Ban (Religijny Las)</target>
       </trans-unit>

@@ -1,6 +1,6 @@
 <?php slot('body_id') ?>body_main<?php end_slot() ?>
 
-<h1><?php echo __('A message') ?><br/><?php echo __('of Peace to our World today') ?></h1>
+<h1><?php echo __('A message') ?><br/><?php echo __('of peace to our world today') ?></h1>
 
 
 <?php include_component('news', 'latest'); ?>

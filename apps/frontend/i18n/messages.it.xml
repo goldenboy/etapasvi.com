@@ -3,7 +3,7 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
       <trans-unit id="1">
-        <source>A message of Peace to our World today - eTapasvi.com</source>
+        <source>A message of peace to our world today</source>
         <target></target>
       </trans-unit>
 
@@ -45,7 +45,7 @@
       </trans-unit>
       <trans-unit id="1">
         <source>News</source>
-        <target></target>
+        <target>Notizie</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Palden Dorje Photo</source>
@@ -121,11 +121,11 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Search</source>
-        <target></target>
+        <target>Cerca</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Contact Us</source>
-        <target></target>
+        <target>Contatti</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Forum</source>
@@ -133,11 +133,11 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Blessing</source>
-        <target></target>
+        <target>Benedizione</target>
       </trans-unit>  
       <trans-unit id="1">
         <source>FAQ</source>
-        <target></target>
+        <target>Domande frequenti</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Translation Fundraising</source>

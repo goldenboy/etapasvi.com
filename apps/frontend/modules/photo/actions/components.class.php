@@ -99,9 +99,9 @@ class photoComponents extends sfComponents
 	    $context = sfContext::getInstance();
 	    $i18n =  $context->getI18N();
 	    
-	    $title = $i18n->__('Dharma Sangha') . ' -';	    
+	    //$title = $i18n->__('Dharma Sangha') . ' -';	    
 	    $response = $this->getResponse(); 
-	    $response->setTitle($title . ' ' . $photo_title . ' - eTapasvi.com'); 	
+	    $response->setTitle($photo_title); 	
   	} elseif (!$photo_title && $this->title) {
   		// если у элемента нет Заголовка, а в URL передан title, редиректим
   		sfActions::redirect( 'photo/show?id=' . (int)$this->id);

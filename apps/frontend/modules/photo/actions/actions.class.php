@@ -125,7 +125,12 @@ class photoActions extends sfActions
     // если передан номер страницы больше, чем имеется страниц
     if ($request->getParameter('page') > $this->pager->getLastPage()) {
     	$this->forward404();
-    }    
+    }
+    
+    if ($this->photoalbum->getTitle()) {
+      $response = $this->getResponse(); 
+	  $response->setTitle($this->photoalbum->getTitle());
+    }
     
     // запоминаем адрес
     //$_SESSION['back_to_photo'] = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];

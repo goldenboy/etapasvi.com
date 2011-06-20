@@ -3,11 +3,6 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
 
-      <trans-unit id="1">
-        <source>Dharma Sangha - News - eTapasvi.com</source>
-        <target>Dharma Sangha - Notizie - eTapasvi.com</target>
-      </trans-unit>
-
 <!-- indexSuccess -->
       <trans-unit id="1">
         <source>Start from</source>
@@ -32,7 +27,7 @@
         <target>Un messaggio</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>of Peace to our World today</source>
+        <source>of peace to our world today</source>
         <target>di Pace al nostro mondo, oggi</target>
       </trans-unit>
       <trans-unit id="14">
@@ -74,11 +69,7 @@
         <target>Testo originale</target>
       </trans-unit>
       
-<!-- teachingsSuccess -->
-      <trans-unit id="1">
-        <source>Dharma Sangha - Teachings - eTapasvi.com</source>
-        <target>Dharma Sangha - Insegnamenti - eTapasvi.com</target>
-      </trans-unit>     
+<!-- teachingsSuccess --> 
 
 	  <trans-unit id="1">
         <source>Dictionary</source>
@@ -91,10 +82,6 @@
       </trans-unit>
 
 <!-- feedSuccess -->
-      <trans-unit id="1">
-        <source>Feed - eTapasvi.com</source>
-        <target></target>
-      </trans-unit>  
 
     </body>
   </file>

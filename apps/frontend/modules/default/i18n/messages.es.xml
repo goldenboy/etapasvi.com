@@ -4,8 +4,8 @@
     <body>
 
       <trans-unit id="1">
-        <source>Page Not Found or Not Translated - eTapasvi.com</source>
-        <target>Página No Encontrada o No Traducida - eTapasvi.com</target>
+        <source>Page Not Found or Not Translated</source>
+        <target>Página No Encontrada o No Traducida</target>
       </trans-unit>
 
       <trans-unit id="1">

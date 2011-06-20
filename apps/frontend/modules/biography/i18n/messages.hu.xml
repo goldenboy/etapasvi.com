@@ -3,11 +3,6 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
 
-      <trans-unit id="1">
-        <source>Dharma Sangha - Biography - eTapasvi.com</source>
-        <target>Dharma Sangha - Életrajz - eTapasvi.com</target>
-      </trans-unit>
-
 <!-- showSuccess -->
       <trans-unit id="1">
         <source>Family and Childhood</source>

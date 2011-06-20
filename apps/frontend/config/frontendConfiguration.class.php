@@ -8,7 +8,7 @@ class frontendConfiguration extends sfApplicationConfiguration
     $this->dispatcher->connect('request.filter_parameters', array($this, 'filterRequestParameters'));
     
     // обработка формата
-    //$this->dispatcher->connect('view.configure_format', array($this, 'configureIPhoneFormat'));
+    $this->dispatcher->connect('view.configure_format', array($this, 'configureMobileFormat'));
   }
   
   /**
@@ -24,9 +24,26 @@ class frontendConfiguration extends sfApplicationConfiguration
     
     // установка формата запрос для мобильной версии - mobile   
 	if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' ) {
-      //$request->setRequestFormat('mobile');
+      $request->setRequestFormat('mobile');
     }    
 
     return $parameters;
+  }
+  
+  /**
+   * Настройка view.yml для мобильной версии.
+   * Добавить или удалить ccs/js не удалось
+   *
+   * @param sfEvent $event
+   */
+  public function configureMobileFormat(sfEvent $event)
+  {
+    if ('mobile' == $event['format'])
+    {      
+      //$response = $event->getResponse();
+      //$response = sfContext::getResponse();
+      //echo gettype($response);
+      //$response->removeStylesheet('/css/css.css');
+    }
   }
 }
