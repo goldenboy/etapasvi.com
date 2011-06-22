@@ -379,9 +379,9 @@ p.p2{
 	}
 
 #content {
-	min-height: 578px;
+	min-height: 496px;
 	height: auto !important; /* Для всех браузеров кроме <IE6 */
-	height: 578px;
+	height: 496px;
 	}
 
 #footer { 	
@@ -389,8 +389,7 @@ p.p2{
 	font-size:9px;
 	color: #888888;
 	padding: 10px 0;
-	margin: 40px 0;
-	border-top: 1px solid #ADACBD;
+	margin: 10px 0;
 	text-align: center;
 	}
 /* IE 7 */
@@ -398,12 +397,13 @@ p.p2{
     margin: 20px 0 40px;
     }
 #share {
+    border-bottom: 1px solid #ADACBD;
     margin-bottom: 7px;
     width: 100%;
     }
 .share_item {
-    width: 16%;
-    /*padding: 0 3px;*/
+    /*width: 16%;*/
+    padding: 0 0 9px;
     }
 
 /* bubbles */

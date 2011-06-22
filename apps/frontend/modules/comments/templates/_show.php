@@ -66,7 +66,7 @@
     }
 </style>
 */ ?>
-<noscript><p class="error_list p1 center_text"><?php echo __('Please, enable JavaScript!') ?></p></noscript>
+<?php /*<noscript><p class="error_list p1 center_text"><?php echo __('Please, enable JavaScript!') ?></p></noscript> */ ?>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a> 
 
 <?php /*include_partial('comments/showlist', array('comments_list'=>$comments_list) ); */?>

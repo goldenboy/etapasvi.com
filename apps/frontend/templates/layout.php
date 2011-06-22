@@ -31,13 +31,11 @@
     <div id="menu">
         <?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	
     </div>
-	<div id="footer">
-		<?php if ($user_culture != 'ru'): ?>
-            If you would like to translate information into another language, please email us at <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a><br/><br/>
-        <?php endif ?>
-        
+	<div id="footer">    
         <?php include_partial('global/share'); ?>
-
+		<?php if ($user_culture != 'ru'): ?>
+            If you would like to translate information into another language, please email at <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a><br/>
+        <?php endif ?>                
 		<?php echo __('Copyright') ?> &copy; 2009-<?php echo date("Y"); ?>, www.eTapasvi.com
 		<br/><?php echo __('All Rights Reserved') ?>.
 		<?php /*<br/><a href="mailto:saynt2day@gmail.com" title="saynt2day/Semyon/etapasvi">saynt2day</a>		*/?>

@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php $user_culture = $sf_user->getCulture(); echo $user_culture; ?>" >
 <head>
 <?php include_http_metas() ?>
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 <?php /*include_title()*/ ?>	
 <?php if (UserPeer::isHomePage()): ?>
     <title><?php echo sfConfig::get('app_site_name'); ?></title>
@@ -10,6 +11,19 @@
 <?php endif ?>
 <link rel="stylesheet" type="text/css" href="/css/m_css.css" />	
 <link rel="shortcut icon" type="image/x-icon" href="http://<?php echo sfConfig::get('app_domain_name'); ?>/favicon.ico" />
+<script type="text/javascript">
+    function switchCulture() {
+        var c_list_top = document.getElementById("culture_list_top");
+
+        if (!c_list_top) {
+            var c_list = document.getElementById("culture_list").cloneNode(true);
+            c_list.id = "culture_list_top";
+            document.getElementById("header").appendChild(c_list);
+        } else {
+            c_list_top.parentNode.removeChild(c_list_top);
+        }
+    }
+</script>
 </head>
 
 <?php $body_id = get_slot('body_id'); ?>
@@ -20,7 +34,7 @@
 
 <div id="header">
 	<a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" class="no_decor" id="buddle_title"><i></i>Tapasvi.<span>com</span></a>
-    <a href="javascript:window.scrollTo(0,1000);void(0);" onclick="" id="bubble_lang"><?php echo UserPeer::getCultureIso($user_culture); ?></a>
+    <a href="#" onclick="switchCulture()" id="bubble_lang"><?php echo UserPeer::getCultureIso($user_culture); ?></a> <span class="slide_arrow" onclick="switchCulture()">▼</span>
 </div>
 
 

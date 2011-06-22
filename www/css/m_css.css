@@ -180,7 +180,11 @@ a.DOC {
     margin-top: 6px;
 	text-align: left;
 	}
+#share {
+    margin-top: 6px;
+    }
 .share_item {
+    float: left;
     padding: 0 2px;
     text-align: left;
     }
@@ -188,7 +192,9 @@ a.DOC {
 /* bubbles */
 #bubble_lang {
     margin-left: 15px;
-    float: left;
+    }
+#culture_list_top {
+    clear: left;
     }
 #culture_list{
     margin: 5px 0;
