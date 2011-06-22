@@ -7,10 +7,18 @@ prod:
     
 mobile:
   .settings:
-    error_reporting:        <?php echo ((E_ALL | E_STRICT) ^ E_NOTICE)."\n" ?>
     no_script_name:         true
     logging_enabled:        true
     cache:           		true
+    etag:            		false
+
+mobiledev:
+  .settings:
+    error_reporting:        <?php echo (E_ALL | E_STRICT)."\n" ?>
+    web_debug:              true
+    no_script_name:         true
+    logging_enabled:        true
+    cache:           		false
     etag:            		false
 
 cache:

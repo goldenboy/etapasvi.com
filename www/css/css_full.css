@@ -281,19 +281,14 @@ code {
 	background: url("../i/interface_sprite.jpg") no-repeat scroll -697px -184px transparent;
     color: #C5C3D3;
     float: right;
-    font: bold 8pt/16pt georgia;
+    font: bold 8pt/23px georgia;
     margin-top: 73px;
     padding: 0 0 0 24px;
 	}
-#header #buddle_title a {
-	text-decoration: none;
-	}
-#header #buddle_title a:visited { 
+#header #buddle_title { 
 	color: #9075C2;
 	}
-#header #buddle_title a.zone:visited,
-#header #buddle_title a.zone:link, 
-#header #buddle_title a.zone:active {
+#header #buddle_title span {
 	color: #ADACBD;
 	}
 	
@@ -402,13 +397,6 @@ p.p2{
 *:first-child+html #footer { 
     margin: 20px 0 40px;
     }
-#footer a {
-	color:#988F5E;
-	font-family:georgia;
-	font-weight:bold;
-	letter-spacing:1px;
-	text-decoration:none;
-	}
 #share {
     margin-bottom: 7px;
     width: 100%;

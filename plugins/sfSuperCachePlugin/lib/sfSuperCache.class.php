@@ -155,7 +155,7 @@ class sfSuperCache
       // обращение через консоль
       // баг - в переключателе языка http://www.etapasvi.com/ru/frontfrontend.php/
       $path_info = parse_url($url);
-      $html = shell_exec('php ' . $_SERVER['PWD'] . '/www/frontfrontend.php ' . $path_info['path']);
+      $html = shell_exec('php ' . $_SERVER['PWD'] . '/www/frontend_prodprod.php ' . $path_info['path']);
     } else {
       // обращение через браузер
       $ch = curl_init();

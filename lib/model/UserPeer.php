@@ -249,6 +249,48 @@ class UserPeer extends BaseUserPeer
 	    	return false;
 	    }
 	}
+	
+	/**
+	 * Проверка, является ли страница главной
+	 *
+	 * @param string $url адрес для проверки
+	 * @return unknown
+	 */
+	public static function isHomePage( $url = '' )
+	{
+	    if (!$url) {
+	        $url = sfContext::getInstance()->getRequest()->getUri();
+	    }
+	    // если в адресе только 2 слэша, значит мы на главной
+	    $parse_url = parse_url($url);
+	    if ( in_array( str_replace('/' , '', $parse_url['path']), UserPeer::getCultures()) ) {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+	
+	/**
+	 * Переключение адреса на мобильную версию и обратно
+	 *
+	 * @param string $url адрес
+	 * @return string
+	 */
+	public static function switchUrlMobile( $url = '' )
+	{
+	    if (!$url) {
+	        $url = sfContext::getInstance()->getRequest()->getUri();
+	    }
+
+	    if (strstr(sfConfig::get('app_domain_name_full'), $url)) {
+	        // переключаем на мобильную версию
+	        $result_url = str_replace(sfConfig::get('app_domain_name_full'), sfConfig::get('app_domain_name_mobile'), $url);
+	    } else {
+	        // переключение на полную версию
+	        $result_url = str_replace(sfConfig::get('app_domain_name_mobile'), sfConfig::get('app_domain_name_full'), $url);
+	    }
+	    return $result_url;
+	}
 		
 	
 //	/**

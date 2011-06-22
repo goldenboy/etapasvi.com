@@ -5,7 +5,7 @@
 
 
 // если к скрипту обратились из консоли, подменяем пермененные в $_SERVER
-if ($_SERVER['SHELL'] || !$_SERVER['DOCUMENT_ROOT']) {
+if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
 	
 // из браузера
 //    [PATH] => /bin:/usr/bin:/sbin:/usr/sbin

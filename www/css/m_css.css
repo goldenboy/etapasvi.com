@@ -3,6 +3,28 @@
 	padding:0;
 }
 
+/* menu items */
+#body_main #mi_main,
+#body_news #mi_news,
+#body_photo #mi_photo,
+#body_video #mi_video,
+#body_bio #mi_bio,
+#body_encyclopedia #mi_encyclopedia,
+#body_contactus #mi_contactus,
+#body_search #mi_search,
+#body_project #mi_project,
+#body_faq #mi_faq,
+#body_blessing #mi_blessing,
+#body_translation_fundraising #mi_translation_fundraising,
+#body_social_tools #mi_social_tools,
+#body_audio #mi_audio,
+#body_teachings #mi_teachings,
+#body_religious_forest #mi_religious_forest,
+#body_feed #mi_feed, 
+#body_donation #mi_donation {
+    display: none;
+	}
+
 body { 
     font: 0.7em/15px Verdana;
 	text-align: justify;
@@ -95,33 +117,30 @@ a.doc,
 a.DOC {
     background-position: -689px -247px;
     }
-
-#header { 
-	height: 127px;
-    left: -266px;
+#wrapper {
+    padding: 3px;
+    }
+#header {
+    line-height: 22px;
     overflow: hidden;
-    position: absolute;
-    width: 925px;
-	zoom: 1;
+    width: 100%;
+    }
+#header #buddle_title {
+    display: block;
+    float: left;
+    font: bold 8pt/23px georgia;
+    height: 24px;
 	}
 
-#header #buddle_title {
-	background: url("../i/interface_sprite.jpg") no-repeat scroll -697px -184px transparent;
-    color: #C5C3D3;
-    float: right;
-    font: bold 8pt/16pt georgia;
-    margin-top: 73px;
-    padding: 0 0 0 24px;
+#buddle_title i {
+    background: url("../i/interface_sprite.jpg") no-repeat scroll -697px -184px transparent;
+    display: block;
+    float: left;
+    height: 24px;
+    width: 24px;
 	}
-#header #buddle_title a {
-	text-decoration: none;
-	}
-#header #buddle_title a:visited { 
-	color: #9075C2;
-	}
-#header #buddle_title a.zone:visited,
-#header #buddle_title a.zone:link, 
-#header #buddle_title a.zone:active {
+
+#header #buddle_title span {
 	color: #ADACBD;
 	}
 	
@@ -144,6 +163,7 @@ a.DOC {
 #menu a:hover { 
 	border-bottom:1px dotted gray;
 	}
+
 #requirements {
 	margin-left: 600px; 
 	position: absolute; 
@@ -152,133 +172,27 @@ a.DOC {
 	width: 160px;
 	}	
 	
-#content_wrapper {
-	left:0;
-	position:absolute;
-	top:47px;
-	width:566px;
-	}
-
-#content {
-	min-height: 578px;
-	height: auto !important; /* Для всех браузеров кроме <IE6 */
-	height: 578px;
-	}
-
 #footer { 	
-	color:#808080;
-	font-family:arial,helvetica,sanserif;
-	font-size:11px;
-	padding: 10px 0;
-	margin: 40px 0;
+	font-family:verdana;
+	font-size:9px;
+	color: #888888;
 	border-top: 1px solid #ADACBD;
-	text-align: center;
+    margin-top: 6px;
+	text-align: left;
 	}
-/* IE 7 */
-*:first-child+html #footer { 
-    margin: 20px 0 40px;
-    }
-#footer a {
-	color:#988F5E;
-	font-family:georgia;
-	font-weight:bold;
-	letter-spacing:1px;
-	text-decoration:none;
-	}
-#share {
-    margin-bottom: 7px;
-    width: 100%;
-    }
 .share_item {
-    width: 16%;
-    /*padding: 0 3px;*/
+    padding: 0 2px;
+    text-align: left;
     }
 
 /* bubbles */
-
-#bubble_quote {
-    background: url("../i/interface_sprite.jpg") no-repeat scroll -310px 0 transparent;
-    color: #555753;
-    height: 156px;
-    left: -223px;
-    line-height: 19px;
-    padding: 63px 0 0 32px;
-    position: absolute;
-    top: 316px;
-    width: 189px;
-	}
-
-#bubble_quote p {
-	font: italic 8pt/20pt georgia;
-    margin-right: 27px;    
-    text-align: center;
-	}
-*:first-child+html #bubble_quote p {
-    padding-top: 10px;
+#bubble_lang {
+    margin-left: 15px;
+    float: left;
     }
-
-#bubble_click {
-	background: url("../i/interface_sprite.jpg") no-repeat scroll 1px -22px transparent;
-    height: 308px;
-    left: -308px;
-    position: absolute;
-    top: 22px;
-    width: 300px;
-    z-index: 100;
-	}
-#bubble_click img {
-	border: 0;
-	}
-#bubble_mantra {
-	background: url("../i/interface_sprite.jpg") no-repeat scroll -530px 0 transparent;
-    color: #9685BA;
-    height: 70px;
-    left: -2px;
-    padding: 115px 0 0;
-    position: absolute;
-    text-align: center;
-    top: -116px;
-    width: 184px;
-    z-index: 2;
-	}
-#bubble_mantra img {
-	margin-top:4px;
-}
-/*
-#bubble_countdown acronym {
-	cursor:default;
-	display:block;
-	height:50px;
-	}
-#bubble_countdown .hasCountdown {
-	background-color: transparent;
-	border: 0;
-	}
-
-#bubble_countdown #countdown {
-	font-size: 12px;
-	}
-*/
-/* Opera */
-/*
-@media all and (min-width: 0px) {
-	#bubble_countdown .countdown_amount {
-		font-size: 150%;
-	}
-}*/
-
-#bubble_lang { 
-	background: url("../i/interface_sprite.jpg") no-repeat scroll -530px -185px transparent;
-    color: #9685BA;
-    font: 8pt/16pt georgia;
-    height: 55px;
-    left: 263px;
-    padding: 46px 0 0;
-    position: absolute;
-    text-align: center;
-    top: -48px;
-    width: 90px;
-	}
+#culture_list{
+    margin: 5px 0;
+    }
 .slide_arrow {
 	cursor:pointer;
 	font-size:0.7em;
@@ -287,50 +201,6 @@ a.DOC {
 /* IE 6 */
 * html .slide_arrow {
 	font-size:6px;
-	}
-.lang_name {
-	color:#9075C2;
-	cursor:pointer;
-	text-decoration:underline;
-	}
-#lang_list {
-	background: white;
-	display:none;
-	padding:0;
-	margin:0;
-	text-align:left;
-	margin-left:23px;
-	padding:2px 0 2px 9px;
-	width:106px;
-	}
-#bubble_lang p { 
-	text-align: center;
-	padding-left:1px;
-	}
-    /*
-#bubble_login {
-	background:transparent url(../i/bg_circle_medium.jpg) no-repeat scroll 0 0;
-	height:140px;
-	left:43px;
-    line-height:19px;
-	padding:75px 0 0 33px;
-	position:absolute;
-	top:316px;
-	width:181px;
-	}
-#bubble_login .login_form_element td {
-	text-align: right;
-	}*/
-#bubble_sound {
-	background: url("../i/interface_sprite.jpg") no-repeat scroll -620px -185px transparent;
-    height: 17px;
-    left: 450px;
-    overflow: hidden;
-    padding: 17px 12px;
-    position: absolute;
-    top: 7px;
-    width: 25px;
-	zoom: 1;
 	}
 
 .audio_item {
@@ -911,11 +781,6 @@ div.grippie {
 	}
 .date,
 .source,
-#footer {
-	font-family:verdana;
-	font-size:9px;
-	color: #888888;
-	}
 .light{	
 	color: #888888;
 	}
