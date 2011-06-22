@@ -99,7 +99,7 @@ class sfSuperCache
 	if ($all_cultures ) {
 		// удаляем для всех языков
 		$culture_list = UserPeer::getCultures();
-		$path 		= '/sf_culture/' . substr($path, 4, strlen($path));		
+		$path 		= '/sf_culture/' . preg_replace("/\/[^\/]+\//", '', $path); //substr($path, 4, strlen($path));		
 	} else {
 		$culture_list = array('fake');
 	}
