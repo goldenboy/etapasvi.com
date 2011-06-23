@@ -465,8 +465,11 @@ input[type="radio"] {
 */
 
 /* comments*/
-.dsq-brlink {
+#dsq-brlink{
+    display: none;
     font-size: 9.5px;
+    position: relative;
+    top: -10px;
     }
 /*
 #comments_form label {

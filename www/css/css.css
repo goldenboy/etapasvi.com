@@ -835,8 +835,20 @@ input[type="radio"] {
 */
 
 /* comments*/
-.dsq-brlink {
+html #disqus_thread {
+    margin-bottom: 0;
+    }
+#dsq-brlink{
+    display: none;
     font-size: 9.5px;
+    position: relative;
+    top: -10px;
+    }
+#wrapper #dsq-content {
+    font-size: 11px;
+    }
+#dsq-content .dsq-item-trackback {
+    display: none;
     }
 /*
 #comments_form label {
@@ -1121,7 +1133,9 @@ div.grippie {
 	}
 .date {
     font-size: 9.5px;
-    white-space: nowrap;
+    }
+.source {
+    font-size: 9px;
     }
 .date,
 .source,
