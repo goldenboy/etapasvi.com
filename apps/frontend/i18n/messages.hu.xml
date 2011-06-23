@@ -216,6 +216,16 @@
         <target></target>
       </trans-unit>
       
+<!-- mobile -->
+      <trans-unit id="1">
+        <source>Mobile</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Classic</source>
+        <target></target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

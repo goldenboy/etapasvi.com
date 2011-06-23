@@ -223,6 +223,16 @@
         <target>Время</target>
       </trans-unit>
       
+<!-- mobile -->
+      <trans-unit id="1">
+        <source>Mobile</source>
+        <target>Мобильная версия</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Classic</source>
+        <target>Полная версия</target>
+      </trans-unit>
+
 <!-- утф -->
     </body>
   </file>

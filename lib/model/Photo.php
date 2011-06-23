@@ -11,7 +11,7 @@ class Photo extends BasePhoto
 	 */
 	public function __call($method, $arguments)
 	{
-	  $data = split('I18n', $method, 2);
+	  $data = preg_split('/I18n/', $method, 2);
 	
 	  if( count($data) != 2 )
 	  {
