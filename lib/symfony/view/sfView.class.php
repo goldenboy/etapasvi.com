@@ -512,10 +512,16 @@ abstract class sfView
     
     // saynt2day
     // В мобильной версии, если файл не найден - берём файл без формата          
-    if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' ) {
-      if (preg_match("/\.[^.]+\.[^.]+/", $this->template ) && !is_readable($this->directory.'/'.$this->template)) {
-        $template   = preg_replace("/(.*)\.[^.]+(\.php)/", '$1$2', $this->template);
-        //$this->extension  = '.php';
+    if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' 
+         && preg_match("/\.[^.]+\.[^.]+/", $this->template)          
+         && !is_readable($this->directory.'/'.$this->template)) 
+    {        
+      if (!$this->directory && is_readable($this->context->getConfiguration()->getDecoratorDir($template).'/'.$this->template)) {
+          // файл лежит в директории шаблонов приложения, в этом случае $template приходит без абслютного пути
+          // и getTemplateDir для него путь не возвращает
+      } else {    
+        // убираем из названия файла указание на формат
+        $template   = preg_replace("/(.*)\.[^.]+(\.php)/", '$1$2', $this->template);        
         $this->setTemplate($template);
       }
     }

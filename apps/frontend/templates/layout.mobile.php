@@ -33,20 +33,25 @@
 <div id="wrapper">
 
 <div id="header">
-	<a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" class="no_decor" id="buddle_title"><i></i>Tapasvi.<span>com</span></a>
-    <a href="#" onclick="switchCulture()" id="bubble_lang"><?php echo UserPeer::getCultureIso($user_culture); ?></a> <span class="slide_arrow" onclick="switchCulture()">▼</span>
+    <table cellspacing="0" cellpadding="0">
+    <tr>
+        <td>
+            <a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" class="no_decor" id="buddle_title"><i></i>Tapasvi.<span>com</span></a>
+        </td>
+        <td>
+            <a href="#" onclick="switchCulture()" id="bubble_lang"><?php echo UserPeer::getCultureIso($user_culture); ?></a> <span class="slide_arrow" onclick="switchCulture()">▼</span>
+        </td>
+    </tr>
+    </table>
 </div>
-
-
 
 <div id="content_wrapper">    
 	<div id="content">
 		<?php echo $sf_content ?>
-        <br/>
-        <?php include_partial('global/share'); ?>
 	</div>
 
 	<div id="footer">        
+        <?php include_partial('global/share'); ?>
         <div id="culture_list">
             <?php 
                 $uri          = $sf_request->getPathInfo();
@@ -86,5 +91,7 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<?php /* если стили для кнопки Одноклассников подключить выше, в Sony Ericsson K750i пропадает или глючит всё, что находится ниже */ ?>
+<link href="http://stg.odnoklassniki.ru/share/odkl_share.css" rel="stylesheet">
 </body>
 </html>

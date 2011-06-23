@@ -4,24 +4,8 @@
 }
 
 /* menu items */
-#body_main #mi_main,
-#body_news #mi_news,
-#body_photo #mi_photo,
-#body_video #mi_video,
-#body_bio #mi_bio,
-#body_encyclopedia #mi_encyclopedia,
-#body_contactus #mi_contactus,
-#body_search #mi_search,
-#body_project #mi_project,
-#body_faq #mi_faq,
-#body_blessing #mi_blessing,
-#body_translation_fundraising #mi_translation_fundraising,
-#body_social_tools #mi_social_tools,
-#body_audio #mi_audio,
-#body_teachings #mi_teachings,
-#body_religious_forest #mi_religious_forest,
-#body_feed #mi_feed, 
-#body_donation #mi_donation {
+#mi_main,
+#mi_main a {
     display: none;
 	}
 
@@ -33,16 +17,13 @@ body {
 
 h1,
 h2.like_h1 {
-	background: none;
-	font-family:georgia;
-	font-style:normal;
-	font-size:16px;
-	margin:20px auto 23px;
-	color: #ADACBD;
-	font-weight: bold;
-	padding: 0;
-	text-align: center;
-	width:500px;
+    background: none repeat scroll 0 0 transparent;
+    color: #ADACBD;
+    font-family: georgia;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    margin: 0 0 7px;
 	}
 h1.m_bottom {
 	margin:20px auto 31px;
@@ -127,7 +108,6 @@ a.DOC {
     }
 #header #buddle_title {
     display: block;
-    float: left;
     font: bold 8pt/23px georgia;
     height: 24px;
 	}
@@ -143,7 +123,6 @@ a.DOC {
 #header #buddle_title span {
 	color: #ADACBD;
 	}
-	
 #menu  ul {
 	list-style-image:none;
 	list-style-position:outside;
@@ -176,16 +155,19 @@ a.DOC {
 	font-family:verdana;
 	font-size:9px;
 	color: #888888;
-	border-top: 1px solid #ADACBD;
     margin-top: 6px;
 	text-align: left;
 	}
 #share {
-    margin-top: 6px;
+    border-bottom: 1px solid #ADACBD;
+    margin-top: 8px;
+    padding-bottom: 8px;
+    overflow: hidden;
+    width: 100%;
     }
 .share_item {
-    float: left;
-    padding: 0 2px;
+    float: left;    
+    padding: 0 3px;
     text-align: left;
     }
 

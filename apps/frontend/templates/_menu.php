@@ -1,22 +1,22 @@
 <ul>
-		<li><a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" id="mi_main"><?php echo __('Home') ?></a></li>
+		<li id="mi_main"><a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" ><?php echo __('Home') ?></a></li>
 	<?php /*</ul>
 	<h3><?php echo __('Dharma Sangha') ?></h3> 
 	<ul>*/ ?>
 		<?php /*<li><a href="<?php echo url_for('@intro', true); ?>" title="<?php echo __('Buddha Boy Nepal') ?>" id="mi_intro"><?php echo __('Intro') ?></a></li> */ ?>
-        		<li><a href="<?php echo url_for('@biography', true); ?>" title="<?php echo __('Om Namo Guru Buddha Gyani Biography') ?>" id="mi_bio"><?php echo __('Biography') ?></a></li>
-		<li><a href="<?php echo url_for('@news_index', true); ?>" title="<?php echo __('Buddha Boy News') ?>" id="mi_news"><?php echo __('News') ?></a></li>
-		<li><a href="<?php echo url_for('@photo_albums', true); ?>" title="<?php echo __('Palden Dorje Photo') ?>" id="mi_photo"><?php echo __('Photo') ?></a></li>
-		<li><a href="<?php echo url_for('@video_index', true); ?>" title="<?php echo __('Ram Bahadur Bomjan Video') ?>" id="mi_video"><?php echo __('Video') ?></a></li>
-		<li><a href="<?php echo url_for('@audio_index', true); ?>" title="<?php echo __('Audio') ?>" id="mi_audio"><?php echo __('Audio') ?></a></li>
-        <li><a href="<?php echo url_for('@teachings_index', true); ?>" title="<?php echo __('Teachings') ?>" id="mi_teachings"><?php echo __('Teachings') ?></a></li>
-        <li><a href="<?php echo url_for('@feed', true); ?>" title="<?php echo __('Feed') ?>" id="mi_feed"><?php echo __('Feed') ?></a></li>
-		<li><a href="<?php echo url_for('@faq', true); ?>" title="<?php echo __('FAQ') ?>" id="mi_faq"><?php echo __('FAQ') ?></a></li>
-		<li><a href="<?php echo url_for('@blessing', true); ?>" title="<?php echo __('Blessing') ?>" id="mi_blessing"><?php echo __('Blessing') ?></a></li>
-		<li><a href="<?php echo url_for('@project', true); ?>" title="<?php echo __('Dharma Hall') ?>" id="mi_project"><?php echo __('Dharma Hall') ?></a></li>
-		<li><a href="<?php echo url_for('@religious_forest', true); ?>" title="<?php echo __('Religious Forest') ?>" id="mi_religious_forest"><?php echo __('Religious Forest') ?></a></li>
-		<li><a href="<?php echo url_for('@encyclopedia', true); ?>" title="<?php echo __('Encyclopedia') ?>" id="mi_encyclopedia"><?php echo __('Encyclopedia') ?></a></li>
-        <li><a href="<?php echo url_for('@donation', true); ?>" title="<?php echo __('Donation') ?>" id="mi_donation" x><?php echo __('Donation') ?></a></li>
+        <li id="mi_bio"><a href="<?php echo url_for('@biography', true); ?>" title="<?php echo __('Om Namo Guru Buddha Gyani Biography') ?>"><?php echo __('Biography') ?></a></li>
+		<li id="mi_news"><a href="<?php echo url_for('@news_index', true); ?>" title="<?php echo __('Buddha Boy News') ?>"><?php echo __('News') ?></a></li>
+		<li id="mi_photo"><a href="<?php echo url_for('@photo_albums', true); ?>" title="<?php echo __('Palden Dorje Photo') ?>"><?php echo __('Photo') ?></a></li>
+		<li id="mi_video"><a href="<?php echo url_for('@video_index', true); ?>" title="<?php echo __('Ram Bahadur Bomjan Video') ?>"><?php echo __('Video') ?></a></li>
+		<li id="mi_audio"><a href="<?php echo url_for('@audio_index', true); ?>" title="<?php echo __('Audio') ?>"><?php echo __('Audio') ?></a></li>
+        <li id="mi_teachings"><a href="<?php echo url_for('@teachings_index', true); ?>" title="<?php echo __('Teachings') ?>"><?php echo __('Teachings') ?></a></li>
+        <li id="mi_feed"><a href="<?php echo url_for('@feed', true); ?>" title="<?php echo __('Feed') ?>"><?php echo __('Feed') ?></a></li>
+		<li id="mi_faq"><a href="<?php echo url_for('@faq', true); ?>" title="<?php echo __('FAQ') ?>"><?php echo __('FAQ') ?></a></li>
+		<li id="mi_blessing"><a href="<?php echo url_for('@blessing', true); ?>" title="<?php echo __('Blessing') ?>"><?php echo __('Blessing') ?></a></li>
+		<li id="mi_project"><a href="<?php echo url_for('@project', true); ?>" title="<?php echo __('Dharma Hall') ?>"><?php echo __('Dharma Hall') ?></a></li>
+		<li id="mi_religious_forest"><a href="<?php echo url_for('@religious_forest', true); ?>" title="<?php echo __('Religious Forest') ?>"><?php echo __('Religious Forest') ?></a></li>
+		<li id="mi_encyclopedia"><a href="<?php echo url_for('@encyclopedia', true); ?>" title="<?php echo __('Encyclopedia') ?>"><?php echo __('Encyclopedia') ?></a></li>
+        <li id="mi_donation"><a href="<?php echo url_for('@donation', true); ?>" title="<?php echo __('Donation') ?>"><?php echo __('Donation') ?></a></li>
 		<?php /*<li><a href="<?php echo url_for('@livestream', true); ?>" title="<?php echo __('Buddha Boy Live Stream') ?>" id="mi_livestream"><?php echo __('Live Stream') ?></a></li>	*/ ?>
 		<?php /* <li><a href="<?php echo url_for('@translation_fundraising', true); ?>" title="<?php echo __('Buddha Boy Live Stream') ?>" id="mi_ltj_fundraising"><?php echo __('Translation Fundraising') ?></a></li>	*/ ?>
 
@@ -56,9 +56,9 @@
 	<?php /*<h3><?php echo __('Other') ?></h3>
 	<ul>*/?>
 		<?php /*<li><a href="<?php echo url_for('@user_member', true); ?>" title="<?php echo __('Member') ?>" id="mi_member"><?php echo __('Member') ?></a></li> */?>        
-		<li><a href="<?php echo url_for('@social_tools', true); ?>" title="<?php echo __('Social Tools') ?>" id="mi_social_tools"><?php echo __('Social Tools') ?></a></li>
-		<li><a href="<?php echo url_for('@search', true); ?>" title="<?php echo __('Search') ?>" id="mi_search"><?php echo __('Search') ?></a></li>
-		<li><a href="<?php echo url_for('@contactus', true); ?>" title="<?php echo __('Contact Us') ?>" id="mi_contactus"><?php echo __('Contact Us') ?></a></li>
+		<li id="mi_social_tools"><a href="<?php echo url_for('@social_tools', true); ?>" title="<?php echo __('Social Tools') ?>"><?php echo __('Social Tools') ?></a></li>
+		<li id="mi_search"><a href="<?php echo url_for('@search', true); ?>" title="<?php echo __('Search') ?>"><?php echo __('Search') ?></a></li>
+		<li id="mi_contactus"><a href="<?php echo url_for('@contactus', true); ?>" title="<?php echo __('Contact Us') ?>"><?php echo __('Contact Us') ?></a></li>
 	</ul>
 <?php /* 
 	<h3><?php echo __('Idea of the Week') ?></h3>

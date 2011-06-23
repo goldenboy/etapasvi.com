@@ -146,12 +146,17 @@ class sfPHPView extends sfView
     if (!is_readable($this->getDecoratorDirectory().'/'.$this->getDecoratorTemplate()))
     {
       // saynt2day
-      // если файл не найден - берём файл без формата          
-      $template   = preg_replace("/(.*)\.[^.]+(\.php)/", '$1$2', $this->getDecoratorTemplate());      
-      $this->setDecoratorTemplate($template);
+      // В мобильной версии, если файл не найден - берём файл без формата           
+      if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' && preg_match("/\.[^.]+\.[^.]+/", $this->getDecoratorTemplate())) {     
+        // убираем из названия файла указание на формат
+        $template   = preg_replace("/(.*)\.[^.]+(\.php)/", '$1$2', $this->getDecoratorTemplate());      
+        $this->setDecoratorTemplate($template);
       
-      if (!is_readable($this->getDecoratorDirectory().'/'.$this->getDecoratorTemplate())) {
-        throw new sfRenderException(sprintf('The decorator template "%s" does not exist or is unreadable in "%s".', $this->decoratorTemplate, $this->decoratorDirectory));
+        if (!is_readable($this->getDecoratorDirectory().'/'.$this->getDecoratorTemplate())) {
+          throw new sfRenderException(sprintf('The decorator template "%s" does not exist or is unreadable in "%s".', $this->decoratorTemplate, $this->decoratorDirectory));
+        }
+      } else {
+          throw new sfRenderException(sprintf('The decorator template "%s" does not exist or is unreadable in "%s".', $this->decoratorTemplate, $this->decoratorDirectory));
       }
     }
 

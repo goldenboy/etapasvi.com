@@ -4,25 +4,25 @@
 }
 
 /* menu items */
-#body_main #mi_main,
-#body_news #mi_news,
-#body_photo #mi_photo,
-#body_video #mi_video,
-#body_bio #mi_bio,
-#body_encyclopedia #mi_encyclopedia,
-#body_contactus #mi_contactus,
+#body_main #mi_main a,
+#body_news #mi_news a,
+#body_photo #mi_photo a,
+#body_video #mi_video a,
+#body_bio #mi_bio a,
+#body_encyclopedia #mi_encyclopedia a,
+#body_contactus #mi_contactus a,
 /*#body_livestream #mi_livestream ,*/
-#body_search #mi_search,
-#body_project #mi_project,
-#body_faq #mi_faq,
-#body_blessing #mi_blessing,
-#body_translation_fundraising #mi_translation_fundraising,
-#body_social_tools #mi_social_tools,
-#body_audio #mi_audio,
-#body_teachings #mi_teachings,
-#body_religious_forest #mi_religious_forest,
-#body_feed #mi_feed, 
-#body_donation #mi_donation {
+#body_search #mi_search a,
+#body_project #mi_project a,
+#body_faq #mi_faq a,
+#body_blessing #mi_blessing a,
+#body_translation_fundraising #mi_translation_fundraising a,
+#body_social_tools #mi_social_tools a,
+#body_audio #mi_audio a,
+#body_teachings #mi_teachings a,
+#body_religious_forest #mi_religious_forest a,
+#body_feed #mi_feed a, 
+#body_donation #mi_donation a {
 	border-bottom:1px solid;
 	}
 .body_class_no_minilogin #bubble_login * {
@@ -402,7 +402,6 @@ p.p2{
     width: 100%;
     }
 .share_item {
-    /*width: 16%;*/
     padding: 0 0 9px;
     }
 
