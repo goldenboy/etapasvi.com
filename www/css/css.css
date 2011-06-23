@@ -60,7 +60,7 @@ h2.like_h1 {
 	font-style:normal;
 	font-size:16px;
 	margin:20px auto 23px;
-	color: #ADACBD;
+	color: gray;
 	font-weight: bold;
 	padding: 0;
 	text-align: center;
@@ -850,39 +850,6 @@ html #disqus_thread {
 #dsq-content .dsq-item-trackback {
     display: none;
     }
-/*
-#comments_form label {
-	border: 0;
-	}
-#elComments p {
-	padding: 0 0 0 10px;
-	}
-.comments_link {
-	padding: 2px 10px 4px 10px;
-	overflow: hidden;
-	margin: 0;
-	zoom:1;
-	}
-.comments_link input {
-	position:relative;
-	top:2px;
-	}
-/* IE6 
-*  html .comments_link {
-	padding: 0;
-	margin: 0;
-	}
-.comments_author {
-	margin: 5px 0 0;
-	}
-* html .comments_author {
-	margin: 0px 0 0;
-	}
-.comments_body {
-	margin: 0 0 8px;
-	text-align: left;
-	}
-*/
 
 .author {
 	color:#888888;
@@ -967,156 +934,6 @@ html #disqus_thread {
 	height: 22px;
     width: 244px;
 	}
-
-/* =signup */
-/*
-#signup_form p {
-    text-align: center;
-    }
-#signup_form table {
-    margin-left: auto;
-    margin-right: auto;
-    }*/
-    
-/*
-.signup  .field_input {
-    width: 290px;
-    }
-.signup  td {
-    vertical-align: top;
-	padding:3px;
-	}
-.signup select {
-	width:294px;
-	}
-.signup input {
-	width:290px;
-	}
-.checkbox_container input{
-	width:auto;
-	}
-.signup .input_button {
-	width: auto;
-	}
-.captcha {
-	vertical-align:middle;
-	}
-*/
-/* =login */
-/*
-.login_form  td {
-	padding:3px;
-	}
-.login_form input {
-	width:200px;
-	}
-.login_form .input_button {
-	width: auto;
-	}
-.login_form_element label {
-	border: 0;
-	}
-
-#bubble_login .login_form  td {
-	border: 0;
-	padding:1px 3px 0;
-	}
-#bubble_login .login_form  .field_name {
-	background-color:transparent;
-	}
-#bubble_login .login_form input {
-	width:87px;
-	}
-#bubble_login .login_form .input_button {
-	width: auto;
-	}
-#bubble_login  p {
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	padding:0 17px 0 0;
-	}
-*/
-
-/* =actions */
-/*
-#actions {
-	background:transparent url(../i/bg_circle_gray.gif) no-repeat scroll 0 0;
-	height:266px;
-	list-style-image:none;
-	list-style-position:outside;
-	list-style-type:none;
-	margin:12px auto 0;
-	overflow:hidden;
-	zoom: 1;
-	padding:9px 0 0 11px;
-	width:255px;
-	}
-
-* html #actions {
-	padding-left:0px;
-	width:266px;
-	}
-#actions a img {
-	border:0 none;
-	}
-#actions li {
-	float:left;
-	line-height:14px;
-	margin:95px 0 0 8px;
-	text-align:center;
-	width:70px;
-	}
-#actions.logged_in li {
-	margin:95px 0 0 21px;
-	width:56px;
-	}
-* html #actions.logged_in li {
-	margin:95px 0 0 17px;
-	width:58px;
-	}
-#thinking_time {
-	margin-left:-25px;
-	margin-top:0px;
-	text-align:center;
-	}
-#bubble_login .day_of_week {
-	font-family:georgia;
-	font-size:8pt;
-	font-size-adjust:none;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:normal;
-	line-height:16pt;
-	padding: 0;
-	}
-*/
-
-/* =comments */
-/*
-.comments_form {
-	margin-top:15px;
-	padding:0 10px;
-	}
-.comments_form textarea {
-	display:block;
-	}
-div.grippie {
-    background:#EEEEEE url(/i/grippie.png) no-repeat scroll center 2px;
-    border-color:#DDDDDD;
-    border-style:solid;
-    border-width:0pt 1px 1px;
-    cursor:s-resize;
-    height:9px;
-    overflow:hidden;
-    }
-.resizable-textarea textarea {
-    display:block;
-    margin-bottom:0pt;
-    width:95%;
-    height: 20%;
-    }
-*/
 
 .navigation {
 	text-align:center;
@@ -1438,5 +1255,4 @@ label.error {
     border: 0;
     padding: 0;
     text-align: left;
-}
 }

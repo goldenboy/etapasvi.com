@@ -9,6 +9,7 @@
         <script type="text/javascript" src="http://vkontakte.ru/js/api/share.js?10" charset="windows-1251"></script>
         <script type="text/javascript">document.write(VK.Share.button(false,{type: "round", text: "ВК"}));</script>   
     </td>
+    <?php /* на странице фото не показываем кнопку Одноклассников из-за конфликта с Дискусом */ ?>
     <td class="share_item"> 
         <link href="http://stg.odnoklassniki.ru/share/odkl_share.css" rel="stylesheet">
         <script src="http://stg.odnoklassniki.ru/share/odkl_share.js" type="text/javascript" ></script>
