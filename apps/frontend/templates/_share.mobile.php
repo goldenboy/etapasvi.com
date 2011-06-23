@@ -12,9 +12,9 @@
 
     <div class="share_item">
         <?php /* <link href="http://stg.odnoklassniki.ru/share/odkl_share.css" rel="stylesheet"> */ ?>
-        <script src="http://stg.odnoklassniki.ru/share/odkl_share.js" type="text/javascript" ></script> 
-        <script type="text/javascript">$(document).ready(function(){ODKL.init()})</script>
+        <script src="http://stg.odnoklassniki.ru/share/odkl_share.js" type="text/javascript" ></script>         
         <a class="odkl-klass-stat" href="<?php echo $uri; ?>" onclick="ODKL.Share(this);return false;" ><span></span></a>        
+        <?php /* <script type="text/javascript">ODKL.init();</script> */ ?>
     </div>
     <div class="share_item">
         <a target="_blank" class="mrc__plugin_like_button" href="http://connect.mail.ru/share" rel="{'type' : 'button', 'width' : '108'}">Нравится</a>

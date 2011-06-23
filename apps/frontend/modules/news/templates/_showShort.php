@@ -1,9 +1,6 @@
 <?php if ($newsitem && $newsitem->getBody() != ''): ?>
 
-	<?php 
-        //$href = url_for($this->getTypeName() . '/show?id='.$newsitem->getId() . '&title=' . TextPeer::urlTranslit($newsitem->getTitle()), true ); 
-        $href = $newsitem->getUrl(); 
-    ?>
+	<?php $href = $newsitem->getUrl(); ?>
 
     <h2 class="title">
         <a href="<?php echo $href; ?>" title="<?php echo __('News') ?>">
@@ -14,18 +11,17 @@
         <?php if ($newsitem->getImg()): ?>
             <a href="<?php echo $href; ?>" title="<?php echo $newsitem->getTitle(); ?>">
                 <img src="<?php echo $newsitem->getThumbUrl(); ?>" 
-            alt="<?php echo $newsitem->getTitle(); ?>" class="newsitem_img"/>
-            </a>
+            alt="<?php echo $newsitem->getTitle(); ?>" class="newsitem_img"/></a>
         <?php endif ?>
 
         <?php if ($newsitem->getDate() || $newsitem->getExtradate()): ?>
-            <span class="left date">				
+            <div class="left date">			
                 <?php if ($newsitem->getExtradate()): ?>
                     <?php echo $newsitem->getExtradate(); ?>
                 <?php else: ?>
                     <?php echo format_datetime( $newsitem->getDate(), 'd MMMM yyyy'); ?>
                 <?php endif ?>			
-            </span>
+            </div>
             <br/>
         <?php endif ?>
 
@@ -37,7 +33,7 @@
             }
         ?>
         <div>&nbsp;</div>
-        <p class="right_text p1_no_bottom">				 
+        <p class="toolbar">				 
             <a href="<?php echo $href; ?>" title="<?php echo __('Read more') ?>" class="read_more">
                 <i class="read_more_icon"></i>&nbsp;<?php echo __('Read more') ?>
             </a>

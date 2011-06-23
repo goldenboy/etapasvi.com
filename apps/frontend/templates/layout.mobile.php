@@ -28,7 +28,7 @@
 
 <?php $body_id = get_slot('body_id'); ?>
 
-<body id="<?php echo $body_id; ?>" class="<?php if (UserPeer::isCultureHieroglyphic()):?>hieroglyphic<?php endif ?> <?php include_slot('body_class') ?>">
+<body id="<?php echo $body_id; ?>" class="<?php if (UserPeer::isCultureHieroglyphic()):?>hieroglyphic<?php endif ?> <?php include_slot('body_class') ?>" onload="ODKL.init();">
 
 <div id="wrapper">
 

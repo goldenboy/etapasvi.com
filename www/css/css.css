@@ -1120,6 +1120,10 @@ div.grippie {
 .read_more {
 	text-decoration:none;
 	}
+.date {
+    font-size: 9.5px;
+    white-space: nowrap;
+    }
 .date,
 .source,
 .light{	
@@ -1175,10 +1179,13 @@ img.newsitem_img {
     padding-bottom:11px;
 	zoom:1;
 	}
-.short_body p {
+.toolbar {
     bottom:0;
     position:absolute;
     right:0;
+    text-align:right;
+    margin-bottom: 0;
+    margin-top: 10px;
     }
 .short_body div {
     height: 17px;

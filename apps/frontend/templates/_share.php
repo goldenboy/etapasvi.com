@@ -12,8 +12,8 @@
     <td class="share_item"> 
         <link href="http://stg.odnoklassniki.ru/share/odkl_share.css" rel="stylesheet">
         <script src="http://stg.odnoklassniki.ru/share/odkl_share.js" type="text/javascript" ></script>
-        <script type="text/javascript">$(document).ready(function(){ODKL.init()})</script>
         <a class="odkl-klass-stat" href="<?php echo $uri; ?>" onclick="ODKL.Share(this);return false;" ><span>0</span></a>
+        <script type="text/javascript">$(document).ready(function(){ODKL.init()})</script>
     </td>
     <td class="share_item">           
         <a target="_blank" class="mrc__plugin_like_button" href="http://connect.mail.ru/share" rel="{'type' : 'button', 'width' : '108'}">Нравится</a>

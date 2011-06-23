@@ -742,7 +742,7 @@ div.grippie {
 */
 
 .navigation {
-	margin:11px 0;
+	margin:7px 0;
 	}
 .nav_selected {
     background:none repeat scroll 0 0 #ADACBD;
@@ -750,9 +750,18 @@ div.grippie {
     font-weight:bold;
     padding:2px;
     }
+/*
+.navigation a,
+.navigation span {
+    margin: 0 2px;
+    }*/
 .read_more {
 	text-decoration:none;
 	}
+.date {
+    font-size: 9.5px;
+    white-space: nowrap;
+    }
 .date,
 .source,
 .light{	
@@ -805,16 +814,10 @@ img.newsitem_img {
 .short_body {
 	overflow: hidden;    
     position:relative;
-    padding-bottom:11px;
 	zoom:1;
 	}
 .short_body p {
-    bottom:0;
-    position:absolute;
-    right:0;
-    }
-.short_body div {
-    height: 17px;
+    clear: left;
     }
 .read_more_icon ,
 .comments_icon  {
@@ -978,28 +981,11 @@ img.newsitem_img {
 	margin-top: 5px;
 	}
 
-    /*
-#forgot_password_form label {
-	border:0 none;
+.arrow_prev {	
 	}
-#new_password_form label {
-	border:0 none;
-	}
-label.error {
-	display: block;
-	color: #df3f3f;
-    border: 0;
-	}
-*/
-.arrow_prev {
-	margin: 0 5px 0 0;
-	}
-.arrow_next {
-	margin: 0 0 0 5px;
+.arrow_next {	
 	}
 .bread_crumbs {
-	/*line-height:12px;*/
-	/*margin:-10px 0 -3px;*/
 	margin:0 0 13px;
 	vertical-align:bottom;
 	}
