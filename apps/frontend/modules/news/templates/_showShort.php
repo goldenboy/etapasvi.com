@@ -15,13 +15,11 @@
         <?php endif ?>
 
         <?php if ($newsitem->getDate() || $newsitem->getExtradate()): ?>
-            <div class="left date">			
-                <?php if ($newsitem->getExtradate()): ?>
+            <div class="left date"><?php if ($newsitem->getExtradate()): ?>
                     <?php echo $newsitem->getExtradate(); ?>
                 <?php else: ?>
                     <?php echo format_datetime( $newsitem->getDate(), 'd MMMM yyyy'); ?>
-                <?php endif ?>			
-            </div>
+                <?php endif ?></div>
             <br/>
         <?php endif ?>
 
@@ -32,7 +30,7 @@
                 echo '...';
             }
         ?>
-        <div>&nbsp;</div>
+        <div class="spacer">&nbsp;</div>
         <p class="toolbar">				 
             <a href="<?php echo $href; ?>" title="<?php echo __('Read more') ?>" class="read_more">
                 <i class="read_more_icon"></i>&nbsp;<?php echo __('Read more') ?>
@@ -41,7 +39,5 @@
             <i class="comments_icon"></i>&nbsp;<?php echo __('Comments') ?>: 
             <a href="<?php echo $href; ?>#disqus_thread" data-disqus-identifier="<?php echo $newsitem->getCommentsIdentifier(); ?>">0<?php //echo $newsitem->getCommentsCount(); ?></a>
         </p>
-    </div>
-	
-
+    </div>	
 <?php endif ?>

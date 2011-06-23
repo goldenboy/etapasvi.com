@@ -1108,7 +1108,6 @@ div.grippie {
 
 .navigation {
 	text-align:center;
-	word-spacing:6px;
 	margin:11px 0;
 	}
 .nav_selected {
@@ -1187,7 +1186,7 @@ img.newsitem_img {
     margin-bottom: 0;
     margin-top: 10px;
     }
-.short_body div {
+.short_body .spacer {
     height: 17px;
     }
 .read_more_icon ,

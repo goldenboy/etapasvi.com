@@ -74,7 +74,7 @@
             <?php endforeach?>
         </div>
 		<?php echo __('Copyright') ?> &copy; 2009-<?php echo date("Y"); ?>, www.eTapasvi.com
-		<br/><strong><?php echo __('Mobile') ?></strong> | <a href="<?php echo UserPeer::switchUrlMobile(); ?>"><?php echo __('Classic') ?></a>
+		<br/><?php /*<strong><?php echo __('Mobile') ?></strong> | */ ?><a href="<?php echo UserPeer::switchUrlMobile(); ?>"><?php echo __('Classic') ?></a>
 	</div>
 </div>
 

@@ -23,6 +23,7 @@ h2.like_h1 {
     font-size: 16px;
     font-style: normal;
     font-weight: bold;
+    text-align: left;
     margin: 0 0 7px;
 	}
 h1.m_bottom {
