@@ -1162,11 +1162,8 @@ img.newsitem_img {
 * html .newsfull {
 	padding:10px 30px 20px;
 	}
-.newsfull .title{
-	/*color:#555753;*/
-	color:#988F5E;
-	}
 .newsfull .title {
+	color:#988F5E;
 	text-align: center;
 	}
 .newsfull img.news_img {
@@ -1221,10 +1218,8 @@ img.newsitem_img {
 .photo_list td,
 .album_list td{
     border: 1px solid #DDDDDD;
-	height:150px;
 	padding:10px;
 	text-align:center;
-	/*width:29%;*/
     vertical-align:top;
 	width:167px;
 	}
@@ -1235,7 +1230,6 @@ img.newsitem_img {
 .album_list p {
     margin-left:9px;
     margin-right:9px;
-    text-align:left;
     }
 .photofull {
 	padding:20px 0px 0;

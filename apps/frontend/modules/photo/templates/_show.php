@@ -13,8 +13,7 @@
 			<?php endif ?>
 			<a href="<?php echo $photo->getUrl(); ?>" title="<?php echo $title; ?>">
 				<img src="<?php echo $photo->getThumbUrl(); ?>" 
-				alt="<?php echo $title; ?>" class="photoitem_img"/>
-			</a>
+				alt="<?php echo $title; ?>" class="photoitem_img"/></a>
 			<?php if (!empty($embed)): /*?>
 			<p class="no_decor small">
 				<?php echo $title; ?>
