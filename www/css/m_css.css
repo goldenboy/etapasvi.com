@@ -604,6 +604,7 @@ html #disqus_thread {
 
 /* news */
 .news_list {
+    margin-top: 5px;
     width: 100%;
     }
 .news_list td {
@@ -700,12 +701,7 @@ img.newsitem_img {
 	margin: 7px 21px 0 8px;
 	}
 .prev_icon ,
-.next_icon  {
-    background-image: url("/i/interface_sprite.jpg"); 
-    background-repeat: no-repeat;
-    display: block;
-    height: 16px;
-    width: 16px;     
+.next_icon  {       
     }
 .prev_icon {
     background-position: -342px -294px;
@@ -780,6 +776,9 @@ img.newsitem_img {
 
 .prev_next img {
 	vertical-align: middle;
+	}
+.prev_next p {
+	margin-bottom: 2px;
 	}
 /* IE6 */
 * html .prev_next {

@@ -22,13 +22,13 @@
         } else {
             c_list_top.parentNode.removeChild(c_list_top);
         }
-    }
+    }    
 </script>
 </head>
 
 <?php $body_id = get_slot('body_id'); ?>
 
-<body id="<?php echo $body_id; ?>" class="<?php if (UserPeer::isCultureHieroglyphic()):?>hieroglyphic<?php endif ?> <?php include_slot('body_class') ?>" onload="ODKL.init();">
+<body id="<?php echo $body_id; ?>" class="<?php if (UserPeer::isCultureHieroglyphic()):?>hieroglyphic<?php endif ?> <?php include_slot('body_class') ?>" onload="javascript: try { ODKL.init(); } catch(e) {}">
 
 <div id="wrapper">
 

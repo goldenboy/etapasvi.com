@@ -23,24 +23,24 @@
 			<?php endif ?>
 		<?php else: ?>				
 
-			<div class="center_text prev_next" style="<?php if (!$prev_photo):?>padding-left:16px;<?php endif ?> <?php if (!$next_photo):?>padding-right:16px;<?php endif ?>">
-			
+			<div class="center_text prev_next" >
+                <p>
                 <?php
 				if ($prev_photo && $photo->getShow()):
                     $prev_url = $prev_photo->getUrl();
 				?>
-					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" class="prev_icon photo_content_link"></a>&nbsp;&nbsp;
+					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" class="prev_icon photo_content_link">&lt;&lt;</a>&nbsp;&nbsp;
 				<?php endif ?>
                 
 				<?php 
 				if ($next_photo && $photo->getShow()): 
-				?>
-					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="next_icon photo_content_link"></a>
-				<?php endif ?>
-                <br/>
-				<?php 
-				if ($next_photo && $photo->getShow()): 
                     $next_url = $next_photo->getUrl();
+				?>
+					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="next_icon photo_content_link">&gt;&gt;</a>
+				<?php endif ?>
+                </p>
+				<?php 
+				if ($next_photo && $photo->getShow()):                     
 				?>
 					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="photo_content_link">
 						<img src="<?php echo $photo->getPreviewUrl(); ?>" 
@@ -78,9 +78,9 @@
                 ?>
                 
                 <?php if ($author): ?>
-                     | <strong><?php echo __('Author') ?>:</strong> <?php echo $author ?>
+                     <br/> <strong><?php echo __('Author') ?>:</strong> <?php echo $author ?>
                 <?php endif ?>
-                 | 
+                 <br/>
                 <a href="<?php echo $photo->getFullUrl(); ?>" 	
                     title="<?php echo __('Enlarge') ?>" target="_blank" ><?php echo __('Enlarge') ?></a>		
             </p>

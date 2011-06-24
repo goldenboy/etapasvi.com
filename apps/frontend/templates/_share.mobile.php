@@ -9,13 +9,16 @@
         <script type="text/javascript" src="http://vkontakte.ru/js/api/share.js?10" charset="windows-1251"></script>
         <script type="text/javascript">document.write(VK.Share.button(false,{type: "round", text: "ВК"}));</script>   
     </div>
-
-    <div class="share_item">
-        <?php /* <link href="http://stg.odnoklassniki.ru/share/odkl_share.css" rel="stylesheet"> */ ?>
-        <script src="http://stg.odnoklassniki.ru/share/odkl_share.js" type="text/javascript" ></script>         
-        <a class="odkl-klass-stat" href="<?php echo $uri; ?>" onclick="ODKL.Share(this);return false;" ><span></span></a>        
-        <?php /* <script type="text/javascript">ODKL.init();</script> */ ?>
-    </div>
+    <?php // Если на странице есть кнопка Одноклассники и Дискус, в IE при переходе по фотографиям не загружаются комментарии.  ?>
+    <?php if ($sf_context->getModuleName() == 'photo' && $sf_context->getActionName() == 'show'): ?>        
+    <?php else: ?>    
+        <div class="share_item">
+            <?php /* <link href="http://stg.odnoklassniki.ru/share/odkl_share.css" rel="stylesheet"> */ ?>
+            <script src="http://stg.odnoklassniki.ru/share/odkl_share.js" type="text/javascript" ></script>         
+            <a class="odkl-klass-stat" href="<?php echo $uri; ?>" onclick="ODKL.Share(this);return false;" ><span></span></a>        
+            <?php /* <script type="text/javascript">ODKL.init();</script> */ ?>
+        </div>
+    <?php endif ?>
     <div class="share_item">
         <a target="_blank" class="mrc__plugin_like_button" href="http://connect.mail.ru/share" rel="{'type' : 'button', 'width' : '108'}">Нравится</a>
     <script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="UTF-8"></script>
