@@ -188,39 +188,7 @@ table {
 	font-size:6px;
 	}
 
-.audio_item {
-    overflow:visible;
-    position: relative;
-    zoom: 1;
-    }
-.audio_item span {
-	display:none;
-	}
-.audio_descr {
-    /*line-height: 20px;*/
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    }
-.audio_descr,
-.audio_item a,
-.audio_item img {
-    vertical-align: bottom;
-    }
-.audioplayer {    
-    /*margin-left: -11px;*/
-    margin-top: 3px;
-    position: relative;
-    /*left: -11px;*/
-    }
-.save {
-    background-image: url("/i/interface_sprite.jpg");
-    background-position: -374px -294px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    }
+
 hr.audio_divider {
     margin: 9px 0;
     }
@@ -356,12 +324,6 @@ input[type="radio"] {
 .field_input {
     text-align: left;
     }
-
-.right {
-	float: right;
-	overflow: hidden;
-	zoom: 1;
-	}
 
 .left {
 	float: left;
@@ -606,7 +568,7 @@ html #disqus_thread {
     }
 .news_list td {
 	border: 1px solid #DDDDDD;
-	padding: 5px 10px 8px;
+	padding: 0 6px 4px;
 	}
 
 img.newsitem_img {
@@ -616,7 +578,10 @@ img.newsitem_img {
 	position:relative;
 	top:5px;
 	}
-.newsfull .title{
+.newsfull {
+    margin-bottom: 12px;
+    }
+.newsfull .title {
 	color:#988F5E;
 	}
 .newsfull img.news_img {
@@ -643,9 +608,6 @@ img.newsitem_img {
     }
 .comments_icon {
     background-position: -310px -294px;
-    }
-.rss_link {
-    float: left;
     }
 
 /* photo */
@@ -722,7 +684,7 @@ img.newsitem_img {
 	text-decoration:none;
 	}
 .video {
-	padding:10px 0 4px;
+	padding:0 0 4px;
 	}
 .video .title {
 	color:#988F5E;
@@ -745,7 +707,7 @@ img.newsitem_img {
 	font-style:normal;
 	font-variant:normal;
 	letter-spacing: 0;
-	margin: 0;
+	margin: 4px 0;
 	}
 
 .title a {
@@ -791,10 +753,14 @@ img.newsitem_img {
 	margin-top:-11px;
 	}
 .cyrcle {
-    background:url("/i/bg_circle_big.gif") repeat scroll 0 0 transparent;
-    height:350px;
-    text-align:center;
-    width:350px;
+    overflow: hidden;
+    }
+.cyrcle a {
+    display: block;
+    float: left;
+    }
+.cyrcle br {
+    display: none;
     }
     
 /* cultures */

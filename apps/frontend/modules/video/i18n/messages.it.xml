@@ -9,11 +9,6 @@
         <target>Non ci sono video</target>
       </trans-unit>
 
-      <trans-unit id="1">
-        <source>Watch on YouTube</source>
-        <target></target>
-      </trans-unit>
-
     </body>
   </file>
 </xliff>

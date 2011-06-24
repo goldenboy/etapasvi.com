@@ -233,6 +233,12 @@
         <target>Полная версия</target>
       </trans-unit>
 
+<!-- video -->
+      <trans-unit id="1">
+        <source>Watch on YouTube</source>
+        <target>Смотреть на YouTube</target>
+      </trans-unit>
+
 <!-- утф -->
     </body>
   </file>

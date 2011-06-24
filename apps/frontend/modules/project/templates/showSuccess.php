@@ -1,5 +1,6 @@
 <?php slot('body_id') ?>body_project<?php end_slot() ?>
 
+<?php /*
 <style type="text/css">
 .bank_account td.ba_title {
 	width: 170px;
@@ -10,6 +11,7 @@
 	text-align: left;
 }
 </style>
+*/ ?>
 
 
 <h1 id="up"><?php echo __('Dharma Hall') ?></h1>
@@ -23,7 +25,6 @@
 	</div>
     <?php endif ?>
 
-
     <?php $component_html = get_component('news', 'show', array('id'=>49, 'short'=>false)); ?>
     <?php if ($component_html): ?>
 	<div class="box newsitem newsfull">
@@ -34,21 +35,21 @@
 	<?php include_component('video', 'show', array('id'=>46)); ?>
 
 	<h2 class="center"><?php echo __('Location') ?></h2>
-	<center>
+	<div class="center">
 <?php /*
 	<iframe width="480" height="385" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?source=embed&amp;f=q&amp;hl=<?php echo $sf_user->getCulture(); ?>?&amp;geocode=&amp;q=terguel+dharma+hall&amp;sll=37.0625,-95.677068&amp;sspn=52.152749,79.013672&amp;ie=UTF8&amp;hq=terguel+dharma+hall&amp;hnear=&amp;radius=15000&amp;t=h&amp;cid=2918620015855776320&amp;ll=27.22441,85.147648&amp;spn=0.053426,0.072956&amp;iwloc=A&amp;output=embed"></iframe>
 */
 ?>
 	<iframe width="480" height="385" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=<?php echo $sf_user->getCulture(); ?>&amp;geocode=&amp;q=Terthup+Dharma+Hall&amp;sll=37.0625,-95.677068&amp;sspn=52.152749,79.013672&amp;ie=UTF8&amp;hq=Terthup+Dharma+Hall&amp;hnear=&amp;radius=15000&amp;ll=27.22441,85.147648&amp;spn=0.053426,0.072956&amp;t=h&amp;z=13&amp;iwloc=A&amp;cid=11992413955635615183&amp;output=embed"></iframe>	
-	</center>
+	</div>
     <br/>
 	<?php include_component('video', 'show', array('id'=>49)); ?>
 
 	<h2 class="center" id="donations"><?php echo __('Donation') ?></h2>
-    <center>
+    <div class="center">
         <?php /*<a href="http://paldendorje.com/project/donation.html" target="_blank">http://paldendorje.com/project/donation.html</a> */ ?>
         <a href="http://www.dharmasangha.org.np/en/Contents/donation.html" target="_blank">http://www.dharmasangha.org.np/en/Contents/donation.html</a>
-    </center>
+    </div>
     <?php /*
 	<center>
 	<strong>PayPal (USD)</strong><br/>

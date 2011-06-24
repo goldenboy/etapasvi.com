@@ -229,6 +229,12 @@
         <target></target>
       </trans-unit>
 
+<!-- video -->
+      <trans-unit id="1">
+        <source>Watch on YouTube</source>
+        <target></target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

@@ -3,7 +3,7 @@
 <h1><?php echo __('Social Tools') ?></h1>
 
 <div class="cyrcle center">
-    <div style="height:70px;"></div>
+    <div> </div>
     
     <?php/*
     <a href="http://www.etapasvi.com/forum/index.php?lang=<?php echo $sf_user->getCulture(); ?>" target="_blank"><img src="/i/social/forum_64.png" title="<?php echo __('Forum') ?>" alt="<?php echo __('Forum') ?>"/></a>*/?>
@@ -14,7 +14,7 @@
         <a href="http://etapasvi.blogspot.com/" target="_blank"><img src="/i/social/blogger_64.png" title="<?php echo __('Blogger') ?>" alt="<?php echo __('Blogger') ?>"/></a>
     <? */ ?> 
     
-    <a href="http://kiwi6.com/users/show/etapasvi" target="_blank" title="<?php echo __('Kiwi6') ?>" class="social_kiwi6"></a>
+    <a href="http://kiwi6.com/users/show/etapasvi" target="_blank" title="<?php echo __('Kiwi6') ?>" class="social_kiwi6"> </a>
     <a href="http://twitter.com/etapasvi" target="_blank" title="<?php echo __('Twitter') ?>" class="social_twitter"></a>
     <br/>
     <a href="http://etapasvi.livejournal.com/" target="_blank" title="<?php echo __('Live Journal') ?>" class="social_livejournal"></a>

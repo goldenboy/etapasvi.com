@@ -1,6 +1,6 @@
 <?php slot('body_id') ?>body_teachings<?php end_slot() ?>
 
-<h1 style="margin-bottom:32px;"><?php echo __('Teachings') ?></h1>
+<h1><?php echo __('Teachings') ?></h1>
 
 <?php 
 $navigation = get_partial('global/navigation', array('pager'=>$pager, 'module_action'=>'teachings/index') ); 

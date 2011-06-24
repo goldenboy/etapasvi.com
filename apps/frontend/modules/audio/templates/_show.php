@@ -30,11 +30,11 @@ $author = $audio->getAuthor($sf_user->getCulture(), true);
 */ ?>
 <div class="light small right audio_descr">
 <?php if (empty($no_info) || !$no_info): ?>
-    <?php echo __('Duration') ?>: <?php echo $audio->getDurationFormatted(); ?> | 
-    <?php echo __('Size') ?>: <?php echo $audio->getSize(); ?> Mb
-    <?php /*echo __('Date') ?>: <?php echo format_datetime( $audio->getCreatedAt(), 'd MMMM yyyy');*/ ?> 
+    <?php /*echo __('Duration') ?>: */ ?><?php echo $audio->getDurationFormatted(); ?> | 
+    <?php /*echo __('Size') ?>: */ ?><?php echo $audio->getSize(); ?> Mb |
+    <?php /*echo __('Date') ?>: */ ?><?php echo format_datetime( $audio->getCreatedAt(), 'd MMMM yyyy'); ?> 
 
-    <a href="<?php /*http://www.etapasvi.com/uploads/audio/<?php echo $audio->getFile(); ?>" title="<?php echo __('Download') ?>*/?><?php echo $audio->getDownloadUrl(); ?>" target="_blank" class="save"></a>
+    <a href="<?php /*http://www.etapasvi.com/uploads/audio/<?php echo $audio->getFile(); ?>" title="<?php echo __('Download') ?>*/?><?php echo $audio->getDirectUrl(); ?>" target="_blank" class="save" title="<?php echo __('Download'); ?>"></a>
 <?php endif ?>
 
 </div>

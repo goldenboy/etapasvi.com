@@ -154,10 +154,10 @@ biography:
   param: { module: biography, action: show }
   requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
 
-intro:
-  url:   /:sf_culture/intro
-  param: { module: intro, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#intro:
+#  url:   /:sf_culture/intro
+#  param: { module: intro, action: show }
+#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
 
 contactus:
   url:   /:sf_culture/contactus

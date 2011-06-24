@@ -1221,6 +1221,9 @@ label.error {
     text-align:center;
     width:350px;
     }
+.cyrcle div {
+    height:70px;
+    }
     
 /* cultures */
 .hieroglyphic #content * {
@@ -1254,3 +1257,11 @@ label.error {
     padding: 0;
     text-align: left;
 }
+
+/* religious orest */
+#religious_forest {
+    padding: 10px 52px 20px;
+    }
+#body_religious_forest h1 {
+    width: 300px;
+    }
