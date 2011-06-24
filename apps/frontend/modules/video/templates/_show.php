@@ -12,8 +12,7 @@
 		<?php if (!empty($short)): ?>
             <a href="<?php echo $href; ?>" title="<?php echo $title; ?>">
                 <img src="<?php echo $video->getImgPrepared($sf_user->getCulture(), true); ?>" 
-                alt="<?php echo $title; ?>" />
-            </a>
+                alt="<?php echo $title; ?>" width="150"/></a>
             <?php if ( $title ): ?>
             <p class="p1_no_top">
                 <a href="<?php echo $href; ?>" title="<?php echo $title; ?>">

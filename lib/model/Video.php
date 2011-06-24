@@ -118,9 +118,12 @@ class Video extends BaseVideo
 	/**
 	 * Обработанный адрес img
 	 *
+	 * @param string $culture язык
+	 * @param bool $use_default_culture_if_empty если true, то возвращается значение на языке по умолчанию.
+	 * @param bool $hight_quality изображение высокого качества
 	 * @return unknown
 	 */
-	public function getImgPrepared($culture = null, $use_default_culture_if_empty = false) {
+	public function getImgPrepared($culture = null, $use_default_culture_if_empty = false, $hight_quality = true) {
 	  $img = $this->getImg($culture);	 	 
 	  
 	  if ($this->getAllCultures()) {
@@ -143,7 +146,12 @@ class Video extends BaseVideo
 	  
 	  // YouTube
 	  if (!strstr($img, 'http://')) {
-	  	$img = 'http://i2.ytimg.com/vi/' . $img . '/hqdefault.jpg';
+	  	$img = 'http://i2.ytimg.com/vi/' . $img;
+	  	if ($hight_quality) {
+	  	    $img .= '/hqdefault.jpg';
+	  	} else {
+	  	    $img .= '/default.jpg';
+	  	}
 	  }
 	  return $img;
 	}

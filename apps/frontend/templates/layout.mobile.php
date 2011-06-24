@@ -28,7 +28,7 @@
 
 <?php $body_id = get_slot('body_id'); ?>
 
-<body id="<?php echo $body_id; ?>" class="<?php if (UserPeer::isCultureHieroglyphic()):?>hieroglyphic<?php endif ?> <?php include_slot('body_class') ?>" onload="javascript: try { ODKL.init(); } catch(e) {}">
+<body id="<?php echo $body_id; ?>" class="<?php if (UserPeer::isCultureHieroglyphic()):?>hieroglyphic<?php endif ?> <?php include_slot('body_class') ?>" <?php /*onload="javascript: try { ODKL.init(); } catch(e) {}"*/ ?>>
 
 <div id="wrapper">
 
@@ -91,7 +91,8 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-<?php /* если стили для кнопки Одноклассников подключить выше, в Sony Ericsson K750i пропадает или глючит всё, что находится ниже */ ?>
+<?php /* если стили для кнопки Одноклассников подключить выше, в Sony Ericsson K750i пропадает или глючит всё, что находится ниже  ?>
 <link href="http://stg.odnoklassniki.ru/share/odkl_share.css" rel="stylesheet">
+*/ ?>
 </body>
 </html>

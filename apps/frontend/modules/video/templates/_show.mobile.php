@@ -12,8 +12,7 @@
 		<?php if (!empty($short)): ?>
             <a href="<?php echo $href; ?>" title="<?php echo $title; ?>">
                 <img src="<?php echo $video->getImgPrepared($sf_user->getCulture(), true); ?>" 
-                alt="<?php echo $title; ?>" />
-            </a>
+                alt="<?php echo $title; ?>" width="120"/></a>
             <?php if ( $title ): ?>
             <p class="p1_no_top">
                 <a href="<?php echo $href; ?>" title="<?php echo $title; ?>">
@@ -31,11 +30,9 @@
 			
 			<p class="center_text p1_no_bottom">
                 <?php if (strlen($code) <20): ?>
-                <?php /*
-                <iframe height="349" frameborder="0" width="560" allowfullscreen="" src="http://www.youtube.com/embed/bWbx53ph67Q"></iframe>
-                */
-                ?>
-				<object width="480" height="385"><param name="movie" value="http://www.youtube-nocookie.com/v/<?php echo $code; ?>&amp;hl=<?php echo $sf_user->getCulture(); ?>&amp;fs=1&amp;"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube-nocookie.com/v/<?php echo $code; ?>&amp;hl=<?php echo $sf_user->getCulture(); ?>&amp;fs=1&amp;" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+                <?php /* YouTube */ ?>
+                <iframe height="349" frameborder="0" width="560" allowfullscreen="" src="http://www.youtube.com/embed/<?php echo $code; ?>"></iframe></br>
+                <a href="http://www.youtube.com/watch?v=<?php echo $code; ?>">Watch on YouTube</a>
                 <?php else: ?>
                     <?php echo html_entity_decode($code); ?>
                 <?php endif ?>

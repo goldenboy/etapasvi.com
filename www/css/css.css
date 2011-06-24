@@ -60,7 +60,7 @@ h2.like_h1 {
 	font-style:normal;
 	font-size:16px;
 	margin:20px auto 23px;
-	color: gray;
+	color: #8e8e9c;
 	font-weight: bold;
 	padding: 0;
 	text-align: center;
@@ -841,8 +841,6 @@ html #disqus_thread {
 #dsq-brlink{
     display: none;
     font-size: 9.5px;
-    position: relative;
-    top: -10px;
     }
 #wrapper #dsq-content {
     font-size: 11px;
