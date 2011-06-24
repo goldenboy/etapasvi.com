@@ -46,23 +46,6 @@ $(document).ready(function(){
 	);
 });
 
-// оформляем или отключаем подписку
-function subscribeClick( subscribeCheckbox, url ) 
-{
-	if (!url) return;
-	if (subscribeCheckbox.checked == true) {
-		value = 1;
-	} else {
-		value = 0;
-	}
-
-	$.getJSON(url + "/value/" + value, function(data) {	
-		if (data.redirect != '') {
-			window.location.href = data.redirect;		
-		}
-	});
-}
-
 // исходный текст учения
 function showOriginal() 
 {
@@ -146,7 +129,7 @@ function loadPhotoContent(href, hide_content, domain)
                 $.address.value('/!' + href); 
             }
             // title
-            var content_title = $("#photo_content_title").text();
+            var content_title = $("#photo_content_title").text() + ' - eTapasvi.com';
             if (content_title) {
                 document.title = content_title;
             }

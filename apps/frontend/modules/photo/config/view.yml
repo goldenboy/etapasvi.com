@@ -13,6 +13,8 @@ albumSuccess:
 showSuccess:
   metas:
     title:        Photo
-
+    
 contentSuccess:
+  metas:
+    title:        Photo
   has_layout:     false

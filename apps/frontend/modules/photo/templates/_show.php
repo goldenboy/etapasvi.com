@@ -151,5 +151,5 @@
 		</tr>
 	</table>
 	<?php endif ?>
-    <div id="photo_content_title" class="hidden"><?php echo $sf_response->getTitle(); ?></div>
+    <div id="photo_content_title" class="hidden"><?php echo __($sf_response->getTitle()); ?></div>
 <?php endif ?>
