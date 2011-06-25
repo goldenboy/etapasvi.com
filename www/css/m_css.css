@@ -26,9 +26,6 @@ h2.like_h1 {
     text-align: left;
     margin: 0 0 7px;
 	}
-h1.m_bottom {
-	margin:20px auto 31px;
-	}
 
 
 h2 { 
@@ -457,60 +454,7 @@ html #disqus_thread {
 	text-align:left;
 	zoom:1;
 	}
-.social_kiwi6,
-.social_livestream,
-.social_twitter,
-.social_livejournal,
-.social_vaikuntha,
-.social_vkontakte,
-.social_facebook,
-.social_google,
-.social_visitor_map,
-.social_youtube,
-.social_picasa,
-.social_rss {
-    background-image: url("/i/social_sprite.png");
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 64px;
-    width: 64px;
-    }
-.social_kiwi6 {
-    background-position: -128px 0;
-    }
-.social_livestream {
-    background-position: -64px -64px;
-    }
-.social_twitter {
-    background-position: -64px -128px;
-    }
-.social_livejournal {
-    background-position: -0 -64px;
-    }
-.social_vaikuntha {
-    background-position: -128px -128px;
-    }
-.social_vkontakte {
-    background-position: -64px -192px;
-    }
-.social_facebook {
-    background-position: 0 0;
-    }
-.social_google {
-    background-position: -64px 0;
-    }
-.social_visitor_map {
-    background-position: 0 -192px;
-    }
-.social_youtube {
-    background-position: -128px -192px;
-    }
-.social_picasa {
-    background-position: -128px -64px;
-    }
-.social_rss {
-    background-position: -0 -128px;
-    }
+
 /* IE6 */
 /*
 * html .social {
@@ -755,9 +699,9 @@ img.newsitem_img {
 .cyrcle {
     overflow: hidden;
     }
-.cyrcle a {
+.cyrcle a {    
     display: block;
-    float: left;
+    margin-left: 3px;
     }
 .cyrcle br {
     display: none;
