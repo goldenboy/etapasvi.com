@@ -79,7 +79,7 @@ if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
 //
 //    [argc] => 2
 
-	$_SERVER['HTTP_HOST']        = 'www.etapasvi.com';		
+	$_SERVER['HTTP_HOST']        = 'm.etapasvi.com';		
 	
 	// /frontfrontend2.php/ru/photo/836
 	$_SERVER['SCRIPT_NAME']      = preg_replace("/.*\//", '/', $_SERVER['argv'][0]);

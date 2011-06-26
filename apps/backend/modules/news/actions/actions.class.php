@@ -670,7 +670,7 @@ class newsActions extends autonewsActions
     
     // запуск обновления кэша
     if (!empty($_POST['refresh_cache'])) {
-      sfSuperCache::runRefreshCacheTask();      
+      sfSuperCache::runRefreshCacheTask($_POST['refresh_cache_domain_name']);      
     }
     
     // информация о процессах, обновляющих кэш
@@ -688,7 +688,7 @@ class newsActions extends autonewsActions
   	
   	// информация об объёме и кол-ве файлов
   	if (!empty($_POST['info'])) {
-	  $this->cache_info = sfSuperCache::getInfo();	
+	  $this->cache_info = sfSuperCache::getInfo($_POST['info_domain_name']);	
   	}
   }
   

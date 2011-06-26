@@ -293,7 +293,29 @@ class UserPeer extends BaseUserPeer
 	        // переключение на полную версию
 	        $result_url = str_replace(sfConfig::get('app_domain_name_mobile'), sfConfig::get('app_domain_name_full'), $url);
 	    }
+	    
+	    // если надо убираем название скрипта
+	    if (sfConfig::get('sf_no_script_name') || sfConfig::get('sf_environment') == 'prod') {
+	    	$parse_url = parse_url($url);
+	        $result_url = str_replace('/' . UserPeer::getApplicationScript($parse_url['host'], sfConfig::get('sf_environment')), '', $result_url);
+	    }
+	    
 	    return $result_url;
+	}
+	
+	/**
+	 * Получение названия скрипта по Доменному имени и окружению
+	 *
+	 * @param unknown_type $domain_name
+	 * @param unknown_type $environment
+	 * @return unknown
+	 */
+	public static function getApplicationScript( $domain_name, $environment = '')
+	{
+	  if (!$environment) {
+	  	$environment = 'prod';
+	  }
+	  return 'frontend_' . str_replace('.', '_', $domain_name) . '_' . $environment . '.php';
 	}
 		
 	

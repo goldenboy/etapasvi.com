@@ -158,9 +158,11 @@ class sfSuperCache
     
     if ($console) {
       // обращение через консоль
-      // баг - в переключателе языка http://www.etapasvi.com/ru/frontfrontend.php/
       $path_info = parse_url($url);
-      $html = shell_exec('php ' . $_SERVER['PWD'] . '/www/frontend_prodprod.php ' . $path_info['path']);
+      //$html = shell_exec('php ' . $_SERVER['PWD'] . '/www/frontend_prodprod.php ' . $path_info['path']);
+      $html = shell_exec(
+        'php ' . sfConfig::get('sf_web_dir') . '/' . UserPeer::getApplicationScript(self::getDomainHameFromPath($url)) . ' ' . $path_info['path']
+      );
     } else {
       // обращение через браузер
       $ch = curl_init();
@@ -188,12 +190,18 @@ class sfSuperCache
   }
   
   /**
-   * Получение директории, где хранится кэш
+   * Получение директории, где хранится кэш.
+   * 
+   * @param string $domain_name домен, для которого выполняется подсчёт
    *
    */
-  public static function getCacheDir()
+  public static function getCacheDir($domain_name = '')
   {
 	$cacheDir = sfConfig::get('sf_web_dir').'/cache';
+	
+	if ($domain_name) {
+		$cacheDir .= '/' . $domain_name;
+	}
 	
 	return $cacheDir;
   }
@@ -202,9 +210,9 @@ class sfSuperCache
    * Получение информации об объёме кэша на диске
    *
    */
-  public static function getInfo()
+  public static function getInfo($domain_name = '')
   {
-  	$cacheDir = self::getCacheDir();
+  	$cacheDir = self::getCacheDir($domain_name);  	
   	
   	// объём кэша на диске
   	// [vaduz]$ du -ch /home/saynt2day20/etapasvi.com/www/cache | grep total
@@ -234,9 +242,14 @@ class sfSuperCache
     if (!strstr($file_path, $cacheDir)) {
       return '';
     }
-    $url = str_replace(self::CACHE_FILE_EXT, '', str_replace($cacheDir, '', $file_path));
+    
+    // получаем домен из пути
+    $domain_name = self::getDomainHameFromPath($file_path);
+    
+    $url = str_replace(self::CACHE_FILE_EXT, '', str_replace($cacheDir . '/' . $domain_name, '', $file_path));
+    
     if (!$relative) {
-    	$url = sfConfig::get('app_protocol'). '://' . sfConfig::get('app_domain_name') . $url;
+    	$url = sfConfig::get('app_protocol'). '://' . $domain_name . $url;
     }
     return $url;
   } 
@@ -276,9 +289,12 @@ class sfSuperCache
    * Обновление кэша: удаление файлов кэша и открытие страниц сайта, чтобы создался новый файл
    * @todo сделать защёлку
    *
+   * @param unknown_type $multi_process мультипроцессорный режим
+   * @param unknown_type $threads_count кол-во потоков в мультипроцессорном режиме
+   * @param unknown_type $domain_name доменное имя, для которого очищается кэш
    * @return unknown
    */
-  public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT)
+  public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT, $domain_name = '')
   {  	
   	$result = array(
   	  // в многопоточном режиме не подсчитывается
@@ -286,7 +302,7 @@ class sfSuperCache
   	  'error' => ''
   	);  	
   	
-  	$cacheDir = self::getCacheDir();
+  	$cacheDir = self::getCacheDir($domain_name);
   	if (!$cacheDir) {
   	    return $result;
   	}
@@ -302,7 +318,7 @@ class sfSuperCache
   	}
   	
   	// лог
-  	$log_name = self::refreshCacheGetLogPath();
+  	$log_name   = self::refreshCacheGetLogPath();
   	$log_handle = fopen($log_name, "w+");
   	
   	// удаление и создание кэша страниц  	  	
@@ -428,14 +444,22 @@ class sfSuperCache
    * Запуск задачи на обновления кэша в фоне
    *
    */
-  public static function runRefreshCacheTask()
+  public static function runRefreshCacheTask($domain_name = '')
   {
   	// если уже идёт обновление кэша, выходим
   	if (count(self::listRefreshProcesses())) {
   	  return;
   	}
   	
-  	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' . self::getRefreshCacheTaskCommand() . ' > /dev/null 2>&1 &';
+  	if ($domain_name) {
+  		$domain_name_param = '--domain_name=' . $domain_name;
+  	} else {
+  		$domain_name_param = '';
+  	}
+  	
+  	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' . self::getRefreshCacheTaskCommand() . ' ' . $domain_name_param . ' > /dev/null 2>&1 &';
+  	
+  	// запуск команды, не дожидаясь завершения
     pclose(popen($command, "r"));
   }
   
@@ -522,6 +546,22 @@ class sfSuperCache
   	  $pid = getmypid();
   	}
   	return dirname( tempnam("dummy","") ) . '/refresh_cache_' . $pid . '.log';
+  }
+  
+  /**
+   * Получение доменного имени по пути к файлу кэша или адресу URL 
+   */
+  public static function getDomainHameFromPath($path)
+  {
+  	if (preg_match('/^http/', $path)) {
+  	  // передан URL
+  	  $parse_url = parse_url($path);
+  	  return $parse_url['host'];
+  	} else {
+  	  // передан путь к кэшу на диске
+  	  preg_match("/" . strtr(self::getCacheDir().'/', array('/'=>'\/', '.'=>'\.')) . "([^\/]+)\/.*/", $path, $matches);
+  	  return $matches[1];
+  	}
   }
   
   

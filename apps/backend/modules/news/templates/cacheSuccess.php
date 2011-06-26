@@ -27,6 +27,12 @@
 <?php endif ?>
 
 <form action="" method="post" >  
+    <select name="refresh_cache_domain_name">
+        <option value="">all</option>
+        <?php foreach(UserPeer::$domain_name_list as $domain): ?>
+            <option value="<?php echo $domain ?>" <?php if (!empty($_POST['refresh_cache_domain_name']) && $domain == $_POST['refresh_cache_domain_name']): ?>selected="selected"<?php endif ?> ><?php echo $domain ?></option>
+        <?php endforeach ?>
+    </select>
 	<input type="submit" value="Refresh" name="refresh_cache" />
 </form>
 <hr/>
@@ -35,7 +41,7 @@
 <form action="" method="post" >
     Path: <input type="text" name="path" value="<?php if (!empty($_POST['path'])): echo $_POST['path']; endif; ?>" size="100"/>    
 	<br/>
-    <input type="checkbox" <?php if (empty($_POST) || !empty($_POST['al_cultures'])): ?>checked="checked"<?php endif ?> name="al_cultures" /> All cultures
+    <input type="checkbox" <?php if (empty($_POST['path']) || !empty($_POST['al_cultures'])): ?>checked="checked"<?php endif ?> name="al_cultures" /> All cultures
     <br/><br/>
 	<input type="submit" value="Clear" name="clear" />
 </form>
@@ -50,6 +56,12 @@
 <br/>
 
 <form action="" method="post" >  
+    <select name="info_domain_name">
+        <option value="">all</option>
+        <?php foreach(UserPeer::$domain_name_list as $domain): ?>
+            <option value="<?php echo $domain ?>" <?php if (!empty($_POST['info_domain_name']) && $domain == $_POST['info_domain_name']): ?>selected="selected"<?php endif ?> ><?php echo $domain ?></option>
+        <?php endforeach ?>
+    </select>
 	<input type="submit" value="Info" name="info" />
 </form>
 <?php if (!empty($cache_info)): ?>

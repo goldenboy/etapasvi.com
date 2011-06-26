@@ -17,7 +17,7 @@ class refreshcacheTask extends sfBaseTask
   	// чтобы можно было получить настройки с помощью sfConfig::get() указываем application = frontend
   	
     $this->addOptions(array(
-      new sfCommandOption('path', null, sfCommandOption::PARAMETER_OPTIONAL, 'Path'),
+      new sfCommandOption('domain_name', null, sfCommandOption::PARAMETER_OPTIONAL, 'Domain to refresh cache'),
       new sfCommandOption('application', null, sfCommandOption::PARAMETER_REQUIRED, 'The application name', 'frontend'),
       new sfCommandOption('env', null, sfCommandOption::PARAMETER_REQUIRED, 'The environment', 'prod'),
       //new sfCommandOption('connection', null, sfCommandOption::PARAMETER_REQUIRED, 'The connection name', 'propel'),
@@ -34,7 +34,7 @@ EOF;
 
   protected function execute($arguments = array(), $options = array())
   {
-    $result = sfSuperCache::refreshCache(true);		
+    $result = sfSuperCache::refreshCache(true, sfSuperCache::REFRESH_CACHE_THREADS_COUNT, $options['domain_name']);		
     print_r( $result );
   }
   
