@@ -100,13 +100,13 @@ table {
     overflow: hidden;
     width: 100%;
     }
-#header #buddle_title {
+#header #bubble_title {
     display: block;
     font: bold 8pt/23px georgia;
     height: 24px;
 	}
 
-#buddle_title i {
+#bubble_title i {
     background: url("../i/interface_sprite.jpg") no-repeat scroll -697px -184px transparent;
     display: block;
     float: left;
@@ -114,7 +114,7 @@ table {
     width: 24px;
 	}
 
-#header #buddle_title span {
+#header #bubble_title span {
 	color: #ADACBD;
 	}
 #menu  ul {
@@ -167,7 +167,7 @@ table {
 
 /* bubbles */
 #bubble_lang {
-    margin-left: 15px;
+    vertical-align: middle;
     }
 #culture_list_top {
     clear: left;
@@ -176,9 +176,14 @@ table {
     margin: 5px 0;
     }
 .slide_arrow {
-	cursor:pointer;
-	font-size:0.7em;
-	font-family:"Lucida Grande",Arial,Sans-serif;
+    background: url("../i/interface_sprite.jpg") no-repeat scroll -670px -185px transparent;
+    cursor: pointer;
+    display: block;
+    /*float: left;*/
+    height: 5px;
+    margin: 5px 0 0 3px;
+    vertical-align: middle;
+    width: 7px;
 	}
 /* IE 6 */
 * html .slide_arrow {
