@@ -392,6 +392,9 @@ p.p2{
 	margin: 10px 0;
 	text-align: center;
 	}
+#footer a img {
+    text-decoration: none;
+    }
 /* IE 7 */
 *:first-child+html #footer { 
     margin: 20px 0 40px;

@@ -22,10 +22,11 @@ class sfSuperCacheFilter extends sfFilter
     // execute next filter
     $filterChain->execute();
     
+    // saynt2day
     // в мобильной версии пока не кэшируем
-    if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' ) {
-      return;
-    }  
+    //if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' ) {
+    //  return;
+    //}  
     
     $response = $this->getContext()->getResponse();    
 
@@ -99,15 +100,16 @@ class sfSuperCacheFilter extends sfFilter
           $header = '';
         }
         $content = $response->getContent();
+        
         // saynt2day
-        if ($this->getParameter('minify', false)) {    	  
+        //if ($this->getParameter('minify', false)) {    	  
           /*require_once( sfConfig::get('sf_lib_dir') . '/compactor.class.php' );
           $compactor = new Compactor(array( 
             'buffer_echo' => false 
           )); 
           $content = $compactor->squeeze($content); */
           //$content = preg_replace("/\s+/", ' ', $content);
-        }
+        //}
     
         file_put_contents($file, $header.$content);
         chmod($file, 0666);

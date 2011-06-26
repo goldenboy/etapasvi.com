@@ -92,7 +92,11 @@ class UserPeer extends BaseUserPeer
 	 
 	//const DEFAULT_CULTURE = 'en';
 	
-	//const SITE_ADDRESS    = 'www.etapasvi.com';
+	// доменное имя, которое используется по умолчанию вне приложения
+	const DOMAIN_NAME_MAIN   		 = 'www.etapasvi.com';
+	// список доменных имён
+	public static $domain_name_list  = array('www.etapasvi.com', 'm.etapasvi.com');
+	
 	//const SITE_NAME       = 'eTapasvi';
 	//const SITE_PROTOCOL   = 'http';
 		
@@ -282,7 +286,7 @@ class UserPeer extends BaseUserPeer
 	        $url = sfContext::getInstance()->getRequest()->getUri();
 	    }
 
-	    if (strstr(sfConfig::get('app_domain_name_full'), $url)) {
+	    if (strstr($url, sfConfig::get('app_domain_name_full'))) {
 	        // переключаем на мобильную версию
 	        $result_url = str_replace(sfConfig::get('app_domain_name_full'), sfConfig::get('app_domain_name_mobile'), $url);
 	    } else {

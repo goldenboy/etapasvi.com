@@ -6,9 +6,9 @@ supercache:
   class: sfSuperCacheFilter
   param:
     cache_dir: cache
-    with_host: false
+    with_host: true
     check_lifetime: false
-    minify: true
+    minify: false
 cache:   
   enabled: false
 common:

@@ -39,6 +39,10 @@
 		<?php echo __('Copyright') ?> &copy; 2009-<?php echo date("Y"); ?>, www.eTapasvi.com
 		<br/><?php echo __('All Rights Reserved') ?>.
 		<?php /*<br/><a href="mailto:saynt2day@gmail.com" title="saynt2day/Semyon/etapasvi">saynt2day</a>		*/?>
+        <br/>
+        <?php $mobile_url = UserPeer::switchUrlMobile(sfContext::getInstance()->getRequest()->getUri());?>
+        <a href="<?php echo $mobile_url; ?>"><?php echo __('Mobile') ?></a>
+        <br/><br/><img src="http://qrcode.kaywa.com/img.php?s=3&d=<?php echo urlencode($mobile_url); ?>" alt="<?php echo __('Mobile') ?>"/>
 	</div>
 </div>
 

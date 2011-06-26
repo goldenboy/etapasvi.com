@@ -87,38 +87,43 @@ class sfSuperCache
    *
    * @param unknown_type $request
    */
-  public static function clearCacheByPath($path = '', $all_cultures = true)
+  public static function clearCacheByPath($path = '', $all_cultures = true, $all_domains = true)
   {
-  	$result = array();
-  	
-	// предварительная обработка пути
-	$path 		= str_replace('..', '', $path);
-	$parse_url  = parse_url($path);
-	$path 		= $parse_url['path'];				
+  	$result = array();  		
 	
+	// заменяем язык в пути на sf_culture
 	if ($all_cultures ) {
-		// удаляем для всех языков
-		$culture_list = UserPeer::getCultures();
-		$path 		= '/sf_culture/' . preg_replace("/\/[^\/]+\//", '', $path); //substr($path, 4, strlen($path));		
+	  // удаляем для всех языков
+	  $culture_list = UserPeer::getCultures();	  
 	} else {
-		$culture_list = array('fake');
+	  $culture_list = array('fake');
 	}
 	
-	$full_path =  self::getCacheDir().'/'.$path;
-	$full_path = preg_replace("/\/+/", '/', $full_path);
-	
 	foreach ($culture_list as $culture ) { 		
-		$path_translated = str_replace('sf_culture', $culture, $full_path);
- 					
-		if (substr($path_translated, strlen($path_translated)-1, 1) == '*') {
-			// удаляем по маске
-			self::removeCacheFile( $path_translated );
-			$result[] = $path_translated;			
-		} else {  				
-			// удаляем отдельный файл
- 			self::removeCacheFile( $path_translated . self::CACHE_FILE_EXT );
-			$result[] = $path_translated . self::CACHE_FILE_EXT;		
-		}		
+	  if ($all_domains) {
+	  	// очищаем кэш для каждого домена
+	  	foreach (UserPeer::$domain_name_list as $domain_name) {
+	  	  // получаем путь на диске к файлу кэша
+	  	  $path_translated 		= self::urlToFile($path, $domain_name);
+	  	  if ($all_cultures) {
+	  	    // подменяем язык в пути к файлу кэша на нужный
+  	  	    //$path_translated 		= preg_replace("/\/[^\/]+\//", '/'.$culture.'/', $path); 
+	  	    $path_translated 		= preg_replace(
+	  	      "/" . strtr(self::getCacheDir().'/'.$domain_name."/", array('/'=>'\/', '.'=>'\.'))."[^\/]+\//", 
+ 	  	      self::getCacheDir().'/'.$domain_name."/".$culture.'/', 
+	  	      $path_translated
+	  	    ); 
+	  	  }
+	  	  
+          self::removeCacheFile( $path_translated );
+          $result[] = $path_translated;	
+	  	}
+	  } else {
+	  	// получаем путь на диске к файлу кэша
+	  	$path_translated 				= self::urlToFile($path);
+	  	self::removeCacheFile( $path_translated );
+	  	$result[] = $path_translated;	
+	  }	  
 	}
 	return $result;
   }
@@ -235,6 +240,36 @@ class sfSuperCache
     }
     return $url;
   } 
+  
+  /**
+   * Получение пути к файлу кэша по URL.
+   * Если в URL передана *, возвращается путь со *, иначе возвращается прямой путь к файлу
+   *
+   * @param unknown_type $url
+   */
+  public static function urlToFile($url, $domain = UserPeer::DOMAIN_NAME_MAIN)
+  {  	
+  	// предварительная обработка пути
+	$path 		= str_replace('..', '', $url);
+	$parse_url  = parse_url($path);
+	$path 		= $parse_url['path'];
+
+	// получаем полный путь на диске
+	if ($domain) {
+	  $path = self::getCacheDir().'/'.$domain.'/'.$path;
+	} else {
+	  $path = self::getCacheDir().'/'.$parse_url['host'].'/'.$path;
+	}
+	// несколько слэшей земеняем на один
+	$path = preg_replace("/\/+/", '/', $path);
+	
+	// если в URL передана *, возвращается путь со *
+	// иначе возвращается прямой путь к файлу
+	if (substr($path, strlen($path)-1, 1) != '*') {	
+	  $path = $path . self::CACHE_FILE_EXT;		
+	}		
+	return $path;
+  }
    
   
   /**
