@@ -9,6 +9,11 @@ main:
   url:  /:sf_culture/
   param: { module: news, action: main }
   requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  
+version_full:
+  url:  /:sf_culture/version/full
+  param: { module: news, action: main }
+  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
 
 #best_idea:
 #  url:  /:sf_culture/idea/best

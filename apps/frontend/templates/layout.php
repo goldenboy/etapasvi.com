@@ -41,8 +41,8 @@
 		<?php /*<br/><a href="mailto:saynt2day@gmail.com" title="saynt2day/Semyon/etapasvi">saynt2day</a>		*/?>
         <br/>
         <?php $mobile_url = UserPeer::switchUrlMobile(sfContext::getInstance()->getRequest()->getUri());?>
-        <a href="<?php echo $mobile_url; ?>"><?php echo __('Mobile') ?></a>
-        <br/><br/><img src="http://qrcode.kaywa.com/img.php?s=3&d=<?php echo urlencode($mobile_url); ?>" alt="<?php echo __('Mobile') ?>"/>
+        <a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><?php echo __('Mobile') ?></a>
+        <br/><br/><a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><img src="http://qrcode.kaywa.com/img.php?s=3&d=<?php echo urlencode($mobile_url); ?>" alt="<?php echo __('Mobile') ?>"/></a>
 	</div>
 </div>
 
