@@ -45,7 +45,7 @@ class TextPeer extends BaseTextPeer
       	}
 	}
 	$text = strtolower($text);
-	$text = preg_replace( '/[^A-z0-9_-]/', '', $text );
+	$text = preg_replace( '/([^A-z0-9_-]|[\[\]])/', '', $text );
 	$text = preg_replace( '/-+/', '-', $text );
 	
 	return $text;
