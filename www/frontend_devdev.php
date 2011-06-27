@@ -3,7 +3,7 @@
 if ((!empty($_GET['debug_key']) && $_GET['debug_key'] == 'b7a3cc471e49223dbb4a89e7d85ab6df')) {
 
 	// ставим куку на сутки
-	setcookie('debug_key', 'b7a3cc471e49223dbb4a89e7d85ab6df', 0, time()+24*60*60, '.' . $_SERVER['HTTP_HOST'], false);
+	setcookie('debug_key', 'b7a3cc471e49223dbb4a89e7d85ab6df', time()+24*60*60, '/');
 } elseif (empty($_COOKIE['debug_key']) || $_COOKIE['debug_key'] != 'b7a3cc471e49223dbb4a89e7d85ab6df') {
     die('Access denied');
 }

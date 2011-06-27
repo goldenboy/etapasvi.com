@@ -38,6 +38,10 @@ class Picasa_Logger {
 	 * @param boolean $enabled	Determines whether or not to log.
 	 */
 	private function __construct($enabled) {
+	    // saynt2day
+	    // В backend выводится лог, если PHP сразу отправляет текст в браузер, не срабатывает setcookie в Picasa.php (saveAuthToCookie)
+	    ob_start();
+	    
 		$this->enabled = $enabled;
 	}
 
@@ -107,6 +111,7 @@ class Picasa_Logger {
 	 * @todo 		Make this method more robust, so that it can log to a file.
 	 */
 	protected function log($msg) {		
+		//print($msg.PHP_EOL."<br/>");
 		print($msg.PHP_EOL);
 	}
 }
