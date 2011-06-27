@@ -294,11 +294,11 @@ class UserPeer extends BaseUserPeer
 	        $result_url = str_replace(sfConfig::get('app_domain_name_mobile'), sfConfig::get('app_domain_name_full'), $url);
 	    }
 	    
-	    // если надо убираем название скрипта
-	    if (sfConfig::get('sf_no_script_name') || sfConfig::get('sf_environment') == 'prod') {
-	    	$parse_url = parse_url($url);
-	        $result_url = str_replace('/' . UserPeer::getApplicationScript($parse_url['host'], sfConfig::get('sf_environment')), '', $result_url);
-	    }
+	    // убираем название скрипта
+	    //if (sfConfig::get('sf_no_script_name') || sfConfig::get('sf_environment') == 'prod') {
+	    $parse_url = parse_url($url);
+	    $result_url = str_replace('/' . UserPeer::getApplicationScript($parse_url['host'], sfConfig::get('sf_environment')), '', $result_url);
+	    //}
 	    
 	    return $result_url;
 	}
