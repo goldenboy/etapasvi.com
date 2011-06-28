@@ -21,7 +21,7 @@
 <div id="wrapper">
 
 <div id="header">
-	<a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" class="no_decor"><div id="buddle_title">Tapasvi.<span>com</span></div></a>
+	<a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" class="no_decor"><div id="bubble_title">Tapasvi.<span>com</span></div></a>
 </div>
 
 <div id="content_wrapper">    
