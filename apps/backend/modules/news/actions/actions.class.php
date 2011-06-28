@@ -108,7 +108,8 @@ class newsActions extends autonewsActions
 		// водяной знак   	  
 		if (isset($news['watermark'])) {	    
 		    $img->overlay(new sfImage(sfConfig::get('sf_web_dir') . '/i/watermark.png'), 'bottom-right'); // or you can use coords array($x,$y)
-		}      
+		}
+        $img->setQuality(100);
 		$img->save();  	  
         
         // to Picasa
