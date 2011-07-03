@@ -150,7 +150,7 @@ class sfSuperCache
    * @param bool $console выполнять обращение не через браузер, а через консоль
    * @return bool результат обновления кэша
    */
-  public static function cacheUrl($url, $console = false)
+  public static function cacheUrl($url, $console = true)
   {
     if (!$url) {
     	return false;
@@ -292,9 +292,10 @@ class sfSuperCache
    * @param unknown_type $multi_process мультипроцессорный режим
    * @param unknown_type $threads_count кол-во потоков в мультипроцессорном режиме
    * @param unknown_type $domain_name доменное имя, для которого очищается кэш
+   * @param unknown_type $console запускать открытие страницы через консоль
    * @return unknown
    */
-  public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT, $domain_name = '')
+  public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT, $domain_name = '', $console = true)
   {  	
   	$result = array(
   	  // в многопоточном режиме не подсчитывается
@@ -339,7 +340,7 @@ class sfSuperCache
           $result['error'] = 'Ошибка при запуске процесса';
           
           // кэширование файла кэша в основном процессе
-      	  self::refreshCacheFile($file_path);
+      	  self::refreshCacheFile($file_path, $console);
           
           exit(self::REFRESH_CACHE_EXIT_STATUS_ERROR);
         } else if ($pid){
@@ -355,13 +356,13 @@ class sfSuperCache
           }
         } else {
           // кэширование файла кэша
-          self::refreshCacheFile($file_path);
+          self::refreshCacheFile($file_path, $console);
           exit(self::REFRESH_CACHE_EXIT_STATUS_OK);
         }
   	  } else {
   	    
         // кэширование файла кэша
-      	$refresh_result = self::refreshCacheFile($file_path);      	  
+      	$refresh_result = self::refreshCacheFile($file_path, $console);      	  
       	/*if ($refresh_result) {
     	  $result['files']++;
       	}*/
@@ -387,14 +388,14 @@ class sfSuperCache
    * @param string $file_path локальный путь к файлу
    * @return bool результат обновления файла кэша
    */
-  public static function refreshCacheFile($file_path)
+  public static function refreshCacheFile($file_path, $console = true)
   {
     // удаление файла кэша
     $remove_result = self::removeCacheFile($file_path);
 
     if ($remove_result) {
       // кэширование страницы
-      $cache_result = self::cacheUrl( self::fileToUrl($file_path), true );
+      $cache_result = self::cacheUrl( self::fileToUrl($file_path), $console );
       if ($cache_result) {
   	    return true;
       }

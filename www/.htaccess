@@ -93,9 +93,9 @@ ErrorDocument 500 /errors/500.html
   # Передача управления контроллеру
   # мобильная версия
   RewriteCond %{HTTP_HOST} ^m.etapasvi.com$
-  RewriteRule ^(.*)$ frontend_m_etapasvi_com_mobile.php [QSA,L]
+  RewriteRule ^(.*)$ frontend_m_etapasvi_com.php [QSA,L]
 
   # обычная версия
-  RewriteRule ^(.*)$ frontend_www_etapasvi_com_prod.php [QSA,L]
+  RewriteRule ^(.*)$ frontend_www_etapasvi_com.php [QSA,L]
   
 </IfModule>

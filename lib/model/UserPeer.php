@@ -307,15 +307,11 @@ class UserPeer extends BaseUserPeer
 	 * Получение названия скрипта по Доменному имени и окружению
 	 *
 	 * @param unknown_type $domain_name
-	 * @param unknown_type $environment
 	 * @return unknown
 	 */
-	public static function getApplicationScript( $domain_name, $environment = '')
+	public static function getApplicationScript( $domain_name )
 	{
-	  if (!$environment) {
-	  	$environment = 'prod';
-	  }
-	  return 'frontend_' . str_replace('.', '_', $domain_name) . '_' . $environment . '.php';
+	  return 'frontend_' . str_replace('.', '_', $domain_name) . '.php';
 	}
 		
 	
