@@ -1,4 +1,11 @@
 <?php
+//phpinfo();
+//exit();
+ini_set( 'error_reporting', 'E_ALL' );
+ini_set( 'display_errors', 'on' );
+error_reporting(E_ALL);
+
+
 ini_set('max_execution_time', '3600');
 
 /*
@@ -275,9 +282,8 @@ class photoActions extends autophotoActions
 		// thumb      
         $img = new sfImage( $tmp_full );
         $img->thumbnail(PhotoPeer::IMG_THUMB_WIDTH, PhotoPeer::IMG_THUMB_HEIGHT, 'scale');     
-        //$img->setQuality( 100 );
         $img->setQuality( PhotoPeer::THUMB_QUALITY );
-        $img->saveAs( $tmp_thumb );   
+        $img->saveAs( $tmp_thumb );           
         
         // preview
         $img = new sfImage( $tmp_full );        
@@ -288,15 +294,15 @@ class photoActions extends autophotoActions
         if (isset($photo['watermark'])) {	
 	      $img->overlay(new sfImage(sfConfig::get('sf_web_dir') . '/i/watermark.png'), 'bottom-right');
         }
-        //$img->setQuality(100);
         $img->setQuality( PhotoPeer::PREVIEW_QUALITY );        
-        $img->saveAs( $tmp_preview ); 
+        $img->saveAs( $tmp_preview );         
         
         // full        
         if (isset($photo['watermark'])) {
           // водяной знак
 	      $img = new sfImage( $tmp_full );	
 	      $img->overlay(new sfImage(sfConfig::get('sf_web_dir') . '/i/watermark.png'), 'bottom-right');
+          $img->setQuality( PhotoPeer::FULL_QUALITY );
 	      $img->save();
         }
         
