@@ -671,7 +671,11 @@ class newsActions extends autonewsActions
     
     // запуск обновления кэша
     if (!empty($_POST['refresh_cache'])) {
-      sfSuperCache::runRefreshCacheTask($_POST['refresh_cache_domain_name']);      
+      sfSuperCache::runRefreshCacheTask(
+        $_POST['refresh_cache_domain_name'], 
+        @$_POST['refresh_cache_multi_process'],
+        @$_POST['refresh_cache_console']
+      );      
     }
     
     // информация о процессах, обновляющих кэш

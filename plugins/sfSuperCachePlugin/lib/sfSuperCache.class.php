@@ -444,8 +444,11 @@ class sfSuperCache
   /**
    * Запуск задачи на обновления кэша в фоне
    *
+   * @param string $domain_name доменное имя, кэш которого обновляется
+   * @param bool $multi_process обновлять в многопоточном режиме
+   * @param bool $console обращаться к страницам через консоль
    */
-  public static function runRefreshCacheTask($domain_name = '')
+  public static function runRefreshCacheTask($domain_name = '', $multi_process = true, $console = true)
   {
   	// если уже идёт обновление кэша, выходим
   	if (count(self::listRefreshProcesses())) {
@@ -453,13 +456,30 @@ class sfSuperCache
   	}
   	
   	if ($domain_name) {
-  		$domain_name_param = '--domain_name=' . $domain_name;
+  		$domain_name_param = ' --domain_name=' . $domain_name;
   	} else {
-  		$domain_name_param = '';
+  		$domain_name_param = ' ';
   	}
   	
-  	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' . self::getRefreshCacheTaskCommand() . ' ' . $domain_name_param . ' > /dev/null 2>&1 &';
+  	if ($multi_process) {
+  		$multi_process_param = ' --multi_process=1';
+  	} else {
+  		$multi_process_param = ' --multi_process=0';
+  	}
   	
+  	if ($console) {
+  		$console_param = ' --console=1';
+  	} else {
+  		$console_param = ' --console=0';
+  	}
+  	
+  	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' 
+  				. self::getRefreshCacheTaskCommand() 
+  				. $domain_name_param 
+  				. $multi_process_param
+  				. $console_param
+  				. ' > /dev/null 2>&1 &';
+
   	// запуск команды, не дожидаясь завершения
     pclose(popen($command, "r"));
   }

@@ -33,6 +33,8 @@
             <option value="<?php echo $domain ?>" <?php if (!empty($_POST['refresh_cache_domain_name']) && $domain == $_POST['refresh_cache_domain_name']): ?>selected="selected"<?php endif ?> ><?php echo $domain ?></option>
         <?php endforeach ?>
     </select>
+    <input type="checkbox" <?php if (empty($_POST['refresh_cache_domain_name']) || (!empty($_POST) && !empty($_POST['refresh_cache_multi_process']))): ?>checked="checked"<?php endif ?> name="refresh_cache_multi_process" /> Multi process 
+    <input type="checkbox" <?php if (empty($_POST['refresh_cache_domain_name']) || (!empty($_POST) && !empty($_POST['refresh_cache_console']))): ?>checked="checked"<?php endif ?> name="refresh_cache_console" /> Console 
 	<input type="submit" value="Refresh" name="refresh_cache" />
 </form>
 <hr/>

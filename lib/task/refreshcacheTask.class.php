@@ -18,8 +18,8 @@ class refreshcacheTask extends sfBaseTask
   	
     $this->addOptions(array(
       new sfCommandOption('domain_name', null, sfCommandOption::PARAMETER_OPTIONAL, 'Domain to refresh cache'),
-      new sfCommandOption('multi_process', null, sfCommandOption::PARAMETER_OPTIONAL, true),
-      new sfCommandOption('console', null, sfCommandOption::PARAMETER_OPTIONAL, true),
+      new sfCommandOption('multi_process', null, sfCommandOption::PARAMETER_OPTIONAL, 1),
+      new sfCommandOption('console', null, sfCommandOption::PARAMETER_OPTIONAL, 1),
       new sfCommandOption('application', null, sfCommandOption::PARAMETER_REQUIRED, 'The application name', 'frontend'),
       new sfCommandOption('env', null, sfCommandOption::PARAMETER_REQUIRED, 'The environment', 'prod'),
       //new sfCommandOption('connection', null, sfCommandOption::PARAMETER_REQUIRED, 'The connection name', 'propel'),
