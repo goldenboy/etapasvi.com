@@ -30,6 +30,16 @@
 <p class="center_text">
     <?php /*<a href="http://paldendorje.com/project/donation.html" target="_blank">http://paldendorje.com/project/donation.html</a> */ ?>
     <a href="http://www.dharmasangha.org.np/en/Contents/donation.html" target="_blank">http://www.dharmasangha.org.np/en/Contents/donation.html</a>
+    <br/><br/>    
+    <strong>Organisation Name:</strong> Bodhi Shrawan Dharma Sangha
+    <br/><strong>Bank Name:</strong> Standard Chartered Bank
+    <br/><strong>Branch:</strong> Lazimpat Branch
+    <br/><strong>Account No:</strong> 01-2231700 01
+    <br/><strong>Street:</strong> Lazimpat 
+    <br/><strong>Swift Code:</strong> SCBLNPKA
+    <br/><strong>Address:</strong> P.O.Box 3990, Lazimpat, Kathmandu, Nepal
+    <br/><strong>Tel:</strong> 977-1-4418456
+    <br/><strong>Fax No:</strong> 977-1-4417428
 </p>
 <br /><br />
 <?php include_component('comments', 'show'); ?>	
