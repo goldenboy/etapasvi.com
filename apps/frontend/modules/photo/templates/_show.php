@@ -86,6 +86,7 @@
             </p>
             <p id="photo_loader" class="hidden center_text" ><img src="/i/loader.gif" /></p>
             <?php if ($photo->getBody()): ?>
+                <br/>
             <?php echo html_entity_decode($photo->getBodyPrepared()); ?><br/>
             <?php endif ?>
             <?php if ($photo->getLink()): ?>
