@@ -36,9 +36,12 @@
         <?php echo __('If you would like to translate information or share news, photo, video or audio – email at') ?> <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a>             
 		<br/><br/><?php echo __('Copyright') ?> &copy; 2009-<?php echo date("Y"); ?>, www.eTapasvi.com
 		<br/><?php echo __('All Rights Reserved') ?>.		        
-        <?php $mobile_url = UserPeer::switchUrlMobile(sfContext::getInstance()->getRequest()->getUri());?>        
-        <br/><br/><a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><img src="http://qrcode.kaywa.com/img.php?s=3&d=<?php echo urlencode($mobile_url); ?>" alt="<?php echo __('Mobile') ?>"/></a>
-        <br/><a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><?php echo __('Mobile') ?></a>
+        <?php $mobile_url = UserPeer::switchUrlMobile(sfContext::getInstance()->getRequest()->getUri());?>                
+        <div id="m_link">
+            <br/>
+            <a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><img src="http://qrcode.kaywa.com/img.php?s=3&d=<?php echo urlencode($mobile_url); ?>" alt="<?php echo __('Mobile') ?>"/></a>
+            <br/><a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><?php echo __('Mobile') ?></a>
+        </div>
 	</div>
 </div>
 
