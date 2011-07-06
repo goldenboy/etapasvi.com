@@ -16,7 +16,7 @@
 	<li><a href="#buddhist_background"><?php echo __('Buddhist background') ?></a></li>
 	<li><a href="#feats_of_inedia"><?php echo __('Feats of inedia') ?></a></li>
 	<li><a href="#reappearance_in_ratanpuri_jungle"><?php echo __('Reappearance in Ratanpuri jungle') ?></a></li>
-	<li><a href="#new_appearance_in_2009"><?php echo __('New Appearance in 2009') ?></a></li>
+	<?php /* <li><a href="#new_appearance_in_2009"><?php echo __('New Appearance in 2009') ?></a></li> */?>
 </ol>
 
 <h2 id="family_and_childhood">1. <?php echo __('Family and Childhood') ?></h2>
@@ -301,7 +301,10 @@
 <?php echo __('From November 18th to the 23rd, 2009,') ?> <strong><?php echo __('Palden Dorje') ?></strong> <?php echo __('will be giving blessings in Gadhi Mai. He intends this appearance as a protest against the planned sacrificing of tens of thousands of animals on the 24th at the Gadhi Mai Festival near Nijgad in Bara District. This Nepali festival has taken place every five years over several millennia.') ?>
 </p>
 */?>
-
+<br/>
+<p class="author">
+    <strong><?php echo __('Author') ?>:</strong> Suman Waiba, Singha Yomjan, Andrea Good
+</p>
 <?php if ($sf_user->getCulture() != 'en'): ?>
 <p class="author">
     <strong><?php echo __('Translated by') ?>:</strong>
@@ -336,5 +339,7 @@
 ?>
 </p>
 <?php endif ?>
+<p class="source">
+    <strong><?php echo __('Source') ?>:</strong> <a href="http://paldendorje.com/en/index.php?option=com_content&view=article&id=3&Itemid=2">paldendorje.com</a></p>
 <br/>
 <?php include_component('comments', 'show'); ?>	
