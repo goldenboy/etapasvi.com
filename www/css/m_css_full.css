@@ -11,38 +11,40 @@
 
 body { 
     font-family: Verdana;
-    font-size: medium;
-	text-align: justify;
+    font-size: 0.8em;
 	margin: 0px; 
 	}
 
 h1,
 h2.like_h1 {
     background: none repeat scroll 0 0 transparent;
-	color: #8e8e9c;
+    color: #8E8E9C;
     font-family: georgia;
+    font-size: 1.3em;
     font-style: normal;
     font-weight: bold;
-    text-align: left;
     margin: 0 0 7px;
+    text-align: left;
 	}
 
 
 h2 { 
-	color:#988F5E;
-	font-family:georgia,sans-serif;
-	font-weight:bold;
-	margin:20px 0 10px;
+	color: #988F5E;
+    font-family: georgia,sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px;
     text-align: left;
 	}
 h3 { 
-	color:#555753;
-	font-family:georgia;
-	font-size-adjust:none;
-	font-style:italic;
-	font-variant:normal;
-	font-weight:bold;
-	line-height:16pt;
+	color: #555753;
+    font-family: georgia;
+    font-size: 1em;
+    font-size-adjust: none;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 16pt;
     text-align: left;
 	}
 
@@ -76,6 +78,10 @@ a img {
 	}
 a.no_decor {
 	text-decoration: none;
+	}
+ol {
+	list-style-position:inside;
+	font-family: Verdana; 
 	}
 dt {
     font-weight: bold;
@@ -151,7 +157,7 @@ table {
 	
 #footer { 	
 	font-family:verdana;
-    font-size: small;
+    font-size: 0.87em;
 	color: #888888;
     margin-top: 6px;
 	text-align: left;
@@ -172,7 +178,7 @@ table {
 /* bubbles */
 #bubble_lang {
     vertical-align: middle;
-    font-size:small;
+    font-size: 0.87em;
     }
 #culture_list_top {
     clear: left;
@@ -182,18 +188,21 @@ table {
     }
 #culture_list_top,
 #culture_list {
-    font-size: small;
+    font-size: 0.87em;
     }
-.slide_arrow {
+#header .slide_arrow {
     background: url("../i/interface_sprite.jpg") no-repeat scroll -670px -185px transparent;
     cursor: pointer;
     display: block;
-    /*float: left;*/
     height: 5px;
     margin: 5px 0 0 3px;
     vertical-align: middle;
     width: 7px;
 	}
+.slide_arrow {
+    font-size: 0.8em;
+	}
+
 /* IE 6 */
 * html .slide_arrow {
 
@@ -345,15 +354,15 @@ input[type="radio"] {
 	}
 
 .medium {
-    font-size: medium;
+    font-size: 0.9em;
 	}
 
 .small {
-	font-size: small;
+	font-size: 0.87em;
 	}
 
 .verysmall {
-	font-size: small;
+	font-size: 0.87em;
 	}
 .i {
 	font-style:italic;
@@ -377,7 +386,7 @@ html #disqus_thread {
     }
 #dsq-brlink{
     display: none;
-    font-size: small;
+    font-size: 0.87em;
     }
 #wrapper #dsq-content {
 
@@ -389,7 +398,7 @@ html #disqus_thread {
 .author {
 	color:#888888;
 	font-family:verdana;
-	font-size: small;
+	font-size: 0.87em;
 	/*float:right;*/
 	overflow:hidden;
 	}
@@ -434,11 +443,11 @@ html #disqus_thread {
 	text-decoration:none;
 	}
 .date {
-    font-size: small;
+    font-size: 0.87em;
     white-space: nowrap;
     }
 .source {
-    font-size: small;
+    font-size: 0.87em;
     }
 .date,
 .source,
@@ -634,6 +643,8 @@ img.newsitem_img {
     }
 .contents td {
 	vertical-align: top;
+    clear: left;
+    float: left;
 	}
 .video_object {
 	padding:15px 0 6px;
