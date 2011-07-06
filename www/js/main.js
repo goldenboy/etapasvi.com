@@ -1,3 +1,4 @@
+// main
 var ap_stopAll = function(){};
 var audioplayer  = false;
 
@@ -123,23 +124,12 @@ function loadPhotoContent(href, hide_content, domain)
             }            
         } else {            
             // модификация URL
-            if (history && history.pushState) {
-                history.pushState({isMine:true}, 'title',  global_photo_href );
-            } else {
-                $.address.value('/!' + href); 
-            }
+            setUrl(global_photo_href, href);
             // title
             var content_title = $("#photo_content_title").text() + ' - eTapasvi.com';
             if (content_title) {
                 document.title = content_title;
             }
-            // culture switcher
-            cur_href_no_culture = href.replace(/[^\/]+\//, '');
-            $("#lang_list a").each(function(index) {
-                culture_href = $(this).attr('href').replace(/(http:\/\/[^\/]+\/[^\/]+\/).*/, '$1' + cur_href_no_culture);
-                
-                $(this).attr('href', culture_href);
-            });
         }
     });
 }
@@ -151,4 +141,41 @@ function loadPhotoContentFromHash(domain)
     if (hash_url && hash_url.substr(0, 2) == '/!') {            
         loadPhotoContent( hash_url.substr(2, hash_url.length), true, domain );
     }
+}
+
+// установка URL
+function setUrl(full, relative)
+{
+    if (history && history.pushState) {
+        history.pushState({isMine:true}, 'title',  full );
+    } else {
+        $.address.value('/!' + relative); 
+    }
+    // меняем ссылку на мобильную версию
+    setUrlMobile(full);
+    setUrlLangList(full);
+}
+
+// установка ссылки на мобильную версию
+function setUrlMobile(url)
+{
+    var mobile_url = url.replace("www.", "m.");
+    $("#m_link a").each(function(n,element){
+        $(element).attr("href", mobile_url);
+    });
+    $("#m_link img").each(function(n,element){
+        var m_src = $(element).attr("src");
+        $(element).attr("src", m_src.replace(/(.*&d=).*/, "$1") + mobile_url);
+    });
+}
+
+// установка ссылок в переключателе языка
+function setUrlLangList(href)
+{
+    cur_href_no_culture = href.replace(/http:\/\/[^\/]+\//, '').replace(/[^\/]+\//, '');
+    $("#lang_list a").each(function(index) {
+        culture_href = $(this).attr('href').replace(/(http:\/\/[^\/]+\/[^\/]+\/).*/, '$1' + cur_href_no_culture);
+        
+        $(this).attr('href', culture_href);
+    });  
 }
