@@ -303,7 +303,7 @@
 */?>
 <br/>
 <p class="author">
-    <strong><?php echo __('Author') ?>:</strong> Suman Waiba, Singha Yomjan, Andrea Good
+    <strong><?php echo __('Author') ?>:</strong> Suman Waiba, Singha Yomjan, Andrea Good, Wikipedia
 </p>
 <?php if ($sf_user->getCulture() != 'en'): ?>
 <p class="author">
@@ -340,6 +340,6 @@
 </p>
 <?php endif ?>
 <p class="source">
-    <strong><?php echo __('Source') ?>:</strong> <a href="http://paldendorje.com/en/index.php?option=com_content&view=article&id=3&Itemid=2">paldendorje.com</a></p>
+    <strong><?php echo __('Source') ?>:</strong> <a href="http://paldendorje.com/en/index.php?option=com_content&view=article&id=3&Itemid=2">paldendorje.com</a>, <a href="http://en.wikipedia.org/wiki/Ram_Bahadur_Bomjon">Wikipedia</a></p>
 <br/>
 <?php include_component('comments', 'show'); ?>	
