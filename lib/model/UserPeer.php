@@ -289,6 +289,9 @@ class UserPeer extends BaseUserPeer
 	    if (strstr($url, sfConfig::get('app_domain_name_full'))) {
 	        // переключаем на мобильную версию
 	        $result_url = str_replace(sfConfig::get('app_domain_name_full'), sfConfig::get('app_domain_name_mobile'), $url);
+	        
+	        // удаление "version/full" из адреса
+	        $result_url = str_replace('version/full', '', $result_url);
 	    } else {
 	        // переключение на полную версию
 	        $result_url = str_replace(sfConfig::get('app_domain_name_mobile'), sfConfig::get('app_domain_name_full'), $url);
