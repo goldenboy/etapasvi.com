@@ -393,6 +393,18 @@ p.p2{
 .share_item {
     padding:0 0 9px;
     }
+.share_item_facebook {
+    border: medium none;
+    height: 21px;
+    margin: 0 -49px 0 0;
+    overflow: hidden;
+    width: 143px;
+    }
+/* IE 7 */
+*:first-child+html .share_item_facebook {
+    margin: 0;
+    width: 95px;
+    }
     
 /* bubbles */
 

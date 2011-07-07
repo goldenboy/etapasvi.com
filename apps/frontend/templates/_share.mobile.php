@@ -37,6 +37,6 @@
         <g:plusone size="medium" href="<?php echo $uri; ?>"></g:plusone>
     </div>  
     <div class="share_item">    
-            <a rel="nofollow" name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+        <iframe src="http://www.facebook.com/plugins/like.php?app_id=242428519102205&amp;href=<?php echo urlencode($uri); ?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=trebuchet+ms&amp;height=21" scrolling="no" frameborder="0" allowTransparency="true" class="share_item_facebook"></iframe>   
     </div>
 </div>

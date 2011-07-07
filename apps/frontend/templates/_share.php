@@ -66,10 +66,11 @@
     <g:plusone size="medium" href="<?php echo $uri; ?>"></g:plusone>
 </td>
 <td align="left" class="share_item">   
-<?php /* 
-    <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://www.facebook.com/plugins/like.php?app_id=229732383723932&amp;href=<?php echo urlencode($uri); ?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=trebuchet+ms&amp;height=21" style="border: none; overflow: hidden; width: 95px; height: 21px; margin: 0px 5px 0px 0px;"></iframe>
-*/ ?>
+    <iframe src="http://www.facebook.com/plugins/like.php?app_id=242428519102205&amp;href=<?php echo urlencode($uri); ?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=trebuchet+ms&amp;height=21" scrolling="no" frameborder="0" allowTransparency="true" class="share_item_facebook"></iframe>    
+<?php /*
     <a rel="nofollow" name="fb_share" type="button_count" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>   
+    */
+?>
 </td>
 </tr>
 </table>
