@@ -12,6 +12,31 @@
         <source>News and Teachings</source>
         <target>Noticias y Enseñanzas</target>
       </trans-unit>
+
+      <trans-unit id="1">
+        <source>Country</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>State, District, City</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Responsible person</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Main in country</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mem- bers</source>
+        <target></target>
+      </trans-unit>
       
     </body>
   </file>

@@ -12,6 +12,32 @@
         <source>News and Teachings</source>
         <target>Новости и учения</target>
       </trans-unit>
+
+      <trans-unit id="1">
+        <source>Country</source>
+        <target>Страна</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>State, District, City</source>
+        <target>Штат, Регион, Город</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Responsible person</source>
+        <target>Ответственный</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Main in country</source>
+        <target>Главный в стране</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mem- bers</source>
+        <target>Чис- лен- ность</target>
+      </trans-unit>
+
 <!-- утф -->
     </body>
   </file>

@@ -13,7 +13,7 @@ class contactusActions extends sfActions
 	
   public function executeShow(sfWebRequest $request)
   {
-  
+      $this->chapter_list = TextPeer::getGoogleDocAsArray( 'https://spreadsheets.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdHBZbXpYTUJRWU1pdEdrZi1OTU9jb2c&single=true&gid=0&output=html' );
   }
   
 }

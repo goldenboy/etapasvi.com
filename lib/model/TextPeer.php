@@ -298,6 +298,29 @@ class TextPeer extends BaseTextPeer
 	}
 	
 	/**
+	 * Преобразование Google-документа в массив
+	 *
+	 * @param string $url адрес документа в формате CSV
+	 * @return array массив полей
+	 */
+	public function getGoogleDocAsArray($url)
+	{
+	    // указываем, что будем получать документ в CSV
+	    $url = str_replace('output=html', 'output=csv', $url);
+	    if (strstr($url, 'output=csv')) {
+	        $url = $url . '&output=csv';
+	    }
+        // читаем документ в массив
+	    $handle = fopen($url, "r");
+        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+            $result[] = $data;            
+        }
+        fclose($handle);
+
+	    return $result;
+	}
+	
+	/**
 	 * Обрезает длинные ссылки
 	 *
 	 * @param unknown_type $link
