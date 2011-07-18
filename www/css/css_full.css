@@ -1086,6 +1086,7 @@ img.newsitem_img {
 	font-variant:normal;
 	letter-spacing: 0;
 	margin: 0;
+    width: auto;
 	}
 
 .title a {
