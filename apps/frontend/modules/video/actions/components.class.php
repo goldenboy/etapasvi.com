@@ -56,5 +56,19 @@ class videoComponents extends sfComponents
   		sfActions::redirect( 'video/show?id=' . (int)$this->id);
   	}
   }
+  
+  /**
+   * Встранивание видео
+   *
+   */
+  public function executeEmbed()
+  {
+    if ($this->id) {
+      $video = VideoPeer::retrieveByPk( $this->id );
+      if ($video) {
+        $this->code  = $video->getCode(sfContext::getInstance()->getUser()->getCulture(), true);
+      }
+    } 
+  }
  
 }
