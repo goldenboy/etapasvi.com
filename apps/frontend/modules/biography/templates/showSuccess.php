@@ -12,16 +12,16 @@
 	<li><a href="#snakebite_and_miracles"><?php echo __('Snakebite and Miracles') ?></a></li>
 	<li><a href="#wandering_to_bara_district"><?php echo __('Wandering to Bara district') ?></a></li>
 	<li><a href="#meditating_in_pit"><?php echo __('Meditating in pit') ?></a></li>
-	<li><a href="#preaching_in_halkoriya_jungle"><?php echo __('Preaching in Halkoriya jungle') ?></a></li>
+	<li><a href="#preaching_in_halkhoriya_jungle"><?php echo __('Preaching in Halkhoriya jungle') ?></a></li>
 	<li><a href="#buddhist_background"><?php echo __('Buddhist background') ?></a></li>
 	<li><a href="#feats_of_inedia"><?php echo __('Feats of inedia') ?></a></li>
-	<li><a href="#reappearance_in_ratanpuri_jungle"><?php echo __('Reappearance in Ratanpuri jungle') ?></a></li>
+	<li><a href="#reappearance_in_ratanpur_jungle"><?php echo __('Reappearance in Ratanpur jungle') ?></a></li>
 	<?php /* <li><a href="#new_appearance_in_2009"><?php echo __('New Appearance in 2009') ?></a></li> */?>
 </ol>
 
 <h2 id="family_and_childhood">1. <?php echo __('Family and Childhood') ?></h2>
 <p>
-<?php echo __('Dharma Sangha (earlier Palden Dorje, born Ram Bahadur Bomjan) was born on April 9, 1990 in Ratanpuri village, Bara district, Nepal.') ?>
+<?php echo __('Dharma Sangha (earlier Palden Dorje, born Ram Bahadur Bomjan) was born on April 9, 1990 in Ratanpur village, Bara district, Nepal.') ?>
 </p>
 <p>
 <?php echo __('Ram’s parents are farmers. His mother, Maya Devi was married at 12.  She had 5 sons and 4 daughters.  Ram was her third son.  When she was in her pregnancy, she found she was unable to eat meat without becoming ill.  The son, whom she named Ram, would not eat meat.  He would leave the house for long intervals from an early age.') ?>
@@ -107,7 +107,7 @@
 <?php echo __('They feared he must be ill or crazy.  When Palden Dorje’s older brother touched him, Palden Dorje’s body became exceedingly hot and turned red. “Please leave me alone, or one of us may die,” – Palden Dorje said. – “If anyone disturbs me or my things at midnight, I will have to meditate for 20 years, but if all goes well, I will meditate for 6 years.”') ?>
 </p>
 <p>
-<?php echo __('Then Palden Dorje, followed by his brother, and at a distance by the villagers set out to find a good meditation  place in the forest. His parents insisted he take some food and water with him.  Finally, he reached his destination  at 11:00 AM on May 18, 2005. This was the day the villagers of Ratanpuri celebrated') ?> 
+<?php echo __('Then Palden Dorje, followed by his brother, and at a distance by the villagers set out to find a good meditation  place in the forest. His parents insisted he take some food and water with him.  Finally, he reached his destination  at 11:00 AM on May 18, 2005. This was the day the villagers of Ratanpur celebrated') ?> 
 <a href="<?php echo __('http://en.wikipedia.org/wiki/Vesak') ?>" title="<?php echo __('Buddha Jayanti (Vesak)') ?>" rel="nofollow" class="external"><?php echo __('Buddha Jayanti (Vesak)') ?></a>. 
 <?php echo __('He settled himself under a pipal tree, having offered 10 kinds of fruit to the picture of Buddha.') ?>
 </p>
@@ -171,14 +171,17 @@
 <p>
 <?php echo __('Police abandoned a search for him after the possibility of foul play was eliminated. Suspecting money laundering, the authorities froze the bank account of the local committee managing the crowds, which had gathered more than Rs. 600,000 ($7950), but they found no evidence.') ?>
 </p>
+<?php include_component('photo', 'show', array('id'=>26)); ?>
 <p>
 <?php echo __('On 19 March, a group of Palden Dorje\'s followers met with him about 2 miles (3 kilometers) southwest of his meditation site. They say they spoke to him for thirty minutes, during which Palden Dorje said: "There is no peace here" and that he would return in six years, which would be in 2011 or 2012. He left a message for his parents telling them not to worry.') ?>
 </p>
-<?php include_component('photo', 'show', array('id'=>26)); ?>
+<p class="center">
+<?php include_component('video', 'embed', array('id'=>84)); ?>
+</p>
 <p>
 <?php echo __('On 25 December 2006, villagers in Bara district spotted Palden Dorje meditating. He was carrying a sword for protection in the jungle, reminding reporters that "Even Gautama Buddha had to protect himself," and claimed to have eaten nothing but herbs in the interim.') ?> 
 </p>
-<?php include_component('photo', 'show', array('id'=>24)); ?>
+<?php /* include_component('photo', 'show', array('id'=>24)); */ ?>
 <p>
 <?php echo __('He reiterated his six year commitment to Buddhist devotion, and said he would allow people to come and observe him, as long as they remained at some distance and didn\'t bother him. When a reporter pointed out that pilgrims to his meditation site would be making donations in his name, he asked for the donations to not be abused or used for commercial purposes. A new wave of visitors came to see him and pray at his new meditation spot. On 8 March 2007 he left Bara district to again find a quieter place to meditate.') ?>
 </p>
@@ -199,9 +202,9 @@
 	<a href="#up"><?php echo __('Go to top') ?></a>
 </p>
 
-<h2 id="preaching_in_halkoriya_jungle">9. <?php echo __('Preaching in Halkoriya jungle') ?></h2>
+<h2 id="preaching_in_halkhoriya_jungle">9. <?php echo __('Preaching in Halkhoriya jungle') ?></h2>
 <p>
-<?php echo __('On 2 August 2007, Palden Dorje') ?> <a href="<?php echo url_for('video/show?id=22'); ?>"><?php echo __('addressed a large crowd') ?></a>   <?php echo __('in Halkoriya jungle in Bara district of southern Nepal. The Namo Buddha Tapoban Committee, which is devoted to looking after Palden Dorje, assembled the meeting.') ?>
+<?php echo __('On 2 August 2007, Palden Dorje') ?> <a href="<?php echo url_for('video/show?id=22'); ?>"><?php echo __('addressed a large crowd') ?></a>   <?php echo __('in Halkhoriya jungle in Bara district of southern Nepal. The Namo Buddha Tapoban Committee, which is devoted to looking after Palden Dorje, assembled the meeting.') ?>
 </p>
 <?php include_component('photo', 'show', array('id'=>32)); ?>
 <?php include_component('photo', 'show', array('id'=>33)); ?>
@@ -282,9 +285,9 @@
 	<a href="#up"><?php echo __('Go to top') ?></a>
 </p>
 
-<h2 id="reappearance_in_ratanpuri_jungle">12. <?php echo __('Reappearance in Ratanpuri jungle') ?></h2>
+<h2 id="reappearance_in_ratanpur_jungle">12. <?php echo __('Reappearance in Ratanpur jungle') ?></h2>
 <p>
-<?php echo __('On 10 November 2008, Palden Dorje') ?> <a href="<?php echo url_for('video/show?id=37'); ?>"><?php echo __('reappeared and spoke') ?></a> <?php echo __('to a group of devotees in the remote jungle of Ratanpuri, 150 km (95 miles) southeast of Kathmandu, near Nijgadh. His hair was shoulder-length and his body was wrapped in a white cloth.') ?>
+<?php echo __('On 10 November 2008, Palden Dorje') ?> <a href="<?php echo url_for('video/show?id=37'); ?>"><?php echo __('reappeared and spoke') ?></a> <?php echo __('to a group of devotees in the remote jungle of Ratanpur, 150 km (95 miles) southeast of Kathmandu, near Nijgadh. His hair was shoulder-length and his body was wrapped in a white cloth.') ?>
 </p>
 <?php include_component('photo', 'show', array('id'=>34)); ?>
 <p>
@@ -311,7 +314,7 @@
 <?php
      switch($sf_user->getCulture()) {        
         case 'ru':
-            echo 'saynt2day';
+            echo 'www.etapasvi.com';
             break;
         case 'cs':
         case 'hu':
