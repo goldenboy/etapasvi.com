@@ -29,7 +29,7 @@
 			</h1>
 			
 			<p class="center_text p1_no_bottom">
-                <?php include_partial('embed', array('code'=>$code)); ?>
+                <?php include_partial('video/embed', array('code'=>$code)); ?>
 			</p>
 
 		<?php endif ?>

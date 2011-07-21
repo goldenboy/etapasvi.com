@@ -6,6 +6,9 @@ index:
 
 show:
   enabled:     true
+  
+embed:
+  enabled:     false
 
 #_show:
 #  enabled:     true
