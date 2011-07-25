@@ -33,7 +33,7 @@
 
 <h2 id="is_he_enlightened"><?php echo ++$counter; ?>. <?php echo __('Is Dharma Sangha already enlightened?') ?></h2>
 <p>
-<?php echo __('Yes, he is already enlightened.') ?>
+<?php echo __('Yes, he is already enlightened. The first stages of enlightenment occurred in his room at home.') ?>
 </p>
 
 <h2 id="buddha"><?php echo ++$counter; ?>. <?php echo __('Has he already become a Buddha?') ?></h2>
