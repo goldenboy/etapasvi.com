@@ -309,7 +309,8 @@ class photoActions extends autophotoActions
         // to Picasa
         try
 		{		
-		  $title = $fileName . ($photo['title_i18n_en'] !='' ? ' - ' . $photo['title_i18n_en'] : '');	
+		  $title = $fileName . ($photo['title_i18n_en'] !='' ? ' - ' . $photo['title_i18n_en'] : '');
+		  $title .= ' (' . UserPeer::DOMAIN_NAME_MAIN . ')';
 		  // full
 		  $remote_post_result = PhotoPeer::remoteStoragePostImage(
 		  	PhotoPeer::FULL_DIR, 

@@ -26,9 +26,15 @@ class PhotoPeer extends BasePhotoPeer
   // Получить ID альбома: Албомы -> Каналы RSS (справа)
   static $dir_to_remote_storage_id = array(
   
-  	PhotoPeer::FULL_DIR		 => '5578477663008447297',
-  	PhotoPeer::PREVIEW_DIR	 => '5578477885599823617',
-  	PhotoPeer::THUMB_DIR	 => '5578478022997420321',
+    // before20110726
+  	//PhotoPeer::FULL_DIR		 => '5578477663008447297',
+  	//PhotoPeer::PREVIEW_DIR	 => '5578477885599823617',
+  	//PhotoPeer::THUMB_DIR	 => '5578478022997420321',
+  	
+  	// http://bsds.etapasvi.com/issues/15
+  	PhotoPeer::FULL_DIR		 => '5633586649296492481',
+  	PhotoPeer::PREVIEW_DIR	 => '5633586786044427937',
+  	PhotoPeer::THUMB_DIR	 => '5633586988561170225',  	
   	
   	NewsPeer::FULL_DIR       => '5578758290556545217',
   	NewsPeer::THUMB_DIR      => '5578758340610983169'
