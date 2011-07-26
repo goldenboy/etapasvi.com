@@ -14,7 +14,10 @@
 		<li id="mi_faq"><a href="<?php echo url_for('@faq', true); ?>" title="<?php echo __('FAQ') ?>"><?php echo __('FAQ') ?></a></li>
 		<li id="mi_blessing"><a href="<?php echo url_for('@blessing', true); ?>" title="<?php echo __('Blessing') ?>"><?php echo __('Blessing') ?></a></li>
 		<li id="mi_project"><a href="<?php echo url_for('@project', true); ?>" title="<?php echo __('Dharma Hall') ?>"><?php echo __('Dharma Hall') ?></a></li>
+<?php /*
 		<li id="mi_religious_forest"><a href="<?php echo url_for('@religious_forest', true); ?>" title="<?php echo __('Religious Forest') ?>"><?php echo __('Religious Forest') ?></a></li>
+*/
+?>
 		<li id="mi_encyclopedia"><a href="<?php echo url_for('@encyclopedia', true); ?>" title="<?php echo __('Encyclopedia') ?>"><?php echo __('Encyclopedia') ?></a></li>
         <li id="mi_donation"><a href="<?php echo url_for('@donation', true); ?>" title="<?php echo __('Donation') ?>"><?php echo __('Donation') ?></a></li>
 		<?php /*<li><a href="<?php echo url_for('@livestream', true); ?>" title="<?php echo __('Buddha Boy Live Stream') ?>" id="mi_livestream"><?php echo __('Live Stream') ?></a></li>	*/ ?>
