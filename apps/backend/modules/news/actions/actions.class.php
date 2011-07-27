@@ -116,6 +116,7 @@ class newsActions extends autonewsActions
         try
 		{		
 		  $title = $fileName . ($news['title_i18n_en'] !='' ? ' - ' . $news['title_i18n_en'] : '');	
+		  $title .= ' (' . UserPeer::DOMAIN_NAME_MAIN . ')';
 		  
 		  // full
 		  $remote_post_result = PhotoPeer::remoteStoragePostImage(
