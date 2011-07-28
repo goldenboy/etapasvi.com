@@ -152,6 +152,10 @@
         <target></target>
       </trans-unit>
       <trans-unit id="1">
+        <source>Chat</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
         <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
         <target>Malý Buddha: Zprávy, Fotografie, Video, Životopis, Projevy. Ram Bahadur Bomjan: Meditující Malý Buddha z Nepálu. Palden Dordže: Poselství míru na náš dnešní svět.</target>
       </trans-unit>

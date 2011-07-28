@@ -21,7 +21,8 @@
 #body_teachings #mi_teachings a,
 #body_religious_forest #mi_religious_forest a,
 #body_feed #mi_feed a,
-#body_donation #mi_donation a {
+#body_donation #mi_donation a,
+#body_chat #mi_chat a {
     border-bottom:1px solid
     }
 .body_class_no_minilogin #bubble_login * {

@@ -156,6 +156,10 @@
         <target></target>
       </trans-unit>
       <trans-unit id="1">
+        <source>Chat</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
         <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
         <target></target>
       </trans-unit>

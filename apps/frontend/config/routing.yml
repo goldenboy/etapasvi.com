@@ -56,9 +56,14 @@ default:
 #  url:   /:sf_culture/user/logout
 #  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
 
-livestream:
-  url:   /:sf_culture/livestream
-  param: { module: livestream, action: show }
+#livestream:
+#  url:   /:sf_culture/livestream
+#  param: { module: livestream, action: show }
+#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+
+chat:
+  url:   /:sf_culture/chat
+  param: { module: chat, action: show }
   requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
 
 #loginorsignup:
