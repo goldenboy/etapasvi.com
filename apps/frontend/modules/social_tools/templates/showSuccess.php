@@ -8,12 +8,13 @@
     <?php/*
     <a href="http://www.etapasvi.com/forum/index.php?lang=<?php echo $sf_user->getCulture(); ?>" target="_blank"><img src="/i/social/forum_64.png" title="<?php echo __('Forum') ?>" alt="<?php echo __('Forum') ?>"/></a>*/?>
     
-    
-      <a href="<?php echo url_for('@livestream', true); ?>" target="_blank" title="<?php echo __('LiveStream') ?>" class="social_livestream"><span><?php echo __('LiveStream') ?></span></a>
-    <?php /* ?>
+    <?php /*
+      <a href="<?php echo url_for('@livestream', true); ?>" target="_blank" title="<?php echo __('LiveStream') ?>" class="social_livestream"><span><?php echo __('LiveStream') ?></span></a>    
+*/ ?>
+    <?php /*
         <a href="http://etapasvi.blogspot.com/" target="_blank"><img src="/i/social/blogger_64.png" title="<?php echo __('Blogger') ?>" alt="<?php echo __('Blogger') ?>"/></a>
     <? */ ?> 
-    
+    <a href="<?php echo url_for('@chat', true); ?>" target="_blank" title="<?php echo __('Chat') ?>" class="social_zoho"><span><?php echo __('Chat') ?></span></a>    
     <a href="http://kiwi6.com/users/show/etapasvi" target="_blank" title="<?php echo __('Kiwi6') ?>" class="social_kiwi6"><span><?php echo __('Kiwi6') ?></span></a>
     <a href="http://twitter.com/etapasvi" target="_blank" title="<?php echo __('Twitter') ?>" class="social_twitter"><span><?php echo __('Twitter') ?></span></a>
     <br/>
