@@ -77,7 +77,7 @@
 </p>
 
 
-<h2 id="ratanpur_and_terthup"><?php echo ++$counter; ?>. <?php echo __('How to reach Ratanpuri and Terthup?') ?></h2>
+<h2 id="ratanpur_and_terthup"><?php echo ++$counter; ?>. <?php echo __('How to reach Ratanpur and Terthup?') ?></h2>
 <p class="center_text">
 <a href="/uploads/all/how_to_reach_ratanpur_and_therthup.jpg" target="_blank" title="<?php echo __('Download') ?>"><img src="/uploads/all/how_to_reach_ratanpur_and_therthup.jpg" alt="<?php echo __('How to reach Ratanpuri and Terthup?') ?>" width="565"/></a><br/><a href="/uploads/all/how_to_reach_ratanpur_and_therthup.jpg" target="_blank" title="<?php echo __('Enlarge') ?>"><?php echo __('Enlarge') ?></a>
 </p>
