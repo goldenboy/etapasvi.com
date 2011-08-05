@@ -53,7 +53,7 @@ class videoComponents extends sfComponents
 	    $response->setTitle($video_title);	
   	} elseif (!$video_title && $this->title) {
   		// если у элемента нет Заголовка, а в URL передан title, редиректим
-  		sfActions::redirect( 'video/show?id=' . (int)$this->id);
+  		sfActions::redirect( $this->video->getUrl() );
   	}
   }
   

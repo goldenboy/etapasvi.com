@@ -104,7 +104,7 @@ class photoComponents extends sfComponents
 	    $response->setTitle($photo_title); 	
   	} elseif (!$photo_title && $this->title) {
   		// если у элемента нет Заголовка, а в URL передан title, редиректим
-  		sfActions::redirect( 'photo/show?id=' . (int)$this->id);
+  		sfActions::redirect( $this->photo->getUrl() );
   	}
   	
   	$photoalbum = $this->photo->getPhotoalbum();
