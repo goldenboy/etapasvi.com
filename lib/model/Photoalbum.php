@@ -73,4 +73,23 @@ class Photoalbum extends BasePhotoalbum
 	  }
       return trim($title);
 	}
+	
+    /**
+     * Получение ссылки на фотоальбом
+     */
+	public function getUrl($culture = '') {
+	  if (empty($culture)){
+		$culture = sfContext::getInstance()->getUser()->getCulture();
+	  }	 
+	  
+      $url_pattern = 'photo/album?id=' . $this->getId();
+	  
+	  $title_translit = TextPeer::urlTranslit($this->getTitle( $culture ), $culture );
+	  if (!empty($title_translit)) {
+	    $url_pattern .= '&title=' . $title_translit;
+	  }
+
+	  $url = sfContext::getInstance()->getController()->genUrl($url_pattern, true, $culture);
+	  return $url;
+	}
 }

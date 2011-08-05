@@ -287,15 +287,18 @@ class sfRoute implements Serializable
 	    	if ($matches[4]) {
 	    		$url .= '/' . $matches[5];
 	    	}
-	    } else {
-		    // /en/photo/album/id/43
-		    // в
-		    // /en/photo/album/43  
-	    	preg_match("/^\/([^\/]+)\/([^\/]+)\/([^\/]+)\/id\/([\d]+)\/?$/", $url, $matches);
-	    	if (count($matches) >= 3) {
-	    		$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3] . '/' . $matches[4];
-	    	}
 	    }
+
+	    // /en/photo/album/id/43
+	    // в
+	    // /en/photo/album/43  
+    	preg_match("/^\/([^\/]+)\/([^\/]+)\/([^\/]+)\/id\/([\d]+)\/?(title\/(.+))?$/", $url, $matches);	    	   
+    	if (count($matches) >= 3) {
+    		$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3] . '/' . $matches[4];
+	    	if ($matches[6]) {
+	    		$url .= '/' . $matches[6];
+	    	}
+    	}
     }
 
     return $url;

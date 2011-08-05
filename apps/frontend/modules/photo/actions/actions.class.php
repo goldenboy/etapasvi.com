@@ -127,10 +127,22 @@ class photoActions extends sfActions
     	$this->forward404();
     }
     
-    if ($this->photoalbum->getTitle()) {
+    $title = $this->photoalbum->getTitle();
+    if ($title) {
+        
+      // проверка, соответствует ли переданный title названию альбома
+      $title_translit = TextPeer::urlTranslit($title);
+      if ( $request->getParameter('title') != $title_translit ) {
+        $this->redirect( $this->photoalbum->getUrl() );
+      }  	
+        
       $response = $this->getResponse(); 
-	  $response->setTitle($this->photoalbum->getTitle());
+	  $response->setTitle($title);
+    } elseif ($request->getParameter('title')) {
+      // если у фотоальбома нет заголовка, а в URL он передан    
+      $this->redirect( $this->photoalbum->getUrl() );
     }
+
     
     // запоминаем адрес
     //$_SESSION['back_to_photo'] = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
