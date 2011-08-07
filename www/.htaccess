@@ -22,9 +22,9 @@ ErrorDocument 500 /errors/500.html
   RewriteEngine On
 
   # Перезапись отключена для:
-  # - запрошенный файл существует на диске
+  # - запрошенный файл существует на диске (отключено для оптимизации)
   # - запрашиваемый файл находится в специальной директории
-  RewriteCond %{REQUEST_FILENAME} -f [OR] 
+  #RewriteCond %{REQUEST_FILENAME} -f [OR] 
   RewriteCond %{REQUEST_URI} ^/(css|errors|i|js|php_backend|sf_data_lsdfkr|swf|uploads|stats|backup_download)/
   RewriteRule .* - [L]
 
