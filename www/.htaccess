@@ -25,7 +25,7 @@ ErrorDocument 500 /errors/500.html
   # - запрошенный файл существует на диске (отключено для оптимизации)
   # - запрашиваемый файл находится в специальной директории
   #RewriteCond %{REQUEST_FILENAME} -f [OR] 
-  RewriteCond %{REQUEST_URI} ^/(css|errors|i|js|php_backend|sf_data_lsdfkr|swf|uploads|stats|backup_download)/
+  RewriteCond %{REQUEST_URI} ^/(css|errors|i|js|php_backend|sf_data_lsdfkr|swf|uploads|stats|backup_download|backbackend\.php|frontend_dev_www_etapasvi_com\.php)/
   RewriteRule .* - [L]
 
   # uncomment the following line, if you are having trouble
