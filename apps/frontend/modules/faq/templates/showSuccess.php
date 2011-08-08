@@ -14,6 +14,7 @@
 	<?php /*<li><a href="#gifts"><?php echo __('I am going to Halkhoriya Jungle. I would like to bring some gifts, what is the best choice?') ?></a></li>*/ ?>
 	<li><a href="#get_to_halkhoriya"><?php echo __('How can I get to Halkhoriya Jungle?') ?></a></li> 
 	<li><a href="#ratanpur_and_terthup"><?php echo __('How to reach Ratanpur and Terthup?') ?></a></li>
+	<li><a href="#maitreya"><?php echo __('What does mean Jyampa, Maitri, Maitreya, Metta?') ?></a></li>
 </ol>
 
 <?php /*
@@ -76,7 +77,6 @@
 <?php echo __('The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkhoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.') ?>
 </p>
 
-
 <h2 id="ratanpur_and_terthup"><?php echo ++$counter; ?>. <?php echo __('How to reach Ratanpur and Terthup?') ?></h2>
 <p class="center_text">
 <a href="/uploads/all/how_to_reach_ratanpur_and_therthup.jpg" target="_blank" title="<?php echo __('Download') ?>"><img src="/uploads/all/how_to_reach_ratanpur_and_therthup.jpg" alt="<?php echo __('How to reach Ratanpuri and Terthup?') ?>" width="565"/></a><br/><a href="/uploads/all/how_to_reach_ratanpur_and_therthup.jpg" target="_blank" title="<?php echo __('Enlarge') ?>"><?php echo __('Enlarge') ?></a>
@@ -90,6 +90,12 @@
 <?php /*
 <iframe width="480" height="385" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Terthup+Dharma+Hall&amp;sll=37.0625,-95.677068&amp;sspn=52.152749,79.013672&amp;ie=UTF8&amp;hq=Terthup+Dharma+Hall&amp;hnear=&amp;radius=15000&amp;ll=27.22441,85.147648&amp;spn=0.053426,0.072956&amp;t=h&amp;z=13&amp;iwloc=A&amp;cid=11992413955635615183&amp;output=embed"></iframe>
 */ ?>
+
+<h2 id="maitreya"><?php echo ++$counter; ?>. <?php echo __('What does mean Jyampa, Maitri, Maitreya, Metta?') ?></h2>
+<p>
+<?php echo __('Jyampa, Maitri, Maitreya and Metta mean "loving kindness".') ?>
+</p>
+
 <br/>
 <?php include_component('comments', 'show'); ?>
 

@@ -39,6 +39,11 @@
         <source>How to reach Ratanpur and Terthup?</source>
         <target>Как добраться до Ратанпура и Тертхупа?</target>
       </trans-unit>
+
+      <trans-unit id="1">
+        <source>What does mean Jyampa, Maitri, Maitreya, Metta?</source>
+        <target>Что означает Ямпа, Майтри, Майтрея, Метта?</target>
+      </trans-unit>
       
 <!--
       <trans-unit id="1">
@@ -158,6 +163,11 @@
       <trans-unit id="1">
         <source>Gompa, Ratanpur</source>
         <target>Гомпа, Ратанпур</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Jyampa, Maitri, Maitreya and Metta mean "loving kindness".</source>
+        <target>Ямпа, Майтри, Майтрея и Метта означают "любящая доброта".</target>
       </trans-unit>
       
 <!-- утф -->

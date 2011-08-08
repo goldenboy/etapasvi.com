@@ -39,6 +39,11 @@
         <target></target>
       </trans-unit>
 
+      <trans-unit id="1">
+        <source>What does mean Jyampa, Maitri, Maitreya, Metta?</source>
+        <target></target>
+      </trans-unit>
+
 <!--      
       <trans-unit id="1">
         <source>I am going to Halkhoriya Jungle. I would like to bring some gifts, what is the best choice?</source>
@@ -156,6 +161,11 @@
 
       <trans-unit id="1">
         <source>Gompa, Ratanpur</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Jyampa, Maitri, Maitreya and Metta mean "loving kindness".</source>
         <target></target>
       </trans-unit>
 
