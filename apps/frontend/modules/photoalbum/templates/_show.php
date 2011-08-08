@@ -1,8 +1,7 @@
 <?php if ($photoalbum->getImg()): ?>
     <?php $title = $photoalbum->getTitle($sf_user->getCulture(), true); ?>
     <a href="<?php echo $photoalbum->getUrl(); ?>" title="<?php echo $title; ?>">
-        <img src="<?php echo $photoalbum->getImg(); ?>" 
-        alt="<?php echo $title; ?>" class="photoitem_img"/></a>
+        <img src="<?php echo $photoalbum->getImg(); ?>" alt="" /></a>
     <p class="center p1_no_bottom">                        
         <?php if ($title): ?>
             <?php echo $title; ?><br/>

@@ -1021,8 +1021,7 @@ img.newsitem_img {
 	margin: 7px 21px 0 8px;
 	}
 .photo_info {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 0 30px 3px;
     }
 .prev_icon ,
 .next_icon  {

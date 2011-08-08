@@ -12,13 +12,11 @@
 			<div class="embed_photo">
 			<?php endif ?>
 			<a href="<?php echo $photo->getUrl(); ?>" title="<?php echo $title; ?>">
-				<img src="<?php echo $photo->getThumbUrl(); ?>" 
-				alt="<?php echo $title; ?>" class="photoitem_img"/></a>
-			<?php if (!empty($embed)): /*?>
-			<p class="no_decor small">
-				<?php echo $title; ?>
-			</p>
-            <?php */ ?>
+				<img src="<?php echo $photo->getThumbUrl(); ?>" alt=""/></a>
+            <?php if ($title): ?>
+                <br/><span class="light"><?php echo $title; ?></span>
+            <?php endif ?>	
+			<?php if (!empty($embed)): ?>
 			</div>
 			<?php endif ?>
 		<?php else: ?>				
@@ -54,11 +52,7 @@
 	<?php endif ?>		
 
 
-	<?php if (!empty($short) && $short): ?>      
-        <?php if ($title): ?>
-            <p class="center_text p1_no_both light"><?php echo $title; ?></p>
-        <?php endif ?>	
-    <?php else: ?>
+	<?php if (empty($short) || !$short): ?>  
 
         <div class="photo_info">
             <?php if ($title): ?>
@@ -151,6 +145,6 @@
             </td>	
 		</tr>
 	</table>
-	<?php endif ?>
     <div id="photo_content_title" class="hidden"><?php echo __($sf_response->getTitle()); ?></div>
+	<?php endif ?>    
 <?php endif ?>
