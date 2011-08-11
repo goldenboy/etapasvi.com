@@ -59,12 +59,15 @@
         <a title="Post on Google Buzz" class="google-buzz-button" href="http://www.google.com/buzz/post" data-button-style="small-count" data-url="<?php echo $uri; ?>"></a><script type="text/javascript" src="http://www.google.com/buzz/api/button.js"></script>
     </td>
 */ ?>
-<?php endif ?>
 
 <td class="share_item">           
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <g:plusone size="medium" href="<?php echo $uri; ?>"></g:plusone>
 </td>
+
+<?php endif ?>
+
+
 <td align="left" class="share_item">   
     <iframe src="http://www.facebook.com/plugins/like.php?app_id=242428519102205&amp;href=<?php echo urlencode($uri); ?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=trebuchet+ms&amp;height=21" scrolling="no" frameborder="0" allowTransparency="true" class="share_item_facebook"></iframe>    
 <?php /*
