@@ -21,6 +21,10 @@ ErrorDocument 500 /errors/500.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # проверка доменного имени и рекдирект на домен по умолчанию, если передан неверный
+  RewriteCond %{HTTP_HOST} !^(www.etapasvi.com|m.etapasvi.com)$
+  RewriteRule ^ http://www.etapasvi.com [L,R=301]
+
   # Перезапись отключена для:
   # - запрошенный файл существует на диске (отключено для оптимизации)
   # - запрашиваемый файл находится в специальной директории

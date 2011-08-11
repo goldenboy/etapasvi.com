@@ -61,7 +61,8 @@ class sfSuperCacheFilter extends sfFilter
       //}
       $file =
         sfConfig::get('sf_web_dir').'/'.$this->getParameter('cache_dir', 'cache').
-        ($this->getParameter('with_host', true) ? '/'.$request->getHost() : '').
+        //($this->getParameter('with_host', true) ? '/'.$request->getHost() : '').
+        ($this->getParameter('with_host', true) ? '/'.sfConfig::get('app_domain_name') : '').
         ('/' == $pathInfo[strlen($pathInfo) - 1] ? $pathInfo.'i'.$ext : $pathInfo . /* saynt2day */ 'i'.$ext).
         ($this->getParameter('check_lifetime', true) ? '.php' : '')
       ;
