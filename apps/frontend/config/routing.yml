@@ -236,3 +236,9 @@ donation:
   url:   /:sf_culture/donation
   param: { module: donation, action: show }
   requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }  
+  
+# Ошибка 404
+donation:
+  url:   /:sf_culture/*
+  param: { module: default, action: error404 }
+  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }  

@@ -52,9 +52,9 @@
 	<div id="content">
 		<?php echo $sf_content ?>
 	</div>
-
+    <?php /* id используется в /lib/symfony/exception/sfError404Exception.class.php */ ?>
 	<div id="footer">        
-        <?php include_partial('global/share'); ?>
+        <?php include_partial('global/share'); ?>        
         <div id="culture_list">
             <?php 
                 $uri          = $sf_request->getPathInfo();

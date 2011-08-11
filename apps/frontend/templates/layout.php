@@ -91,7 +91,7 @@
 
 	<span class="lang_name lang_selector" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><?php echo UserPeer::getCultureIso( $user_culture );?></span> 
 	<span class="slide_arrow lang_selector">▼</span>
-
+    <?php /* id используется в /lib/symfony/exception/sfError404Exception.class.php */ ?>
 	<div id="lang_list" class="box">
 		<?php foreach(UserPeer::getCulturesData() as $culture => $culture_data): ?>
 			<?php if ($user_culture == $culture): ?>

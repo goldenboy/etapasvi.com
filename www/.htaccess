@@ -26,10 +26,11 @@ ErrorDocument 500 /errors/500.html
   RewriteRule ^ http://www.etapasvi.com [L,R=301]
 
   # Перезапись отключена для:
-  # - запрошенный файл существует на диске (отключено для оптимизации)
+  # - в запросе есть точка, т.е запрашивается файл
   # - запрашиваемый файл находится в специальной директории
   #RewriteCond %{REQUEST_FILENAME} -f [OR] 
-  RewriteCond %{REQUEST_URI} ^/(css|errors|i|js|php_backend|sf_data_lsdfkr|swf|uploads|stats|backup_download|backbackend\.php|frontend_dev_www_etapasvi_com\.php)/
+  RewriteCond %{REQUEST_URI} ^.*\..*$ [OR] 
+  RewriteCond %{REQUEST_URI} ^/(css|errors|i|js|php_backend|sf_data_lsdfkr|swf|uploads|stats|backup_download)/
   RewriteRule .* - [L]
 
   # uncomment the following line, if you are having trouble

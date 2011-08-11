@@ -32,26 +32,33 @@ class sfSuperCacheFilter extends sfFilter
 
     // execute this filter only if cache is set and no GET or POST parameters
     // execute this filter not in debug mode, only if no_script_name and for 200 response code
+    // страницы 404 кэшируем
     if (
       // saynt2day
       // чтобы не было нагрузке при переходе из FeedBurner, который передаёт GET-запрос
       //(!sfConfig::get('sf_cache') || count($_GET) || count($_POST))
       (!sfConfig::get('sf_cache') || count($_POST))
       ||
-      (sfConfig::get('sf_debug') || !sfConfig::get('sf_no_script_name') || $response->getStatusCode() != 200)
+      (sfConfig::get('sf_debug') || !sfConfig::get('sf_no_script_name') || ($response->getStatusCode() != 200 && $response->getStatusCode() != 404) )
     )
     {
       return;
     }
+    
+    $pathInfo = $this->getContext()->getRequest()->getPathInfo();
+    
+    // Если произошла 404 ошибка, подменяем строку запроса т.о., чтобы все страницы сохранялись в один файл
+    if ($response->getStatusCode() == 404) {
+    	$pathInfo = UserPeer::getError404Url( UserPeer::getCultureFromUrl($pathInfo) );
+    }
 
+    // Использование $cacheManager и параметров view отключено для ускорения процесса
     // only if cache is set for the entire page
-    $cacheManager = $this->getContext()->getViewCacheManager();
-    $uri = $this->getContext()->getRouting()->getCurrentInternalUri();
-    if ($cacheManager->isCacheable($uri) && $cacheManager->withLayout($uri))
-    {
-      // save super cache
-      $request = $this->getContext()->getRequest();
-      $pathInfo = $request->getPathInfo();
+    //$cacheManager = $this->getContext()->getViewCacheManager();
+    //$uri = $this->getContext()->getRouting()->getCurrentInternalUri();
+    //if ($cacheManager->isCacheable($uri) && $cacheManager->withLayout($uri))
+    //{
+        
       // saynt2day
       // определяем будущее расширение файла
       //if ( strstr($response->getHttpHeader('Content-type'), 'application/javascript')) {
@@ -63,7 +70,7 @@ class sfSuperCacheFilter extends sfFilter
         sfConfig::get('sf_web_dir').'/'.$this->getParameter('cache_dir', 'cache').
         //($this->getParameter('with_host', true) ? '/'.$request->getHost() : '').
         ($this->getParameter('with_host', true) ? '/'.sfConfig::get('app_domain_name') : '').
-        ('/' == $pathInfo[strlen($pathInfo) - 1] ? $pathInfo.'i'.$ext : $pathInfo . /* saynt2day */ 'i'.$ext).
+        $pathInfo.'i'.$ext.
         ($this->getParameter('check_lifetime', true) ? '.php' : '')
       ;
       $current_umask = umask();
@@ -81,11 +88,12 @@ class sfSuperCacheFilter extends sfFilter
       if (!is_dir($file))
       {
         $response = $this->getContext()->getResponse();
-
-        $expiryDate = time() + $cacheManager->getLifetime($uri);
+        
         // Note: some proxies do cache 302 responses, despite the rfc, so we explicitely ask for no cache
         if ($this->getParameter('check_lifetime', true))
         {
+          $uri = $this->getContext()->getRouting()->getCurrentInternalUri();
+          $expiryDate = time() + $cacheManager->getLifetime($uri);
           $header = sprintf("<?php if (time() > %d) { unlink(__FILE__); header('Pragma: no-cache'); header('Location: '.\$_SERVER['REQUEST_URI']);  exit; } ?>\n", $expiryDate);
           $header .= sprintf("<?php header('Content-Type: %s') ?>\n", $response->getContentType());
           foreach(array('Cache-Control', 'Pragma', 'Expires') as $key)
@@ -116,6 +124,6 @@ class sfSuperCacheFilter extends sfFilter
         chmod($file, 0666);
       }
       umask($current_umask);
-    }
+    //}
   }
 }

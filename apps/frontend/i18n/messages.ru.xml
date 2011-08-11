@@ -219,6 +219,10 @@
         <source>Terthup Dharma Hall</source>
         <target>Зал Дхармы Тертхуп</target>
       </trans-unit>
+      <trans-unit id="1">
+        <source>Back</source>
+        <target>Назад</target>
+      </trans-unit>
       
 <!-- audio -->
       <trans-unit id="1">

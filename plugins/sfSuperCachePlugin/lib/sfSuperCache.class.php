@@ -585,5 +585,53 @@ class sfSuperCache
   	}
   }
   
+  /**
+   * Получение HTML страницы 404 из кэша
+   */
+  public static function getError404Content()
+  {
+    $cache_file_path = sfSuperCache::urlToFile( UserPeer::getError404Url(), sfConfig::get('app_domain_name') );
+            
+    if (!file_exists($cache_file_path)) {
+    	return '';
+    }
+  	
+  	// если 404 страница уже закэширована, получаем её из файла
+  	$cache_file = file_get_contents($cache_file_path);
+  	
+  	// заменяем ссылки в переключателе языка и ссылке на мобильную версию
+  	
+  	// текущий путь, начинающийся со /
+  	$cur_path = sfContext::getInstance()->getRequest()->getPathInfo();
+  	
+  	// lang_list
+  	preg_match_all(
+  	  "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . ")\/[^\/\"]+\/)[^\"]+)\"/ism", 
+	  preg_replace("/.*(<div.*id=\"lang_list\".*?<\/div>).*/ism", "$1", $cache_file), 
+	  $matches);
+	
+	if ($matches[1] && $matches[2]) {
+	  // текущий путь без языка
+	  $cur_parh_without_lang = preg_replace("/\/[^\/]+\//", "", $cur_path);
+	  foreach ($matches[1] as $i=>$match) {
+	    $replacement[$match] = $matches[2][$i] . $cur_parh_without_lang;
+	  }		  
+	  $cache_file = strtr($cache_file, $replacement);
+	}
+	
+	// footer
+  	preg_match_all(
+  	  "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 
+	  preg_replace("/.*(<div.*id=\"footer\".*?<\/div>).*/ism", "$1", $cache_file), 
+	  $matches);
+	if ($matches[1] && $matches[2]) {
+	  foreach ($matches[1] as $i=>$match) {
+	    $replacement[$match] = $matches[2][$i] . $cur_path;
+	  }		  
+	  $cache_file = strtr($cache_file, $replacement);
+	}
+	return $cache_file;
+  }
+  
   
 }

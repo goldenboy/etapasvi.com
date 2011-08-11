@@ -316,7 +316,34 @@ class UserPeer extends BaseUserPeer
 	{
 	  return 'frontend_' . str_replace('.', '_', $domain_name) . '.php';
 	}
+	
+	/**
+	 * Получение языка из URL
+	 * url:
+	 * http://www.etapasvi.com/zh_CN/biography
+	 * /zh_CN/biography
+	 */
+	public static function getCultureFromUrl( $url )
+	{
+		preg_match("/(?:http:\/\/[^\/]+)?\/([^\/]+)\/.*/", $url, $matches);
+		return $matches[1];
+	}
 		
+	/**
+	 * Получение относительного адреса страницы 404
+	 */
+	public static function getError404Url($culture = '')
+	{
+		if (empty($culture )) {
+		  $culture = sfContext::getInstance()->getUser()->getCulture();
+		}
+		// если передан URL /abrakadabra, язык неопределён
+		if (empty($culture)) {
+			$culture = sfConfig::get('sf_default_culture');
+		}
+		$url = '/' . $culture . '/default/errors';
+		return $url;
+	}
 	
 //	/**
 //	 * Проверка и авторизация пользователя

@@ -46,7 +46,19 @@ class sfError404Exception extends sfException
         error_log($this->getMessage());
       }
 
-      sfContext::getInstance()->getController()->forward(sfConfig::get('sf_error_404_module'), sfConfig::get('sf_error_404_action'));
+      // http://bsds.etapasvi.com/issues/65
+      // получаем файл 404 ошибки из кэша
+      $cache_file = sfSuperCache::getError404Content();
+            
+      if ($cache_file) {      	
+      	$response = sfContext::getInstance()->getResponse();
+      	$response->setStatusCode('404');
+      	$response->setContent($cache_file);
+      	$response->send();
+      } else {
+      	// отображение страницы 404
+      	sfContext::getInstance()->getController()->forward(sfConfig::get('sf_error_404_module'), sfConfig::get('sf_error_404_action'));
+      }            
     }
   }
 }

@@ -8,3 +8,5 @@
 	<dt><?php echo __("Page Not Found") ?></dt>
     <dd><?php echo __("You may have typed the address (URL) incorrectly. Check it to make sure you've got the exact right spelling, capitalization or switch to another lamguage") ?>.</dd>
 </dl>
+<br/>
+<a href="javascript:history.back();void(0)"><?php echo __("Back") ?></a>
