@@ -597,9 +597,7 @@ class sfSuperCache
     }
   	
   	// если 404 страница уже закэширована, получаем её из файла
-  	$cache_file = file_get_contents($cache_file_path);
-  	
-  	// заменяем ссылки в переключателе языка и ссылке на мобильную версию
+  	$cache_file = file_get_contents($cache_file_path);  	  	
   	
   	// текущий путь, начинающийся со /
   	$cur_path = sfContext::getInstance()->getRequest()->getPathInfo();
@@ -620,6 +618,7 @@ class sfSuperCache
 	}
 	
 	// footer
+	// заменяем ссылки в переключателе языка и ссылке на мобильную версию
   	preg_match_all(
   	  "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 
 	  preg_replace("/.*(<div.*id=\"footer\".*?<\/div>).*/ism", "$1", $cache_file), 
@@ -630,6 +629,13 @@ class sfSuperCache
 	  }		  
 	  $cache_file = strtr($cache_file, $replacement);
 	}
+	
+	// Если мы находимся, например, в новостях http://www.etapasvi.com/ru/news/9555888, то title будет "Новости"
+	// заменяем его на <title>Страница не найдена или не переведена - eTapasvi.com</title>
+	$i18n       = sfContext::getInstance()->getI18N();
+	$title      = $i18n->__('Page Not Found or Not Translated');	    
+	$cache_file = preg_replace( "/<title>.*<\/title>/", "<title>" . $title . " - eTapasvi.com</title>", $cache_file);
+	
 	return $cache_file;
   }
   
