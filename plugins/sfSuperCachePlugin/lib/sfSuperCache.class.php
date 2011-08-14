@@ -296,9 +296,10 @@ class sfSuperCache
    * @param unknown_type $threads_count кол-во потоков в мультипроцессорном режиме
    * @param unknown_type $domain_name доменное имя, для которого очищается кэш
    * @param unknown_type $console запускать открытие страницы через консоль
+   * @param unknown_type $exclude_path_regexp регулярное выражение, исключающее пути из обработки
    * @return unknown
    */
-  public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT, $domain_name = '', $console = true)
+  public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT, $domain_name = '', $console = true, $exclude_path_regexp = '')
   { 
   	// максимальное время работы скрипта - сутки 	
   	ini_set('max_execution_time', 60*60*24);
@@ -330,6 +331,9 @@ class sfSuperCache
   	
   	// удаление и создание кэша страниц  	  	
   	foreach ($file_list as $file_path) {
+  	  if ($exclude_path_regexp && preg_match("/" . $exclude_path_regexp . "/", $file_path)) {
+  	  	continue;
+  	  }
 
   	  if ($multi_process) {
         // ожидание, пока количество процессов уменьшится и можно будет создать новый
@@ -453,8 +457,9 @@ class sfSuperCache
    * @param string $domain_name доменное имя, кэш которого обновляется
    * @param bool $multi_process обновлять в многопоточном режиме
    * @param bool $console обращаться к страницам через консоль
+   * @param unknown_type $exclude_path_regexp регулярное выражение, исключающее пути из обработки
    */
-  public static function runRefreshCacheTask($domain_name = '', $multi_process = true, $console = true)
+  public static function runRefreshCacheTask($domain_name = '', $multi_process = true, $console = true, $exclude_path_regexp = '')
   {
   	// если уже идёт обновление кэша, выходим
   	if (count(self::listRefreshProcesses())) {
@@ -477,6 +482,12 @@ class sfSuperCache
   		$console_param = ' --console=1';
   	} else {
   		$console_param = ' --console=0';
+  	}  	
+  	
+  	if ($exclude_path_regexp) {
+  		$exclude_path_regexp_param = ' --exclude_path_regexp=' . base64_encode($exclude_path_regexp) . '';
+  	} else {
+  		$exclude_path_regexp_param = ' ';
   	}
   	
   	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' 
@@ -484,6 +495,7 @@ class sfSuperCache
   				. $domain_name_param 
   				. $multi_process_param
   				. $console_param
+  				. $exclude_path_regexp_param
   				. ' > /dev/null 2>&1 &';
 
   	// запуск команды, не дожидаясь завершения
@@ -573,6 +585,20 @@ class sfSuperCache
   	  $pid = getmypid();
   	}
   	return dirname( tempnam("dummy","") ) . '/refresh_cache_' . $pid . '.log';
+  }
+  
+  /**
+   * Получение содрежимого лога обновления кэша по PID
+   *
+   * @param unknown_type $pid ID главного процесса
+   * @return unknown
+   */
+  public static function refreshCacheGetLogContent($pid)
+  {
+  	if (!$pid) {
+  	  return '';
+  	}
+  	return file_get_contents(self::refreshCacheGetLogPath($pid));
   }
   
   /**

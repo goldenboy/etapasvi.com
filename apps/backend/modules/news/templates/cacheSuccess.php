@@ -1,7 +1,6 @@
 <h1>cache</h1>
 
 <?php if (count($refresh_processes)): ?>
-<form action="" method="post" >
 <table>
     <tr>
         <th>Action</th>
@@ -11,8 +10,10 @@
 <?php foreach($refresh_processes as $param=>$value): ?>
     <tr>
         <td>
+            <form action="" method="post" >
             <input type="submit" value="Kill" name="kill">
-            <input type="hidden" value="<?php echo $value['pid']; ?>" name="pid"> 
+            <input type="hidden" value="<?php echo $value['pid']; ?>" name="pid">
+            </form>
         </td>
         <td>
             <?php echo $value['pid']; ?>
@@ -20,10 +21,15 @@
         <td>
             <?php echo $value['done']; ?>
         </td>
+        <td>
+            <form action="" method="post" target="_blank">
+            <input type="submit" value="log" name="log">
+            <input type="hidden" value="<?php echo $value['pid']; ?>" name="pid">
+            </form>
+        </td>
     </tr>
 <?php endforeach; ?>
 </table>
-</form>
 <?php endif ?>
 
 <form action="" method="post" >  
@@ -35,6 +41,8 @@
     </select>
     <input type="checkbox" <?php if (empty($_POST['refresh_cache_domain_name']) || (!empty($_POST) && !empty($_POST['refresh_cache_multi_process']))): ?>checked="checked"<?php endif ?> name="refresh_cache_multi_process" /> Multi process 
     <input type="checkbox" <?php if (empty($_POST['refresh_cache_domain_name']) || (!empty($_POST) && !empty($_POST['refresh_cache_console']))): ?>checked="checked"<?php endif ?> name="refresh_cache_console" /> Console 
+    <input type="text" name="refresh_exclude_path_regexp" value="<?php if (!empty($_POST['refresh_exclude_path_regexp'])):?><?php echo $_POST['refresh_exclude_path_regexp'];?><?php else: ?>\/photo\/(?!album)<?php endif ?>" />
+    <input type="checkbox" <?php if (empty($_POST['refresh_exclude_path_regexp_flag']) || (!empty($_POST) && !empty($_POST['refresh_exclude_path_regexp_flag']))): ?>checked="checked"<?php endif ?> name="refresh_exclude_path_regexp_flag" /> Exclude path
 	<input type="submit" value="Refresh" name="refresh_cache" />
 </form>
 <hr/>

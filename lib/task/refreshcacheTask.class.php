@@ -20,6 +20,7 @@ class refreshcacheTask extends sfBaseTask
       new sfCommandOption('domain_name', null, sfCommandOption::PARAMETER_OPTIONAL, 'Domain to refresh cache'),
       new sfCommandOption('multi_process', null, sfCommandOption::PARAMETER_OPTIONAL, 1),
       new sfCommandOption('console', null, sfCommandOption::PARAMETER_OPTIONAL, 1),
+      new sfCommandOption('exclude_path_regexp', null, sfCommandOption::PARAMETER_OPTIONAL, 1),
       new sfCommandOption('application', null, sfCommandOption::PARAMETER_REQUIRED, 'The application name', 'frontend'),
       new sfCommandOption('env', null, sfCommandOption::PARAMETER_REQUIRED, 'The environment', 'prod'),
       //new sfCommandOption('connection', null, sfCommandOption::PARAMETER_REQUIRED, 'The connection name', 'propel'),
@@ -40,7 +41,8 @@ EOF;
       $options['multi_process'], 
       sfSuperCache::REFRESH_CACHE_THREADS_COUNT, 
       $options['domain_name'], 
-      $options['console']
+      $options['console'],
+      base64_decode($options['exclude_path_regexp'])
     );		
     print_r( $result );
   }

@@ -665,18 +665,32 @@ class newsActions extends autonewsActions
    */
   public function executeCache($request)
   {    
-    // запуск обновления кэша
+    // остановка обновления кэша
     if (!empty($_POST['kill']) && !empty($_POST['pid'])) {    	
       sfSuperCache::stopRefershCacheTask($_POST['pid']);      
     }
     
+    // остановка обновления кэша
+    if (!empty($_POST['log']) && !empty($_POST['pid'])) {    	
+      echo sfSuperCache::refreshCacheGetLogContent($_POST['pid']);      
+      exit();
+    }        
+    
     // запуск обновления кэша
+    // исключение страниц из обработки    
     if (!empty($_POST['refresh_cache'])) {
+	  if (!empty($_POST['refresh_exclude_path_regexp_flag']) && !empty($_POST['refresh_exclude_path_regexp'])) {
+	  	$refresh_exclude_path_regexp = $_POST['refresh_exclude_path_regexp'];
+	  } else {
+	  	$refresh_exclude_path_regexp = '';
+	  }
+
       sfSuperCache::runRefreshCacheTask(
         $_POST['refresh_cache_domain_name'], 
         @$_POST['refresh_cache_multi_process'],
-        @$_POST['refresh_cache_console']
-      );      
+        @$_POST['refresh_cache_console'],
+        $refresh_exclude_path_regexp
+      ); 
     }
     
     // информация о процессах, обновляющих кэш
