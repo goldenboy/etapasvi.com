@@ -877,10 +877,28 @@
 
 <h2 id="bhagavan"><?php echo ++$counter; ?>. <?php echo __('Bhagavan') ?></h2>
 <p>
-<?php echo __('Bhagavan (Bhagwan or Bhagawan) literally means "possessing fortune, blessed, prosperous", and hence "illustrious, divine, venerable, holy".') ?> 
+<?php echo __('Bhagavan (Bhagwan or Bhagawan) in Hindi and Sanskrit means one who is clad in bhagwa i.e. light orange colour, that represents gyan or knowledge. Thus Bhagwān means one who wears gyan or knowledge.') ?> 
 </p>
 <p>
 <?php echo __('In some traditions of Hinduism it is used to indicate the Supreme Being or Absolute Truth, but with specific reference to that Supreme Being as possessing a personality (a personal God). This personal feature indicated in Bhagavan differentiates its usage from other similar terms such as Brahman, the "Supreme Spirit" or "spirit", and thus, in this usage, Bhagavan is in many ways analogous to the general Christian conception of God.') ?> 
+</p>
+<p>
+<?php echo __('In Hindu Religion, the word Bhagwan has symbolic meaning too. The word encompasses Earth, Water, Fire, Air and Space – the five elements:') ?> 
+</p>
+<p>
+<?php echo __('‘Bh’ stands for Bhoomi or Earth') ?>
+</p>
+<p>
+<?php echo __('‘G’ stands for Gagan or Space') ?>
+</p>
+<p>
+<?php echo __('‘V’ stands for Vayu or Air') ?>
+</p>
+<p>
+<?php echo __('‘A’ stands for Agni or Fire') ?>
+</p>
+<p>
+<?php echo __('‘N’ stands for Neer or Water') ?>
 </p>
 <p>
 <?php echo __('Bhagavan used as a title of veneration is often translated as "Lord", as in "Bhagavan Krishna", "Bhagavan Shiva", "Bhagavan Swaminarayan", etc. In Buddhism and Jainism, Gautama Buddha, Mahavira and other Tirthankaras, Buddhas and bodhisattvas are also venerated with this title.') ?> 
@@ -888,16 +906,7 @@
 <p>
 <?php echo __('The title is also used as a respectful form of address for a number of contemporary spiritual teachers in India.') ?> 
 </p><p>
-<?php echo __('The Bhagavata Purana clearly states the meaning of Bhagavan to mean the supreme most being:') ?> 
-</p>
-<blockquote>vadanti tat tattva-vidas<br/>
-tattvam yaj jnanam advayam<br/>
-brahmeti paramatmeti<br/>
-bhagavan iti sabdyate
-</blockquote>
-<p>
-<?php echo __('The Learned Know the Absolute Truth call this nondual substance Brahman, Paramatma or Bhagavan.') ?> 
-</p>
+
 
 <p class="right_text">
 	<a href="#up"><?php echo __('Go to top') ?></a>

@@ -1465,10 +1465,45 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>Bhagavan (Bhagwan or Bhagawan) literally means "possessing fortune, blessed, prosperous", and hence "illustrious, divine, venerable, holy".</source>
-        <target>Бхагаван в буквальном смысле означает "наделённый удачей, благословенный, успешный", и, следовательно, "прославленный, божественный, достопочтенный, святой".</target>
+        <source>Bhagavan (Bhagwan or Bhagawan) in Hindi and Sanskrit means one who is clad in bhagwa i.e. light orange colour, that represents gyan or knowledge. Thus Bhagwān means one who wears gyan or knowledge.</source>
+        <target>Бхагаван (Бхагван или Бхагавана) на хинди и санскрите означает того, кто одет в бхагва, то есть светло-оранжевое, которое символизирует Гьян или знание. Таким образом, Бхагван означает того, кто является носителем Гьян или знаний.</target>
       </trans-unit>
 
+      <trans-unit id="1">
+        <source>In some traditions of Hinduism it is used to indicate the Supreme Being or Absolute Truth, but with specific reference to that Supreme Being as possessing a personality (a personal God). This personal feature indicated in Bhagavan differentiates its usage from other similar terms such as Brahman, the "Supreme Spirit" or "spirit", and thus, in this usage, Bhagavan is in many ways analogous to the general Christian conception of God.</source>
+        <target>В некоторых традициях индуизма он используется для обозначения Верховного Существа или Абсолютной Истины как Личности Бога, как Бога в Его личностном аспекте. Эта личностная концепция Бхагавана отличает его от других сходных терминов таких, как Брахман, Высший Дух и посему, более или менее тождественна общему понятию Бога в христианстве.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>In Hindu Religion, the word Bhagwan has symbolic meaning too. The word encompasses Earth, Water, Fire, Air and Space – the five elements:</source>
+        <target>В индуизме слово Бхагаван имеет ещё и символический смысл. Слово заключает в себе Землю, Воду, Огонь, Воздух и Пространство - пять элементов:</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>‘Bh’ stands for Bhoomi or Earth</source>
+        <target>"Бх" – Бхуми или Земля</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>‘G’ stands for Gagan or Space</source>
+        <target>"Г" – Гаган или Пространство</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>‘V’ stands for Vayu or Air</source>
+        <target>"В" – Вайу или Воздух</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>‘A’ stands for Agni or Fire</source>
+        <target>"А" – Агни или Огонь</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>‘N’ stands for Neer or Water</source>
+        <target>"Н" – Нир или Вода</target>
+      </trans-unit>
+      
       <trans-unit id="1">
         <source>In some traditions of Hinduism it is used to indicate the Supreme Being or Absolute Truth, but with specific reference to that Supreme Being as possessing a personality (a personal God). This personal feature indicated in Bhagavan differentiates its usage from other similar terms such as Brahman, the "Supreme Spirit" or "spirit", and thus, in this usage, Bhagavan is in many ways analogous to the general Christian conception of God.</source>
         <target>В некоторых традициях индуизма он используется для обозначения Верховного Существа или Абсолютной Истины как Личности Бога, как Бога в Его личностном аспекте. Эта личностная концепция Бхагавана отличает его от других сходных терминов таких, как Брахман, Высший Дух и посему, более или менее тождественна общему понятию Бога в христианстве.</target>
@@ -1482,17 +1517,7 @@
       <trans-unit id="1">
         <source>The title is also used as a respectful form of address for a number of contemporary spiritual teachers in India.</source>
         <target>В современном контексте термин часто употребляется как уважительная форма обращения к духовным учителям в Индии.</target>
-      </trans-unit>      
-
-	  <trans-unit id="1">
-        <source>The Bhagavata Purana clearly states the meaning of Bhagavan to mean the supreme most being:</source>
-        <target>Бхагавата Пурана объясняет значение Бахагван как наивысшее существо:</target>
-      </trans-unit>
-
-      <trans-unit id="1">
-        <source>The Learned Know the Absolute Truth call this nondual substance Brahman, Paramatma or Bhagavan.</source>
-        <target>Мудрый знает Абсолютную истину и называет эту недвойственную сущность Брахман, Параматма или Бхагаван.</target>
-      </trans-unit>
+      </trans-unit>      	
 
       <trans-unit id="1">
         <source>In the Hindu religion, Gyani is a person trying to perceive Absolute Truth (Bhagavan or Brahman) relying just on the strength of his mind.</source>
