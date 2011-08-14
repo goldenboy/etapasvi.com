@@ -32,6 +32,22 @@ prod:
           param:
             level: err
             file: %SF_LOG_DIR%/%SF_APP%_%SF_ENVIRONMENT%.log
+            
+mobile:
+  logger:
+#    class:   sfNoLogger
+#    param:
+#      level:   err
+#      loggers: ~
+    class: sfAggregateLogger
+    param:
+      level: err
+      loggers:
+        sf_file_debug:
+          class: sfFileLogger
+          param:
+            level: err
+            file: %SF_LOG_DIR%/%SF_APP%_%SF_ENVIRONMENT%.log
 
 cli:
   controller:
