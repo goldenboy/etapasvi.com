@@ -25,6 +25,9 @@ class sfSuperCache
   // расширение файла кэша    
   const CACHE_FILE_EXT = 'i.html';    
   
+  // строка запуска PHP
+  const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3 -c /etc/php53/php.ini';    
+  
   // количество потоков для обновления кэша при обновлении кэша в многопоточном режиме
   const REFRESH_CACHE_THREADS_COUNT = 5;    
   
@@ -161,7 +164,7 @@ class sfSuperCache
       $path_info = parse_url($url);
       //$html = shell_exec('php ' . $_SERVER['PWD'] . '/www/frontend_prodprod.php ' . $path_info['path']);
       $html = shell_exec(
-        'php ' . sfConfig::get('sf_web_dir') . '/' . UserPeer::getApplicationScript(self::getDomainHameFromPath($url)) . ' ' . $path_info['path']
+        self::PHP_RUN_COMMAND . ' ' . sfConfig::get('sf_web_dir') . '/' . UserPeer::getApplicationScript(self::getDomainHameFromPath($url)) . ' ' . $path_info['path']
       );
     } else {
       // обращение через браузер
@@ -296,7 +299,10 @@ class sfSuperCache
    * @return unknown
    */
   public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT, $domain_name = '', $console = true)
-  {  	
+  { 
+  	// максимальное время работы скрипта - сутки 	
+  	ini_set('max_execution_time', 60*60*24);
+  	
   	$result = array(
   	  // в многопоточном режиме не подсчитывается
   	  //'files' => 0,
