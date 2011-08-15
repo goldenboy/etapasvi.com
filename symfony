@@ -1,5 +1,6 @@
-#!/dh/cgi-system/php53.cgi
+#!/usr/local/bin/php-5.3
 <?php
+// #!/dh/cgi-system/php53.cgi
 // #!/usr/local/bin/php-5.3 -c /etc/php53/php.ini
 // #!/usr/local/php5/bin/php
 // #!www/cgi-bin/php-wrapper-s3r.fcgi
