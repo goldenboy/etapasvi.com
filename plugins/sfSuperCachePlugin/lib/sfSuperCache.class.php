@@ -213,7 +213,7 @@ class sfSuperCache
    * Получение информации об объёме кэша на диске
    *
    */
-  public static function getInfo($domain_name = '')
+  public static function getInfo($domain_name = '', $path_filter = '')
   {
   	$cacheDir = self::getCacheDir($domain_name);  	
   	
@@ -222,10 +222,18 @@ class sfSuperCache
 	// 20M     total
   	$size = shell_exec('du -ch ' . $cacheDir . ' | grep total');
   	
+  	// фильтр по имени файла
+  	if (!empty($path_filter)) {
+  	    $path_filter = '-path "' . $path_filter . '"';
+  	} else {
+  	    $path_filter = '';
+  	}
+  	
   	// количество файлов (минус .htaccess)
 	// [vaduz]$ find /home/saynt2day20/etapasvi.com/www/cache -type f | wc -l
 	// 15
-  	$files = shell_exec('find ' . $cacheDir . '  -type f | wc -l') - 1;
+	$files_command = 'find ' . $cacheDir . ' ' . $path_filter . ' -type f | wc -l';
+  	$files        = shell_exec($files_command); // - 1;
 
   	return array(
 	  'size'  => $size,
@@ -297,9 +305,10 @@ class sfSuperCache
    * @param unknown_type $domain_name доменное имя, для которого очищается кэш
    * @param unknown_type $console запускать открытие страницы через консоль
    * @param unknown_type $exclude_path_regexp регулярное выражение, исключающее пути из обработки
+   * @param unknown_type $include_path_regexp регулярное выражение, включающее пути в обработку
    * @return unknown
    */
-  public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT, $domain_name = '', $console = true, $exclude_path_regexp = '')
+  public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT, $domain_name = '', $console = true, $exclude_path_regexp = '', $include_path_regexp = '')
   { 
   	// максимальное время работы скрипта - сутки 	
   	ini_set('max_execution_time', 60*60*24);
@@ -331,7 +340,14 @@ class sfSuperCache
   	
   	// удаление и создание кэша страниц  	  	
   	foreach ($file_list as $file_path) {
+  	    
+  	  // объект исключён
   	  if ($exclude_path_regexp && preg_match("/" . $exclude_path_regexp . "/", $file_path)) {
+  	  	continue;
+  	  }
+  	  
+  	  // обрабатываются только включённые объекты
+  	  if ($include_path_regexp && !preg_match("/" . $include_path_regexp . "/", $file_path)) {
   	  	continue;
   	  }
 
@@ -458,8 +474,9 @@ class sfSuperCache
    * @param bool $multi_process обновлять в многопоточном режиме
    * @param bool $console обращаться к страницам через консоль
    * @param unknown_type $exclude_path_regexp регулярное выражение, исключающее пути из обработки
+   * @param unknown_type $include_path_regexp регулярное выражение, включающее пути в обработку
    */
-  public static function runRefreshCacheTask($domain_name = '', $multi_process = true, $console = true, $exclude_path_regexp = '')
+  public static function runRefreshCacheTask($domain_name = '', $multi_process = true, $console = true, $exclude_path_regexp = '', $include_path_regexp = '')
   {
   	// если уже идёт обновление кэша, выходим
   	if (count(self::listRefreshProcesses())) {
@@ -490,12 +507,19 @@ class sfSuperCache
   		$exclude_path_regexp_param = ' ';
   	}
   	
+  	if ($include_path_regexp) {
+  		$include_path_regexp_param = ' --include_path_regexp=' . base64_encode($include_path_regexp) . '';
+  	} else {
+  		$include_path_regexp_param = ' ';
+  	}
+  	
   	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' 
   				. self::getRefreshCacheTaskCommand() 
   				. $domain_name_param 
   				. $multi_process_param
   				. $console_param
   				. $exclude_path_regexp_param
+  				. $include_path_regexp_param
   				. ' > /dev/null 2>&1 &';
 
   	// запуск команды, не дожидаясь завершения
@@ -564,10 +588,21 @@ class sfSuperCache
       // PID
       $process_list[ $k ][ 'pid' ] = $pid;
       // Done
-      $process_list[ $k ][ 'done' ] = count(@file(self::refreshCacheGetLogPath($pid)));
+      $process_list[ $k ][ 'done' ] = self::refreshCacheGetLogDone($pid);
   	}
   	
 	return $process_list;
+  }
+  
+  /**
+   * Получение кол-ва обработанных объектов по логу
+   *
+   * @param unknown_type $pid
+   * @return unknown
+   */
+  public static function refreshCacheGetLogDone($pid)
+  {
+      return count(@file(self::refreshCacheGetLogPath($pid)));
   }
   
   /**
@@ -585,6 +620,37 @@ class sfSuperCache
   	  $pid = getmypid();
   	}
   	return dirname( tempnam("dummy","") ) . '/refresh_cache_' . $pid . '.log';
+  }
+  
+  
+  public static function refreshCacheGetLogList()
+  {
+    $log_list = array();
+      
+    // получаем список файлов
+    // -rw-r--r-- 1 saynt2day20 pg2567308  28523 2011-06-15 13:37 /tmp/refresh_cache_4729.log
+  	$log_files_row_info      = shell_exec('ls -lat ' . self::refreshCacheGetLogPath('*'));  	  	
+  	$log_files_row_info_list = explode("\n", $log_files_row_info);  	  
+  	
+  	// вытаскиваем информацию о логах
+  	foreach ($log_files_row_info_list as $log_files_row_info_item) {
+  	  $matches = array();
+  	  preg_match("/^(?:\S){10} \S+ \S+ \S+\s+(\d+) ([^\/]+) \/.*_(\d+)\.log/", $log_files_row_info_item, $matches);
+  	    
+  	  if (!empty($matches['1']) && !empty($matches['2']) && !empty($matches['3'])) {
+        $log_item = array();
+        $log_item['size'] = $matches['1'];
+        $log_item['date'] = $matches['2'];
+        $log_item['pid']  = $matches['3'];
+      	    
+        $log_item['done'] = self::refreshCacheGetLogDone($log_item['pid']);
+        
+        $log_list[] = $log_item;
+  	  }  	    
+  	  
+  	}
+
+  	return $log_list;
   }
   
   /**

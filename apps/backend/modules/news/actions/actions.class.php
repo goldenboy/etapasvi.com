@@ -674,22 +674,41 @@ class newsActions extends autonewsActions
     if (!empty($_POST['log']) && !empty($_POST['pid'])) {    	
       echo sfSuperCache::refreshCacheGetLogContent($_POST['pid']);      
       exit();
-    }        
+    }    
+
+    // загрузка информации о логах
+    if (!empty($_POST['load_log_list'])) {    	
+      $this->log_list = sfSuperCache::refreshCacheGetLogList();   
+    }    
     
     // запуск обновления кэша
     // исключение страниц из обработки    
     if (!empty($_POST['refresh_cache'])) {
-	  if (!empty($_POST['refresh_exclude_path_regexp_flag']) && !empty($_POST['refresh_exclude_path_regexp'])) {
-	  	$refresh_exclude_path_regexp = $_POST['refresh_exclude_path_regexp'];
+        
+      // исключение объектов
+	  if (!empty($_POST['refresh_exclude_path_regexp_flag']) && !empty($_POST['refresh_exclude_path_regexp'])) {	      	      
+	  	$refresh_exclude_path_regexp = $_POST['refresh_exclude_path_regexp'];	  	
+	  	// экранируем символы \ и -
+	  	$refresh_exclude_path_regexp = preg_replace("/[\/-]/", "\\\\$0", $refresh_exclude_path_regexp);	  	
 	  } else {
 	  	$refresh_exclude_path_regexp = '';
+	  }
+	  
+      // включение объектов
+	  if (!empty($_POST['refresh_include_path_regexp_flag']) && !empty($_POST['refresh_include_path_regexp'])) {	      	      
+	  	$refresh_include_path_regexp = $_POST['refresh_include_path_regexp'];	  	
+	  	// экранируем символы \ и -
+	  	$refresh_include_path_regexp = preg_replace("/[\/-]/", "\\\\$0", $refresh_include_path_regexp);	  	
+	  } else {
+	  	$refresh_include_path_regexp = '';
 	  }
 
       sfSuperCache::runRefreshCacheTask(
         $_POST['refresh_cache_domain_name'], 
         @$_POST['refresh_cache_multi_process'],
         @$_POST['refresh_cache_console'],
-        $refresh_exclude_path_regexp
+        $refresh_exclude_path_regexp,
+        $refresh_include_path_regexp
       ); 
     }
     
@@ -708,7 +727,7 @@ class newsActions extends autonewsActions
   	
   	// информация об объёме и кол-ве файлов
   	if (!empty($_POST['info'])) {
-	  $this->cache_info = sfSuperCache::getInfo($_POST['info_domain_name']);	
+	  $this->cache_info = sfSuperCache::getInfo($_POST['info_domain_name'], $_POST['info_path_filter']);	
   	}
   }
   
