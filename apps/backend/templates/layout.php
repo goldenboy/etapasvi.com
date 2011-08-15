@@ -11,7 +11,7 @@
 	  <div id="navigation" style="display:inline;float:right">
         
         <?php
-        // óñòàíîâêà ÿçûêà
+        // ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° ÑÐ·Ñ‹ÐºÐ°
         if (!empty($_POST['culture_selector'])) {            
             $sf_user->setCulture($_POST['culture_selector']);
             Header('Location: ' . $_SERVER['SCRIPT_URI']);
@@ -19,7 +19,7 @@
         ?>
         
         Language: <?php /*echo sfContext::getInstance()->getUser()->getCulture(); */ ?>
-        <form action="<?php echo $_SERVER['SCRIPT_URI'] ?>" method="POST" id="culture_selector_form">
+        <form action="<?php echo $_SERVER['SCRIPT_URI'] ?>" method="POST" id="culture_selector_form" style="display: inline;">
             <select name="culture_selector" onchange="document.getElementById('culture_selector_form').submit();">
                 <?php $user_culture = $sf_user->getCulture(); ?>
                 <?php foreach(UserPeer::getCulturesData() as $culture => $culture_data): ?>                               
@@ -32,10 +32,11 @@
                     ><?php echo $culture ?></option>
                 <?php endforeach ?>	
             </select>
-
         </form>
+        <br/>
+        <a href="#" onclick="javascrit: if ($('#menu_container').is(':hidden')) { $('#menu_container').slideDown(); } else { $('#menu_container').slideUp(); } void(0);" >Menu</a> â†•
         
-	    <ul style="list-style-type:none;">
+	    <ul style="list-style-type:none;display:none" id="menu_container">
 		  <?php /*<li><?php echo link_to('Users', 'user/index') ?></li>*/ ?>
 	      <?php /* <li><?php echo link_to('Ideas', 'idea/index') ?></li>	*/ ?>
           <?php /*<li><?php echo link_to('Comments', 'comments/index') ?></li>*/ ?>
