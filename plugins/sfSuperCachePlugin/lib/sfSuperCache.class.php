@@ -339,8 +339,7 @@ class sfSuperCache
   	$log_handle = fopen($log_name, "w+");
   	
   	// удаление и создание кэша страниц  	  	
-  	foreach ($file_list as $file_path) {
-  	    
+  	foreach ($file_list as $file_index=>$file_path) {
   	  // объект исключён
   	  if ($exclude_path_regexp && preg_match("/" . $exclude_path_regexp . "/", $file_path)) {
   	  	continue;
@@ -394,7 +393,10 @@ class sfSuperCache
       	}*/
   	  }
   	  // пишем в лог
-      fputs($log_handle, $file_path . "\r\n");
+      fputs($log_handle, $file_index . ': ' . $file_path . "\r\n");
+      
+      // чтобы скрипт не убивался
+      echo $file_index;
     }
     fclose($log_handle);
     
@@ -622,8 +624,13 @@ class sfSuperCache
   	return dirname( tempnam("dummy","") ) . '/refresh_cache_' . $pid . '.log';
   }
   
-  
-  public static function refreshCacheGetLogList()
+  /**
+   * Получение информации из логов обновления кэша
+   *
+   * @param unknown_type $max максимальное кол-во обрабатываемых логов
+   * @return unknown
+   */
+  public static function refreshCacheGetLogList($max = 5)
   {
     $log_list = array();
       
@@ -633,7 +640,11 @@ class sfSuperCache
   	$log_files_row_info_list = explode("\n", $log_files_row_info);  	  
   	
   	// вытаскиваем информацию о логах
-  	foreach ($log_files_row_info_list as $log_files_row_info_item) {
+  	foreach ($log_files_row_info_list as $log_files_row_info_index => $log_files_row_info_item) {
+  	    
+  	  if ($log_files_row_info_index >= $max) {
+  	      break;
+  	  }
   	  $matches = array();
   	  preg_match("/^(?:\S){10} \S+ \S+ \S+\s+(\d+) ([^\/]+) \/.*_(\d+)\.log/", $log_files_row_info_item, $matches);
   	    

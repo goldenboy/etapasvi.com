@@ -45,7 +45,7 @@
     <input type="text" name="refresh_exclude_path_regexp" size="50" value="<?php if (!empty($_POST['refresh_exclude_path_regexp'])):?><?php echo $_POST['refresh_exclude_path_regexp'];?><?php else: ?>/photo/(?!album)<?php endif ?>" />
     <input type="checkbox" <?php if (empty($_POST['refresh_exclude_path_regexp_flag']) || (!empty($_POST) && !empty($_POST['refresh_exclude_path_regexp_flag']))): ?>checked="checked"<?php endif ?> name="refresh_exclude_path_regexp_flag" /> Exclude path (override)
     <br/>
-    <input type="text" name="refresh_include_path_regexp" size="50" value="<?php if (!empty($_POST['refresh_include_path_regexp'])):?><?php echo $_POST['refresh_include_path_regexp'];?><?php else: ?><?php endif ?>" />
+    <input type="text" name="refresh_include_path_regexp" size="50" value="<?php if (!empty($_POST['refresh_include_path_regexp'])):?><?php echo $_POST['refresh_include_path_regexp'];?><?php else: ?>/en/<?php endif ?>" />
     <input type="checkbox" <?php if (empty($_POST['refresh_include_path_regexp_flag']) || (!empty($_POST) && !empty($_POST['refresh_include_path_regexp_flag']))): ?>checked="checked"<?php endif ?> name="refresh_include_path_regexp_flag" /> Include path
     <br/>
 	<input type="submit" value="Refresh" name="refresh_cache" />
