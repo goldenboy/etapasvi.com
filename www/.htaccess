@@ -22,8 +22,8 @@ ErrorDocument 500 /errors/500.html
   RewriteEngine On
 
   # проверка доменного имени и рекдирект на домен по умолчанию, если передан неверный
-  RewriteCond %{HTTP_HOST} !^(www.etapasvi.com|m.etapasvi.com)$
-  RewriteRule ^ http://www.etapasvi.com [L,R=301]
+  #RewriteCond %{HTTP_HOST} !^(www.etapasvi.com|m.etapasvi.com)$
+  #RewriteRule ^ http://www.etapasvi.com [L,R=301]
 
   # Перезапись отключена для:
   # - в запросе есть точка, т.е запрашивается файл

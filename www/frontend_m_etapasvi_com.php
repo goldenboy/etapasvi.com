@@ -4,6 +4,9 @@
  *
  */
 
+// прописываем жёстко, чтобы ссылки генерировались правильно
+$_SERVER['HTTP_HOST']        = 'm.etapasvi.com';
+
 // если к скрипту обратились из консоли, подменяем пермененные в $_SERVER
 if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
 	
@@ -78,8 +81,6 @@ if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
 //        )
 //
 //    [argc] => 2
-
-	$_SERVER['HTTP_HOST']        = 'm.etapasvi.com';		
 	
 	// /frontfrontend2.php/ru/photo/836
 	$_SERVER['SCRIPT_NAME']      = preg_replace("/.*\//", '/', $_SERVER['argv'][0]);

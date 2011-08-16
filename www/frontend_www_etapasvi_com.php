@@ -3,6 +3,8 @@
  * Контроллер рабочей версии 
  **/
 
+// прописываем жёстко, чтобы ссылки генерировались правильно
+$_SERVER['HTTP_HOST']        = 'www.etapasvi.com';
 
 // если к скрипту обратились из консоли, подменяем пермененные в $_SERVER
 if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
@@ -77,9 +79,7 @@ if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
 //            [1] => /ru/
 //        )
 //
-//    [argc] => 2
-
-	$_SERVER['HTTP_HOST']        = 'www.etapasvi.com';		
+//    [argc] => 2	
 	
 	// /frontfrontend2.php/ru/photo/836
 	$_SERVER['SCRIPT_NAME']      = preg_replace("/.*\//", '/', $_SERVER['argv'][0]);
