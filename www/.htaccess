@@ -21,6 +21,7 @@ ErrorDocument 500 /errors/500.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # отключено, т.к. доменное имя хардкодится в .php, проверку домена осуществляет балансировщик
   # проверка доменного имени и рекдирект на домен по умолчанию, если передан неверный
   #RewriteCond %{HTTP_HOST} !^(www.etapasvi.com|m.etapasvi.com)$
   #RewriteRule ^ http://www.etapasvi.com [L,R=301]
