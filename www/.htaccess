@@ -1,6 +1,9 @@
 # Отключение просмотра списка файлов директории
 Options -indexes
 
+# название веба
+Header set Web 1
+
 #Options +ExecCGI
 #Action php-cgi /cgi-bin/php-wrapper-s3r.fcgi
 #Action php5-cgi /cgi-bin/php-wrapper-s3r.fcgi
