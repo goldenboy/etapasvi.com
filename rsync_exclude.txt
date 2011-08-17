@@ -1,9 +1,0 @@
-.htaccess
-.sf
-.git
-frontend_devdev.php
-www/cgi-bin
-www/uploads
-cache/
-#data/
-log/

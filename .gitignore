@@ -9,3 +9,5 @@
 /lib/form/base/*
 /plugins/sfGuardPlugin/lib/model/map/*
 /plugins/sfGuardPlugin/lib/model/om/*
+/www/uploads/new/*
+/www/uploads/photo/*
