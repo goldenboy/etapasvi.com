@@ -56,7 +56,8 @@ class newsComponents extends sfComponents
   	if ( $news_title ) {
   	  // если на страницу перешли с другого языка, то title неверный
   	  $news_title_translit = TextPeer::urlTranslit($news_title);
-  	  if ( $news_title_translit && $this->title != $news_title_translit ) {
+  	  
+  	  if ( $this->title != $news_title_translit ) {
   		//$this->redirect( $this->newsitem->getTypeName() . '/show?id=' . (int)$this->id . '&title=' . $news_title_translit );
   		//sfActions::redirect( $this->newsitem->getTypeName() . '/show?id=' . (int)$this->id . '&title=' . $news_title_translit );
   		sfActions::redirect( $this->newsitem->getUrl() );
@@ -68,6 +69,9 @@ class newsComponents extends sfComponents
 	  //$title = $i18n->__('Dharma Sangha') . ' -';
 	  $response = $this->getResponse(); 
 	  $response->setTitle($news_title);       	
-  	}
-  }
+  	} elseif (!$news_title && $this->title) {
+	  // если у элемента нет Заголовка, а в URL передан title, редиректим
+	  sfActions::redirect( $this->newsitem->getUrl() );
+    }
+  } 
 }
