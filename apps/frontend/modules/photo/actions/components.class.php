@@ -73,7 +73,9 @@ class photoComponents extends sfComponents
   
   public function executeShowwrapper($action)
   {
-	$this->photo = PhotoPeer::retrieveByPk( $this->id );
+  	if (empty($this->photo)) {
+	  $this->photo = PhotoPeer::retrieveByPk( $this->id );
+  	}
   	//$this->forward404Unless( $this->photo );
   	if (!$this->photo) {
   		//$action->redirect( $this->photo );
