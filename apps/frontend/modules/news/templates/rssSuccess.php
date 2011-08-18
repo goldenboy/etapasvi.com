@@ -1,7 +1,7 @@
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
 <rss version="2.0">
 <channel>
-    <title><?php echo __('A message of Peace to our World today - eTapasvi.com') ?></title>
+    <title>eTapasvi.com</title>
   	<link>http://<?php echo $link ?></link>
     <description><?php echo __('Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.') ?></description>        
     <language><?php echo $language ?></language>
