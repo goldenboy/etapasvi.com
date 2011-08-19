@@ -510,6 +510,11 @@
         <target>Ram követői hisznek abban, hogy elérte a megvilágosodást, mégpedig Bódhgjájában, az indiai Bihárban, ott ahol Sziddhárta Gautama világosodott meg.</target>
       </trans-unit>
 
+      <trans-unit id="1">
+        <source>biography_translated_by</source>
+        <target></target>
+      </trans-unit>
+      
     </body>
   </file>
 </xliff>

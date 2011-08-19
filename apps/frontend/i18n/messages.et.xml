@@ -1,0 +1,263 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+        <source>A message of peace to our world today</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Om Namo Guru Buddha Gyani</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Please, enable JavaScript!</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Copyright</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>All Rights Reserved</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Home</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Palden Dorje</source>
+        <target></target>
+      </trans-unit>     
+      <trans-unit id="1">
+        <source>Dharma Sangha</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy News</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>News</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Palden Dorje Photo</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Photo</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Ram Bahadur Bomjan Video</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Video</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Om Namo Guru Buddha Gyani Biography</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Biography</source>
+        <target>Elulugu</target>
+      </trans-unit>      
+		<trans-unit id="1">
+        <source>Teachings</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Encyclopedia</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy Live Stream</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Live Stream</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Hall</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Social Tools</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Other</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Member</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Twitter</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>LJ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Live Journal</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Feed</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Search</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Contact Us</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Forum</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Blessing</source>
+        <target></target>
+      </trans-unit>  
+      <trans-unit id="1">
+        <source>FAQ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Translation Fundraising</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Audio</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Religious Forest</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Donation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Chat</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>If you would like to translate information or share news, photo, video or audio – email at</source>
+        <target></target>
+      </trans-unit>
+
+<!-- News _show -->
+      <trans-unit id="1">
+        <source>Read more</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Comments</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Source</source>
+        <target></target>
+      </trans-unit>
+
+<!-- misc -->
+      <trans-unit id="1">
+        <source>Go to top</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Text</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Author</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>teaching</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Translated by</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Download</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Date</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Enlarge</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Terthup Dharma Hall</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Back</source>
+        <target></target>
+      </trans-unit>
+      
+<!-- audio -->
+      <trans-unit id="1">
+        <source>Size</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Duration</source>
+        <target></target>
+      </trans-unit>
+      
+<!-- mobile -->
+      <trans-unit id="1">
+        <source>Mobile</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Classic</source>
+        <target></target>
+      </trans-unit>
+
+<!-- video -->
+      <trans-unit id="1">
+        <source>Watch on YouTube</source>
+        <target></target>
+      </trans-unit>
+
+<!-- 404 -->
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated</source>
+        <target></target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

@@ -509,6 +509,11 @@
         <target>Jego wielbiciele wierzą, iż osiągnął oświecenie w Bodh Gaya w Bihar, graniczącym z Nepalem - miejscu, gdzie Siddartha Gautama osiągnął oświecenie.</target>
       </trans-unit>
 
+      <trans-unit id="1">
+        <source>biography_translated_by</source>
+        <target>Anna Biela</target>
+      </trans-unit>
+      
     </body>
   </file>
 </xliff>

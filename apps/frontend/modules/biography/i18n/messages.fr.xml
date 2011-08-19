@@ -512,6 +512,11 @@ Une nouvelle vague de visiteurs vint le voir et prièrent à son nouveau lieu de
         <target>Ses fidèles pensent qu'il atteignit l'illumination à Bodh Gaya (Bihar), lieu qui se trouve à la frontière du Népal et où Siddhartha Gautama lui-même réalisa l'illumination.</target>
       </trans-unit>
 
+      <trans-unit id="1">
+        <source>biography_translated_by</source>
+        <target>Marie-Soleil, Kivod</target>
+      </trans-unit>
+      
     </body>
   </file>
 </xliff>

@@ -515,7 +515,11 @@
         <target>Sus devotos creen que el alcanzó el Nirvana en Bodh Gaya, en Bihar, el cual limita con Nepal - el lugar donde Siddartha Gautama llegó al nirvana.</target>
       </trans-unit>
 
-
+      <trans-unit id="1">
+        <source>biography_translated_by</source>
+        <target>Vinicio Rivadeneira</target>
+      </trans-unit>
+      
     </body>
   </file>
 </xliff>

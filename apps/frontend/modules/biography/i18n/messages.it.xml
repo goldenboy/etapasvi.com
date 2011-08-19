@@ -509,6 +509,11 @@
         <target>Alcuni suoi devoti credono che raggiunse l'illuminazione a BodhGaya in Bihar, al confine con il Nepal - il luogo in cui Siddartha Gautama Buddha raggiunse l'illuminazione.</target>
       </trans-unit>
 
+      <trans-unit id="1">
+        <source>biography_translated_by</source>
+        <target>Paolo Bignardi</target>
+      </trans-unit>
+      
 <!-- утф -->
     </body>
   </file>

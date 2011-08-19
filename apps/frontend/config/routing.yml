@@ -3,185 +3,185 @@
 #main_idea_no_slash:
 #  url:   /:sf_culture
 #  param: { module: news, action: main }
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }  
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }  
 
 main:
   url:  /:sf_culture/
   param: { module: news, action: main }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 version_full:
   url:  /:sf_culture/version/full
   param: { module: news, action: main }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #best_idea:
 #  url:  /:sf_culture/idea/best
 #  param: { module: idea, action: best }
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #idea_ideaoftheweek:
 #  url:  /:sf_culture/idea/ideaoftheweek
 #  param: { module: idea, action: ideaoftheweek }
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 # дополнительные маршруты новостей идут до default, чтобы они срабатывали раньше
 teachings_index:
   url:   /:sf_culture/teachings/index/*
   param: { module: news, action: teachings, type: teachings }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 teachings_show:
   url:   /:sf_culture/teachings/show/*
   param: { module: news, action: teachings_show, type: teachings }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 default:
   url:   /:sf_culture/:module/:action/*
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #user_signup:
 #  url:   /:sf_culture/user/signup
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #user_login:
 #  url:   /:sf_culture/user/login
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #user_checklogin:
 #  url:   /:sf_culture/user/checklogin
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #user_logout:
 #  url:   /:sf_culture/user/logout
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #livestream:
 #  url:   /:sf_culture/livestream
 #  param: { module: livestream, action: show }
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 chat:
   url:   /:sf_culture/chat
   param: { module: chat, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #loginorsignup:
 #  url:   /:sf_culture/user/loginorsignup
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #show_idea:
 #  url:   /:sf_culture/idea/show
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #new_idea:
 #  url:   /:sf_culture/idea/new
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #index_idea:
 #  url:   /:sf_culture/idea/index
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #idea_details:
 #  url:   /:sf_culture/idea/details
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #idea_abuse:
 #  url:   /:sf_culture/idea/abuse
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #idea_archive:
 #  url:   /:sf_culture/idea/archive
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #idea_detailsarchive:
 #  url:   /:sf_culture/idea/archive
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #user_member:
 #  url:   /:sf_culture/user/member
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 #user_profile:
 #  url:   /:sf_culture/user/profile
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #user_show:
 #  url:   /:sf_culture/user/show
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #user_forgotpassword:
 #  url:   /:sf_culture/user/forgotpassword
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #user_newpassword:
 #  url:   /:sf_culture/user/newpassword
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 news_index:
   url:   /:sf_culture/news/index
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 news_rss:
   url:   /:sf_culture/news/rss
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 feed:
   url:   /:sf_culture/news/feed
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 project:
   url:   /:sf_culture/project
   param: { module: project, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }  
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }  
 
 news_show:
   url:   /:sf_culture/news/show
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 photo_index:
   url:   /:sf_culture/photo/index
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 photo_show:
   url:   /:sf_culture/photo/show
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 photo_albums:
   url:   /:sf_culture/photo/albums
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 video_index:
   url:   /:sf_culture/video/index
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 video_show:
   url:   /:sf_culture/video/show
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 biography:
   url:   /:sf_culture/biography
   param: { module: biography, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #intro:
 #  url:   /:sf_culture/intro
 #  param: { module: intro, action: show }
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 contactus:
   url:   /:sf_culture/contactus
   param: { module: contactus, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 links:
   url:   /:sf_culture/links/show
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 search:
   url:   /:sf_culture/search
   param: { module: search, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 sf_captcha:
   url:   /captcha
@@ -190,55 +190,55 @@ sf_captcha:
 encyclopedia:
   url:   /:sf_culture/encyclopedia
   param: { module: encyclopedia, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 #teachings:
 #  url:   /:sf_culture/teachings
 #  param: { module: news, action: index, type: teachings }
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 #teachings_index:
 #  url:   /:sf_culture/teachings/index/*
 #  param: { module: news, action: index, type: teachings }
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 blessing:
   url:   /:sf_culture/blessing
   param: { module: blessing, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 faq:
   url:   /:sf_culture/faq
   param: { module: faq, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 #translation_fundraising:
 #  url:   /:sf_culture/translation_fundraising
 #  param: { module: translation_fundraising, action: show }
-#  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+#  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 social_tools:
   url:   /:sf_culture/social_tools
   param: { module: social_tools, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 religious_forest:
   url:   /:sf_culture/religious_forest
   param: { module: religious_forest, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 audio_index:
   url:   /:sf_culture/audio
   param: { module: audio, action: index }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 donation:
   url:   /:sf_culture/donation
   param: { module: donation, action: show }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }  
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }  
   
 # Ошибка 404
 error404:
   url:   /:sf_culture/*
   param: { module: default, action: error404 }
-  requirements: { sf_culture: ((?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es)) }  
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }  

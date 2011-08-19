@@ -540,6 +540,34 @@ class newsActions extends autonewsActions
     {
       $this->news->setLinkI18nEs($news['link_i18n_es']);
     }
+    if (isset($news['title_i18n_et']))
+    {
+      $this->news->setTitleI18nEt($news['title_i18n_et']);
+    }
+    if (isset($news['extradate_i18n_et']))
+    {
+      $this->news->setExtradateI18nEt($news['extradate_i18n_et']);
+    }
+    if (isset($news['shortbody_i18n_et']))
+    {
+      $this->news->setShortbodyI18nEt($news['shortbody_i18n_et']);
+    }
+    if (isset($news['body_i18n_et']))
+    {
+      $this->news->setBodyI18nEt($news['body_i18n_et']);
+    }
+    if (isset($news['author_i18n_et']))
+    {
+      $this->news->setAuthorI18nEt($news['author_i18n_et']);
+    }
+    if (isset($news['translated_by_i18n_et']))
+    {
+      $this->news->setTranslatedByI18nEt($news['translated_by_i18n_et']);
+    }
+    if (isset($news['link_i18n_et']))
+    {
+      $this->news->setLinkI18nEt($news['link_i18n_et']);
+    }
   }  
   
   

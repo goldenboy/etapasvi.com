@@ -510,6 +510,11 @@
         <source>His devotees believe he attained enlightenment at Bodh Gaya in Bihar, which borders Nepal – the place where Siddartha Gautama attained enlightenment.</source>
         <target>Jeho zastánci věří, že dosáhl osvícení v Bódhgjáji v indickém Biháru, který je na hranici Nepálu – tam, kde Siddhartha Gautama dosáhl osvícení.</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>biography_translated_by</source>
+        <target></target>
+      </trans-unit>
 
 
     </body>

@@ -100,6 +100,13 @@ generator:
           - title_i18n_es
           - body_i18n_es
           - author_i18n_es
+        "ET":
+          - img_i18n_et
+          - _img_i18n_et
+          - code_i18n_et
+          - title_i18n_et
+          - body_i18n_et
+          - author_i18n_et
       fields:
 
         img_i18n_en:
@@ -339,5 +346,25 @@ generator:
           type: textarea_tag
           params: disabled=false size=118x6
         author_i18n_es:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        img_i18n_et:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_et:
+          name: Image   
+        code_i18n_et:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_et:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_et:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_et:
           name: Author
           params: disabled=false maxlength=255 style="width:80%"
