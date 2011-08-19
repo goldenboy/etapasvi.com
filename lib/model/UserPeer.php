@@ -77,7 +77,7 @@ class UserPeer extends BaseUserPeer
 		              //'mail_id' 			 => 'ddd87d0746',
 		              'comments_category_id' => 686577,
 		              'feedburner_loc' 		 => ''
-		)
+		),
 /*		              
 		'de' => array('name'    => 'de - Deutsch',
 		              'iso'     => 'de'),			              
@@ -87,6 +87,11 @@ class UserPeer extends BaseUserPeer
 
 		'uk' => array('name'    => 'ua - Українська',
 		              'iso'     => 'ua'),*/
+		'et' => array('name'    			 => 'ee - Eesti',
+		              'iso'     			 => 'ee',
+		              'comments_category_id' => 997486,
+		              'feedburner_loc' 		 => ''
+		)
 	);
 	
 	 
