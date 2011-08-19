@@ -338,6 +338,8 @@ class sfSuperCache
   	$log_name   = self::refreshCacheGetLogPath();
   	$log_handle = fopen($log_name, "w+");
   	
+  	fputs($log_handle, '[' . count($file_list) . '] ');
+  	
   	// удаление и создание кэша страниц  	  	
   	foreach ($file_list as $file_index=>$file_path) {
   	  // объект исключён
@@ -393,7 +395,7 @@ class sfSuperCache
       	}*/
   	  }
   	  // пишем в лог
-      fputs($log_handle, $file_index . ': ' . $file_path . "\r\n");
+      fputs($log_handle, $file_index . ':' . $file_path . "\r\n");
       
       // чтобы скрипт не убивался
       echo $file_index;
