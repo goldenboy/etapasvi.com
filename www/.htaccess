@@ -29,11 +29,11 @@ ErrorDocument 500 /errors/500.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-
-  # отключено, т.к. доменное им€ хардкодитс€ в .php, проверку домена осуществл€ет балансировщик
+  
   # проверка доменного имени и рекдирект на домен по умолчанию, если передан неверный
-  #RewriteCond %{HTTP_HOST} !^(www.etapasvi.com|m.etapasvi.com)$
-  #RewriteRule ^ http://www.etapasvi.com [L,R=301]
+  # учитывать, что доменное им€ хардкодитс€ в .php
+  RewriteCond %{HTTP_HOST} !^(www.etapasvi.com|m.etapasvi.com|web1.etapasvi.com|web1.www.etapasvi.com|web1.m.etapasvi.com)$
+  RewriteRule ^ http://www.etapasvi.com [L,R=301]
 
   # ѕерезапись отключена дл€:
   # - в запросе есть точка, т.е запрашиваетс€ файл
@@ -107,7 +107,8 @@ ErrorDocument 500 /errors/500.html
   
   # ѕередача управлени€ контроллеру
   # мобильна€ верси€
-  RewriteCond %{HTTP_HOST} ^m.etapasvi.com$
+  RewriteCond %{HTTP_HOST} ^m.etapasvi.com$ [OR]
+  RewriteCond %{HTTP_HOST} ^web1.m.etapasvi.com$ [OR]
   RewriteRule ^(.*)$ frontend_m_etapasvi_com.php [QSA,L]
 
   # обычна€ верси€
