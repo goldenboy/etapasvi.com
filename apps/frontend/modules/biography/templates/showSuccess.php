@@ -308,38 +308,9 @@
 <p class="author">
     <strong><?php echo __('Author') ?>:</strong> Suman Waiba, Singha Yomjan, Andrea Good, Wikipedia
 </p>
-<?php if ($sf_user->getCulture() != 'en'): ?>
+<?php if (__('biography_translated_by') != 'biography_translated_by' ): ?>
 <p class="author">
-    <strong><?php echo __('Translated by') ?>:</strong>
-<?php
-     switch($sf_user->getCulture()) {        
-        case 'ru':
-            echo 'www.etapasvi.com';
-            break;
-        case 'cs':
-        case 'hu':
-            echo 'Marici';
-            break;
-        case 'pl':
-            echo 'Anna Biela';
-            break;
-        case 'fr':
-            echo 'Marie-Soleil, Kivod';
-            break;
-        case 'zh_CN':
-            echo 'Sandy';
-            break;
-        case 'vi':
-            echo 'Kim';
-            break;        
-        case 'es':
-            echo 'Vinicio Rivadeneira';
-            break;
-        case 'it':
-            echo 'Paolo Bignardi';
-            break;
-     }
-?>
+    <strong><?php echo __('Translated by') ?>:</strong> <?php echo __('biography_translated_by') ?>
 </p>
 <?php endif ?>
 <p class="source">
