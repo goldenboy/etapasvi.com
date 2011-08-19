@@ -251,6 +251,12 @@
         <target></target>
       </trans-unit>
 
+<!-- 404 -->
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated</source>
+        <target>Pagina non trovata o non tradotta</target>
+      </trans-unit>
+
 <!-- утф -->
     </body>
   </file>

@@ -730,7 +730,8 @@ class sfSuperCache
 	// заменяем ссылки в переключателе языка и ссылке на мобильную версию
   	preg_match_all(
   	  "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 
-	  preg_replace("/.*(<div.*id=\"footer\".*?<\/div>).*/ism", "$1", $cache_file), 
+	  //preg_replace("/.*(<div.*id=\"footer\".*?<\/div>).*/ism", "$1", $cache_file), 
+	  preg_replace("/.*(<div.*id=\"footer\".*?bubble_click).*/ism", "$1", $cache_file), 
 	  $matches);
 	if ($matches[1] && $matches[2]) {
 	  foreach ($matches[1] as $i=>$match) {

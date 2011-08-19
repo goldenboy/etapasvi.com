@@ -251,6 +251,12 @@
         <target></target>
       </trans-unit>
 
+<!-- 404 -->
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated</source>
+        <target>Página No Encontrada o No Traducida</target>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>

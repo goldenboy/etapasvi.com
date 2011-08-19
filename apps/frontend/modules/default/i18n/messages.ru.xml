@@ -4,15 +4,6 @@
     <body>
 
       <trans-unit id="1">
-        <source>Page Not Found or Not Translated</source>
-        <target>Страница не найдена или не переведена</target>
-      </trans-unit>
-
-      <trans-unit id="1">
-        <source>Page Not Found or Not Translated</source>
-        <target>Страница не найдена или не переведена</target>
-      </trans-unit> 
-      <trans-unit id="1">
         <source>Error</source>
         <target>Ошибка</target>
       </trans-unit>    
