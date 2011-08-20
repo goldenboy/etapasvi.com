@@ -310,6 +310,9 @@ class sfSuperCache
    */
   public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT, $domain_name = '', $console = true, $exclude_path_regexp = '', $include_path_regexp = '')
   { 
+  	ini_set( 'error_reporting', 'E_ALL' );
+ini_set( 'display_errors', 'on' );
+error_reporting(E_ALL);
   	// максимальное время работы скрипта - сутки 	
   	ini_set('max_execution_time', 60*60*24);
   	
@@ -395,7 +398,9 @@ class sfSuperCache
       	}*/
   	  }
   	  // пишем в лог
-      fputs($log_handle, $file_index . ':' . $file_path . "\r\n");
+  	  $log_line = $file_index . ':' . $file_path . "\r\n";
+  	  echo $log_line;
+      fputs($log_handle, $log_line);
       
       // чтобы скрипт не убивался
       echo $file_index;
@@ -716,10 +721,10 @@ class sfSuperCache
   	// lang_list
   	preg_match_all(
   	  "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . ")\/[^\/\"]+\/)[^\"]+)\"/ism", 
-	  preg_replace("/.*(<div.*id=\"lang_list\".*?<\/div>).*/ism", "$1", $cache_file), 
+	  preg_replace("/.*(<div.*id=\"(?:lang_list|culture_list)\".*?<\/div>).*/ism", "$1", $cache_file), 
 	  $matches);
 	
-	if ($matches[1] && $matches[2]) {
+	if (!empty($matches[1]) && !empty($matches[2])) {
 	  // текущий путь без языка
 	  $cur_parh_without_lang = preg_replace("/\/[^\/]+\//", "", $cur_path);
 	  foreach ($matches[1] as $i=>$match) {
@@ -730,12 +735,21 @@ class sfSuperCache
 	
 	// footer
 	// заменяем ссылки в переключателе языка и ссылке на мобильную версию
-  	preg_match_all(
-  	  "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 
-	  //preg_replace("/.*(<div.*id=\"footer\".*?<\/div>).*/ism", "$1", $cache_file), 
-	  preg_replace("/.*(<div.*id=\"footer\".*?bubble_click).*/ism", "$1", $cache_file), 
-	  $matches);
-	if ($matches[1] && $matches[2]) {
+	if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' ) {
+	  preg_match_all(
+  	    "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 	
+	    preg_replace("/.*(Copyright &copy;.*?_trackPageview).*/ism", "$1", $cache_file), 
+	    $matches
+	  );
+	} else {
+	  preg_match_all(
+  	    "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 	
+	    preg_replace("/.*(<div.*id=\"footer\".*?(bubble_click)).*/ism", "$1", $cache_file), 
+	    $matches
+	  );
+	}
+  	
+	if (!empty($matches[1]) && !empty($matches[2])) {
 	  foreach ($matches[1] as $i=>$match) {
 	    $replacement[$match] = $matches[2][$i] . $cur_path;
 	  }		  
