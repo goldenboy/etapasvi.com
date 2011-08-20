@@ -26,7 +26,8 @@ class sfSuperCache
   const CACHE_FILE_EXT = 'i.html';    
   
   // строка запуска PHP
-  const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3 -c /etc/php53/php.ini';    
+  //const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3 -c /etc/php53/php.ini';
+  const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3';
   
   // количество потоков для обновления кэша при обновлении кэша в многопоточном режиме
   const REFRESH_CACHE_THREADS_COUNT = 5;    
@@ -310,9 +311,6 @@ class sfSuperCache
    */
   public static function refreshCache($multi_process = false, $threads_count = self::REFRESH_CACHE_THREADS_COUNT, $domain_name = '', $console = true, $exclude_path_regexp = '', $include_path_regexp = '')
   { 
-  	ini_set( 'error_reporting', 'E_ALL' );
-ini_set( 'display_errors', 'on' );
-error_reporting(E_ALL);
   	// максимальное время работы скрипта - сутки 	
   	ini_set('max_execution_time', 60*60*24);
   	
@@ -339,6 +337,7 @@ error_reporting(E_ALL);
   	
   	// лог
   	$log_name   = self::refreshCacheGetLogPath();
+
   	$log_handle = fopen($log_name, "w+");
   	
   	fputs($log_handle, '[' . count($file_list) . '] ');
@@ -401,9 +400,6 @@ error_reporting(E_ALL);
   	  $log_line = $file_index . ':' . $file_path . "\r\n";
   	  echo $log_line;
       fputs($log_handle, $log_line);
-      
-      // чтобы скрипт не убивался
-      echo $file_index;
     }
     fclose($log_handle);
     
@@ -485,7 +481,7 @@ error_reporting(E_ALL);
    * @param unknown_type $exclude_path_regexp регулярное выражение, исключающее пути из обработки
    * @param unknown_type $include_path_regexp регулярное выражение, включающее пути в обработку
    */
-  public static function runRefreshCacheTask($domain_name = '', $multi_process = true, $console = true, $exclude_path_regexp = '', $include_path_regexp = '')
+  public static function runRefreshCacheTask($domain_name = '', $multi_process, $console, $exclude_path_regexp = '', $include_path_regexp = '')
   {
   	// если уже идёт обновление кэша, выходим
   	if (count(self::listRefreshProcesses())) {
@@ -529,7 +525,7 @@ error_reporting(E_ALL);
   				. $console_param
   				. $exclude_path_regexp_param
   				. $include_path_regexp_param
-  				. ' > /dev/null 2>&1 &';
+  				. ' > /dev/null 2>&1 &';  				
 
   	// запуск команды, не дожидаясь завершения
     pclose(popen($command, "r"));
@@ -628,7 +624,8 @@ error_reporting(E_ALL);
   	if (!$pid) {
   	  $pid = getmypid();
   	}
-  	return dirname( tempnam("dummy","") ) . '/refresh_cache_' . $pid . '.log';
+  	//return dirname( tempnam("dummy","") ) . '/refresh_cache_' . $pid . '.log';
+  	return sfConfig::get('sf_log_dir') . '/refresh_cache_' . $pid . '.log';
   }
   
   /**
