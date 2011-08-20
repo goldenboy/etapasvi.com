@@ -88,8 +88,10 @@ if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
 	// /ru/
 	$_SERVER['PATH_INFO']        = $_SERVER['argv'][1];
 	
+	// убрано название скрипта
+	// http://bsds.etapasvi.com/issues/116
 	// /frontfrontend2.php/ru/photo/836
-	$_SERVER['SCRIPT_URL']       = $_SERVER['SCRIPT_NAME'] . $_SERVER['PATH_INFO'];
+	$_SERVER['SCRIPT_URL']       = /*$_SERVER['SCRIPT_NAME'] .*/ $_SERVER['PATH_INFO'];
 	
 	// http://www.etapasvi.com/frontfrontend2.php/ru/photo/836
 	$_SERVER['SCRIPT_URI']       = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_URL'];
