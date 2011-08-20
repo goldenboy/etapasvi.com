@@ -89,7 +89,7 @@
 		$i = 0;
 	?>
 
-	<span class="lang_name lang_selector" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><?php echo UserPeer::getCultureIso( $user_culture );?></span> 
+	<span class="lang_name lang_selector b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><img src="/i/fg.png"/></span> 
 	<span class="slide_arrow lang_selector">▼</span>
     <?php /* id используется в /lib/symfony/exception/sfError404Exception.class.php */ ?>
 	<div id="lang_list" class="box">
@@ -100,7 +100,7 @@
 			
 			<?php $i++ ?>
 			<?php if ($i > count(UserPeer::getCultures())) break; ?>
-			<a href="http://<?php echo $_SERVER['HTTP_HOST'] . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name']?>"><?php echo $culture_data['name']?></a><br/>
+			<i class="b-fg b-fg_<?php echo strtoupper($culture_data['iso']);?>"><img src="/i/fg.png"/></i> <a href="http://<?php echo $_SERVER['HTTP_HOST'] . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name']?>"><?php echo $culture_data['name']?></a><br/>
 		<?php endforeach ?>		
 	</div>	
 </div>

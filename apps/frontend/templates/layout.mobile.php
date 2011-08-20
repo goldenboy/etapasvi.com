@@ -39,7 +39,7 @@
             <a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" class="no_decor" id="bubble_title"><i></i>Tapasvi.<span>com</span></a>
         </td>
         <td>  
-            <a href="#" onclick="switchCulture()" id="bubble_lang"><?php echo UserPeer::getCultureIso($user_culture); ?></a>      
+            <a href="#" onclick="switchCulture()" id="bubble_lang"><i class="b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>"><img src="/i/fg.png"/></i></a>      
         </td>
         <td>
             <i class="slide_arrow" onclick="switchCulture()"></i>
@@ -69,10 +69,8 @@
                 <?php $i++ ?>
                 <?php if ($i > count(UserPeer::getCultures())) break; ?>
                 
-                <?php if ($user_culture == $culture): ?>
-                    <strong><?php echo UserPeer::getCultureIso( $culture ) ?></strong>&nbsp;
-                <?php else: ?>
-                    <a href="http://<?php echo sfConfig::get('app_domain_name') . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name']?>"><?php echo UserPeer::getCultureIso( $culture )?></a>&nbsp;
+                <?php if ($user_culture != $culture): ?>
+                    <a href="http://<?php echo sfConfig::get('app_domain_name') . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name']?>"><i class="b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $culture ));?>"><img src="/i/fg.png"/></i></a>&nbsp;
                 <?php endif ?>
             <?php endforeach?>
         </div>
