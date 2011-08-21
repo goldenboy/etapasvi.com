@@ -388,13 +388,9 @@ class sfSuperCache
           self::refreshCacheFile($file_path, $console);
           exit(self::REFRESH_CACHE_EXIT_STATUS_OK);
         }
-  	  } else {
-  	    
+  	  } else {  	    
         // кэширование файла кэша
       	$refresh_result = self::refreshCacheFile($file_path, $console);      	  
-      	/*if ($refresh_result) {
-    	  $result['files']++;
-      	}*/
   	  }
   	  // пишем в лог
   	  $log_line = $file_index . ':' . $file_path . "\r\n";
@@ -518,6 +514,9 @@ class sfSuperCache
   		$include_path_regexp_param = ' ';
   	}
   	
+  	// cd /home/saynt2day20/etapasvi.com && 
+  	// ./symfony project:refreshcache --multi_process=0 --console=1 --exclude_path_regexp=XC9waG90b1wvKD8hYWxidW0p 
+  	// --include_path_regexp=XC9lblwvcGhvdG9cLzQwMA== > /dev/null 2>&1 &
   	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' 
   				. self::getRefreshCacheTaskCommand() 
   				. $domain_name_param 
