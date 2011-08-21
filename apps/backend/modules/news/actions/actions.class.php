@@ -741,7 +741,7 @@ class newsActions extends autonewsActions
     }
     
     // информация о процессах, обновляющих кэш
-    $this->refresh_processes = sfSuperCache::listRefreshProcesses();
+    $this->refresh_cache_daemon_info = sfSuperCache::refreshCacheGetDaemonInfo();
       
     // очистка кэша
   	if (!empty($_POST['path'])) {

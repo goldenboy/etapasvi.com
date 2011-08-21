@@ -27,7 +27,7 @@ class sfSuperCache
   
   // строка запуска PHP
   //const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3 -c /etc/php53/php.ini';
-  const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3';
+  const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3';    
   
   // количество потоков для обновления кэша при обновлении кэша в многопоточном режиме
   const REFRESH_CACHE_THREADS_COUNT = 5;    
@@ -313,17 +313,52 @@ class sfSuperCache
   { 
   	// максимальное время работы скрипта - сутки 	
   	ini_set('max_execution_time', 60*60*24);
-  	
+  
   	$result = array(
   	  // в многопоточном режиме не подсчитывается
   	  //'files' => 0,
   	  'error' => ''
-  	);  	
+  	);  
   	
+  	$exclude_path_regexp = trim($exclude_path_regexp);
+  	$include_path_regexp = trim($include_path_regexp);
+  	$multi_process       = (bool)$multi_process; 	
+  	
+  	// лог
+  	$log_name   = self::refreshCacheGetLogPath();
+  	// если нет директории - создаём
+  	if (!is_dir(dirname($log_name))) {
+  		mkdir(dirname($log_name));
+  	}
+  	$log_handle = fopen($log_name, "w+");
+  	
+  	// получение пути к директории с кэшем
   	$cacheDir = self::getCacheDir($domain_name);
   	if (!$cacheDir) {
-  	    return $result;
+  	  $result['error'] = 'Не удалось пулучить путь к директории с кэшем';
+  	  fputs($log_handle, 'error: ' . $result['error']);
+  	  return $result;
   	}
+  	
+  	// проверка PID-файла
+  	if (self::refreshCacheIsDaemonActive()) {
+  	  // демон уже запущен
+      $result['error'] = 'Процесс обновления кэша уже запущен';
+      fputs($log_handle, 'error: ' . $result['error']);
+      return $result;
+  	} else {
+      // процесса нет 
+      if (file_exists(self::refreshCacheGetPidFilePath()) && !self::refreshCacheDeletePidFile()) {
+        // не могу уничтожить pid-файл. ошибка
+        $result['error'] = 'Невозможно удалить PID-файл ' . self::refreshCacheGetPidFilePath();
+        fputs($log_handle, 'error: ' . $result['error']);
+        return $result;
+      }
+  	}
+
+    // запись PID в файл
+    file_put_contents(self::refreshCacheGetPidFilePath(), getmypid());
+    chmod(self::refreshCacheGetPidFilePath(), 0666);
   	
   	// получение списка файлов кэша
   	$command = 'find ' . $cacheDir . '  -type f -name "*' . self::CACHE_FILE_EXT . '"';
@@ -333,28 +368,36 @@ class sfSuperCache
   	
   	if ($multi_process) {
   	  pcntl_signal(SIGCHLD, array(__CLASS__, "refreshCacheChildSignalHandler"));
-  	}
+  	}  	
   	
-  	// лог
-  	$log_name   = self::refreshCacheGetLogPath();
-
-  	$log_handle = fopen($log_name, "w+");
-  	
-  	fputs($log_handle, '[' . count($file_list) . '] ');
+  	fputs($log_handle, 
+  		'date:' . date("Y-m-d H:i:s") . 
+  		'; total:' . count($file_list) . 
+  		'; multi_process:' . (int)$multi_process .
+  		'; threads_count:' . (int)$threads_count .
+  		'; domain_name:' . $domain_name .
+  		'; console:' . (int)$console .
+  		'; exclude_path_regexp:' . $exclude_path_regexp .
+  		'; include_path_regexp:' . $include_path_regexp .
+  		"\r\n"
+  	);
   	
   	// удаление и создание кэша страниц  	  	
   	foreach ($file_list as $file_index=>$file_path) {
+  		
   	  // объект исключён
-  	  if ($exclude_path_regexp && preg_match("/" . $exclude_path_regexp . "/", $file_path)) {
+  	  if (!empty($exclude_path_regexp) && preg_match("/" . $exclude_path_regexp . "/", $file_path)) {
   	  	continue;
   	  }
   	  
   	  // обрабатываются только включённые объекты
-  	  if ($include_path_regexp && !preg_match("/" . $include_path_regexp . "/", $file_path)) {
+  	  if (!empty($include_path_regexp) && !preg_match("/" . $include_path_regexp . "/", $file_path)) {
   	  	continue;
   	  }
 
   	  if ($multi_process) {
+  	  	// многопоточный режим
+  	  	
         // ожидание, пока количество процессов уменьшится и можно будет создать новый
         while(count(self::$refersh_cache_process_list) >= $threads_count){    
           sleep(1);
@@ -388,9 +431,10 @@ class sfSuperCache
           self::refreshCacheFile($file_path, $console);
           exit(self::REFRESH_CACHE_EXIT_STATUS_OK);
         }
-  	  } else {  	    
+  	  } else {  	  
+  	  	// однопоточный режим  
         // кэширование файла кэша
-      	$refresh_result = self::refreshCacheFile($file_path, $console);      	  
+      	//$refresh_result = self::refreshCacheFile($file_path, $console);      	  
   	  }
   	  // пишем в лог
   	  $log_line = $file_index . ':' . $file_path . "\r\n";
@@ -405,9 +449,55 @@ class sfSuperCache
         sleep(1);
       }
     }
+    
+    // удаление файла с PID
+    self::refreshCacheDeletePidFile();
   	 	
 	return $result;
   }
+  
+  /**
+   * Получение пути к файлу с PID демона обновления кэша
+   *
+   * @return unknown
+   */
+  public static function refreshCacheGetPidFilePath()
+  {
+  	return sfConfig::get('sf_log_dir') . '/refresh_cache.pid';
+  }
+  
+  /**
+   * Проверка, запущен ли демон обновления кэша
+   *
+   * @return unknown
+   */
+  public static function refreshCacheIsDaemonActive()
+  {  	
+  	if (is_file(self::refreshCacheGetPidFilePath()) ) {
+  	  try {
+        $pid = file_get_contents(self::refreshCacheGetPidFilePath());
+  	  } catch (Exception $e) {
+  	  	return true;
+  	  }
+      // проверяем на наличие процесса
+      if (posix_kill($pid,0)) {
+        // демон уже запущен
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+  
+  /**
+   * Получение пути к файлу с PID демона обновления кэша
+   *
+   * @return unknown
+   */
+  public static function refreshCacheDeletePidFile()
+  {
+  	return @unlink(self::refreshCacheGetPidFilePath());
+  }    
   
   /**
    * Кэширование файла кэша
@@ -480,10 +570,10 @@ class sfSuperCache
   public static function runRefreshCacheTask($domain_name = '', $multi_process, $console, $exclude_path_regexp = '', $include_path_regexp = '')
   {
   	// если уже идёт обновление кэша, выходим
-  	if (count(self::listRefreshProcesses())) {
+  	if (self::refreshCacheIsDaemonActive()) {
   	  return;
   	}
-  	
+  	/*
   	if ($domain_name) {
   		$domain_name_param = ' --domain_name=' . $domain_name;
   	} else {
@@ -512,22 +602,42 @@ class sfSuperCache
   		$include_path_regexp_param = ' --include_path_regexp=' . base64_encode($include_path_regexp) . '';
   	} else {
   		$include_path_regexp_param = ' ';
-  	}
+  	}*/
   	
+  	// Если запускать обновление по следующей схеме:
+	// - runRefreshCacheTask
+	// - popen запускает ./symfony project:refreshcache
+	// то в процессах будет висеть " sh -c ... ./symfony project:refreshcache", который рано или поздно убивается
+	// поэтому решено не запускать Таск симфони, а создавать дочерний процесс, который запустит функцию обновления кэша
+	// http://bsds.etapasvi.com/issues/107
+	
   	// cd /home/saynt2day20/etapasvi.com && 
   	// ./symfony project:refreshcache --multi_process=0 --console=1 --exclude_path_regexp=XC9waG90b1wvKD8hYWxidW0p 
   	// --include_path_regexp=XC9lblwvcGhvdG9cLzQwMA== > /dev/null 2>&1 &
-  	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' 
+  	/*$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' 
   				. self::getRefreshCacheTaskCommand() 
   				. $domain_name_param 
   				. $multi_process_param
   				. $console_param
   				. $exclude_path_regexp_param
   				. $include_path_regexp_param
-  				. ' > /dev/null 2>&1 &';  				
-
+  				. ' > /dev/null 2>&1 &';  		*/		
   	// запуск команды, не дожидаясь завершения
-    pclose(popen($command, "r"));
+    //pclose(popen($command, "r"));
+    
+	$child_pid = pcntl_fork();
+
+	if( !$child_pid ) {	   
+	  // дальше идёт дочерний процесс, который запускает обновление кэша
+      sfSuperCache::refreshCache(
+        $multi_process, 
+        sfSuperCache::REFRESH_CACHE_THREADS_COUNT, 
+        $domain_name, 
+        $console,
+        $exclude_path_regexp,
+        $include_path_regexp
+      );
+	}
   }
   
   /**
@@ -559,17 +669,14 @@ class sfSuperCache
    *
    * @return unknown
    */
+  /*
   public static function listRefreshProcesses()
   {
     $process_list = array();
     // команда для поиска команды, обновляющей кэш  
     $grep_command = 'grep "' . self::getRefreshCacheTaskCommand() . '"';
-    
-  	//ob_clean();
-  	//ob_start();
-  	
+
   	$process_list_str = shell_exec('ps aux | ' . $grep_command);
-  	//ob_clean();
   	
     $process_list = explode("\n", $process_list_str);    
     
@@ -596,6 +703,32 @@ class sfSuperCache
   	}
   	
 	return $process_list;
+  }*/
+  
+  /**
+   * Получение информации о демоне и прогрессе обновления лога
+   *
+   * @return unknown
+   */
+  public static function refreshCacheGetDaemonInfo()
+  {
+  	$daemon_info = array();
+  	
+  	if (!self::refreshCacheIsDaemonActive()) {
+  	  return $daemon_info;
+  	}
+  	
+  	if ( is_file(self::refreshCacheGetPidFilePath()) ) {
+      $pid = file_get_contents(self::refreshCacheGetPidFilePath());
+      // проверяем на наличие процесса
+      if (posix_kill($pid,0)) {      	
+      	$daemon_info = self::refreshCacheGetLogInfo($pid);
+      } else {
+        // pid-файл есть, но процесса нет         
+      }
+    }
+        
+	return $daemon_info;
   }
   
   /**
@@ -604,10 +737,47 @@ class sfSuperCache
    * @param unknown_type $pid
    * @return unknown
    */
-  public static function refreshCacheGetLogDone($pid)
+  public static function refreshCacheGetLogInfo($pid, $log_content = '')
   {
-      return count(@file(self::refreshCacheGetLogPath($pid)));
-  }
+  	$log_info = array();
+  	
+  	if (!$pid) {
+  	  return $log_info;
+  	}
+  	
+    // 1-я строка со служебной информацией
+    if (!$log_content) {
+      $log_content = self::refreshCacheGetLogContent($pid);
+    }
+    
+    // 1-я строка содержит служебную информацию
+    // date: 2011-08-21 14:18:29; files: 21200; multi_process=0; threads_count=5; domain_name=; console=1; exclude_path_regexp=; include_path_regexp=
+    $log_content_lines = explode("\r\n", $log_content);
+    if (empty($log_content_lines[0])) {
+      return $log_info;
+    }
+    $log_info_list = explode(";", $log_content_lines[0]);
+    foreach ($log_info_list as $log_info_item) {
+      $log_info_item_list = explode(':', $log_info_item);
+      if (!empty($log_info_item_list[0]) && !empty($log_info_item_list[1])) {
+        $log_info[ $log_info_item_list[0] ] = $log_info_item_list[1];	
+      }
+    }
+
+    /*$log_info['date']   		      = $log_info_list['0'];
+    $log_info['total']  		      = $log_info_list['1'];
+    $log_info['multi_process']        = $log_info_list['2'];
+    $log_info['threads_count']  	  = $log_info_list['3'];
+    $log_info['domain_name']    	  = $log_info_list['4'];
+    $log_info['console']        	  = $log_info_list['5'];
+    $log_info['exclude_path_regexp']  = $log_info_list['6'];
+    $log_info['include_path_regexp']  = $log_info_list['7'];*/
+    $log_info['pid']    		      = $pid;
+    $log_info['done'] 				  = abs(count($log_content_lines)  - 3); // 1-я строка со служебной информацией
+    
+    return $log_info;
+  }    
+          
   
   /**
    * Получение пути к логу обновления кэша.
@@ -624,7 +794,7 @@ class sfSuperCache
   	  $pid = getmypid();
   	}
   	//return dirname( tempnam("dummy","") ) . '/refresh_cache_' . $pid . '.log';
-  	return sfConfig::get('sf_log_dir') . '/refresh_cache_' . $pid . '.log';
+  	return sfConfig::get('sf_log_dir') . '/refresh_cache/refresh_cache_' . $pid . '.log';
   }
   
   /**
@@ -652,14 +822,7 @@ class sfSuperCache
   	  preg_match("/^(?:\S){10} \S+ \S+ \S+\s+(\d+) ([^\/]+) \/.*_(\d+)\.log/", $log_files_row_info_item, $matches);
   	    
   	  if (!empty($matches['1']) && !empty($matches['2']) && !empty($matches['3'])) {
-        $log_item = array();
-        $log_item['size'] = $matches['1'];
-        $log_item['date'] = $matches['2'];
-        $log_item['pid']  = $matches['3'];
-      	    
-        $log_item['done'] = self::refreshCacheGetLogDone($log_item['pid']);
-        
-        $log_list[] = $log_item;
+        $log_list[] = self::refreshCacheGetLogInfo($matches['3']);
   	  }  	    
   	  
   	}

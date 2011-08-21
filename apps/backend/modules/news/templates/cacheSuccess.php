@@ -1,35 +1,23 @@
 <h1>cache</h1>
 
-<?php if (count($refresh_processes)): ?>
-<table>
-    <tr>
-        <th>Action</th>
-        <th>PID</th>
-        <th>Done</th>
-    </tr>
-<?php foreach($refresh_processes as $param=>$value): ?>
-    <tr>
-        <td>
-            <form action="" method="post" >
-            <input type="submit" value="Kill" name="kill">
-            <input type="hidden" value="<?php echo $value['pid']; ?>" name="pid">
-            </form>
-        </td>
-        <td>
-            <?php echo $value['pid']; ?>
-        </td>
-        <td>
-            <?php echo $value['done']; ?>
-        </td>
-        <td>
-            <form action="" method="post" target="_blank">
-            <input type="submit" value="log" name="log">
-            <input type="hidden" value="<?php echo $value['pid']; ?>" name="pid">
-            </form>
-        </td>
-    </tr>
-<?php endforeach; ?>
-</table>
+<?php if (count($refresh_cache_daemon_info)): ?>
+<?php
+foreach($refresh_cache_daemon_info as $key=>$value) {
+    echo '<strong>' . $key . ': </strong>' . $value;
+}
+?>
+
+<form action="" method="post" >
+<input type="submit" value="Kill" name="kill">
+<input type="hidden" value="<?php echo $refresh_cache_daemon_info['pid']; ?>" name="pid">
+</form>
+
+<form action="" method="post" target="_blank">
+<input type="submit" value="log" name="log">
+<input type="hidden" value="<?php echo $refresh_cache_daemon_info['pid']; ?>" name="pid">
+</form>
+<hr/>
+<br/>
 <?php endif ?>
 
 <form action="" method="post" >  
@@ -59,7 +47,13 @@
 <form action="" method="post" target="_blank">
     <select name="pid">
         <?php foreach($log_list as $log): ?>
-            <option value="<?php echo $log['pid'] ?>" ><?php echo $log['date'] ?>; pid: <?php echo $log['pid'] ?>; done: <?php echo $log['done'] ?></option>
+            <option value="<?php echo $log['pid'] ?>" >
+            <?php 
+            foreach($log as $key=>$value) {
+                echo $key . ':' . $value . '; ';
+            } 
+            ?>
+            </option>
         <?php endforeach ?>
     </select>
     <input type="submit" value="View" name="log">
