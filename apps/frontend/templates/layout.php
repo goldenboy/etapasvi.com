@@ -33,7 +33,7 @@
     </div>
 	<div id="footer">    
         <?php include_partial('global/share'); ?>
-        <?php echo __('Website is developed and supported on a voluntary basis.') ?><br/><?php echo __('If you can help in any way – email at') ?> <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a>>
+        <?php echo __('Website is developed and supported on a voluntary basis.') ?><br/><?php echo __('If you can help in any way – email at') ?> <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a>
 		<br/><br/><?php echo __('Copyright') ?> &copy; 2009-<?php echo date("Y"); ?>, www.eTapasvi.com
 		<br/><?php echo __('All Rights Reserved') ?>.		        
         <?php $mobile_url = UserPeer::switchUrlMobile(sfContext::getInstance()->getRequest()->getUri());?>                
