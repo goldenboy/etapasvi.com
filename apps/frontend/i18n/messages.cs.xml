@@ -160,7 +160,11 @@
         <target>Malý Buddha: Zprávy, Fotografie, Video, Životopis, Projevy. Ram Bahadur Bomjan: Meditující Malý Buddha z Nepálu. Palden Dordže: Poselství míru na náš dnešní svět.</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>If you would like to translate information or share news, photo, video or audio – email at</source>
+        <source>Website is developed and supported on a voluntary basis.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>If you can help in any way – email at</source>
         <target></target>
       </trans-unit>
 

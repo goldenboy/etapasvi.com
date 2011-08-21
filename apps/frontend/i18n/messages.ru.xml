@@ -164,8 +164,12 @@
         <target>Дхарма Сангха (Палден Дордже, Рам Бахадур Бомджан, Мальчик Будда из Непала): Новости, Фото, Видео, Биография, Речи.</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>If you would like to translate information or share news, photo, video or audio – email at</source>
-        <target>Если вы хотите поделиться новостями, фото, видео или аудио – пишите на</target>
+        <source>Website is developed and supported on a voluntary basis.</source>
+        <target>Разработка и поддержка вебсайта осуществляется на добровольных началах.</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>If you can help in any way – email at</source>
+        <target>Если вы можете оказать любую помощь – пишите на</target>
       </trans-unit>
 
 <!-- News _show -->

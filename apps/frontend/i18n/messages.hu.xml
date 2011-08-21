@@ -157,7 +157,11 @@
         <target>Buddha Fiú: Hír, Fotó, Videót, Élete, Beszédekben. Ram Bahadur Bomjon: A meditáló Buddha Fiú nepál. Palden Dordzse: Egy üzenet a béke a mi mai világban.</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>If you would like to translate information or share news, photo, video or audio – email at</source>
+        <source>Website is developed and supported on a voluntary basis.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>If you can help in any way – email at</source>
         <target></target>
       </trans-unit>
 
