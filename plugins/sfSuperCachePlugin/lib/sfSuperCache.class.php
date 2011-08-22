@@ -23,7 +23,9 @@ class sfSuperCache
 {
     
   // расширение файла кэша    
-  const CACHE_FILE_EXT = 'i.html';    
+  const CACHE_FILE_EXT 		   = 'i.html';    
+  // расширение файла кэша, помеченного удалённым
+  const CACHE_FILE_DELETED_EXT = 'd.html';    
   
   // строка запуска PHP
   //const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3 -c /etc/php53/php.ini';
@@ -91,7 +93,7 @@ class sfSuperCache
    *
    * @param unknown_type $request
    */
-  public static function clearCacheByPath($path = '', $all_cultures = true, $all_domains = true)
+  public static function alterCacheByPath($delete = true, $path = '', $all_cultures = true, $all_domains = true)
   {
   	$result = array();  		
 	
@@ -118,14 +120,25 @@ class sfSuperCache
 	  	      $path_translated
 	  	    ); 
 	  	  }
-	  	  
-          self::removeCacheFile( $path_translated );
+	  	  if ($delete) {
+	  	  	// удаление
+            self::removeCacheFile( $path_translated );
+	  	  } else {
+	  	  	// восстановление
+	  	  	self::restoreCacheFile( $path_translated );
+	  	  }
           $result[] = $path_translated;	
 	  	}
 	  } else {
 	  	// получаем путь на диске к файлу кэша
 	  	$path_translated 				= self::urlToFile($path);
-	  	self::removeCacheFile( $path_translated );
+	  	if ($delete) {
+	  	  // удаление
+          self::removeCacheFile( $path_translated );
+	  	} else {
+	  	  // восстановление
+	  	  self::restoreCacheFile( $path_translated );
+	  	}
 	  	$result[] = $path_translated;	
 	  }	  
 	}
@@ -133,7 +146,8 @@ class sfSuperCache
   }
   
   /**
-   * Удаление файла кэша. Поддерживает маски
+   * Удаление файла кэша - i.html заменяется на d.html
+   * Поддерживает маски.
    *
    * @param unknown_type $file_path
    * @return unknown
@@ -143,7 +157,33 @@ class sfSuperCache
   	if (!$file_path) {  		
   	  return false;
   	}
-  	shell_exec('rm -rf ' . $file_path); 
+  	 
+  	// find /home/saynt2day20/etapasvi.com/www/cache/www.etapasvi.com/ru/photo/64* -name '*i.html' -type f -exec rename 's/i.html/d.html/' {} \;
+  	$command = "find {$file_path} -name '*".self::CACHE_FILE_EXT."' -type f -exec rename 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;";
+  	
+  	shell_exec($command); 
+  	//shell_exec('rm -rf ' . $file_path); 
+  	return true;
+  }
+  
+  /**
+   * Восстановление файлов кэша - d.html заменяется на i.html
+   * Поддерживает маски.
+   *
+   * @param unknown_type $file_path
+   * @return unknown
+   */
+  public static function restoreCacheFile($file_path)
+  {
+  	if (!$file_path) {  		
+  	  return false;
+  	}
+  	 
+  	// find /home/saynt2day20/etapasvi.com/www/cache/www.etapasvi.com/ru/photo/64* -name '*i.html' -type f -exec rename 's/i.html/d.html/' {} \;
+  	$command = "find {$file_path} -name '*".self::CACHE_FILE_DELETED_EXT."' -type f -exec rename 's/".self::CACHE_FILE_DELETED_EXT."/".self::CACHE_FILE_EXT."/' {} \;";
+  	
+  	shell_exec($command); 
+  	//shell_exec('rm -rf ' . $file_path); 
   	return true;
   }
   

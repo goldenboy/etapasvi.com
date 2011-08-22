@@ -64,7 +64,8 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
 <form action="" method="post" >
     Path: <input type="text" name="path" value="<?php if (!empty($_POST['path'])): echo $_POST['path']; endif; ?>" size="100"/>     
     <input type="checkbox" <?php if (empty($_POST['path']) || !empty($_POST['al_cultures'])): ?>checked="checked"<?php endif ?> name="al_cultures" /> All cultures
-	<input type="submit" value="Clear" name="clear" />
+	<input type="submit" value="Delete" name="clear" /> 
+	<input type="submit" value="Restore" name="restore" />
 </form>
 <?php if (!empty($clear_pathes)): ?>
 <?php foreach($clear_pathes as $path): ?>

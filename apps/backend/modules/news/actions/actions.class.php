@@ -743,14 +743,20 @@ class newsActions extends autonewsActions
     // информация о процессах, обновляющих кэш
     $this->refresh_cache_daemon_info = sfSuperCache::refreshCacheGetDaemonInfo();
       
-    // очистка кэша
+    // очистка/восстановление кэша
   	if (!empty($_POST['path'])) {
   	  if (!empty($_POST['al_cultures'])) {
   	    $all_cultures = true;
   	  } else {
   	  	$all_cultures = false;
   	  }
-	  $this->clear_pathes = sfSuperCache::clearCacheByPath($_POST['path'], $all_cultures);		
+  	  // определяем, удаляем объекты или восстанавливаем
+  	  if (!empty($_POST['clear'])) {
+  	  	$delete = true;
+  	  } else {
+  	  	$delete = false;
+  	  }
+	  $this->clear_pathes = sfSuperCache::alterCacheByPath($delete, $_POST['path'], $all_cultures);		
   	}  	  	
   	
   	// информация об объёме и кол-ве файлов
