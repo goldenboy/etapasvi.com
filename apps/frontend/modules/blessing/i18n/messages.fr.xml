@@ -1,12 +1,7 @@
 <?xml version="1.0" ?>
 <xliff version="1.0">
   <file original="global" source-language="en" datatype="plaintext">
-    <body>   
-
-     <trans-unit id="1">
-        <source>Though Dharma Sangha is extremely busy with his meditation approaching its final phase, Dharma Sangha is truly happy to bless everyone and has requested that we group together as much as possible to receive blessings in the most efficient manner.</source>
-        <target>Bien que Dharma Sangha soit très occupé avec sa méditation qui tire à sa fin, Il est vraiment très heureux de bénir tout le monde et nous a demandé de nous regrouper autant que possible pour recevoir les bénédictions de la manière la plus efficace.</target>
-      </trans-unit>     
+    <body>    
 
       <trans-unit id="1">
         <source>You can send your photos, names and messages to</source>
