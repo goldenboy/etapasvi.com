@@ -434,13 +434,14 @@ class sfSuperCache
   	  } else {  	  
   	  	// однопоточный режим  
         // кэширование файла кэша
-      	//$refresh_result = self::refreshCacheFile($file_path, $console);      	  
+      	$refresh_result = self::refreshCacheFile($file_path, $console);      	  
   	  }
   	  // пишем в лог
   	  $log_line = $file_index . ':' . $file_path . "\r\n";
   	  echo $log_line;
       fputs($log_handle, $log_line);
     }
+    fputs($log_handle, 'finish');
     fclose($log_handle);
     
     // в многопоточном режиме ожидаем, пока все процессы закончат свою работу
@@ -530,6 +531,11 @@ class sfSuperCache
    */
   public static function refreshCacheChildSignalHandler($signo, $pid = null, $status = null)
   {      
+    // обработка сигнала убийства
+    /*if ($signo == SIGTERM) {
+        exit();
+    }*/
+      
     // If no pid is provided, that means we're getting the signal from the system.  Let's figure out
     // which child process ended
     if (!$pid){
@@ -554,7 +560,8 @@ class sfSuperCache
         self::$refersh_cache_queue[$pid] = $status;
       }
       $pid = pcntl_waitpid(-1, $status, WNOHANG);
-    }
+    }    
+    
     return true;
   }
   
@@ -573,7 +580,7 @@ class sfSuperCache
   	if (self::refreshCacheIsDaemonActive()) {
   	  return;
   	}
-  	/*
+  	
   	if ($domain_name) {
   		$domain_name_param = ' --domain_name=' . $domain_name;
   	} else {
@@ -602,7 +609,7 @@ class sfSuperCache
   		$include_path_regexp_param = ' --include_path_regexp=' . base64_encode($include_path_regexp) . '';
   	} else {
   		$include_path_regexp_param = ' ';
-  	}*/
+  	}
   	
   	// Если запускать обновление по следующей схеме:
 	// - runRefreshCacheTask
@@ -614,17 +621,23 @@ class sfSuperCache
   	// cd /home/saynt2day20/etapasvi.com && 
   	// ./symfony project:refreshcache --multi_process=0 --console=1 --exclude_path_regexp=XC9waG90b1wvKD8hYWxidW0p 
   	// --include_path_regexp=XC9lblwvcGhvdG9cLzQwMA== > /dev/null 2>&1 &
-  	/*$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' 
+  	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' 
   				. self::getRefreshCacheTaskCommand() 
   				. $domain_name_param 
   				. $multi_process_param
   				. $console_param
   				. $exclude_path_regexp_param
   				. $include_path_regexp_param
-  				. ' > /dev/null 2>&1 &';  		*/		
+  				. ' > /dev/null 2>&1 &';  			
   	// запуск команды, не дожидаясь завершения
-    //pclose(popen($command, "r"));
+    pclose(popen($command, "r"));
     
+    // не запускает таск
+    //passthru("sh -c {$command}", $return_vat);
+    
+    // обработчик сигналов
+    //pcntl_signal(SIGCHLD, array(__CLASS__, "refreshCacheChildSignalHandler"));
+    /*
 	$child_pid = pcntl_fork();
 
 	if( !$child_pid ) {	   
@@ -637,7 +650,9 @@ class sfSuperCache
         $exclude_path_regexp,
         $include_path_regexp
       );
-	}
+      exit();
+	}*/
+	
   }
   
   /**
@@ -759,7 +774,7 @@ class sfSuperCache
     $log_info_list = explode(";", $log_content_lines[0]);
     foreach ($log_info_list as $log_info_item) {
       $log_info_item_list = explode(':', $log_info_item);
-      if (!empty($log_info_item_list[0]) && !empty($log_info_item_list[1])) {
+      if (isset($log_info_item_list[0]) && isset($log_info_item_list[1])) {
         $log_info[ $log_info_item_list[0] ] = $log_info_item_list[1];	
       }
     }
@@ -773,7 +788,7 @@ class sfSuperCache
     $log_info['exclude_path_regexp']  = $log_info_list['6'];
     $log_info['include_path_regexp']  = $log_info_list['7'];*/
     $log_info['pid']    		      = $pid;
-    $log_info['done'] 				  = abs(count($log_content_lines)  - 3); // 1-я строка со служебной информацией
+    $log_info['done'] 				  = abs(count($log_content_lines)  - 2); // 1-я строка со служебной информацией
     
     return $log_info;
   }    
