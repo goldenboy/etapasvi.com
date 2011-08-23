@@ -18,12 +18,12 @@ $email = 'saynt2day@gmail.com';
 // date_start - номер символа, с которого начинается дата в строке лога
 // date_length - длина даты в строке лога
 $logs = array(
-	'symfony' => array(
+	'symfony_www' => array(
 		'path'        => '/home/saynt2day20/etapasvi.com/log/frontend_prod.log',
 		'date_start'  => 0,
 		'date_length' => 15
 	),
-	'symfony' => array(
+	'symfony_mobile' => array(
 		'path'        => '/home/saynt2day20/etapasvi.com/log/frontend_mobile.log',
 		'date_start'  => 0,
 		'date_length' => 15
@@ -43,10 +43,12 @@ $cur_timestamp = strtotime('-' . $period);
 
 // анализ логов
 foreach ($logs as $log_name => $log_info) {
+
 	$handle = fopen($log_info['path'], 'rt');
 	if ($handle) {
 	    while (!feof($handle)) {
 	        $line           = fgets($handle, 4096);
+	   
 	        // пустая строка
 	        if (strlen($line) < $log_info['date_length']) {
 	        	continue;
