@@ -288,7 +288,8 @@
 <?php echo __('"Dharma" usually refers not only to the sayings of the Buddha, but also to the later traditions of interpretation and addition that the various schools of Buddhism have developed to help explain and to expand upon the Buddha\'s teachings. Dharma in the Buddhist scriptures has a variety of meanings, including "phenomenon" and "nature" or "characteristic".') ?> 
 </p>
 <p>
-<?php echo __('For others still, they see the Dharma as referring to the "truth," or the ultimate reality of "the way that things really are". Dharma with a capital "D" (as opposed to thousands of dharmas or little ways and methods, with a little "d") means universal or absolute truth.') ?> 
+<?php echo __('For others still, they see the Dharma as referring to the "truth," or the ultimate reality of "the way that things really are". "dharma" is also used to infer one\'s duty in a righteous way; thus a Raja\'s dharma is to protect its people, a barber\'s dharma is to cut hair, a teacher\'s dharma is to teach. Dharma with a capital "D" (as opposed to thousands of dharmas or little ways and methods, with a little "d") means universal or absolute truth.') ?> 
+
 </p>
 
 <p class="right_text">
