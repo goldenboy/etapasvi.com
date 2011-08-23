@@ -98,7 +98,7 @@ class sfSuperCache
     // максимальное время работы скрипта - сутки 	
   	ini_set('max_execution_time', 60*60*24);
   	
-  	$result = array();  		
+  	$path_translated_list = array();  		
 	
 	// заменяем язык в пути на sf_culture
 	if ($all_cultures ) {
@@ -108,6 +108,7 @@ class sfSuperCache
 	  $culture_list = array('fake');
 	}
 	
+	// формирование списка путей
 	foreach ($culture_list as $culture ) { 		
 	  if ($all_domains) {
 	  	// очищаем кэш для каждого домена
@@ -123,29 +124,26 @@ class sfSuperCache
 	  	      $path_translated
 	  	    ); 
 	  	  }
-	  	  if ($delete) {
-	  	  	// удаление
-            self::removeCacheFile( $path_translated );
-	  	  } else {
-	  	  	// восстановление
-	  	  	self::restoreCacheFile( $path_translated );
-	  	  }
-          $result[] = $path_translated;	
+          $path_translated_list[] = $path_translated;	
 	  	}
 	  } else {
 	  	// получаем путь на диске к файлу кэша
 	  	$path_translated 				= self::urlToFile($path);
-	  	if ($delete) {
-	  	  // удаление
-          self::removeCacheFile( $path_translated );
-	  	} else {
-	  	  // восстановление
-	  	  self::restoreCacheFile( $path_translated );
-	  	}
-	  	$result[] = $path_translated;	
+
+	  	$path_translated_list[] = $path_translated;	
 	  }	  
 	}
-	return $result;
+	
+	// запуск удаления/восстановления файлов кэша
+  	if ($delete) {
+  	  // удаление
+      self::removeCacheFile( $path_translated_list );
+  	} else {
+  	  // восстановление
+  	  self::restoreCacheFile( $path_translated_list );
+  	}
+  	
+	return $path_translated_list;
   }
   
   /**
@@ -157,14 +155,25 @@ class sfSuperCache
    */
   public static function removeCacheFile($file_path)
   {
-  	if (!$file_path) {  		
+  	if (!$file_path) {
   	  return false;
   	}
   	 
   	// find /home/saynt2day20/etapasvi.com/www/cache/www.etapasvi.com/ru/photo/64* -name '*i.html' -type f -exec rename 's/i.html/d.html/' {} \;
-  	$command = "find {$file_path} -name '*".self::CACHE_FILE_EXT."' -type f -exec rename 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;";
-  	
-  	shell_exec($command); 
+  	if (is_array($file_path)) {
+      	$command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
+      	           "' -type f -exec rename 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
+      	           " > /dev/null 2>&1 &";
+  	} else {
+  	    $command = "find {$file_path} -name '*".self::CACHE_FILE_EXT.
+      	           "' -type f -exec rename 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
+      	           " > /dev/null 2>&1 &";
+  	}
+  
+  	// страница браузера ждёт и скрипт обрывается через некоторое время
+  	// запускаем обработку файлов отдельным процессом
+  	pclose(popen($command, "r"));
+  	//shell_exec($command); 
   	//shell_exec('rm -rf ' . $file_path); 
   	return true;
   }
@@ -215,9 +224,19 @@ class sfSuperCache
   	}
   	 
   	// find /home/saynt2day20/etapasvi.com/www/cache/www.etapasvi.com/ru/photo/64* -name '*i.html' -type f -exec rename 's/i.html/d.html/' {} \;
-  	$command = "find {$file_path} -name '*".self::CACHE_FILE_DELETED_EXT."' -type f -exec rename 's/".self::CACHE_FILE_DELETED_EXT."/".self::CACHE_FILE_EXT."/' {} \;";
-  	
-  	shell_exec($command); 
+  	if (is_array($file_path)) {
+      	$command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_DELETED_EXT.
+      	           "' -type f -exec rename 's/".self::CACHE_FILE_DELETED_EXT."/".self::CACHE_FILE_EXT."/' {} \;".
+      	           " > /dev/null 2>&1 &";
+  	} else {
+  	    $command = "find {$file_path} -name '*".self::CACHE_FILE_DELETED_EXT.
+      	           "' -type f -exec rename 's/".self::CACHE_FILE_DELETED_EXT."/".self::CACHE_FILE_EXT."/' {} \;".
+      	           " > /dev/null 2>&1 &";
+  	}
+  	// страница браузера ждёт и скрипт обрывается через некоторое время
+  	// запускаем обработку файлов отдельным процессом  	
+  	pclose(popen($command, "r"));
+  	//shell_exec($command); 
   	//shell_exec('rm -rf ' . $file_path); 
   	return true;
   }
