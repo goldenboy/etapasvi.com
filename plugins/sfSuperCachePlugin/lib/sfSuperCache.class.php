@@ -95,6 +95,9 @@ class sfSuperCache
    */
   public static function alterCacheByPath($delete = true, $path = '', $all_cultures = true, $all_domains = true)
   {
+    // максимальное время работы скрипта - сутки 	
+  	ini_set('max_execution_time', 60*60*24);
+  	
   	$result = array();  		
 	
 	// заменяем язык в пути на sf_culture
@@ -1034,16 +1037,16 @@ class sfSuperCache
       
     // удаляем файл d.html со всех доменов, чтобы они не накапливались, когда страница перестаёт существовать
     $cache_file = sfSuperCache::urlToFile(sfContext::getInstance()->getRequest()->getUri());
-    
+
     sfSuperCache::unlinkDeletedCacheFile( $cache_file );
     //sfSuperCache::unlinkCacheFile( $cache_file );
-            
+       
     if ($cache_file_content) {      	
       $response = sfContext::getInstance()->getResponse();
       $response->setStatusCode(404);
       $response->setContent($cache_file_content);
       $response->send();
-      return true;
+      exit;
     } else {
       return false;
     }
