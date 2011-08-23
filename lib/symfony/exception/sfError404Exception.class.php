@@ -22,10 +22,11 @@ class sfError404Exception extends sfException
    * Forwards to the 404 action.
    */
   public function printStackTrace()
-  {
+  {      
     $exception = null === $this->wrappedException ? $this : $this->wrappedException;
 
-    if (sfConfig::get('sf_debug'))
+    // дебаг выводится только в dev
+    if (sfConfig::get('sf_debug') /*&& sfContext::getInstance()->getConfiguration()->getEnvironment() == 'dev'*/ )
     {
       $response = sfContext::getInstance()->getResponse();
       if (null === $response)
@@ -46,16 +47,9 @@ class sfError404Exception extends sfException
         error_log($this->getMessage());
       }
 
-      // http://bsds.etapasvi.com/issues/65
-      // получаем файл 404 ошибки из кэша
-      $cache_file = sfSuperCache::getError404Content();
+      $error_404_from_cache = sfSuperCache::showError404();
             
-      if ($cache_file) {      	
-      	$response = sfContext::getInstance()->getResponse();
-      	$response->setStatusCode('404');
-      	$response->setContent($cache_file);
-      	$response->send();
-      } else {
+      if (!$error_404_from_cache) {      	      	
       	// отображение страницы 404
       	sfContext::getInstance()->getController()->forward(sfConfig::get('sf_error_404_module'), sfConfig::get('sf_error_404_action'));
       }            

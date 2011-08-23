@@ -167,6 +167,38 @@ class sfSuperCache
   }
   
   /**
+   * Удаление удалённого файла кэша
+   *
+   * @param unknown_type $file_path
+   */
+  public static function unlinkDeletedCacheFile($file_path)
+  { 
+    // если передан не удалённый файл кэша (d.html), а рабочий (i.html)
+    if (!strstr($file_path, self::CACHE_FILE_DELETED_EXT)) {
+        $file_path = str_replace(self::CACHE_FILE_EXT , self::CACHE_FILE_DELETED_EXT, $file_path);
+    }
+    
+    // удаляем файл "d.html"
+    return @unlink($file_path);
+  }
+  
+  /**
+   * Удаление файла кэша (i.html) с диска
+   *
+   * @param unknown_type $file_path
+   */
+  public static function unlinkCacheFile($file_path)
+  { 
+    // если передано неверное имя файла кэша (не i.html), выходим
+    if (!strstr($file_path, self::CACHE_FILE_EXT)) {
+      return false;
+    }
+    
+    // удаляем файл "i.html"
+    return @unlink($file_path);
+  }
+  
+  /**
    * Восстановление файлов кэша - d.html заменяется на i.html
    * Поддерживает маски.
    *
@@ -273,12 +305,18 @@ class sfSuperCache
   	// количество файлов (минус .htaccess)
 	// [vaduz]$ find /home/saynt2day20/etapasvi.com/www/cache -type f | wc -l
 	// 15
-	$files_command = 'find ' . $cacheDir . ' ' . $path_filter . ' -type f | wc -l';
+	$files_command = 'find ' . $cacheDir . ' ' . $path_filter . ' -name \'*' . self::CACHE_FILE_EXT . '\' -type f | wc -l';
   	$files        = shell_exec($files_command); // - 1;
+  	
+  	// кол-во удалённых файлов
+	$files_command = 'find ' . $cacheDir . ' ' . $path_filter . ' -name \'*' . self::CACHE_FILE_DELETED_EXT . '\' -type f | wc -l';
+
+  	$files_deleted = shell_exec($files_command); // - 1;
 
   	return array(
-	  'size'  => $size,
-	  'files' => $files
+	  'size'           => $size,
+	  'files'          => $files,
+	  'files_deleted'  => $files_deleted
   	);
   }
   
@@ -338,8 +376,9 @@ class sfSuperCache
    
   
   /**
-   * Обновление кэша: удаление файлов кэша и открытие страниц сайта, чтобы создался новый файл
-   * @todo сделать защёлку
+   * Обновляются файлы кэша, помеченные удалёнными (d.html).
+   * Обновление кэша: удаление файлов кэша и открытие страниц сайта, при этом помеченный удалённым файл 
+   * автоматически удаляется и создаётся обычный файл i.html
    *
    * @param unknown_type $multi_process мультипроцессорный режим
    * @param unknown_type $threads_count кол-во потоков в мультипроцессорном режиме
@@ -400,8 +439,8 @@ class sfSuperCache
     file_put_contents(self::refreshCacheGetPidFilePath(), getmypid());
     chmod(self::refreshCacheGetPidFilePath(), 0666);
   	
-  	// получение списка файлов кэша
-  	$command = 'find ' . $cacheDir . '  -type f -name "*' . self::CACHE_FILE_EXT . '"';
+  	// получение списка файлов кэша (d.html)
+  	$command = 'find ' . $cacheDir . '  -type f -name "*' . self::CACHE_FILE_DELETED_EXT . '"';
   	$file_list_str = shell_exec($command);  	  	
 
   	$file_list = explode("\n", $file_list_str);  	
@@ -422,7 +461,7 @@ class sfSuperCache
   		"\r\n"
   	);
   	
-  	// удаление и создание кэша страниц  	  	
+  	// удаление и создание кэша страниц  	
   	foreach ($file_list as $file_index=>$file_path) {
   		
   	  // объект исключён
@@ -481,7 +520,6 @@ class sfSuperCache
   	  echo $log_line;
       fputs($log_handle, $log_line);
     }
-    fputs($log_handle, 'finish');
     fclose($log_handle);
     
     // в многопоточном режиме ожидаем, пока все процессы закончат свою работу
@@ -548,6 +586,11 @@ class sfSuperCache
    */
   public static function refreshCacheFile($file_path, $console = true)
   {
+    // если передан файл, помеченный удалённым (d.html), заменяем название обычным
+    if (strstr($file_path, self::CACHE_FILE_DELETED_EXT)) {
+        $file_path = str_replace(self::CACHE_FILE_DELETED_EXT , self::CACHE_FILE_EXT, $file_path);
+    }
+      
     // удаление файла кэша
     $remove_result = self::removeCacheFile($file_path);
 
@@ -977,6 +1020,33 @@ class sfSuperCache
 	$cache_file = preg_replace( "/<title>.*<\/title>/", "<title>" . $title . " - eTapasvi.com</title>", $cache_file);
 	
 	return $cache_file;
+  }
+  
+  /**
+   * Показать ошибку 404 из кэша
+   *
+   */
+  public static function showError404()
+  {
+    // http://bsds.etapasvi.com/issues/65
+    // получаем файл 404 ошибки из кэша
+    $cache_file_content = sfSuperCache::getError404Content();
+      
+    // удаляем файл d.html со всех доменов, чтобы они не накапливались, когда страница перестаёт существовать
+    $cache_file = sfSuperCache::urlToFile(sfContext::getInstance()->getRequest()->getUri());
+    
+    sfSuperCache::unlinkDeletedCacheFile( $cache_file );
+    //sfSuperCache::unlinkCacheFile( $cache_file );
+            
+    if ($cache_file_content) {      	
+      $response = sfContext::getInstance()->getResponse();
+      $response->setStatusCode(404);
+      $response->setContent($cache_file_content);
+      $response->send();
+      return true;
+    } else {
+      return false;
+    }
   }
   
   

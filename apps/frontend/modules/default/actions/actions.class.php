@@ -27,15 +27,8 @@ class defaultActions extends sfActions
   {
     // http://bsds.etapasvi.com/issues/65
     // получаем файл 404 ошибки из кэша
-    $cache_file = sfSuperCache::getError404Content();
-            
-    if ($cache_file) {      	
-      $response = sfContext::getInstance()->getResponse();
-      $response->setStatusCode('404');
-      $response->setContent($cache_file);
-      $response->send();
-      exit();
-    }  	
+    sfSuperCache::showError404();
+    exit(); 	
   }
 
 }

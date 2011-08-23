@@ -131,8 +131,7 @@ class sfSuperCacheFilter extends sfFilter
         }
         chmod($file, 0666);
         
-        // удаляем файл "d.html"
-        unlink(str_replace('i.html', 'd.html', $file));
+        sfSuperCache::unlinkDeletedCacheFile($file);
       }
       umask($current_umask);
     //}
