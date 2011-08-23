@@ -29,6 +29,12 @@
             <?php echo html_entity_decode(/*str_ireplace( '&lt;br /&gt;', '</p><p class="p1">',*/ $newsitem->getOriginalPrepared() /*)*/ ); ?>
         </p>		
     <?php endif ?>
+    
+    <?php if ($newsitem->isTypeTeachings()): ?>
+        <p class="author">				
+            <strong><?php echo __('Footnote') ?>:</strong> <?php echo __('Dharma Sangha do not use pronoun "I", it has been added to make translation easier to understand') ?>
+        </p>     		
+    <?php endif ?>
 
     <?php if ($newsitem->getAuthor($sf_user->getCulture(), true)): ?>
         <p class="author">				
@@ -46,7 +52,7 @@
     <?php if ($link): ?>
         <p class="p1_no_bottom source">
         <?php if (strstr($link, 'http')): ?>
-            <strong><?php echo __('Source') ?>:</strong> <br/><a href="<?php echo $link; ?>" rel="nofollow" class="external"><?php echo TextPeer::cropLink( $link ); ?></a>					
+            <strong><?php echo __('Source') ?>:</strong> <a href="<?php echo $link; ?>" rel="nofollow" class="external"><?php echo TextPeer::cropLink( $link ); ?></a>					
         <?php else: ?>					
             <?php echo $link; ?>
         <?php endif ?>
