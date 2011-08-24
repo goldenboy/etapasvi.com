@@ -30,7 +30,7 @@
         </p>		
     <?php endif ?>
     
-    <?php if ($newsitem->isTypeTeachings()): ?>
+    <?php if ($newsitem->isTypeTeachings() && !UserPeer::isCultureHieroglyphic()): ?>
         <p class="author">				
             <strong><?php echo __('Footnote') ?>:</strong> <?php echo __('Dharma Sangha does not often use the pronoun "I" in speeches, it is added to make translation easier to understand. The use of "I" is in fact rare. First person verbal indications (-chhu) are more common than the personal pronoun "I" (ma, though not to be confused with the same word, which is the post-position for "in" or "at", such as "tyo samay ma" – at that time) and sometimes the word "my" (mero). Most common is the use of "one\'s own" (aphno).') ?>
         </p>     		
