@@ -68,6 +68,10 @@
         <source>Original text</source>
         <target>Исходный текст</target>
       </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Sangha does not often use the pronoun "I" in speeches, it is added to make translation easier to understand. The use of "I" is in fact rare. First person verbal indications (-chhu) are more common than the personal pronoun "I" (ma, though not to be confused with the same word, which is the post-position for "in" or "at", such as "tyo samay ma" – at that time) and sometimes the word "my" (mero). Most common is the use of "one's own" (aphno).</source>
+        <target>Дхарма Сангха редко использует местоимение "я" в речах, оно добавляется, чтобы сделать перевод более понятным. "Я", на самом деле, используется редко. Указание на первое лицо с помощью глагола (-chhu) встречается чаще, чем личное местоимение "Я" (ma, не путать с аналогичным словом, которое используется после "в" или "на", например "tyo samay ma" – в то время), а также с помощью слова "мой" (mero). Наиболее часто встречается местоимение "свой" (aphno).</target>
+      </trans-unit>
       
 <!-- teachingsSuccess -->
 

@@ -227,6 +227,10 @@
         <source>Back</source>
         <target>Назад</target>
       </trans-unit>
+      <trans-unit id="1">
+        <source>Footnote</source>
+        <target>Примечение</target>
+      </trans-unit>
       
 <!-- audio -->
       <trans-unit id="1">
