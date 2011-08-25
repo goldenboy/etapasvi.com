@@ -331,14 +331,16 @@ class sfSuperCache
   	$files        = shell_exec($files_command); // - 1;
   	
   	// кол-во удалённых файлов
-	$files_command = 'find ' . $cacheDir . ' ' . $path_filter . ' -name \'*' . self::CACHE_FILE_DELETED_EXT . '\' -type f | wc -l';
+	$files_deleted_command = 'find ' . $cacheDir . ' ' . $path_filter . ' -name \'*' . self::CACHE_FILE_DELETED_EXT . '\' -type f | wc -l';
 
-  	$files_deleted = shell_exec($files_command); // - 1;
+  	$files_deleted = shell_exec($files_deleted_command); // - 1;
 
   	return array(
-	  'size'           => $size,
-	  'files'          => $files,
-	  'files_deleted'  => $files_deleted
+	  'size'                   => $size,
+	  'files'                  => $files,
+	  'files_deleted'          => $files_deleted,
+	  'command_files'          => $files_command,
+	  'command_files_deleted'  => $files_deleted_command
   	);
   }
   
