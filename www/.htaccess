@@ -29,6 +29,10 @@ ErrorDocument 500 /errors/500.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # http://habrahabr.ru/blogs/infosecurity/127029/#comment_4191083
+  RewriteCond %{HTTP:Range} bytes=0-.* [NC]
+  RewriteRule .? http://%{SERVER_NAME}/ [R=302,L]
   
   # проверка доменного имени и рекдирект на домен по умолчанию, если передан неверный
   # учитывать, что доменное имя хардкодится в .php
