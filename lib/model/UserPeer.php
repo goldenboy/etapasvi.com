@@ -201,12 +201,26 @@ class UserPeer extends BaseUserPeer
 	 * @param unknown_type $culture
 	 * @return unknown
 	 */
-	public static function getCultureMailId( $culture = '' )
+	/*public static function getCultureMailId( $culture = '' )
 	{
 		if (!$culture) {
 			$culture = sfContext::getInstance()->getUser()->getCulture();
 		}
 		return self::$cultures[ $culture ][ 'mail_id' ];
+	}*/
+	
+	/**
+	 * Полученеи языка в формате MSDS: http://msdn.microsoft.com/en-us/library/ms533052%28v=vs.85%29.aspx
+	 *
+	 * @param unknown_type $culture
+	 * @return unknown
+	 */
+    public static function getCultureMsdn( $culture = '' )
+	{
+		if (!$culture) {
+			$culture = sfContext::getInstance()->getUser()->getCulture();
+		}
+		return strtolower( str_replace("_", "-", $culture) );
 	}
 	
 	/**
