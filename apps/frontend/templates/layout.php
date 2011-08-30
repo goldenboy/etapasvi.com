@@ -7,7 +7,7 @@
 <?php include_metas() ?>
 <?php include_slot('meta') ?>
 <?php /*include_title()*/ ?>
-<title><?php echo __($sf_response->getTitle()); ?> - <?php echo sfConfig::get('app_site_name'); ?></title>
+<title><?php echo __(html_entity_decode($sf_response->getTitle())); ?> - <?php echo sfConfig::get('app_site_name'); ?></title>
 <link rel="shortcut icon" type="image/x-icon" href="http://<?php echo sfConfig::get('app_domain_name'); ?>/favicon.ico" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script> 
 <script type="text/javascript" src="/js/js.js"></script> 
