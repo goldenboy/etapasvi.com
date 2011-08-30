@@ -83,7 +83,10 @@ ErrorDocument 500 /errors/500.html
   RewriteRule ^$ http://%{HTTP_HOST}/zh_CN/ [L,R=301]  
   
   RewriteCond %{HTTP:Accept-Language} ^vi.* [NC]
-  RewriteRule ^$ http://%{HTTP_HOST}/vi/ [L,R=301]  
+  RewriteRule ^$ http://%{HTTP_HOST}/vi/ [L,R=301] 
+
+  RewriteCond %{HTTP:Accept-Language} ^ja.* [NC]
+  RewriteRule ^$ http://%{HTTP_HOST}/ja/ [L,R=301] 
   
   RewriteCond %{HTTP:Accept-Language} ^es.* [NC]
   RewriteRule ^$ http://%{HTTP_HOST}/es/ [L,R=301]
@@ -91,11 +94,14 @@ ErrorDocument 500 /errors/500.html
   RewriteCond %{HTTP:Accept-Language} ^it.* [NC]
   RewriteRule ^$ http://%{HTTP_HOST}/it/ [L,R=301]
 
-  RewriteCond %{HTTP:Accept-Language} !^(en.*|ru.*|cs.*|hu.*|pl.*|fr.*|zh.*|vi.*|es.*|it.*) [NC]
+  RewriteCond %{HTTP:Accept-Language} ^et.* [NC]
+  RewriteRule ^$ http://%{HTTP_HOST}/et/ [L,R=301]
+
+  RewriteCond %{HTTP:Accept-Language} !^(en.*|ru.*|cs.*|hu.*|pl.*|fr.*|zh.*|vi.*|ja.*|es.*|it.*|et.*) [NC]
   RewriteRule ^$ http://%{HTTP_HOST}/en/ [L,R=301]
 
   # Добавление слэша в конце языка: /ru -> /ru/
-  RewriteCond %{REQUEST_URI} ^/(en|ru|cs|hu|pl|fr|zh_CN|vi|es|it)$ [NC]
+  RewriteCond %{REQUEST_URI} ^/(en|ru|cs|hu|pl|fr|zh_CN|vi|ja|es|it|et)$ [NC]
   RewriteRule ^ http://%{HTTP_HOST}%{REQUEST_URI}/ [L,R=301]
 
   # Редирект на мобильную версию
