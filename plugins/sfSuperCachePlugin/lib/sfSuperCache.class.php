@@ -1007,7 +1007,7 @@ class sfSuperCache
 	
 	if (!empty($matches[1]) && !empty($matches[2])) {
 	  // текущий путь без языка
-	  $cur_parh_without_lang = preg_replace("/\/[^\/]+\//", "", $cur_path);
+	  $cur_parh_without_lang = preg_replace("/^\/[^\/]+\//", "", $cur_path);
 	  foreach ($matches[1] as $i=>$match) {
 	    $replacement[$match] = $matches[2][$i] . $cur_parh_without_lang;
 	  }		  
