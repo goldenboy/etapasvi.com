@@ -235,7 +235,12 @@ audio_index:
 donation:
   url:   /:sf_culture/donation
   param: { module: donation, action: show }
-  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }  
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+  
+servers:
+  url:   /:sf_culture/servers
+  param: { module: servers, action: show }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 # Ошибка 404
 error404:

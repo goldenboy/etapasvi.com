@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>If you have web server, you can help to deliver content of this website to the users. For instructions on how to add your server to website server farm email at</source>
+        <target>Если у Вас есть веб-сервер, вы можете помочь доставлять пользователям контент данного веб-сайта. Для получения инструкций по включению Вашего сервера в ферму серверов веб-сайта пишите на </target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Requirements</source>
+        <target>Требования</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Unix-based server with Nginx and rsync installed</source>
+        <target>Unix-сервер с установленным Nginx и rsync</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Owner must guarantee undisturbed operation of the server</source>
+        <target>Владелец должен гарантировать бесперебойную работу сервера</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Owner must be able to change Nginx configuration</source>
+        <target>Владелец должен иметь возможность измененять конфигурацию Nginx</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Owner must be able to add SSH-key to ~/.ssh/authorized_keys</source>
+        <target>Владелец должен иметь возможность добавить SSH-ключ в ~/.ssh/authorized_keys</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>~500 Mb of disc space</source>
+        <target>~500 Мб дискового пространства</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>List of web servers</source>
+        <target>Список веб-серверов</target>
+      </trans-unit>      
+      
+      <trans-unit id="1">
+        <source>Website diagram</source>
+        <target>Схема работы сайта</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

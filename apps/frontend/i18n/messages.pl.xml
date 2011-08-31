@@ -160,6 +160,10 @@
         <target></target>
       </trans-unit>
       <trans-unit id="1">
+        <source>Servers</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
         <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
         <target>Chłopiec Budda: Wydarzenia, Galeria, Wideo, Biografia, Przemowy. Ram Bahadur Bomjon (Palden Dorje): Medytujący Chłopiec Budda z Nepalu. Ram Bomjon: Chłopiec o boskich mocach. Ram Bomjan: Przesłanie Pokoju dla naszego dzisiejszego Świata.</target>
       </trans-unit>

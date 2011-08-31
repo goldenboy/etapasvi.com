@@ -79,6 +79,12 @@ a img {
 a.no_decor {
 	text-decoration: none;
 	}
+ul {
+	list-style-position:outside;
+	list-style-type: disc;
+	margin-left: 15px;
+	text-align: justify;
+	}
 ol {
 	list-style-position:inside;
 	font-family: Verdana; 
@@ -131,6 +137,7 @@ table {
 	list-style-image:none;
 	list-style-position:outside;
 	list-style-type:none;
+    margin: 0;
 	}
 
 #menu a:link,

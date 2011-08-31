@@ -60,8 +60,9 @@
 	<ul>*/?>
 		<?php /*<li><a href="<?php echo url_for('@user_member', true); ?>" title="<?php echo __('Member') ?>" id="mi_member"><?php echo __('Member') ?></a></li> */?>        
 		<li id="mi_chat"><a href="<?php echo url_for('@chat', true); ?>" title="<?php echo __('Chat') ?>"><?php echo __('Chat') ?></a></li>
-		<li id="mi_social_tools"><a href="<?php echo url_for('@social_tools', true); ?>" title="<?php echo __('Social Tools') ?>"><?php echo __('Social Tools') ?></a></li>
+		<li id="mi_social_tools"><a href="<?php echo url_for('@social_tools', true); ?>" title="<?php echo __('Social Tools') ?>"><?php echo __('Social Tools') ?></a></li>        
 		<li id="mi_search"><a href="<?php echo url_for('@search', true); ?>" title="<?php echo __('Search') ?>"><?php echo __('Search') ?></a></li>
+        <li id="mi_servers"><a href="<?php echo url_for('@servers', true); ?>" title="<?php echo __('Servers') ?>"><?php echo __('Servers') ?></a></li>
 		<li id="mi_contactus"><a href="<?php echo url_for('@contactus', true); ?>" title="<?php echo __('Contact Us') ?>"><?php echo __('Contact Us') ?></a></li>
 	</ul>
 <?php /* 
