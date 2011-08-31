@@ -42,7 +42,17 @@
       <trans-unit id="1">
         <source>List of web servers</source>
         <target>Список веб-серверов</target>
-      </trans-unit>      
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>#</source>
+        <target>№</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Owner</source>
+        <target>Владелец</target>
+      </trans-unit>
       
       <trans-unit id="1">
         <source>Website diagram</source>
