@@ -87,8 +87,7 @@
                 <p class="p1_no_bottom source">
                     <strong><?php echo __('Source') ?>:</strong> <a href="<?php echo $photo->getLink(); ?>"><?php echo TextPeer::cropLink($photo->getLink()); ?></a>
                 </p>
-            <?php endif ?>
-            <?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photo->getPhotoalbumId())) ?> 
+            <?php endif ?>            
         </div>
 		<hr class="light"/>
 <?php /* 
@@ -146,5 +145,8 @@
 		</tr>
 	</table>
     <div id="photo_content_title" class="hidden"><?php echo __($sf_response->getTitle()); ?></div>
+    <div class="photo_info">
+        <?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photo->getPhotoalbumId())) ?> 
+    </div>
 	<?php endif ?>    
 <?php endif ?>
