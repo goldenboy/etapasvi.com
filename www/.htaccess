@@ -44,9 +44,11 @@ ErrorDocument 500 /errors/500.html
   RewriteRule ^ http://www.etapasvi.com [L,R=301]
 
   # Перезапись отключена для:
+  # - если запрошен файл не из папки кэша (http://www.etapasvi.com/cache/www.etapasvi.com/en/i.html)
   # - в запросе есть точка, т.е запрашивается файл
   # - запрашиваемый файл находится в специальной директории
   #RewriteCond %{REQUEST_FILENAME} -f [OR] 
+  RewriteCond %{REQUEST_URI} !^/cache/
   RewriteCond %{REQUEST_URI} ^.*\..*$ [OR] 
   RewriteCond %{REQUEST_URI} ^/(css|errors|i|js|php_backend|sf_data_lsdfkr|swf|uploads|stats|backup_download)/
   RewriteRule .* - [L]
