@@ -119,19 +119,21 @@ class sfSuperCacheFilter extends sfFilter
           $content = $compactor->squeeze($content); */
           //$content = preg_replace("/\s+/", ' ', $content);
         //}
-    
+
         if (!$content) {
+          // контента нет
           sfContext::getInstance()->getLogger()->err('Could not get content of the page for caching: '.
           	sfConfig::get('app_domain_name').$pathInfo);
+        } else {
+          // запись контента в файл
+	      $write_result = file_put_contents($file, $header.$content);
+	      if (!$write_result) {
+	        sfContext::getInstance()->getLogger()->err('Could not write to cache file: '.$file);
+	      }
+	      chmod($file, 0666);
+	        
+	      sfSuperCache::unlinkDeletedCacheFile($file);
         }
-        
-        $write_result = file_put_contents($file, $header.$content);
-        if (!$write_result) {
-          sfContext::getInstance()->getLogger()->err('Could not write to cache file: '.$file);
-        }
-        chmod($file, 0666);
-        
-        sfSuperCache::unlinkDeletedCacheFile($file);
       }
       umask($current_umask);
     //}
