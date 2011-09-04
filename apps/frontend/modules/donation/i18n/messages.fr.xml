@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Purpose</source>
+        <target>Objectif</target>
+      </trans-unit>                 
+      
+      <trans-unit id="1">
+        <source>Bank account</source>
+        <target>Compte bancaire</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

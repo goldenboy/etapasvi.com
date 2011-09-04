@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Donation</source>
+        <target>Dons</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Yandex Money</source>
+        <target>Monaie Yandes</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Location</source>
+        <target>Emplacement</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>View Larger Map</source>
+        <target>Aggrandir la carte</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Bank account (Nepal)</source>
+        <target>Compte bancaire (Népal)</target>
+      </trans-unit>        
+
+      <trans-unit id="1">
+        <source>Bank account (Europe)</source>
+        <target>Compte bancaire (Europe)</target>
+      </trans-unit>      
+
+	  <trans-unit id="1">
+        <source>ACCOUNT</source>
+        <target>COMPTE</target>
+      </trans-unit>
+
+	  <trans-unit id="1">
+        <source>A/C HOLDER</source>
+        <target>TITULAIRE DU COMPTE</target>
+      </trans-unit>
+     
+	  <trans-unit id="1">
+        <source>A/C NO</source>
+        <target>COMPTE N°</target>
+      </trans-unit>	  
+
+	  <trans-unit id="1">
+        <source>SWIFT CODE</source>
+        <target>CODE SWIFT</target>
+      </trans-unit>	  
+
+	 <trans-unit id="1">
+        <source>Donations Received</source>
+        <target>Dons recus</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

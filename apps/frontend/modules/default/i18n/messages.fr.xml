@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Error</source>
+        <target>Erreur</target>
+      </trans-unit>    
+      <trans-unit id="1">
+        <source>Page Not Transalated</source>
+        <target>Page non traduite</target>
+      </trans-unit> 
+	  <trans-unit id="1">
+        <source>If you can translate this page into your language please email us at</source>
+        <target>Si vous pouvez traduire cette page dans votre langue contactez nous à</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Page Not Found</source>
+        <target>page non trouvée</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>You may have typed the address (URL) incorrectly. Check it to make sure you've got the exact right spelling, capitalization or switch to another lamguage</source>
+        <target>Vous pourriez avoir saisi une adresse (URL) incorrect. Vérifiez qu'elle soit exact, y compris pour les majuscules / minuscules ou essayez dans une autre langue.</target>
+      </trans-unit>
+     
+      <trans-unit id="1">
+        <source>Back to previous page</source>
+        <target>Revenir à la page précédente.</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

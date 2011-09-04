@@ -13,15 +13,15 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Please, enable JavaScript!</source>
-        <target></target>
+        <target>Veuillez activier Javascript !</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Copyright</source>
-        <target></target>
+        <target>Copyright</target>
       </trans-unit>
       <trans-unit id="1">
         <source>All Rights Reserved</source>
-        <target></target>
+        <target>Tous droits réservés</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Home</source>
@@ -29,19 +29,19 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Buddha Boy</source>
-        <target></target>
+        <target>Boudha Boy</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Palden Dorje</source>
-        <target></target>
+        <target>Palden Dorje</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Dharma Sangha</source>
-        <target></target>
+        <target>Dharma Sangha</target>
       </trans-unit>     
       <trans-unit id="1">
         <source>Buddha Boy News</source>
-        <target></target>
+        <target>Buddha Boy News</target>
       </trans-unit>
       <trans-unit id="1">
         <source>News</source>
@@ -49,23 +49,23 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Palden Dorje Photo</source>
-        <target></target>
+        <target>Photos de palden Dorje</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Photo</source>
-        <target></target>
+        <target>Photo</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Ram Bahadur Bomjan Video</source>
-        <target></target>
+        <target>Vidéos de Ram Bahadur Bomjan</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Video</source>
-        <target></target>
+        <target>Vidéo</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Om Namo Guru Buddha Gyani Biography</source>
-        <target></target>
+        <target>Om Namo Guru Buddha Gyani Biographie</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Biography</source>
@@ -77,59 +77,59 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Encyclopedia</source>
-        <target></target>
+        <target>Encyclopédie</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Buddha Boy Live Stream</source>
-        <target></target>
+        <target>Buddha Boy Live Stream</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Live Stream</source>
-        <target></target>
+        <target>En temps réeel</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Dharma Hall</source>
-        <target></target>
+        <target>Salle du Dharma</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Social Tools</source>
-        <target>Communication</target>
+        <target>Outils sociaux</target>
       </trans-unit> 
       <trans-unit id="1">
         <source>Other</source>
-        <target></target>
+        <target>Autre</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Member</source>
-        <target></target>
+        <target>Membre</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Twitter</source>
-        <target></target>
+        <target>Twitter</target>
       </trans-unit>
       <trans-unit id="1">
         <source>LJ</source>
-        <target></target>
+        <target>LJ</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Live Journal</source>
-        <target></target>
+        <target>Journal live</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Feed</source>
-        <target></target>
+        <target>Feed</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Search</source>
-        <target></target>
+        <target>Rechercher</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Contact Us</source>
-        <target></target>
+        <target>Contactez-nous</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Forum</source>
-        <target></target>
+        <target>Forum</target>
       </trans-unit>     
       <trans-unit id="1">
         <source>Blessing</source>
@@ -137,27 +137,27 @@
       </trans-unit>  
       <trans-unit id="1">
         <source>FAQ</source>
-        <target></target>
+        <target>FAQ</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Translation Fundraising</source>
-        <target></target>
+        <target>Participation aux traductions</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Audio</source>
-        <target></target>
+        <target>Audio</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Religious Forest</source>
-        <target></target>
+        <target>Foret sacrée</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Donation</source>
-        <target></target>
+        <target>Dons</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Chat</source>
-        <target></target>
+        <target>Chat</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Servers</source>
@@ -165,108 +165,108 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
-        <target></target>
+        <target>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal) : Actus, Photos, Vidéos, Biographie, Enseignements.</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Website is developed and supported on a voluntary basis.</source>
-        <target></target>
+        <target>Ce site est développé et soutenu sur la base du volontariat.</target>
       </trans-unit>
       <trans-unit id="1">
         <source>If you can help in any way – email at</source>
-        <target></target>
+        <target>Si vous souhaitez nous aider d'une facon ou d'une autre - envoyez un email à</target>
       </trans-unit>
 
 <!-- News _show -->
       <trans-unit id="1">
         <source>Read more</source>
-        <target></target>
+        <target>Lire plus</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Comments</source>
-        <target></target>
+        <target>Commentaires</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Source</source>
-        <target></target>
+        <target>Source</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Enlarge</source>
-        <target></target>
+        <target>Elargir</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Terthup Dharma Hall</source>
-        <target></target>
+        <target>Salle du Dharma Terthup</target>
       </trans-unit>
       
 <!-- misc -->
       <trans-unit id="1">
         <source>Go to top</source>
-        <target></target>
+        <target>Aller en haut</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Text</source>
-        <target></target>
+        <target>Texte</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Author</source>
-        <target></target>
+        <target>Auteur</target>
       </trans-unit>
       <trans-unit id="1">
         <source>teaching</source>
-        <target></target>
+        <target>enseignement</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Translated by</source>
-        <target></target>
+        <target>Traduit par</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Download</source>
-        <target></target>
+        <target>Télécharger</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Date</source>
-        <target></target>
+        <target>Date</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Back</source>
-        <target></target>
+        <target>Revenir</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Footnote</source>
-        <target></target>
+        <target>Notes</target>
       </trans-unit>
       
 <!-- audio -->
       <trans-unit id="1">
         <source>Size</source>
-        <target></target>
+        <target>Taille</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Duration</source>
-        <target></target>
+        <target>Durée</target>
       </trans-unit>
       
 <!-- mobile -->
       <trans-unit id="1">
         <source>Mobile</source>
-        <target></target>
+        <target>Mobile</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Classic</source>
-        <target></target>
+        <target>Classique</target>
       </trans-unit>
 
 <!-- video -->
       <trans-unit id="1">
         <source>Watch on YouTube</source>
-        <target></target>
+        <target>Voir sur YouTube</target>
       </trans-unit>
 
 <!-- 404 -->
       <trans-unit id="1">
         <source>Page Not Found or Not Translated</source>
-        <target></target>
+        <target>Page non trouvée ou non traduite</target>
       </trans-unit>
 
     </body>

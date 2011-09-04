@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+  
+      <trans-unit id="1">
+        <source>Official website</source>
+        <target>Site officiel</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>News and Teachings</source>
+        <target>Actus et Enseignements</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Country</source>
+        <target>Pays</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>State, District, City</source>
+        <target>Etat, Région, Ville</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Responsible person</source>
+        <target>Personne responsable</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Main in country</source>
+        <target>Principal dans le pays</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mem- bers</source>
+        <target>Mem- bres</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

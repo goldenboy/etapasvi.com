@@ -6,19 +6,19 @@
 <!-- indexSuccess -->
       <trans-unit id="1">
         <source>Start from</source>
-        <target></target>
+        <target>A partir de</target>
       </trans-unit>
       <trans-unit id="1">
         <source>newest</source>
-        <target></target>
+        <target>les plus récentes</target>
       </trans-unit>
       <trans-unit id="1">
         <source>oldest</source>
-        <target></target>
+        <target>les plus anciennes</target>
       </trans-unit>
       <trans-unit id="1">
         <source>No News</source>
-        <target></target>
+        <target>Pas d'actus</target>
       </trans-unit>
 
 <!-- mainSuccess -->
@@ -32,56 +32,57 @@
       </trans-unit>
       <trans-unit id="14">
         <source>Latest Photos</source>
-        <target></target>
+        <target>Dernières photos</target>
       </trans-unit>
       <trans-unit id="14">
         <source>Latest Video</source>
-        <target></target>
+        <target>Dernières vidéos</target>
       </trans-unit>
       <trans-unit id="14">
         <source>Latest Audio</source>
-        <target></target>
+        <target>Derniers enregistrements audio</target>
       </trans-unit>
       <trans-unit id="1">
         <source>view all</source>
-        <target></target>
+        <target>voir tous</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Subscribe to News</source>
-        <target></target>
+        <target>Inscription aux actus</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Subscribe</source>
-        <target></target>
+        <target>Inscription</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Unsubscribe</source>
-        <target></target>
+        <target>Désinscription</target>
       </trans-unit>
       <trans-unit id="1">
         <source>or</source>
-        <target></target>
+        <target>ou</target>
       </trans-unit>
 
 <!-- showSuccess -->
       <trans-unit id="1">
         <source>Original text</source>
-        <target></target>
+        <target>Texte original</target>
       </trans-unit>
-      <trans-unit id="1">
-        <source>Dharma Sangha does not often use the pronoun "I" in speeches, it is added to make translation easier to understand. The use of "I" is in fact rare. First person verbal indications (-chhu) are more common than the personal pronoun "I" (ma, though not to be confused with the same word, which is the post-position for "in" or "at", such as "tyo samay ma" – at that time) and sometimes the word "my" (mero). Most common is the use of "one's own" (aphno).</source>
-        <target></target>
+      
+      <trans-unit id="1">	  
+        <source>Dharma Sangha does not often use the pronoun "I" in speeches, it is added to make translation easier to understand. The use of "I" is in fact rare. First person verbal indications (-chhu) are more common than the personal pronoun "I" (ma, though not to be confused with the same word, which is the post-position for "in" or "at", such as "tyo samay ma" – at that time) and sometimes the word "my" (mero). Most common is the use of "one's own" (aphno).</source>		
+        <target>Dharma Sangha n'utilise pas souvent le pronom "Je" dans ses discours, il est ajouté ici pour rendre la traduction plus facile à comprendre. La conjugaison à la première personne (-chhu) est plus utilisée que le pronom personnel "Je" (ma, mais à ne pas confondre avec le même mot, qui est un postfixe pour "à" ou "dans", comme dans "tyo samay ma") et parfois le mot "mon" (mero). Le plus souvent il utilise "sa propre ..." (aphno).</target>		
       </trans-unit>
 
 <!-- teachingsSuccess -->
 	  <trans-unit id="1">
         <source>Dictionary</source>
-        <target></target>
+        <target>Dictionnaire</target>
       </trans-unit>	  
 
 	 <trans-unit id="1">
         <source>by Andy Good/LTJ</source>
-        <target></target>
+        <target>de Andy Good/LTJ</target>
       </trans-unit>
 
 <!-- feedSuccess -->

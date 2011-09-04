@@ -1,0 +1,176 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+<!--questions -->
+
+      <trans-unit id="1">
+        <source>Where is Dharma Sangha now?</source>
+        <target>Ou se trouve Dharma Sangha en ce moment ?</target>
+      </trans-unit>
+  
+      <trans-unit id="1">
+        <source>Why is he meditating? What does he want to achieve?</source>
+        <target>Pourquoi médite-t-il ? Que veut-il atteindre ?</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Is Dharma Sangha already enlightened?</source>
+        <target>Dharma Sangha a-t-il déjà atteint l'illumination ?</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Has he already become a Buddha?</source>
+        <target>Est-il déjà devenu un Bouddha ?</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Is his teaching based on Buddhism or any other religions like Hinduism?</source>
+        <target>Son enseignement est-il basé sur le Bouddhisme ou sur d'autres religions comme l'Hindouisme ?</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>How can I receive blessing from Dharma Sangha?</source>
+        <target>Comment puis-je recevoir une bénédiction de Dharma Sangha ?</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>How to reach Ratanpur and Terthup?</source>
+        <target>Comment se rendre à Ratanpur ou Terthup ?</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>What does Jyampa, Ginphen, Maitri, Maitreya and Metta mean?</source>
+        <target>Que signifie Jyampa, Ginphen, Maitri, Maitreya et Metta ?</target>
+      </trans-unit>
+      
+<!--
+      <trans-unit id="1">
+        <source>I am going to Halkhoriya Jungle. I would like to bring some gifts, what is the best choice?</source>
+        <target></target>
+      </trans-unit>
+ -->     
+      <trans-unit id="1">
+        <source>How can I get to Halkhoriya Jungle?</source>
+        <target>Comment se rendre à la jungle d'Halkhoriya ?</target>
+      </trans-unit>
+
+
+<!--answers-->
+
+      <trans-unit id="1">
+        <source>He is meditating in Halkhoriya Jungle, Nepal's Bara District.</source>
+        <target>Il médite dans la jungle d'Halkhoriya, dans le district Népalais de Bara.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha wants to liberate the whole world by spreading Dharma and insight he’ve gained through his meditation.</source>
+        <target>Dharma Sangha veut libérer le monde entier en répendant le Dharma et la perception intérieur qu'il a acquit par la méditation.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Yes, he is already enlightened. The first stages of enlightenment occurred in his room at home.</source>
+        <target>Oui, il a déjà atteint l'illumination. Le premier stade d'illumination est survenu dans sa chambre à son domicile.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Dharma Sangha can’t tell it now. Time will reveal.</source>
+        <target>Dharma Sangha ne peut le dire maintenant. Cela se fera avec le temps.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>It is actually called Bodhi Shravan Dharma, but it includes all religions, no one is excluded. Dharma Sangha will be moving forward by including all existing religions of the world.</source>
+        <target>Cela se nomme Bodhi Shravan Dharma, mais cela inclut toutes les religions, aucune n'est exlue. Dharma Sangua souhaite inclure prochainement toutes les religions du monde existant à ce jour.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Please go to</source>
+        <target>Veuillez vous rendre à</target>
+      </trans-unit>
+      
+<!--      
+      <trans-unit id="1">
+        <source>Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. If you still wish to contribute somehow, below is a list of small practical things, which are needed regularly in the jungle, and are of great value here. So if you really want to take something from your country or buy it in Kathmandu before you come, you can make things smooth at the site by bringing the following:</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Scissors.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Kitchenware (bigger pots, which bear direct fire, cutting knives, any kitchen tools, not electrical, as there is no much electricity on the site, bigger plastic buckets and storing boxes to keep food safe from monkey-robbers, etc.)</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Pens and copybooks.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>CANDLES – are a big necessity here (not perfumed ones).</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>If you have a give-away sleeping bag or blankets, it is always good for someone or guests.</source>
+        <target></target>
+      </trans-unit>    
+      
+      <trans-unit id="1">
+        <source>Flashlights.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Sealed medicine with English leaflets (especially for cold-related illnesses, cough, disinfectant preparations for wounds, bands and first aid stuff).</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Lighters.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>100% natural material clothes or mats for sitting on the ground.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>If anyone has a notebook or laptop, which he or she does not need, and which has a long-lasting battery, it would be also appreciated by the young monks, who are helping Khenpo to write and translate the texts of Dharma Sangha prayers and teachings, etc.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Soap, shampoo, laundry soap.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Mosquito nets and natural sprays.</source>
+        <target></target>
+      </trans-unit>
+--> 
+      <trans-unit id="1">
+        <source>The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkhoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.</source>
+        <target>Le plus pratique pour les étrangers est d'atterrir à Katmandu. De Katmandu il y a 6 heures de route jusqu'au pont de Parsa, si vous pouvez prendre un bus ou un véhicule privé. Du pont de Parsa jusqu'à la jungle de Halkhoriya (environ 6-7 km) vous pouvez prendre un tracteur appartenant au Bodhi Shrawan Dharma Sangha, ou un 4x4. La route est un lit de rivière à sec difficile et cahoteuse.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Gompa, Ratanpur</source>
+        <target>Gompa, Ratanpur</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Jyampa, Ginphen, Maitri, Maitreya and Metta mean "loving kindness".</source>
+        <target>Jyampa, Ginphen, Maitri, Maitreya et Metta signifie "amour bienveillant".</target>
+      </trans-unit>
+      
+<!-- утф -->
+    </body>
+  </file>
+</xliff>
