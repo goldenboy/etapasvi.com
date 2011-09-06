@@ -364,6 +364,27 @@ class UserPeer extends BaseUserPeer
 		return $url;
 	}
 	
+	/**
+	 * Получение доменного имени веба
+	 *
+	 * @param unknown_type $culture
+	 * @return unknown
+	 */
+	public static function getWebDomain($web, $mobile = false)
+	{
+		$web = (int)$web;
+		if ($web == 0) {
+			return '';
+		}
+		$web_domain = 'web' . $web . '.';
+		if ($mobile) {
+			$web_domain .= sfConfig::get('app_domain_name_mobile');
+		} else {
+		    $web_domain .= sfConfig::get('app_domain_name_full');
+		}
+		return $web_domain;
+	}
+	
 //	/**
 //	 * Проверка и авторизация пользователя
 //	 * Не делаем static, чтобы можно было устанавливать куки

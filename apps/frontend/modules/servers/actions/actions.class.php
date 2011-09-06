@@ -14,7 +14,7 @@ class serversActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
     $this->server_list = TextPeer::getGoogleDocAsArray( 
-      'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdGV2QUJlMVQ2RG4yRzJ5NEZjOHZNdlE&single=true&gid=0&output=html' 
+      TextPeer::GOOGLE_DOC_SERVERS 
     );
   }
   

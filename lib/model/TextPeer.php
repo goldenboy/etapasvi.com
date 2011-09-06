@@ -4,6 +4,9 @@ class TextPeer extends BaseTextPeer
 {
 	
   const LINK_MAX_LENGTH = 70;
+  
+  // Google Docs
+  const GOOGLE_DOC_SERVERS = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdGV2QUJlMVQ2RG4yRzJ5NEZjOHZNdlE&single=true&gid=0&output=html';
 
   public static function urlTranslit($text, $culture = '')
   {
