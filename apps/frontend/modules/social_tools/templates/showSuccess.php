@@ -18,14 +18,16 @@
     <a href="http://kiwi6.com/users/show/etapasvi" target="_blank" title="<?php echo __('Kiwi6') ?>" class="social_kiwi6"><span><?php echo __('Kiwi6') ?></span></a>
     <a href="http://twitter.com/etapasvi" target="_blank" title="<?php echo __('Twitter') ?>" class="social_twitter"><span><?php echo __('Twitter') ?></span></a>
     <br/>
-    <a href="http://etapasvi.livejournal.com/" target="_blank" title="<?php echo __('Live Journal') ?>" class="social_livejournal"><span><?php echo __('Live Journal') ?></span></a>
+
     
     <?php if ($sf_user->getCulture() == 'ru'): ?>        
          <a href="http://vaikuntha.ru/blog/dharmas/" target="_blank" title="<?php echo __('Вайкунтха') ?>" class="social_vaikuntha"><span><?php echo __('Вайкунтха') ?></span></a>       
          <a href="http://vkontakte.ru/etapasvi" target="_blank" title="<?php echo __('ВКонтакте') ?>" class="social_vkontakte"><span><?php echo __('ВКонтакте') ?></span></a> 
     <?php else: ?>        
-        <a href="http://www.facebook.com/group.php?gid=113379818705184" target="_blank" title="<?php echo __('Facebook') ?>" class="social_facebook"><span><?php echo __('Facebook') ?></span></a>    
-    <?php endif ?>       
+        <a href="http://etapasvi.livejournal.com/" target="_blank" title="<?php echo __('Live Journal') ?>" class="social_livejournal"><span><?php echo __('Live Journal') ?></span></a>
+    <?php endif ?>
+
+    <a href="http://www.facebook.com/group.php?gid=113379818705184" target="_blank" title="<?php echo __('Facebook') ?>" class="social_facebook"><span><?php echo __('Facebook') ?></span></a> 
 
     <?php if ($sf_user->getCulture() == 'hu'): ?>
         <a href="http://groups.google.com/group/buddhafiu/" target="_blank" title="<?php echo __('Google') ?>" class="social_google"><span><?php echo __('Google') ?></span></a>
