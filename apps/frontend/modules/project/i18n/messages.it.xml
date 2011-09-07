@@ -31,7 +31,7 @@
       
       <trans-unit id="1">
         <source>Bank account (Nepal)</source>
-        <target>Conto corrente (Непал)</target>
+        <target>Conto corrente (Nepal)</target>
       </trans-unit>        
 
       <trans-unit id="1">
@@ -64,6 +64,7 @@
         <target>Donazioni ricevute</target>
       </trans-unit>
 
+<!-- СѓС‚С„ -->
     </body>
   </file>
 </xliff>
