@@ -269,6 +269,7 @@ code {
 #header #bubble_title {
     background:url("../i/interface_sprite.jpg") no-repeat scroll -697px -184px transparent;
     color:#c5c3d3;
+    display:block;
     float:right;
     font:bold 8pt/23px georgia;
     margin-top:73px;
@@ -385,22 +386,24 @@ p.p2{
     }
 /* IE 7 */
 *:first-child+html #footer {
-    margin:20px 0 40px;
+    /*margin:20px 0 40px;*/
+    margin:0;
+    }
+#f_line {
+    border-bottom: 1px solid #ADACBD;
+    height: 1px;
+    margin-bottom: 7px;
+    padding-bottom: 3px;
+    width: 100%;
     }
 #share {
-    border-bottom:1px solid #adacbd;
-    margin-bottom:7px;
-    width:100%;
+    margin-top:30px;
     }
-.share_item {
-    padding:0 0 9px;
+#share .s_item {
+    margin: 9px 0;
     }
-.share_item_facebook {
-    border: medium none;
-    height: 21px;
-    margin: 0 -49px 0 0;
-    overflow: hidden;
-    width: 143px;
+.twitter-share-button {
+    display: block;
     }
 /* IE 7 */
 *:first-child+html .share_item_facebook {

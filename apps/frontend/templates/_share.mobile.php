@@ -14,11 +14,14 @@
             <script type="text/javascript">
             VK.Widgets.Like("vk_like", {type: "mini"});
             </script>   
-        </div>   
+        </div>
+        <?php /*
         <div class="share_item">
             <a target="_blank" class="mrc__plugin_like_button" href="http://connect.mail.ru/share" rel="{'type' : 'button', 'width' : '108'}">Нравится</a><script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="UTF-8"></script>
         </div>
+        */ ?>
     <?php else: ?>
+    <?php /*
         <div class="share_item">
             <script type="text/javascript">
             (function() {
@@ -31,6 +34,7 @@
             </script>
             <a class="DiggThisButton DiggCompact"></a>
         </div>
+        */ ?>
     <?php endif ?>
     <div class="share_item">     
         <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>

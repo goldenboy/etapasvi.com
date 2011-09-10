@@ -21,7 +21,7 @@
 <div id="wrapper">
 
 <div id="header">
-	<a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" class="no_decor"><div id="bubble_title">Tapasvi.<span>com</span></div></a>
+	<a href="<?php echo url_for('@main', true); ?>" title="<?php echo __('Home') ?>" class="no_decor"><i id="bubble_title">Tapasvi.<span>com</span></i></a>
 </div>
 
 <div id="content_wrapper">    
@@ -32,14 +32,15 @@
         <?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	
     </div>
 	<div id="footer">    
-        <?php include_partial('global/share'); ?>
+        <?php /*include_partial('global/share');*/ ?>
+        <div id="f_line"></div>
         <?php echo __('Website is developed and supported on a voluntary basis.') ?><br/><?php echo __('If you can help in any way – email at') ?> <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a>
 		<br/><br/><?php echo __('Copyright') ?> &copy; 2009-<?php echo date("Y"); ?>, www.eTapasvi.com
 		<br/><?php echo __('All Rights Reserved') ?>.		        
         <?php $mobile_url = UserPeer::switchUrlMobile(sfContext::getInstance()->getRequest()->getUri());?>                
         <div id="m_link">
             <br/>
-            <a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><img src="http://qrcode.kaywa.com/img.php?s=3&d=<?php echo urlencode($mobile_url); ?>" alt="<?php echo __('Mobile') ?>"/></a>
+            <a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><img src="http://qrcode.kaywa.com/img.php?s=3&amp;d=<?php echo urlencode($mobile_url); ?>" alt="<?php echo __('Mobile') ?>"/></a>
             <br/><a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><?php echo __('Mobile') ?></a>
         </div>
 	</div>
@@ -89,7 +90,7 @@
 		$i = 0;
 	?>
 
-	<span class="lang_name lang_selector b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><img src="/i/fg.png"/ alt="<?php echo UserPeer::getCultureIso( $user_culture );?>"></span> 
+	<span class="lang_name lang_selector b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><img src="/i/fg.png" alt="<?php echo UserPeer::getCultureIso( $user_culture );?>" /></span> 
 	<span class="slide_arrow lang_selector">▼</span>
     <?php /* id используется в /lib/symfony/exception/sfError404Exception.class.php */ ?>
 	<div id="lang_list" class="box">
