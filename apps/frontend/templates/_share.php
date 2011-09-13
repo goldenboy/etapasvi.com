@@ -71,7 +71,14 @@
     <iframe src="http://www.facebook.com/plugins/like.php?app_id=242428519102205&amp;href=<?php echo urlencode($uri); ?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=trebuchet+ms&amp;height=21" scrolling="no" frameborder="0" allowTransparency="true" class="share_item_facebook"></iframe>
 */ ?>
 <div class="s_item">
-    <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=242428519102205&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" show_faces="false"></fb:like>
+    <div id="fb-root"></div>
+    <script>(function(d){
+      var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+      js = d.createElement('script'); js.id = id; js.async = true;
+      js.src = "//connect.facebook.net/en_US/all.js#appId=242428519102205&xfbml=1";
+      d.getElementsByTagName('head')[0].appendChild(js);
+    }(document));</script>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
 </div>
     
 <?php /*

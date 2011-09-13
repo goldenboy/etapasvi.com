@@ -402,6 +402,9 @@ p.p2{
 #share .s_item {
     margin: 9px 0;
     }
+#fb-root {
+    display: none;
+    }
 .twitter-share-button {
     display: block;
     }
