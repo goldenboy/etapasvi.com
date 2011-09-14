@@ -75,6 +75,3 @@
 		<li><a href="<?php echo url_for('@idea_archive', true); ?>" title="<?php echo __('Best Ideas Archive') ?>" id="mi_archive"><?php echo __('Archive') ?></a></li>
 	</ul>
 */ ?>
-
-
-<?php include_partial('global/share'); ?>
