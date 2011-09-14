@@ -26,7 +26,7 @@
       
       <trans-unit id="1">
         <source>Owner must be able to change Nginx configuration</source>
-        <target>Владелец должен иметь возможность измененять конфигурацию Nginx</target>
+        <target>Владелец должен иметь возможность изменять конфигурацию Nginx</target>
       </trans-unit>
       
       <trans-unit id="1">
