@@ -62,6 +62,10 @@
         <source>or</source>
         <target>или</target>
       </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe by email to new comments on website</source>
+        <target>Получать уведомления о новых комментариях на сайте по e-mail</target>
+      </trans-unit>
 
 <!-- showSuccess -->
       <trans-unit id="1">

@@ -62,6 +62,10 @@
         <source>or</source>
         <target>nebo</target>
       </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe by email to new comments on website</source>
+        <target></target>
+      </trans-unit>
 
 <!-- showSuccess -->
       <trans-unit id="1">
