@@ -35,9 +35,10 @@ Email: <input type="text" style="width:140px" name="email"/> &nbsp;<input type="
 <hr class="dashed"/>
 <h2><?php echo __('Comments') ?></h2>
 <p>
-<?php echo __('Subscribe by email to new comments on website') ?>:
+<?php echo __('Subscribe to new comments on website by email') ?>:
 </p>
 <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=etapasvi/comments', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<a href="http://feeds.feedburner.com/etapasvi/comments" class="right"><?php echo __('view all') ?></a>
 <input type="text" style="width:140px" name="email"/> &nbsp;<input type="hidden" value="etapasvi/comments" name="uri"/><input type="hidden" name="loc" value="<?php echo UserPeer::getCultureFeedburderLoc(); ?>"/><input type="submit" class="input_button" value="<?php echo __('Subscribe') ?>" />
 </form>
 <br/>

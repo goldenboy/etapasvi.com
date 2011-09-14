@@ -63,7 +63,7 @@
         <target>или</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Subscribe by email to new comments on website</source>
+        <source>Subscribe to new comments on website by email</source>
         <target>Получать уведомления о новых комментариях на сайте по e-mail</target>
       </trans-unit>
 

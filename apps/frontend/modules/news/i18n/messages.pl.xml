@@ -63,7 +63,7 @@
         <target>lub</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Subscribe by email to new comments on website</source>
+        <source>Subscribe to new comments on website by email</source>
         <target></target>
       </trans-unit>
 
