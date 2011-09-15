@@ -24,4 +24,19 @@ class textComponents extends sfComponents
     $c->add(AudioPeer::REMOTE, '', Criteria::NOT_EQUAL);
   	$this->audio_list = AudioPeer::doSelectWithI18n($c);
   }
+  
+  /**
+   * Предолжить перевод
+   *
+   * @param sfWebRequest $request
+   */
+  public function executeOffertranslation(sfWebRequest $request)
+  {
+    $sf_context     = sfContext::getInstance();
+    
+  	$this->module    =  $sf_context->getModuleName();
+  	$this->action    =  $sf_context->getActionName();
+  	$this->id        =  $request->getParameter('id');
+  	$this->uri       =  $sf_context->getRequest()->getUri();;
+  }
 }

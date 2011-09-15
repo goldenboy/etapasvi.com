@@ -209,7 +209,7 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Translated by</source>
-        <target>Перевод</target>
+        <target>Автор перевода</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Download</source>
