@@ -110,11 +110,11 @@ all:
 #      use_flash:       true
 #      default_culture: %SF_DEFAULT_CULTURE%
 #
-  storage:
-    class: sfSessionStorage
-    param:
-      session_name: RxDJ0i6b1
-      auto_start: false
+#  storage:
+#    class: sfSessionStorage
+#    param:
+#      session_name: RxDJ0i6b1
+#      auto_start: false
 
 #  view_cache:
 #    class: sfEAcceleratorCache
@@ -124,13 +124,13 @@ all:
 #      lifetime:                  86400
 #      prefix:                    %SF_APP_DIR%/%sf_environment%/template
 
-  view_cache:
-    class: sfFileCache
-    param:
-      automatic_cleaning_factor: 0
-      cache_dir:                 %SF_TEMPLATE_CACHE_DIR%
-      lifetime:                  86400
-      prefix:                    %SF_APP_DIR%/%sf_environment%/template
+#  view_cache:
+#    class: sfFileCache
+#    param:
+#      automatic_cleaning_factor: 0
+#      cache_dir:                 %SF_TEMPLATE_CACHE_DIR%
+#      lifetime:                  86400
+#      prefix:                    %SF_APP_DIR%/%sf_environment%/template
 #
 #  i18n:
 #    class: sfI18N
