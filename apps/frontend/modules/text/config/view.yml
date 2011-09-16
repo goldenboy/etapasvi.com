@@ -3,3 +3,6 @@ jsSuccess:
   
 disqusembedSuccess:
   has_layout:     false
+
+offertranslationfieldsSuccess:
+  has_layout:     false

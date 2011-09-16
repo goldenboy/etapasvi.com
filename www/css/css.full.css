@@ -60,7 +60,7 @@ h2.like_h1 {
     font-family:georgia;
     font-style:normal;
     font-size:16px;
-    margin:20px auto 23px;
+    margin:20px auto 15px;
     color:#8e8e9c;
     font-weight:bold;
     padding:0;
@@ -242,6 +242,7 @@ table {
     }
 .form_table  td {
 	/*border: 1px solid #ADACBD;*/
+    text-align: left;
 	padding:3px;
 	}
 code {
@@ -716,6 +717,9 @@ input[type="radio"] {
 	}
 .alert {
 	color: #df3f3f;
+	}
+.success {
+	color: #32CD32;
 	}
 .field_name {
 	/*background-color:#F6F6F6;*/
@@ -1477,3 +1481,28 @@ label.error {
 .b-fg_ZA img { top: -2259px; }
 .b-fg_ZM img { top: -2268px; }
 .b-fg_ZW img { top: -2277px; }
+
+/* offer translation */
+#offer_tr_ctr {
+    text-align: center;
+    margin-bottom: 7px;
+    }
+#offer_tr,
+#offer_tr_success,
+#offer_tr_iframe_id,
+#offer_tr_iframe,
+#offer_tr_loader {
+    display: none;
+    }
+#offer_tr_loader {
+    text-align:center;
+    }
+#offer_tr  {
+    margin-bottom: 7px;
+    }
+#offer_tr  textarea {
+    width: 96%;
+    }
+#offer_tr_trigger {
+	font-size:9.5px;
+    }

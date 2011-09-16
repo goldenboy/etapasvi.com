@@ -241,6 +241,11 @@ servers:
   url:   /:sf_culture/servers
   param: { module: servers, action: show }
   requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+
+offer_translation:
+  url:   /:sf_culture/offer_translation
+  param: { module: text, action: offertranslationfields }
+  requirements: { sf_culture: (?:en|ru|hu|cs|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 # Ошибка 404
 error404:

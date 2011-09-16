@@ -269,6 +269,52 @@
         <target>Страница не найдена или не переведена</target>
       </trans-unit>
 
+<!--  offer translation -->
+      <trans-unit id="1">
+        <source>offer translation</source>
+        <target>предложить перевод</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Error occured while loading form. Please, try again.</source>
+        <target>Произошла ошибка при загрузке формы. Пожалуйста, повторите попытку.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Thanks! Your translation has been sent.</source>
+        <target>Спасибо! Ваш перевод отправлен.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Use the form below to translate into any language information presented on this page. If you want to help with translation on a regular basis, please, email at</source>
+        <target>Воспользуйтесь формой ниже, чтобы перевести на любой язык информацию, представленную на этой странице. Если вы хотите оказывать помощь с переводом на регулярной основе, пожалуйста, напишите на</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Translation</source>
+        <target>Перевод</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Language</source>
+        <target>Язык</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>optional</source>
+        <target>не обязательное</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Send</source>
+        <target>Отправить</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Comment</source>
+        <target>Комментарий</target>
+      </trans-unit> 
+
 <!-- утф -->
     </body>
   </file>

@@ -259,10 +259,56 @@
         <target></target>
       </trans-unit>
 
+<!--  offer translation -->
+      <trans-unit id="1">
+        <source>offer translation</source>
+        <target></target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Error occured while loading form. Please, try again.</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Thanks! Your translation has been sent.</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Use the form below to translate into any language information presented on this page. If you want to help with translation on a regular basis, please, email at</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Translation</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Language</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>optional</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Send</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Comment</source>
+        <target></target>
+      </trans-unit> 
+
 <!-- 404 -->
       <trans-unit id="1">
         <source>Page Not Found or Not Translated</source>
-        <target>Tato stránka ještě není přeložena</target>
+        <target></target>
       </trans-unit>
 
     </body>

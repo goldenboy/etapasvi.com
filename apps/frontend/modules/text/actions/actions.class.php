@@ -10,6 +10,11 @@
 class textActions extends sfActions
 {
  
+  /**
+   * JavaSctipt с контентом
+   *
+   * @param sfWebRequest $request
+   */
   public function executeJs(sfWebRequest $request)
   {
   	$this->getResponse()->setHttpHeader('Content-type', 'application/javascript; charset=utf-8');
@@ -26,6 +31,11 @@ class textActions extends sfActions
   	$this->audio_list = AudioPeer::doSelectWithI18n($c);
   }    
   
+  /**
+   * JS Дискуса
+   *
+   * @param sfWebRequest $request
+   */
   public function executeDisqusembed(sfWebRequest $request)
   {
   	$this->getResponse()->setHttpHeader('Content-type', 'application/javascript; charset=utf-8');
@@ -48,6 +58,16 @@ class textActions extends sfActions
     	));
 
     }
+  }
+  
+  /**
+   * Поля для формы Предложить перевод
+   *
+   * @param sfWebRequest $request
+   */
+  public function executeOffertranslationfields(sfWebRequest $request)
+  {
+      
   }
   
 }

@@ -5,7 +5,7 @@ class UserPeer extends BaseUserPeer
 	// языки
 	static protected $cultures = array( 
 	
-		'en' => array('name'    			 => 'en - English',
+		'en' => array('name'    			 => 'English',
 		              'iso'     			 => 'en',
 		              //http://us2.admin.mailchimp.com/lists/settings/?id=428077
 		              //'mail_id' 			 => '39719cc12b',
@@ -14,31 +14,31 @@ class UserPeer extends BaseUserPeer
 		              // язык интерфейса FeedBurner
 		              'feedburner_loc' 		 => 'en_US'
 		),		              
-		'ru' => array('name'    			 => 'ru - Русский',
+		'ru' => array('name'    			 => 'Русский',
 		              'iso'     			 => 'ru',		              
 		              //'mail_id' 			 => '25b1a7f858',
 		              'comments_category_id' => 686465,
 		              'feedburner_loc' 		 => 'ru_RU'
 		),
-		/*'cs' => array('name'    			 => 'cz - Čeština',
+		/*'cs' => array('name'    			 => 'Čeština',
 		              'iso'     			 => 'cz',
 		              //'mail_id' 			 => '876c7e23a7',
 		              'comments_category_id' => 686584,
 		              'feedburner_loc' 		 => ''
 		),
-		'hu' => array('name'    			 => 'hu - Magyar',
+		'hu' => array('name'    			 => 'Magyar',
 		              'iso'     			 => 'hu',
 		              //'mail_id' 			 => 'e8a86fd73d',
 		              'comments_category_id' => 686585,
 		              'feedburner_loc' 		 => ''
 		),*/
-		'pl' => array('name'    			 => 'pl - Polski',
+		'pl' => array('name'    			 => 'Polski',
 		              'iso'     			 => 'pl',
 		              //'mail_id' 			 => '99862a8230',
 		              'comments_category_id' => 686580,
 		              'feedburner_loc' 		 => ''
 		),
-		'fr' => array('name'    			 => 'fr - Français',
+		'fr' => array('name'    			 => 'Français',
 		              'iso'     			 => 'fr',
 		              //'mail_id' 			 => '430d7d6d8b',
 		              'comments_category_id' => 686581,
@@ -46,33 +46,33 @@ class UserPeer extends BaseUserPeer
 		),
 		// Mandarin Chinese (Simplified script) - упрошённый китайский
 		'zh_CN'  => array(
-					  'name'          		 => 'zh-cn - 简体中文',
+					  'name'          		 => '简体中文',
 		              'iso'           		 => 'zh-cn',
 		              'hieroglyphic'  		 => true,
 		              //'mail_id' 	  		 => '33bb475372',
 		              'comments_category_id' => 686582,
 		              'feedburner_loc' 		 => ''
 		),
-		'vi' => array('name'    			 => 'vn - Tiếng Việt',
+		'vi' => array('name'    			 => 'Tiếng Việt',
 		              'iso'     			 => 'vn',
 		              //'mail_id' 			 => '68f2a2996d',
 		              'comments_category_id' => 686583,
 		              'feedburner_loc' 		 => ''
 		),       
-		'ja' => array('name'    			 => 'jp - 日本語',
-		              'iso'     			 => 'jp',
+		'ja' => array('name'    			 => '日本語',
+		              'iso'     			 => 'ja',
 		              'hieroglyphic'  		 => true,
 		              //'mail_id' 			 => '77a5eb7cd2',
 		              'comments_category_id' => 686578,
 		              'feedburner_loc' 		 => 'ja_JP'
 		),
-		'es' => array('name'    			 => 'es - Español',
+		'es' => array('name'    			 => 'Español',
 		              'iso'     			 => 'es',
 		              //'mail_id' 			 => '6f9b50c196',
 		              'comments_category_id' => 686579,
 		              'feedburner_loc' 		 => 'es_ES'
 		),
-		'it' => array('name'    			 => 'it - Italiano',
+		'it' => array('name'    			 => 'Italiano',
 		              'iso'     			 => 'it',
 		              //'mail_id' 			 => 'ddd87d0746',
 		              'comments_category_id' => 686577,
@@ -87,7 +87,7 @@ class UserPeer extends BaseUserPeer
 
 		'uk' => array('name'    => 'ua - Українська',
 		              'iso'     => 'ua'),*/
-		'et' => array('name'    			 => 'ee - Eesti',
+		'et' => array('name'    			 => 'Eesti',
 		              'iso'     			 => 'ee',
 		              'comments_category_id' => 997486,
 		              'feedburner_loc' 		 => ''
@@ -95,7 +95,9 @@ class UserPeer extends BaseUserPeer
 	);
 	
 	 
-	// список языков по http://msdn.microsoft.com/en-us/library/ms533052%28v=vs.85%29.aspx
+	// список языков по 
+	// http://msdn.microsoft.com/en-us/library/ms533052%28v=vs.85%29.aspx
+	// http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	// и имеющихся в симфони
 	// в симфони нет:
     //    Array
@@ -113,128 +115,495 @@ class UserPeer extends BaseUserPeer
     //        [10] => ve
     //        [11] => xh
     //    )
-    
+    /*
+      '' => array('name'     => '',
+                  'en'       => '',
+                  'iso'      => ''
+      ),
+    */
     static public $all_cultures = array (
-      'af' => 'Afrikaans',
-      'ar_SA' => 'Arabic (Saudi Arabia)',
-      'ar_EG' => 'Arabic (Egypt)',
-      'ar_DZ' => 'Arabic (Algeria)',
-      'ar_TN' => 'Arabic (Tunisia)',
-      'ar_YE' => 'Arabic (Yemen)',
-      'ar_JO' => 'Arabic (Jordan)',
-      'ar_KW' => 'Arabic (Kuwait)',
-      'ar_BH' => 'Arabic (Bahrain)',
-      'eu' => 'Basque',
-      'be' => 'Belarusian',
-      'zh_TW' => 'Chinese (Taiwan)',
-      'zh_HK' => 'Chinese (Hong Kong SAR)',
-      'hr' => 'Croatian',
-      'da' => 'Danish',
-      'nl_BE' => 'Dutch (Belgium)',
-      'en_US' => 'English (United States)',
-      'en_AU' => 'English (Australia)',
-      'en_NZ' => 'English (New Zealand)',
-      'en_ZA' => 'English (South Africa)',
-      'en' => 'English',
-      'en_TT' => 'English (Trinidad)',
-      'fo' => 'Faeroese',
-      'fi' => 'Finnish',
-      'fr_BE' => 'French (Belgium)',
-      'fr_CH' => 'French (Switzerland)',
-      'gd' => 'Gaelic (Scotland)',
-      'de' => 'German (Standard)',
-      'de_AT' => 'German (Austria)',
-      'de_LI' => 'German (Liechtenstein)',
-      'he' => 'Hebrew',
-      'hu' => 'Hungarian',
-      'id' => 'Indonesian',
-      'it_CH' => 'Italian (Switzerland)',
-      'ko' => 'Korean (Johab)',
-      'lv' => 'Latvian',
-      'mk' => 'Macedonian (FYROM)',
-      'mt' => 'Maltese',
-      'no' => 'Norwegian (Bokmal)',
-      'pt_BR' => 'Portuguese (Brazil)',
-      'rm' => 'Rhaeto-Romanic',
-      'ro_MO' => 'Romanian (Republic of Moldova)',
-      'ru_MO' => 'Russian (Republic of Moldova)',
-      'sr' => 'Serbian (Latin)',
-      'sk' => 'Slovak',
-      'sb' => 'Sorbian',
-      'es_MX' => 'Spanish (Mexico)',
-      'es_CR' => 'Spanish (Costa Rica)',
-      'es_DO' => 'Spanish (Dominican Republic)',
-      'es_CO' => 'Spanish (Colombia)',
-      'es_AR' => 'Spanish (Argentina)',
-      'es_CL' => 'Spanish (Chile)',
-      'es_PY' => 'Spanish (Paraguay)',
-      'es_SV' => 'Spanish (El Salvador)',
-      'es_NI' => 'Spanish (Nicaragua)',
-      'sx' => 'Sutu',
-      'sv_FI' => 'Swedish (Finland)',
-      'ts' => 'Tsonga',
-      'tr' => 'Turkish',
-      'ur' => 'Urdu',
-      'vi' => 'Vietnamese',
-      'ji' => 'Yiddish',
-      'sq' => 'Albanian',
-      'ar_IQ' => 'Arabic (Iraq)',
-      'ar_LY' => 'Arabic (Libya)',
-      'ar_MA' => 'Arabic (Morocco)',
-      'ar_OM' => 'Arabic (Oman)',
-      'ar_SY' => 'Arabic (Syria)',
-      'ar_LB' => 'Arabic (Lebanon)',
-      'ar_AE' => 'Arabic (U.A.E.)',
-      'ar_QA' => 'Arabic (Qatar)',
-      'bg' => 'Bulgarian',
-      'ca' => 'Catalan',
-      'zh_CN' => 'Chinese (PRC)',
-      'zh_SG' => 'Chinese (Singapore)',
-      'cs' => 'Czech',
-      'nl' => 'Dutch (Standard)',
-      'en_GB' => 'English (United Kingdom)',
-      'en_CA' => 'English (Canada)',
-      'en_IE' => 'English (Ireland)',
-      'en_JM' => 'English (Jamaica)',
-      'en_BZ' => 'English (Belize)',
-      'et' => 'Estonian',
-      'fa' => 'Farsi',
-      'fr' => 'French (Standard)',
-      'fr_CA' => 'French (Canada)',
-      'fr_LU' => 'French (Luxembourg)',
-      'ga' => 'Irish',
-      'de_CH' => 'German (Switzerland)',
-      'de_LU' => 'German (Luxembourg)',
-      'el' => 'Greek',
-      'hi' => 'Hindi',
-      'is' => 'Icelandic',
-      'it' => 'Italian (Standard)',
-      'ja' => 'Japanese',
-      'lt' => 'Lithuanian',
-      'ms' => 'Malaysian',
-      'pl' => 'Polish',
-      'pt' => 'Portuguese (Portugal)',
-      'ro' => 'Romanian',
-      'ru' => 'Russian',
-      'sz' => 'Sami (Lappish)',
-      'sl' => 'Slovenian',
-      'es' => 'Spanish (Spain)',
-      'es_GT' => 'Spanish (Guatemala)',
-      'es_PA' => 'Spanish (Panama)',
-      'es_VE' => 'Spanish (Venezuela)',
-      'es_PE' => 'Spanish (Peru)',
-      'es_EC' => 'Spanish (Ecuador)',
-      'es_UY' => 'Spanish (Uruguay)',
-      'es_BO' => 'Spanish (Bolivia)',
-      'es_HN' => 'Spanish (Honduras)',
-      'es_PR' => 'Spanish (Puerto Rico)',
-      'sv' => 'Swedish',
-      'th' => 'Thai',
-      'tn' => 'Tswana',
-      'uk' => 'Ukrainian',
-      've' => 'Venda',
-      'xh' => 'Xhosa',
-      'zu' => 'Zulu'
+      'af' => array('name'     => 'Afrikaans',
+                    'en'       => 'Afrikaans',
+                    'iso'      => 'af'
+      ),
+      'sq' => array('name'     => 'Shqip',
+                    'en'       => 'Albanian',
+                    'iso'      => 'sq'
+      ),
+      'ar_IQ' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Iraq)',
+                       'iso'      => 'ar'
+      ),
+      'ar_LY' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Libya)',
+                       'iso'      => 'ar'
+      ),
+      'ar_MA' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Morocco)',
+                       'iso'      => 'ar'
+      ),
+      'ar_OM' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Oman)',
+                       'iso'      => 'ar'
+      ),
+      'ar_SY' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Syria)',
+                       'iso'      => 'ar'
+      ),
+      'ar_LB' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Lebanon)',
+                       'iso'      => 'ar'
+      ),
+      'ar_AE' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (U.A.E.)',
+                       'iso'      => 'ar'
+      ),
+      'ar_QA' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Qatar)',
+                       'iso'      => 'ar'
+      ),
+      'ar_SA' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Saudi Arabia)',
+                       'iso'      => 'ar'
+      ),
+      'ar_EG' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Egypt)',
+                       'iso'      => 'ar'
+      ),
+      'ar_DZ' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Algeria)',
+                       'iso'      => 'ar'
+      ),
+      'ar_TN' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Tunisia)',
+                       'iso'      => 'ar'
+      ),
+      'ar_YE' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Yemen)',
+                       'iso'      => 'ar'
+      ),
+      'ar_JO' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Jordan)',
+                       'iso'      => 'ar'
+      ),
+      'ar_KW' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Kuwait)',
+                       'iso'      => 'ar'
+      ),
+      'ar_BH' => array('name'     => 'العربية',
+                       'en'       => 'Arabic (Bahrain)',
+                       'iso'      => 'ar'
+      ),
+      'eu' => array('name'     => 'Euskara',
+                    'en'       => 'Basque',
+                    'iso'      => 'eu'
+      ),
+      'be' => array('name'     => 'Беларуская',
+                    'en'       => 'Belarusian',
+                    'iso'      => 'be'
+      ),      
+      'bg' => array('name'     => 'Български език',
+                    'en'       => 'Bulgarian',
+                    'iso'      => 'bg'
+      ),
+      'ca' => array('name'     => 'Català',
+                    'en'       => 'Catalan',
+                    'iso'      => 'ca'
+      ),
+      'zh_CN' => array('name'     => '简体中文',
+                       'en'       => 'Chinese (PRC)',
+                       'iso'      => 'zh'
+      ),
+      'zh_SG' => array('name'     => '简体中文',
+                       'en'       => 'Chinese (Singapore)',
+                       'iso'      => 'zh'
+      ),
+      'zh_TW' => array('name'     => '简体中文',
+                       'en'       => 'Chinese (Taiwan)',
+                       'iso'      => 'zh'
+      ),
+      'zh_HK' => array('name'     => '简体中文',
+                       'en'       => 'Chinese (Hong Kong SAR)',
+                       'iso'      => 'zh'
+      ),        
+      'hr' => array('name'     => 'Hrvatski',
+                    'en'       => 'Croatian',
+                    'iso'      => 'hr'
+      ),
+      'cs' => array('name'     => 'Čeština',
+                    'en'       => 'Czech',
+                    'iso'      => 'cs'
+      ),   
+      'da' => array('name'     => 'Dansk',
+                    'en'       => 'Danish',
+                    'iso'      => 'da'
+      ),
+      'nl' => array('name'     => 'Nederlands',
+                    'en'       => 'Dutch',
+                    'iso'      => 'nl'
+      ), 
+//      'nl_BE' => array('name'     => 'Nederlands',
+//                       'en'       => 'Dutch (Belgium)',
+//                       'iso'      => 'nl'
+//      ),
+//      'en_US' => array('name'     => 'English',
+//                       'en'       => 'English (United States)',
+//                       'iso'      => 'en'
+//      ),
+//      'en_AU' => array('name'     => '',
+//                  'en'       => 'English (Australia)',
+//                  'iso'      => ''
+//      ),
+//      'en_NZ' => array('name'     => '',
+//                  'en'       => 'English (New Zealand)',
+//                  'iso'      => ''
+//      ),
+//      'en_ZA' => array('name'     => '',
+//                  'en'       => 'English (South Africa)',
+//                  'iso'      => ''
+//      ),
+      'en' => array('name'     => 'English',
+                    'en'       => 'English',
+                    'iso'      => 'en'
+      ),
+//      'en_TT' => array('name'     => '',
+//                  'en'       => 'English (Trinidad)',
+//                  'iso'      => ''
+//      ),
+//      'en_GB' => array('name'     => '',
+//                  'en'       => 'English (United Kingdom)',
+//                  'iso'      => ''
+//      ),
+//      'en_CA' => array('name'     => '',
+//                  'en'       => 'English (Canada)',
+//                  'iso'      => ''
+//      ),
+//      'en_IE' => array('name'     => '',
+//                  'en'       => 'English (Ireland)',
+//                  'iso'      => ''
+//      ),
+//      'en_JM' => array('name'     => '',
+//                  'en'       => 'English (Jamaica)',
+//                  'iso'      => ''
+//      ),
+//      'en_BZ' => array('name'     => '',
+//                  'en'       => 'English (Belize)',
+//                  'iso'      => ''
+//      ),
+      'et' => array('name'     => 'Eesti',
+                    'en'       => 'Estonian',
+                    'iso'      => 'et'
+      ),
+      'fo' => array('name'     => 'Føroyskt',
+                    'en'       => 'Faeroese',
+                    'iso'      => 'fo'
+      ),
+      'fa' => array('name'     => 'فارسی',
+                    'en'       => 'Farsi',
+                    'iso'      => 'fa'
+      ),
+      'fi' => array('name'     => 'Suomi',
+                    'en'       => 'Finnish',
+                    'iso'      => 'fi'
+      ),
+      'fr' => array('name'     => 'Français',
+                    'en'       => 'French',
+                    'iso'      => 'fr'
+      ),
+//      'fr_CA' => array('name'     => '',
+//                       'en'       => 'French (Canada)',
+//                       'iso'      => ''
+//      ),
+//      'fr_LU' => array('name'     => '',
+//                  'en'       => 'French (Luxembourg)',
+//                  'iso'      => ''
+//      ),
+//      'fr_BE' => array('name'     => '',
+//                       'en'       => 'French (Belgium)',
+//                       'iso'      => ''
+//      ),
+//      'fr_CH' => array('name'     => '',
+//                  'en'       => 'French (Switzerland)',
+//                  'iso'      => ''
+//      ),
+      'gd' => array('name'     => 'Gàidhlig',
+                    'en'       => 'Gaelic (Scotland)',
+                    'iso'      => 'gd'
+      ),            
+      'de' => array('name'     => 'Deutsch',
+                    'en'       => 'German',
+                    'iso'      => 'de'
+      ),
+//      'de_CH' => array('name'     => '',
+//                  'en'       => 'German (Switzerland)',
+//                  'iso'      => ''
+//      ),
+//      'de_LU' => array('name'     => '',
+//                  'en'       => 'German (Luxembourg)',
+//                  'iso'      => ''
+//      ),
+//      'de_AT' => array('name'     => '',
+//                       'en'       => 'German (Austria)',
+//                       'iso'      => ''
+//      ),
+//      'de_LI' => array('name'     => '',
+//                  'en'       => 'German (Liechtenstein)',
+//                  'iso'      => ''
+//      ),
+      'el' => array('name'     => 'Ελληνικά',
+                    'en'       => 'Greek',
+                    'iso'      => 'el'
+      ),
+      'he' => array('name'     => 'עברית',
+                    'en'       => 'Hebrew',
+                    'iso'      => 'he'
+      ),
+      'hi' => array('name'     => 'हिन्दी',
+                    'en'       => 'Hindi',
+                    'iso'      => 'hi'
+      ),
+      'hu' => array('name'     => 'Magyar',
+                    'en'       => 'Hungarian',
+                    'iso'      => 'hu'
+      ),
+      'is' => array('name'     => 'Íslenska',
+                    'en'       => 'Icelandic',
+                    'iso'      => 'is'
+      ),
+      'id' => array('name'     => 'Bahasa Indonesia',
+                    'en'       => 'Indonesian',
+                    'iso'      => 'id'
+      ),
+      'ga' => array('name'     => 'Gaeilge',
+                    'en'       => 'Irish',
+                    'iso'      => 'ga'
+      ),
+      'it' => array('name'     => 'Italiano',
+                    'en'       => 'Italian',
+                    'iso'      => 'it'
+      ),
+//      'it_CH' => array('name'     => 'Italiano',
+//                       'en'       => 'Italian (Switzerland)',
+//                       'iso'      => 'it'
+//      ),
+      'ja' => array('name'     => '日本語',
+                    'en'       => 'Japanese',
+                    'iso'      => 'ja'
+      ),
+      'ko' => array('name'     => '한국어 (韓國語)',
+                    'en'       => 'Korean (Johab)',
+                    'iso'      => 'ko'
+      ),
+      'lv' => array('name'     => 'Latviešu valoda',
+                    'en'       => 'Latvian',
+                    'iso'      => 'lv'
+      ),
+      'lt' => array('name'     => 'Lietuvių kalba',
+                    'en'       => 'Lithuanian',
+                    'iso'      => 'lt'
+      ),
+      'mk' => array('name'     => 'Македонски јазик',
+                    'en'       => 'Macedonian (FYROM)',
+                    'iso'      => 'mk'
+      ),
+      'ms' => array('name'     => 'Bahasa Melayu, بهاس ملايو',
+                    'en'       => 'Malay',
+                    'iso'      => 'ms'
+      ),
+      'mt' => array('name'     => 'Malti',
+                    'en'       => 'Maltese',
+                    'iso'      => 'mt'
+      ),
+      'no' => array('name'     => 'Norsk bokmål',
+                    'en'       => 'Norwegian (Bokmal)',
+                    'iso'      => 'nb'
+      ),
+      'pl' => array('name'     => 'Polski',
+                    'en'       => 'Polish',
+                    'iso'      => 'pl'
+      ),
+      'pt' => array('name'     => 'Português',
+                    'en'       => 'Portuguese (Portugal)',
+                    'iso'      => 'pt'
+      ),
+//      'pt_BR' => array('name'     => 'Português',
+//                       'en'       => 'Portuguese (Brazil)',
+//                       'iso'      => 'pt'
+//      ),
+      'ro' => array('name'     => 'Română',
+                    'en'       => 'Romanian',
+                    'iso'      => 'ro'
+      ),
+//      'ro_MO' => array('name'     => 'Română',
+//                       'en'       => 'Romanian (Republic of Moldova)',
+//                       'iso'      => 'ro'
+//      ),
+      'rm' => array('name'     => 'Rumantsch grischun',
+                    'en'       => 'Romansh',
+                    'iso'      => 'rm'
+      ),
+      'ru' => array('name'     => 'Русский',
+                    'en'       => 'Russian',
+                    'iso'      => 'ru'
+      ),
+//      'ru_MO' => array('name'     => '',
+//                  'en'       => 'Russian (Republic of Moldova)',
+//                  'iso'      => ''
+//      ),
+     'sz' => array('name'     => 'Davvisámegiella',
+                    'en'       => 'Sami (Lappish)',
+                    'iso'      => 'se'
+      ),
+      'sr' => array('name'     => 'Српски језик',
+                    'en'       => 'Serbian (Latin)',
+                    'iso'      => 'sr'
+      ),
+      'sk' => array('name'     => 'Slovenčina',
+                    'en'       => 'Slovak',
+                    'iso'      => 'sk'
+      ),
+      'sl' => array('name'     => 'Slovenščina',
+                    'en'       => 'Slovenian',
+                    'iso'      => 'sl'
+      ),
+      'sb' => array('name'     => 'Serbsce',
+                    'en'       => 'Sorbian',
+                    'iso'      => 'sb' // не найдено
+      ),
+      'es' => array('name'     => 'Español',
+                    'en'       => 'Spanish (Spain)',
+                    'iso'      => 'es'
+      ),
+//      'es_GT' => array('name'     => '',
+//                  'en'       => 'Spanish (Guatemala)',
+//                  'iso'      => ''
+//      ),
+//      'es_PA' => array('name'     => '',
+//                  'en'       => 'Spanish (Panama)',
+//                  'iso'      => ''
+//      ),
+//      'es_VE' => array('name'     => '',
+//                  'en'       => 'Spanish (Venezuela)',
+//                  'iso'      => ''
+//      ),
+//      'es_PE' => array('name'     => '',
+//                  'en'       => 'Spanish (Peru)',
+//                  'iso'      => ''
+//      ),
+//      'es_EC' => array('name'     => '',
+//                  'en'       => 'Spanish (Ecuador)',
+//                  'iso'      => ''
+//      ),
+//      'es_UY' => array('name'     => '',
+//                  'en'       => 'Spanish (Uruguay)',
+//                  'iso'      => ''
+//      ),
+//      'es_BO' => array('name'     => '',
+//                  'en'       => 'Spanish (Bolivia)',
+//                  'iso'      => ''
+//      ),
+//      'es_HN' => array('name'     => '',
+//                  'en'       => 'Spanish (Honduras)',
+//                  'iso'      => ''
+//      ),
+//      'es_PR' => array('name'     => '',
+//                  'en'       => 'Spanish (Puerto Rico)',
+//                  'iso'      => ''
+//      ),
+//      'es_MX' => array('name'     => '',
+//                  'en'       => 'Spanish (Mexico)',
+//                  'iso'      => ''
+//      ),
+//      'es_CR' => array('name'     => '',
+//                  'en'       => 'Spanish (Costa Rica)',
+//                  'iso'      => ''
+//      ),
+//      'es_DO' => array('name'     => '',
+//                  'en'       => 'Spanish (Dominican Republic)',
+//                  'iso'      => ''
+//      ),
+//      'es_CO' => array('name'     => '',
+//                  'en'       => 'Spanish (Colombia)',
+//                  'iso'      => ''
+//      ),
+//      'es_AR' => array('name'     => '',
+//                  'en'       => 'Spanish (Argentina)',
+//                  'iso'      => ''
+//      ),
+//      'es_CL' => array('name'     => '',
+//                  'en'       => 'Spanish (Chile)',
+//                  'iso'      => ''
+//      ),
+//      'es_PY' => array('name'     => '',
+//                  'en'       => 'Spanish (Paraguay)',
+//                  'iso'      => ''
+//      ),
+//      'es_SV' => array('name'     => '',
+//                  'en'       => 'Spanish (El Salvador)',
+//                  'iso'      => ''
+//      ),
+//      'es_NI' => array('name'     => '',
+//                  'en'       => 'Spanish (Nicaragua)',
+//                  'iso'      => ''
+//      ),
+      'sv' => array('name'     => 'Svenska',
+                    'en'       => 'Swedish',
+                    'iso'      => 'sv'
+      ),
+
+      // неизвестный
+//      'sx' => array('name'     => '',
+//                  'en'       => 'Sutu',
+//                  'iso'      => ''
+//      ),
+//      'sv_FI' => array('name'     => '',
+//                  'en'       => 'Swedish (Finland)',
+//                  'iso'      => ''
+//      ),
+      'th' => array('name'     => 'ไทย',
+                    'en'       => 'Thai',
+                    'iso'      => 'th'
+      ),
+      'ts' => array('name'     => 'Xitsonga',
+                    'en'       => 'Tsonga',
+                    'iso'      => 'ts'
+      ),
+      'tn' => array('name'     => 'Setswana',
+                    'en'       => 'Tswana',
+                    'iso'      => 'tn'
+      ),
+      'tr' => array('name'     => 'Türkçe',
+                    'en'       => 'Turkish',
+                    'iso'      => 'tr'
+      ),
+      'uk' => array('name'     => 'українська',
+                    'en'       => 'Ukrainian',
+                    'iso'      => 'uk'
+      ),
+      'ur' => array('name'     => 'اردو',
+                    'en'       => 'Urdu',
+                    'iso'      => 'ur'
+      ),
+      've' => array('name'     => 'Tshivenḓa',
+                    'en'       => 'Venda',
+                    'iso'      => 've'
+      ),
+      'vi' => array('name'     => 'Tiếng Việt',
+                    'en'       => 'Vietnamese',
+                    'iso'      => 'vi'
+      ),
+      'xh' => array('name'     => 'isiXhosa',
+                    'en'       => 'Xhosa',
+                    'iso'      => 'xh'
+      ),      
+      'ji' => array('name'     => 'ייִדיש',
+                    'en'       => 'Yiddish',
+                    'iso'      => 'yi'
+      ),            
+      'zu' => array('name'     => 'isiZulu',
+                    'en'       => 'Zulu',
+                    'iso'      => 'zu'
+      )
     );
 	
 	//const DEFAULT_CULTURE = 'en';

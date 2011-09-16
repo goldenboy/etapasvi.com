@@ -1,4 +1,3 @@
-// main
 var ap_stopAll = function(){};
 var audioplayer  = false;
 
@@ -39,12 +38,14 @@ $(document).ready(function(){
 			}
 		}
 	);
-
+    // сокрытие выбора языка
 	$("html").click(
 		function () {
 			$("#lang_list").slideUp("fast");
 		}
 	);
+    // перемещение Предложения перевода наверх
+    $("#offer_tr_ctr").insertAfter( "#content h1:eq(0)" );
 });
 
 // исходный текст учения
@@ -178,4 +179,46 @@ function setUrlLangList(href)
         
         $(this).attr('href', culture_href);
     });  
+}
+
+// отображение формы Предолжить перевод
+function switchOfferTr(fields_url, error_msg) 
+{    
+    // если поля уже загружены
+    if (!$("#offer_tr_fields").is(':empty')) {
+        if ( $("#offer_tr").is(":hidden") ) {
+            $("#offer_tr").show();
+            // если форма была отправлена
+            if (!$("#offer_tr_success").is(":hidden")) {
+                $("#offer_tr_fields textarea").val('');            
+            }
+            $("#offer_tr_success").hide();
+        } else {
+            $("#offer_tr").hide();
+        }
+    } else {
+        // загрузка полей
+        $("#offer_tr_loader").show();
+        $.ajax({
+            url: fields_url,
+            dataType: "html",
+            success: function(data) {
+                $("#offer_tr_fields").html(data);
+                $("#offer_tr_loader").hide();
+                $("#offer_tr").show();
+            },
+            error: function(data) {
+                $("#offer_tr_loader").hide();
+                alert(error_msg);
+            }
+        });
+    }
+}
+
+// отправка Перевода
+function offerTrSubmit()
+{    
+    $("#offer_tr_success").show();
+    $("#offer_tr").hide();
+    return true;
 }
