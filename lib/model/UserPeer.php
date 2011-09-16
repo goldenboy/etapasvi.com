@@ -60,7 +60,7 @@ class UserPeer extends BaseUserPeer
 		              'feedburner_loc' 		 => ''
 		),       
 		'ja' => array('name'    			 => '日本語',
-		              'iso'     			 => 'ja',
+		              'iso'     			 => 'jp',
 		              'hieroglyphic'  		 => true,
 		              //'mail_id' 			 => '77a5eb7cd2',
 		              'comments_category_id' => 686578,
