@@ -1483,14 +1483,18 @@ label.error {
 
 /* offer translation */
 #offer_tr_ctr {
-    position: relative;
-    top: -14px;
+    text-align: center;
+    /*position: relative;    
+    top: -14px;*/
     }
 #offer_tr,
 #offer_tr_success,
 #offer_tr_iframe_id,
 #offer_tr_iframe {
     display: none;
+    }
+#offer_tr  {
+    margin-bottom: 14px;
     }
 #offer_tr  textarea {
     width: 96%;
