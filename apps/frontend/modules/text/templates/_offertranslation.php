@@ -8,7 +8,7 @@
 <input type="hidden" name="entry.5.single" value="<?php echo $uri ?>" id="offer_tr_uri"/>
 <input type="hidden" name="entry.6.single" value="<?php echo $module ?>" />
 <input type="hidden" name="entry.7.single" value="<?php echo $action ?>" />
-<input type="hidden" name="entry.8.single" value="<?php echo $id ?>" />
+<input type="hidden" name="entry.8.single" value="<?php echo $id ?>" id="offer_tr_id" />
 <div id="offer_tr_fields"></div>
 </form>
 </div>

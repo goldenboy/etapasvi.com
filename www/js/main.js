@@ -1,5 +1,7 @@
 var ap_stopAll = function(){};
 var audioplayer  = false;
+// здесь запоминается форма Предложить перевод, чтобы после подгрузки фото, её восстанавливать
+var offer_tr_clone  = '';
 
 $(document).ready(function(){
     // random quote    
@@ -115,15 +117,21 @@ function loadPhotoContent(href, hide_content, domain)
     var content_href = '/' + href.replace(/\/photo\//, '/photo/content/');
     $("#photo_loader").show();
 
-    $("#photo_content").load(content_href, function(response, status, xhr) {
+    // сохраняем форму Предложить перевод
+    $("#offer_tr").hide();
+    offer_tr_clone = $("#offer_tr_ctr").clone();
 
+    // отправка запроса
+    $("#photo_content").load(content_href, function(response, status, xhr) {
         if (status == "error") {
             $("#photo_loader").hide();
             if (global_photo_href) {
                 window.location = global_photo_href;
                 return;
             }            
-        } else {            
+        } else {   
+            // восстанавливаем форму Предложить перевод
+            offer_tr_clone.insertAfter( "#content h1:eq(0)" );      
             // модификация URL
             setUrl(global_photo_href, href);
             // title
@@ -131,8 +139,18 @@ function loadPhotoContent(href, hide_content, domain)
             if (content_title) {
                 document.title = content_title;
             }
+            // указывается новый URL в форме Предложить перевод
+            $("#offer_tr_uri").val(global_photo_href);
+            // вытаскивается ID из URL
+            $("#offer_tr_id").val(getElementIdFromUrl(global_photo_href));
         }
     });
+}
+
+function getElementIdFromUrl(url)
+{
+    var match = url.match(/^[^\d]+(\d+).*$/);
+    return match[1];
 }
 
 // получение адреса из хэша и загрузка фото
@@ -147,14 +165,17 @@ function loadPhotoContentFromHash(domain)
 // установка URL
 function setUrl(full, relative)
 {
-    if (history && history.pushState) {
-        history.pushState({isMine:true}, 'title',  full );
-    } else {
-        $.address.value('/!' + relative); 
+    try {
+        if (history && history.pushState) {
+            history.pushState({isMine:true}, 'title',  full );
+        } else {
+            $.address.value('/!' + relative); 
+        }
+        // меняем ссылку на мобильную версию
+        setUrlMobile(full);
+        setUrlLangList(full);
+    } catch (e) {
     }
-    // меняем ссылку на мобильную версию
-    setUrlMobile(full);
-    setUrlLangList(full);
 }
 
 // установка ссылки на мобильную версию
