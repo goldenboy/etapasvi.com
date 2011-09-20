@@ -785,6 +785,20 @@ class UserPeer extends BaseUserPeer
 	}
 	
 	/**
+	 * Полное название языка, пример: Afrikaans [af] &nbsp;&nbsp;-&nbsp;&nbsp; Afrikaans
+	 *
+	 * @param unknown_type $culture
+	 * @return unknown
+	 */
+	public static function getCultureFullName( $culture = '' )
+	{
+		if (!$culture || empty(self::$all_cultures[$culture])) {
+			return '';
+		}
+	    return self::$all_cultures[$culture]['en'] .' [' . $culture . '] &nbsp;&nbsp;-&nbsp;&nbsp; ' . self::$all_cultures[$culture]['name'];
+	}
+	
+	/**
 	 * Проверка, является ли страница главной
 	 *
 	 * @param string $url адрес для проверки

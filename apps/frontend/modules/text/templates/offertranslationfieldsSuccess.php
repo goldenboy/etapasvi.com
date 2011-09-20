@@ -13,7 +13,7 @@
     <td><select name="entry.4.single" id="entry_4">
         <option value=""></option>
         <?php foreach(UserPeer::$all_cultures as $culture_code => $culture_info): ?>
-        <option value="<?php echo $culture_code; ?>"><?php echo $culture_info['en']; ?> [<?php echo $culture_code; ?>] &nbsp;&nbsp;-&nbsp;&nbsp; <?php echo $culture_info['name']; ?></option>
+        <option value="<?php echo $culture_code; ?>"><?php echo UserPeer::getCultureFullName($culture_code); ?></option>
         <?php endforeach ?>
     </select>
     </td>

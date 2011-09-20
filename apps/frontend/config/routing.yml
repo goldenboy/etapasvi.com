@@ -149,6 +149,9 @@ news_show:
 photo_index:
   url:   /:sf_culture/photo/index
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+photo:
+  url:   /:sf_culture/photo/index
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 photo_show:
   url:   /:sf_culture/photo/show

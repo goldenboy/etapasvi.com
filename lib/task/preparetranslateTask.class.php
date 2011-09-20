@@ -9,21 +9,24 @@
 class preparetranslateTask extends sfBaseTask
 {
   const PREPARED_MESSAGES_DIR            = 'translate';
-  const PREPARED_MESSAGES_OTHER_SUB_DIR  = 'other';
+  const OTHER_MESSAGES_CODE  = 'other';
   // язык, который берётся за образец
   const ORIGINAL_CULTURE                 = 'ru';
   // расширение конечных файлов переводаы
   const FILE_EXT                         = 'html';
+  // файл со списком страниц переводов
+  const INDEX_FILE                       = 'index.html';
   
   // папка с переводами
   private $translates_path = '';
   // языки, для которых есть хотя бы один файл перевода
-  private $translated_cultures = '';
+  private $translated_cultures = array();
+  // список модулей
+  private $module_list          = array();
     
   protected function configure()
   {
-  	// чтобы можно было получить настройки с помощью sfConfig::get() указываем application = frontend
-  	
+  	// чтобы можно было получить настройки с помощью sfConfig::get() указываем application = frontend  	
     $this->addOptions(array(
       new sfCommandOption('application', null, sfCommandOption::PARAMETER_REQUIRED, 'The application name', 'frontend'),
       new sfCommandOption('env', null, sfCommandOption::PARAMETER_REQUIRED, 'The environment', 'prod'),
@@ -41,6 +44,10 @@ EOF;
 
   protected function execute($arguments = array(), $options = array())
   {
+  	// чтобы генерировать URL надо создать контекст
+  	// http://www.srcnix.com/2010/02/08/symfony-1-2-tasks-the-default-context-does-not-exist/
+  	sfContext::createInstance($this->configuration);
+  	
     $this->translates_path = realpath( sfConfig::get('sf_upload_dir') . '/' . self::PREPARED_MESSAGES_DIR . '/' );
     
     if (is_dir($this->translates_path)) {
@@ -79,11 +86,13 @@ EOF;
   	    echo $log_msg . "\n";
   	    return false;
       }
+      
       // в папку копируются файлы из /uploads/other и соответствующим образом переименовываются
-      $copy_command = 'cp ' . $this->translates_path . '/' . self::PREPARED_MESSAGES_OTHER_SUB_DIR . '/* ' . $this->translates_path . '/' . $culture;      
+      $copy_command = 'cp ' . $this->translates_path . '/' . self::OTHER_MESSAGES_CODE . '/* ' . $this->translates_path . '/' . $culture;      
       system($copy_command);
       // http://superuser.com/questions/8716/rename-a-group-of-files-with-one-command
-      $rename_command = "for file in {$this->translates_path}/{$culture}/*; do mv \"\$file\" \"\${file%." . self::FILE_EXT . "}.{$culture}." 
+      $rename_command = "for file in {$this->translates_path}/{$culture}/*; do mv \"\$file\" \"\${file%." . self::OTHER_MESSAGES_CODE . 
+      					"." . self::FILE_EXT . "}.{$culture}." 
                         . self::FILE_EXT . "\"; done";
       system($rename_command);      
       
@@ -92,6 +101,9 @@ EOF;
       
       echo "Created translate files in: " . $this->translates_path . '/' . $culture . "\n";
     }
+    
+    // строится страница со ссылками на страницы переводов
+    $this->createIndex();
   }
   
   /**
@@ -144,16 +156,23 @@ EOF;
   	  
       // модуль
       $module = $this->getModuleFromPath($source);
-      // URL
-      //sfContext::getInstance()->getConfiguration()->loadHelpers(array('Url'));     
+      
+      // язык
+      $culture = $this->getCultureFromPath($source);
+      $language = UserPeer::$all_cultures[ $culture ]['en'];
+      
+      // URL  
+      $routing = $this->getRouting();
       try {
-        //$url = url_for( '@' . $module );
+      	if ($remove_translation) {
+      	  $culture = sfConfig::get('sf_default_culture');
+      	}
+        $url = $routing->generate($module, array('sf_culture' => $culture));
       } catch (Exception $e) {}
       if (empty($url)) {
-        //$url = url_for( '@main' );
+        $url = $routing->generate('main');
       }
-      // язык
-      $language = UserPeer::$all_cultures[ $this->getCultureFromPath($source) ]['en'];
+      $url = 'http://' . UserPeer::DOMAIN_NAME_MAIN . $url;
       
       if (!empty($dest_text)) {
         $dest_text .= TextPeer::TRANSLATE_ITEMS_DELIMITER;
@@ -162,30 +181,36 @@ $dest_text = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "ht
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="title" content="" />
-<title>eTapasvi.com</title>
+<title>eTapasvi.com interface translation</title>
 <link rel="shortcut icon" type="image/x-icon" href="http://www.etapasvi.com/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="screen" href="http://www.etapasvi.com/css/css.css" /> 
 </head>
 <body>
-<h1>eTapasvi.com interface translation</h1>
 <strong>Module:</strong> ' . $module . '<br/>
-<strong>URL: ' . $url . '</strong>...<br/>
-<strong>Translation into:</strong> ' . $language . '<br/>
-<br/>
+<strong>URL: <a href="' . $url . '" target="_blank">' . $url . '</a></strong><br/>'
+. ( !$remove_translation ? '<strong>Translate into language:</strong> ' . $language . '<br/>' : '' ) .
+'<br/>
 <strong>Tutorial:</strong><br/>
 <textarea style="width:95%;font-family:courier" rows="6" readonly="readonly">' . TextPeer::TRANSLATE_ITEMS_DELIMITER . 
-'Text for translation is here
+'
+Here is text to be translated
 ' . TextPeer::TRANSLATE_BETWEEN_DELIMITER . 
 '
-Translation should be here
+Translation should be placed here
 ' . TextPeer::TRANSLATE_ITEMS_DELIMITER . '</textarea>
 <br/><br/>
 <strong>Copy text below into any text editor, translate and send to ' . MailPeer::MAIL_ADDRESS . ':<strong><br/>
 <textarea style="width:95%;font-family:courier" rows="35" readonly="readonly">' . $dest_text . '</textarea>
+<br/><br/>
 </body>
 </html>';
 
   	    file_put_contents($dest, $dest_text);
+  	    
+        // запоминаем модуль
+        if (!in_array($module, $this->module_list)) {
+      	  $this->module_list[] = $module;
+        }
   	  }
   	} catch (Exception $e) {
   	  $log_msg = 'Error occured preparing translation file: ' . $dest;
@@ -250,8 +275,8 @@ Translation should be here
     // /home/saynt2day20/etapasvi.com/www/uploads/translate/other/contactus.xml        
     
     // обрабатывается образцовый язык
-    $result_file_name = $this->getModuleFromPath($filename) . '.' . self::FILE_EXT;    
-    $result_file_path = $this->translates_path . '/' . self::PREPARED_MESSAGES_OTHER_SUB_DIR . '/' . $result_file_name;      
+    $result_file_name = $this->getModuleFromPath($filename) . '.' . self::OTHER_MESSAGES_CODE . '.' . self::FILE_EXT;    
+    $result_file_path = $this->translates_path . '/' . self::OTHER_MESSAGES_CODE . '/' . $result_file_name;      
     echo $result_file_path . "\n";
     return $this->prepareFile($filename, $result_file_path, true);
   }
@@ -262,8 +287,8 @@ Translation should be here
    *
    * @param unknown_type $filename
    */
-  protected function copyTranslatedFile($filename) {
-    
+  protected function copyTranslatedFile($filename) 
+  {
     // deprecated директории пропускаем
     if (strstr($filename, 'deprecated')) {
       return;
@@ -277,10 +302,74 @@ Translation should be here
     // по имени исходного файла определяем язык
     $culture = $this->getCultureFromPath($filename);         
 
-    $result_file_name = $$this->getModuleFromPath($filename) . '.' . $culture . '.' . self::FILE_EXT;
+    $result_file_name = $this->getModuleFromPath($filename) . '.' . $culture . '.' . self::FILE_EXT;
       
     $result_file_path = $this->translates_path . '/' . $culture . '/' . $result_file_name;      
     return $this->prepareFile($filename, $result_file_path, false); 
+  }
+  
+  /**
+   * Страница со списком страниц переводов
+   *
+   * @param unknown_type $filename
+   * @return unknown
+   */
+  protected function createIndex() 
+  {
+    $index_html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="" />
+<title>eTapasvi.com interface translation</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script> 
+<link rel="shortcut icon" type="image/x-icon" href="http://www.etapasvi.com/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="screen" href="http://www.etapasvi.com/css/css.css" /> 
+</head>
+<body>
+	<script type="text/javascript">
+	function showModules(select)
+	{
+		$(".modules").hide();
+		var culture = $(select).val();
+		$("#"+culture+"_modules").show().change();
+	}
+	function loadTranslate(select)
+	{
+		$("#prepare_translate_iframe").attr("src", $(select).val() );
+	}
+	</script>
+	<select onchange="showModules(this)">
+		<option value=""></option>
+		<option value="' . self::OTHER_MESSAGES_CODE . '">' . self::OTHER_MESSAGES_CODE . '</option>';
+    // список языков
+    foreach ($this->translated_cultures as $culture) {
+	  $index_html .= '<option value="' . $culture . '">' . UserPeer::getCultureFullName($culture) . '</option>';
+    }
+    $index_html .= '</select>&nbsp;&nbsp;';
+
+    // список модулей языков
+    $cultures_list = $this->translated_cultures;
+    $cultures_list[] = self::OTHER_MESSAGES_CODE;
+    foreach ( $cultures_list as $culture) {
+      $index_html .= '<select id="' . $culture . '_modules" class="hidden modules" onchange="loadTranslate(this)">';
+      foreach ($this->module_list as $module) {
+    	$index_html .= '<option value="http://' . UserPeer::DOMAIN_NAME_MAIN . '/uploads/' . self::PREPARED_MESSAGES_DIR . '/' .
+    					$culture . '/' . $module . '.' . $culture . '.' . self::FILE_EXT . '" target="prepare_translate_iframe">' . 
+    					$module . '</option>';
+      }
+      $index_html .= '</select>';
+    }
+
+    
+	$index_html .= '<br/><br/>
+    <iframe frameborder="0" border="0" width="100%" height="740" src="http://www.etapasvi.com//uploads/translate/et/biography.et.html" id="prepare_translate_iframe"></iframe>
+</doby>
+</html>';
+    
+	$index_file_path = $this->translates_path . '/' . self::INDEX_FILE;
+    file_put_contents($index_file_path, $index_html);
+    echo "Index file ready: " . $index_file_path . "\n";
   }
   
   
