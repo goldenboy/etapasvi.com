@@ -1,4 +1,4 @@
-# default rules
+# Предполагается, что у каждого модуля есть одноимённый route, используется при формировании файлов переводов
 
 #main_idea_no_slash:
 #  url:   /:sf_culture
@@ -6,6 +6,10 @@
 #  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }  
 
 main:
+  url:  /:sf_culture/
+  param: { module: news, action: main }
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+frontend:
   url:  /:sf_culture/
   param: { module: news, action: main }
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
@@ -121,6 +125,9 @@ chat:
 news_index:
   url:   /:sf_culture/news/index
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+news:
+  url:   /:sf_culture/news/index
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 news_rss:
   url:   /:sf_culture/news/rss
@@ -228,6 +235,10 @@ religious_forest:
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 audio_index:
+  url:   /:sf_culture/audio
+  param: { module: audio, action: index }
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+audio:
   url:   /:sf_culture/audio
   param: { module: audio, action: index }
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
