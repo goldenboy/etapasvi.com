@@ -273,27 +273,22 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>If you want to help with translation on a regular basis, please, email at</source>
+        <source>Translate News, Photo, Audio, Video, presented on this page into any language.</source>
         <target></target>
       </trans-unit>
 
       <trans-unit id="1">
-        <source>If you want to help with translation on a regular basis, please, email at</source>
+        <source>Translate website interface from English into any other language.</source>
         <target></target>
       </trans-unit>
-
+      
       <trans-unit id="1">
-        <source>There are following ways to make website translation:</source>
+        <source>for example, if you translate news item, copy it's title and whole text into this field</source>
         <target></target>
       </trans-unit>
-
+      
       <trans-unit id="1">
-        <source>Translate information presented on this page into any language using online form.</source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="1">
-        <source>Translate website interface from English into any other language by sending translation by e-mail.</source>
+        <source>for example, if you translate news item, paste translation of it's title and text into this field</source>
         <target></target>
       </trans-unit>
 

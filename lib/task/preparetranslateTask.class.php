@@ -188,7 +188,7 @@ $dest_text = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "ht
 <body>
 URL: <a href="' . $url . '" target="_blank">' . $url . '</a><br/><br/>
 Tutorial:<br/>
-<textarea style="width:95%;font-family:courier" rows="6" readonly="readonly">' . TextPeer::TRANSLATE_ITEMS_DELIMITER . 
+<textarea style="width:98%;font-family:courier" rows="6" readonly="readonly">' . TextPeer::TRANSLATE_ITEMS_DELIMITER . 
 '
 Here is text to be translated
 ' . TextPeer::TRANSLATE_BETWEEN_DELIMITER . 
@@ -196,9 +196,33 @@ Here is text to be translated
 Translation should be placed here
 ' . TextPeer::TRANSLATE_ITEMS_DELIMITER . '</textarea>
 <br/><br/>
-Copy text below into any text editor (be careful with encoding, it should be UTF-8 with BOM), translate and send to <a href="mailto:' . MailPeer::MAIL_ADDRESS . '">' . MailPeer::MAIL_ADDRESS . '</a>:<br/>
-<textarea style="width:95%;font-family:courier" rows="35" readonly="readonly">' . $dest_text . '</textarea>
+Copy text below into any text editor (be careful with encoding, it should be UTF-8 without BOM), 
+translate and send to <a href="mailto:' . MailPeer::MAIL_ADDRESS . '">' . MailPeer::MAIL_ADDRESS . '</a> 
+or translate directly in the area below and click "Send" button to send:<br/><br/>
+<form action="' . TextPeer::GOOGLE_DOC_OFFER_TRANSLATE . '" method="POST" id="offer_tr_form" >
+<input type="hidden" name="entry.5.single" value="' . $url .'" id="offer_tr_uri"/>
+<input type="hidden" name="entry.6.single" value="' . $module . '" />
+<input type="hidden" name="entry.4.single" value="' . $culture . '" />
+<textarea style="width:98%;font-family:courier" rows="25" name="entry.1.single">' . $dest_text . '</textarea>
 <br/><br/>
+<table cellspacing="0" cellpadding="0" class="form_table">
+    <tr>
+        <td>Email: </td><td><input type="text" name="entry.2.single" value="" /> (optional)</td>
+    </tr>
+    <tr>
+        <td>Translated by: </td><td><input type="text" name="entry.3.single" value="" /> (optional)</td>
+    </tr>
+    <tr>
+        <td>Comment: </td><td><input type="text" name="entry.9.single" value="" /> (optional)</td>
+    </tr>
+</table>
+<input type="hidden" name="pageNumber" value="0" />
+<input type="hidden" name="backupCache" value="" />
+<p class="center_text">
+    <input type="submit" name="submit" value="Send" id="offer_tr_submit"/>
+</p>
+</form>
+
 </body>
 </html>';
 
@@ -360,7 +384,7 @@ Copy text below into any text editor (be careful with encoding, it should be UTF
 
     
 	$index_html .= '<br/>
-    <iframe frameborder="0" border="0" width="100%" height="740" src="http://' . UserPeer::DOMAIN_NAME_MAIN . '/uploads/' . self::PREPARED_MESSAGES_DIR . '/' .
+    <iframe frameborder="0" border="0" width="100%" height="720" src="http://' . UserPeer::DOMAIN_NAME_MAIN . '/uploads/' . self::PREPARED_MESSAGES_DIR . '/' .
     					self::OTHER_MESSAGES_CODE . '/' . $this->module_list[0] . '.' . self::OTHER_MESSAGES_CODE . '.' . self::FILE_EXT . '" id="prepare_translate_iframe"></iframe>
 </doby>
 </html>';

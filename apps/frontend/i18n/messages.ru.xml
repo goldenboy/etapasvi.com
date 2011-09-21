@@ -286,30 +286,25 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>If you want to help with translation on a regular basis, please, email at</source>
-        <target>Если вы хотите оказывать помощь с переводом на регулярной основе, пожалуйста, напишите на</target>
+        <source>Translate News, Photo, Audio, Video, presented on this page into any language.</source>
+        <target>Перевести новости, фото, аудио, видео, представленные на этой странице, на другой язык.</target>
       </trans-unit>
 
       <trans-unit id="1">
-        <source>If you want to help with translation on a regular basis, please, email at</source>
-        <target>Если вы хотите оказывать помощь с переводом на регулярной основе, пожалуйста, напишите на</target>
+        <source>Translate website interface from English into any other language.</source>
+        <target>Перевести интерфейс сайта с английского языка на любой другой язык.</target>
       </trans-unit>
 
       <trans-unit id="1">
-        <source>There are following ways to make website translation:</source>
-        <target>Информацию на сайте можно перевести следующими способами:</target>
+        <source>for example, if you translate news item, copy it's title and whole text into this field</source>
+        <target>например, если вы переводите новость, скопируйте её заголовок и текст в это поле</target>
       </trans-unit>
-
+      
       <trans-unit id="1">
-        <source>Translate information presented on this page into any language using online form.</source>
-        <target>Перевести информацию, представленную на этой странице, на другой язык с помощью онлайн-формы.</target>
+        <source>for example, if you translate news item, paste translation of it's title and text into this field</source>
+        <target>например, если вы переводите новость, скопируйте перевод её заголовка и текста в это поле</target>
       </trans-unit>
-
-      <trans-unit id="1">
-        <source>Translate website interface from English into any other language by sending translation by e-mail.</source>
-        <target>Перевести интерфейс сайта с английского языка на любой другой язык, отправив перевод по e-mail.</target>
-      </trans-unit>
-
+      
       <trans-unit id="1">
         <source>Translation</source>
         <target>Перевод</target>
