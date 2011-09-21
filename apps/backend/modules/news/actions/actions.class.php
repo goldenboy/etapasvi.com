@@ -769,6 +769,69 @@ class newsActions extends autonewsActions
    */
   public function executeTranslate($request)
   { 
+      $this->result = '';
+      
+      if ($_POST['submit_convert'] && $_POST['plain_text']) {
+          // конвертация plain текста в messages файл
+          $this->result = $_POST['plain_text'];
+          
+          // удаляется первый разделитель
+          $this->result = preg_replace("/^" . preg_quote(TextPeer::TRANSLATE_ITEMS_DELIMITER) . "(\r)?\n/", '', $this->result);
+     
+          // удаляется последний разделитель
+          $this->result = preg_replace("/(\r)?\n" . preg_quote(TextPeer::TRANSLATE_ITEMS_DELIMITER) . "([\s]+)?$/", '', $this->result);
+
+          // разделитель между элементами
+          $this->result = preg_replace(
+            "/(\r)?\n" . preg_quote(TextPeer::TRANSLATE_ITEMS_DELIMITER) . "(\r)?\n/", 
+            '</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>',
+            $this->result);  
+            
+          // разделитель между текстом и переводом
+          $this->result = preg_replace(
+            "/(\r)?\n" . preg_quote(TextPeer::TRANSLATE_BETWEEN_DELIMITER) . "(\r)?\n/", 
+            '</source>
+        <target>', 
+            $this->result);
+          
+          $this->result = '<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>' . $this->result . '</target>
+      </trans-unit>
+      
+<!-- утф -->
+    </body>
+  </file>
+</xliff>';
+    
+          
+          
+          if ($_POST['get_as_file']) {
+            ob_clean();
+        	header('Content-Type: application/xml;');
+        	header('Content-Description: File Transfer');
+    		if ( preg_match( "/MSIE/", $_SERVER["HTTP_USER_AGENT"] ) ) {
+    			header('Content-Disposition: attachment; filename=' . str_replace('+', ' ', urlencode('messages.xml')) );
+    		} else {
+    			header('Content-Disposition: attachment; filename=messages.xml' );
+    		}
+    		header('Content-Transfer-Encoding: binary');
+            header('Expires: 0');
+    		header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+            header('Pragma: public');
+    		header('Content-Length: ' . strlen($this->result) );
+    		
+    		echo $this->result;
+          }
+      }
   }  
   
 }

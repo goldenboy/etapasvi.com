@@ -186,8 +186,8 @@ $dest_text = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "ht
 <link rel="stylesheet" type="text/css" media="screen" href="http://www.etapasvi.com/css/css.css" /> 
 </head>
 <body>
-<strong>URL: <a href="' . $url . '" target="_blank">' . $url . '</a></strong><br/><br/>
-<strong>Tutorial:</strong><br/>
+URL: <a href="' . $url . '" target="_blank">' . $url . '</a><br/><br/>
+Tutorial:<br/>
 <textarea style="width:95%;font-family:courier" rows="6" readonly="readonly">' . TextPeer::TRANSLATE_ITEMS_DELIMITER . 
 '
 Here is text to be translated
@@ -196,7 +196,7 @@ Here is text to be translated
 Translation should be placed here
 ' . TextPeer::TRANSLATE_ITEMS_DELIMITER . '</textarea>
 <br/><br/>
-<strong>Copy text below into any text editor, translate and send to ' . MailPeer::MAIL_ADDRESS . ':<strong><br/>
+Copy text below into any text editor, translate and send to ' . MailPeer::MAIL_ADDRESS . ':<br/>
 <textarea style="width:95%;font-family:courier" rows="35" readonly="readonly">' . $dest_text . '</textarea>
 <br/><br/>
 </body>
@@ -337,7 +337,7 @@ Translation should be placed here
 		$("#prepare_translate_iframe").attr("src", $(select).val() );
 	}
 	</script>
-	<strong>Language:</strong> <select onchange="showModules(this)">
+	Language: <select onchange="showModules(this)">
 		<option value="' . self::OTHER_MESSAGES_CODE . '">' . self::OTHER_MESSAGES_CODE . '</option>';
     // список языков
     foreach ($this->translated_cultures as $culture) {
@@ -349,7 +349,7 @@ Translation should be placed here
     $cultures_list = $this->translated_cultures;
     $cultures_list[] = self::OTHER_MESSAGES_CODE;
     foreach ( $cultures_list as $culture) {
-      $index_html .= '<div id="' . $culture . '_modules" class="' . ($culture != self::OTHER_MESSAGES_CODE ? 'hidden' : '') . ' modules"><strong>Module:</strong> <select onchange="loadTranslate(this)">';
+      $index_html .= '<div id="' . $culture . '_modules" class="' . ($culture != self::OTHER_MESSAGES_CODE ? 'hidden' : '') . ' modules">Module: <select onchange="loadTranslate(this)">';
       foreach ($this->module_list as $module) {
     	$index_html .= '<option value="http://' . UserPeer::DOMAIN_NAME_MAIN . '/uploads/' . self::PREPARED_MESSAGES_DIR . '/' .
     					$culture . '/' . $module . '.' . $culture . '.' . self::FILE_EXT . '" target="prepare_translate_iframe">' . 

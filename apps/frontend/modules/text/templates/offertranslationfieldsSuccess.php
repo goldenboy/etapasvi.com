@@ -1,10 +1,20 @@
 <p>
-    <input type="radio" name="offer_tr_method" value="offer_tr_method_form" onclick="showOfferTrMethod(this)"> <?php echo __('Translate information presented on this page into any language.') ?>
-    <br/>
-    <input type="radio" name="offer_tr_method" value="offer_tr_method_messages" onclick="showOfferTrMethod(this)"> <?php echo __('Translate website interface from English into any language.') ?>
+    <?php echo __('If you want to help with translation on a regular basis, please, email at') ?> <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a>
 </p>
-
-<iframe frameborder="0" border="0" width="100%" height="814" src="/uploads/translate/index.html" id="offer_tr_method_messages" class="hidden offer_tr_method"></iframe>
+<p class="u">
+    <?php echo __('There are following ways to make website translation:') ?>
+</p>
+<p>
+    <input type="radio" name="offer_tr_method" value="offer_tr_method_form" onclick="showOfferTrMethod(this)"> <?php echo __('Translate information presented on this page into any language using online form.') ?>
+</p>
+<p>
+    <input type="radio" name="offer_tr_method" value="offer_tr_method_messages" onclick="showOfferTrMethod(this)"> <?php echo __('Translate website interface from English into any other language by sending translation by e-mail.') ?>
+</p>
+<hr class="light"/>
+<div id="offer_tr_method_messages" class="hidden offer_tr_method">
+<br/>
+<iframe frameborder="0" border="0" width="100%" height="814" src="/uploads/translate/index.html" ></iframe>
+</div>
 
 <div id="offer_tr_method_form" class="hidden offer_tr_method">
     <p>

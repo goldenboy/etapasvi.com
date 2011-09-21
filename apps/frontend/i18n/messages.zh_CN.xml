@@ -281,7 +281,27 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>Use the form below to translate into any language information presented on this page. If you want to help with translation on a regular basis, please, email at</source>
+        <source>If you want to help with translation on a regular basis, please, email at</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>If you want to help with translation on a regular basis, please, email at</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>There are following ways to make website translation:</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Translate information presented on this page into any language using online form.</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Translate website interface from English into any other language by sending translation by e-mail.</source>
         <target></target>
       </trans-unit>
 
