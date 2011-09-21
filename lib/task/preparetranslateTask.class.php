@@ -196,7 +196,7 @@ Here is text to be translated
 Translation should be placed here
 ' . TextPeer::TRANSLATE_ITEMS_DELIMITER . '</textarea>
 <br/><br/>
-Copy text below into any text editor, translate and send to ' . MailPeer::MAIL_ADDRESS . ':<br/>
+Copy text below into any text editor (be careful with encoding, it should be UTF-8 with BOM), translate and send to <a href="mailto:' . MailPeer::MAIL_ADDRESS . '">' . MailPeer::MAIL_ADDRESS . '</a>:<br/>
 <textarea style="width:95%;font-family:courier" rows="35" readonly="readonly">' . $dest_text . '</textarea>
 <br/><br/>
 </body>
