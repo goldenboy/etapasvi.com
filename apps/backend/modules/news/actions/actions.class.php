@@ -762,4 +762,13 @@ class newsActions extends autonewsActions
   	}
   }
   
+  /**
+   * Работа с файлами переводов
+   *
+   * @param unknown_type $request
+   */
+  public function executeTranslate($request)
+  { 
+  }  
+  
 }

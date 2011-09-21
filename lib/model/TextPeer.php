@@ -10,7 +10,7 @@ class TextPeer extends BaseTextPeer
   // чтобы файлы сохранялись в UTF содержит на конце дополнительный символ
   const TRANSLATE_ITEMS_DELIMITER   = '=================================ּ';
   // разделитесь между текстом и переводом
-  const TRANSLATE_BETWEEN_DELIMITER = '~~~';
+  const TRANSLATE_BETWEEN_DELIMITER = '---';
   
   // Google Docs
   const GOOGLE_DOC_SERVERS = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdGV2QUJlMVQ2RG4yRzJ5NEZjOHZNdlE&single=true&gid=0&output=html';

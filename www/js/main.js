@@ -243,3 +243,10 @@ function offerTrSubmit()
     $("#offer_tr").hide();
     return true;
 }
+
+// отображения формы отправки перевода
+function showOfferTrMethod(radio)
+{    
+    $(".offer_tr_method").hide();
+    $("#" + $(radio).val() ).show();
+}
