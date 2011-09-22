@@ -187,6 +187,9 @@ table {
     overflow: hidden;
     width: 143px;
     }
+#fb-root {
+    display: none;
+    }
 
 /* bubbles */
 #bubble_lang {
@@ -407,6 +410,9 @@ html #disqus_thread {
 #dsq-content .dsq-item-trackback {
     display: none;
     }   
+#content #dsq-content iframe {
+    width: 99%
+    }
 
 .author {
 	color:#888888;
