@@ -224,7 +224,9 @@ table {
 
 	}
 
-
+.audio_descr {
+    margin-top: 5px;
+    }
 hr.audio_divider {
     margin: 9px 0;
     }

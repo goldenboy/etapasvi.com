@@ -52,7 +52,7 @@
     <div>
     <?php foreach($audio_list as $audio_list=>$audio_item): ?>
         <div>
-            <?php include_partial('audio/show', array('audio'=>$audio_item) ); ?>
+            <?php include_partial('audio/showShort', array('audio'=>$audio_item) ); ?>
             <hr class="dashed audio_divider"/>
         </div>
     <?php endforeach ?>				

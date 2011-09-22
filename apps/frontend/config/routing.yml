@@ -238,12 +238,16 @@ religious_forest:
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 audio_index:
-  url:   /:sf_culture/audio
+  url:   /:sf_culture/audio/index
   param: { module: audio, action: index }
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 audio:
-  url:   /:sf_culture/audio
+  url:   /:sf_culture/audio/index
   param: { module: audio, action: index }
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+
+audio_show:
+  url:   /:sf_culture/audio/show
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 donation:

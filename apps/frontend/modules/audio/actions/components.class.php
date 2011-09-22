@@ -28,7 +28,9 @@ class audioComponents extends sfComponents
    */
   public function executeShow()
   {
-  	$this->audio = AudioPeer::retrieveByPk( $this->id );
+    if (empty($this->audio)) {
+  	  $this->audio = AudioPeer::retrieveByPk( $this->id );
+    }
   }
   
 }

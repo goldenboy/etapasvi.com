@@ -117,10 +117,20 @@ class Audio extends BaseAudio
      * Получение ссылки на аудиозапись
      */
 	public function getUrl($culture = '') {
+	    
 	  if (empty($culture)){
 		$culture = sfContext::getInstance()->getUser()->getCulture();
-	  }	 	  
-	  return sfContext::getInstance()->getController()->genUrl('@audio_index', true, $culture) . '#' . $this->getFile();	   
+	  }	 
+	  
+      $url_pattern = 'audio/show?id=' . $this->getId();
+	  
+	  $title_translit = TextPeer::urlTranslit($this->getTitle( $culture ), $culture );
+	  if (!empty($title_translit)) {
+	    $url_pattern .= '&title=' . $title_translit;
+	  }
+
+	  $url = sfContext::getInstance()->getController()->genUrl($url_pattern, true, $culture);
+	  return $url; 
 	}
 	
 	

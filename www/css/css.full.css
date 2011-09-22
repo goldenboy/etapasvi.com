@@ -566,12 +566,8 @@ p.p2{
 	display:none;
 	}
 .audio_descr {
-    /*line-height: 20px;*/
-    bottom: 0;
-    position: absolute;
-    right: 0;
+    margin-top: 5px;
     }
-.audio_descr,
 .audio_item a,
 .audio_item img {
     vertical-align: bottom;

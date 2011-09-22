@@ -2,8 +2,10 @@
 
 class AudioPeer extends BaseAudioPeer
 {
-	
+  // число элементов в блоке Последнее
   const LATEST_COUNT 			= 1;
+  // количество элементов в списке
+  const ITEMS_PER_PAGE 			= 10;
   
   // ссылка на файл в удалённом хранилище
   const REMOTE_URL 		= 'http://k002.kiwi6.com/uploads/hotlink/';
