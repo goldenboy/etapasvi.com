@@ -1,5 +1,5 @@
 <p>
-    <input type="radio" name="offer_tr_method" value="offer_tr_method_form" onclick="showOfferTrMethod(this)"> <?php echo __('Translate News, Photo, Audio, Video, presented on this page into any language.') ?>
+    <input type="radio" name="offer_tr_method" value="offer_tr_method_form" onclick="showOfferTrMethod(this)"> <?php echo __('Translate News, Photo, Audio or Video, presented on this page into any language.') ?>
 </p>
 <p>
     <input type="radio" name="offer_tr_method" value="offer_tr_method_messages" onclick="showOfferTrMethod(this)"> <?php echo __('Translate website interface from English into any other language.') ?>

@@ -286,8 +286,8 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>Translate News, Photo, Audio, Video, presented on this page into any language.</source>
-        <target>Перевести новости, фото, аудио, видео, представленные на этой странице, на другой язык.</target>
+        <source>Translate News, Photo, Audio or Video, presented on this page into any language.</source>
+        <target>Перевести новости, фото, аудио или видео, представленные на этой странице, на другой язык.</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -302,7 +302,7 @@
       
       <trans-unit id="1">
         <source>for example, if you translate news item, paste translation of it's title and text into this field</source>
-        <target>например, если вы переводите новость, скопируйте перевод её заголовка и текста в это поле</target>
+        <target>например, если вы переводите новость, вставьте перевод её заголовка и текста в это поле</target>
       </trans-unit>
       
       <trans-unit id="1">

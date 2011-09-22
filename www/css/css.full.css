@@ -667,10 +667,15 @@ input[type="radio"] {
     }
 .input_button,
 #body_search input.gsc-search-button {	
+    background: none repeat scroll 0 0 #dbdbdb;
     border: 1px outset #CCCCCC;
     cursor: pointer;
     padding: 1px 4px;
 	}
+.input_button:hover,
+#body_search input.gsc-search-button:hover {	
+    background: none repeat scroll 0 0 #f0f0f0;
+    }
 /*
 .hieroglyphic .input_button {
     height: 21px;
