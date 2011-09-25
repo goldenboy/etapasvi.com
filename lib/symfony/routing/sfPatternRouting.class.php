@@ -530,36 +530,17 @@ class sfPatternRouting extends sfRouting
     // /en/photo/album/id/43
     //
     // при тестировании учитывать, что маршруты кэшируются
-	if ( sfContext::getInstance()->getConfiguration()->getApplication() == 'frontend' ) {
-	    preg_match("/^\/([^\/]+)\/([^\/]+)\/([\d]+)\/?([^\/]+)?$/", $url, $matches);
-	    // если URL подлежит перезаписи, собираем его из частей
-	    if (count($matches) >= 3) {
-		    // /ru/news/83/novosti-s-mahadarshana
-		    // превращается в
-		    // /ru/news/show/id/83/title/novosti-s-mahadarshana
-	    	$url = '/' . $matches[1] . '/' . $matches[2] . '/show/id/' . $matches[3];
-	    	if ($matches[4]) {
-	    		$url .= '/title/' . $matches[4];
-	    	}
-	    } else{
-		    // /en/photo/album/43
-		    // в
-		    // /en/photo/album/id/43
-		    
-		    // /ru/photo/content/611/dharma-sangha-17-go-maya
-		    // в
-		    // /ru/photo/content/id/611/title/dharma-sangha-17-go-maya
-		    
-	    	preg_match("/^\/([^\/]+)\/([^\/]+)\/([^\/]+)\/([\d]+)\/?([^\/]+)?$/", $url, $matches);
-
-	    	if (count($matches) >= 3) {
-	    		$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3] . '/id/' . $matches[4];
-    	    	if ($matches[5]) {
-    	    		$url .= '/title/' . $matches[5];
-    	    	}
-	    	}
-	    }
-	}
+    
+    // чтобы нельзя было обратиться к развёрнутому URL сжимаем текущий URL
+    // и смотрим, если сжался, значит сейчас нахомся на развёрнутом, делаем редирект на сжатый
+    // http://tasks.etapasvi.com/issues/214
+    $url_compressed = sfRoute::urlRewriteCompress($url);
+    if ($url_compressed != $url) {
+    	sfContext::getInstance()->getController()->redirect($url_compressed);
+    	exit();
+    }
+    
+	$url = sfRoute::urlRewriteExpand($url);
     
     return $url;
   }
