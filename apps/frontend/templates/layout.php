@@ -10,7 +10,7 @@
 <title><?php echo __(html_entity_decode($sf_response->getTitle())); ?> - <?php echo sfConfig::get('app_site_name'); ?></title>
 <link rel="shortcut icon" type="image/x-icon" href="http://<?php echo sfConfig::get('app_domain_name'); ?>/favicon.ico" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script> 
-<script type="text/javascript" src="/js/js.js"></script> 
+<script type="text/javascript" src="<?php echo url_for('@js'); ?>"></script> 
 <link rel="stylesheet" type="text/css" media="screen" href="/css/css.css" /> 
 </head>
 
@@ -151,7 +151,7 @@
 </div>
 
 <script type="text/javascript">
-<?php include_component( 'text', 'js' );  ?>
+<?php /*include_component( 'text', 'js' ); */ ?>
 var _gaq = _gaq || [];
 _gaq.push(
     ['_setAccount', 'UA-4047144-3'],

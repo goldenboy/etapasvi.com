@@ -264,6 +264,11 @@ offer_translation:
   url:   /:sf_culture/offer_translation
   param: { module: text, action: offertranslationfields }
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+
+js:
+  url:   /:sf_culture/js
+  param: { module: text, action: js }
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
 # Ошибка 404
 error404:

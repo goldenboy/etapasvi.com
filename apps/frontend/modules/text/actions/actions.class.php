@@ -17,7 +17,7 @@ class textActions extends sfActions
    */
   public function executeJs(sfWebRequest $request)
   {
-  	$this->getResponse()->setHttpHeader('Content-type', 'application/javascript; charset=utf-8');
+  	/*$this->getResponse()->setHttpHeader('Content-type', 'application/javascript; charset=utf-8');
   	
     // получаем список Цитат
     $c = new Criteria();
@@ -28,7 +28,7 @@ class textActions extends sfActions
     $c = new Criteria();
     $c->add(AudioI18nPeer::TITLE, '', Criteria::NOT_EQUAL);
     $c->add(AudioI18nPeer::REMOTE, '', Criteria::NOT_EQUAL);
-  	$this->audio_list = AudioPeer::doSelectWithI18n($c);
+  	$this->audio_list = AudioPeer::doSelectWithI18n($c);*/
   }    
   
   /**
