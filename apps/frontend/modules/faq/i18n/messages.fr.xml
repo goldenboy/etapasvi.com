@@ -29,6 +29,11 @@
         <source>Is his teaching based on Buddhism or any other religions like Hinduism?</source>
         <target>Son enseignement est-il basé sur le Bouddhisme ou sur d'autres religions comme l'Hindouisme ?</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>What does "Bodhi Shravan Dharma" mean?</source>
+        <target></target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>How can I receive blessing from Dharma Sangha?</source>
@@ -83,6 +88,26 @@
         <source>It is actually called Bodhi Shravan Dharma, but it includes all religions, no one is excluded. Dharma Sangha will be moving forward by including all existing religions of the world.</source>
         <target>Cela se nomme Bodhi Shravan Dharma, mais cela inclut toutes les religions, aucune n'est exlue. Dharma Sangua souhaite inclure prochainement toutes les religions du monde existant à ce jour.</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Bodhi: enlightenment, awakened.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Shravan: attending to, heeding, listening.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Dharma: wisdom.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Thus "Bodhi Shravan Dharma" is the wisdom as heeded from enlightened ones.</source>
+        <target></target>
+      </trans-unit
 
       <trans-unit id="1">
         <source>Please go to</source>

@@ -29,6 +29,11 @@
         <source>Is his teaching based on Buddhism or any other religions like Hinduism?</source>
         <target>Его учение основывается на буддизме или какой-либо другой религии, например индуизме?</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>What does "Bodhi Shravan Dharma" mean?</source>
+        <target>Что означает "Бодхи Шраван Дхарма"?</target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>How can I receive blessing from Dharma Sangha?</source>
@@ -82,6 +87,26 @@
       <trans-unit id="1">
         <source>It is actually called Bodhi Shravan Dharma, but it includes all religions, no one is excluded. Dharma Sangha will be moving forward by including all existing religions of the world.</source>
         <target>В действительности оно называется Бодхи Шраван Дхарма, но оно включает в себя все религии, не упущена ни одна. Дхарма Сангха будет двигаться дальше, учитывая все существующие религии мира.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Bodhi: enlightenment, awakened.</source>
+        <target>Бодхи: просветление, пробуждённый.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Shravan: attending to, heeding, listening.</source>
+        <target>Шраван: относиться с вниманием, внимать, слушать.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Dharma: wisdom.</source>
+        <target>Дхарма: мудрость.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Thus "Bodhi Shravan Dharma" is the wisdom as heeded from enlightened ones.</source>
+        <target>Таким образом, "Бодхи Шраван Дхарма" – это мудрость, со вниманием услышанная от просветлённых.</target>
       </trans-unit>
 
       <trans-unit id="1">
