@@ -2,8 +2,11 @@
 
 <h1><?php echo __('Contact Us') ?></h1>
 
-<?php /*include_component('text', 'show', array('id'=>3)); */?>
+<?php /*include_component('text', 'show', array('id'=>3)); */ ?>
 
+<p>
+    <?php echo __('If you have any questions, please, try to find answer on the') ?> <a href="<?php echo UserPeer::FORUM_URL; ?>"><?php echo __('Forum') ?></a>. <?php echo __('Send your message to the email below only in a special emergency, as it is difficult for website programmer to answer all emails (there are only 24 hours in a day).') ?>
+</p>
 <p>
     <strong><?php echo __('E-mail') ?>:</strong> <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a>
 </p>
@@ -13,7 +16,7 @@
 <p>
     <strong><?php echo __('News and Teachings') ?>:</strong> <a href="http://paldendorje.com">www.paldendorje.com</a>
 </p>
-
+<?php /*
 <?php if (!empty($chapter_list)): ?>
     <br/>
     <table cellspacing="0" cellpadding="0" id="chapter_list" class="table">
@@ -46,6 +49,6 @@
     <?php endforeach ?>
     </table>
 <?php endif ?>
-
+*/ ?>
 <br/>
 <?php include_component('comments', 'show'); ?>	

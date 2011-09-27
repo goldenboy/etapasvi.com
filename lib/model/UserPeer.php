@@ -610,6 +610,8 @@ class UserPeer extends BaseUserPeer
 	
 	// доменное имя, которое используется по умолчанию вне приложения
 	const DOMAIN_NAME_MAIN   		 = 'www.etapasvi.com';
+	
+	const FORUM_URL   		 		 = 'http://forum.etapasvi.com';
 	// список доменных имён
 	public static $domain_name_list  = array('www.etapasvi.com', 'm.etapasvi.com');
 	

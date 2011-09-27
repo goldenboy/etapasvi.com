@@ -37,6 +37,16 @@
         <source>Mem- bers</source>
         <target></target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>If you have any questions, please, try to find answer on the</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Send your message to the email below only in a special emergency, as it is difficult for website programmer to answer all emails (there are only 24 hours in a day).</source>
+        <target></target>
+      </trans-unit>
   
     </body>
   </file>
