@@ -106,7 +106,7 @@ all:
     standard_helpers:       [Partial, Form, I18N, Date]
 #
 #    # Activated modules from plugins or from the symfony core
-    enabled_modules:        [default, sfCaptcha]
+#    enabled_modules:        [default]
 #
 #    # Charset used for the response
 #      charset:                utf-8
