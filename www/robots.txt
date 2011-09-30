@@ -1,7 +1,3 @@
 User-Agent: *
 Disallow: /*/version/full
 Host: www.etapasvi.com
-
-User-Agent: *
-Disallow: /
-Host: m.etapasvi.com
