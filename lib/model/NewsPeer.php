@@ -5,8 +5,9 @@ class NewsPeer extends BaseNewsPeer
   const THUMB_WIDTH 	= 100;	
   const THUMB_HEIGHT 	= 100;  
   
-  const IMG_WIDTH 		= 500;	
-  const IMG_HEIGHT 		= 500;   
+  // ширина полного изображения в новости - по ширине контента
+  const IMG_WIDTH 		= 546;	
+  const IMG_HEIGHT 		= 546;   
   
   const NEWS_PER_PAGE 	= 5;
   
