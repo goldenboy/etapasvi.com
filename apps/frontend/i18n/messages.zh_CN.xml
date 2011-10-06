@@ -286,6 +286,11 @@
       </trans-unit>
 
       <trans-unit id="1">
+        <source>Watch video tutorial</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
         <source>Translate website interface from English into any other language.</source>
         <target></target>
       </trans-unit>

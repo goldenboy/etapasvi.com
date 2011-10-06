@@ -4,6 +4,9 @@
 <p>
     <input type="radio" name="offer_tr_method" value="offer_tr_method_messages" onclick="showOfferTrMethod(this)"> <?php echo __('Translate website interface from English into any other language.') ?>
 </p>
+<p>
+    <a href="http://www.youtube.com/watch?v=WI4c1vT_yXg" target="_blank"><?php echo __('Watch video tutorial') ?></a>
+</p>
 <hr class="light"/>
 <div id="offer_tr_method_messages" class="hidden offer_tr_method">
 <br/>

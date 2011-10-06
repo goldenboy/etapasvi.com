@@ -286,6 +286,11 @@
       </trans-unit>
       
       <trans-unit id="1">
+        <source>Watch video tutorial</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
         <source>for example, if you translate news item, copy it's title and whole text into this field</source>
         <target></target>
       </trans-unit>

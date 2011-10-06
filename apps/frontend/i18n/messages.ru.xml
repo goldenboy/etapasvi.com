@@ -294,6 +294,11 @@
         <source>Translate website interface from English into any other language.</source>
         <target>Перевести интерфейс сайта с английского языка на любой другой язык.</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Watch video tutorial</source>
+        <target>Смотреть видео-руководство</target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>for example, if you translate news item, copy it's title and whole text into this field</source>
