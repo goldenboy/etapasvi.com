@@ -141,32 +141,32 @@
 
       <trans-unit id="1">
         <source>Arhat</source>
-        <target>六波羅蜜</target>
-      </trans-unit> 
-
-      <trans-unit id="1">
-        <source>Samyak Sambodhi (Anuttara-samyak-sambodhi)</source>
-        <target>禅定</target>
-      </trans-unit>
-
-      <trans-unit id="1">
-        <source>Maitreya</source>
         <target>阿羅漢</target>
       </trans-unit> 
 
       <trans-unit id="1">
-        <source>Asanga</source>
+        <source>Samyak Sambodhi (Anuttara-samyak-sambodhi)</source>
         <target>阿耨多羅三藐三菩提</target>
-      </trans-unit> 
+      </trans-unit>
 
       <trans-unit id="1">
-        <source>The future coming of Maitreya</source>
+        <source>Maitreya</source>
         <target>弥勒菩薩</target>
       </trans-unit> 
 
       <trans-unit id="1">
+        <source>Asanga</source>
+        <target>無著</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>The future coming of Maitreya</source>
+        <target>弥勒菩薩の到来</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
         <source>Anatta (Anatman, "not-self")</source>
-        <target>アートマン（仏教）</target>
+        <target>無我</target>
       </trans-unit> 
 
       <trans-unit id="1">
@@ -176,17 +176,17 @@
 
 	  <trans-unit id="1">
         <source>Atman (Hinduism)</source>
-        <target>仏性</target>
-      </trans-unit> 
-
-      <trans-unit id="1">
-        <source>Paramatman (Supersoul)</source>
         <target>アートマン（ヒンズー教）</target>
       </trans-unit> 
 
       <trans-unit id="1">
+        <source>Paramatman (Supersoul)</source>
+        <target>パラマートマン（至上の魂）</target>
+      </trans-unit> 
+
+      <trans-unit id="1">
         <source>God in Buddhism</source>
-        <target>無我</target>
+        <target>仏教における神</target>
       </trans-unit> 
 
       <trans-unit id="1">
@@ -631,7 +631,7 @@
 
       <trans-unit id="1">
         <source>The analogy of sickness is often used: Buddha is the doctor, Dharma is the medicine, Sangha is the nurse, we are the patient, the cure is taking the medicine, which means practicing the methods. Taking refuge is like unpacking the medicine and deciding to follow the doctor's advice.</source>
-        <target></target>
+        <target>よく病気に例えて説明されるのですが、釈尊は医者、ダルマは薬、サンガは看護婦、我々は患者、そして治療は薬をとる事、つまり道に従って実践する事。帰依することは、薬の袋を開け、医者の忠告に従おうと決心する事です。</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -1037,7 +1037,7 @@
 
       <trans-unit id="1">
         <source>Dhyāna is usually translated as "concentration," "meditation," or "meditative stability." Dhyāna is the fifth of six pāramitās (perfections).</source>
-        <target></target>
+        <target>禅定は通常「集中」「瞑想」または「瞑想的な安定」と訳され、禅定は六波羅蜜（完全性）の５番目にあたります。</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -1212,52 +1212,52 @@
 
       <trans-unit id="1">
         <source>Anattā: "not-self," egolessness, impersonality. This doctrine teaches that neither in the material phenomena of the body, which are of four kinds (referred to collectively as "form" or materiality):</source>
-        <target>アナッタとは無我、エゴがない、非個人性のことで、肉体の物質的な現象にも（マインドまたは精神面に関する）知的現象に存在しません。肉体は（「形」の集合体または物質t的に関して）流動体、熱、支柱、固体の４種類で構成され、知的現象とは感覚、知覚、意思、意識の４種類で構成されます。</target>
+        <target>アナッタとは無我、エゴがない、非個人性のことで、肉体の物質的な現象にも（マインドまたは精神面に関する）知的現象に存在しません。肉体は（「形」の集合体または物質t的に関して）</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>fluidity</source>
-        <target></target>
+        <target>流動体</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>heat</source>
-        <target></target>
+        <target>熱</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>support</source>
-        <target></target>
+        <target>支柱</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>solidity</source>
-        <target></target>
+        <target>固</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>nor in the mental phenomena (referred to as "mind" or mentality), which are of four kinds:</source>
-        <target></target>
+        <target>体の４種類で構成され</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>sensation</source>
-        <target></target>
+        <target>知的現象とは感覚、</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>perception</source>
-        <target></target>
+        <target>知覚、</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>intention</source>
-        <target></target>
+        <target>意思、</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>consciousness</source>
-        <target></target>
+        <target>意識の４種類で構成されます。</target>
       </trans-unit>
 
       <trans-unit id="1">

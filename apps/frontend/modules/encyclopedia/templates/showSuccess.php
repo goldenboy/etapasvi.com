@@ -31,7 +31,7 @@
 	</ol>
 </td>
 <td>
-	<ol class="in_text" start="20">		
+	<ol class="in_text" start="22">		
 		<li><a href="#tummo"><?php echo __('Tummo') ?></a></li>
 		<li><a href="#bodhisattva"><?php echo __('Bodhisattva') ?></a></li>
 		<li><a href="#six_paramitas"><?php echo __('Six paramitas (perfections)') ?></a></li>
