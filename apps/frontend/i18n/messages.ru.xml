@@ -71,9 +71,13 @@
         <source>Biography</source>
         <target>Биография</target>
       </trans-unit>      
-		<trans-unit id="1">
+	  <trans-unit id="1">
         <source>Teachings</source>
         <target>Учения</target>
+      </trans-unit>
+	  <trans-unit id="1">
+        <source>Books</source>
+        <target>Книги</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Encyclopedia</source>

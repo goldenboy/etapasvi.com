@@ -71,9 +71,13 @@
         <source>Biography</source>
         <target>Biografía</target>
       </trans-unit>      
-		<trans-unit id="1">
+	  <trans-unit id="1">
         <source>Teachings</source>
         <target>Enseñanzas</target>
+      </trans-unit>
+	  <trans-unit id="1">
+        <source>Books</source>
+        <target></target>
       </trans-unit>
       <trans-unit id="1">
         <source>Encyclopedia</source>

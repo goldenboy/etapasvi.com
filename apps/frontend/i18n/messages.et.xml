@@ -71,8 +71,12 @@
         <source>Biography</source>
         <target>Elulugu</target>
       </trans-unit>      
-		<trans-unit id="1">
+	  <trans-unit id="1">
         <source>Teachings</source>
+        <target></target>
+      </trans-unit>
+	  <trans-unit id="1">
+        <source>Books</source>
         <target></target>
       </trans-unit>
       <trans-unit id="1">

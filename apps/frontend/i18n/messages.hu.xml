@@ -72,6 +72,10 @@
         <source>Teachings</source>
         <target>Tanítások</target>
       </trans-unit>
+	  <trans-unit id="1">
+        <source>Books</source>
+        <target></target>
+      </trans-unit>
       <trans-unit id="1">
         <source>Encyclopedia</source>
         <target>Enciklopédia</target>

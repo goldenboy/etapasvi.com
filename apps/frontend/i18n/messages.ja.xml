@@ -93,6 +93,11 @@
         <target>教え</target>
       </trans-unit>
 
+	  <trans-unit id="1">
+        <source>Books</source>
+        <target></target>
+      </trans-unit>
+      
       <trans-unit id="1">
         <source>Encyclopedia</source>
         <target></target>

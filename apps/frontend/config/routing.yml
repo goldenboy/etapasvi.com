@@ -43,6 +43,7 @@ news_show:
   param: { module: news, action: show }
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
+# teachings
 teachings_index:
   url:   /:sf_culture/teachings/index/*
   param: { module: news, action: index, type: teachings }
@@ -52,6 +53,16 @@ teachings_show:
   param: { module: news, action: show }
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
+# books
+books_index:
+  url:   /:sf_culture/books/index/*
+  param: { module: news, action: index, type: books }
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+books_show:
+  url:   /:sf_culture/books/show/*
+  param: { module: news, action: show }
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+  
 default:
   url:   /:sf_culture/:module/:action/*
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }

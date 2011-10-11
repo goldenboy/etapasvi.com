@@ -23,11 +23,12 @@
 #body_feed #mi_feed a,
 #body_donation #mi_donation a,
 #body_chat #mi_chat a,
+#body_books #mi_books a,
 #body_servers #mi_servers a {
     border-bottom:1px solid
     }
     
-#menu #mi_forum a {
+#menu #mi_books a {
     color: #df3f3f;
     }
 
