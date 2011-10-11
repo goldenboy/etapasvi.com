@@ -1,5 +1,5 @@
-<?php slot('body_id') ?>body_news<?php end_slot() ?>
-<h1><?php echo __('News') ?></h1>
+<?php slot('body_id') ?>body_<?php echo $type ?><?php end_slot() ?>
+<h1><?php echo __(ucfirst($type)) ?></h1>
 
 <?php
 /*
@@ -15,7 +15,7 @@
 ?>
 
 <?php 
-$navigation_html = get_partial('global/navigation', array('pager'=>$pager, 'order_parameter'=>'start_from', 'module_action'=>'news/index') ); 
+$navigation_html = get_partial('global/navigation', array('pager'=>$pager, 'module_action'=>$type.'/index') ); 
 echo $navigation_html;
 
 $news_list = $pager->getResults();
@@ -32,3 +32,8 @@ $news_list = $pager->getResults();
 <?php echo $navigation_html; ?>
 
 <?php include_partial('comments/count'); ?>
+
+<?php if ($type == NewstypesPeer::$type_names[NewstypesPeer::NEWS_TYPE_TEACHINGS]): ?>
+<br/>
+<a href="/uploads/all/dharma_sangha_dictionary.pdf" class="files pdf"><?php echo __("Dictionary") ?></a> (<?php echo __("by Andy Good/LTJ") ?>)
+<?php endif ?>

@@ -14,7 +14,7 @@ class newsActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
   	$this->id 	 = $request->getParameter('id');
-  	$this->title = $request->getParameter('title');
+  	$this->title = $request->getParameter('title');  	
   	/*
   	$this->newsitem = NewsPeer::retrieveByPk( $request->getParameter('id') );
   	$this->forward404Unless( $this->newsitem && $this->newsitem->getBody() );
@@ -75,6 +75,11 @@ class newsActions extends sfActions
    */
   public function executeIndex(sfWebRequest $request)
   {  	
+  	// определение типа новости
+	$this->type = $request->getParameter('type');
+	if (!$this->type) {
+	  $this->type = NewstypesPeer::$type_names[ NewstypesPeer::NEWS_TYPE_NEWS ];
+	}
 
     $c = $this->getIndexCriteria();
     
@@ -92,6 +97,10 @@ class newsActions extends sfActions
     	$this->forward404();
     }
     
+    // установка типа в зависимости от типа
+    $response = $this->getResponse(); 
+	$response->setTitle(ucfirst($this->type)); 
+    
     // формируем заголовок
     /*$context = sfContext::getInstance();
 	$i18n =  $context->getI18N();
@@ -103,27 +112,7 @@ class newsActions extends sfActions
       
     $response = $this->getResponse(); 
     $response->setTitle($i18n->__('Dharma Sangha') . ' - ' . $i18n->__($news_type) . ' - eTapasvi.com');    */
-  }
-  
-  /**
-   * Список Учений
-   *
-   * @param sfWebRequest $request
-   */
-  public function executeTeachings(sfWebRequest $request)
-  {
-  	$this->executeIndex($request);
-  }
-  
-  /**
-   * Учение
-   *
-   * @param sfWebRequest $request
-   */
-  public function executeTeachings_show(sfWebRequest $request)
-  {
-  	$this->executeShow($request);
-  }
+  }  
   
   /**
    * Получения условия для выбора списка новостей
@@ -138,9 +127,11 @@ class newsActions extends sfActions
     NewsPeer::addVisibleCriteria( $c );
     $c->addDescendingOrderByColumn( NewsPeer::ORDER );
     
-    if ($this->getRequestParameter('type')) {
+    // на странице с типом News выводятся все новости
+    $type = $this->getRequestParameter('type');
+    if ( !empty($type) && $type != NewstypesPeer::$type_names[NewstypesPeer::NEWS_TYPE_NEWS]) {
         $c->addJoin( NewstypesPeer::ID, NewsPeer::TYPE );
-        $c->add( NewstypesPeer::NAME, $this->getRequestParameter('type') );
+        $c->add( NewstypesPeer::NAME, $type );
     }
     
     return $c;

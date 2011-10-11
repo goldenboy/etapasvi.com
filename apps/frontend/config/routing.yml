@@ -30,14 +30,26 @@ version_full:
 #  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 # дополнительные маршруты новостей идут до default, чтобы они срабатывали раньше
-teachings_index:
-  url:   /:sf_culture/teachings/index/*
-  param: { module: news, action: teachings, type: teachings }
+news_index:
+  url:   /:sf_culture/news/index/*
+  param: { module: news, action: index, type: news }
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+news:
+  url:   /:sf_culture/news/index/*
+  param: { module: news, action: index, type: news }
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+news_show:
+  url:   /:sf_culture/news/show/*
+  param: { module: news, action: show }
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
+teachings_index:
+  url:   /:sf_culture/teachings/index/*
+  param: { module: news, action: index, type: teachings }
+  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 teachings_show:
   url:   /:sf_culture/teachings/show/*
-  param: { module: news, action: teachings_show, type: teachings }
+  param: { module: news, action: show }
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 default:
@@ -122,12 +134,7 @@ chat:
 #  url:   /:sf_culture/user/newpassword
 #  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
-news_index:
-  url:   /:sf_culture/news/index
-  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
-news:
-  url:   /:sf_culture/news/index
-  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+
   
 news_rss:
   url:   /:sf_culture/news/rss
@@ -141,10 +148,6 @@ project:
   url:   /:sf_culture/project
   param: { module: project, action: show }
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }  
-
-news_show:
-  url:   /:sf_culture/news/show
-  requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 
 photo_index:
   url:   /:sf_culture/photo/index
