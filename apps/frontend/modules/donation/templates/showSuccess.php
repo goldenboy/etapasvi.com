@@ -26,6 +26,20 @@
 </form>
 </div>
 
+<h2 class="center"><?php echo __('SMS') ?></h2>
+<p class="center_text">
+<script type="text/javascript">
+/* <![CDATA[ */
+smsDonateId = 412067;
+smsDonateButton = 1;
+<?php if ($sf_user->getCulture() != 'ru'): ?>
+smsDonateLanguage = "english";
+<?php endif ?>
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://donate.smscoin.com/js/smsdonate.js"></script>
+</p>
+
 <h2 class="center"><?php echo __('Bank account') ?></h2>
 <p class="center_text">
     <?php /*<a href="http://paldendorje.com/project/donation.html" target="_blank">http://paldendorje.com/project/donation.html</a> */ ?>
@@ -41,5 +55,6 @@
     <br/><strong>Tel:</strong> 977-1-4418456
     <br/><strong>Fax No:</strong> 977-1-4417428
 </p>
+
 <br /><br />
 <?php include_component('comments', 'show'); ?>	
