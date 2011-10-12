@@ -21,7 +21,7 @@
 
 <h2 id="family_and_childhood">1. <?php echo __('Family and Childhood') ?></h2>
 <p>
-<?php echo __('Dharma Sangha (earlier Palden Dorje, born Ram Bahadur Bomjan) was born on April 9, 1990 in Ratanpur village, Bara district, Nepal.') ?>
+<?php echo __('Sambodhi Dharma Sangha (earlier Palden Dorje, born Ram Bahadur Bomjan) was born on April 10, 1990 between 2:25am and 4am (information on date and time is still controversial and will be checked and clarified) in Ratanpur village, Bara district, Nepal.') ?>
 </p>
 <p>
 <?php echo __('Ram’s parents are farmers. His mother, Maya Devi was married at 12.  She had 5 sons and 4 daughters.  Ram was her third son.  When she was in her pregnancy, she found she was unable to eat meat without becoming ill.  The son, whom she named Ram, would not eat meat.  He would leave the house for long intervals from an early age.') ?>
