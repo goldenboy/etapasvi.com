@@ -36,6 +36,9 @@
 	<div id="footer">    
         <?php /*include_partial('global/share');*/ ?>
         <div id="f_line"></div>
+        <?php if ($user_culture != 'en'): ?>
+            <?php echo __('This page is translation of corresponding English page, switch into English language to see original text.') ?><br/><br/>
+        <?php endif ?>
         <?php echo __('Website is developed and supported on a voluntary basis.') ?><br/><?php echo __('If you can help in any way – email at') ?> <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a>
 		<br/><br/><?php echo __('Copyright') ?> &copy; 2009-<?php echo date("Y"); ?>, www.eTapasvi.com
 		<br/><?php echo __('All Rights Reserved') ?>.		        
@@ -76,7 +79,6 @@
 
 <div id="bubble_lang">	
 	<?php 
-		$user_culture = $user_culture;
 		$uri          = $sf_request->getPathInfo();
 		foreach( UserPeer::getCultures() as $culture) {
 			$user_cultures[] = '/' . $culture . '/';

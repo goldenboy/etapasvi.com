@@ -170,6 +170,10 @@
       <trans-unit id="1">
         <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
         <target>Дхарма Сангха (Палден Дордже, Рам Бахадур Бомджан, Мальчик Будда из Непала): Новости, Фото, Видео, Биография, Речи.</target>
+      </trans-unit>      
+      <trans-unit id="1">
+        <source>This page is translation of corresponding English page, switch into English language to see original text.</source>
+        <target>На данной странице представлен перевод соответствующей страницы английской версии.</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Website is developed and supported on a voluntary basis.</source>
@@ -302,6 +306,11 @@
       <trans-unit id="1">
         <source>Watch video tutorial</source>
         <target>Смотреть видео-руководство</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Before performing translation, make sure, that text you are going to translate is not translated yet on website.</source>
+        <target>Перед тем, как выполнять перевод, убедитесь, что текст на сайте уже не переведён.</target>
       </trans-unit>
 
       <trans-unit id="1">

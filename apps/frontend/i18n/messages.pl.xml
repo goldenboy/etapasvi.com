@@ -172,6 +172,10 @@
         <target>Chłopiec Budda: Wydarzenia, Galeria, Wideo, Biografia, Przemowy. Ram Bahadur Bomjon (Palden Dorje): Medytujący Chłopiec Budda z Nepalu. Ram Bomjon: Chłopiec o boskich mocach. Ram Bomjan: Przesłanie Pokoju dla naszego dzisiejszego Świata.</target>
       </trans-unit>
       <trans-unit id="1">
+        <source>This page is translation of corresponding English page, switch into English language to see original text.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
         <source>Website is developed and supported on a voluntary basis.</source>
         <target></target>
       </trans-unit>
@@ -295,6 +299,11 @@
       
       <trans-unit id="1">
         <source>Watch video tutorial</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Before performing translation, make sure, that text you are going to translate is not translated yet on website.</source>
         <target></target>
       </trans-unit>
       
