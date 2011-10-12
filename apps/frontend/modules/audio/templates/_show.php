@@ -38,6 +38,6 @@ $author = $audio->getAuthor($sf_user->getCulture(), true);
     <a href="<?php echo $audio->getDirectUrl(); ?>" target="_blank" title="<?php echo __('Download'); ?>"><?php echo __('Download'); ?></a>
 
 </div>
-
+<?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_AUDIO, 'item_id'=>$audio->getId())) ?> 
 </div>
 <?php endif ?>
