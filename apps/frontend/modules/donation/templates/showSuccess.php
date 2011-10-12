@@ -28,16 +28,20 @@
 
 <h2 class="center"><?php echo __('SMS') ?></h2>
 <p class="center_text">
+<?php /*
 <script type="text/javascript">
-/* <![CDATA[ */
 smsDonateId = 412067;
 smsDonateButton = 1;
 <?php if ($sf_user->getCulture() != 'ru'): ?>
 smsDonateLanguage = "english";
 <?php endif ?>
-/* ]]> */
 </script>
 <script type="text/javascript" src="http://donate.smscoin.com/js/smsdonate.js"></script>
+*/ 
+?>
+
+<script src="http://www.zaypay.com/pay/116564.js" type="text/javascript"></script>
+<a href="http://www.zaypay.com/pay/116564" onclick="ZPayment(this); return false"><img src="http://www.zaypay.com/pay/116564/img" border="0" /></a>  
 </p>
 
 <h2 class="center"><?php echo __('Bank account') ?></h2>
@@ -48,7 +52,7 @@ smsDonateLanguage = "english";
     <strong>Organisation Name:</strong> Bodhi Shrawan Dharma Sangha
     <br/><strong>Bank Name:</strong> Standard Chartered Bank
     <br/><strong>Branch:</strong> Lazimpat Branch
-    <br/><strong>Account No:</strong> 01-2231700 01
+    <br/><strong>Account No:</strong> 01-2231700-01
     <br/><strong>Street:</strong> Lazimpat 
     <br/><strong>Swift Code:</strong> SCBLNPKA
     <br/><strong>Address:</strong> P.O.Box 3990, Lazimpat, Kathmandu, Nepal
