@@ -4,7 +4,10 @@
 <p class="bread_crumbs">	
 	<a href="<?php echo url_for('@main'); ?>"><?php echo __('Home') ?></a> » <a href="<?php echo url_for('@photo_albums'); ?>"><?php echo __('Photo Albums') ?></a> » <?php echo $photoalbum->getTitle($sf_user->getCulture(), true);?>
 </p>
-
+<p class="light">
+    <?php echo format_datetime( $photoalbum->getCreatedAt(), 'd MMMM yyyy'); ?> | 
+    <?php echo __('Photo') ?>: <?php echo $photoalbum->countPhotos(); ?>
+</p>
 <?php 
 $navigation_html = get_partial('global/navigation', array('pager'=>$pager, 'module_action'=>'photo/album?id=' . $sf_request->getParameter('id') ) ); 
 echo $navigation_html;
