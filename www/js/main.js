@@ -48,6 +48,10 @@ $(document).ready(function(){
 	);
     // перемещение Предложения перевода наверх
     $("#offer_tr_ctr").insertAfter( "#content h1:eq(0)" );
+    // текст в футере
+    if (footer_text) {
+        $("#f_line").after(footer_text);
+    }
 });
 
 // исходный текст учения
