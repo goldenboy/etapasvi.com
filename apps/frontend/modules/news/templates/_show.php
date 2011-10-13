@@ -10,7 +10,7 @@
         <?php else: ?>
             <?php echo format_datetime( $newsitem->getDate(), 'd MMMM yyyy'); ?>
         <?php endif ?>
-         / <?php echo __('Updated on') ?>: <?php echo format_datetime( $newsitem->getUpdatedAtMax(), 'd MMMM yyyy'); ?>
+         / <?php echo __('Updated on') ?> <?php echo format_datetime( $newsitem->getUpdatedAtMax(), 'd MMMM yyyy'); ?>
     </p>
     <p class="center_text p1_no_bottom">
         <?php if ($newsitem->getImg()): ?>
