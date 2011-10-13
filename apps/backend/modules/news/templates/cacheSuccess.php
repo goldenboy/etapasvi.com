@@ -38,7 +38,6 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
     <br/>
 	<input type="submit" value="Refresh" name="refresh_cache" />
 </form>
-<hr/>
 <br/>
 
 <form action="" method="post" style="float:left;">
@@ -62,6 +61,42 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
 <br/>
 
 <form action="" method="post" >
+    Item by ID: 
+    <input type="text" value="<?php if (!empty($_POST['clear_item_id'])): echo $_POST['clear_item_id']; endif; ?>" name="clear_item_id" /> 
+    <select name="clear_item_type_name">
+        <?php foreach($item_types as $item_type): ?>
+            <option value="<?php echo $item_type->getId(); ?>" 
+                <?php if ($item_type->getId() == $_POST['clear_item_type_name']): ?>selected="selected"<?php endif ?>
+            ><?php echo $item_type->getName(); ?></option>
+        <?php endforeach ?>
+    </select>    
+    <select name="clear_item_culture">
+        <option value="all">all</option>
+        <?php foreach(UserPeer::getCultures() as $culture): ?>
+            <option value="<?php echo $culture; ?>" 
+                <?php if ($culture == $_POST['clear_item_culture']): ?>selected="selected"<?php endif ?>
+            ><?php echo $culture; ?></option>
+        <?php endforeach ?>
+    </select>    
+	<input type="submit" value="Clear" name="clear_item_culture_submit" /> 	
+</form>
+<br/>
+
+<form action="" method="post" >
+    Clear on any content change: 
+    <select name="clear_on_any_change_culture">
+        <option value="all">all</option>
+        <?php foreach(UserPeer::getCultures() as $culture): ?>
+            <option value="<?php echo $culture; ?>" 
+                <?php if ($culture == $_POST['clear_on_any_change_culture']): ?>selected="selected"<?php endif ?>
+            ><?php echo $culture; ?></option>
+        <?php endforeach ?>
+    </select>    
+	<input type="submit" value="Clear" name="clear_on_any_change_submit" /> 	
+</form>
+<br/>
+
+<form action="" method="post" >
     Path: <input type="text" name="path" value="<?php if (!empty($_POST['path'])): echo $_POST['path']; endif; ?>" size="100"/>     
     <input type="checkbox" <?php if (empty($_POST['path']) || !empty($_POST['al_cultures'])): ?>checked="checked"<?php endif ?> name="al_cultures" /> All cultures
 	<input type="submit" value="Delete" name="clear" /> 
@@ -72,7 +107,6 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
     <?php echo $path; ?><br/>
 <?php endforeach; ?>
 <?php endif ?>
-
 <br/>
 <hr/>
 <br/>

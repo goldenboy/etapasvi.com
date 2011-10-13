@@ -147,6 +147,64 @@ class sfSuperCache
   }
   
   /**
+   * Удаление страниц кэша, которое необходимо выполнять при добавлении/изменении любого окнтента.
+   *
+   * @param unknown_type $culture язык
+   * @return unknown список путей, по которым запущено удаление файлов
+   */
+  public static function clearCacheOnAnyContentChange($culture = 'all')
+  {
+  	$urls_for_clearing = array();
+  	$path_translated_list = array();
+  	
+  	// подготовка путей для поиска файлов  
+  	// http://www.symfony-project.org/cookbook/1_2/en/cross-application-links
+  	$config = new sfRoutingConfigHandler();
+	$routes = $config->evaluate(array(sfConfig::get('sf_apps_dir') . '/frontend/config/routing.yml'));
+	$routing = new sfPatternRouting(new sfEventDispatcher());
+	$routing->setRoutes($routes);
+	
+	//$routing->generate('article', array('id' => $id));
+
+  	// Главная страница
+  	$urls_for_clearing[] = $routing->generate('main', array('sf_culture'=>$culture));  	
+  	// Лента обновлений
+  	$urls_for_clearing[] = $routing->generate('feed', array('sf_culture'=>$culture)) . '*';
+  	// RSS
+  	$urls_for_clearing[] = $routing->generate('news_rss', array('sf_culture'=>$culture)) . '*';
+  	
+  	if ($culture == 'all') {
+  	  $all_cultures = true;
+  	} else {
+  	  $all_cultures = false;
+  	}
+	// удаление файлов кэша
+  	foreach ($urls_for_clearing as $url) {
+	  $path_translated_list = array_merge($path_translated_list, self::alterCacheByPath(true, $url, $all_cultures, true));
+  	}
+  	
+  	return $path_translated_list;
+  }
+  
+  /**
+   * Удаление страниц элемента контента и страниц всех связанных с ним элементов.
+   *
+   * @param unknown_type $item_id
+   * @param unknown_type $item_type
+   * @param unknown_type $culture
+   * @return unknown список путей, по которым запущено удаление файлов
+   */
+  public static function clearCacheOfItem($item_id, $item_type_name, $culture = 'all')
+  {
+  	$path_translated_list = array();
+  	if (!$item_id || !$item_type_name) {
+  		return $path_translated_list;
+  	}
+  	// получаем URL элемента
+  	$urls_for_clearing = Item2itemPeer::getItem($item_type_name, $item_id);
+  }
+  
+  /**
    * Удаление файла кэша - i.html заменяется на d.html
    * Поддерживает маски.
    *
