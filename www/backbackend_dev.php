@@ -1,7 +1,11 @@
 <?php
-if (!in_array(@$_SERVER['REMOTE_ADDR'], array('109.197.73.109', '::1')))
-{
-  die('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
+// режим отладки
+if ((!empty($_GET['debug_key']) && $_GET['debug_key'] == 'b7a3cc471e49223dbb4a89e7d85ab6df')) {
+
+	// ставим куку на сутки
+	setcookie('debug_key', 'b7a3cc471e49223dbb4a89e7d85ab6df', time()+24*60*60, '/');
+} elseif (empty($_COOKIE['debug_key']) || $_COOKIE['debug_key'] != 'b7a3cc471e49223dbb4a89e7d85ab6df') {
+    die('Access denied');
 }
 
 require_once(dirname(__FILE__).'/../config/ProjectConfiguration.class.php');
