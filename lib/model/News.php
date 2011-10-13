@@ -272,4 +272,14 @@ class News extends BaseNews
 	  }
       return trim($link);
 	}
+	
+	/**
+	 * Получение последней даты обновления.
+	 * Берётся максимальная из дат updated_at и updated_at_extra
+	 *
+	 */
+	public function getUpdatedAtMax()
+	{
+	  return max($this->getUpdatedAt(), $this->getUpdatedAtExtra());
+	}
 }

@@ -228,6 +228,10 @@
         <target>Дата</target>
       </trans-unit>
       <trans-unit id="1">
+        <source>Updated on</source>
+        <target>Обновлено</target>
+      </trans-unit>
+      <trans-unit id="1">
         <source>Enlarge</source>
         <target>Увеличить</target>
       </trans-unit>

@@ -228,6 +228,10 @@
         <target></target>
       </trans-unit>
       <trans-unit id="1">
+        <source>Updated on</source>
+        <target></target>
+      </trans-unit>      
+      <trans-unit id="1">
         <source>Enlarge</source>
         <target>Ingrandisci</target>
       </trans-unit>
