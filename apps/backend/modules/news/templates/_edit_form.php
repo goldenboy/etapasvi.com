@@ -64,7 +64,7 @@
   'include_remove' => true,
 )); echo $value ? $value : '&nbsp;' ?>
 
-    <input type="checkbox" value="1" id="photo_watermark" name="photo[watermark]"> watermark
+    <input type="checkbox" value="1" id="photo_watermark" name="news[watermark]"> watermark
 
     </div>
 <?php else: ?>
