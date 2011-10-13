@@ -30,7 +30,7 @@ $author = $audio->getAuthor($sf_user->getCulture(), true);
     <?php echo html_entity_decode($body); ?>
     <?php endif ?>
 
-    </div>
-    
+    </div>    
 </div>
+<?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_AUDIO, 'item_id'=>$audio->getId())) ?> 
 <?php endif ?>
