@@ -28,3 +28,4 @@ foreach($audio_list as $i=>$audio):
 endforeach 
 ?>
 );
+var footer_text = "<?php echo str_replace('"', '\"', str_replace("\n", "", get_partial('global/footer_text'))); ?>";
