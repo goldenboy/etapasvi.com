@@ -56,12 +56,12 @@ class Item2itemPeer extends BaseItem2itemPeer
    */
   public static function getRelatedObjects($item1_type, $item1_id, $item2_type)
   { 
-  	if (!is_int($item1_type)) {
+  	if (!is_numeric($item1_type)) {
   	  $item1_type = ItemtypesPeer::getItemTypeId($item1_type);
   	}
   	$item_type1_name = ItemtypesPeer::getItemTypeName($item1_type);
   	
-  	if (!is_int($item2_type)) {  	  
+  	if (!is_numeric($item2_type)) {  	  
   	  $item2_type = ItemtypesPeer::getItemTypeId($item2_type);
   	}
   	$item_type2_name = ItemtypesPeer::getItemTypeName($item2_type);
