@@ -11,7 +11,7 @@
 <h2><?php echo __('Latest Photos') ?></h2>
 <?php include_component('photo', 'latest'); ?>
 <p class="p1_no_top no_decor right">
-	<a href="<?php echo url_for('photo_albums'); ?>" class="no_decor"><?php echo __('Photo') ?> »</a>
+	<a href="<?php echo url_for('photoalbum_index'); ?>" class="no_decor"><?php echo __('Photo') ?> »</a>
 </p>
 
 <h2><?php echo __('Latest Video') ?></h2>

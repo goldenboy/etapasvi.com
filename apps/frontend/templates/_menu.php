@@ -6,7 +6,7 @@
 		<?php /*<li><a href="<?php echo url_for('@intro', true); ?>" title="<?php echo __('Buddha Boy Nepal') ?>" id="mi_intro"><?php echo __('Intro') ?></a></li> */ ?>
         <li id="mi_bio"><a href="<?php echo url_for('@biography', true); ?>" title="<?php echo __('Om Namo Guru Buddha Gyani Biography') ?>"><?php echo __('Biography') ?></a></li>
 		<li id="mi_news"><a href="<?php echo url_for('@news_index', true); ?>" title="<?php echo __('Buddha Boy News') ?>"><?php echo __('News') ?></a></li>
-		<li id="mi_photo"><a href="<?php echo url_for('@photo_albums', true); ?>" title="<?php echo __('Palden Dorje Photo') ?>"><?php echo __('Photo') ?></a></li>
+		<li id="mi_photo"><a href="<?php echo url_for('@photoalbum_index', true); ?>" title="<?php echo __('Palden Dorje Photo') ?>"><?php echo __('Photo') ?></a></li>
 		<li id="mi_video"><a href="<?php echo url_for('@video_index', true); ?>" title="<?php echo __('Ram Bahadur Bomjan Video') ?>"><?php echo __('Video') ?></a></li>
 		<li id="mi_audio"><a href="<?php echo url_for('@audio_index', true); ?>" title="<?php echo __('Audio') ?>"><?php echo __('Audio') ?></a></li>
         <li id="mi_teachings"><a href="<?php echo url_for('@teachings_index', true); ?>" title="<?php echo __('Teachings') ?>"><?php echo __('Teachings') ?></a></li>

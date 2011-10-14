@@ -274,6 +274,7 @@ class sfRoute implements Serializable
   
   /**
    * Перезапись URL - сжатие.
+   * Выполняется только во frontend или если $forced
    *
    * /ru/news/show/id/83/title/novosti-s-mahadarshana 
    * превращается в
@@ -284,10 +285,14 @@ class sfRoute implements Serializable
    * /en/photo/album/43    
    * 
    * При тестировании учитывать, что маршруты кэшируются.
+   *
+   * @param unknown_type $url URL для сжатия
+   * @param unknown_type $forced принудительно выполнять перезапись
+   * @return unknown
    */
-  public static function urlRewriteCompress($url)
+  public static function urlRewriteCompress($url, $forced = false)
   {
-    if ( sfContext::getInstance()->getConfiguration()->getApplication() == 'frontend' ) {
+    if ( sfContext::getInstance()->getConfiguration()->getApplication() == 'frontend' || $forced) {
 	    $url_info = parse_url($url);
 	    
 	    preg_match("/^\/([^\/]+)\/([^\/]+)\/show\/id\/([\d]+)\/?(title\/(.+))?/", $url_info['path'], $matches);

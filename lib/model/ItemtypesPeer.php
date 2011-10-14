@@ -29,9 +29,31 @@ class ItemtypesPeer extends BaseItemtypesPeer
   	self::ITEM_TYPE_AUDIO      => self::ITEM_TYPE_NAME_AUDIO,
   );
   
+  /**
+   * Получение названия типа по ID.
+   *
+   * @param unknown_type $item_type_id
+   * @return unknown
+   */
   public static function getItemTypeName( $item_type_id )
   {
   	return self::$item_type_names[ $item_type_id ];
+  }
+  
+  /**
+   * Получение ID по названию типа.
+   *
+   * @param unknown_type $item_type_id
+   * @return unknown
+   */
+  public static function getItemTypeId( $item_type_name )
+  {
+  	foreach (self::$item_type_names as $id=>$name) {
+  	  if (strtolower($name) == strtolower($item_type_name)) {
+  	  	return $id;
+  	  }
+  	}
+  	return '';
   }
   
   public static function getItemTypeNameLower( $item_type_id )

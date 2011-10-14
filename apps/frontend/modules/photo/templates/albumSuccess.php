@@ -2,7 +2,7 @@
 <h1><?php echo __('Photo Album') ?></h1>
 
 <p class="bread_crumbs">	
-	<a href="<?php echo url_for('@main'); ?>"><?php echo __('Home') ?></a> » <a href="<?php echo url_for('@photo_albums'); ?>"><?php echo __('Photo Albums') ?></a> » <?php echo $photoalbum->getTitle($sf_user->getCulture(), true);?>
+	<a href="<?php echo url_for('@main'); ?>"><?php echo __('Home') ?></a> » <a href="<?php echo url_for('photoalbum_index'); ?>"><?php echo __('Photo Albums') ?></a> » <?php echo $photoalbum->getTitle($sf_user->getCulture(), true);?>
 </p>
 <p class="light">
     <?php echo format_datetime( $photoalbum->getCreatedAt(), 'd MMMM yyyy'); ?> | 

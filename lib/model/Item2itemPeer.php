@@ -49,15 +49,23 @@ class Item2itemPeer extends BaseItem2itemPeer
   /**
    * Получение элементов определённого типа, связанных с данным.
    *
-   * @param unknown_type $item1_type
-   * @param unknown_type $item1_id
+   * @param unknown_type $item1_type можно передавать ID либо название
+   * @param unknown_type $item1_id можно передавать ID либо название
    * @param unknown_type $item2_type
    * @return unknown
    */
   public static function getRelatedObjects($item1_type, $item1_id, $item2_type)
   { 
+  	if (!is_int($item1_type)) {
+  	  $item1_type = ItemtypesPeer::getItemTypeId($item1_type);
+  	}
   	$item_type1_name = ItemtypesPeer::getItemTypeName($item1_type);
+  	
+  	if (!is_int($item2_type)) {  	  
+  	  $item2_type = ItemtypesPeer::getItemTypeId($item2_type);
+  	}
   	$item_type2_name = ItemtypesPeer::getItemTypeName($item2_type);
+  	
   	$peer_class      = ucfirst($item_type2_name) . 'Peer';
   	//$peer_i18n_class = ucfirst(ItemtypesPeer::getItemTypeName($item_type_id)) . 'I18nPeer';
   	//$peer_class_vars = get_class_vars('BaseVideoPeer');
@@ -73,23 +81,24 @@ class Item2itemPeer extends BaseItem2itemPeer
   		 
   	// есть ли контент на языке пользователя  	 	 
 	$fn = array($peer_class, 'addVisibleCriteria');
+
 	try {
 		call_user_func( $fn, $c );  	  
 	} catch (Exception $e) {	 
 	  return false;
 	}
-  	
+
   	//$c->addJoin( NewsI18nPeer::ID, News2videoPeer::NEWS_ID );  	
   	//$c->add( NewsI18nPeer::CULTURE, sfContext::getInstance()->getUser()->getCulture() );
   	//$c->add( NewsI18nPeer::BODY, '', Criteria::NOT_EQUAL );
   	
 	$fn = array($peer_class, 'doSelectWithI18n');
 	try {
-	$objects1 = call_user_func( $fn, $c );  	  
+	  $objects1 = call_user_func( $fn, $c );  	  
 	} catch (Exception $e) {	 
 	  return false;
 	}
-	
+
 	// справа
   	$c = new Criteria();  	  	  
   	$c->add( Item2itemPeer::ITEM2_TYPE, $item1_type );
@@ -116,7 +125,7 @@ class Item2itemPeer extends BaseItem2itemPeer
 	  return false;
 	}
 	return array_merge($objects1, $objects2);
-  }
+  }    
   
   /**
    * Получение всех связанных объектов независимо от их типа
@@ -127,13 +136,16 @@ class Item2itemPeer extends BaseItem2itemPeer
   public static function getAllRelatedObjects($item1_type, $item1_id)
   {
   	$objects = array();
-  	
+
   	// все типы элементов
   	$types = ItemtypesPeer::doSelect(new Criteria());
   	
   	// получение элементов отдельно по типам
   	foreach ($types as $type) {
-  	  $objects[] = self::getRelatedObjects($item1_type, $item1_id, $type);
+  	  $related_objects = self::getRelatedObjects($item1_type, $item1_id, $type);
+  	  if (count($related_objects)) {
+  	    $objects = array_merge($objects, $related_objects);
+  	  }
   	}
   	
   	return $objects;

@@ -167,12 +167,13 @@ photo_index:
 photo:
   url:   /:sf_culture/photo/index
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
+  
 
 photo_show:
   url:   /:sf_culture/photo/show
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
   
-photo_albums:
+photoalbum_index:
   url:   /:sf_culture/photo/albums
   requirements: { sf_culture: (?:en|ru|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et) }
 

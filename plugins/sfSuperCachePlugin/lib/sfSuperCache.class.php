@@ -147,6 +147,23 @@ class sfSuperCache
   }
   
   /**
+   * Получение объекта для генерации путей.
+   * Берётся из файла routing.yml фронтенда.
+   *
+   */
+  public static function getRouting()
+  {
+  	// подготовка путей для поиска файлов  
+  	// http://www.symfony-project.org/cookbook/1_2/en/cross-application-links
+  	$config = new sfRoutingConfigHandler();
+	$routes = $config->evaluate(array(sfConfig::get('sf_apps_dir') . '/frontend/config/routing.yml'));
+	$routing = new sfPatternRouting(new sfEventDispatcher());
+	$routing->setRoutes($routes);
+	
+	return $routing;
+  }
+  
+  /**
    * Удаление страниц кэша, которое необходимо выполнять при добавлении/изменении любого окнтента.
    *
    * @param unknown_type $culture язык
@@ -157,13 +174,7 @@ class sfSuperCache
   	$urls_for_clearing = array();
   	$path_translated_list = array();
   	
-  	// подготовка путей для поиска файлов  
-  	// http://www.symfony-project.org/cookbook/1_2/en/cross-application-links
-  	$config = new sfRoutingConfigHandler();
-	$routes = $config->evaluate(array(sfConfig::get('sf_apps_dir') . '/frontend/config/routing.yml'));
-	$routing = new sfPatternRouting(new sfEventDispatcher());
-	$routing->setRoutes($routes);
-	
+	$routing = self::getRouting();
 	//$routing->generate('article', array('id' => $id));
 
   	// Главная страница
@@ -201,30 +212,83 @@ class sfSuperCache
   	  return $path_translated_list;
   	}  	  	
   	// получаем URL элемента
-
   	$item = Item2itemPeer::getItem($item_type_name, $item_id);
   	if (!$item) {
   	  return $path_translated_list;
   	}
 
   	// получаем связанные элементы
-  	$items   = Item2itemPeer::getAllRelatedObjects($item_id, $item_type_name);
-  	$items[] = $item;
-  	
+  	$items   = Item2itemPeer::getAllRelatedObjects($item_type_name, $item_id);
+  	// фото будет удалена вместе с фотографиями её альбома
+  	if ($item_type_name != ItemtypesPeer::ITEM_TYPE_NAME_PHOTO) {
+  	  $items[] = $item;
+  	}
+
   	// получаем URL данного и связанных элементов
   	foreach ($items as $item_for_clearing) {
   	  try {
-  	    $urls_for_clearing[] = $item_for_clearing->getUrl();
+  	    $url = $item_for_clearing->getUrl(); 	       	      
+  	    $urls_for_clearing[] = $url;
   	  } catch (Exception $e) {
   	  	echo $e->getMessage();
   	  }
   	}
   	
-  	print_r( $urls_for_clearing );
+  	// удаление ряда страниц в зависимости от типа элемента
+  	$routing = self::getRouting();
+  	
+  	// очищается список элементов
+  	// для Photo порядок очистки особый
+  	if ($item_type_name != ItemtypesPeer::ITEM_TYPE_NAME_PHOTO) {
+	  $urls_for_clearing[] = $routing->generate(strtolower($item_type_name) . '_index', array('sf_culture'=>$culture)) . '*';
+  	}
+  	
+  	// Новость
+  	if ($item_type_name == ItemtypesPeer::ITEM_TYPE_NAME_NEWS) {
+  	  // удаление страниц списка новостей в зависимости от типа данной новости
+  	  $urls_for_clearing[] = $routing->generate(strtolower($item->getTypeName()) . '_index', array('sf_culture'=>$culture)) . '*';
+  	}
+  	// Фото
+  	if ($item_type_name == ItemtypesPeer::ITEM_TYPE_NAME_PHOTO) {
+  	  // очистка фотоальбома, которому принадлежит фото
+  	  $photoalbum = $item->getPhotoalbum();
+
+  	  // очищается фотоальбом
+  	  $urls_for_clearing[] = $photoalbum->getUrl();
+  	  // все фото в фотоальбоме
+  	  $c = new Criteria();
+  	  $c->add(PhotoPeer::PHOTOALBUM_ID, $photoalbum->getId());
+  	  $photoalbum_photos = PhotoPeer::doSelect($c);
+  	  foreach ($photoalbum_photos as $photo) {
+  	  	$photo_url = sfRoute::urlRewriteCompress( $photo->getUrl(), true );
+  	  	$urls_for_clearing[] = $photo_url;
+  	  	// плюс ссылка на контент
+  	  	// http://www.etapasvi.com/en/photo/content/1243  	  	
+  	  	$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
+  	  }
+  	  //$urls_for_clearing[] = $routing->generate(strtolower($item->getTypeName()) . '_index', array('sf_culture'=>$culture)) . '*';
+  	}
+  	
 	// удаление файлов кэша
   	foreach ($urls_for_clearing as $url) {
-	  //$path_translated_list = array_merge($path_translated_list, self::alterCacheByPath(true, $url, $all_cultures, true));
+	  // вручную удаляем всё, кроме пути
+      $url_parts = parse_url($url);
+      $url = preg_replace("/.*\.php(.*)/", "$1", $url_parts['path']);
+      // вручную добавляем язык в начале
+      if (!preg_match("/^\/{$culture}\/.*/", $url)) {
+        $url = '/' . $culture . $url;  	    
+      }
+      // принудительно выполняется перезапись URL, т.к. для backend она отключена
+      $url = sfRoute::urlRewriteCompress($url, true);
+      
+      // заменяем названия элементов на *
+      // считаем, что первая цифра в URL - это первая цифра ID
+      $url = preg_replace("/([^\d]+\/\d+).*/", "$1*", $url);
+          
+	  $path_translated_list = array_merge($path_translated_list, self::alterCacheByPath(true, $url, $all_cultures, true));
   	}
+  	
+  	return $path_translated_list;
   }
   
   /**
