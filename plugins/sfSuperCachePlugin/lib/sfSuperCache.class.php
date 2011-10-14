@@ -105,7 +105,7 @@ class sfSuperCache
 	  // удаляем для всех языков
 	  $culture_list = UserPeer::getCultures();	  
 	} else {
-	  $culture_list = array('fake');
+	  $culture_list = array('all');
 	}
 	
 	// формирование списка путей
@@ -267,6 +267,12 @@ class sfSuperCache
   	  	$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
   	  }
   	  //$urls_for_clearing[] = $routing->generate(strtolower($item->getTypeName()) . '_index', array('sf_culture'=>$culture)) . '*';
+  	}
+  	
+  	if ($culture == 'all') {
+  	  $all_cultures = true;
+  	} else {
+  	  $all_cultures = false;
   	}
   	
 	// удаление файлов кэша
