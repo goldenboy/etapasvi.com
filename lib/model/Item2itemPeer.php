@@ -46,6 +46,14 @@ class Item2itemPeer extends BaseItem2itemPeer
   	}
   }
   
+  /**
+   * Получение элементов определённого типа, связанных с данным.
+   *
+   * @param unknown_type $item1_type
+   * @param unknown_type $item1_id
+   * @param unknown_type $item2_type
+   * @return unknown
+   */
   public static function getRelatedObjects($item1_type, $item1_id, $item2_type)
   { 
   	$item_type1_name = ItemtypesPeer::getItemTypeName($item1_type);
@@ -109,4 +117,26 @@ class Item2itemPeer extends BaseItem2itemPeer
 	}
 	return array_merge($objects1, $objects2);
   }
+  
+  /**
+   * Получение всех связанных объектов независимо от их типа
+   *
+   * @param unknown_type $item1_type
+   * @param unknown_type $item1_id
+   */
+  public static function getAllRelatedObjects($item1_type, $item1_id)
+  {
+  	$objects = array();
+  	
+  	// все типы элементов
+  	$types = ItemtypesPeer::doSelect(new Criteria());
+  	
+  	// получение элементов отдельно по типам
+  	foreach ($types as $type) {
+  	  $objects[] = self::getRelatedObjects($item1_type, $item1_id, $type);
+  	}
+  	
+  	return $objects;
+  }
+  
 }

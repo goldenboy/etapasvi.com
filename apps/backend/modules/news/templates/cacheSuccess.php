@@ -65,8 +65,8 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
     <input type="text" value="<?php if (!empty($_POST['clear_item_id'])): echo $_POST['clear_item_id']; endif; ?>" name="clear_item_id" /> 
     <select name="clear_item_type_name">
         <?php foreach($item_types as $item_type): ?>
-            <option value="<?php echo $item_type->getId(); ?>" 
-                <?php if ($item_type->getId() == $_POST['clear_item_type_name']): ?>selected="selected"<?php endif ?>
+            <option value="<?php echo $item_type->getName(); ?>" 
+                <?php if ($item_type->getName() == $_POST['clear_item_type_name']): ?>selected="selected"<?php endif ?>
             ><?php echo $item_type->getName(); ?></option>
         <?php endforeach ?>
     </select>    
@@ -78,7 +78,7 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
             ><?php echo $culture; ?></option>
         <?php endforeach ?>
     </select>    
-	<input type="submit" value="Clear" name="clear_item_culture_submit" /> 	
+	<input type="submit" value="Clear" name="clear_item_submit" /> 	
 </form>
 <br/>
 

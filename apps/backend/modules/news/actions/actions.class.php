@@ -758,17 +758,17 @@ class newsActions extends autonewsActions
   	
   	// Удаление страниц кэша, которое необходимо выполнять при добавлении/изменении любого окнтента.
   	if (!empty($_POST['clear_on_any_change_submit'])) {
-  	  $this->clear_pathes = sfSuperCache::clearCacheOnAnyContentChange(
-  	    						$_POST['clear_item_id'], 
-  	    						$_POST['clear_item_type_name'],
-  	    						$_POST['clear_item_culture']
-  	  );
+  	  $this->clear_pathes = sfSuperCache::clearCacheOnAnyContentChange($_POST['clear_on_any_change_culture']);
   	}
   	
   	// Удаление страниц элемента контента и страниц всех связанных с ним элементов
   	$this->item_types = ItemtypesPeer::doSelect(new Criteria());
   	if (!empty($_POST['clear_item_submit'])) {
-  	  $this->clear_pathes = sfSuperCache::clearCacheOfItem($_POST['clear_on_any_change_culture']);
+  	  $this->clear_pathes = sfSuperCache::clearCacheOfItem(
+  	    						$_POST['clear_item_id'], 
+  	    						$_POST['clear_item_type_name'],
+  	    						$_POST['clear_item_culture']
+  	  );
   	}
   	
   	

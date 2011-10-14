@@ -198,10 +198,33 @@ class sfSuperCache
   {
   	$path_translated_list = array();
   	if (!$item_id || !$item_type_name) {
-  		return $path_translated_list;
-  	}
+  	  return $path_translated_list;
+  	}  	  	
   	// получаем URL элемента
-  	$urls_for_clearing = Item2itemPeer::getItem($item_type_name, $item_id);
+
+  	$item = Item2itemPeer::getItem($item_type_name, $item_id);
+  	if (!$item) {
+  	  return $path_translated_list;
+  	}
+
+  	// получаем связанные элементы
+  	$items   = Item2itemPeer::getAllRelatedObjects($item_id, $item_type_name);
+  	$items[] = $item;
+  	
+  	// получаем URL данного и связанных элементов
+  	foreach ($items as $item_for_clearing) {
+  	  try {
+  	    $urls_for_clearing[] = $item_for_clearing->getUrl();
+  	  } catch (Exception $e) {
+  	  	echo $e->getMessage();
+  	  }
+  	}
+  	
+  	print_r( $urls_for_clearing );
+	// удаление файлов кэша
+  	foreach ($urls_for_clearing as $url) {
+	  //$path_translated_list = array_merge($path_translated_list, self::alterCacheByPath(true, $url, $all_cultures, true));
+  	}
   }
   
   /**
