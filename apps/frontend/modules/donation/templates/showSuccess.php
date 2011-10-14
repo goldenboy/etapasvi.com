@@ -43,10 +43,9 @@ smsDonateLanguage = "english";
 <script src="http://www.zaypay.com/pay/116564.js" type="text/javascript"></script>
 <a href="http://www.zaypay.com/pay/116564" onclick="ZPayment(this); return false"><img src="http://www.zaypay.com/pay/116564/img" border="0" /></a>  
 </p>
-
+<?php /*
 <h2 class="center"><?php echo __('Bank account') ?></h2>
 <p class="center_text">
-    <?php /*<a href="http://paldendorje.com/project/donation.html" target="_blank">http://paldendorje.com/project/donation.html</a> */ ?>
     <a href="http://www.dharmasangha.org.np/en/Contents/donation.html" target="_blank">http://www.dharmasangha.org.np/en/Contents/donation.html</a>
     <br/><br/>    
     <strong>Organisation Name:</strong> Bodhi Shrawan Dharma Sangha
@@ -59,6 +58,7 @@ smsDonateLanguage = "english";
     <br/><strong>Tel:</strong> 977-1-4418456
     <br/><strong>Fax No:</strong> 977-1-4417428
 </p>
+*/ ?>
 
 <br /><br />
 <?php include_component('comments', 'show'); ?>	
