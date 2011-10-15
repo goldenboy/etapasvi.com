@@ -533,9 +533,10 @@ class sfPatternRouting extends sfRouting
     
     // чтобы нельзя было обратиться к развёрнутому URL сжимаем текущий URL
     // и смотрим, если сжался, значит сейчас нахомся на развёрнутом, делаем редирект на сжатый
+    // Preview смотреть можно.
     // http://tasks.etapasvi.com/issues/214
     $url_compressed = sfRoute::urlRewriteCompress($url);
-    if ($url_compressed != $url) {
+    if ($url_compressed != $url && !strstr($url, '/preview/')) {
     	sfContext::getInstance()->getController()->redirect($url_compressed);
     	exit();
     }
