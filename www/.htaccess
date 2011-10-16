@@ -43,7 +43,7 @@ ErrorDocument 500 /errors/500.html
   
   # проверка доменного имени и рекдирект на домен по умолчанию, если передан неверный
   # учитывать, что доменное имя хардкодится в .php
-  RewriteCond %{HTTP_HOST} !^(www.etapasvi.com|m.etapasvi.com|web1.etapasvi.com|web1.www.etapasvi.com|web1.m.etapasvi.com|back1.www.etapasvi.com|back1.m.etapasvi.com)$
+  RewriteCond %{HTTP_HOST} !^(.*\.etapasvi\.com|etapasvi\.com)$
   RewriteRule ^ http://www.etapasvi.com [L,R=301]
 
   # Перезапись отключена для:  
