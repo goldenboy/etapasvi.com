@@ -7,8 +7,8 @@
             <?php echo $newsitem->getTitle(); ?> <?php /*if ($newsitem->getIsTeaching()): ?>[<?php echo __('teaching') ?>]<?php endif */?>
         </a>
     </h2>
-    <div class="date"><?php if ($newsitem->getExtradate()): ?><?php echo $newsitem->getExtradate(); ?><?php else: ?><?php echo format_datetime( $newsitem->getDate(), 'd MMMM yyyy'); ?><?php endif ?>
-         / <?php echo __('Updated on') ?> <?php echo format_datetime( $newsitem->getUpdatedAtMax(), 'd MMMM yyyy'); ?>
+    <div class="date"><?php if ($newsitem->getExtradate()): ?><?php echo $newsitem->getExtradate(); ?> / <?php elseif ($newsitem->getDate()): ?><?php echo format_datetime( $newsitem->getDate(), 'd MMMM yyyy'); ?> / <?php endif ?>
+        <?php echo __('Updated on') ?> <?php echo format_datetime( $newsitem->getUpdatedAtMax(), 'd MMMM yyyy'); ?>
     </div>
     <div class="short_body p">
         <?php if ($newsitem->getImg()): ?>

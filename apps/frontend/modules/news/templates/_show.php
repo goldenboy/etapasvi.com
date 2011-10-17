@@ -6,11 +6,11 @@
     </h1>
     <p class="date p1_no_top center_text">
         <?php if ($newsitem->getExtradate()): ?>
-            <?php echo $newsitem->getExtradate(); ?>
-        <?php else: ?>
-            <?php echo format_datetime( $newsitem->getDate(), 'd MMMM yyyy'); ?>
+            <?php echo $newsitem->getExtradate(); ?> / 
+        <?php elseif ($newsitem->getDate()): ?>
+            <?php echo format_datetime( $newsitem->getDate(), 'd MMMM yyyy'); ?>  / 
         <?php endif ?>
-         / <?php echo __('Updated on') ?> <?php echo format_datetime( $newsitem->getUpdatedAtMax(), 'd MMMM yyyy'); ?>
+        <?php echo __('Updated on') ?> <?php echo format_datetime( $newsitem->getUpdatedAtMax(), 'd MMMM yyyy'); ?>
     </p>
     <p class="center_text p1_no_bottom">
         <?php if ($newsitem->getImg()): ?>

@@ -4,68 +4,68 @@
     <body>
       <trans-unit id="1">
         <source>A message of peace to our world today</source>
-        <target></target>
+        <target>Rahusõnum meie tänapäeva maailmale</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Om Namo Guru Buddha Gyani</source>
-        <target></target>
+        <target>Om Namo Guru Buddha Gyani</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Please, enable JavaScript!</source>
-        <target></target>
+        <target>Palun võimalda JavaScript'i!</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Copyright</source>
-        <target></target>
+        <target>Autoriõigus</target>
       </trans-unit>
       <trans-unit id="1">
         <source>All Rights Reserved</source>
-        <target></target>
+        <target>Kõik õigused kaitstud</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Home</source>
-        <target></target>
+        <target>Kodu</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Buddha Boy</source>
-        <target></target>
+        <target>Buddha Poiss</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Palden Dorje</source>
-        <target></target>
+        <target>Palden Dorje</target>
       </trans-unit>     
       <trans-unit id="1">
         <source>Dharma Sangha</source>
-        <target></target>
+        <target>Dharma Sangha</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Buddha Boy News</source>
-        <target></target>
+        <target>Buddha Poisi uudised</target>
       </trans-unit>
       <trans-unit id="1">
         <source>News</source>
-        <target></target>
+        <target>Uudised</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Palden Dorje Photo</source>
-        <target></target>
+        <target>Palden Dorje fotod</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Photo</source>
-        <target></target>
+        <target>Fotod</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Ram Bahadur Bomjan Video</source>
-        <target></target>
+        <target>Ram Bahadur Bomjan video</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Video</source>
-        <target></target>
+        <target>Video</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Om Namo Guru Buddha Gyani Biography</source>
-        <target></target>
+        <target>Om Namo Guru Buddha Gyani elulugu</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Biography</source>
@@ -73,283 +73,303 @@
       </trans-unit>      
 	  <trans-unit id="1">
         <source>Teachings</source>
-        <target></target>
+        <target>Õpetused</target>
       </trans-unit>
 	  <trans-unit id="1">
         <source>Books</source>
-        <target></target>
+        <target>Raamatud</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Encyclopedia</source>
-        <target></target>
+        <target>Entsüklopeedia</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Buddha Boy Live Stream</source>
-        <target></target>
+        <target>Buddha Poisi elu kulg</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Live Stream</source>
-        <target></target>
+        <target>Elu kulg</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Dharma Hall</source>
-        <target></target>
+        <target>Dharma Koda</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Social Tools</source>
-        <target></target>
+        <target>Üldkasutatavad lingid</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Other</source>
-        <target></target>
+        <target>Muu</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Member</source>
-        <target></target>
+        <target>Liikmed</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Twitter</source>
-        <target></target>
+        <target>Twitter</target>
       </trans-unit>
       <trans-unit id="1">
         <source>LJ</source>
-        <target></target>
+        <target>EP</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Live Journal</source>
-        <target></target>
+        <target>Elav Päevik</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Feed</source>
-        <target></target>
+        <target>Uudisvoog</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Search</source>
-        <target></target>
+        <target>Otsing</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Contact Us</source>
-        <target></target>
+        <target>Võta ühendust</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Forum</source>
-        <target></target>
+        <target>Foorum</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Blessing</source>
-        <target></target>
+        <target>Õnnistus</target>
       </trans-unit>  
       <trans-unit id="1">
         <source>FAQ</source>
-        <target></target>
+        <target>Korduvad Küsimused </target>
       </trans-unit>
       <trans-unit id="1">
         <source>Translation Fundraising</source>
-        <target></target>
+        <target>Tõlgete Kogumine</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Audio</source>
-        <target></target>
+        <target>Helisalvestised</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Religious Forest</source>
-        <target></target>
+        <target>Religioosne Mets</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Donation</source>
-        <target></target>
+        <target>Annetus</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Chat</source>
-        <target></target>
+        <target>Vestlus</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Servers</source>
-        <target></target>
+        <target>Serverid</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
-        <target></target>
+        <target>Dharma Sangha (ehk Palden Dorje, Ram Bahadur Bomjan, Buddha Poiss Nepaalist): Uudised, Fotod, Videod, Elulugu, Kõned</target>
       </trans-unit>
       <trans-unit id="1">
         <source>This page is translation of corresponding English page, switch into English language to see original text.</source>
-        <target></target>
+        <target>See leht on vastava inglise keelse lehe tõlge, kliki inglise keele peale, et näha originaalteksti.</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Website is developed and supported on a voluntary basis.</source>
-        <target></target>
+        <target>Veebilehte arendatakse ja toetatakse vabatahtlikult.</target>
       </trans-unit>
       <trans-unit id="1">
         <source>If you can help in any way – email at</source>
-        <target></target>
+        <target>Kui sa saad kuidagi aidata, siis kirjuta e-post aadressil</target>
       </trans-unit>
 
 <!-- News _show -->
       <trans-unit id="1">
         <source>Read more</source>
-        <target></target>
+        <target>Loe veel</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Comments</source>
-        <target></target>
+        <target>Kommentaarid</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Source</source>
-        <target></target>
+        <target>Allikas</target>
       </trans-unit>
 
 <!-- misc -->
       <trans-unit id="1">
         <source>Go to top</source>
-        <target></target>
+        <target>Mine algusesse</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Text</source>
-        <target></target>
+        <target>Tekst</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Author</source>
-        <target></target>
+        <target>Autor</target>
       </trans-unit>
       <trans-unit id="1">
         <source>teaching</source>
-        <target></target>
+        <target>õpetus</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Translated by</source>
-        <target></target>
+        <target>Tõlkinud</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Download</source>
-        <target></target>
+        <target>Laadi alla</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Date</source>
-        <target></target>
+        <target>Kuupäev</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Updated on</source>
-        <target></target>
+        <target>Uuendatud</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Enlarge</source>
-        <target></target>
+        <target>Suurenda</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Terthup Dharma Hall</source>
-        <target></target>
+        <target>Terthup Dharma Koda</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Back</source>
-        <target></target>
+        <target>Tagasi</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Footnote</source>
-        <target></target>
+        <target>Allmärkus</target>
       </trans-unit>
       
 <!-- audio -->
       <trans-unit id="1">
         <source>Size</source>
-        <target></target>
+        <target>Suurus</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Duration</source>
-        <target></target>
+        <target>Kestus</target>
       </trans-unit>
       
 <!-- mobile -->
       <trans-unit id="1">
         <source>Mobile</source>
-        <target></target>
+        <target>Mobiilne</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Classic</source>
-        <target></target>
+        <target>Klassikaline</target>
       </trans-unit>
 
 <!-- video -->
       <trans-unit id="1">
         <source>Watch on YouTube</source>
-        <target></target>
+        <target>Vaata YouTube's</target>
       </trans-unit>
 
 <!--  offer translation -->
       <trans-unit id="1">
         <source>offer translation</source>
-        <target></target>
+        <target>anneta tõlge</target>
       </trans-unit> 
 
       <trans-unit id="1">
         <source>Error occured while loading form. Please, try again.</source>
-        <target></target>
+        <target>Allalaadimisel tekkis viga, palun proovige uuesti.</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Thanks! Your translation has been sent.</source>
-        <target></target>
+        <target>Täname! Tõlge on saadetud.</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Translate News, Photo, Audio or Video, presented on this page into any language.</source>
-        <target></target>
+        <target>Tõlgi uudiseid, fotosid, helisalvestisi või videosid mis on avaldatud sellel lehel ükskõik millisesse keelde.</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Translate website interface from English into any other language.</source>
-        <target></target>
+        <target>Tõlgi koduleht inglise keelest ükskõik millisesse keelde.</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Watch video tutorial</source>
+        <target>Vaata õppevideot</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Tips for translators:</source>
         <target></target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Before performing translation, make sure, that text you are going to translate is not translated yet on website.</source>
+        <source>Carefully read/watch instructions – respect your time and website programmer's time.</source>
         <target></target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>If you would like to correct translation you sent, send both incorrect and correct versions in your language. It would allow programmer to find text, which should be replaced with correct one.</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Before performing translation make sure, that text you are going to translate is not translated yet on website.</source>
+        <target>Enne tõlke sooritamist, ole kindel, et tekst mida sa soovid tõlkida ei ole juba veebilehel tõlgitud.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Distortion and misinterpretation of information during translation is not acceptable.</source>
+        <target></target>
+      </trans-unit>      
       
       <trans-unit id="1">
         <source>for example, if you translate news item, copy it's title and whole text into this field</source>
-        <target></target>
+        <target>näiteks, kui sa tõlgid uudiseid, siis kopeeri ja paiguta pealkiri ja kogu tekst sellesse aknasse</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>for example, if you translate news item, paste translation of it's title and text into this field</source>
-        <target></target>
+        <target>näiteks, kui sa tõlgid uudist, siis pane selle uudise pealkiri ja tõlge sellesse aknasse</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Translation</source>
-        <target></target>
+        <target>Tõlge</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Language</source>
-        <target></target>
+        <target>Keel</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>optional</source>
-        <target></target>
+        <target>vabatahtlik</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Send</source>
-        <target></target>
+        <target>Saada</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Comment</source>
-        <target></target>
+        <target>Märkus</target>
       </trans-unit> 
 
 <!-- 404 -->
       <trans-unit id="1">
         <source>Page Not Found or Not Translated</source>
-        <target></target>
+        <target>Lehekülge ei leitud või ei ole tõlgitud</target>
       </trans-unit>
 
 <!-- утф -->

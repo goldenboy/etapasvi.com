@@ -5,7 +5,7 @@
 
       <trans-unit id="1">
         <source>A message of peace to our world today</source>
-        <target></target>
+        <target>今日の世界への平和のメッセージです</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -95,12 +95,12 @@
 
 	  <trans-unit id="1">
         <source>Books</source>
-        <target></target>
+        <target>書籍</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Encyclopedia</source>
-        <target></target>
+        <target>百科事典</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -365,6 +365,11 @@
       
       <trans-unit id="1">
         <source>Before performing translation, make sure, that text you are going to translate is not translated yet on website.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Distortion and misinterpretation of information during translation is not acceptable.</source>
         <target></target>
       </trans-unit>
 

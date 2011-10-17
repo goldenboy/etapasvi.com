@@ -313,8 +313,28 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Before performing translation, make sure, that text you are going to translate is not translated yet on website.</source>
+        <source>Tips for translators:</source>
+        <target>Советы переводчикам:</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Carefully read/watch instructions – respect your time and website programmer's time.</source>
+        <target>Внимательно ознакомьтесь с инструкциями – цените своё время и время программиста.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>If you would like to correct translation you sent, send both incorrect and correct versions in your language. It would allow programmer to find text, which should be replaced with correct one.</source>
+        <target>Если вы хотите внести изменения в ранее отправленный перевод, отправляйте и прежний и новый варианты. Это позволит программисту найти текст, который должен быть заменён.</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Before performing translation make sure, that text you are going to translate is not translated yet on website.</source>
         <target>Перед тем, как выполнять перевод, убедитесь, что текст на сайте уже не переведён.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Distortion and misinterpretation of information during translation is not acceptable.</source>
+        <target>Искажение информации в процессе перевода и вольный перевод недопустимы.</target>
       </trans-unit>
 
       <trans-unit id="1">

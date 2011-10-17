@@ -136,7 +136,7 @@
 
       <trans-unit id="1">
         <source>Dhyana</source>
-        <target>菩薩</target>
+        <target>禅定</target>
       </trans-unit> 
 
       <trans-unit id="1">
@@ -171,7 +171,7 @@
 
       <trans-unit id="1">
         <source>Atman (Buddhism)</source>
-        <target>弥勒菩薩の到来</target>
+        <target>アートマン（仏教）</target>
       </trans-unit>       
 
 	  <trans-unit id="1">
@@ -1187,7 +1187,7 @@
 
       <trans-unit id="1">
         <source>Buddha-nature</source>
-        <target>無著</target>
+        <target>仏性</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -1232,17 +1232,17 @@
 
       <trans-unit id="1">
         <source>solidity</source>
-        <target>固</target>
+        <target>固体の４種類で構成され、</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>nor in the mental phenomena (referred to as "mind" or mentality), which are of four kinds:</source>
-        <target>体の４種類で構成され</target>
+        <target>知的現象とは</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>sensation</source>
-        <target>知的現象とは感覚、</target>
+        <target>感覚、</target>
       </trans-unit>
 
       <trans-unit id="1">
