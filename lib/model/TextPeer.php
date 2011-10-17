@@ -348,13 +348,17 @@ class TextPeer extends BaseTextPeer
 	{
 		if ($text) {
 			$culture = sfContext::getInstance()->getUser()->getCulture();
-			if ( $culture == 'ru' ) {
-				$text = iconv( 'UTF8', 'CP1251', $text );
-			}
+			
+			//if ( $culture == 'ja' ) {
+			mb_internal_encoding("UTF-8");
+			//}
+			//if ( $culture == 'ru' ) {
+			//	$text = iconv( 'UTF8', 'CP1251', $text );
+			//}
 			$text = mb_substr($text, $start, $length);	
-			if ( $culture == 'ru' ) {
-				$text = iconv( 'CP1251', 'UTF8', $text );					
-			}
+			//if ( $culture == 'ru' ) {
+			//	$text = iconv( 'CP1251', 'UTF8', $text );					
+			//}
 			return $text;
 		} else {
 			return '';
