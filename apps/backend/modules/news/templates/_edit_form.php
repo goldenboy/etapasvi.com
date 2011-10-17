@@ -1658,6 +1658,121 @@
 </div>
 
 </fieldset>
+<fieldset id="sf_fieldset_ne" class="">
+<h2><?php echo __('NE') ?></h2>
+
+
+<div class="form-row">
+  <?php echo label_for('news[title_i18n_ne]', __($labels['news{title_i18n_ne}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('news{title_i18n_ne}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('news{title_i18n_ne}')): ?>
+    <?php echo form_error('news{title_i18n_ne}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($news, 'getTitleI18nNe', array (
+  'disabled' => false,
+  'control_name' => 'news[title_i18n_ne]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('news[extradate_i18n_ne]', __($labels['news{extradate_i18n_ne}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('news{extradate_i18n_ne}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('news{extradate_i18n_ne}')): ?>
+    <?php echo form_error('news{extradate_i18n_ne}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($news, 'getExtradateI18nNe', array (
+  'disabled' => false,
+  'control_name' => 'news[extradate_i18n_ne]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('news[shortbody_i18n_ne]', __($labels['news{shortbody_i18n_ne}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('news{shortbody_i18n_ne}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('news{shortbody_i18n_ne}')): ?>
+    <?php echo form_error('news{shortbody_i18n_ne}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_textarea_tag($news, 'getShortbodyI18nNe', array (
+  'control_name' => 'news[shortbody_i18n_ne]',
+  'disabled' => false,
+  'size' => '118x6',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('news[body_i18n_ne]', __($labels['news{body_i18n_ne}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('news{body_i18n_ne}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('news{body_i18n_ne}')): ?>
+    <?php echo form_error('news{body_i18n_ne}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_textarea_tag($news, 'getBodyI18nNe', array (
+  'control_name' => 'news[body_i18n_ne]',
+  'disabled' => false,
+  'size' => '118x6',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('news[author_i18n_ne]', __($labels['news{author_i18n_ne}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('news{author_i18n_ne}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('news{author_i18n_ne}')): ?>
+    <?php echo form_error('news{author_i18n_ne}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($news, 'getAuthorI18nNe', array (
+  'disabled' => false,
+  'control_name' => 'news[author_i18n_ne]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('news[translated_by_i18n_ne]', __($labels['news{translated_by_i18n_ne}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('news{translated_by_i18n_ne}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('news{translated_by_i18n_ne}')): ?>
+    <?php echo form_error('news{translated_by_i18n_ne}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($news, 'getTranslatedByI18nNe', array (
+  'disabled' => false,
+  'control_name' => 'news[translated_by_i18n_ne]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('news[link_i18n_ne]', __($labels['news{link_i18n_ne}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('news{link_i18n_ne}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('news{link_i18n_ne}')): ?>
+    <?php echo form_error('news{link_i18n_ne}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($news, 'getLinkI18nNe', array (
+  'disabled' => false,
+  'control_name' => 'news[link_i18n_ne]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+</fieldset>
 
 <?php include_partial('edit_actions', array('news' => $news)) ?>
 

@@ -121,6 +121,14 @@ generator:
           - author_i18n_et
           - translated_by_i18n_et
           - link_i18n_et
+        "NE":
+          - title_i18n_ne
+          - extradate_i18n_ne
+          - shortbody_i18n_ne
+          - body_i18n_ne
+          - author_i18n_ne
+          - translated_by_i18n_ne
+          - link_i18n_ne
       fields:
         img:
           name: Image
@@ -442,5 +450,29 @@ generator:
           name: Translated by
           params: disabled=false maxlength=255 style="width:80%"
         link_i18n_et:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_ne:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_ne:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_ne:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_ne:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_ne:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_ne:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_ne:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"

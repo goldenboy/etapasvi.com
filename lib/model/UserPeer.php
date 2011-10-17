@@ -13,7 +13,13 @@ class UserPeer extends BaseUserPeer
 		              'comments_category_id' => 668704,
 		              // язык интерфейса FeedBurner
 		              'feedburner_loc' 		 => 'en_US'
-		),		              
+		),
+		'ne' => array('name'    			 => 'नेाी',
+		              'iso'     			 => 'ne',
+		              'hieroglyphic'  		 => true,
+		              'comments_category_id' => 1102690,
+		              //'feedburner_loc' 		 => 'ru_RU'
+		),             
 		'ru' => array('name'    			 => 'Русский',
 		              'iso'     			 => 'ru',		              
 		              //'mail_id' 			 => '25b1a7f858',
@@ -413,6 +419,10 @@ class UserPeer extends BaseUserPeer
       'mt' => array('name'     => 'Malti',
                     'en'       => 'Maltese',
                     'iso'      => 'mt'
+      ),
+      'ne' => array('name'     => 'नेपाली',
+                    'en'       => 'Nepali',
+                    'iso'      => 'ne'
       ),
       'no' => array('name'     => 'Norsk bokmål',
                     'en'       => 'Norwegian (Bokmal)',
