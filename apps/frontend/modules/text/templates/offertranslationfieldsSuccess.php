@@ -8,7 +8,12 @@
     <a href="http://www.youtube.com/watch?v=WI4c1vT_yXg" target="_blank"><?php echo __('Watch video tutorial') ?></a>    
 </p>
 <p class="light small">
-    <?php echo __('Before performing translation, make sure, that text you are going to translate is not translated yet on website.') ?>
+    <?php echo __('Tips for translators:') ?>
+    <ul class="light small">
+        <li><?php echo __('Before performing translation make sure, that text you are going to translate is not translated yet on website.') ?></li>
+        <li><?php echo __('Carefully read/watch instructions – respect your time and website programmer\'s time.') ?></li>
+        <li><?php echo __('If you would like to correct translation you sent, send both incorrect and correct versions in your language. It would allow programmer to find text, which should be replaced with correct one.') ?></li>
+    </ul>
 </p>
 <hr class="light"/>
 <div id="offer_tr_method_messages" class="hidden offer_tr_method">
