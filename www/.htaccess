@@ -103,12 +103,15 @@ ErrorDocument 500 /errors/500.html
 
   RewriteCond %{HTTP:Accept-Language} ^et.* [NC]
   RewriteRule ^$ http://%{HTTP_HOST}/et/ [L,R=301]
+  
+  RewriteCond %{HTTP:Accept-Language} ^ne.* [NC]
+  RewriteRule ^$ http://%{HTTP_HOST}/ne/ [L,R=301]
 
-  RewriteCond %{HTTP:Accept-Language} !^(en.*|ru.*|cs.*|hu.*|pl.*|fr.*|zh.*|vi.*|ja.*|es.*|it.*|et.*) [NC]
+  RewriteCond %{HTTP:Accept-Language} !^(en.*|ru.*|cs.*|hu.*|pl.*|fr.*|zh.*|vi.*|ja.*|es.*|it.*|et.*|ne.*) [NC]
   RewriteRule ^$ http://%{HTTP_HOST}/en/ [L,R=301]
 
   # Добавление слэша в конце языка: /ru -> /ru/
-  RewriteCond %{REQUEST_URI} ^/(en|ru|cs|hu|pl|fr|zh_CN|vi|ja|es|it|et)$ [NC]
+  RewriteCond %{REQUEST_URI} ^/(en|ru|cs|hu|pl|fr|zh_CN|vi|ja|es|it|et|ne)$ [NC]
   RewriteRule ^ http://%{HTTP_HOST}%{REQUEST_URI}/ [L,R=301]
 
   # Редирект на мобильную версию
