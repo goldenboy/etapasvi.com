@@ -40,32 +40,16 @@
         <target>Dharma Sangha</target>
       </trans-unit>     
       <trans-unit id="1">
-        <source>Buddha Boy News</source>
-        <target>Buddha Boy News</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>News</source>
         <target>Nouvelles</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Palden Dorje Photo</source>
-        <target>Photos de palden Dorje</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Photo</source>
         <target>Photo</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Ram Bahadur Bomjan Video</source>
-        <target>Vidéos de Ram Bahadur Bomjan</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Video</source>
         <target>Vidéo</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Om Namo Guru Buddha Gyani Biography</source>
-        <target>Om Namo Guru Buddha Gyani Biographie</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Biography</source>
@@ -84,10 +68,6 @@
         <target>Encyclopédie</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Buddha Boy Live Stream</source>
-        <target>Buddha Boy Live Stream</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Live Stream</source>
         <target>En temps réeel</target>
       </trans-unit>
@@ -102,10 +82,6 @@
       <trans-unit id="1">
         <source>Other</source>
         <target>Autre</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Member</source>
-        <target>Membre</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Twitter</source>
@@ -142,10 +118,6 @@
       <trans-unit id="1">
         <source>FAQ</source>
         <target>FAQ</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Translation Fundraising</source>
-        <target>Participation aux traductions</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Audio</source>

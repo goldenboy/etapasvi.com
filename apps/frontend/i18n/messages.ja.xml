@@ -49,18 +49,8 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>Buddha Boy News</source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="1">
         <source>News</source>
         <target>ニュース</target>
-      </trans-unit>
-
-      <trans-unit id="1">
-        <source>Palden Dorje Photo</source>
-        <target></target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -69,18 +59,8 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>Ram Bahadur Bomjan Video</source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="1">
         <source>Video</source>
         <target>ビデオ</target>
-      </trans-unit>
-
-      <trans-unit id="1">
-        <source>Om Namo Guru Buddha Gyani Biography</source>
-        <target></target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -104,11 +84,6 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>Buddha Boy Live Stream</source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="1">
         <source>Live Stream</source>
         <target></target>
       </trans-unit>
@@ -125,11 +100,6 @@
 
       <trans-unit id="1">
         <source>Other</source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="1">
-        <source>Member</source>
         <target></target>
       </trans-unit>
 
@@ -175,11 +145,6 @@
 
       <trans-unit id="1">
         <source>FAQ</source>
-        <target></target>
-      </trans-unit>
-
-      <trans-unit id="1">
-        <source>Translation Fundraising</source>
         <target></target>
       </trans-unit>
 

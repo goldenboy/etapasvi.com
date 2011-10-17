@@ -40,32 +40,16 @@
         <target></target>
       </trans-unit>      
       <trans-unit id="1">
-        <source>Buddha Boy News</source>
-        <target>Buddha Chlapec Novinky</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>News</source>
         <target>Novinky</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Palden Dorje Photo</source>
-        <target>Paldena Doržeho Foto</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Photo</source>
         <target>Foto</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Ram Bahadur Bomjan Video</source>
-        <target>Ram Bahadur Bomjan Video</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Video</source>
         <target>Video</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Om Namo Guru Buddha Gyani Biography</source>
-        <target>Om Namo Guru Buddha Gyáni Životopis</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Biography</source>
@@ -84,10 +68,6 @@
         <target>Encyklopédia</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Buddha Boy Live Stream</source>
-        <target>Buddha Chlapec Live Stream</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Live Stream</source>
         <target>Live Stream</target>
       </trans-unit>
@@ -98,10 +78,6 @@
       <trans-unit id="1">
         <source>Other</source>
         <target>Iný</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Member</source>
-        <target>Členské</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Twitter</source>
@@ -139,10 +115,6 @@
         <source>FAQ</source>
         <target></target>
       </trans-unit> 
-      <trans-unit id="1">
-        <source>Translation Fundraising</source>
-        <target></target>
-      </trans-unit>
       <trans-unit id="1">
         <source>Audio</source>
         <target></target>

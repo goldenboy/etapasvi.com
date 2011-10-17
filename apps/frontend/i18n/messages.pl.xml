@@ -40,32 +40,16 @@
         <target></target>
       </trans-unit>      
       <trans-unit id="1">
-        <source>Buddha Boy News</source>
-        <target>Chłopiec Budda - Wydarzenia</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>News</source>
         <target>Wydarzenia</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Palden Dorje Photo</source>
-        <target>Galeria Paldena Dorje</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Photo</source>
         <target>Galeria</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Ram Bahadur Bomjan Video</source>
-        <target>Ram Bahadur Bomjan - Wideo</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Video</source>
         <target>Widео</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Om Namo Guru Buddha Gyani Biography</source>
-        <target>Biografia Om Namo Guru Buddha Gyani (Chłopca Buddy)</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Biography</source>
@@ -84,10 +68,6 @@
         <target>Encyklopedia</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Buddha Boy Live Stream</source>
-        <target>Chłopiec Budda Wideo na żywo</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Live Stream</source>
         <target>Wideo na żywo</target>
       </trans-unit>
@@ -102,10 +82,6 @@
       <trans-unit id="1">
         <source>Other</source>
         <target>Inne</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Member</source>
-        <target>Członek</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Twitter</source>
@@ -142,10 +118,6 @@
       <trans-unit id="1">
         <source>FAQ</source>
         <target></target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Translation Fundraising</source>
-        <target>Zbieranie funduszy na tłumaczenie</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Audio</source>

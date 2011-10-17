@@ -40,32 +40,16 @@
         <target>Dharma Sangha</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Buddha Boy News</source>
-        <target>Buddha Poisi uudised</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>News</source>
         <target>Uudised</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Palden Dorje Photo</source>
-        <target>Palden Dorje fotod</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Photo</source>
         <target>Fotod</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Ram Bahadur Bomjan Video</source>
-        <target>Ram Bahadur Bomjan video</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Video</source>
         <target>Video</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Om Namo Guru Buddha Gyani Biography</source>
-        <target>Om Namo Guru Buddha Gyani elulugu</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Biography</source>
@@ -84,10 +68,6 @@
         <target>Entsüklopeedia</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Buddha Boy Live Stream</source>
-        <target>Buddha Poisi elu kulg</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Live Stream</source>
         <target>Elu kulg</target>
       </trans-unit>
@@ -102,10 +82,6 @@
       <trans-unit id="1">
         <source>Other</source>
         <target>Muu</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Member</source>
-        <target>Liikmed</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Twitter</source>
@@ -142,10 +118,6 @@
       <trans-unit id="1">
         <source>FAQ</source>
         <target>Korduvad Küsimused </target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Translation Fundraising</source>
-        <target>Tõlgete Kogumine</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Audio</source>

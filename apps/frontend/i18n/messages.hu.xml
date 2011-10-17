@@ -37,32 +37,16 @@
         <target></target>
       </trans-unit>      
       <trans-unit id="1">
-        <source>Buddha Boy News</source>
-        <target>Buddha Fiú hírek</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>News</source>
         <target>Hírek</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Palden Dorje Photo</source>
-        <target>Palden Dordzse fotó</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Photo</source>
         <target>Fotó</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Ram Bahadur Bomjan Video</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Video</source>
         <target>Videó</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Om Namo Guru Buddha Gyani Biography</source>
-        <target>Om Namo Guru Buddha Gyáni Életrajz</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Biography</source>
@@ -81,10 +65,6 @@
         <target>Enciklopédia</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Buddha Boy Live Stream</source>
-        <target>Buddha Fiú Live Stream</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Live Stream</source>
         <target>Élőadás</target>
       </trans-unit>
@@ -95,10 +75,6 @@
       <trans-unit id="1">
         <source>Other</source>
         <target>Más</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Member</source>
-        <target>Tagság</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Twitter</source>
@@ -134,10 +110,6 @@
       </trans-unit>  
       <trans-unit id="1">
         <source>FAQ</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Translation Fundraising</source>
         <target></target>
       </trans-unit>
       <trans-unit id="1">

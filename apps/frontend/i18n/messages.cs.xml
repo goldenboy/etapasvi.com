@@ -36,32 +36,16 @@
         <target>Palden Dordže</target>
       </trans-unit>      
       <trans-unit id="1">
-        <source>Buddha Boy News</source>
-        <target>Malý Buddha Zprávy</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>News</source>
         <target>Zprávy</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Palden Dorje Photo</source>
-        <target>Palden Dordže Fotografie</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Photo</source>
         <target>Fotografie</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Ram Bahadur Bomjan Video</source>
-        <target>Ram Bahadur Bomjan Videa</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Video</source>
         <target>Video</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Om Namo Guru Buddha Gyani Biography</source>
-        <target>Om Namo Guru Buddha Gyáni Životopis</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Biography</source>
@@ -80,10 +64,6 @@
         <target>Encyklopedie</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Buddha Boy Live Stream</source>
-        <target>Malý Buddha Živé vysílání</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>Live Stream</source>
         <target>Živé vysílání</target>
       </trans-unit>
@@ -98,10 +78,6 @@
       <trans-unit id="1">
         <source>Other</source>
         <target>Jiné</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Member</source>
-        <target>Členství</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Twitter</source>
@@ -139,10 +115,6 @@
         <source>FAQ</source>
         <target></target>
       </trans-unit>   
-      <trans-unit id="1">
-        <source>Translation Fundraising</source>
-        <target></target>
-      </trans-unit>
       <trans-unit id="1">
         <source>Audio</source>
         <target></target>
