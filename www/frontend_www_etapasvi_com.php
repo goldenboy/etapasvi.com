@@ -4,7 +4,10 @@
  **/
 
 // прописываем жёстко, чтобы ссылки генерировались правильно
-$_SERVER['HTTP_HOST']        = 'www.etapasvi.com';
+$_SERVER['HTTP_HOST']        		= 'www.etapasvi.com';
+// используется Yahoo
+// http://tasks.etapasvi.com/issues/242
+$_SERVER['HTTP_X_FORWARDED_HOST']   = $_SERVER['HTTP_HOST'];
 
 // если к скрипту обратились из консоли, подменяем пермененные в $_SERVER
 if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
