@@ -130,7 +130,7 @@
 <?php echo __('There was a terrible drought in the village. Palden Dorje told them to pray to a snake god and after 5 days, it started raining. In the 75th day of meditation, he opened the eyes and asked his elder brother to call him by the words: “Om Namó Gurú Búddha Gyáni”.') ?> <?php echo __('He returned to his meditation. Since that day he was addressed as') ?> <?php echo __('“Om Namo Guru Buddha Gyani”') ?> <?php echo __('(Hail to the Master of the Wisdom of Buddha.)') ?>
 </p>
 <div class="center">
-<?php include_component('audio', 'show', array('id'=>8, 'no_info'=>true)); ?>
+<?php include_component('audio', 'showShort', array('id'=>8)); ?>
 </div>
 <?php include_component('photo', 'show', array('id'=>93)); ?>
 <p>
