@@ -26,6 +26,17 @@ class audioComponents extends sfComponents
    * Встраивание отдельного Аудио
    *
    */
+  public function executeShow()
+  {
+    if (empty($this->audio)) {
+  	  $this->audio = AudioPeer::retrieveByPk( $this->id );
+    }
+  }
+  
+  /**
+   * Встраивание отдельного Аудио
+   *
+   */
   public function executeShowShort()
   {
     if (empty($this->audio)) {
