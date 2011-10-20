@@ -10,7 +10,7 @@
 	<li><a href="#is_he_enlightened"><?php echo __('Is Dharma Sangha already enlightened?') ?></a></li>
 	<li><a href="#buddha"><?php echo __('Has he already become a Buddha?') ?></a></li>
 	<li><a href="#teaching"><?php echo __('Is his teaching based on Buddhism or any other religions like Hinduism?') ?></a></li>
-	<li><a href="#bodhi_shravan_dharma"><?php echo __('What does "Bodhi Shravan Dharma" mean?') ?></a></li>
+	<li><a href="#bodhi_shravan_dharma_sangha"><?php echo __('What does "Bodhi Shravan Dharma Sangha" mean?') ?></a></li>
 	<li><a href="#blessing"><?php echo __('How can I receive blessing from Dharma Sangha?') ?></a></li>
 	<?php /*<li><a href="#gifts"><?php echo __('I am going to Halkhoriya Jungle. I would like to bring some gifts, what is the best choice?') ?></a></li>*/ ?>
 	<li><a href="#get_to_halkhoriya"><?php echo __('How can I get to Halkhoriya Jungle?') ?></a></li> 
@@ -45,17 +45,18 @@
 
 <h2 id="teaching"><?php echo ++$counter; ?>. <?php echo __('Is his teaching based on Buddhism or any other religions like Hinduism?') ?></h2>
 <p>
-<?php echo __('It is actually called Bodhi Shravan Dharma, but it includes all religions, no one is excluded. Dharma Sangha will be moving forward by including all existing religions of the world.') ?>
+<?php echo __('It is actually called Bodhi Shravan Dharma Sangha, but it includes all religions, no one is excluded. Dharma Sangha will be moving forward by including all existing religions of the world.') ?>
 </p>
 
-<h2 id="bodhi_shravan_dharma"><?php echo ++$counter; ?>. <?php echo __('What does "Bodhi Shravan Dharma" mean?') ?></h2>
+<h2 id="bodhi_shravan_dharma_sangha"><?php echo ++$counter; ?>. <?php echo __('What does "Bodhi Shravan Dharma Sangha" mean?') ?></h2>
 <ul>
     <li><?php echo __('Bodhi: enlightenment, awakened.') ?></li>
     <li><?php echo __('Shravan: attending to, heeding, listening.') ?></li>
     <li><?php echo __('Dharma: wisdom.') ?></li>
+    <li><?php echo __('Sangha: association, assembly, community.') ?></li>
 </ul>
 <p>
-<?php echo __('Thus "Bodhi Shravan Dharma" is the wisdom as heeded from enlightened ones.') ?>
+<?php echo __('Thus "Bodhi Shravan Dharma Sangha" is the wisdom as heeded from enlightened ones.') ?>
 </p>
 
 <h2 id="blessing"><?php echo ++$counter; ?>. <?php echo __('How can I receive blessing from Dharma Sangha?') ?></h2>

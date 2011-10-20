@@ -31,8 +31,8 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>What does "Bodhi Shravan Dharma" mean?</source>
-        <target>Что означает "Бодхи Шраван Дхарма"?</target>
+        <source>What does "Bodhi Shravan Dharma Sangha" mean?</source>
+        <target>Что означает "Бодхи Шраван Дхарма Сангха"?</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -85,8 +85,8 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>It is actually called Bodhi Shravan Dharma, but it includes all religions, no one is excluded. Dharma Sangha will be moving forward by including all existing religions of the world.</source>
-        <target>В действительности оно называется Бодхи Шраван Дхарма, но оно включает в себя все религии, не упущена ни одна. Дхарма Сангха будет двигаться дальше, учитывая все существующие религии мира.</target>
+        <source>It is actually called Bodhi Shravan Dharma Sangha, but it includes all religions, no one is excluded. Dharma Sangha will be moving forward by including all existing religions of the world.</source>
+        <target>В действительности оно называется Бодхи Шраван Дхарма Сангха, но оно включает в себя все религии, не упущена ни одна. Дхарма Сангха будет двигаться дальше, учитывая все существующие религии мира.</target>
       </trans-unit>
       
       <trans-unit id="1">
@@ -102,11 +102,16 @@
       <trans-unit id="1">
         <source>Dharma: wisdom.</source>
         <target>Дхарма: мудрость.</target>
+      </trans-unit>      
+      
+      <trans-unit id="1">
+        <source>Sangha: association, assembly, community.</source>
+        <target>Сангха: общество, группа, общность.</target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Thus "Bodhi Shravan Dharma" is the wisdom as heeded from enlightened ones.</source>
-        <target>Таким образом, "Бодхи Шраван Дхарма" – это мудрость, со вниманием услышанная от просветлённых.</target>
+        <source>Thus "Bodhi Shravan Dharma Sangha" is the wisdom as heeded from enlightened ones.</source>
+        <target>Таким образом, "Бодхи Шраван Дхарма Сангха" – это мудрость, со вниманием услышанная от просветлённых.</target>
       </trans-unit>
 
       <trans-unit id="1">

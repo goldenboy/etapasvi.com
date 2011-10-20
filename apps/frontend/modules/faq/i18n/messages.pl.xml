@@ -30,7 +30,7 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>What does "Bodhi Shravan Dharma" mean?</source>
+        <source>What does "Bodhi Shravan Dharma Sangha" mean?</source>
         <target></target>
       </trans-unit>
 
@@ -84,8 +84,8 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>It is actually called Bodhi Shravan Dharma, but it includes all religions, no one is excluded. Dharma Sangha will be moving forward by including all existing religions of the world.</source>
-        <target>Właściwie, jest to zwane Bodhi Shravan Dharma, ale łączy w sobie wszystkie religie, nikt nie jest wyłączony. Dharma Sangha będzie poruszał się naprzód włączając wszystkie istniejące religie świata. </target>
+        <source>It is actually called Bodhi Shravan Dharma Sangha, but it includes all religions, no one is excluded. Dharma Sangha will be moving forward by including all existing religions of the world.</source>
+        <target>Właściwie, jest to zwane Bodhi Shravan Dharma Sangha, ale łączy w sobie wszystkie religie, nikt nie jest wyłączony. Dharma Sangha będzie poruszał się naprzód włączając wszystkie istniejące religie świata. </target>
       </trans-unit>
       
       <trans-unit id="1">
@@ -104,7 +104,12 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Thus "Bodhi Shravan Dharma" is the wisdom as heeded from enlightened ones.</source>
+        <source>Sangha: association, assembly, community.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Thus "Bodhi Shravan Dharma Sangha" is the wisdom as heeded from enlightened ones.</source>
         <target></target>
       </trans-unit>
 
