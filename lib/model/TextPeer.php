@@ -3,7 +3,7 @@
 class TextPeer extends BaseTextPeer
 {
 	
-  const LINK_MAX_LENGTH = 70;
+  const LINK_MAX_LENGTH = 50;
   
   // Файлы переводов
   // разделитесль элементов

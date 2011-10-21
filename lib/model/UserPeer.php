@@ -101,6 +101,7 @@ class UserPeer extends BaseUserPeer
 		'bn' => array('name'    			 => 'বাংলা',
 		              'iso'     			 => 'bn',
 		              'hieroglyphic'  		 => true,
+		              'large_text'	 		 => true,
 		              'comments_category_id' => 1110606,
 		              //'feedburner_loc' 		 => 'ru_RU'
 		)
@@ -801,6 +802,24 @@ class UserPeer extends BaseUserPeer
 	    }
 	    if (!empty(self::$cultures[ $culture ][ 'hieroglyphic' ])) {
 			return (bool)self::$cultures[ $culture ][ 'hieroglyphic' ];
+	    } else {
+	    	return false;
+	    }
+	}
+	
+	/**
+	 * Используется ли для языка увеличенный размер текста
+	 *
+	 * @param unknown_type $culture
+	 * @return unknown
+	 */
+	public static function isCultureLargeText( $culture = '' )
+	{
+	    if (!$culture) {
+	        $culture = sfContext::getInstance()->getUser()->getCulture();
+	    }
+	    if (!empty(self::$cultures[ $culture ][ 'large_text' ])) {
+			return (bool)self::$cultures[ $culture ][ 'large_text' ];
 	    } else {
 	    	return false;
 	    }

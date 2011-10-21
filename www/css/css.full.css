@@ -284,6 +284,7 @@ code {
 	}
 #header #bubble_title span {
 	color: #ADACBD;
+    font:bold 8pt/23px georgia;
 	}
 	
 p.p2{
@@ -347,7 +348,6 @@ p.p2{
 #menu a:link,
 #menu a:visited { 
 	color:gray;
-	font-family:Verdana;
 	text-decoration:none;
 	}
 #menu a.alert:link,
@@ -527,8 +527,10 @@ p.p2{
     margin-right: 2px;
     }
 #lang_box {
-    line-height: 20px;
-    margin: 0 20px 5px 10px;
+    margin: 0 3px 5px 10px;
+	}
+#lang_box td {
+    padding: 5px 10px 5px 5px;
 	}
 #bubble_lang p { 
 	text-align: center;
@@ -1187,10 +1189,15 @@ label.error {
     }
     
 /* cultures */
-.hieroglyphic #content * {
-	font-size:18px;
+.hieroglyphic #content *,
+.hieroglyphic * {
+	font-size:14px;
     font-family: "宋体";
     line-height:21px;
+	}
+.large_text #content *,
+.large_text * {
+	font-size:18px;
 	} 
     
 /* related */

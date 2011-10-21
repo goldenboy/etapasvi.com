@@ -30,7 +30,7 @@ $(document).ready(function(){
 	});
 
 	// select language
-	$("span.lang_selector").colorbox({inline:true, href:"#lang_box", opacity:"0.5"});
+	$("span.lang_selector").colorbox({inline:true, href:"#lang_box", opacity:"0.5", transition:"none"});
 
     // перемещение Предложения перевода наверх
     $("#offer_tr_ctr").insertAfter( "#content h1:eq(0)" );

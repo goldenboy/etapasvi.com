@@ -688,7 +688,12 @@ img.newsitem_img {
 /* cultures */
 .hieroglyphic #content * {
     font-family: "宋体";
+	font-size:1em;
     line-height:21px;
+	}
+.large_text #content *,
+.large_text * {
+	font-size:1.05em;
 	} 
     
 /* related */
