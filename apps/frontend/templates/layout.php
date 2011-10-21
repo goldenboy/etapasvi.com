@@ -89,19 +89,21 @@
 	?>
 
 	<span class="lang_name lang_selector b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><img src="/i/fg.png" alt="<?php echo UserPeer::getCultureIso( $user_culture );?>" /></span> 
-	<span class="slide_arrow lang_selector">▼</span>
+	<?php /* <span class="slide_arrow lang_selector">▼</span>*/ ?>
     <?php /* id используется в /lib/symfony/exception/sfError404Exception.class.php */ ?>
-	<div id="lang_list" class="box">
-		<?php foreach(UserPeer::getCulturesData() as $culture => $culture_data): ?>
-			<?php if ($user_culture == $culture): ?>
-				<?php continue; ?>
-			<?php endif ?>
-			
+	<div id="lang_list"><div id="lang_box">
+		<?php foreach(UserPeer::getCulturesData() as $culture => $culture_data): ?>			
 			<?php $i++ ?>
 			<?php if ($i > count(UserPeer::getCultures())) break; ?>
-			<i class="b-fg b-fg_<?php echo strtoupper($culture_data['iso']);?>"><img src="/i/fg.png"/></i> <a href="http://<?php echo $_SERVER['HTTP_HOST'] . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name']?>"><?php echo $culture_data['name']?></a><br/>
+			<i class="b-fg b-fg_<?php echo strtoupper($culture_data['iso']);?>"><img src="/i/fg.png"/></i> 
+            <?php if ($user_culture == $culture): ?>
+				<span class="light"><?php echo $culture_data['name']?></span>
+			<?php else: ?>
+                <a href="http://<?php echo $_SERVER['HTTP_HOST'] . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name']?>"><?php echo $culture_data['name']?></a>
+			<?php endif ?>
+            <br/>
 		<?php endforeach ?>		
-	</div>	
+	</div></div>	
 </div>
 
 <div id="bubble_quote">

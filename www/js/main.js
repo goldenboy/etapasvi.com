@@ -30,22 +30,8 @@ $(document).ready(function(){
 	});
 
 	// select language
-	$(".lang_selector").click(
-		function (event) {
-			event.stopPropagation();
-			if ( $("#lang_list").is(":hidden") ) {
-				$("#lang_list").slideDown("fast");
-			} else {
-				$("#lang_list").slideUp("fast");
-			}
-		}
-	);
-    // сокрытие выбора языка
-	$("html").click(
-		function () {
-			$("#lang_list").slideUp("fast");
-		}
-	);
+	$("span.lang_selector").colorbox({inline:true, href:"#lang_box", opacity:"0.5"});
+
     // перемещение Предложения перевода наверх
     $("#offer_tr_ctr").insertAfter( "#content h1:eq(0)" );
     // текст в футере
