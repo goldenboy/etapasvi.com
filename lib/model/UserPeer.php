@@ -214,6 +214,10 @@ class UserPeer extends BaseUserPeer
                     'en'       => 'Belarusian',
                     'iso'      => 'be'
       ),      
+	  'bn' => array('name'     => 'বাংলা',
+					'en'       => 'Bengali',
+                    'iso'      => 'bn'
+	  ),
       'bg' => array('name'     => 'Български език',
                     'en'       => 'Bulgarian',
                     'iso'      => 'bg'
