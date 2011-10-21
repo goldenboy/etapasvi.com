@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+  
+      <trans-unit id="1">
+        <source>Official website</source>
+        <target>Ametlik koduleht</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>News and Teachings</source>
+        <target>Uudised ja Õpetused</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Country</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>State, District, City</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Responsible person</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Main in country</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Mem- bers</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>If you have any questions, please, try to find answer on the</source>
+        <target>Kui on küsimusi, siis palun Foorumist vastus leida.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Send your message to the email below only in a special emergency, as it is difficult for website programmer to answer all emails (there are only 24 hours in a day).</source>
+        <target>Saada oma sõnum allpool olevasse e-posti ainult erakorralisel juhtumil, sest kodulehe programmeerijal on raske kõigile e-kirjadele vastata (ööpäevas on ainult 24 tundi).</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

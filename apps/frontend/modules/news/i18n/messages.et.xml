@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+<!-- indexSuccess -->
+      <trans-unit id="1">
+        <source>Start from</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>newest</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>oldest</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>No News</source>
+        <target></target>
+      </trans-unit>
+
+<!-- mainSuccess -->
+      <trans-unit id="1">
+        <source>A message</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>of peace to our world today</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Photos</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Video</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Audio</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>view all</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe to News</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Unsubscribe</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>or</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe to new comments on website by email</source>
+        <target></target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Original text</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Sangha does not often use the pronoun "I" in speeches, it is added to make translation easier to understand. The use of "I" is in fact rare. First person verbal indications (-chhu) are more common than the personal pronoun "I" (ma, though not to be confused with the same word, which is the post-position for "in" or "at", such as "tyo samay ma" – at that time) and sometimes the word "my" (mero). Most common is the use of "one's own" (aphno).</source>
+        <target>Dharma Sangha ei kasuta sageli asesõna "mina" oma sõnavõttudes, see on lisatud selleks, et teha tõlkimine lihtsamini mõistetavaks. Rohkem on kasutusel inimese esimene verbaalne tähis (-chhu), kui asesõna "mina" (ma, mida ei tohiks samal ajal segi ajada tagasõnaga lauses "tyo samay ma") ja mõnikord sõna "minu" (mero). "Mina" kasutamist on tegelikult harva. Kõige enam on kasutusel sõna "enda"(aphno).</target>
+      </trans-unit>
+      
+<!-- teachingsSuccess -->
+
+	  <trans-unit id="1">
+        <source>Dictionary</source>
+        <target></target>
+      </trans-unit>	  
+
+	 <trans-unit id="1">
+        <source>by Andy Good/LTJ</source>
+        <target></target>
+      </trans-unit>
+
+<!-- feedSuccess -->
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>
