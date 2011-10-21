@@ -59,6 +59,11 @@ class TextPeer extends BaseTextPeer
 	$text = preg_replace( '/([^A-z0-9_-]|[\[\]])/', '', $text );
 	$text = preg_replace( '/-+/', '-', $text );
 	
+	// чтобы не было урлов вида: http://www.etapasvi.com/bn/teachings/64/-
+	if ($text == '-') {
+		$text = '';
+	}
+	
 	return $text;
   }
   	
