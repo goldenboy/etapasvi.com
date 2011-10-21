@@ -97,6 +97,12 @@ class UserPeer extends BaseUserPeer
 		              'hieroglyphic'  		 => true,
 		              'comments_category_id' => 1102690,
 		              //'feedburner_loc' 		 => 'ru_RU'
+		),
+		'bn' => array('name'    			 => 'বাংলা',
+		              'iso'     			 => 'bn',
+		              'hieroglyphic'  		 => true,
+		              'comments_category_id' => 1110606,
+		              //'feedburner_loc' 		 => 'ru_RU'
 		)
 	);
 	
