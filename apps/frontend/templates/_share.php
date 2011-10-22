@@ -78,7 +78,7 @@
       js.src = "//connect.facebook.net/en_US/all.js#appId=242428519102205&xfbml=1";
       d.getElementsByTagName('head')[0].appendChild(js);
     }(document));</script>
-    <div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="190" data-show-faces="true"></div>
 </div>
     
 <?php /*

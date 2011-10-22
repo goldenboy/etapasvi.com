@@ -38,7 +38,24 @@ $(document).ready(function(){
     if (footer_text) {
         $("#f_line").after(footer_text);
     }
+    
+    // сокрытие элементов в зависимости от размера окна
+    onWindowResize();
+    $(window).resize(function() {
+        onWindowResize();
+    });
+    
 });
+
+// сокрытие элементов в зависимости от размера окна
+function onWindowResize() 
+{
+    if ($(window).width()<1000) {
+        $("#wrapper").css('margin', '0 auto 0 13px');
+    } else {
+        $("#wrapper").css('margin', '0 auto');
+    }
+}
 
 // исходный текст учения
 function showOriginal() 

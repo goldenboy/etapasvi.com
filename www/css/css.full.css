@@ -312,10 +312,10 @@ p.p2{
     position: absolute;
     text-align: left;
     top: 83px;
-    width: 210px;
 	}
     
 #menu ul {
+    float: left;
 	list-style-position:outside;
 	list-style-type: disc;
 	margin:0;
@@ -401,6 +401,7 @@ p.p2{
     width: 100%;
     }
 #share {
+    float: left;
     margin-top:30px;
     }
 #share .s_item {
