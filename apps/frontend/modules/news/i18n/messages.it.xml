@@ -5,31 +5,11 @@
 
 <!-- indexSuccess -->
       <trans-unit id="1">
-        <source>Start from</source>
-        <target>Inizia da</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>newest</source>
-        <target>più recenti</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>oldest</source>
-        <target>più vecchie</target>
-      </trans-unit>
-      <trans-unit id="1">
         <source>No News</source>
         <target>Non ci sono notizie</target>
       </trans-unit>
 
 <!-- mainSuccess -->
-      <trans-unit id="1">
-        <source>A message</source>
-        <target>Un messaggio</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>of peace to our world today</source>
-        <target>di Pace al nostro mondo, oggi</target>
-      </trans-unit>
       <trans-unit id="14">
         <source>Latest Photos</source>
         <target>Foto più recenti</target>

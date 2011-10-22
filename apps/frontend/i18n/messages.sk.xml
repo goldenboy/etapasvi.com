@@ -7,10 +7,17 @@
         <target>Posolstvo mieru na náš dnešný svet</target>
       </trans-unit>
       <trans-unit id="1">
+        <source>A message</source>
+        <target>Posolstvo mieru</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>of peace to our world today</source>
+        <target>na náš dnešný svet</target>
+      </trans-unit>
+      <trans-unit id="1">
         <source>Buddha Boy -</source>
         <target>Buddha Chlapec -</target>
       </trans-unit>
-
       <trans-unit id="1">
         <source>World Meditation</source>
         <target>Világ Meditáció</target>

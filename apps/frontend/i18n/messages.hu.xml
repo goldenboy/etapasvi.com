@@ -6,12 +6,18 @@
         <source>A message of peace to our world today</source>
         <target>Békeüzenet a mai világnak</target>
       </trans-unit>
-      
+      <trans-unit id="1">
+        <source>A message</source>
+        <target>Békeüzenet</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>of peace to our world today</source>
+        <target>a mai világnak</target>
+      </trans-unit> 
       <trans-unit id="1">
         <source>Om Namo Guru Buddha Gyani</source>
         <target>Om Namo Guru Buddha Gyani</target>
       </trans-unit>
-      
       <trans-unit id="1">
         <source>Please, enable JavaScript!</source>
         <target>Kérjük, engedélyezze a JavaScript használatát!</target>

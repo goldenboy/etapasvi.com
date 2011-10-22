@@ -4,15 +4,15 @@
     <body>
       <trans-unit id="1">
         <source>A message of peace to our world today</source>
-        <target>Un messaggio di Pace al nostro mondo, oggi</target>
+        <target>আমাদের আজকের বিশ্বের জন্য একটি শান্তির বার্তা</target>
       </trans-unit>
       <trans-unit id="1">
         <source>A message</source>
-        <target>Un messaggio</target>
+        <target>আমাদের আজকের বিশ্বের</target>
       </trans-unit>
       <trans-unit id="1">
         <source>of peace to our world today</source>
-        <target>di Pace al nostro mondo, oggi</target>
+        <target>জন্য একটি শান্তির বার্তা</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Om Namo Guru Buddha Gyani</source>
@@ -45,10 +45,10 @@
       <trans-unit id="1">
         <source>Dharma Sangha</source>
         <target></target>
-      </trans-unit>      
+      </trans-unit>
       <trans-unit id="1">
         <source>News</source>
-        <target>Notizie</target>
+        <target></target>
       </trans-unit>
       <trans-unit id="1">
         <source>Photo</source>
@@ -60,15 +60,15 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Biography</source>
-        <target>Biografia</target>
+        <target></target>
       </trans-unit>      
-		<trans-unit id="1">
+	  <trans-unit id="1">
         <source>Teachings</source>
-        <target>Insegnamenti</target>
+        <target></target>
       </trans-unit>
 	  <trans-unit id="1">
         <source>Books</source>
-        <target>Libri</target>
+        <target></target>
       </trans-unit>
       <trans-unit id="1">
         <source>Encyclopedia</source>
@@ -108,11 +108,11 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Search</source>
-        <target>Cerca</target>
+        <target></target>
       </trans-unit>
       <trans-unit id="1">
         <source>Contact Us</source>
-        <target>Contatti</target>
+        <target></target>
       </trans-unit>
       <trans-unit id="1">
         <source>Forum</source>
@@ -120,11 +120,11 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Blessing</source>
-        <target>Benedizione</target>
+        <target></target>
       </trans-unit>  
       <trans-unit id="1">
         <source>FAQ</source>
-        <target>Domande frequenti</target>
+        <target></target>
       </trans-unit>
       <trans-unit id="1">
         <source>Audio</source>
@@ -136,7 +136,7 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Donation</source>
-        <target>Donazioni</target>
+        <target></target>
       </trans-unit>
       <trans-unit id="1">
         <source>Chat</source>
@@ -149,7 +149,7 @@
       <trans-unit id="1">
         <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
         <target></target>
-      </trans-unit>
+      </trans-unit>      
       <trans-unit id="1">
         <source>This page is translation of corresponding English page, switch into English language to see original text.</source>
         <target></target>
@@ -188,7 +188,7 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Author</source>
-        <target>Autore</target>
+        <target></target>
       </trans-unit>
       <trans-unit id="1">
         <source>teaching</source>
@@ -209,10 +209,10 @@
       <trans-unit id="1">
         <source>Updated on</source>
         <target></target>
-      </trans-unit>      
+      </trans-unit>
       <trans-unit id="1">
         <source>Enlarge</source>
-        <target>Ingrandisci</target>
+        <target></target>
       </trans-unit>
       <trans-unit id="1">
         <source>Terthup Dharma Hall</source>
@@ -257,7 +257,7 @@
 <!-- 404 -->
       <trans-unit id="1">
         <source>Page Not Found or Not Translated</source>
-        <target>Pagina non trovata o non tradotta</target>
+        <target></target>
       </trans-unit>
 
 <!--  offer translation -->
@@ -315,7 +315,7 @@
         <source>Distortion and misinterpretation of information during translation is not acceptable.</source>
         <target></target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>for example, if you translate news item, copy it's title and whole text into this field</source>
         <target></target>
@@ -325,7 +325,7 @@
         <source>for example, if you translate news item, paste translation of it's title and text into this field</source>
         <target></target>
       </trans-unit>
-
+      
       <trans-unit id="1">
         <source>Translation</source>
         <target></target>

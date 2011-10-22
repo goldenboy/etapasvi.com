@@ -10,14 +10,6 @@
       </trans-unit>
 
 <!-- mainSuccess -->
-      <trans-unit id="1">
-        <source>A message</source>
-        <target>Un mensaje</target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>of peace to our world today</source>
-        <target>de Paz a nuestro Mundo hoy</target>
-      </trans-unit>
       <trans-unit id="14">
         <source>Latest Photos</source>
         <target>Fotos más recientes</target>

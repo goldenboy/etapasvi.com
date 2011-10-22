@@ -6,7 +6,14 @@
         <source>A message of peace to our world today</source>
         <target>Un message de paix destiné à notre monde aujourd'hui</target>
       </trans-unit>
-
+      <trans-unit id="1">
+        <source>A message</source>
+        <target>Un message de paix </target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>of peace to our world today</source>
+        <target>destiné à notre monde aujourd'hui</target>
+      </trans-unit>
       <trans-unit id="1">
         <source>Om Namo Guru Buddha Gyani</source>
         <target>Om Namo Guru Buddha Gyani</target>
