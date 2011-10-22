@@ -273,6 +273,7 @@ code {
 #header #bubble_title {
     background:url("../i/interface_sprite.jpg") no-repeat scroll -697px -184px transparent;
     color:#c5c3d3;
+    cursor:pointer;
     display:block;
     float:right;
     font:bold 8pt/23px georgia;
@@ -309,6 +310,7 @@ p.p2{
 
 #menu {
 	left: 584px;
+    overflow:visible;
     position: absolute;
     text-align: left;
     top: 83px;
@@ -319,6 +321,7 @@ p.p2{
 	list-style-position:outside;
 	list-style-type: disc;
 	margin:0;
+    white-space:nowrap;
 	}
 	
 #menu p{
@@ -425,17 +428,21 @@ p.p2{
     background:url("../i/interface_sprite.jpg") no-repeat scroll -310px 0 transparent;
     color:#555753;
     height:156px;
-    left:-223px;
+    left:-241px;
     line-height:19px;
-    padding:63px 0 0 32px;
+    padding:73px 0 0 32px;
     position:absolute;
     top:316px;
     width:189px;
     }
-
+/* IE 7 */
+*:first-child+html #bubble_quote {
+    padding-top:63px;
+    }
 #bubble_quote p {
 	font: italic 8pt/20pt georgia;
-    margin-right: 27px;    
+    margin-right: 27px;
+    margin-top:0;
     text-align: center;
 	}
 *:first-child+html #bubble_quote p {

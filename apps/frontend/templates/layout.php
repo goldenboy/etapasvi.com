@@ -128,13 +128,13 @@
 	<?php else: ?>
 		<?php include_component( 'user', 'thinkingtime' ); ?>
 	<?php endif */?>
-<?php /*endif */?>    
-    <p id="quote_p"><?php /*
+<?php /*endif */?>
+    <div id="quote_p_cont"><p><?php /*
         $quote = include_component( 'quote', 'showtitle' ); 
         if ($quote) {
             echo $quote;
         }*/
-    ?>&nbsp;</p>
+    ?>&nbsp;</p></div>
 </div>
 
 <div id="bubble_sound">

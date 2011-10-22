@@ -2,14 +2,20 @@ var ap_stopAll = function(){};
 var audioplayer  = false;
 // здесь запоминается форма Предложить перевод, чтобы после подгрузки фото, её восстанавливать
 var offer_tr_clone  = '';
+// интервал показа цитат
+var rotate_quotes_interval  = 15000;
+// номер последней показанной цитаты
+var last_quote_index  = -1;
+// минимальный размер окна, при котором скрываются элементы
+var window_size_hide_el  = 1000;
 
-$(document).ready(function(){
-    // random quote    
+$(document).ready(function() {
+    // сокрытие элементов в зависимости от размера окна
+    onWindowResize();
+
+    // цитаты отображаются, если есть перевод и размер окна больше минимального
     if (quote_list) {
-        var quote_index = Math.floor(Math.random( ) * (quote_list.length));
-        if (quote_list[ quote_index ]) {
-            $("#bubble_quote p").html( quote_list[ quote_index ] + '...' );
-        }
+        showQuotes();        
     }
     
     // random audio   
@@ -40,21 +46,52 @@ $(document).ready(function(){
     }
     
     // сокрытие элементов в зависимости от размера окна
-    onWindowResize();
     $(window).resize(function() {
         onWindowResize();
     });
-    
 });
 
 // сокрытие элементов в зависимости от размера окна
 function onWindowResize() 
 {
-    if ($(window).width()<1000) {
-        $("#wrapper").css('margin', '0 auto 0 13px');
+    if ($(window).width() < window_size_hide_el) {
+        $("#wrapper").css('margin', '0 auto 0 70px');
     } else {
         $("#wrapper").css('margin', '0 auto');
     }
+}
+
+// скрывает цитату
+function hideQuotes()
+{
+    // fadeOut для элемента p вешает IE    
+    $("#quote_p_cont").fadeOut(600);
+    setTimeout( showQuotes, 700);
+}
+
+// отображает случайную цитату
+function showQuotes()
+{
+    // если размер окна удовлетворяет, показываем цитату    
+    if ($(window).width() > window_size_hide_el) {
+        var quote_el = $("#bubble_quote p:first");    
+        var quote_index = Math.floor(Math.random( ) * (quote_list.length));
+        // если выбрана прошлая цитата, берём предыдущую в списке или последнюю
+        if (quote_index == last_quote_index) {
+            if (quote_index > 1) {
+                quote_index = quote_index - 1;
+            } else {
+                quote_index = quote_list.length - 1;
+            }
+        }
+        
+        last_quote_index = quote_index;
+        if (quote_list[ quote_index ]) {
+            quote_el.html( quote_list[ quote_index ] + '...' );
+        }        
+        $("#quote_p_cont").fadeIn(600);
+    }
+    setTimeout( hideQuotes, rotate_quotes_interval);
 }
 
 // исходный текст учения
