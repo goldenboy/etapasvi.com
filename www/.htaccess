@@ -74,11 +74,11 @@ ErrorDocument 500 /errors/500.html
   RewriteCond %{HTTP:Accept-Language} ^en.* [NC]
   RewriteRule ^$ http://%{HTTP_HOST}/en/ [L,R=301]
 
-#  RewriteCond %{HTTP:Accept-Language} ^cs.* [NC]
-#  RewriteRule ^$ http://%{HTTP_HOST}/cs/ [L,R=301]
+  RewriteCond %{HTTP:Accept-Language} ^cs.* [NC]
+  RewriteRule ^$ http://%{HTTP_HOST}/cs/ [L,R=301]
 
-#  RewriteCond %{HTTP:Accept-Language} ^hu.* [NC]
-#  RewriteRule ^$ http://%{HTTP_HOST}/hu/ [L,R=301]
+  RewriteCond %{HTTP:Accept-Language} ^hu.* [NC]
+  RewriteRule ^$ http://%{HTTP_HOST}/hu/ [L,R=301]
 
   RewriteCond %{HTTP:Accept-Language} ^pl.* [NC]
   RewriteRule ^$ http://%{HTTP_HOST}/pl/ [L,R=301]

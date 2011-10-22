@@ -20,18 +20,16 @@ class UserPeer extends BaseUserPeer
 		              'comments_category_id' => 686465,
 		              'feedburner_loc' 		 => 'ru_RU'
 		),
-		/*'cs' => array('name'    			 => 'Čeština',
+		'cs' => array('name'    			 => 'Čeština',
 		              'iso'     			 => 'cz',
-		              //'mail_id' 			 => '876c7e23a7',
 		              'comments_category_id' => 686584,
 		              'feedburner_loc' 		 => ''
 		),
 		'hu' => array('name'    			 => 'Magyar',
 		              'iso'     			 => 'hu',
-		              //'mail_id' 			 => 'e8a86fd73d',
 		              'comments_category_id' => 686585,
 		              'feedburner_loc' 		 => ''
-		),*/
+		),
 		'pl' => array('name'    			 => 'Polski',
 		              'iso'     			 => 'pl',
 		              //'mail_id' 			 => '99862a8230',
