@@ -4,115 +4,6 @@
 SET FOREIGN_KEY_CHECKS = 0;
 
 #-----------------------------------------------------------------------------
-#-- user
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `user`;
-
-
-CREATE TABLE `user`
-(
-	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`created_at` DATETIME,
-	`timezone_id` INTEGER,
-	`name` VARCHAR(255)  NOT NULL,
-	`email` VARCHAR(255)  NOT NULL,
-	`password` VARCHAR(255)  NOT NULL,
-	`profile` VARCHAR(255),
-	`is_active` TINYINT default 1,
-	`remember_me_code` VARCHAR(255),
-	`ip` VARCHAR(20),
-	`last_login` DATETIME,
-	`lang` VARCHAR(7),
-	`phpbb_id` INTEGER,
-	`remind_code` VARCHAR(32),
-	`subscribe_news` TINYINT default 1,
-	`subscribe_photo` TINYINT default 1,
-	`subscribe_video` TINYINT default 1,
-	`notes` TEXT,
-	PRIMARY KEY (`id`),
-	UNIQUE KEY `user_U_1` (`name`),
-	UNIQUE KEY `user_U_2` (`email`),
-	INDEX `user_FI_1` (`timezone_id`),
-	CONSTRAINT `user_FK_1`
-		FOREIGN KEY (`timezone_id`)
-		REFERENCES `timezone` (`id`)
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- timezone
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `timezone`;
-
-
-CREATE TABLE `timezone`
-(
-	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`value` FLOAT,
-	PRIMARY KEY (`id`)
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- timezone_i18n
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `timezone_i18n`;
-
-
-CREATE TABLE `timezone_i18n`
-(
-	`title` VARCHAR(255)  NOT NULL,
-	`id` INTEGER  NOT NULL,
-	`culture` VARCHAR(7)  NOT NULL,
-	PRIMARY KEY (`id`,`culture`),
-	CONSTRAINT `timezone_i18n_FK_1`
-		FOREIGN KEY (`id`)
-		REFERENCES `timezone` (`id`)
-		ON DELETE CASCADE
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- comments
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `comments`;
-
-
-CREATE TABLE `comments`
-(
-	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`created_at` DATETIME,
-	`user_id` INTEGER,
-	`show` TINYINT default 1,
-	`status` TINYINT default 0,
-	PRIMARY KEY (`id`),
-	INDEX `comments_FI_1` (`user_id`),
-	CONSTRAINT `comments_FK_1`
-		FOREIGN KEY (`user_id`)
-		REFERENCES `user` (`id`)
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- comments_i18n
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `comments_i18n`;
-
-
-CREATE TABLE `comments_i18n`
-(
-	`body` TEXT  NOT NULL,
-	`id` INTEGER  NOT NULL,
-	`culture` VARCHAR(7)  NOT NULL,
-	PRIMARY KEY (`id`,`culture`),
-	CONSTRAINT `comments_i18n_FK_1`
-		FOREIGN KEY (`id`)
-		REFERENCES `comments` (`id`)
-		ON DELETE CASCADE
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
 #-- text
 #-----------------------------------------------------------------------------
 
@@ -124,7 +15,7 @@ CREATE TABLE `text`
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`created_at` DATETIME,
 	PRIMARY KEY (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- text_i18n
@@ -144,7 +35,7 @@ CREATE TABLE `text_i18n`
 		FOREIGN KEY (`id`)
 		REFERENCES `text` (`id`)
 		ON DELETE CASCADE
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- itemtypes
@@ -158,7 +49,7 @@ CREATE TABLE `itemtypes`
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(10)  NOT NULL,
 	PRIMARY KEY (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- item2item
@@ -185,7 +76,7 @@ CREATE TABLE `item2item`
 	CONSTRAINT `item2item_FK_2`
 		FOREIGN KEY (`item2_type`)
 		REFERENCES `itemtypes` (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- news
@@ -213,7 +104,7 @@ CREATE TABLE `news`
 	CONSTRAINT `news_FK_1`
 		FOREIGN KEY (`type`)
 		REFERENCES `newstypes` (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- news_i18n
@@ -240,7 +131,7 @@ CREATE TABLE `news_i18n`
 		FOREIGN KEY (`id`)
 		REFERENCES `news` (`id`)
 		ON DELETE CASCADE
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- newstypes
@@ -254,30 +145,7 @@ CREATE TABLE `newstypes`
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(20)  NOT NULL,
 	PRIMARY KEY (`id`)
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- news2comments
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `news2comments`;
-
-
-CREATE TABLE `news2comments`
-(
-	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`news_id` INTEGER,
-	`comments_id` INTEGER,
-	PRIMARY KEY (`id`),
-	INDEX `news2comments_FI_1` (`news_id`),
-	CONSTRAINT `news2comments_FK_1`
-		FOREIGN KEY (`news_id`)
-		REFERENCES `news` (`id`),
-	INDEX `news2comments_FI_2` (`comments_id`),
-	CONSTRAINT `news2comments_FK_2`
-		FOREIGN KEY (`comments_id`)
-		REFERENCES `comments` (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- upload
@@ -292,7 +160,7 @@ CREATE TABLE `upload`
 	`title` VARCHAR(255)  NOT NULL,
 	`url` VARCHAR(255),
 	PRIMARY KEY (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- photo
@@ -320,7 +188,7 @@ CREATE TABLE `photo`
 	CONSTRAINT `photo_FK_1`
 		FOREIGN KEY (`photoalbum_id`)
 		REFERENCES `photoalbum` (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- photo_i18n
@@ -343,7 +211,7 @@ CREATE TABLE `photo_i18n`
 		FOREIGN KEY (`id`)
 		REFERENCES `photo` (`id`)
 		ON DELETE CASCADE
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- photoalbum
@@ -359,7 +227,7 @@ CREATE TABLE `photoalbum`
 	`show` TINYINT default 1,
 	`order` INTEGER  NOT NULL,
 	PRIMARY KEY (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- photoalbum_i18n
@@ -379,30 +247,7 @@ CREATE TABLE `photoalbum_i18n`
 		FOREIGN KEY (`id`)
 		REFERENCES `photoalbum` (`id`)
 		ON DELETE CASCADE
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- photo2comments
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `photo2comments`;
-
-
-CREATE TABLE `photo2comments`
-(
-	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`photo_id` INTEGER,
-	`comments_id` INTEGER,
-	PRIMARY KEY (`id`),
-	INDEX `photo2comments_FI_1` (`photo_id`),
-	CONSTRAINT `photo2comments_FK_1`
-		FOREIGN KEY (`photo_id`)
-		REFERENCES `photo` (`id`),
-	INDEX `photo2comments_FI_2` (`comments_id`),
-	CONSTRAINT `photo2comments_FK_2`
-		FOREIGN KEY (`comments_id`)
-		REFERENCES `comments` (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- video
@@ -422,7 +267,7 @@ CREATE TABLE `video`
 	`all_cultures` TINYINT default 0,
 	PRIMARY KEY (`id`),
 	KEY `updated_at`(`updated_at`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- video_i18n
@@ -447,30 +292,7 @@ CREATE TABLE `video_i18n`
 		FOREIGN KEY (`id`)
 		REFERENCES `video` (`id`)
 		ON DELETE CASCADE
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- video2comments
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `video2comments`;
-
-
-CREATE TABLE `video2comments`
-(
-	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`video_id` INTEGER,
-	`comments_id` INTEGER,
-	PRIMARY KEY (`id`),
-	INDEX `video2comments_FI_1` (`video_id`),
-	CONSTRAINT `video2comments_FK_1`
-		FOREIGN KEY (`video_id`)
-		REFERENCES `video` (`id`),
-	INDEX `video2comments_FI_2` (`comments_id`),
-	CONSTRAINT `video2comments_FK_2`
-		FOREIGN KEY (`comments_id`)
-		REFERENCES `comments` (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- quote
@@ -483,7 +305,7 @@ CREATE TABLE `quote`
 (
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (`id`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- quote_i18n
@@ -502,7 +324,7 @@ CREATE TABLE `quote_i18n`
 		FOREIGN KEY (`id`)
 		REFERENCES `quote` (`id`)
 		ON DELETE CASCADE
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- audio
@@ -525,7 +347,7 @@ CREATE TABLE `audio`
 	PRIMARY KEY (`id`),
 	KEY `audio_I_1`(`order`),
 	KEY `updated_at`(`updated_at`)
-)Type=InnoDB;
+)Type=MyISAM;
 
 #-----------------------------------------------------------------------------
 #-- audio_i18n
@@ -548,92 +370,7 @@ CREATE TABLE `audio_i18n`
 		FOREIGN KEY (`id`)
 		REFERENCES `audio` (`id`)
 		ON DELETE CASCADE
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- alert
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `alert`;
-
-
-CREATE TABLE `alert`
-(
-	`created_at` DATETIME,
-	`user_id` INTEGER  NOT NULL,
-	`item_type` INTEGER  NOT NULL,
-	`item_id` INTEGER  NOT NULL,
-	`item_lang` VARCHAR(7)  NOT NULL,
-	`item_by_user` INTEGER,
-	`is_comment` TINYINT default 0 NOT NULL,
-	`status` INTEGER  NOT NULL,
-	PRIMARY KEY (`user_id`,`item_type`,`item_id`,`item_lang`,`is_comment`,`status`),
-	KEY `alert_I_1`(`user_id`),
-	KEY `alert_I_2`(`status`),
-	CONSTRAINT `alert_FK_1`
-		FOREIGN KEY (`user_id`)
-		REFERENCES `user` (`id`),
-	INDEX `alert_FI_2` (`item_by_user`),
-	CONSTRAINT `alert_FK_2`
-		FOREIGN KEY (`item_by_user`)
-		REFERENCES `user` (`id`)
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- subscribe
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `subscribe`;
-
-
-CREATE TABLE `subscribe`
-(
-	`user_id` INTEGER  NOT NULL,
-	`item_id` INTEGER  NOT NULL,
-	`item_type` INTEGER  NOT NULL,
-	`item_lang` VARCHAR(7)  NOT NULL,
-	`created_at` DATETIME,
-	PRIMARY KEY (`user_id`,`item_id`,`item_type`,`item_lang`),
-	KEY `subscribe_I_1`(`user_id`),
-	CONSTRAINT `subscribe_FK_1`
-		FOREIGN KEY (`user_id`)
-		REFERENCES `user` (`id`)
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- mail
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `mail`;
-
-
-CREATE TABLE `mail`
-(
-	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`created_at` DATETIME,
-	`sent` TINYINT default 0,
-	PRIMARY KEY (`id`)
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- mail_i18n
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `mail_i18n`;
-
-
-CREATE TABLE `mail_i18n`
-(
-	`title` TEXT,
-	`body` TEXT,
-	`id` INTEGER  NOT NULL,
-	`culture` VARCHAR(7)  NOT NULL,
-	PRIMARY KEY (`id`,`culture`),
-	CONSTRAINT `mail_i18n_FK_1`
-		FOREIGN KEY (`id`)
-		REFERENCES `mail` (`id`)
-		ON DELETE CASCADE
-)Type=InnoDB;
+)Type=MyISAM;
 
 # This restores the fkey checks, after having unset them earlier
 SET FOREIGN_KEY_CHECKS = 1;

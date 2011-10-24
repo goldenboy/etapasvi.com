@@ -1,31 +1,31 @@
 propel:
 
-  user:
-    id:               ~
-    created_at:       ~
-    timezone_id:      ~
-    name:             { type: varchar(255), required: true, index: unique }    
-    email:            { type: varchar(255), required: true, index: unique }
-    password:         { type: varchar(255), required: true }
-    profile:          { type: varchar(255) }
-    is_active:        { type: boolean, default: 1 }
-    remember_me_code: { type: varchar(255) }
-    ip:               { type: varchar(20) }
-    last_login:       { type: timestamp }
-    lang:             { type: varchar(7) }
-    phpbb_id:         { type: integer }
-    remind_code:      { type: varchar(32) }
-    subscribe_news:   { type: boolean, defaultValue: true }
-    subscribe_photo:  { type: boolean, defaultValue: true }
-    subscribe_video:  { type: boolean, defaultValue: true }
-    notes:            { type: longvarchar }
+#  user:
+#    id:               ~
+#    created_at:       ~
+#    timezone_id:      ~
+#    name:             { type: varchar(255), required: true, index: unique }    
+#    email:            { type: varchar(255), required: true, index: unique }
+#    password:         { type: varchar(255), required: true }
+#    profile:          { type: varchar(255) }
+#    is_active:        { type: boolean, default: 1 }
+#    remember_me_code: { type: varchar(255) }
+#    ip:               { type: varchar(20) }
+#    last_login:       { type: timestamp }
+#    lang:             { type: varchar(7) }
+#    phpbb_id:         { type: integer }
+#    remind_code:      { type: varchar(32) }
+#    subscribe_news:   { type: boolean, defaultValue: true }
+#    subscribe_photo:  { type: boolean, defaultValue: true }
+#    subscribe_video:  { type: boolean, defaultValue: true }
+#    notes:            { type: longvarchar }
 
-  timezone:
-    id:               ~
-    value:            { type: float }
+#  timezone:
+#    id:               ~
+#    value:            { type: float }
 
-  timezone_i18n:
-    title:            { type: varchar(255), required: true }
+#  timezone_i18n:
+#    title:            { type: varchar(255), required: true }
 
 #  idea:
 #    id:               ~
@@ -38,15 +38,15 @@ propel:
 #    title:            { type: longvarchar, required: true }
 #    body:             { type: longvarchar, required: true }
 
-  comments:
-    id:               ~
-    created_at:       ~
-    user_id:          ~
-    show:             { type: boolean, defaultValue: true }
-    status:           { type: tinyint, defaultValue: 0 }
+#  comments:
+#    id:               ~
+#    created_at:       ~
+#    user_id:          ~
+#    show:             { type: boolean, defaultValue: true }
+#    status:           { type: tinyint, defaultValue: 0 }
 
-  comments_i18n:
-    body:             { type: longvarchar, required: true }
+#  comments_i18n:
+#    body:             { type: longvarchar, required: true }
 
 #  idea2comments:
 #    id:               ~
@@ -121,10 +121,10 @@ propel:
     id:               ~
     name:             { type: varchar(20), required: true }
 
-  news2comments:
-    id:               ~
-    news_id:          ~
-    comments_id:      ~
+#  news2comments:
+#    id:               ~
+#    news_id:          ~
+#    comments_id:      ~
 
 #  news2video:
 #    id:               ~
@@ -174,10 +174,10 @@ propel:
     title:            { type: longvarchar }
     author:           { type: varchar(255) }    
 
-  photo2comments:
-    id:               ~
-    photo_id:         ~
-    comments_id:      ~
+#  photo2comments:
+#    id:               ~
+#    photo_id:         ~
+#    comments_id:      ~
 
   video:
     id:               ~
@@ -200,10 +200,10 @@ propel:
     _indexes:
       updated_at_extra:     [updated_at_extra]
 
-  video2comments:
-    id:               ~
-    video_id:         ~
-    comments_id:      ~
+#  video2comments:
+#    id:               ~
+#    video_id:         ~
+#    comments_id:      ~
 
   quote:
     id:               ~
@@ -279,28 +279,28 @@ propel:
 #    user_email:               { type: varchar(100) }
 #    user_email_hash:          { type: bigint }
 
-  alert:
-    created_at:       ~
-    user_id:          { type: integer, required: true, primaryKey: true, foreignTable: user, foreignReference: id, index: true }
-    item_type:        { type: integer, required: true, primaryKey: true }
-    item_id:          { type: integer, required: true, primaryKey: true }
-    item_lang:        { type: varchar(7), required: true, primaryKey: true }
-    item_by_user:     { type: integer, required: false, foreignTable: user, foreignReference: id }
-    is_comment:       { type: boolean, defaultValue: false, primaryKey: true }
-    status:           { type: integer, required: true, primaryKey: true, index: true }
+#  alert:
+#    created_at:       ~
+#    user_id:          { type: integer, required: true, primaryKey: true, foreignTable: user, foreignReference: id, index: true }
+#    item_type:        { type: integer, required: true, primaryKey: true }
+#    item_id:          { type: integer, required: true, primaryKey: true }
+#    item_lang:        { type: varchar(7), required: true, primaryKey: true }
+#    item_by_user:     { type: integer, required: false, foreignTable: user, foreignReference: id }
+#    is_comment:       { type: boolean, defaultValue: false, primaryKey: true }
+#    status:           { type: integer, required: true, primaryKey: true, index: true }
 
-  subscribe:
-    user_id:          { type: integer, required: true, primaryKey: true, foreignTable: user, foreignReference: id, index: true }
-    item_id:          { type: integer, required: true, primaryKey: true }
-    item_type:        { type: integer, required: true, primaryKey: true }
-    item_lang:        { type: varchar(7), required: true, primaryKey: true }
-    created_at:       ~
+#  subscribe:
+#    user_id:          { type: integer, required: true, primaryKey: true, foreignTable: user, foreignReference: id, index: true }
+#    item_id:          { type: integer, required: true, primaryKey: true }
+#    item_type:        { type: integer, required: true, primaryKey: true }
+#    item_lang:        { type: varchar(7), required: true, primaryKey: true }
+#    created_at:       ~
     
-  mail:
-    id:               ~
-    created_at:       ~
-    sent:             { type: boolean, defaultValue: false }
+#  mail:
+#    id:               ~
+#    created_at:       ~
+#    sent:             { type: boolean, defaultValue: false }
 
-  mail_i18n:
-    title:            { type: longvarchar }
-    body:             { type: longvarchar }
+#  mail_i18n:
+#    title:            { type: longvarchar }
+#    body:             { type: longvarchar }
