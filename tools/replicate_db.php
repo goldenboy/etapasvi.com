@@ -42,6 +42,9 @@ $slaves_links = array();
 // контрольные суммы таблиц мастера
 $master_tables_checksums = array();
 
+// во время работы скрипта происходили ошибки
+$error_occured = false;
+
 // YAML парсер
 require_once(dirname(__FILE__).'/../lib/symfony/yaml/sfYaml.php');
 
@@ -50,10 +53,16 @@ require_once(dirname(__FILE__).'/../lib/symfony/yaml/sfYaml.php');
  *
  * @param unknown_type $msg
  */
-function onError($msg)
+function onError($msg, $exit = true)
 {
-	mail(EMAIL_TO, EMAIL_SUBJECT, $msg);
-	die($msg."\r\n");
+	echo $msg."\r\n";
+	if ($exit) {	
+		mail(EMAIL_TO, EMAIL_SUBJECT, ob_get_contents());
+		ob_flush();
+		exit();
+	} else {
+		$error_occured = true;
+	}
 }
 
 /**
@@ -114,6 +123,9 @@ function queryDb($query, $link, $db_params)
 	return $rows;
 }
 
+// начало буферизации вывода
+ob_start();
+
 // получение параметров мастера
 $master_db_params = sfYaml::load(dirname(__FILE__).'/../config/databases.yml');
 
@@ -132,6 +144,7 @@ echo "Connected to master " . $master_params['server'] . ':' . $master_params['p
 // подключение к слейвам
 foreach ($slaves_params as $i=>$slave) {
 	if (!$slave['server']) {
+		unset($slaves_params[$i]);
 		continue;
 	}
 	$slaves_links[$i] = connectDb($slave);
@@ -143,10 +156,28 @@ $master_tables_checksums = queryDb('SHOW TABLE STATUS FROM ' . $master_params['d
 if (!$master_tables_checksums) {
 	onError('Error getting master checksums');
 }
-print_r( $master_tables_checksums );
+
+
+foreach ($slaves_params as $i=>$slave) {	
+	$slave_tables_checksums = queryDb('SHOW TABLE STATUS FROM ' . $slave['db'], $slaves_links[$i], $slave);
+	if (!$slave_tables_checksums) {
+		onError("Error getting slave {$slave['server']}:{$slave['port']} checksums", false);
+	}
+	print_r( $slave_tables_checksums );
+}
+
 // закрытие соединений с БД
 foreach ($slaves_links as $slave_link) {
 	mysql_close($slave_link);
 }
 mysql_close($master_link);
 
+// отправка уведомления, если были ошибки
+if ($error_occured) {
+	mail(EMAIL_TO, EMAIL_SUBJECT, ob_get_contents());
+}
+
+echo "Replication finished\r\n";
+
+// окончание буферизации вывода
+ob_flush();
