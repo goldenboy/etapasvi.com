@@ -65,7 +65,8 @@ foreach ($logs as $log_name => $log_info) {
 	        $line           = fgets($handle, 4096);
 	   
 	        // пустая строка
-	        if (strlen($line) < $log_info['date_length']) {
+	        // или сообщение о ненайденном файле
+	        if (strlen($line) < $log_info['date_length'] || strstr(strtolower($line), 'file does not exis')) {
 	        	continue;
 	        }
 	        //echo $line . "\r\n";
