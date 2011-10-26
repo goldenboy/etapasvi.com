@@ -27,7 +27,12 @@ class defaultActions extends sfActions
   {
     // http://bsds.etapasvi.com/issues/65
     // получаем файл 404 ошибки из кэша
-    sfSuperCache::showError404();
+    
+    // Выводим закэшированную 404 страницу, если 
+    // - находимся на основном вебе
+    if (UserPeer::isMainBack()) {
+        sfSuperCache::showError404();
+    }
      	
   }
 

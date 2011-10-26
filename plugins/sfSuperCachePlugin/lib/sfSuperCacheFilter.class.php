@@ -37,10 +37,11 @@ class sfSuperCacheFilter extends sfFilter
       // saynt2day
       // чтобы не было нагрузке при переходе из FeedBurner, который передаёт GET-запрос
       //(!sfConfig::get('sf_cache') || count($_GET) || count($_POST))
-      (!sfConfig::get('sf_cache') || count($_POST))
-      ||
-      (sfConfig::get('sf_debug') || !sfConfig::get('sf_no_script_name') || ($response->getStatusCode() != 200 && $response->getStatusCode() != 404) )
-    )
+      !sfConfig::get('sf_cache')
+      || sfConfig::get('sf_debug') 
+      || !sfConfig::get('sf_no_script_name') 
+      || ($response->getStatusCode() != 200 && $response->getStatusCode() != 404)
+      || !UserPeer::isMainBack() )
     {
       return;
     }

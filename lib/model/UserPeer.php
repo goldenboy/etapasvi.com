@@ -1220,6 +1220,16 @@ class UserPeer extends BaseUserPeer
 		mail(sfConfig::get('app_admin_email'), $subject . ' (' . sfConfig::get('app_domain_name') . ')', $msg );	
 	}
 	
+	/**
+	 * Проверка, находимся ли мы на основном бэкенде
+	 *
+	 * @return unknown
+	 */
+	public static function isMainBack()
+	{
+	   return file_exists(sfConfig::get('sf_web_dir') . '/main_back.conf');
+	}
+	
 	/*
 	public static function getUserPhpbbUrl( $user_phpbb_id ) {	
 		return 'http://' . $_SERVER['SERVER_NAME'] . '/forum/memberlist.php?mode=viewprofile&u=' 

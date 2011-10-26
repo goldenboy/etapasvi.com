@@ -25,9 +25,12 @@ class sfError404Exception extends sfException
   {      
     $exception = null === $this->wrappedException ? $this : $this->wrappedException;
 
-    // дебаг выводится только в dev
-    if (sfConfig::get('sf_debug') /*&& sfContext::getInstance()->getConfiguration()->getEnvironment() == 'dev'*/ )
-    {
+    // Выводим закэшированную 404 страницу, если 
+    // - находимся на основном вебе
+    // - включён дебаг
+    if (sfConfig::get('sf_debug') /*&& sfContext::getInstance()->getConfiguration()->getEnvironment() == 'dev'*/ 
+        || !UserPeer::isMainBack()
+    ) {
       $response = sfContext::getInstance()->getResponse();
       if (null === $response)
       {
