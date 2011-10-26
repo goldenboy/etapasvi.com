@@ -323,7 +323,7 @@ foreach ($slaves_params as $i=>$slave) {
 					// обновляем запись в слейве
 					$sql_update_row_in_slave = "UPDATE {$replicate_table} SET " . getSqlFieldValue($master_row) . "WHERE " . 
 												getSqlFieldValue($master_table_row_checksum, $tables_structure[ $replicate_table ]);
-					
+					echo $sql_update_row_in_slave;
 					queryDb($sql_update_row_in_slave, $slave_link, $slave);
 				}	
 			} 		
