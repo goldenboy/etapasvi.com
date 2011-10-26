@@ -112,13 +112,13 @@ function queryDb($query, $link, $db_params)
 	} catch (Exception $e) {}
 	
 	// Check result
-	if (!$result) {
+	if (!$result || mysql_error()) {
 		$errors_detected = true;
 	    onError("Server: {$db_params['server']}\r\nSQL: {$query}\r\nError: " . mysql_error(), false);
 	}
 	
 	// для запросов на обновление и вставку данные не возвращаются
-	try {
+	if (is_resource($result)) {
 		// Get result
 		$rows = array();
 		while ($row = mysql_fetch_assoc($result)) {
@@ -128,9 +128,10 @@ function queryDb($query, $link, $db_params)
 		// Free the resources associated with the result set
 		// This is done automatically at the end of the script
 		mysql_free_result($result);
-	} catch (Exception $e) {}
-
-	return $rows;
+		return $rows;
+	} else {
+		return $result;
+	}
 }
 
 /**
@@ -154,7 +155,7 @@ function getSqlFieldValue($field_values)
 }
 
 /**
- * Получение SQL-запроса 
+ * Получение значений в кавычках через запятую.
  *
  * @param unknown_type $row
  * @return unknown
@@ -162,13 +163,28 @@ function getSqlFieldValue($field_values)
 function getSqlFieldValuesCommaSeparated($row)
 {
 	$sql_parts = array();
-	foreach ($key_field_values as $field=>$value) {
+	foreach ($row as $field=>$value) {
 		$sql_parts[] = '"' . mysql_real_escape_string($value) . '"';
 	}
 
 	return implode(', ', $sql_parts);
 }
 
+/**
+ * Получение названий полей в кавычках через запятую
+ *
+ * @param unknown_type $row
+ * @return unknown
+ */
+function getSqlFieldNamesCommaSeparated($fields)
+{
+	$sql_parts = array();
+	foreach ($fields as $name) {
+		$sql_parts[] = "`{$name}`";
+	}
+
+	return implode(', ', $sql_parts);
+}
 
 
 
@@ -188,6 +204,7 @@ $master_params['db']   = $master_pass_port[1];
 
 // подключение к master БД
 $master_link = connectDb($master_params);
+queryDb('SET NAMES utf8', $master_link, $master_params);
 echo "Connected to master " . $master_params['server'] . ':' . $master_params['port'] . "\n";
 
 // подключение к слейвам
@@ -197,6 +214,7 @@ foreach ($slaves_params as $i=>$slave) {
 		continue;
 	}
 	$slaves_links[$i] = connectDb($slave);
+	queryDb('SET NAMES utf8', $slaves_links[$i], $slave);
 	echo "Connected to slave " . $slave['server'] . ':' . $slave['port'] . "\n";
 }
 
@@ -275,9 +293,10 @@ foreach ($slaves_params as $i=>$slave) {
 		
 		// получение контрольных сумм записей в таблице мастера
 		$sql_rows_checksums = "SELECT " . implode(', ', $tables_structure[ $replicate_table ]['primary_key']) . ",
-							  concat_ws('', " . implode(', ', $tables_structure[ $replicate_table ]['primary_key']) . ") as concat_primary_key,
-							  md5(concat_ws('', id, date, `order`)) as checksum 
+							  concat_ws('', " . getSqlFieldNamesCommaSeparated($tables_structure[ $replicate_table ]['primary_key']) . ") as concat_primary_key,
+							  md5(concat_ws('', " . getSqlFieldNamesCommaSeparated($tables_structure[ $replicate_table ]['fields']) . ")) as checksum 
 							  FROM {$replicate_table}";
+		
 		if (empty($master_tables_rows_checksums[ $replicate_table ])) {
 			$master_tables_rows_checksums[ $replicate_table ] = queryDb($sql_rows_checksums, $master_link, $master_params);
 			if (empty($master_tables_rows_checksums[ $replicate_table ])) {
@@ -292,7 +311,7 @@ foreach ($slaves_params as $i=>$slave) {
 			onError("Error getting table rows checksums from slave {$slave['server']}: {$replicate_table}", false);
 			continue;
 		}
-		
+
 		// построчное сравнение контрольных сумм записей таблицы мастера и слейва
 		foreach ($master_tables_rows_checksums[ $replicate_table ] as $master_table_row_checksum) {
 			$row_exists_in_slave  = false;
@@ -306,7 +325,8 @@ foreach ($slaves_params as $i=>$slave) {
 					break;
 				}
 			}
-			
+
+			// запись надо либо добавить либо обновить
 			if (!$row_exists_in_slave || $row_differs_in_slave) {
 				$sql_get_row_from_master = "SELECT * FROM {$replicate_table} WHERE " . 
 											getSqlFieldValue($master_table_row_checksum, $tables_structure[ $replicate_table ]);
@@ -315,22 +335,25 @@ foreach ($slaves_params as $i=>$slave) {
 					$errors_detected = true;
 					onError("Error getting table row from master: {$replicate_table}", false);
 				}
-				
-				// добавляем новую запись в слейв
+								
 				if (!$row_exists_in_slave) {
-					
+					// добавляем новую запись в слейв
+					$sql_insert_row_in_slave = 
+						"INSERT INTO {$replicate_table} (" . getSqlFieldNamesCommaSeparated($tables_structure[ $replicate_table ]['fields']) . ") " .
+						"VALUES (" . getSqlFieldValuesCommaSeparated($master_row) . ")";				
+																		
+					queryDb($sql_insert_row_in_slave, $slave_link, $slave);
 				} else {
 					// обновляем запись в слейве
-					$sql_update_row_in_slave = "UPDATE {$replicate_table} SET " . getSqlFieldValue($master_row) . "WHERE " . 
-												getSqlFieldValue($master_table_row_checksum, $tables_structure[ $replicate_table ]);
-					echo $sql_update_row_in_slave;
+					$sql_update_row_in_slave = "UPDATE {$replicate_table} SET " . getSqlFieldValue($master_row) . " WHERE " . 
+												getSqlFieldValue($master_table_row_checksum, $tables_structure[ $replicate_table ]);					
+
 					queryDb($sql_update_row_in_slave, $slave_link, $slave);
 				}	
-			} 		
+			}
 		}
-		
 		// поиск записей, которые надо удалить в слейве
-		foreach ($slave_table_rows_checksums as $slave_table_row_checksum) {		
+		foreach ($slave_table_rows_checksums as $slave_table_row_checksum) {
 			$row_exists_in_master = false;
 			foreach ($master_tables_rows_checksums[ $replicate_table ] as $master_table_row_checksum) {	
 				if ($master_table_row_checksum['concat_primary_key'] == $slave_table_row_checksum['concat_primary_key']) {
@@ -338,12 +361,14 @@ foreach ($slaves_params as $i=>$slave) {
 					break;
 				}
 			}
-			
 			// удаляем запись из слейва
 			if (!$row_exists_in_master) {
-				echo 'row_exists_in_master';
-			}			
-		}
+				$sql_delete_row_in_slave = "DELETE FROM {$replicate_table} WHERE " . 
+										    getSqlFieldValue($slave_table_row_checksum, $tables_structure[ $replicate_table ]);					
+
+				queryDb($sql_delete_row_in_slave, $slave_link, $slave);
+			}
+		}		
 	}
 }
 
