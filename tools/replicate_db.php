@@ -1,7 +1,7 @@
 <?php
 /**
  * Скрипт для репликации БД.
- * Репликация выполняется одновременно на все slave БД.
+ * Репликация выполняется сразу на все слэйвы.
  * 
  * 2011-10-25
  */
@@ -42,8 +42,14 @@ $slaves_links = array();
 // контрольные суммы таблиц мастера
 $master_tables_checksums = array();
 
+// первичные ключи и контрольные суммы записей в мастере
+$master_tables_rows_checksums = array();
+
+// структуры таблиц: все поля и первичные ключи
+$tables_structure = array();
+
 // во время работы скрипта происходили ошибки
-$error_occured = false;
+$errors_detected = false;
 
 // YAML парсер
 require_once(dirname(__FILE__).'/../lib/symfony/yaml/sfYaml.php');
@@ -61,7 +67,7 @@ function onError($msg, $exit = true)
 		ob_flush();
 		exit();
 	} else {
-		$error_occured = true;
+		$errors_detected = true;
 	}
 }
 
@@ -107,21 +113,64 @@ function queryDb($query, $link, $db_params)
 	
 	// Check result
 	if (!$result) {
-	    onError("Server: {$db_params['server']}\r\nSQL: {$query}\r\nError: " . mysql_error());
+		$errors_detected = true;
+	    onError("Server: {$db_params['server']}\r\nSQL: {$query}\r\nError: " . mysql_error(), false);
 	}
 	
-	// Get result
-	$rows = array();
-	while ($row = mysql_fetch_assoc($result)) {
-		$rows[] = $row;
-	}
-	
-	// Free the resources associated with the result set
-	// This is done automatically at the end of the script
-	mysql_free_result($result);
+	// для запросов на обновление и вставку данные не возвращаются
+	try {
+		// Get result
+		$rows = array();
+		while ($row = mysql_fetch_assoc($result)) {
+			$rows[] = $row;
+		}
+		
+		// Free the resources associated with the result set
+		// This is done automatically at the end of the script
+		mysql_free_result($result);
+	} catch (Exception $e) {}
 
 	return $rows;
 }
+
+/**
+ * Получение SQL-запрос для выборки по первичному ключу.
+ *
+ * @param unknown_type $key_field_values
+ * @return unknown
+ */
+function getSqlFieldValue($field_values)
+{
+	$sql_parts = array();
+	foreach ($field_values as $field=>$value) {
+		// служебные поля пропускаем
+		if (in_array($field, array('concat_primary_key', 'checksum'))) {
+			continue;
+		}
+		$sql_parts[] = '`' . $field . '` = "' . mysql_real_escape_string($value) . '"';
+	}
+
+	return implode(', ', $sql_parts);
+}
+
+/**
+ * Получение SQL-запроса 
+ *
+ * @param unknown_type $row
+ * @return unknown
+ */
+function getSqlFieldValuesCommaSeparated($row)
+{
+	$sql_parts = array();
+	foreach ($key_field_values as $field=>$value) {
+		$sql_parts[] = '"' . mysql_real_escape_string($value) . '"';
+	}
+
+	return implode(', ', $sql_parts);
+}
+
+
+
 
 // начало буферизации вывода
 ob_start();
@@ -157,13 +206,145 @@ if (!$master_tables_checksums) {
 	onError('Error getting master checksums');
 }
 
-
-foreach ($slaves_params as $i=>$slave) {	
+// непосредственно сравнение и обновление мастера и слейвов:
+// сначала сравниваются таблицы (реплицируются только таблицы, для которых в мастере есть контрольная суммма)
+// в таблицах, в которых найдены отличия сравниваются строки
+foreach ($slaves_params as $i=>$slave) {
+	$slave_link = $slaves_links[ $i ];
 	$slave_tables_checksums = queryDb('SHOW TABLE STATUS FROM ' . $slave['db'], $slaves_links[$i], $slave);
 	if (!$slave_tables_checksums) {
 		onError("Error getting slave {$slave['server']}:{$slave['port']} checksums", false);
 	}
-	print_r( $slave_tables_checksums );
+
+	echo "Replicating slave {$slave['server']}:{$slave['port']}...\r\n";
+	
+	// сравниваются таблицы
+	$replicate_table = '';
+	foreach ($master_tables_checksums as $master_checksum_row) {
+		// реплицируются только таблицы, для которых в мастере есть контрольная суммма
+		if (!$master_checksum_row['Checksum']) {
+			continue;
+		}
+		$replicate_table 		= $master_checksum_row['Name'];
+		$table_exists_on_slave  = false;
+		$table_need_replication = false;
+		foreach ($slave_tables_checksums as $slave_checksum_row) {
+						
+			if ($slave_checksum_row['Name'] == $replicate_table) {
+				$table_exists_on_slave  = true;
+				// контрольные суммы таблиц на мастере и слейве отличаются
+				if ($slave_checksum_row['Checksum'] != $master_checksum_row['Checksum']) {
+					$table_need_replication = true;					
+					break;
+				}
+			}
+		}
+		if (!$table_exists_on_slave) {
+			echo "Table {$replicate_table} does not exists on slave\r\n";
+			$errors_detected = true;
+		}
+		if (!$table_need_replication) {
+			continue;
+		}
+		echo "Table {$replicate_table} differs\r\n";
+		
+		// получение структур всех таблиц
+		if (!$tables_structure) {
+			foreach ($master_tables_checksums as $master_checksum_row) {
+				// реплицируются только таблицы, для которых в мастере есть контрольная суммма
+				if (!$master_checksum_row['Checksum']) {
+					continue;
+				}
+				$describe_table = queryDb('DESCRIBE ' . $master_checksum_row['Name'], $master_link, $master_params);
+				if (!$describe_table) {
+					onError('Error getting table structure: ' . $master_checksum_row['Name']);
+				}
+				foreach ($describe_table as $field_options) {
+					if ($field_options['Key'] == 'PRI') {
+						$tables_structure[ $master_checksum_row['Name'] ]['primary_key'][] = $field_options['Field'];
+					}
+					$tables_structure[ $master_checksum_row['Name'] ]['fields'][] = $field_options['Field'];
+				}
+				if (empty($tables_structure[ $master_checksum_row['Name'] ]['fields']) ||
+					empty($tables_structure[ $master_checksum_row['Name'] ]['primary_key'])) {
+					onError('Error getting table primary key: ' . $master_checksum_row['Name']);
+				}
+			}
+		}
+		//print_r( $tables_structure );
+		
+		// получение контрольных сумм записей в таблице мастера
+		$sql_rows_checksums = "SELECT " . implode(', ', $tables_structure[ $replicate_table ]['primary_key']) . ",
+							  concat_ws('', " . implode(', ', $tables_structure[ $replicate_table ]['primary_key']) . ") as concat_primary_key,
+							  md5(concat_ws('', id, date, `order`)) as checksum 
+							  FROM {$replicate_table}";
+		if (empty($master_tables_rows_checksums[ $replicate_table ])) {
+			$master_tables_rows_checksums[ $replicate_table ] = queryDb($sql_rows_checksums, $master_link, $master_params);
+			if (empty($master_tables_rows_checksums[ $replicate_table ])) {
+				onError('Error getting table rows checksums from master: ' . $replicate_table);
+			}
+		}
+
+		// получение контрольных сумм записей в таблице слейва
+		$slave_table_rows_checksums = queryDb($sql_rows_checksums, $slave_link, $slave);
+		if (empty($slave_table_rows_checksums)) {
+			$errors_detected = true;
+			onError("Error getting table rows checksums from slave {$slave['server']}: {$replicate_table}", false);
+			continue;
+		}
+		
+		// построчное сравнение контрольных сумм записей таблицы мастера и слейва
+		foreach ($master_tables_rows_checksums[ $replicate_table ] as $master_table_row_checksum) {
+			$row_exists_in_slave  = false;
+			$row_differs_in_slave = false;
+			foreach ($slave_table_rows_checksums as $slave_table_row_checksum) {
+				if ($slave_table_row_checksum['concat_primary_key'] == $master_table_row_checksum['concat_primary_key']) {
+					$row_exists_in_slave = true;
+					if ($slave_table_row_checksum['checksum'] != $master_table_row_checksum['checksum']) {
+						$row_differs_in_slave = true;
+					}
+					break;
+				}
+			}
+			
+			if (!$row_exists_in_slave || $row_differs_in_slave) {
+				$sql_get_row_from_master = "SELECT * FROM {$replicate_table} WHERE " . 
+											getSqlFieldValue($master_table_row_checksum, $tables_structure[ $replicate_table ]);
+				list($master_row) = queryDb($sql_get_row_from_master, $master_link, $master_params);
+				if (!$master_row) {
+					$errors_detected = true;
+					onError("Error getting table row from master: {$replicate_table}", false);
+				}
+				
+				// добавляем новую запись в слейв
+				if (!$row_exists_in_slave) {
+					
+				} else {
+					// обновляем запись в слейве
+					$sql_update_row_in_slave = "UPDATE {$replicate_table} SET " . getSqlFieldValue($master_row) . "WHERE " . 
+												getSqlFieldValue($master_table_row_checksum, $tables_structure[ $replicate_table ]);
+					
+					queryDb($sql_update_row_in_slave, $slave_link, $slave);
+				}	
+			} 		
+		}
+		
+		// поиск записей, которые надо удалить в слейве
+		foreach ($slave_table_rows_checksums as $slave_table_row_checksum) {		
+			$row_exists_in_master = false;
+			foreach ($master_tables_rows_checksums[ $replicate_table ] as $master_table_row_checksum) {	
+				if ($master_table_row_checksum['concat_primary_key'] == $slave_table_row_checksum['concat_primary_key']) {
+					$row_exists_in_master = true;
+					break;
+				}
+			}
+			
+			// удаляем запись из слейва
+			if (!$row_exists_in_master) {
+				echo 'row_exists_in_master';
+			}			
+		}
+	}
 }
 
 // закрытие соединений с БД
@@ -173,7 +354,7 @@ foreach ($slaves_links as $slave_link) {
 mysql_close($master_link);
 
 // отправка уведомления, если были ошибки
-if ($error_occured) {
+if ($errors_detected) {
 	mail(EMAIL_TO, EMAIL_SUBJECT, ob_get_contents());
 }
 
