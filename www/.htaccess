@@ -130,8 +130,11 @@ ErrorDocument 500 /errors/500.html
   RewriteRule ^ http://m.etapasvi.com%{REQUEST_URI} [L,R=301]
 
   # Если в кэше домена есть страница, берём её оттуда (sfSuperCachePlugin )
+  
   #RewriteCond %{REQUEST_METHOD} GET
   #RewriteCond %{HTTP_HOST} !^m.etapasvi.com$
+  # Хардкод, чтобы кэширование работало только в основном бэкенде
+  RewriteCond %{DOCUMENT_ROOT}/main_back.conf -f
   RewriteCond %{DOCUMENT_ROOT}/cache/%{HTTP_HOST}/%{REQUEST_URI}i.html -f
   RewriteRule ^(.*) cache/%{HTTP_HOST}/$1i.html [L]
   
