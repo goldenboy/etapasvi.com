@@ -140,7 +140,7 @@ function queryDb($query, $link, $db_params)
  * @param unknown_type $key_field_values
  * @return unknown
  */
-function getSqlFieldValue($field_values)
+function getSqlFieldValue($field_values, $delimiter = ', ')
 {
 	$sql_parts = array();
 	foreach ($field_values as $field=>$value) {
@@ -151,7 +151,7 @@ function getSqlFieldValue($field_values)
 		$sql_parts[] = '`' . $field . '` = "' . mysql_real_escape_string($value) . '"';
 	}
 
-	return implode(', ', $sql_parts);
+	return implode($delimiter, $sql_parts);
 }
 
 /**
@@ -329,7 +329,7 @@ foreach ($slaves_params as $i=>$slave) {
 			// запись надо либо добавить либо обновить
 			if (!$row_exists_in_slave || $row_differs_in_slave) {
 				$sql_get_row_from_master = "SELECT * FROM {$replicate_table} WHERE " . 
-											getSqlFieldValue($master_table_row_checksum, $tables_structure[ $replicate_table ]);
+											getSqlFieldValue($master_table_row_checksum, ' and ');
 				list($master_row) = queryDb($sql_get_row_from_master, $master_link, $master_params);
 				if (!$master_row) {
 					$errors_detected = true;
@@ -346,7 +346,7 @@ foreach ($slaves_params as $i=>$slave) {
 				} else {
 					// обновляем запись в слейве
 					$sql_update_row_in_slave = "UPDATE {$replicate_table} SET " . getSqlFieldValue($master_row) . " WHERE " . 
-												getSqlFieldValue($master_table_row_checksum, $tables_structure[ $replicate_table ]);					
+												getSqlFieldValue($master_table_row_checksum, ' and ');					
 
 					queryDb($sql_update_row_in_slave, $slave_link, $slave);
 				}	
@@ -364,7 +364,7 @@ foreach ($slaves_params as $i=>$slave) {
 			// удаляем запись из слейва
 			if (!$row_exists_in_master) {
 				$sql_delete_row_in_slave = "DELETE FROM {$replicate_table} WHERE " . 
-										    getSqlFieldValue($slave_table_row_checksum, $tables_structure[ $replicate_table ]);					
+										    getSqlFieldValue($slave_table_row_checksum, ' and ');					
 
 				queryDb($sql_delete_row_in_slave, $slave_link, $slave);
 			}
