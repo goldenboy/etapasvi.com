@@ -304,7 +304,7 @@ class sfSuperCache
    * @param unknown_type $file_path
    * @return unknown
    */
-  public static function removeCacheFile($file_path)
+  public static function removeCacheFile($file_path, $all_backends = true)
   {
   	if (!$file_path) {
   	  return false;
@@ -326,6 +326,18 @@ class sfSuperCache
   	pclose(popen($command, "r"));
   	//shell_exec($command); 
   	//shell_exec('rm -rf ' . $file_path); 
+  	
+  	// запуск удаления кэша на бэкендах
+  	foreach (UserPeer::$backends as $backend) {
+  		if (empty($backend['web_dir']) || empty($backend['user']) || empty($backend['host'])) {
+  			continue;
+  		}
+  		$command_backend = "ssh {$backend['user']}@{$backend['host']} \"" . 
+  							str_replace(sfConfig::get('sf_web_dir'), $backend['web_dir'], $command) . "\"";
+		//echo $command_backend;
+  		pclose(popen($command_backend, "r"));
+  	}
+  	
   	return true;
   }
   

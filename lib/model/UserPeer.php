@@ -7,8 +7,17 @@
 
 class UserPeer extends BaseUserPeer
 {
+	// бэкенды (кроме данного)
+	static public $backends = array(
+		array(
+			'host'	  => 'vaduz.dreamhost.com',
+			'user'	  => 'saynt2day20',
+			'web_dir' => '/home/saynt2day20/back2.etapasvi.com/www'
+		)
+	);
+	
 	// языки
-	static protected $cultures = array( 
+	static protected $cultures = array(
 	
 		'en' => array('name'    			 => 'English',
 		              'iso'     			 => 'en',

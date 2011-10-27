@@ -1,0 +1,10 @@
+<IfModule mod_headers.c>
+
+#  Header set Expires	"Thu, 17 Mar 2011 18:05:38 GMT"
+#  Header set Cache-Control "private, max-age=86400"
+  ExpiresActive  On
+  ExpiresDefault  "access plus 1 hour"
+# для news/rss
+  AddDefaultCharset UTF-8
+
+</IfModule>

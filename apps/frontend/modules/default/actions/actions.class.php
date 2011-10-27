@@ -30,9 +30,9 @@ class defaultActions extends sfActions
     
     // Выводим закэшированную 404 страницу, если 
     // - находимся на основном вебе
-    if (UserPeer::isMainBack()) {
-        sfSuperCache::showError404();
-    }
+    //if (UserPeer::isMainBack()) {
+    sfSuperCache::showError404();
+    //}
      	
   }
 
