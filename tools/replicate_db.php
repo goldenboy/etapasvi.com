@@ -61,7 +61,7 @@ require_once(dirname(__FILE__).'/../lib/symfony/yaml/sfYaml.php');
  */
 function onError($msg, $exit = true)
 {
-	echo $msg."\r\n";
+	msg($msg);
 	if ($exit) {	
 		mail(EMAIL_TO, EMAIL_SUBJECT, ob_get_contents());
 		ob_flush();
@@ -69,6 +69,16 @@ function onError($msg, $exit = true)
 	} else {
 		$errors_detected = true;
 	}
+}
+
+/**
+ * Вывод сообщения
+ *
+ * @param unknown_type $text
+ */
+function msg($text)
+{
+	echo date("Y-m-d H:i:s") . ': ' . $text."\r\n";
 }
 
 /**
@@ -205,7 +215,7 @@ $master_params['db']   = $master_pass_port[1];
 // подключение к master БД
 $master_link = connectDb($master_params);
 queryDb('SET NAMES utf8', $master_link, $master_params);
-echo "Connected to master " . $master_params['server'] . ':' . $master_params['port'] . "\n";
+msg( "Connected to master " . $master_params['server'] . ':' . $master_params['port'] );
 
 // подключение к слейвам
 foreach ($slaves_params as $i=>$slave) {
@@ -215,7 +225,7 @@ foreach ($slaves_params as $i=>$slave) {
 	}
 	$slaves_links[$i] = connectDb($slave);
 	queryDb('SET NAMES utf8', $slaves_links[$i], $slave);
-	echo "Connected to slave " . $slave['server'] . ':' . $slave['port'] . "\n";
+	msg( "Connected to slave " . $slave['server'] . ':' . $slave['port'] );
 }
 
 // получение контрольных сумм таблиц в мастере
@@ -234,7 +244,7 @@ foreach ($slaves_params as $i=>$slave) {
 		onError("Error getting slave {$slave['server']}:{$slave['port']} checksums", false);
 	}
 
-	echo "Replicating slave {$slave['server']}:{$slave['port']}...\r\n";
+	msg( "Replicating slave {$slave['server']}:{$slave['port']}..." );
 	
 	// сравниваются таблицы
 	$replicate_table = '';
@@ -258,13 +268,13 @@ foreach ($slaves_params as $i=>$slave) {
 			}
 		}
 		if (!$table_exists_on_slave) {
-			echo "Table {$replicate_table} does not exists on slave\r\n";
+			msg( "Table {$replicate_table} does not exists on slave" );
 			$errors_detected = true;
 		}
 		if (!$table_need_replication) {
 			continue;
 		}
-		echo "Table {$replicate_table} differs\r\n";
+		msg( "Table {$replicate_table} differs" );
 		
 		// получение структур всех таблиц
 		if (!$tables_structure) {
@@ -383,7 +393,7 @@ if ($errors_detected) {
 	mail(EMAIL_TO, EMAIL_SUBJECT, ob_get_contents());
 }
 
-echo "Replication finished\r\n";
+msg( "Replication finished" );
 
 // окончание буферизации вывода
 ob_flush();
