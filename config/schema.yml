@@ -1,8 +1,8 @@
 propel:
 
 # фейковая таблицы, нужны, т.к. в UserPeer лежит много функций
-  user:
-    id:               ~
+#  user:
+#    id:               ~
 #    created_at:       ~
 #    timezone_id:      ~
 #    name:             { type: varchar(255), required: true, index: unique }    
