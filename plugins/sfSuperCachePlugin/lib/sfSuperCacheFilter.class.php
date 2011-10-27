@@ -41,8 +41,8 @@ class sfSuperCacheFilter extends sfFilter
       || sfConfig::get('sf_debug') 
       || !sfConfig::get('sf_no_script_name') 
       || ($response->getStatusCode() != 200 && $response->getStatusCode() != 404)
-      || !UserPeer::isMainBack() )
-    {
+      //|| !UserPeer::isMainBack() 
+    ) {
       return;
     }
     
