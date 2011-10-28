@@ -320,7 +320,7 @@ class sfSuperCache
       	           "' -type f -exec rename -f 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
       	           " > /dev/null 2>&1 &";
   	}
-  echo $command;
+
   	// страница браузера ждёт и скрипт обрывается через некоторое время
   	// запускаем обработку файлов отдельным процессом
   	pclose(popen($command, "r"));
