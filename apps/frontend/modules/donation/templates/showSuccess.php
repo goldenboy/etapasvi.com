@@ -43,11 +43,10 @@ smsDonateLanguage = "english";
 <script src="http://www.zaypay.com/pay/116564.js" type="text/javascript"></script>
 <a href="http://www.zaypay.com/pay/116564" onclick="ZPayment(this); return false"><img src="http://www.zaypay.com/pay/116564/img" border="0" /></a>  
 </p>
-<?php /*
+
 <h2 class="center"><?php echo __('Bank account') ?></h2>
-<p class="center_text">
-    <a href="http://www.dharmasangha.org.np/en/Contents/donation.html" target="_blank">http://www.dharmasangha.org.np/en/Contents/donation.html</a>
-    <br/><br/>    
+<p class="center_text">    
+<?php /*
     <strong>Organisation Name:</strong> Bodhi Shrawan Dharma Sangha
     <br/><strong>Bank Name:</strong> Standard Chartered Bank
     <br/><strong>Branch:</strong> Lazimpat Branch
@@ -57,8 +56,23 @@ smsDonateLanguage = "english";
     <br/><strong>Address:</strong> P.O.Box 3990, Lazimpat, Kathmandu, Nepal
     <br/><strong>Tel:</strong> 977-1-4418456
     <br/><strong>Fax No:</strong> 977-1-4417428
-</p>
 */ ?>
+    <strong>Bank Name:</strong> Everest Bank Limited
+    <br/><strong>Account Holder's Name:</strong> Tom
+    <br/><strong>Branch:</strong> Simara Branch
+    <br/><strong>Account No:</strong> 00700501204269
+    <br/><strong>Swift Code:</strong> EVBLNPKA
+    <br/><strong>Address:</strong> Simara Chowk, Bara District, Nepal 
+    <br/><strong>Phone:</strong> 977-53-520506 
+    <br/><strong>Fax No:</strong> 977-53-520616 
+    <br/><strong>Email:</strong> eblsim@ebl.com.np
+</p>
+
+<h2 class="center"><?php echo __('Reports') ?></h2>
+<div class="center_text">
+<a href="https://docs.google.com/document/pub?id=1bIX95gsuNxFDxrTbopjKXTK3ypPk894SHiKZmEOoBGU" target="_blank"><?php echo __('Income / Expenses') ?></a><br/>
+<a href="https://docs.google.com/document/pub?id=1v46QPZq6iZnVWhmBRWRBSdVIqHW7kAsONfnbIWfViAI" target="_blank"><?php echo __('Planned expenses') ?></a>
+</div>
 
 <br /><br />
 <?php include_component('comments', 'show'); ?>	

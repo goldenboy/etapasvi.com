@@ -13,6 +13,21 @@
         <source>Bank account</source>
         <target>Банковский счёт</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Reports</source>
+        <target>Отчёты</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Income / Expenses</source>
+        <target>Отчёт о полученных и потраченных средствах</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Planned expenses</source>
+        <target>Запланированные расходы</target>
+      </trans-unit>
 
 <!-- утф -->
     </body>
