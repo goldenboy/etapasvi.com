@@ -40,8 +40,16 @@ smsDonateLanguage = "english";
 */ 
 ?>
 
-<script src="http://www.zaypay.com/pay/116564.js" type="text/javascript"></script>
-<a href="http://www.zaypay.com/pay/116564" onclick="ZPayment(this); return false"><img src="http://www.zaypay.com/pay/116564/img" border="0" /></a>  
+<script src="http://www.zaypay.com/pay/116564.js" type="text/javascript"></script><a href="http://www.zaypay.com/pay/116564" onclick="ZPayment(this); return false"><img src="http://www.zaypay.com/pay/116564/img" border="0" /></a>  
+
+<?php /*
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#zay_pay_iframe").contents().find('body').html('<script src="http://www.zaypay.com/pay/116564.js" type="text/javascript"></script><a href="http://www.zaypay.com/pay/116564" onclick="ZPayment(this); return false"><img src="http://www.zaypay.com/pay/116564/img" border="0" /></a>');
+});
+</script>
+*/ ?>
+
 </p>
 
 <h2 class="center"><?php echo __('Bank account') ?></h2>
@@ -58,7 +66,7 @@ smsDonateLanguage = "english";
     <br/><strong>Fax No:</strong> 977-1-4417428
 */ ?>
     <strong>Bank Name:</strong> Everest Bank Limited
-    <br/><strong>Account Holder's Name:</strong> Tom
+    <br/><strong>Account Holder's Name:</strong> Tom Tarnawski
     <br/><strong>Branch:</strong> Simara Branch
     <br/><strong>Account No:</strong> 00700501204269
     <br/><strong>Swift Code:</strong> EVBLNPKA
