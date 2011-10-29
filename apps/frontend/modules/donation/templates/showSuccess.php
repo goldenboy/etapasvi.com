@@ -65,21 +65,21 @@ $(document).ready(function(){
     <br/><strong>Tel:</strong> 977-1-4418456
     <br/><strong>Fax No:</strong> 977-1-4417428
 */ ?>
-    <strong>Bank Name:</strong> Everest Bank Limited
-    <br/><strong>Account Holder's Name:</strong> Tom Tarnawski
-    <br/><strong>Branch:</strong> Simara Branch
-    <br/><strong>Account No:</strong> 00700501204269
-    <br/><strong>Swift Code:</strong> EVBLNPKA
-    <br/><strong>Address:</strong> Simara Chowk, Bara District, Nepal 
-    <br/><strong>Phone:</strong> 977-53-520506 
-    <br/><strong>Fax No:</strong> 977-53-520616 
+    <strong><?php echo __('Account Holder\'s Name') ?>:</strong> Tom Tarnawski
+    <br/><strong><?php echo __('Account Number') ?>:</strong> 00700501204269
+    <br/><strong><?php echo __('Bank Name') ?>:</strong> Everest Bank Limited       
+    <br/><strong><?php echo __('Branch') ?>:</strong> Simara Branch        
+    <br/><strong><?php echo __('Address') ?>:</strong> Simara Chowk, Bara District, Nepal 
+    <br/><strong><?php echo __('SWIFT (BIC)') ?>:</strong> EVBLNPKA
+    <br/><strong><?php echo __('Phone') ?>:</strong> 977-53-520506 
+    <br/><strong><?php echo __('Fax') ?>:</strong> 977-53-520616 
     <br/><strong>Email:</strong> eblsim@ebl.com.np
 </p>
 
 <h2 class="center"><?php echo __('Reports') ?></h2>
 <div class="center_text">
-<a href="https://docs.google.com/document/pub?id=1bIX95gsuNxFDxrTbopjKXTK3ypPk894SHiKZmEOoBGU" target="_blank"><?php echo __('Income / Expenses') ?></a><br/>
-<a href="https://docs.google.com/document/pub?id=1v46QPZq6iZnVWhmBRWRBSdVIqHW7kAsONfnbIWfViAI" target="_blank"><?php echo __('Planned expenses') ?></a>
+<a href="https://docs.google.com/document/pub?id=1bIX95gsuNxFDxrTbopjKXTK3ypPk894SHiKZmEOoBGU" target="_blank"><?php echo __('Planned expenses') ?></a>
+<br/><a href="https://docs.google.com/document/pub?id=1v46QPZq6iZnVWhmBRWRBSdVIqHW7kAsONfnbIWfViAI" target="_blank"><?php echo __('Income / Expenses') ?></a>
 </div>
 
 <br /><br />

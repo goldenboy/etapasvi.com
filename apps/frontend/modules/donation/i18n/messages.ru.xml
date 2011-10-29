@@ -15,6 +15,46 @@
       </trans-unit>
       
       <trans-unit id="1">
+        <source>Account Holder's Name</source>
+        <target>Имя владельца счёта</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Account Number</source>
+        <target>Номер счёта</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Bank Name</source>
+        <target>Название банка</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Branch</source>
+        <target>Отделение</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Address</source>
+        <target>Адрес</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>SWIFT (BIC)</source>
+        <target>SWIFT (БИК)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Phone</source>
+        <target>Телефон</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Fax</source>
+        <target>Факс</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
         <source>Reports</source>
         <target>Отчёты</target>
       </trans-unit>
