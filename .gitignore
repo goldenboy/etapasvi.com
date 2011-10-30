@@ -16,5 +16,5 @@
 /www/backup_download
 
 # чтобы файлы не затирались на бэкендах
-symfony
-config/databases.yml
+/symfony
+/config/databases.yml
