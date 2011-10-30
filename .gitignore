@@ -14,3 +14,7 @@
 /www/uploads/translate/*
 /www/main_back.conf
 /www/backup_download
+
+# чтобы файлы не затирались на бэкендах
+symfony
+config/databases.yml
