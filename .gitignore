@@ -14,6 +14,7 @@
 /www/uploads/translate/*
 /www/main_back.conf
 /www/backup_download
+/.htaccess
 
 # чтобы файлы не затирались на бэкендах
 /symfony
