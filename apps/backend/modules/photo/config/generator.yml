@@ -9,7 +9,7 @@ generator:
       max_per_page: 100000
       sort: [order, asc]
       filters: [photoalbum_id, show, img]
-      display: [=id, photoalbum, show, order, _img, img, title, created_at]
+      display: [=id, photoalbum, show, order, _img, img, title, author, created_at]
       object_actions:
         _edit:
         _delete:
