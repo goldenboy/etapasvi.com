@@ -21,18 +21,19 @@ $master_params = array(
 
 // параметры слейвов
 $slaves_params = array(
-	array(
+	/*array(
 		'server' 	=> 'mysql.back2.etapasvi.com',
 		'port' 		=> '3306',
 		'username' 	=> 'userback2etapasv',
 		'password' 	=> 'J8P67gIL62fbJQE5lZEb',
 		'db' 		=> 'back2etapasvicom'
-	),
+	),*/
 	array(
-		'server' 	=> '',
-		'port' 		=> '',
-		'username' 	=> '',
-		'password' 	=> ''
+		'server' 	=> 'box758.bluehost.com',
+		'port' 		=> '3306',
+		'username' 	=> 'etapasvi_user',
+		'password' 	=> 'M9hC1H6JDAf5ObcFK41s',
+		'db' 	    => 'etapasvi_bluehost'
 	)
 );
 
