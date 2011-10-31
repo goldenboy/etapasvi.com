@@ -315,9 +315,15 @@ class sfSuperCache
       	$command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
       	           "' -type f -exec rename -f 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
       	           " > /dev/null 2>&1 &";
+      	$remote_command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
+      	           "' -type f -exec rm -f {} \;".
+      	           " > /dev/null 2>&1 &";
   	} else {
   	    $command = "find {$file_path} -name '*".self::CACHE_FILE_EXT.
       	           "' -type f -exec rename -f 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
+      	           " > /dev/null 2>&1 &";
+  	    $remote_command = "find {$file_path} -name '*".self::CACHE_FILE_EXT.
+      	           "' -type f -exec rm -f {} \;".
       	           " > /dev/null 2>&1 &";
   	}
 
@@ -328,13 +334,18 @@ class sfSuperCache
   	//shell_exec('rm -rf ' . $file_path); 
   	
   	// запуск удаления кэша на бэкендах
+  	// Файлы кэша с бэкендов переносятся на основной через определённые промежутки (replicate_cache.sh). 
+  	// При запуске удаления кэша в админке на основном бэкенде, 
+  	// PHP инициирует удаление кэша на всех неосновных бэкендах. 
+  	// При это удаление на неосновных бэкендах выполняется физически, а не переименование в d.html
   	foreach (UserPeer::$backends as $backend) {
-  		if (empty($backend['web_dir']) || empty($backend['user']) || empty($backend['host'])) {
+  		// на самом себе не запускаем
+  		if (empty($backend['web_dir']) || empty($backend['user']) 
+  			|| empty($backend['host']) || $_SERVER['SERVER_ADDR'] == $backend['host']) {
   			continue;
   		}
   		$command_backend = "ssh {$backend['user']}@{$backend['host']} \"" . 
-  							str_replace(sfConfig::get('sf_web_dir'), $backend['web_dir'], $command) . "\"";
-		//echo $command_backend;
+  							str_replace(sfConfig::get('sf_web_dir'), $backend['web_dir'], $remote_command) . "\"";		
   		pclose(popen($command_backend, "r"));
   	}
   	
