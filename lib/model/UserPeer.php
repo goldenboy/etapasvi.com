@@ -9,10 +9,15 @@ class UserPeer extends BaseUserPeer
 {
 	// бэкенды (кроме данного)
 	static public $backends = array(
-		array(
+	/*	array(
 			'host'	  => 'vaduz.dreamhost.com',
 			'user'	  => 'saynt2day20',
 			'web_dir' => '/home/saynt2day20/back2.etapasvi.com/www'
+		)*/
+		array(
+			'host'	  => '66.147.244.58',
+			'user'	  => 'etapasvi',
+			'web_dir' => '/home8/etapasvi/public_html/www'
 		)
 	);
 	
