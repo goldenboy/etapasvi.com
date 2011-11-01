@@ -56,6 +56,23 @@ class Photo extends BasePhoto
 	}
 	
 	/**
+	 * Расширенный метод для получения текста.
+	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
+	 */	
+	public function getBody($culture = null, $use_default_culture_if_empty = false)
+	{
+	  $body = parent::getBody($culture);
+
+	  if ($use_default_culture_if_empty) {
+        if (!$body) {
+          $body = $this->getBody(sfConfig::get('sf_default_culture'));
+        }
+	  }
+
+      return trim($body);
+	}
+	
+	/**
 	 * Расширенный метод для получения автора.
 	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
 	 * Если у фото не указан автор, то ищется в Фотоальбоме
@@ -92,7 +109,7 @@ class Photo extends BasePhoto
 		$body = nl2br($body);
 		$body = str_ireplace( '<br />', '&nbsp;</p><p>', $body );
 		return $body;*/
-		return TextPeer::prepareText( $this->getBody() );
+		return TextPeer::prepareText( $this->getBody(sfContext::getInstance()->getUser()->getCulture(), true) );
 	}
     public function getPreview()
     {
