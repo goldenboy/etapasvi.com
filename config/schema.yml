@@ -1,75 +1,13 @@
+# если неожиданно #
+# ./symfony propel:build-sql  #
+# перестаёт создвать SQL по данному файлу - причина может быть в комментариях. - какой-то косяк в #
+# $this->lines = explode("\n", $this->cleanup($value)); #
+# /home/saynt2day20/etapasvi.com/lib/symfony/yaml/sfYamlParser.php #
+# 
+# и проверить, что кодировка UTF-8
+#
+
 propel:
-
-# �������� �������, �����, �.�. � UserPeer ����� ����� �������
-#  user:
-#    id:               ~
-#    created_at:       ~
-#    timezone_id:      ~
-#    name:             { type: varchar(255), required: true, index: unique }    
-#    email:            { type: varchar(255), required: true, index: unique }
-#    password:         { type: varchar(255), required: true }
-#    profile:          { type: varchar(255) }
-#    is_active:        { type: boolean, default: 1 }
-#    remember_me_code: { type: varchar(255) }
-#    ip:               { type: varchar(20) }
-#    last_login:       { type: timestamp }
-#    lang:             { type: varchar(7) }
-#    phpbb_id:         { type: integer }
-#    remind_code:      { type: varchar(32) }
-#    subscribe_news:   { type: boolean, defaultValue: true }
-#    subscribe_photo:  { type: boolean, defaultValue: true }
-#    subscribe_video:  { type: boolean, defaultValue: true }
-#    notes:            { type: longvarchar }
-
-#  timezone:
-#    id:               ~
-#    value:            { type: float }
-
-#  timezone_i18n:
-#    title:            { type: varchar(255), required: true }
-
-#  idea:
-#    id:               ~
-#    user_id:          ~
-#    created_at:       ~
-#    votes:            { type: integer }
-#    show:             { type: boolean, defaultValue: true }
-
-#  idea_i18n:
-#    title:            { type: longvarchar, required: true }
-#    body:             { type: longvarchar, required: true }
-
-#  comments:
-#    id:               ~
-#    created_at:       ~
-#    user_id:          ~
-#    show:             { type: boolean, defaultValue: true }
-#    status:           { type: tinyint, defaultValue: 0 }
-
-#  comments_i18n:
-#    body:             { type: longvarchar, required: true }
-
-#  idea2comments:
-#    id:               ~
-#    idea_id:          ~
-#    comments_id:      ~
-
-#  ideaabuse:
-#    user_id:          { type: integer, required: true, primaryKey: true, foreignTable: user, foreignReference: id, index: true }
-#    idea_id:          { type: integer, required: true, primaryKey: true, foreignTable: idea, foreignReference: id, index: true }
-#    created_at:       ~
-
-#  ideavote:
-#    user_id:          { type: integer, required: true, primaryKey: true, foreignTable: user, foreignReference: id, index: true }
-#    idea_id:          { type: integer, required: true, primaryKey: true, foreignTable: idea, foreignReference: id, index: true }
-#    created_at:       ~
-
-#  bestidea:
-#    id:               ~    
-#    created_at:       ~
-
-#  bestidea_i18n:
-#    idea_id:          ~
 
   text:
     id:               ~
@@ -122,21 +60,6 @@ propel:
     id:               ~
     name:             { type: varchar(20), required: true }
 
-#  news2comments:
-#    id:               ~
-#    news_id:          ~
-#    comments_id:      ~
-
-#  news2video:
-#    id:               ~
-#    news_id:          { type: integer, required: true, foreignTable: news, foreignReference: id, index: true }
-#    video_id:         { type: integer, required: true, foreignTable: video, foreignReference: id, index: true }
-    
-#  news2photoalbum:
-#    id:               ~
-#    news_id:          { type: integer, required: true, foreignTable: news, foreignReference: id, index: true }
-#    photoalbum_id:    { type: integer, required: true, foreignTable: photoalbum, foreignReference: id, index: true }
-
   upload:
     id:               ~
     title:            { type: varchar(255), required: true }
@@ -173,12 +96,8 @@ propel:
 
   photoalbum_i18n:
     title:            { type: longvarchar }
+    body:             { type: longvarchar }
     author:           { type: varchar(255) }    
-
-#  photo2comments:
-#    id:               ~
-#    photo_id:         ~
-#    comments_id:      ~
 
   video:
     id:               ~
@@ -200,11 +119,6 @@ propel:
     author:           { type: varchar(255) }
     _indexes:
       updated_at_extra:     [updated_at_extra]
-
-#  video2comments:
-#    id:               ~
-#    video_id:         ~
-#    comments_id:      ~
 
   quote:
     id:               ~
@@ -232,76 +146,3 @@ propel:
     author:           { type: longvarchar }
     _indexes:
       updated_at_extra:     [updated_at_extra]
-
-#  song:
-#    id:               ~
-
-#  song_i18n:
-#    file:             { type: varchar(255), required: true }
-
-#  phpb7d3x_sessions:
-#    session_id:               { type: varchar(32), primaryKey: true }
-#    session_user_id:          { type: integer, defaultValue: 0 }
-#    session_forum_id:         { type: integer, defaultValue: 0 }
-#    session_last_visit:       { type: integer, defaultValue: 0 }
-#    session_start:            { type: integer, defaultValue: 0 }
-#    session_time:             { type: integer, defaultValue: 0 }
-#    session_ip:               { type: varchar(40), defaultValue: '' }
-#    session_browser:          { type: varchar(150), defaultValue: '' }
-#    session_forwarded_for:    { type: varchar(255), defaultValue: '' }
-#    session_page:             { type: varchar(255), defaultValue: '' }
-#    session_viewonline:       { type: tinyint, defaultValue: 1 }
-#    session_autologin:        { type: tinyint, defaultValue: 0 }
-#    session_admin:            { type: tinyint, defaultValue: 0 }
-
-#  phpb7d3x_sessions_keys:
-#    key_id:                   { type: varchar(32), primaryKey: true }
-#    user_id:                  { type: integer, primaryKey: true }
-#    last_ip:                  { type: varchar(40), defaultValue: '' }
-#    last_login:               { type: integer, defaultValue: 0 }
-
-#  phpb7d3x_config:
-#    config_name:              { type: varchar(255), primaryKey: true }
-#    config_value:             { type: varchar(255), defaultValue: '' }
-#    is_dynamic:               { type: tinyint, defaultValue: 0 }
-
-#  phpb7d3x_users:
-#    user_id:                  { type: integer, primaryKey: true, autoincrement: true }
-#    user_type:                { type: tinyint }
-#    group_id:                 { type: integer }
-#    user_permissions:         { type: longvarchar }
-#    user_perm_from:           { type: integer }
-#    user_ip:                  { type: varchar(40) }
-#    user_regdate:             { type: integer }
-#    username:                 { type: varchar(255) }
-#    username_clean:           { type: varchar(255) }
-#    user_password:            { type: varchar(40) }
-
-#    user_email:               { type: varchar(100) }
-#    user_email_hash:          { type: bigint }
-
-#  alert:
-#    created_at:       ~
-#    user_id:          { type: integer, required: true, primaryKey: true, foreignTable: user, foreignReference: id, index: true }
-#    item_type:        { type: integer, required: true, primaryKey: true }
-#    item_id:          { type: integer, required: true, primaryKey: true }
-#    item_lang:        { type: varchar(7), required: true, primaryKey: true }
-#    item_by_user:     { type: integer, required: false, foreignTable: user, foreignReference: id }
-#    is_comment:       { type: boolean, defaultValue: false, primaryKey: true }
-#    status:           { type: integer, required: true, primaryKey: true, index: true }
-
-#  subscribe:
-#    user_id:          { type: integer, required: true, primaryKey: true, foreignTable: user, foreignReference: id, index: true }
-#    item_id:          { type: integer, required: true, primaryKey: true }
-#    item_type:        { type: integer, required: true, primaryKey: true }
-#    item_lang:        { type: varchar(7), required: true, primaryKey: true }
-#    created_at:       ~
-    
-#  mail:
-#    id:               ~
-#    created_at:       ~
-#    sent:             { type: boolean, defaultValue: false }
-
-#  mail_i18n:
-#    title:            { type: longvarchar }
-#    body:             { type: longvarchar }

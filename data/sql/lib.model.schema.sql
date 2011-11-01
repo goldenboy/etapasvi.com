@@ -239,6 +239,7 @@ DROP TABLE IF EXISTS `photoalbum_i18n`;
 CREATE TABLE `photoalbum_i18n`
 (
 	`title` TEXT,
+	`body` TEXT,
 	`author` VARCHAR(255),
 	`id` INTEGER  NOT NULL,
 	`culture` VARCHAR(7)  NOT NULL,

@@ -74,6 +74,22 @@ class Photoalbum extends BasePhotoalbum
       return trim($title);
 	}
 	
+	/**
+	 * Расширенный метод для получения текста.
+	 * Если $use_default_culture_if_empty, то возвращается значение на языке по умолчанию.
+	 */	
+	public function getBody($culture = null, $use_default_culture_if_empty = false)
+	{
+	  $body = parent::getBody($culture);
+
+	  if ($use_default_culture_if_empty) {
+        if (!$body) {
+          $body = $this->getBody(sfConfig::get('sf_default_culture'));
+        }
+	  }
+      return trim($body);
+	}
+	
     /**
      * Получение ссылки на фотоальбом
      */

@@ -1012,6 +1012,12 @@ img.newsitem_img {
     }
 
 /* photo */
+.photoalbum_container {
+    border-bottom: 0;
+    }
+.photoalbum_container h2 {
+    text-align: center;
+    }
 .photo_list td,
 .album_list td {
     border:1px solid #ddd;
