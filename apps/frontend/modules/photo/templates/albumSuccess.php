@@ -1,11 +1,22 @@
 <?php slot('body_id') ?>body_photo<?php end_slot() ?>
+
+<?php 
+/*
+$navigation_html = get_partial('global/navigation', array('pager'=>$pager, 'module_action'=>'photo/album?id=' . $sf_request->getParameter('id') ) ); 
+echo $navigation_html;*/
+
+$photo_list = $pager->getResults();
+
+$author = $photoalbum->getAuthor($sf_user->getCulture(), $photo_list);
+?>
+
 <h1><?php echo __('Photo Album') ?></h1>
 
 <p class="bread_crumbs">	
 	<a href="<?php echo url_for('@main'); ?>"><?php echo __('Home') ?></a> » <a href="<?php echo url_for('photoalbum_index'); ?>"><?php echo __('Photo Albums') ?></a>     
 </p>
 <div class="box photoalbum_container">
-<h2 class="title center_text"><?php echo $photoalbum->getTitle($sf_user->getCulture(), true);?></h2>
+<h2 class="title"><?php echo $photoalbum->getTitle($sf_user->getCulture(), true);?></h2>
 <p class="light center_text">
     <?php echo format_datetime( $photoalbum->getCreatedAt(), 'd MMMM yyyy'); ?> | 
     <?php echo __('Photo') ?>: <?php echo $photoalbum->countPhotos(); ?>
@@ -18,13 +29,6 @@
     <p><?php echo $body;?></p>
 <?php endif ?>
 </div>
-<?php 
-/*
-$navigation_html = get_partial('global/navigation', array('pager'=>$pager, 'module_action'=>'photo/album?id=' . $sf_request->getParameter('id') ) ); 
-echo $navigation_html;*/
-
-$photo_list = $pager->getResults();
-?>
 
 <?php if (count($photo_list )): ?>
 	<?php include_partial('photo/list', array('photo_list'=>$photo_list)); ?>

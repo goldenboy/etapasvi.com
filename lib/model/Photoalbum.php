@@ -108,4 +108,33 @@ class Photoalbum extends BasePhotoalbum
 	  $url = sfContext::getInstance()->getController()->genUrl($url_pattern, true, $culture);
 	  return $url;
 	}
+	
+	/**
+	 * Получение авторов фото в фотоальбоме.
+	 *
+	 */
+	public function getAuthor($culture = '', $photo_list = array()) 
+	{
+		$authors = array();
+		// если список фото не передан, получаем фотографии
+		// забиваем
+		/*if (empty($photo_list)) {
+			
+		    $c = new Criteria();
+		    $c->add( PhotoPeer::SHOW, 1);
+		    $c->add( PhotoPeer::PHOTOALBUM_ID, $this->getId());
+		    PhotoPeer::addVisibleCriteria($c);
+		    
+		    $photo_list = PhotoPeer::doSelectWithI18n($c);
+		}*/
+		
+		foreach ($photo_list as $photo) {
+			$author = $photo->getAuthor($culture, true);
+			if ($author && !in_array($author, $authors)) {
+				$authors[] = $author;
+			}
+		}
+
+		return implode(', ', $authors);
+	}
 }
