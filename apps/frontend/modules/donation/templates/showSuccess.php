@@ -1,8 +1,17 @@
 <?php slot('body_id') ?>body_donation<?php end_slot() ?>
 
 <h1 id="up"><?php echo __('Donation') ?></h1>
-<?php /*
+
 <h2 class="center"><?php echo __('Purpose') ?></h2>
+
+<?php 
+$news = NewsPeer::retrieveByPk(98);
+$news_link = $news->getUrl();
+?>
+<p class="center_text">
+<a href="<?php echo $news_link ?>" target="_blank"><?php echo $news_link ?></a>
+</p>
+<?php /*
 <p>
 <?php echo __('Bodhi Shrawan Dharma Sangha is planning for the auspicious day, when Dharma Sangha\'s meditation will end on May 17, Buddha Jayanti\'s day. After that Dharma Sangha will be giving blessings to devotees for 15 days from 9am to 6pm tentatively.') ?>
 <br/><br/>
