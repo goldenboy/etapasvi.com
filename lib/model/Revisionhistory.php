@@ -44,7 +44,7 @@ class Revisionhistory extends BaseRevisionhistory {
 		if (!$culture) {
 			return false;
 		}
-		$url_pattern = 'revision/show?id=' . $this->getId();
+		$url_pattern = 'revision/show?sf_culture=' . $culture . '&id=' . $this->getId();
 	    return sfContext::getInstance()->getController()->genUrl($url_pattern, true, $culture);
 	}
 	
