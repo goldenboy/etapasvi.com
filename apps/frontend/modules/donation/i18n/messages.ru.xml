@@ -68,6 +68,11 @@
         <source>Planned expenses</source>
         <target>Запланированные расходы</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Currency Converter</source>
+        <target>Конвертер валют</target>
+      </trans-unit>
 
 <!-- утф -->
     </body>
