@@ -74,7 +74,7 @@ $(document).ready(function(){
     <br/><strong>Tel:</strong> 977-1-4418456
     <br/><strong>Fax No:</strong> 977-1-4417428
 */ ?>
-    <strong><?php echo __('Account Holder\'s Name') ?>:</strong> Tom Tarnawski
+    <strong><?php echo __('Account Holder\'s Name') ?>:</strong> Nil Bdr / Tomasz Hen
     <br/><strong><?php echo __('Account Number') ?>:</strong> 00700501204269
     <br/><strong><?php echo __('Bank Name') ?>:</strong> Everest Bank Limited       
     <br/><strong><?php echo __('Branch') ?>:</strong> Simara Branch        
