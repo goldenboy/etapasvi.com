@@ -78,7 +78,7 @@
                 <a href="<?php echo $photo->getFullUrl(); ?>" 	
                     title="<?php echo __('Enlarge') ?>" target="_blank" ><?php echo __('Enlarge') ?></a>		
             </p>
-            <p id="photo_loader" class="hidden center_text" ><img src="/i/loader.gif" /></p>
+            <p id="photo_loader" class="hidden center_text" ><img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/loader.gif" /></p>
             <?php if ($photo->getBody($sf_user->getCulture(), true)): ?>
                 <br/>
             <?php echo html_entity_decode($photo->getBodyPrepared()); ?><br/>

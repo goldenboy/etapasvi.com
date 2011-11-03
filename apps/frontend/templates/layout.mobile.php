@@ -9,7 +9,7 @@
 <?php else: ?>
     <title><?php echo __(html_entity_decode($sf_response->getTitle())); ?> - <?php echo sfConfig::get('app_site_name'); ?></title>
 <?php endif ?>
-<link rel="stylesheet" type="text/css" href="/css/m_css.css" />	
+<link rel="stylesheet" type="text/css" href="http://<?php echo sfConfig::get('app_domain_name'); ?>/css/m_css.css" />	
 <link rel="shortcut icon" type="image/x-icon" href="http://<?php echo sfConfig::get('app_domain_name'); ?>/favicon.ico" />
 <script type="text/javascript">
     function switchCulture() {

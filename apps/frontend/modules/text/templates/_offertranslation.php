@@ -1,6 +1,6 @@
 <div id="offer_tr_ctr" >
 <a href="javascript:switchOfferTr('<?php echo url_for('offer_translation'); ?>', '<?php echo __('Error occured while loading form. Please, try again.') ?>')" id="offer_tr_trigger">[<?php echo __('offer translation') ?>]</a>
-<p id="offer_tr_loader"><img src="/i/loader.gif" /></p>
+<p id="offer_tr_loader"><img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/loader.gif" /></p>
 <strong id="offer_tr_success" class="small success"><br/><?php echo __('Thanks! Your translation has been sent.') ?></strong>
 <div id="offer_tr" class="box page_tools">
 <iframe name="offer_tr_iframe" id="offer_tr_iframe_id" src=""></iframe>

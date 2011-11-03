@@ -11,7 +11,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="http://<?php echo sfConfig::get('app_domain_name'); ?>/favicon.ico" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script> 
 <script type="text/javascript" src="<?php echo url_for('@js'); ?>"></script> 
-<link rel="stylesheet" type="text/css" media="screen" href="/css/css.css" /> 
+<link rel="stylesheet" type="text/css" media="screen" href="http://<?php echo sfConfig::get('app_domain_name'); ?>/css/css.css" /> 
 </head>
 
 <?php $body_id = get_slot('body_id'); ?>
@@ -54,7 +54,7 @@
 </div>
 
 <div id="bubble_mantra">
-	<img src="/i/om_namo_guru_buddha_gyani.gif" title="<?php echo __('Om Namo Guru Buddha Gyani') ?>" />
+	<img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/om_namo_guru_buddha_gyani.gif" title="<?php echo __('Om Namo Guru Buddha Gyani') ?>" />
 <?php
 /*
 	<script type="text/javascript">
@@ -89,7 +89,7 @@
 		$i = 0;
 	?>
 
-	<span class="lang_name lang_selector b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><img src="/i/fg.png" alt="<?php echo UserPeer::getCultureIso( $user_culture );?>" /></span> 
+	<span class="lang_name lang_selector b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/fg.png" alt="<?php echo UserPeer::getCultureIso( $user_culture );?>" /></span> 
 	<?php /* <span class="slide_arrow lang_selector">▼</span>*/ ?>
     <?php /* id используется в /lib/symfony/exception/sfError404Exception.class.php */ ?>
 	<div id="lang_list">
@@ -100,7 +100,7 @@
             <?php endif ?>
             <td>                
                 <?php if ($i > count(UserPeer::getCultures())) break; ?>
-                <i class="b-fg b-fg_<?php echo strtoupper($culture_data['iso']);?>"><img src="/i/fg.png"/></i> 
+                <i class="b-fg b-fg_<?php echo strtoupper($culture_data['iso']);?>"><img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/fg.png"/></i> 
                 <?php if ($user_culture == $culture): ?>
                     <span class="light"><?php echo $culture_data['name']?></span>
                 <?php else: ?>

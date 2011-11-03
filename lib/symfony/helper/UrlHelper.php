@@ -85,7 +85,9 @@ function link_to1($name, $internal_uri, $options = array())
 /**
  * @ignore
  */
-function url_for2($routeName, $params = array(), $absolute = false)
+// http://tasks.etapasvi.com/issues/253
+function url_for2($routeName, $params = array(), $absolute = true)
+//function url_for2($routeName, $params = array(), $absolute = false)
 {
   $params = array_merge(array('sf_route' => $routeName), is_object($params) ? array('sf_subject' => $params) : $params);
 
@@ -95,7 +97,9 @@ function url_for2($routeName, $params = array(), $absolute = false)
 /**
  * @ignore
  */
-function url_for1($internal_uri, $absolute = false)
+// http://tasks.etapasvi.com/issues/253
+function url_for1($internal_uri, $absolute = true)
+//function url_for1($internal_uri, $absolute = false)
 {
   return sfContext::getInstance()->getController()->genUrl($internal_uri, $absolute);
 }
