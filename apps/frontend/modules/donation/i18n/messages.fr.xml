@@ -69,6 +69,11 @@
         <target></target>
       </trans-unit>
 
+      <trans-unit id="1">
+        <source>Currency Converter</source>
+        <target></target>
+      </trans-unit>
+      
 <!-- утф -->
     </body>
   </file>

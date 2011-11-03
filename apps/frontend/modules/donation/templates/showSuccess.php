@@ -74,11 +74,11 @@ $(document).ready(function(){
     <br/><strong>Tel:</strong> 977-1-4418456
     <br/><strong>Fax No:</strong> 977-1-4417428
 */ ?>
-    <strong><?php echo __('Account Holder\'s Name') ?>:</strong> Tom Tarnawski
+    <strong><?php echo __('Account Holder\'s Name') ?>:</strong> Nil Bdr / Tomasz Hen
     <br/><strong><?php echo __('Account Number') ?>:</strong> 00700501204269
     <br/><strong><?php echo __('Bank Name') ?>:</strong> Everest Bank Limited       
     <br/><strong><?php echo __('Branch') ?>:</strong> Simara Branch        
-    <br/><strong><?php echo __('Address') ?>:</strong> Simara Chowk, Bara District, Nepal 
+    <br/><strong><?php echo __('Address') ?>:</strong> Simara Chowk (street), Simara (sity), Bara (district), Nepal (country)
     <br/><strong><?php echo __('SWIFT (BIC)') ?>:</strong> EVBLNPKA
     <br/><strong><?php echo __('Phone') ?>:</strong> 977-53-520506 
     <br/><strong><?php echo __('Fax') ?>:</strong> 977-53-520616 
@@ -89,6 +89,7 @@ $(document).ready(function(){
 <div class="center_text">
 <a href="https://docs.google.com/document/pub?id=1bIX95gsuNxFDxrTbopjKXTK3ypPk894SHiKZmEOoBGU" target="_blank"><?php echo __('Planned expenses') ?></a>
 <br/><a href="https://docs.google.com/document/pub?id=1v46QPZq6iZnVWhmBRWRBSdVIqHW7kAsONfnbIWfViAI" target="_blank"><?php echo __('Income / Expenses') ?></a>
+<br/><br/><a href="http://coinmill.com/NPR_calculator.html" target="_blank"><?php echo __('Currency Converter') ?></a>
 </div>
 
 <br /><br />
