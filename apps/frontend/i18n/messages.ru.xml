@@ -350,6 +350,23 @@
         <source>Comment</source>
         <target>Комментарий</target>
       </trans-unit> 
+      
+<!-- Revision history -->
+
+      <trans-unit id="1">
+        <source>revision history</source>
+        <target>история изменений</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Current revision</source>
+        <target>Текущая версия</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Compare selected revisions</source>
+        <target>Сравнить выбранные версии</target>
+      </trans-unit>
 
 <!-- утф -->
     </body>

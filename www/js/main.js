@@ -40,6 +40,12 @@ $(document).ready(function() {
 
     // перемещение Предложения перевода наверх
     $("#offer_tr_ctr").insertAfter( "#content h1:eq(0)" );
+    
+    // перемещение Версий наверх
+    $("#revhistory_ctr").insertAfter( "#offer_tr_ctr" );
+    // размещение ссылки Версий рядом с Предложить перевод    
+    $("#revhistory_trigger").insertAfter( "#offer_tr_trigger" );
+    
     // текст в футере
     if (footer_text) {
         $("#f_line").after(footer_text);
@@ -251,19 +257,22 @@ function switchOfferTr(fields_url, error_msg)
 {    
     // если поля уже загружены
     if (!$("#offer_tr_fields").is(':empty')) {
-        if ( $("#offer_tr").is(":hidden") ) {
-            $("#offer_tr").show();
+        if ( $("#offer_tr").is(":hidden") ) {            
+            offerTrShow();
+            
             // если форма была отправлена
             if (!$("#offer_tr_success").is(":hidden")) {
                 $("#offer_tr_fields textarea").val('');            
             }
             $("#offer_tr_success").hide();
         } else {
-            $("#offer_tr").hide();
+            offerTrHide();
         }
     } else {
         // загрузка полей
         $("#offer_tr_loader").show();
+        offerTrShow();
+        
         $.ajax({
             url: fields_url,
             dataType: "html",
@@ -274,9 +283,30 @@ function switchOfferTr(fields_url, error_msg)
             },
             error: function(data) {
                 $("#offer_tr_loader").hide();
-                alert(error_msg);
             }
         });
+    }
+}
+
+// показать Предложить перевод
+function offerTrShow()
+{
+    revhistoryHide();
+        
+    $("#offer_tr").show();
+    // модификация текста ссылки
+    var offer_tr_trigger = $("#offer_tr_trigger");
+    offer_tr_trigger.text( offer_tr_trigger.text().substr(1, offer_tr_trigger.text().length-2) );
+}
+
+// скрыть Предложить перевод
+function offerTrHide()
+{
+    if ( !$("#offer_tr").is(":hidden") ) {  
+        $("#offer_tr").hide();
+        // модификация текста ссылки
+        var offer_tr_trigger = $("#offer_tr_trigger");
+        offer_tr_trigger.text( "[" + offer_tr_trigger.text() + "]" );
     }
 }
 
@@ -293,4 +323,36 @@ function showOfferTrMethod(radio)
 {    
     $(".offer_tr_method").hide();
     $("#" + $(radio).val() ).show();
+}
+
+// отображение Истории изменений
+function switchRevhistory()
+{
+    if ( $("#revhistory_ctr").is(":hidden") ) {
+        revhistoryShow();
+    } else {
+        revhistoryHide();
+    }
+}
+
+// показать Версии
+function revhistoryShow()
+{
+    offerTrHide();
+        
+    $("#revhistory_ctr").show();
+    // модификация текста ссылки
+    var revhistory_trigger = $("#revhistory_trigger");
+    revhistory_trigger.text( revhistory_trigger.text().substr(1, revhistory_trigger.text().length-2) );
+}
+
+// скрыть Версии
+function revhistoryHide()
+{
+    if ( !$("#revhistory_ctr").is(":hidden") ) {
+        $("#revhistory_ctr").hide();
+        // модификация текста ссылки
+        var revhistory_trigger = $("#revhistory_trigger");
+        revhistory_trigger.text( "[" + revhistory_trigger.text() + "]" );
+    }
 }

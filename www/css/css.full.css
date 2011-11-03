@@ -673,6 +673,8 @@ textarea,
 input[type="checkbox"], 
 input[type="radio"] {
     border: 0;
+    position: relative;
+    top: 3px;
     }
 .input_button,
 #body_search input.gsc-search-button {	
@@ -1507,7 +1509,11 @@ label.error {
 .b-fg_ZM img { top: -2268px; }
 .b-fg_ZW img { top: -2277px; }
 
-/* offer translation */
+.page_tools  {
+    margin-bottom: 7px;
+    }
+
+/* offer translation, revision history */
 #offer_tr_ctr {
     text-align: center;
     margin-bottom: 7px;
@@ -1516,20 +1522,23 @@ label.error {
 #offer_tr_success,
 #offer_tr_iframe_id,
 #offer_tr_iframe,
-#offer_tr_loader {
+#offer_tr_loader,
+#revhistory_ctr  {
     display: none;
     }
 #offer_tr_loader {
     text-align:center;
     }
-#offer_tr  {
-    margin-bottom: 7px;
-    }
 #offer_tr  textarea {
     width: 98%;
     }
-#offer_tr_trigger {
+#offer_tr_trigger,
+#revhistory_trigger {
 	font-size:9.5px;
+    margin-right: 5px;
+    }
+#revhistory_ctr form {
+    padding: 13px 10px;
     }
     
 /*

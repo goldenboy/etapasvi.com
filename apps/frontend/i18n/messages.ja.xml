@@ -383,6 +383,23 @@
         <target></target>
       </trans-unit>
       
+<!-- Revision history -->
+
+      <trans-unit id="1">
+        <source>revision history</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Current revision</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Compare selected revisions</source>
+        <target></target>
+      </trans-unit>
+      
 <!-- утф -->
     </body>
   </file>
