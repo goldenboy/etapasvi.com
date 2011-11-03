@@ -373,5 +373,23 @@ CREATE TABLE `audio_i18n`
 		ON DELETE CASCADE
 )Type=MyISAM;
 
+#-----------------------------------------------------------------------------
+#-- revisionhistory
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `revisionhistory`;
+
+
+CREATE TABLE `revisionhistory`
+(
+	`id` INTEGER  NOT NULL AUTO_INCREMENT,
+	`created_at` DATETIME,
+	`show` TINYINT default 1,
+	`page_mnemonic` VARCHAR(255),
+	`body` TEXT,
+	PRIMARY KEY (`id`),
+	KEY `main`(`page_mnemonic`, `show`)
+)Type=MyISAM;
+
 # This restores the fkey checks, after having unset them earlier
 SET FOREIGN_KEY_CHECKS = 1;

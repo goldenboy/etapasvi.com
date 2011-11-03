@@ -27,7 +27,8 @@
 <div id="content_wrapper">    
 	<div id="content">
 		<?php echo $sf_content ?>
-        <?php include_component( 'text', 'offertranslation' ); ?>        
+        <?php include_component( 'text', 'offertranslation' ); ?>
+        <?php include_component( 'revisionhistory', 'show' );  ?>        
 	</div>
     <div id="menu">
         <?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	

@@ -64,6 +64,12 @@ books_show:
   param: { module: news, action: show }
   requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
   
+# должен быть выше default
+revisionhistory:
+  url:   /:sf_culture/revision/show/*
+  param: { module: revisionhistory, action: show }
+  requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
+  
 default:
   url:   /:sf_culture/:module/:action/*
   requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
@@ -284,7 +290,7 @@ offer_translation:
 js:
   url:   /:sf_culture/js
   param: { module: text, action: js }
-  requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
+  requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) } 
   
 # Ошибка 404
 error404:

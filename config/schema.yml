@@ -146,3 +146,12 @@ propel:
     author:           { type: longvarchar }
     _indexes:
       updated_at_extra:     [updated_at_extra]
+      
+  revisionhistory:
+    id:               ~
+    created_at:       ~
+    show:             { type: boolean, defaultValue: true }
+    page_mnemonic:    { type: varchar(255) }
+    body:             { type: longvarchar }
+    _indexes:
+      main:          [page_mnemonic, show]

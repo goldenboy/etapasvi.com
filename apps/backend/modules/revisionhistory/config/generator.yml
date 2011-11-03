@@ -1,0 +1,20 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Revisionhistory
+    theme:            default
+
+    list:
+      max_per_page: 50000
+      filters: [show]
+      display: [id, show, created_at, _page_mnemonic_link, _link]
+      object_actions:
+        _edit:
+        _delete:
+        
+    edit:
+      fields:
+        body:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
