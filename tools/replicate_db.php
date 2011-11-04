@@ -316,11 +316,17 @@ foreach ($slaves_params as $i=>$slave) {
 		}
 
 		// получение контрольных сумм записей в таблице слейва
-		$slave_table_rows_checksums = queryDb($sql_rows_checksums, $slave_link, $slave);
+		$slave_table_rows_checksums = queryDb($sql_rows_checksums, $slave_link, $slave);		
 		if (empty($slave_table_rows_checksums)) {
-			$errors_detected = true;
-			onError("Error getting table rows checksums from slave {$slave['server']}: {$replicate_table}", false);
-			continue;
+			// учесть, что в таблице слейва может просто не быть полей
+			$sql_count_records = "SELECT count(*) as cnt FROM `{$replicate_table}`";
+			$count_records = queryDb($sql_count_records, $slave_link, $slave);
+
+			if ($count_records[0]['cnt'] != 0) {
+				$errors_detected = true;
+				onError("Error getting table rows checksums from slave {$slave['server']}: {$replicate_table}", false);
+				continue;
+			}
 		}
 
 		// построчное сравнение контрольных сумм записей таблицы мастера и слейва
