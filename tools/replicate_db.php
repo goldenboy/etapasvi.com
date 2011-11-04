@@ -159,7 +159,14 @@ function getSqlFieldValue($field_values, $delimiter = ', ')
 		if (in_array($field, array('concat_primary_key', 'checksum'))) {
 			continue;
 		}
-		$sql_parts[] = '`' . $field . '` = "' . mysql_real_escape_string($value) . '"';
+		// если в мастере поле имеет формат даты и равно NULL, 
+		// чтобы оно не превращалось в 000-00-00 в слейве надо явно указывать NULL
+		// NULL не экранируем		
+		if ($value == 'NULL') {
+			$sql_parts[] = '`' . $field . '` = NULL';
+		} else {
+			$sql_parts[] = '`' . $field . '` = "' . mysql_real_escape_string($value) . '"';
+		}
 	}
 
 	return implode($delimiter, $sql_parts);
@@ -175,7 +182,15 @@ function getSqlFieldValuesCommaSeparated($row)
 {
 	$sql_parts = array();
 	foreach ($row as $field=>$value) {
-		$sql_parts[] = '"' . mysql_real_escape_string($value) . '"';
+		// если в мастере поле имеет формат даты и равно NULL, 
+		// чтобы оно не превращалось в 000-00-00 в слейве надо явно указывать NULL
+		// NULL не экранируем
+		if ($value == 'NULL') {
+			$sql_parts[] = 'NULL';	
+		} else {
+			$sql_parts[] = '"' . mysql_real_escape_string($value) . '"';	
+		}
+		
 	}
 
 	return implode(', ', $sql_parts);
@@ -185,13 +200,18 @@ function getSqlFieldValuesCommaSeparated($row)
  * Получение названий полей в кавычках через запятую
  *
  * @param unknown_type $row
+ * @param unknown_type $pattern шаблон, в котором поле прописано как :field
  * @return unknown
  */
-function getSqlFieldNamesCommaSeparated($fields)
+function getSqlFieldNamesCommaSeparated($fields, $pattern = '')
 {
 	$sql_parts = array();
 	foreach ($fields as $name) {
-		$sql_parts[] = "`{$name}`";
+		if ($pattern) {
+			$sql_parts[] = str_replace(':field', "`{$name}`", $pattern);
+		} else {
+			$sql_parts[] = $before . "`{$name}`" . $after;
+		}
 	}
 
 	return implode(', ', $sql_parts);
@@ -302,12 +322,16 @@ foreach ($slaves_params as $i=>$slave) {
 		}
 		//print_r( $tables_structure );
 		
-		// получение контрольных сумм записей в таблице мастера
+		// Получение контрольных сумм записей в таблице мастера
+		// Сравнивать надо с учётом NULL
+		// Если поле равно Null и "" команда SHOW TABLE STATUS выдаст разные контрольные суммы для таблиц,
+		// При этом контрольная сумма строк будет совпадать
 		$sql_rows_checksums = "SELECT " . implode(', ', $tables_structure[ $replicate_table ]['primary_key']) . ",
 							  concat_ws('', " . getSqlFieldNamesCommaSeparated($tables_structure[ $replicate_table ]['primary_key']) . ") as concat_primary_key,
-							  md5(concat_ws('', " . getSqlFieldNamesCommaSeparated($tables_structure[ $replicate_table ]['fields']) . ")) as checksum 
+							  md5(concat_ws('', " . getSqlFieldNamesCommaSeparated($tables_structure[ $replicate_table ]['fields'], "IFNULL(:field, 'NULL')") 
+							  . ")) as checksum 
 							  FROM {$replicate_table}";
-		
+
 		if (empty($master_tables_rows_checksums[ $replicate_table ])) {
 			$master_tables_rows_checksums[ $replicate_table ] = queryDb($sql_rows_checksums, $master_link, $master_params);
 			if (empty($master_tables_rows_checksums[ $replicate_table ])) {
@@ -329,6 +353,9 @@ foreach ($slaves_params as $i=>$slave) {
 			}
 		}
 
+		$count_added = 0;
+		$count_removed = 0;
+		$count_updated = 0;				
 		// построчное сравнение контрольных сумм записей таблицы мастера и слейва
 		foreach ($master_tables_rows_checksums[ $replicate_table ] as $master_table_row_checksum) {
 			$row_exists_in_slave  = false;
@@ -345,14 +372,22 @@ foreach ($slaves_params as $i=>$slave) {
 
 			// запись надо либо добавить либо обновить
 			if (!$row_exists_in_slave || $row_differs_in_slave) {
-				$sql_get_row_from_master = "SELECT * FROM {$replicate_table} WHERE " . 
+
+				$sql_get_row_from_master = "SELECT " . getSqlFieldNamesCommaSeparated($tables_structure[ $replicate_table ]['fields'], "IFNULL(:field, 'NULL') as :field") 
+											. " FROM {$replicate_table} WHERE " . 
 											getSqlFieldValue($master_table_row_checksum, ' and ');
+
 				list($master_row) = queryDb($sql_get_row_from_master, $master_link, $master_params);
+				
 				if (!$master_row) {
 					$errors_detected = true;
 					onError("Error getting table row from master: {$replicate_table}", false);
 				}
-								
+
+				// Внимание!
+				// если в мастере поле имеет формат даты и равно NULL, чтобы оно не превращалось в 000-00-00 в слейве
+				// надо явно указывать NULL				
+				
 				if (!$row_exists_in_slave) {
 					// добавляем новую запись в слейв
 					$sql_insert_row_in_slave = 
@@ -360,12 +395,13 @@ foreach ($slaves_params as $i=>$slave) {
 						"VALUES (" . getSqlFieldValuesCommaSeparated($master_row) . ")";				
 																		
 					queryDb($sql_insert_row_in_slave, $slave_link, $slave);
+					$count_added++;
 				} else {
 					// обновляем запись в слейве
 					$sql_update_row_in_slave = "UPDATE {$replicate_table} SET " . getSqlFieldValue($master_row) . " WHERE " . 
 												getSqlFieldValue($master_table_row_checksum, ' and ');					
-
 					queryDb($sql_update_row_in_slave, $slave_link, $slave);
+					$count_updated++;
 				}	
 			}
 		}
@@ -384,8 +420,10 @@ foreach ($slaves_params as $i=>$slave) {
 										    getSqlFieldValue($slave_table_row_checksum, ' and ');					
 
 				queryDb($sql_delete_row_in_slave, $slave_link, $slave);
+				$count_removed++;
 			}
-		}		
+		}
+		msg("Added: " . (int)$count_added . ", Removed: " . (int)$count_removed . ", Updated: " . (int)$count_updated)		;
 	}
 }
 
