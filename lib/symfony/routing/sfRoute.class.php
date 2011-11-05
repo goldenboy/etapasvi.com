@@ -35,6 +35,10 @@ class sfRoute implements Serializable
     $requirements      = array(),
     $tokens            = array(),
     $customToken       = false;
+    
+  // saynt2dya
+  // Принудительная перезапись URL (чтобы работала в бэкенде)
+  public static $force_url_rewrite = false;
 
   /**
    * Constructor.
@@ -292,7 +296,8 @@ class sfRoute implements Serializable
    */
   public static function urlRewriteCompress($url, $forced = false)
   {
-    if ( sfContext::getInstance()->getConfiguration()->getApplication() == 'frontend' || $forced) {
+  	// если находимся во фронтенде или включена принудительная перезапись URL
+    if ( sfContext::getInstance()->getConfiguration()->getApplication() == 'frontend' || $forced || self::$force_url_rewrite) {
 	    $url_info = parse_url($url);
 	    
 	    preg_match("/^\/([^\/]+)\/([^\/]+)\/show\/id\/([\d]+)\/?(title\/(.+))?/", $url_info['path'], $matches);
@@ -334,7 +339,8 @@ class sfRoute implements Serializable
    */
   public static function urlRewriteExpand($url)
   {
-	if ( sfContext::getInstance()->getConfiguration()->getApplication() == 'frontend' ) {
+  	// если находимся во фронтенде или включена принудительная перезапись URL
+	if ( sfContext::getInstance()->getConfiguration()->getApplication() == 'frontend' || self::$force_url_rewrite) {
 	    preg_match("/^\/([^\/]+)\/([^\/]+)\/([\d]+)\/?([^\/]+)?$/", $url, $matches);
 	    // если URL подлежит перезаписи, собираем его из частей
 	    if (count($matches) >= 3) {

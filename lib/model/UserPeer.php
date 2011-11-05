@@ -1311,4 +1311,21 @@ class UserPeer extends BaseUserPeer
 			//exit();
 		}
 	}*/
+	
+  /**
+   * Получение объекта для генерации путей.
+   * Берётся из файла routing.yml фронтенда.
+   *
+   */
+  public static function getRouting()
+  {
+  	// подготовка путей для поиска файлов  
+  	// http://www.symfony-project.org/cookbook/1_2/en/cross-application-links
+  	$config = new sfRoutingConfigHandler();
+	$routes = $config->evaluate(array(sfConfig::get('sf_apps_dir') . '/frontend/config/routing.yml'));
+	$routing = new sfPatternRouting(new sfEventDispatcher());
+	$routing->setRoutes($routes);
+	
+	return $routing;
+  }
 }

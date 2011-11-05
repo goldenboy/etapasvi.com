@@ -144,24 +144,7 @@ class sfSuperCache
   	}
   	
 	return $path_translated_list;
-  }
-  
-  /**
-   * Получение объекта для генерации путей.
-   * Берётся из файла routing.yml фронтенда.
-   *
-   */
-  public static function getRouting()
-  {
-  	// подготовка путей для поиска файлов  
-  	// http://www.symfony-project.org/cookbook/1_2/en/cross-application-links
-  	$config = new sfRoutingConfigHandler();
-	$routes = $config->evaluate(array(sfConfig::get('sf_apps_dir') . '/frontend/config/routing.yml'));
-	$routing = new sfPatternRouting(new sfEventDispatcher());
-	$routing->setRoutes($routes);
-	
-	return $routing;
-  }
+  }  
   
   /**
    * Удаление страниц кэша, которое необходимо выполнять при добавлении/изменении любого окнтента.
@@ -174,7 +157,7 @@ class sfSuperCache
   	$urls_for_clearing = array();
   	$path_translated_list = array();
   	
-	$routing = self::getRouting();
+	$routing = UserPeer::getRouting();
 	//$routing->generate('article', array('id' => $id));
 
   	// Главная страница
@@ -235,7 +218,7 @@ class sfSuperCache
   	}
   	
   	// удаление ряда страниц в зависимости от типа элемента
-  	$routing = self::getRouting();
+  	$routing = UserPeer::getRouting();
   	
   	// очищается список элементов
   	// для Photo порядок очистки особый
