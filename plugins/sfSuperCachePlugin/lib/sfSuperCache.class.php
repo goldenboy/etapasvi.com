@@ -321,15 +321,17 @@ class sfSuperCache
   	// При запуске удаления кэша в админке на основном бэкенде, 
   	// PHP инициирует удаление кэша на всех неосновных бэкендах. 
   	// При это удаление на неосновных бэкендах выполняется физически, а не переименование в d.html
-  	foreach (UserPeer::$backends as $backend) {
-  		// на самом себе не запускаем
-  		if (empty($backend['web_dir']) || empty($backend['user']) 
-  			|| empty($backend['host']) || $_SERVER['SERVER_ADDR'] == $backend['host']) {
-  			continue;
-  		}
-  		$command_backend = "ssh {$backend['user']}@{$backend['host']} \"" . 
-  							str_replace(sfConfig::get('sf_web_dir'), $backend['web_dir'], $remote_command) . "\"";		
-  		pclose(popen($command_backend, "r"));
+  	if ($all_backends) {
+	  	foreach (UserPeer::$backends as $backend) {
+	  		// на самом себе не запускаем
+	  		if (empty($backend['web_dir']) || empty($backend['user']) 
+	  			|| empty($backend['host']) || $_SERVER['SERVER_ADDR'] == $backend['host']) {
+	  			continue;
+	  		}
+	  		$command_backend = "ssh {$backend['user']}@{$backend['host']} \"" . 
+	  							str_replace(sfConfig::get('sf_web_dir'), $backend['web_dir'], $remote_command) . "\"";		
+	  		pclose(popen($command_backend, "r"));
+	  	}
   	}
   	
   	return true;
@@ -531,7 +533,7 @@ class sfSuperCache
    *
    * @param unknown_type $url
    */
-  public static function urlToFile($url, $domain = UserPeer::DOMAIN_NAME_MAIN)
+  public static function urlToFile($url, $domain)
   {  	
   	// предварительная обработка пути
 	$path 		= str_replace('..', '', $url);
@@ -641,7 +643,7 @@ class sfSuperCache
   		'; include_path_regexp:' . $include_path_regexp .
   		"\r\n"
   	);
-  	
+
   	// удаление и создание кэша страниц  	
   	foreach ($file_list as $file_index=>$file_path) {
   		
@@ -694,7 +696,8 @@ class sfSuperCache
   	  } else {  	  
   	  	// однопоточный режим  
         // кэширование файла кэша
-      	$refresh_result = self::refreshCacheFile($file_path, $console);      	  
+
+      	$refresh_result = self::refreshCacheFile($file_path, $console);
   	  }
   	  // пишем в лог
   	  $log_line = $file_index . ':' . $file_path . "\r\n";
@@ -773,7 +776,7 @@ class sfSuperCache
     }
       
     // удаление файла кэша
-    $remove_result = self::removeCacheFile($file_path);
+    $remove_result = self::removeCacheFile($file_path, false);
 
     if ($remove_result) {
       // кэширование страницы
@@ -1214,7 +1217,7 @@ class sfSuperCache
     $cache_file_content = sfSuperCache::getError404Content();
       
     // удаляем файл d.html со всех доменов, чтобы они не накапливались, когда страница перестаёт существовать
-    $cache_file = sfSuperCache::urlToFile(sfContext::getInstance()->getRequest()->getUri());
+    $cache_file = sfSuperCache::urlToFile(sfContext::getInstance()->getRequest()->getUri(), sfConfig::get('app_domain_name'));
 
     sfSuperCache::unlinkDeletedCacheFile( $cache_file );
     //sfSuperCache::unlinkCacheFile( $cache_file );
