@@ -52,6 +52,27 @@ class newsComponents extends sfComponents
   		throw new sfError404Exception();
   	}
     
+  	$newitem_url = $this->newsitem->getUrl();
+  	
+  	// если адрес новости неверный, редиректим на нужный адрес
+  	$url_parse = parse_url($newitem_url);
+  	if ( (!empty($_SERVER['PATH_INFO']) && preg_replace("/\?.*/", "", $_SERVER['PATH_INFO']) != $url_parse['path']) || 
+  		 (!empty($_SERVER['REQUEST_URI']) && preg_replace("/\?.*/", "", $_SERVER['REQUEST_URI']) != $url_parse['path'])
+	) {
+		sfActions::redirect( $newitem_url );
+	}
+  	
+	// установка заголовка страницы
+	$news_title = $this->newsitem->getTitle();
+	
+    $context = sfContext::getInstance();
+    $i18n =  $context->getI18N();
+
+    //$title = $i18n->__('Dharma Sangha') . ' -';
+    $response = $this->getResponse(); 
+    $response->setTitle($news_title); 
+	
+  	/*
   	$news_title = $this->newsitem->getTitle();
   	if ( $news_title ) {
   	  // если на страницу перешли с другого языка, то title неверный
@@ -60,7 +81,7 @@ class newsComponents extends sfComponents
   	  if ( $this->title != $news_title_translit ) {
   		//$this->redirect( $this->newsitem->getTypeName() . '/show?id=' . (int)$this->id . '&title=' . $news_title_translit );
   		//sfActions::redirect( $this->newsitem->getTypeName() . '/show?id=' . (int)$this->id . '&title=' . $news_title_translit );
-  		sfActions::redirect( $this->newsitem->getUrl() );
+  		sfActions::redirect( $newitem_url );
   	  }
   		
 	  $context = sfContext::getInstance();
@@ -71,7 +92,7 @@ class newsComponents extends sfComponents
 	  $response->setTitle($news_title);       	
   	} elseif (!$news_title && $this->title) {
 	  // если у элемента нет Заголовка, а в URL передан title, редиректим
-	  sfActions::redirect( $this->newsitem->getUrl() );
-    }
+	  sfActions::redirect( $newitem_url );
+    }*/
   } 
 }
