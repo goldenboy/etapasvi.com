@@ -3,7 +3,6 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
 
-<!-- showSuccess -->
       <trans-unit id="1">
         <source>Family and Childhood</source>
         <target>家族と子供時代</target>
@@ -76,14 +75,14 @@
 
       <trans-unit id="1">
         <source>Ram’s parents are farmers. His mother, Maya Devi was married at 12.  She had 5 sons and 4 daughters.  Ram was her third son.  When she was in her pregnancy, she found she was unable to eat meat without becoming ill.  The son, whom she named Ram, would not eat meat.  He would leave the house for long intervals from an early age.</source>
-        <target>ラムの両親は百姓で、母親のマヤ・デヴィは１２歳で結婚し、５人の息子と４人の娘を授かりました。ラムは三男で、母親はラムを身ごもっていた時、肉を口にする度に気持ち悪くなってて食べられず、生まれて来た息子も肉を食べませんでした。ラムは幼い頃から度々家からいなくなることもありました。　　　　　　　　　　　　　</target>
+        <target>ラムの両親は百姓で、母親のマヤ・デヴィは１２歳で結婚し、５人の息子と４人の娘を授かりました。ラムは三男で、母親はラムを身ごもっていた時、肉を口にする度に気持ち悪くなってて食べられず、生まれて来た息子も肉を食べませんでした。ラムは幼い頃から度々家からいなくなることもありました。</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Ram was always pleased to see a lama or a holy person and fastidiously imitated them.  He often seemed to be lost in thought and spoke little.  Whenever someone spoke to him, he would reply with a smile and would treat people of all ages equally.</source>
         <target>ラムはいつもラマ僧や聖人が好きで、熱心にその人たちの真似をしていました。そして物思いにふけって、口数が少なくなることはしょっちゅうでした。誰かに話しかけられるといつも、微笑みを返し、どの年齢の人も同等に扱いました。</target>
       </trans-unit>
-  
+
       <trans-unit id="1">
         <source>According to his family and neighbors, Ram Bomjan often acted differently from his childhood friends, frequently observing other people in worship and praying himself. He has been described as being born with a peaceful nature, and would never get into a fight or kill an animal. Beginning at the age of five he only took leftovers for food, and went hungry if there was nothing.</source>
         <target>ラム・ボムジャンの家族や近所の人の話しによると、小さい頃から他の子供達とは違ったふるまいをするのはしょっちゅうで、一人で拝んだり祈ったりして、他の人をよく観察していました。生まれつき平穏な性格で、喧嘩に入って行くこともなければ、動物を殺すこともなく、５歳の年から、飢えた人々に残した食べ物を持って行き始めました。</target>
@@ -106,22 +105,22 @@
 
       <trans-unit id="1">
         <source>He was granted the initiation of</source>
-        <target>ラムは五戒の誓いをたてました。五戒（サンスクリット語で</target>
+        <target>ラムは</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Panchasheel</source>
-        <target></target>
+        <target>五戒</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Panchasheel is a Sanskrit word for a Buddhist initiation consisting of five vows, which are as follows:</source>
-        <target>）とは、仏門に帰依する時の次の五つの誓いのことです。一、不殺生戒（ふせっしょうかい）：</target>
+        <target>の誓いをたてました。五戒（サンスクリット語で Panchasheel ）とは、仏門に帰依する時の次の五つの誓いのことです。</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>One must not kill animals (it is preferable to be vegetarian)</source>
-        <target>生き物を殺さない。</target>
+        <target>一、不殺生戒（ふせっしょうかい）： 生き物を殺さない。</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -131,12 +130,12 @@
 
       <trans-unit id="1">
         <source>One must not lie</source>
-        <target>四、不妄語戒（ふもうごかい） ： 嘘をつかない。</target>
+        <target>三、不妄語戒（ふもうごかい） ： 嘘をつかない。</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>One must refrain from sexual misconduct</source>
-        <target>三、不邪淫戒（ふじゃいんかい) ； 自分の配偶者以外と交わらない。</target>
+        <target>四、不邪淫戒（ふじゃいんかい) ； 自分の配偶者以外と交わらない。</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -146,23 +145,23 @@
 
       <trans-unit id="1">
         <source>Ram was initiated along with a group of nine other students. Ram refused to have his hair cut before the initiation, which was the common custom. It was after this initiation that Ram received the name,</source>
-        <target>ラムは９人の弟子達と共に門下に入りましたが、一般的な慣習としての入門前に剃髪することをラムは拒みました。仏門伝授の後、ラムは「パルデン・ドルジェ」という名を受けました。洞窟で１ヶ月間瞑想することが仏門に入るための慣習</target>
+        <target>ラムは９人の弟子達と共に門下に入りましたが、一般的な慣習としての入門前に剃髪することをラムは拒みました。仏門伝授の後、ラムは</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Palden Dorje</source>
-        <target></target>
+        <target>「パルデン・ドルジェ」</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>It was the custom for the initiates to meditate for up to a month in a cave. Som Bahadur Lama was surprised at the ease with which Palden Dorje seemed to adapt to the situation requiring little sustenance. It was then that he realized that the boy had a natural talent for deep and prolonged meditation.</source>
-        <target>でしたが、パルデン・ドルジェが簡単にほとんど食べる物がない状態に適応しているのを見てソム・バハドウール・ラマ僧は驚き、この少年は深く持続する瞑想の才能を本来持っていることに気付いたのです。</target>
-	  </trans-unit>
+        <target>という名を受けました。洞窟で１ヶ月間瞑想することが仏門に入るための慣習 でしたが、パルデン・ドルジェが簡単にほとんど食べる物がない状態に適応しているのを見てソム・バハドウール・ラマ僧は驚き、この少年は深く持続する瞑想の才能を本来持っていることに気付いたのです。</target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>After completing his Buddhist education for two years, all nine initiates went to Lumbini, the birthplace of Lord Buddha, for sightseeing. Palden Dorje seemed utterly taken by this place and it seemed to deepen his religious resolve. The other eight initiates returned but he refused to return. Instead, he went to Dehradun to further his religious education with the Gurus of Dehradun. Later he returned to Nepal to the beautiful lakeside city of Pokhara.</source>
         <target>２年の仏教教育が完了し、９人全員で仏陀の生誕地であるルンビニを見物に出かけました。パルデン・ドルジェはすっかりこの地に心を奪われ、宗教的決心が強まったようでした。他の８人は戻りましたが、パルデン・ドルジェは帰りたがらず、デラドウンへ行き、そこの道師達から更に高い宗教教育を受けることにしました。後にパルデン・ドルジェはネパールの美しい湖畔の街ポカラに戻って来ました。</target>
-	  </trans-unit>     
+      </trans-unit>
 
       <trans-unit id="1">
         <source>Here it was that Palden Dorje became ill, and was unable to move his lower body.  Distressed, his teachers sent him home to recover.  During this time, Palden Dorje implored his family not to sacrifice any animals or take any alcohol otherwise further complications would arise.  He got better, but was still limping when he disappeared from his home the night of  May 16, 2005.</source>
@@ -193,11 +192,11 @@
         <source>They feared he must be ill or crazy.  When Palden Dorje’s older brother touched him, Palden Dorje’s body became exceedingly hot and turned red. “Please leave me alone, or one of us may die,” – Palden Dorje said. – “If anyone disturbs me or my things at midnight, I will have to meditate for 20 years, but if all goes well, I will meditate for 6 years.”</source>
         <target>村人たちはパルデン・ドルジェは病気になったか、気が狂ってしまったに違いないと心配になりました。パルデン・ドルジェの兄が彼に触ると、体は非常に熱くなり、そして赤くなりました。「どうかぼくを一人にして。でないと、ぼくらのうちの誰か一人は死んでしまうから。もし夜中に誰かが、ぼくやぼくの物を邪魔したら、２０年間瞑想せねばならない。でも、すべてがうまく行けば６年間の瞑想で終わる。」とパルデン・ドルジェは言いました。</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Then Palden Dorje, followed by his brother, and at a distance by the villagers set out to find a good meditation  place in the forest. His parents insisted he take some food and water with him.  Finally, he reached his destination  at 11:00 AM on May 18, 2005. This was the day the villagers of Ratanpur celebrated</source>
         <target>その後パルデン・ドルジェは人里離れた森の中、瞑想によい場所を探しに行き、そして兄は彼について行ったのです。両親は絶対に何か食べ物と飲み物を持って行くよう言いました。2005年５月18日午前11時とうとう目的地に着きました。その日はラタンプルの村で仏教の</target>
-      </trans-unit>        
+      </trans-unit>
 
       <trans-unit id="1">
         <source>http://en.wikipedia.org/wiki/Vesak</source>
@@ -206,13 +205,13 @@
 
       <trans-unit id="1">
         <source>Buddha Jayanti (Vesak)</source>
-        <target>ウェーサーカ</target>
+        <target>ウェーサーカ祭</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>He settled himself under a pipal tree, having offered 10 kinds of fruit to the picture of Buddha.</source>
-        <target>祭のお祝いがあった日でした。パルデン・ドルジェは菩提樹の下に座ると、仏陀の絵に１０種類の果物を捧げました。</target>
-      </trans-unit>        
+        <target>のお祝いがあった日でした。パルデン・ドルジェは菩提樹の下に座ると、仏陀の絵に１０種類の果物を捧げました。</target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>About 30 villagers saw where Palden Dorje was meditating, and they left an offering of over a thousand rupees as was the custom at Buddha Jayanti.  On that night at 12:00,  some pranksters came to disturb Palden Dorje and steal the offering.  They quarreled over the money, and later accused each other in front of the villagers.  Having confessed, they asked Palden Dorje’s forgiveness.</source>
@@ -223,11 +222,11 @@
         <source>So Palden Dorje left the first meditation place and went north on the 24th of May, 2005.  At that time he gave six pipal leaves to his second elder brother telling him to keep them in oil.  He said that as long as his family kept the leaves, all would be well.  His relatives cried when he left.</source>
         <target>そうして2005年５月24日、パルデン・ドルジェは初めの瞑想の地を去り、北に向かいました。その時パルデン・ドルジェは２番目の兄に菩提樹の葉を６枚渡し、それを油に浸けておくよう言いました。家族がその葉を持っている限りすべてうまく行くと告げて去り、残された親戚たちは涙を流しました。</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Again the villagers were concerned about Palden Dorje’s whereabouts, and in the late afternoon, a cowherd had seen him in his new meditation site. The villagers sent some of his family to go and bring him home.  But Palden Dorje refused and  moved to another pipal tree in the east.</source>
-        <target>村人たちはまたパルデン・ドルジェがどこにいるのか心配していると、午後遅く牛飼いが新しい瞑想の場所に彼がいるのを見たのでした。村人がパルデン・ドルジェの家族に言って彼を家に連れて帰らせよようとしましたが、パルデン・ドルジェはそれを拒み、東の方角にある別の菩提樹に移りました。　　　</target>
-      </trans-unit>      
+        <target>村人たちはまたパルデン・ドルジェがどこにいるのか心配していると、午後遅く牛飼いが新しい瞑想の場所に彼がいるのを見たのでした。村人がパルデン・ドルジェの家族に言って彼を家に連れて帰らせよようとしましたが、パルデン・ドルジェはそれを拒み、東の方角にある別の菩提樹に移りました。</target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>Palden Dorje told his family that he must continue to meditate at all costs.  He drew a boundary around his meditation area, and the villagers and his relatives built a fence for him. More and more crowds gathered at the site, so Palden Dorje ordered that a hut be built and sealed with plastic on all sides wherein he remained for 15 days. After that Palden Dorje said, “I have received some energy so that I may now meditate under a tree outside”.</source>
@@ -273,11 +272,11 @@
         <source>On November 11, 2005 a bright light appeared shining from Palden Dorje’s head.  His followers cried with joy and became even more fervent.</source>
         <target>2005年11月11日パルデン・ドルジェの頭からまばゆい光が現れ、信奉者たちは歓びで涙を流し、更に熱狂的になりました。</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>“Leave me in peace, and there will soon be peace in the country,” – Palden Dorje said. However crowds ever increased and people chanted and set up a market place, according to Radio HBC 94 FM who visited the site on December 10, 2005. The crowds were kept at a distance of about 50 meters. All witnesses claimed that Palden Dorje neither ate, drank or left to relieve himself.  He just sat and meditated under the pipal tree. Baffled onlookers were ever increasing.</source>
         <target>「私をそっとしておいてください、そうすればまもなくこの国に平和が訪れるでしょう。」とパルデン・ドルジェは言いました。しかし群衆は更に増え、人々は祈りを唱え、店までできてしまい、2005年12月10日その場所を訪れたラジオHBC94FMによると群衆の列は５０メートルにも及んだと言います。目撃者は皆、パルデン・ドルジェは飲みもしないし食べもせず休憩もせず、ただ菩提樹の下で座って瞑想をしていたと言っています。びっくりした見物人は更に増えていきました。</target>
-      </trans-unit>      
+      </trans-unit>
 
       <trans-unit id="1">
         <source>There were stories of miracles: a</source>
@@ -352,11 +351,11 @@
       <trans-unit id="1">
         <source>This was his speech:</source>
         <target>以下が仏陀少年による講話です。</target>
-      </trans-unit>      
+      </trans-unit>
 
       <trans-unit id="1">
         <source>Palden Dorje is a member of the</source>
-        <target>パルデン・ドルジェは、主に金剛乗仏教に従う</target>
+        <target>パルデン・ドルジェは、</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -366,12 +365,12 @@
 
       <trans-unit id="1">
         <source>community, of which a majority practices</source>
-        <target>共同体の一員です。</target>
+        <target>共同体の一員で、彼らは主に</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Vajrayana Buddhism</source>
-        <target></target>
+        <target>金剛乗仏教に従っています。</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -426,12 +425,12 @@
 
       <trans-unit id="1">
         <source>Those who have called him the "reincarnation of Buddha" have been criticised. Gautama Buddha taught that after</source>
-        <target>パルデン・ドルジェを「仏陀の生まれ変わり」と呼んだ人々は批判を受けました。ゴータマ仏陀は般</target>
+        <target>パルデン・ドルジェを「仏陀の生まれ変わり」と呼んだ人々は批判を受けました。ゴータマ仏陀は</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>parinirvana</source>
-        <target>涅槃</target>
+        <target>般涅槃</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -486,7 +485,7 @@
 
       <trans-unit id="1">
         <source>On their first, four-day attempt, the film crew was required to stay outside a guarded barbed-wire fence, and their camera's infrared capabilities did not pick up evidence of a body at the base of the tree where Palden Dorje sat during their non-stop recording. On a second attempt a few weeks later, however, the film crew was able to film Palden Dorje continuously for 96 hours, day and night, during which time he did not drink any fluids or eat any food. According to scientists on the documentary, an average person would be expected to die from kidney failure after four days without drinking any fluids. The boy showed no signs of classical physical deterioration caused by dehydration. A close inspection by the film crew of the area around the tree where Palden Dorje was sitting revealed no hidden food supply or water pipes.</source>
-        <target>」というタイトルのドキュメンタリーを制作しました。はじめの４日間の試みでは針金の柵の外に制作スタッフはいなければならず、ノンストップで記録を撮る間、カメラの赤外線能力はパルデン・ドルジェが座っている樹のつけ根の部分に体の形跡をつかむことができませんでした。しかし数週間後、２度目の試みで制作スタッフは、パルデン・ドルジェを昼夜96時間継続して映すことができ、その間パルデン・ドルジェは何の液体も食べ物もとっていませんでした。ドキュメンタリーに出演した科学者によると、普通ヒトは何も飲まなければ４日後腎臓不全により死んでしまう、ということです。この少年は脱水症状によって身体レベルが悪化した形跡もありませんでした。制作スタッフがパルデン・ドルジェの座っている樹の周りを綿密に調べましたが、食べ物も水道管も全く隠されていませんでした。</target>
+        <target>」というタイトルのドキュメンタリーを制作しました。はじめの４日間の試みでは針金の柵の外に制作スタッフはいなければならず、ノンストップで記録を撮る間、カメラの赤外線能力はパルデン・ドルジェが座っている樹のつけ根の部分に体の形跡をつかむことができませんでした。しかし数週間後、２度目の試みで制作スタッフは、パルデン・ドルジェを昼夜96時間継続して映すことができ、その間パルデン・ドルジェは何の液体も食べ物もとっていませんでした。ドキュメンタリーに出演した科学者によると、普通ヒトは何も飲まなければ４日後腎臓不全により死んでしまう、ということです。この少年は脱水症状によって身体レベルが悪化した形跡もありませんでした。制作スタッフがパルデン・ドルジェの 座っている樹の周りを綿密に調べましたが、食べ物も水道管も全く隠されていませんでした。</target>
       </trans-unit>
 
       <trans-unit id="1">
