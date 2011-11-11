@@ -13,7 +13,7 @@
         <?php echo __('Updated on') ?> <?php echo format_datetime( $newsitem->getUpdatedAtMax(), 'd MMMM yyyy'); ?>
     </p>
     <p class="center_text p1_no_bottom">
-        <?php if ($newsitem->getImg()): ?>
+        <?php if ($newsitem->getImg() && $newsitem->getFullUrl()): ?>
             <img src="<?php echo $newsitem->getFullUrl(); ?>" 
             alt="<?php echo $newsitem->getTitle(); ?>" class="news_img"/>
         <?php endif ?>

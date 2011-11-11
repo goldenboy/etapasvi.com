@@ -11,7 +11,7 @@
         <?php echo __('Updated on') ?> <?php echo format_datetime( $newsitem->getUpdatedAtMax(), 'd MMMM yyyy'); ?>
     </div>
     <div class="short_body p">
-        <?php if ($newsitem->getImg()): ?>
+        <?php if ($newsitem->getImg() && $newsitem->getThumbUrl()): ?>
             <a href="<?php echo $href; ?>" title="<?php echo $newsitem->getTitle(); ?>">
                 <img src="<?php echo $newsitem->getThumbUrl(); ?>" 
             alt="<?php echo $newsitem->getTitle(); ?>" class="newsitem_img"/></a>
