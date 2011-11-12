@@ -113,7 +113,7 @@ class Photoalbum extends BasePhotoalbum
 	 * Получение авторов фото в фотоальбоме.
 	 *
 	 */
-	public function getAuthor($culture = '', $photo_list = array()) 
+	public function getAllAuthors($culture = '', $photo_list = array()) 
 	{
 		$authors = array();
 		// если список фото не передан, получаем фотографии
@@ -127,9 +127,9 @@ class Photoalbum extends BasePhotoalbum
 		    
 		    $photo_list = PhotoPeer::doSelectWithI18n($c);
 		}*/
-		
+		//$authors = explode(',', $this->getAuthor($culture));
 		foreach ($photo_list as $photo) {
-			$author = $photo->getAuthor($culture, true);
+			$author = trim($photo->getAuthor($culture, true));
 			if ($author && !in_array($author, $authors)) {
 				$authors[] = $author;
 			}

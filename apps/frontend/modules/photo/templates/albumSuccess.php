@@ -7,7 +7,7 @@ echo $navigation_html;*/
 
 $photo_list = $pager->getResults();
 
-$author = $photoalbum->getAuthor($sf_user->getCulture(), $photo_list);
+$author = $photoalbum->getAllAuthors($sf_user->getCulture(), $photo_list);
 ?>
 
 <h1><?php echo __('Photo Album') ?></h1>
