@@ -249,7 +249,21 @@ class sfSuperCache
   	  	// http://www.etapasvi.com/en/photo/content/1243  	  	
   	  	$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
   	  }
-  	  //$urls_for_clearing[] = $routing->generate(strtolower($item->getTypeName()) . '_index', array('sf_culture'=>$culture)) . '*';
+  	}
+    
+  	// Фотоальбом
+  	if ($item_type_name == ItemtypesPeer::ITEM_TYPE_NAME_PHOTOALBUM) {
+  	  // все фото в фотоальбоме
+  	  $c = new Criteria();
+  	  $c->add(PhotoPeer::PHOTOALBUM_ID, $item->getId());
+  	  $photoalbum_photos = PhotoPeer::doSelect($c);
+  	  foreach ($photoalbum_photos as $photo) {
+  	  	$photo_url = sfRoute::urlRewriteCompress( $photo->getUrl(), true );
+  	  	$urls_for_clearing[] = $photo_url;
+  	  	// плюс ссылка на контент
+  	  	// http://www.etapasvi.com/en/photo/content/1243  	  	
+  	  	$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
+  	  }
   	}
   	
   	if ($culture == 'all') {
