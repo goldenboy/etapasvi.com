@@ -39,13 +39,13 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>If you have any questions, please, try to find answer on the</source>
-        <target></target>
+        <source>If you have any questions, please, try to find answer or ask on the</source>
+        <target>Se ci sono domande, prima di scriverci cercare le eventuali risposte nella pagina del</target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Send your message to the email below only in a special emergency, as it is difficult for website programmer to answer all emails (there are only 24 hours in a day).</source>
-        <target></target>
+        <source>Send your message to the email below in case of special emergency only. It is difficult for website programmer to answer all emails (there are only 24 hours in a day).</source>
+        <target>Inviare un messaggio all'indirizzo e-mail in basso solo in caso di emergenza; per il programmatore del sito web infatti e difficile rispondere a tutte le e-mail (un giorno ha solo 24 ore!).</target>
       </trans-unit>
   
     </body>

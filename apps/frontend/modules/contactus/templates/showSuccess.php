@@ -5,7 +5,7 @@
 <?php /*include_component('text', 'show', array('id'=>3)); */ ?>
 
 <p>
-    <?php echo __('If you have any questions, please, try to find answer on the') ?> <a href="<?php echo UserPeer::FORUM_URL; ?>"><?php echo __('Forum') ?></a>. <?php echo __('Send your message to the email below only in a special emergency, as it is difficult for website programmer to answer all emails (there are only 24 hours in a day).') ?>
+    <?php echo __('If you have any questions, please, try to find answer or ask on the') ?> <a href="<?php echo UserPeer::FORUM_URL; ?>"><?php echo __('Forum') ?></a>. <?php echo __('Send your message to the email below in case of special emergency only. It is difficult for website programmer to answer all emails (there are only 24 hours in a day).') ?>
 </p>
 <p>
     <strong><?php echo __('E-mail') ?>:</strong> <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a>
