@@ -56,13 +56,15 @@ class TextPeer extends BaseTextPeer
       	}
 	}
 	$text = strtolower($text);
-	$text = preg_replace( '/([^A-z0-9_-]|[\[\]])/', '', $text );
+	// все небуквы, нецифры и недефисы заменяются на дефисы
+	$text = preg_replace( '/[^A-z0-9-]/', '-', $text );
+	// из нескольких - делаем один
 	$text = preg_replace( '/-+/', '-', $text );
 	
-	// чтобы не было урлов вида: http://www.etapasvi.com/bn/teachings/64/-
-	if ($text == '-') {
-		$text = '';
-	}
+	// убираем дефисы по краям, чтобы не было урлов вида: 
+	// http://www.etapasvi.com/bn/teachings/64/-
+	// http://www.etapasvi.com/ja/news/97/2011google-
+	$text = preg_replace( "/^\-?(.*?)\-?$/", '$1', $text );	
 	
 	return $text;
   }
