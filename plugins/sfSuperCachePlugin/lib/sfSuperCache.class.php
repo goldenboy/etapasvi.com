@@ -43,6 +43,9 @@ class sfSuperCache
   // очередь сигналов при обновлении кэша в многопоточном режиме
   private static $refersh_cache_queue        = array();
   
+  // список команд на удаление кэша
+  private static $remove_file_path_list        = array();
+  
     
   /**
    * Clears the super cache by listening to the task.cache.clear event.
@@ -93,7 +96,7 @@ class sfSuperCache
    *
    * @param unknown_type $request
    */
-  public static function alterCacheByPath($delete = true, $path = '', $all_cultures = true, $all_domains = true)
+  public static function alterCacheByPath($delete = true, $path = '', $all_cultures = true, $all_domains = true, $only_remembed_remove_paths = true)
   {
     // максимальное время работы скрипта - сутки 	
   	ini_set('max_execution_time', 60*60*24);
@@ -137,7 +140,11 @@ class sfSuperCache
 	// запуск удаления/восстановления файлов кэша
   	if ($delete) {
   	  // удаление
-      self::removeCacheFile( $path_translated_list );
+  	  if ($only_remembed_remove_paths) {
+        self::addRemoveFilePathToList( $path_translated_list );
+  	  } else {
+  	    self::removeCacheFile( $path_translated_list );
+  	  }
   	} else {
   	  // восстановление
   	  self::restoreCacheFile( $path_translated_list );
@@ -176,7 +183,8 @@ class sfSuperCache
   	foreach ($urls_for_clearing as $url) {
 	  $path_translated_list = array_merge($path_translated_list, self::alterCacheByPath(true, $url, $all_cultures, true));
   	}
-  	
+  	// запуск удаления запомненных путей
+  	self::executRemoveFilePathListProcess();  	
   	return $path_translated_list;
   }
   
@@ -290,13 +298,38 @@ class sfSuperCache
           
 	  $path_translated_list = array_merge($path_translated_list, self::alterCacheByPath(true, $url, $all_cultures, true));
   	}
-  	
+  	// запуск удаления запомненных путей
+  	self::executRemoveFilePathListProcess();
   	return $path_translated_list;
+  }
+  
+  /**
+   * Добавление пути или путей для удаления кэша в список.
+   *
+   * @param unknown_type $file_path
+   */
+  public static function addRemoveFilePathToList($file_path)
+  {
+  	if (is_array($file_path)) {
+  	  self::$remove_file_path_list = array_merge(self::$remove_file_path_list, $file_path);
+  	} else {
+  	  self::$remove_file_path_list[] = $file_path;
+  	}
+  }
+  
+  /**
+   * Запуск удаления запомненных путей.
+   *
+   */
+  public static function executRemoveFilePathListProcess()
+  {
+  	self::removeCacheFile(self::$remove_file_path_list);
   }
   
   /**
    * Удаление файла кэша - i.html заменяется на d.html
    * Поддерживает маски.
+   * Также выполняет удаление кэша на бэкендах.
    *
    * @param unknown_type $file_path
    * @return unknown
