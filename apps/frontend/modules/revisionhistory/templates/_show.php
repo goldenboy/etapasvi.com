@@ -1,6 +1,6 @@
 <?php if (count($revisionhistory)): ?>
-<div id="revhistory_ctr" class="page_tools">
-    <a href="javascript:switchRevhistory()" id="revhistory_trigger">[<?php echo __('revision history') ?>]</a>
+<div id="revhistory" class="page_tools">
+    <a href="javascript:switchRevhistory()" id="revhistory_trigger" class="page_tools_trigger">[<?php echo __('revision history') ?>]</a>
     <form action="http://www.w3.org/2007/10/htmldiff" target="_blank" class="box">
         <input type="radio" name="doc1" value="<?php echo sfContext::getInstance()->getRequest()->getUri(); ?>" checked="checked" /> <?php echo __('Current revision') ?><br/>
         <?php foreach($revisionhistory as $i=>$item): ?>

@@ -15,8 +15,7 @@ body {
 	margin: 0px; 
 	}
 
-h1,
-h2.like_h1 {
+h1 {
     background: none repeat scroll 0 0 transparent;
     color: #8E8E9C;
     font-family: georgia;

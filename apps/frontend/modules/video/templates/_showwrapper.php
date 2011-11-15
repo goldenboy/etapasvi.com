@@ -9,7 +9,7 @@ if (!empty($back_to_video)) {
 <link rel="canonical" href="<?php echo url_for('video/show?id='.$video->getId() . '&title=' . TextPeer::urlTranslit($video->getTitle())); ?>" />
 <?php end_slot()*/ ?>
 <?php slot('body_id') ?>body_video<?php end_slot() ?>
-<h2 class="like_h1" id="top"><?php echo __('Video') ?></h2>
+<h1 id="top"><?php echo __('Video') ?></h1>
 
 <p class="bread_crumbs">	
 	<a href="<?php echo url_for('@main'); ?>"><?php echo __('Home') ?></a> » <a href="<?php echo url_for('@video_index'); ?>"><?php echo __('Video') ?></a>

@@ -10,6 +10,15 @@ var last_quote_index  = -1;
 var window_size_hide_el  = 1000;
 
 $(document).ready(function() {
+    // страница встроена
+    if (top !== self) { 
+        $("body").addClass("embedded");
+        // сообщение о том, что страница встроена
+        var embed_source = window.location;
+        $("#content").append('<p class="small"><?php echo __("Source") ?>: <a href="' + embed_source + '">' + embed_source + '</a></p>');
+        return;
+    }
+
     // сокрытие элементов в зависимости от размера окна
     onWindowResize();
 
@@ -42,9 +51,14 @@ $(document).ready(function() {
     $("#offer_tr_ctr").insertAfter( "#content h1:eq(0)" );
     
     // перемещение Версий наверх
-    $("#revhistory_ctr").insertAfter( "#offer_tr_ctr" );
+    $("#revhistory").insertAfter( "#offer_tr_ctr" );
     // размещение ссылки Версий рядом с Предложить перевод    
     $("#revhistory_trigger").insertAfter( "#offer_tr_trigger" );
+
+    // перемещение Встроить
+    $("#embed").insertAfter( "#offer_tr_ctr" );
+    // размещение ссылки Встроить наверх
+    $("#embed_trigger").insertAfter( "#offer_tr_trigger" );
     
     // текст в футере
     if (footer_text) {
@@ -257,8 +271,8 @@ function switchOfferTr(fields_url, error_msg)
 {    
     // если поля уже загружены
     if (!$("#offer_tr_fields").is(':empty')) {
-        if ( $("#offer_tr").is(":hidden") ) {            
-            offerTrShow();
+        if ( $("#offer_tr").is(":hidden") ) {
+            pageToolsTriggerShow("offer_tr");
             
             // если форма была отправлена
             if (!$("#offer_tr_success").is(":hidden")) {
@@ -266,12 +280,12 @@ function switchOfferTr(fields_url, error_msg)
             }
             $("#offer_tr_success").hide();
         } else {
-            offerTrHide();
+            pageToolsTriggerHide("offer_tr");
         }
     } else {
         // загрузка полей
         $("#offer_tr_loader").show();
-        offerTrShow();
+        pageToolsTriggerShow("offer_tr");
         
         $.ajax({
             url: fields_url,
@@ -285,28 +299,6 @@ function switchOfferTr(fields_url, error_msg)
                 $("#offer_tr_loader").hide();
             }
         });
-    }
-}
-
-// показать Предложить перевод
-function offerTrShow()
-{
-    revhistoryHide();
-        
-    $("#offer_tr").show();
-    // модификация текста ссылки
-    var offer_tr_trigger = $("#offer_tr_trigger");
-    offer_tr_trigger.text( offer_tr_trigger.text().substr(1, offer_tr_trigger.text().length-2) );
-}
-
-// скрыть Предложить перевод
-function offerTrHide()
-{
-    if ( !$("#offer_tr").is(":hidden") ) {  
-        $("#offer_tr").hide();
-        // модификация текста ссылки
-        var offer_tr_trigger = $("#offer_tr_trigger");
-        offer_tr_trigger.text( "[" + offer_tr_trigger.text() + "]" );
     }
 }
 
@@ -328,31 +320,44 @@ function showOfferTrMethod(radio)
 // отображение Истории изменений
 function switchRevhistory()
 {
-    if ( $("#revhistory_ctr").is(":hidden") ) {
-        revhistoryShow();
+    if ( $("#revhistory").is(":hidden") ) {
+        pageToolsTriggerShow("revhistory");
     } else {
-        revhistoryHide();
+        pageToolsTriggerHide("revhistory");
     }
 }
 
-// показать Версии
-function revhistoryShow()
+// отображение Истории изменений
+function switchEmbed()
 {
-    offerTrHide();
-        
-    $("#revhistory_ctr").show();
-    // модификация текста ссылки
-    var revhistory_trigger = $("#revhistory_trigger");
-    revhistory_trigger.text( revhistory_trigger.text().substr(1, revhistory_trigger.text().length-2) );
+    if ( $("#embed").is(":hidden") ) {
+        pageToolsTriggerShow("embed");
+    } else {
+        pageToolsTriggerHide("embed");
+    }
 }
 
-// скрыть Версии
-function revhistoryHide()
+// показать кнопку
+function pageToolsTriggerShow(mnemonic_id)
 {
-    if ( !$("#revhistory_ctr").is(":hidden") ) {
-        $("#revhistory_ctr").hide();
+    // скрываются все остальные кнопки
+    $(".page_tools").each(function(index) {
+        pageToolsTriggerHide( $(this).attr('id') );
+    });    
+        
+    $("#"+mnemonic_id).show();
+    // модификация текста ссылки
+    var trigger = $("#"+mnemonic_id+"_trigger");
+    trigger.css('text-decoration', 'none');
+}
+
+// скрыть кнопку
+function pageToolsTriggerHide(mnemonic_id)
+{
+    if ( !$("#"+mnemonic_id).is(":hidden") ) {
+        $("#"+mnemonic_id).hide();
         // модификация текста ссылки
-        var revhistory_trigger = $("#revhistory_trigger");
-        revhistory_trigger.text( "[" + revhistory_trigger.text() + "]" );
+        var trigger = $("#"+mnemonic_id+"_trigger");
+        trigger.css('text-decoration', 'underline');
     }
 }

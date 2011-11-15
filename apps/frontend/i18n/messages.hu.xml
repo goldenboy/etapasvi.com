@@ -354,6 +354,11 @@
         <target></target>
       </trans-unit>
 
+      <trans-unit id="1">
+        <source>embed</source>
+        <target></target>
+      </trans-unit>
+
 <!-- 404 -->
       <trans-unit id="1">
         <source>Page Not Found or Not Translated</source>

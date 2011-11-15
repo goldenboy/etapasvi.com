@@ -254,12 +254,6 @@
         <target></target>
       </trans-unit>
 
-<!-- 404 -->
-      <trans-unit id="1">
-        <source>Page Not Found or Not Translated</source>
-        <target></target>
-      </trans-unit>
-
 <!--  offer translation -->
       <trans-unit id="1">
         <source>offer translation</source>
@@ -365,6 +359,17 @@
       
       <trans-unit id="1">
         <source>Compare selected revisions</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>embed</source>
+        <target></target>
+      </trans-unit>
+
+<!-- 404 -->
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated</source>
         <target></target>
       </trans-unit>
 
