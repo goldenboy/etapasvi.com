@@ -3,19 +3,25 @@
  * Подготовка файлов переводов symfony.
  * Берутся файлы messages.ru.xml, из них удаляется перевод, затем файлы складываются в /uploads/
  * deprecated директории пропускаем.
+ * 
+ * Цитаты также помещаются в отдельные файлы.
  *
  */
 
 class preparetranslateTask extends sfBaseTask
 {
+  // дирекотрия с переподами
   const PREPARED_MESSAGES_DIR            = 'translate';
-  const OTHER_MESSAGES_CODE  = 'other';
+  // название директории с файлами для перевода на любой язык
+  const OTHER_MESSAGES_CODE              = 'other';
   // язык, который берётся за образец
   const ORIGINAL_CULTURE                 = 'ru';
   // расширение конечных файлов переводаы
   const FILE_EXT                         = 'html';
   // файл со списком страниц переводов
   const INDEX_FILE                       = 'index.html';
+  // название модуля цитат
+  const MODULE_QUOTES                    = 'quotes';
   
   // папка с переводами
   private $translates_path = '';
@@ -23,6 +29,7 @@ class preparetranslateTask extends sfBaseTask
   private $translated_cultures = array();
   // список модулей
   private $module_list          = array();
+  
     
   protected function configure()
   {
@@ -65,7 +72,10 @@ EOF;
     // берутся файлы с русским переводом, перевод удаляется и файлы складываются в /uploads/other
     echo "Translation other:\n";    
     $this->findFiles(sfConfig::get('sf_app_dir'), '/messages\.ru\.xml$/', 'procOtherFile');
-
+    
+    // messages-файла для цитат нет, поэтому файл создаётся вручную
+    $this->createQuotesFile(self::OTHER_MESSAGES_CODE);
+    
     // выясняется перечень языков, на которых уже есть хотя бы один файл перевода
     $this->findFiles(sfConfig::get('sf_app_dir'), '/messages\..*\.xml$/', 'getTranslatedCultures');
     
@@ -98,6 +108,9 @@ EOF;
       
       // ищутся файлы переводов для языка и кладутся в созданную папку, заменяя файлы, скопированные ранее из /uploads/other
       $this->findFiles(sfConfig::get('sf_app_dir'), "/messages\.{$culture}\.xml$/", 'copyTranslatedFile');
+      
+      // messages-файла для цитат нет, поэтому файл создаётся вручную
+      $this->createQuotesFile($culture);
       
       echo "Created translate files in: " . $this->translates_path . '/' . $culture . "\n";
     }
@@ -170,13 +183,135 @@ EOF;
         $url = $routing->generate($module, array('sf_culture' => $culture));
       } catch (Exception $e) {}
       if (empty($url)) {
-        $url = $routing->generate('main');
+        $url = $routing->generate('main', array('sf_culture' => $culture));
       }
       $url = 'http://' . UserPeer::DOMAIN_NAME_MAIN . $url;
       
       if (!empty($dest_text)) {
         $dest_text .= TextPeer::TRANSLATE_ITEMS_DELIMITER;
-$dest_text = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        $dest_text = $this->getTranslateFileHtml($url, $module, $culture, $dest_text);
+  	    file_put_contents($dest, $dest_text);
+  	    
+        // запоминаем модуль
+        if (!in_array($module, $this->module_list)) {
+      	  $this->module_list[] = $module;
+        }
+  	  }
+  	} catch (Exception $e) {
+  	  $log_msg = 'Error occured preparing translation file: ' . $dest;
+  	  sfContext::getInstance()->getLogger()->err($log_msg);
+  	  echo $log_msg . "\n";
+  	  return false;
+  	}
+  	return true;
+  }
+  
+  /**
+   * Создание файла перевода Цитат
+   *
+   * @param unknown_type $culture
+   * @return unknown
+   */
+  protected function createQuotesFile($culture) {
+          
+  	try {
+      // предполагается, что все директории уже созданы
+      $result_file_path = $this->translates_path . '/' . $culture . '/' . self::MODULE_QUOTES . '.' . $culture . '.' . self::FILE_EXT;     
+      
+      // получаем список Цитат на языке по умолчанию
+      $c = new Criteria();
+      $c->add(QuoteI18nPeer::TITLE, '', Criteria::NOT_EQUAL);
+      $c->addAscendingOrderByColumn(QuotePeer::ID);      
+  	  $quote_list = QuotePeer::doSelectWithI18n($c);
+  	  
+      if ($culture == self::OTHER_MESSAGES_CODE) {
+        //$c->add(QuoteI18nPeer::CULTURE, $culture );
+        //sfContext::getInstance()->getUser()->setCulture($culture);
+        $translation_culture = sfConfig::get('sf_default_culture');
+      } else {
+        //$c->add(QuoteI18nPeer::CULTURE, sfConfig::get('sf_default_culture') );
+        //sfContext::getInstance()->getUser()->setCulture($default_culture);
+        $translation_culture = $culture;
+      }
+      
+      // URL  
+      $routing = $this->getRouting();
+      $url     = 'http://' . UserPeer::DOMAIN_NAME_MAIN . $routing->generate('main', array('sf_culture' => $translation_culture));
+  	  
+  	  // подготовка массива для построения отформатированного текста
+  	  foreach ($quote_list as $quote) {
+  	      
+  	    $source_text = $quote->getTitle();  	    
+  	    $translation = $quote->getTitle($translation_culture);
+  	    
+  	    if ($source_text == $translation) {
+  	      $translation = '';
+  	    }
+  	      
+  	    $quote_items[] = array(  	    
+  	      'source_text' => $source_text,
+  	      'translation' => $translation
+  	    );
+  	  }
+  	  
+  	  $formatted_text = $this->generateFormattedText($quote_items);
+      
+      // получение HTML и сохранение в файл
+      if (!empty($formatted_text)) {
+        $dest_html = $this->getTranslateFileHtml($url, self::MODULE_QUOTES, $culture, $formatted_text);
+  	    file_put_contents($result_file_path, $dest_html);
+  	  } else {
+  	    throw new Exception('Quote translation text is empty');
+  	  }
+
+  	} catch (Exception $e) {
+  	  $log_msg = 'Error occured preparing quotes translation file ' . $dest . ': ' . $e->getMessage();
+  	  sfContext::getInstance()->getLogger()->err($log_msg);
+  	  echo $log_msg . "\n";
+  	  return false;
+  	}
+  	return true;
+  }
+  
+  /**
+   * Получение отформатированного текста для перевода
+   *
+   * @param unknown_type $items
+   */
+  protected function generateFormattedText($items)
+  {
+    $formatted_text = '';
+    foreach ($items as $item) {
+      $formatted_text .= 
+        TextPeer::TRANSLATE_ITEMS_DELIMITER . "\r\n" 
+        . $item['source_text'] . "\r\n"
+        . TextPeer::TRANSLATE_BETWEEN_DELIMITER . "\r\n"
+        . $item['translation'] . "\r\n" ;
+    }
+    $formatted_text .= TextPeer::TRANSLATE_ITEMS_DELIMITER;
+    
+    return $formatted_text;
+  }
+  
+  /**
+   * Получение HTML файла перевода.
+   *
+   * @param unknown_type $url
+   * @param unknown_type $module
+   * @param unknown_type $culture
+   * @param unknown_type $text
+   * @return unknown
+   */
+  protected function getTranslateFileHtml($url, $module, $culture, $text)
+  {
+    if (empty($url) || empty($module) || empty($culture) || empty($text)) {
+  	  $log_msg = 'Error creating HTML: one of the parameters passed to ' . __FILE__ . ' is empty';
+  	  sfContext::getInstance()->getLogger()->err($log_msg);
+  	  echo $log_msg . "\n";
+  	  return false;
+    }
+      
+    $html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -203,7 +338,7 @@ or translate directly in the area below and click "Send" button to send:<br/><br
 <input type="hidden" name="entry.5.single" value="' . $url .'" id="offer_tr_uri"/>
 <input type="hidden" name="entry.6.single" value="' . $module . '" />
 <input type="hidden" name="entry.4.single" value="' . $culture . '" />
-<textarea style="width:98%;font-family:courier" rows="25" name="entry.1.single">' . $dest_text . '</textarea>
+<textarea style="width:98%;font-family:courier" rows="25" name="entry.1.single">' . $text . '</textarea>
 <br/><br/>
 <table cellspacing="0" cellpadding="0" class="form_table">
     <tr>
@@ -225,21 +360,7 @@ or translate directly in the area below and click "Send" button to send:<br/><br
 
 </body>
 </html>';
-
-  	    file_put_contents($dest, $dest_text);
-  	    
-        // запоминаем модуль
-        if (!in_array($module, $this->module_list)) {
-      	  $this->module_list[] = $module;
-        }
-  	  }
-  	} catch (Exception $e) {
-  	  $log_msg = 'Error occured preparing translation file: ' . $dest;
-  	  sfContext::getInstance()->getLogger()->err($log_msg);
-  	  echo $log_msg . "\n";
-  	  return false;
-  	}
-  	return true;
+    return $html;
   }
   
   /**
@@ -374,7 +495,9 @@ or translate directly in the area below and click "Send" button to send:<br/><br
     $cultures_list[] = self::OTHER_MESSAGES_CODE;
     foreach ( $cultures_list as $culture) {
       $index_html .= '<div id="' . $culture . '_modules" class="' . ($culture != self::OTHER_MESSAGES_CODE ? 'hidden' : '') . ' modules">Module: <select onchange="loadTranslate(this)">';
-      foreach ($this->module_list as $module) {
+      $module_list_updated   = $this->module_list;
+      $module_list_updated[] = self::MODULE_QUOTES;
+      foreach ($module_list_updated as $module) {
     	$index_html .= '<option value="http://' . UserPeer::DOMAIN_NAME_MAIN . '/uploads/' . self::PREPARED_MESSAGES_DIR . '/' .
     					$culture . '/' . $module . '.' . $culture . '.' . self::FILE_EXT . '" target="prepare_translate_iframe">' . 
     					$module . '</option>';
