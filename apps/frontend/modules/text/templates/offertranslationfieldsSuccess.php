@@ -10,10 +10,12 @@
 <p class="light small">
     <?php echo __('Tips for translators:') ?>
     <ul class="light small">
-        <li><?php echo __('Before performing translation make sure, that text you are going to translate is not translated yet on website.') ?></li>
-        <li><?php echo __('Distortion and misinterpretation of information during translation is not acceptable.') ?></li>
         <li><?php echo __('Carefully read/watch instructions – respect your time and website programmer\'s time.') ?></li>
+        <li><?php echo __('Before performing translation make sure, that text you are going to translate is not translated yet on website.') ?></li>
+        <li><?php echo __('Distortion and misinterpretation of information during translation is not acceptable.') ?></li>        
+        <li><?php echo __('In translated text replace Photo, Video and Audio elements with [photo], [video] and [audio] marks correspondingly.') ?></li>        
         <li><?php echo __('If you would like to correct translation you sent, send both incorrect and correct versions in your language. It would allow programmer to find text, which should be replaced with correct one.') ?></li>
+        <li><?php echo __('Received translations are usually processed once a week, you can track how they are added on website in') ?> <a href="<?php echo url_for('@feed', true); ?>" title="<?php echo __('Feed') ?>"><?php echo __('Feed') ?></a>.</li>
     </ul>
 </p>
 <hr class="light"/>

@@ -311,6 +311,16 @@
       </trans-unit>
       
       <trans-unit id="1">
+        <source>In translated text replace Photo, Video and Audio elements with [photo], [video] and [audio] marks correspondingly.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Received translations are usually processed once a week, you can track how they are added on website in</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
         <source>for example, if you translate news item, copy it's title and whole text into this field</source>
         <target></target>
       </trans-unit>

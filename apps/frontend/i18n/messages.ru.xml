@@ -309,6 +309,16 @@
         <source>Distortion and misinterpretation of information during translation is not acceptable.</source>
         <target>Искажение информации в процессе перевода и вольный перевод недопустимы.</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>In translated text replace Photo, Video and Audio elements with [photo], [video] and [audio] marks correspondingly.</source>
+        <target>В переведённом тексте заменяйте Фото-, Видео- и Аудиоэлементы на [photo], [video] и [audio] соответственно.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Received translations are usually processed once a week, you can track how they are added on website in</source>
+        <target>Полученные переводы обычно обрабатываются один раз в неделю, вы можете отслеживать добавление переводов на сайт в разделе</target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>for example, if you translate news item, copy it's title and whole text into this field</source>
