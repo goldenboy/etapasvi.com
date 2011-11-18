@@ -3,6 +3,7 @@ SetEnvIfNoCase Host ^(etapasvi\.com|www.etapasvi\.com|m.etapasvi\.com)$ nopassre
 
 Order allow,deny
 Allow from env=nopassreq
+Allow from address 173.236.247.197
 Satisfy any
 
 # Отключение просмотра списка файлов директории
