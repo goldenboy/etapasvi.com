@@ -1,5 +1,5 @@
 # Если находимся не на перечисленных доменах, требуется авторизация
-SetEnvIfNoCase Host ^(etapasvi\.com|www.etapasvi\.com|m.etapasvi\.com|tasks.etapasvi\.com)$ nopassreq
+SetEnvIfNoCase Host ^(etapasvi\.com|www.etapasvi\.com|m.etapasvi\.com)$ nopassreq
 
 Order allow,deny
 Allow from env=nopassreq
