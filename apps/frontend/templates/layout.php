@@ -8,14 +8,13 @@
 <?php include_slot('meta') ?>
 <?php /*include_title()*/ ?>
 <title><?php echo __(html_entity_decode($sf_response->getTitle())); ?> - <?php echo sfConfig::get('app_site_name'); ?></title>
-<link rel="shortcut icon" type="image/x-icon" href="http://<?php echo sfConfig::get('app_domain_name'); ?>/favicon.ico" />
+<?php $app_domain_name = sfConfig::get('app_domain_name'); ?>
+<link rel="shortcut icon" type="image/x-icon" href="http://<?php echo $app_domain_name; ?>/favicon.ico" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script> 
 <script type="text/javascript" src="<?php echo url_for('@js'); ?>"></script> 
-<link rel="stylesheet" type="text/css" media="screen" href="http://<?php echo sfConfig::get('app_domain_name'); ?>/css/css.css" /> 
+<link rel="stylesheet" type="text/css" media="screen" href="http://<?php echo $app_domain_name; ?>/css/css.css" /> 
 </head>
-
 <?php $body_id = get_slot('body_id'); ?>
-
 <body id="<?php echo $body_id; ?>" class="<?php if (UserPeer::isCultureHieroglyphic()):?>hieroglyphic<?php endif ?> <?php include_slot('body_class') ?><?php if (UserPeer::isCultureLargeText()):?> large_text<?php endif ?>">
 
 <div id="wrapper">
@@ -35,8 +34,40 @@
         <?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	
         <?php include_partial('global/share'); ?>
     </div>
-	<div id="footer">    
-        <div id="f_line"></div>        	       
+	<div id="footer">
+        <div id="f_line"></div>    
+        <span id="lang_plain">
+        <?php 
+            $uri          = $sf_request->getPathInfo();
+            foreach( UserPeer::getCultures() as $culture) {
+                $user_cultures[] = '/' . $culture . '/';
+            }
+
+            $params = str_replace( $user_cultures, '/', $uri);
+            $user_cultures_data = UserPeer::getCulturesData();
+            // всё, что идёт после #
+            /*preg_match('/#.*$/', $uri, $matches);
+            if (!empty($matches[0])) {
+                $anchor = $matches[0];
+            } else {
+                $anchor = '';
+            }*/
+            $i = 0;
+        ?>
+        <?php foreach($user_cultures_data as $culture => $culture_data): ?>                                
+            <?php $i++ ?>
+            <?php if ($i > count(UserPeer::getCultures())) break; ?>
+            
+            <?php if ($user_culture == $culture): ?>
+                <strong><?php echo UserPeer::getCultureIso( $culture ) ?></strong> 
+            <?php else: ?>
+                <a href="http://<?php echo $app_domain_name . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name']?>"><?php echo UserPeer::getCultureIso( $culture )?></a>
+            <?php endif ?>
+            <?php if ($i != count($user_cultures)): ?>
+                |
+            <?php endif ?>
+        <?php endforeach?>
+        <br/><br/></span>
         <?php $mobile_url = UserPeer::switchUrlMobile(sfContext::getInstance()->getRequest()->getUri());?>                
         <?php $mobile_url = preg_replace("/\?.*/", '', $mobile_url) ;?>                
         <div id="m_link">
@@ -55,7 +86,7 @@
 </div>
 
 <div id="bubble_mantra">
-	<img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/om_namo_guru_buddha_gyani.gif" title="<?php echo __('Om Namo Guru Buddha Gyani') ?>" />
+	<img src="http://<?php echo $app_domain_name; ?>/i/om_namo_guru_buddha_gyani.gif" title="<?php echo __('Om Namo Guru Buddha Gyani') ?>" />
 <?php
 /*
 	<script type="text/javascript">
@@ -73,35 +104,19 @@
 </div>
 
 <div id="bubble_lang">	
-	<?php 
-		$uri          = $sf_request->getPathInfo();
-		foreach( UserPeer::getCultures() as $culture) {
-			$user_cultures[] = '/' . $culture . '/';
-		}
-
-		$params = str_replace( $user_cultures, '/', $uri);
-        // всё, что идёт после #
-        /*preg_match('/#.*$/', $uri, $matches);
-        if (!empty($matches[0])) {
-            $anchor = $matches[0];
-        } else {
-            $anchor = '';
-        }*/
-		$i = 0;
-	?>
-
-	<span class="lang_name lang_selector b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/fg.png" alt="<?php echo UserPeer::getCultureIso( $user_culture );?>" /></span> 
+	<span class="lang_name lang_selector b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><img src="http://<?php echo $app_domain_name; ?>/i/fg.png" alt="<?php echo UserPeer::getCultureIso( $user_culture );?>" /></span> 
 	<?php /* <span class="slide_arrow lang_selector">▼</span>*/ ?>
     <?php /* id используется в /lib/symfony/exception/sfError404Exception.class.php */ ?>
 	<div id="lang_list">
         <table id="lang_box">
-		<?php foreach(UserPeer::getCulturesData() as $culture => $culture_data): ?>	
+        <?php $i = 0; ?>
+		<?php foreach($user_cultures_data as $culture => $culture_data): ?>	
             <?php if ($i%2 == 0): ?>
                 <tr>
             <?php endif ?>
             <td>                
                 <?php if ($i > count(UserPeer::getCultures())) break; ?>
-                <i class="b-fg b-fg_<?php echo strtoupper($culture_data['iso']);?>"><img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/fg.png"/></i> 
+                <i class="b-fg b-fg_<?php echo strtoupper($culture_data['iso']);?>"><img src="http://<?php echo $app_domain_name; ?>/i/fg.png"/></i> 
                 <?php if ($user_culture == $culture): ?>
                     <span class="light"><?php echo $culture_data['name']?></span>
                 <?php else: ?>
@@ -111,7 +126,7 @@
             <?php if ($i%2 == 1): ?>
                 </tr>
             <?php endif ?>
-            <?php if ( ($i == count(UserPeer::getCulturesData())-1) && ($i%2 == 0)): ?>
+            <?php if ( ($i == count($user_cultures_data)-1) && ($i%2 == 0)): ?>
                 <td>&nbsp;</td></tr>
             <?php endif ?>
             <?php $i++ ?>

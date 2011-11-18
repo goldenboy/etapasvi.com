@@ -1208,7 +1208,7 @@ class sfSuperCache
   	
   	// lang_list
   	preg_match_all(
-  	  "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . ")\/[^\/\"]+\/)[^\"]+)\"/ism", 
+  	  "/href=\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . ")\/[^\/\"]+\/)[^\"]+)\"/ism", 
 	  preg_replace("/.*(<div.*id=\"(?:lang_list|culture_list)\".*?<\/div>).*/ism", "$1", $cache_file), 
 	  $matches);
 	
@@ -1224,12 +1224,14 @@ class sfSuperCache
 	// footer
 	// заменяем ссылки в переключателе языка и ссылке на мобильную версию
 	if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' ) {
+	  // мобильная версия
 	  preg_match_all(
   	    "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 	
 	    preg_replace("/.*(Copyright &copy;.*?_trackPageview).*/ism", "$1", $cache_file), 
 	    $matches
 	  );
 	} else {
+	  // полная версия
 	  preg_match_all(
   	    "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 	
 	    preg_replace("/.*(<div.*id=\"footer\".*?(bubble_click)).*/ism", "$1", $cache_file), 

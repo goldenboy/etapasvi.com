@@ -62,7 +62,7 @@ $(document).ready(function() {
     
     // текст в футере
     if (footer_text) {
-        $("#f_line").after(footer_text);
+        $("#lang_plain").after(footer_text);
     }
     
     // сокрытие элементов в зависимости от размера окна
