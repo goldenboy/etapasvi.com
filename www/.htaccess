@@ -1,3 +1,10 @@
+# Если находимся не на перечисленных доменах, требуется авторизация
+SetEnvIfNoCase Host ^(etapasvi\.com|www.etapasvi\.com|m.etapasvi\.com)$ nopassreq
+
+Order allow,deny
+Allow from env=nopassreq
+Satisfy any
+
 # Отключение просмотра списка файлов директории
 Options -indexes
 
@@ -44,8 +51,8 @@ ErrorDocument 500 /errors/500.html
   #RewriteCond %{HTTP:Range} bytes=0-.* [NC]
   #RewriteRule .? http://%{SERVER_NAME}/ [R=302,L]
   
-  # Запрет доступа к .conf файлам (nginx)
-  RewriteRule .conf$ /errors/404.html
+  # Запрет доступа к .конфигурационным файлам
+  RewriteRule (\.conf|\.htaccess|\.htpasswd)$ /errors/404.html
   
   # проверка доменного имени и рекдирект на домен по умолчанию, если передан неверный
   # учитывать, что доменное имя хардкодится в .php
