@@ -7,7 +7,8 @@ SetEnvIfNoCase Host ^(etapasvi\.com|www.etapasvi\.com|m.etapasvi\.com)$ nopassre
 
 Order Allow,Deny
 Allow from env=nopassreq
-Allow from 69.163.225.189
+# внешние IP сервера, на котором запускается пингер
+Allow from 69.163.225.189 173.236.247.197
 Satisfy any
 
 # Отключение просмотра списка файлов директории
