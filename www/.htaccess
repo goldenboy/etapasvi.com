@@ -1,9 +1,13 @@
+# если размещать в вышестоящем .htaccess, на некоторых площадках потом
+# не удаётся отключить с помощью Allow
+Require user dev
+
 # Если находимся не на перечисленных доменах, требуется авторизация
 SetEnvIfNoCase Host ^(etapasvi\.com|www.etapasvi\.com|m.etapasvi\.com)$ nopassreq
 
-Order allow,deny
+Order Allow,Deny
 Allow from env=nopassreq
-Allow from address 173.236.247.197
+Allow from 69.163.225.189
 Satisfy any
 
 # Отключение просмотра списка файлов директории
