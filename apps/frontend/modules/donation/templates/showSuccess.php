@@ -21,6 +21,7 @@ $news_link = $news->getUrl();
 </p>
 */
 ?>
+<?php /*
 <h2 class="center"><?php echo __('PayPal') ?></h2>
 <div class="center_text">
 <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
@@ -34,7 +35,7 @@ $news_link = $news->getUrl();
     <input type="image" alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/WEBSCR-640-20110401-1/en_US/i/btn/btn_donateCC_LG.gif" style="border:0" />
 </form>
 </div>
-
+*/ ?>
 <h2 class="center"><?php echo __('SMS') ?></h2>
 <p class="center_text">
 <?php /*
