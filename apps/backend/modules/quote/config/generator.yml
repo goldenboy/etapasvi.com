@@ -38,6 +38,10 @@ generator:
           - title_i18n_ja
         "ES":
           - title_i18n_es
+        "ET":
+          - title_i18n_et
+        "BN":
+          - title_i18n_bn
       fields:        
         title_i18n_en:
           name: Title
@@ -84,5 +88,13 @@ generator:
           params: disabled=false maxlength=255 style="width:80%"
 
         title_i18n_es:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_et:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+          
+        title_i18n_bn:
           name: Title
           params: disabled=false maxlength=255 style="width:80%"
