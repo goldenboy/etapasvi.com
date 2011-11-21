@@ -21,6 +21,19 @@ $news_link = $news->getUrl();
 </p>
 */
 ?>
+<h2 class="center"><?php echo __('PayPal') ?></h2>
+<div class="center_text">
+<form method="post" action="https://www.paypal.com/cgi-bin/webscr">
+    <input type="hidden" value="_donations" name="cmd" />
+    <input type="hidden" value="kim2004huyen@yahoo.com" name="business" />
+    <input type="hidden" value="US" name="lc" />
+    <input type="hidden" value="Bodhi Shravan Dharma Sangha" name="item_name" />
+    <input type="hidden" value="0" name="no_note" />
+    <input type="hidden" value="USD" name="currency_code" />
+    <input type="hidden" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest" name="bn" />
+    <input type="image" alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/WEBSCR-640-20110401-1/en_US/i/btn/btn_donateCC_LG.gif" style="border:0" />
+</form>
+</div>
 <?php /*
 <h2 class="center"><?php echo __('PayPal') ?></h2>
 <div class="center_text">
