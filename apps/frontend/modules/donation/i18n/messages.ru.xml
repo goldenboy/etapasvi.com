@@ -74,6 +74,11 @@
         <target>Конвертер валют</target>
       </trans-unit>
 
+      <trans-unit id="1">
+        <source>Donations received</source>
+        <target>Полученные пожертвования</target>
+      </trans-unit>
+
 <!-- утф -->
     </body>
   </file>
