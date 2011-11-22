@@ -44,22 +44,22 @@ class newsComponents extends sfComponents
   {
 	$this->newsitem = NewsPeer::retrieveByPk( $this->id );
 
-  	if ( sfContext::getInstance()->getActionName() != 'preview' && 
-        (!$this->newsitem || !$this->newsitem->getBody() || !$this->newsitem->getShow())) 
-    {
+	if (sfContext::getInstance()->getActionName() != 'preview') {
+  	  if ( !$this->newsitem || !$this->newsitem->getBody() || !$this->newsitem->getShow()) {
   		//sfActions::forward('default', 'error404');
   		//@sfActions::forward404('123');
   		throw new sfError404Exception();
-  	}
+  	  }
     
-  	$newitem_url = $this->newsitem->getUrl();
+  	  $newitem_url = $this->newsitem->getUrl();
   	
-  	// если адрес новости неверный, редиректим на нужный адрес
-  	$url_parse = parse_url($newitem_url);
-  	if ( (!empty($_SERVER['PATH_INFO']) && preg_replace("/\?.*/", "", $_SERVER['PATH_INFO']) != $url_parse['path']) || 
+  	  // если адрес новости неверный, редиректим на нужный адрес
+  	  $url_parse = parse_url($newitem_url);
+  	  if ( (!empty($_SERVER['PATH_INFO']) && preg_replace("/\?.*/", "", $_SERVER['PATH_INFO']) != $url_parse['path']) || 
   		 (!empty($_SERVER['REQUEST_URI']) && preg_replace("/\?.*/", "", $_SERVER['REQUEST_URI']) != $url_parse['path'])
-	) {
+	  ) {
 		sfActions::redirect( $newitem_url );
+	  }
 	}
   	
 	// установка заголовка страницы
