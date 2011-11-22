@@ -834,6 +834,9 @@ input[type="radio"] {
     }
 
 /* comments*/
+.dsq-widget img.dsq-widget-avatar  {
+    padding: 4px 11px 3px 0;
+    }
 html #disqus_thread {
     margin-bottom:0;
     }

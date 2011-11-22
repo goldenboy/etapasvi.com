@@ -43,7 +43,11 @@
         <target>nebo</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Subscribe to new comments on website by email</source>
+        <source>Recent Comments</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe to Comments</source>
         <target></target>
       </trans-unit>
 

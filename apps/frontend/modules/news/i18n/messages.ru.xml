@@ -43,8 +43,12 @@
         <target>или</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>Subscribe to new comments on website by email</source>
-        <target>Получать уведомления о новых комментариях на сайте по e-mail</target>
+        <source>Recent Comments</source>
+        <target>Последние комментарии</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe to Comments</source>
+        <target>Подписка на комментарии</target>
       </trans-unit>
 
 <!-- showSuccess -->

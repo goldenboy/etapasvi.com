@@ -4,25 +4,25 @@
 
 
 <?php include_component('news', 'latest'); ?>
-<p class="p1_no_top no_decor right">
+<p class="p1_no_top right">
 	<a href="<?php echo url_for('news_index'); ?>" class="no_decor"><?php echo __('News') ?> »</a>
 </p>
 
 <h2><?php echo __('Latest Photos') ?></h2>
 <?php include_component('photo', 'latest'); ?>
-<p class="p1_no_top no_decor right">
+<p class="p1_no_top right">
 	<a href="<?php echo url_for('photoalbum_index'); ?>" class="no_decor"><?php echo __('Photo') ?> »</a>
 </p>
 
 <h2><?php echo __('Latest Video') ?></h2>
 <?php include_component('video', 'latest'); ?>
-<p class="p1_no_top no_decor right">
+<p class="p1_no_top right">
 	<a href="<?php echo url_for('video_index'); ?>" class="no_decor"><?php echo __('Video') ?> »</a>
 </p>
 
 <h2><?php echo __('Latest Audio') ?></h2>
 <?php include_component('audio', 'latest'); ?>
-<p class="p1_no_top no_decor right">
+<p class="p1_no_top right">
 	<a href="<?php echo url_for('audio_index'); ?>" class="no_decor"><?php echo __('Audio') ?> »</a>
 </p>
 
@@ -33,15 +33,18 @@ Email: <input type="text" style="width:140px" name="email"/> &nbsp;<input type="
 </form>
 <br/>
 <hr class="dashed"/>
-<h2><?php echo __('Comments') ?></h2>
-<p>
-<?php echo __('Subscribe to new comments on website by email') ?>:
+<h2><?php echo __('Recent Comments') ?></h2>
+<div class="dsq-widget"><script type="text/javascript" src="http://etapasvi.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200"></script></div><?php /* <a href="http://disqus.com/">Powered by Disqus</a> */ ?>
+<p class="p1_no_top">
+    <a href="http://feeds.feedburner.com/etapasvi/comments" class="right" target="_blank"><?php echo __('Comments') ?> »</a><br/>
 </p>
+<hr class="dashed"/>
+<h2><?php echo __('Subscribe to Comments') ?></h2>
 <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=etapasvi/comments', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-<a href="http://feeds.feedburner.com/etapasvi/comments" class="right"><?php echo __('view all') ?></a>
-<input type="text" style="width:140px" name="email"/> &nbsp;<input type="hidden" value="etapasvi/comments" name="uri"/><input type="hidden" name="loc" value="<?php echo UserPeer::getCultureFeedburderLoc(); ?>"/><input type="submit" class="input_button" value="<?php echo __('Subscribe') ?>" />
+Email: <input type="text" style="width:140px" name="email"/> &nbsp;<input type="hidden" value="etapasvi/comments" name="uri"/><input type="hidden" name="loc" value="<?php echo UserPeer::getCultureFeedburderLoc(); ?>"/><input type="submit" class="input_button" value="<?php echo __('Subscribe') ?>" />
 </form>
 <br/>
+<hr class="dashed"/>
 <?php include_component('comments', 'show') ?>
 
 <?php include_partial('comments/count'); ?>
