@@ -24,13 +24,15 @@
 #body_donation #mi_donation a,
 #body_chat #mi_chat a,
 #body_books #mi_books a,
+#body_stories #mi_stories a,
 #body_servers #mi_servers a {
-    border-bottom:1px solid
+    border-bottom:1px solid;
     }
-    
+/*    
 #menu #mi_books a {
     color: #df3f3f;
     }
+*/
 
 /* embedded */
 body.embedded .bread_crumbs,

@@ -70,6 +70,10 @@
         <source>Books</source>
         <target>Книги</target>
       </trans-unit>
+	  <trans-unit id="1">
+        <source>Stories</source>
+        <target>Истории</target>
+      </trans-unit>
       <trans-unit id="1">
         <source>Encyclopedia</source>
         <target>Энциклопедия</target>

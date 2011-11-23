@@ -64,6 +64,16 @@ books_show:
   param: { module: news, action: show }
   requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
   
+# books
+stories_index:
+  url:   /:sf_culture/stories/index/*
+  param: { module: news, action: index, type: stories }
+  requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
+stories_show:
+  url:   /:sf_culture/stories/show/*
+  param: { module: news, action: show }
+  requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
+  
 # должен быть выше default
 revisionhistory:
   url:   /:sf_culture/revision/show/*

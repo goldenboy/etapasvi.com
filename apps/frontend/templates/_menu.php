@@ -10,7 +10,8 @@
 		<li id="mi_video"><a href="<?php echo url_for('@video_index', true); ?>" title="<?php echo __('Video') ?>"><?php echo __('Video') ?></a></li>
 		<li id="mi_audio"><a href="<?php echo url_for('@audio_index', true); ?>" title="<?php echo __('Audio') ?>"><?php echo __('Audio') ?></a></li>
         <li id="mi_teachings"><a href="<?php echo url_for('@teachings_index', true); ?>" title="<?php echo __('Teachings') ?>"><?php echo __('Teachings') ?></a></li>
-        <li id="mi_books"><a href="<?php echo url_for('@books_index', true); ?>" title="<?php echo __('Books') ?>"><?php echo __('Books') ?></a></li>
+        <li id="mi_stories"><a href="<?php echo url_for('@stories_index', true); ?>" title="<?php echo __('Stories') ?>"><?php echo __('Stories') ?></a></li>
+        <li id="mi_books"><a href="<?php echo url_for('@books_index', true); ?>" title="<?php echo __('Books') ?>"><?php echo __('Books') ?></a></li>        
         <li id="mi_feed"><a href="<?php echo url_for('@feed', true); ?>" title="<?php echo __('Feed') ?>"><?php echo __('Feed') ?></a></li>
 		<li id="mi_faq"><a href="<?php echo url_for('@faq', true); ?>" title="<?php echo __('FAQ') ?>"><?php echo __('FAQ') ?></a></li>
 		<li id="mi_blessing"><a href="<?php echo url_for('@blessing', true); ?>" title="<?php echo __('Blessing') ?>"><?php echo __('Blessing') ?></a></li>

@@ -88,6 +88,11 @@
         <target>書籍</target>
       </trans-unit>
       
+	  <trans-unit id="1">
+        <source>Stories</source>
+        <target></target>
+      </trans-unit>
+      
       <trans-unit id="1">
         <source>Encyclopedia</source>
         <target>百科事典</target>
