@@ -218,8 +218,28 @@ class sfSuperCache
   	// получаем URL данного и связанных элементов
   	foreach ($items as $item_for_clearing) {
   	  try {
-  	    $url = $item_for_clearing->getUrl(); 	       	      
+  	    $url = $item_for_clearing->getUrl();  	          
   	    $urls_for_clearing[] = $url;
+  	    
+  	    // для фотоальбома очищаем фотографии
+  	    if (get_class($item_for_clearing) == ItemtypesPeer::ITEM_TYPE_NAME_PHOTOALBUM) {
+  	        
+  	      $photoalbum = $item_for_clearing;
+  	        
+          $urls_for_clearing[] = $photoalbum->getUrl();
+      	  // все фото в фотоальбоме
+      	  $c = new Criteria();
+      	  $c->add(PhotoPeer::PHOTOALBUM_ID, $photoalbum->getId());
+      	  $photoalbum_photos = PhotoPeer::doSelect($c);
+      	  foreach ($photoalbum_photos as $photo) {
+      	  	$photo_url = sfRoute::urlRewriteCompress( $photo->getUrl(), true );
+      	  	$urls_for_clearing[] = $photo_url;
+      	  	// плюс ссылка на контент
+      	  	// http://www.etapasvi.com/en/photo/content/1243  	  	
+      	  	$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
+      	  }
+  	    }
+  	    
   	  } catch (Exception $e) {
   	  	echo $e->getMessage();
   	  }
