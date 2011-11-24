@@ -10,12 +10,14 @@
 <p>
     <strong><?php echo __('E-mail') ?>:</strong> <a href="mailto:<?php echo MailPeer::MAIL_ADDRESS ?>"><?php echo MailPeer::MAIL_ADDRESS ?></a>
 </p>
+<?php /*
 <p>
     <strong><?php echo __('Official website') ?>:</strong> <a href="http://www.dharmasangha.org.np">www.dharmasangha.org.np</a>
 </p>
 <p>
     <strong><?php echo __('News and Teachings') ?>:</strong> <a href="http://paldendorje.com">www.paldendorje.com</a>
 </p>
+*/ ?>
 <?php /*
 <?php if (!empty($chapter_list)): ?>
     <br/>
