@@ -45,11 +45,13 @@
     <br/>
 	<?php include_component('video', 'show', array('id'=>49)); ?>
 
+    <?php /*
 	<h2 class="center" id="donations"><?php echo __('Donation') ?></h2>
     <div class="center">
-        <?php /*<a href="http://paldendorje.com/project/donation.html" target="_blank">http://paldendorje.com/project/donation.html</a> */ ?>
+        <?php /*<a href="http://paldendorje.com/project/donation.html" target="_blank">http://paldendorje.com/project/donation.html</a> / ?>
         <a href="http://www.dharmasangha.org.np/en/Contents/donation.html" target="_blank">http://www.dharmasangha.org.np/en/Contents/donation.html</a>
     </div>
+    */ ?>
     <?php /*
 	<center>
 	<strong>PayPal (USD)</strong><br/>
