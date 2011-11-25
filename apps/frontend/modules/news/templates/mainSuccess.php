@@ -34,7 +34,7 @@ Email: <input type="text" style="width:140px" name="email"/> &nbsp;<input type="
 <br/>
 <hr class="dashed"/>
 <h2><?php echo __('Recent Comments') ?></h2>
-<div class="dsq-widget"><script type="text/javascript" src="http://etapasvi.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200"></script></div><?php /* <a href="http://disqus.com/">Powered by Disqus</a> */ ?>
+<div class="dsq-widget"><script type="text/javascript" src="http://etapasvi.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=32&amp;excerpt_length=200"></script></div><?php /* <a href="http://disqus.com/">Powered by Disqus</a> */ ?>
 <p class="p1_no_top">
     <a href="http://feeds.feedburner.com/etapasvi/comments" class="right" target="_blank"><?php echo __('Comments') ?> »</a><br/>
 </p>

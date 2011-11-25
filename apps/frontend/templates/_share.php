@@ -72,7 +72,7 @@
 */ ?>
 <div class="s_item">
     <div id="fb-root"></div>
-    <script>(function(d){
+    <script type="text/javascript">(function(d){
       var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
       js = d.createElement('script'); js.id = id; js.async = true;
       js.src = "//connect.facebook.net/en_US/all.js#appId=242428519102205&xfbml=1";
