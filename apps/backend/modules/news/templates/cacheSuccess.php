@@ -103,6 +103,7 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
 	<input type="submit" value="Restore" name="restore" />
 </form>
 <?php if (!empty($clear_pathes)): ?>
+Cleared: <?php echo count($clear_pathes); ?><br/>
 <?php foreach($clear_pathes as $path): ?>
     <?php echo $path; ?><br/>
 <?php endforeach; ?>

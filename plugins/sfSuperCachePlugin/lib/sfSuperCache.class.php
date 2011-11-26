@@ -36,7 +36,10 @@ class sfSuperCache
   
   // коды возврата при обновлении кэша в многопоточном режиме
   const REFRESH_CACHE_EXIT_STATUS_OK    = 0;    
-  const REFRESH_CACHE_EXIT_STATUS_ERROR = 1;    
+  const REFRESH_CACHE_EXIT_STATUS_ERROR = 1;
+      
+  // максимальное количество подкоманд
+  const MAX_SUBCOMMANDS = 3000; 
 
   // список процессов при обновлении кэша в многопоточном режиме
   private static $refersh_cache_process_list = array();
@@ -359,12 +362,20 @@ class sfSuperCache
   	if (!$file_path) {
   	  return false;
   	}
-  	 
+  	
+  	// если передан массив и кол-во элементов больше максимального  	
+  	if (is_array($file_path) && count($file_path) > self::MAX_SUBCOMMANDS) {
+  		for ($i = 0; $i<ceil(count($file_path)/self::MAX_SUBCOMMANDS); $i++) {
+  			self::removeCacheFile( array_slice($file_path, $i*self::MAX_SUBCOMMANDS, self::MAX_SUBCOMMANDS), $all_backends );
+  		}
+  		return;
+  	}
+  	
   	// find /home/saynt2day20/etapasvi.com/www/cache/www.etapasvi.com/ru/photo/64* -name '*i.html' -type f -exec rename 's/i.html/d.html/' {} \;
   	if (is_array($file_path)) {
       	$command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
       	           "' -type f -exec rename -f 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
-      	           " > /dev/null 2>&1 &";
+      	           " > /home/saynt2day20/etapasvi.com/t";
       	$remote_command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
       	           "' -type f -exec rm -f {} \;".
       	           " > /dev/null 2>&1 &";
