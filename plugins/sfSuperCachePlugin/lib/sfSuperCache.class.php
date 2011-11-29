@@ -375,7 +375,7 @@ class sfSuperCache
   	if (is_array($file_path)) {
       	$command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
       	           "' -type f -exec rename -f 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
-      	           " > /home/saynt2day20/etapasvi.com/t";
+      	           " > /dev/null 2>&1 &";
       	$remote_command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
       	           "' -type f -exec rm -f {} \;".
       	           " > /dev/null 2>&1 &";
