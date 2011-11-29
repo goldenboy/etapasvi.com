@@ -8,6 +8,11 @@
         <source>Where is Dharma Sangha now?</source>
         <target>Gdzie jest teraz Dharma Sangha?</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Is Dharma Sangha still not eating anything or just eating herbs from the jungle?</source>
+        <target></target>
+      </trans-unit>
   
       <trans-unit id="1">
         <source>Why is he meditating? What does he want to achieve?</source>
@@ -49,12 +54,12 @@
         <target></target>
       </trans-unit>
 
-<!--      
+    
       <trans-unit id="1">
-        <source>I am going to Halkhoriya Jungle. I would like to bring some gifts, what is the best choice?</source>
+        <source>I am going to Halkhoriya Jungle. What should I take with me? I also would like to bring some gifts, what is the best choice?</source>
         <target>Wybieram się do Dżungli Halkhoriya. Chciał/a/bym ofiarować jakieś podarki, co jest najlepszym wyborem?</target>
       </trans-unit>
--->      
+     
       <trans-unit id="1">
         <source>How can I get to Halkhoriya Jungle?</source>
         <target></target>
@@ -67,6 +72,11 @@
         <source>He is meditating in Halkhoriya Jungle, Nepal's Bara District.</source>
         <target>Jest w dżungli Halkhoriya, w Nepalu, medytując i dyktując Khenpo swą książkę.</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>He is not eating anything.</source>
+        <target></target>
+      </trans-unit>      
 
       <trans-unit id="1">
         <source>Dharma Sangha wants to liberate the whole world by spreading Dharma and insight he’ve gained through his meditation.</source>
@@ -118,9 +128,8 @@
         <target>Skonsultuj, proszę sekcję</target>
       </trans-unit>
       
-<!--
       <trans-unit id="1">
-        <source>Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. If you still wish to contribute somehow, below is a list of small practical things, which are needed regularly in the jungle, and are of great value here. So if you really want to take something from your country or buy it in Kathmandu before you come, you can make things smooth at the site by bringing the following:</source>
+        <source>Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. Below is a list of small practical things, which are needed regularly in the jungle:</source>
         <target>Niepraktyczne podarki nie są doprawdy dobre do wzięcia (zdjęcia, wazy itp). Dharma Sangha nie akceptuje prezentów. Jeśli nadal pragniesz się w jakiś sposób dołożyć, poniżej znajduje się lista małych praktycznych przedmiotów, na które jest regularnie zapotrzebowanie w dżungli, i są tutaj wielce cenione. Więc jeśli naprawdę chcesz wziąść coś ze swego kraju lub kupić to w Katmandu przed przybyciem na miejsce, możesz usprawnić tutejsze sprawy biorąc takie oto artykuły:</target>
       </trans-unit>
       
@@ -130,7 +139,7 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Kitchenware (bigger pots, which bear direct fire, cutting knives, any kitchen tools, not electrical, as there is no much electricity on the site, bigger plastic buckets and storing boxes to keep food safe from monkey-robbers, etc.)</source>
+        <source>Kitchenware (bigger pots, which bear direct fire, cutting knives, any non-electric kitchen tools, as there is not much electricity on the site, bigger plastic buckets and storing boxes to keep food safe from monkey-robbers, etc.)</source>
         <target>Sprzęty kuchenne (większe garnki, które znoszą bezpośredni ogień, tnące noże, jakiekolwiek kuchenne przyrządy, nie elektryczne, jako że nie ma dużo elektryczności na miejscu, większe plastykowe wiadra i pojemniki do przechowywania żywności, aby móc chronić żywność przed małpimi złodziejami, itp.)</target>
       </trans-unit>
       
@@ -140,22 +149,22 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>CANDLES – are a big necessity here (not perfumed ones).</source>
+        <source>CANDLES (not perfumed ones).</source>
         <target>ŚWIECE –  są tutaj dużą koniecznością (nie zapachowe).</target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>If you have a give-away sleeping bag or blankets, it is always good for someone or guests.</source>
+        <source>Sleeping bag or blankets.</source>
         <target>Jeśli masz zbędne śpiwory czy koce, zawsze się przydadzą dla kogoś czy gości.</target>
       </trans-unit>           
       
       <trans-unit id="1">
-        <source>Flashlights.</source>
+        <source>Flashlights (solar powered, if possible).</source>
         <target>Latarki.</target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Sealed medicine with English leaflets (especially for cold-related illnesses, cough, disinfectant preparations for wounds, bands and first aid stuff).</source>
+        <source>Sealed medicine with English leaflets (especially for colds, cough, wound disinfectants, bandages and first aid supplies).</source>
         <target>Nie otwierane wcześniej lekarstwa z angielskimi notatkami (zwłaszcza na choroby związane z przeziębieniem, kaszel, środki dezynfekujące na rany, bandarze i artykuły pierwszej pomocy).</target>
       </trans-unit>
       
@@ -183,7 +192,7 @@
         <source>Mosquito nets and natural sprays.</source>
         <target>Moskitiery i naturalne spraye.</target>
       </trans-unit>
--->
+
       <trans-unit id="1">
         <source>The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkhoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.</source>
         <target></target>

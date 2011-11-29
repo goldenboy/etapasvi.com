@@ -11,6 +11,11 @@
       </trans-unit>
   
       <trans-unit id="1">
+        <source>Is Dharma Sangha still not eating anything or just eating herbs from the jungle?</source>
+        <target>Дхарма Сангха всё ещё ничего не ест или питается только травами в джунглях?</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
         <source>Why is he meditating? What does he want to achieve?</source>
         <target>Почему он медитирует? Чего он хочет достичь?</target>
       </trans-unit>
@@ -50,12 +55,11 @@
         <target>Что означает Ямпа, Гинфен, Майтри, Майтрея, Метта?</target>
       </trans-unit>
       
-<!--
       <trans-unit id="1">
-        <source>I am going to Halkhoriya Jungle. I would like to bring some gifts, what is the best choice?</source>
-        <target>Я собираюсь в джунгли Халкория. Я хотел бы привезти подарки, что лучше взять?</target>
+        <source>I am going to Halkhoriya Jungle. What should I take with me? I also would like to bring some gifts, what is the best choice?</source>
+        <target>Я собираюсь в джунгли Халкория. Что мне взять с собой? Я хотел бы привезти подарки, что лучше выбрать?</target>
       </trans-unit>
- -->     
+    
       <trans-unit id="1">
         <source>How can I get to Halkhoriya Jungle?</source>
         <target>Как мне добраться до джунглей Халкория?</target>
@@ -67,6 +71,11 @@
       <trans-unit id="1">
         <source>He is meditating in Halkhoriya Jungle, Nepal's Bara District.</source>
         <target>Он медитирует в джунглях Халкория, Район Бара, Непал.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>He is not eating anything.</source>
+        <target>Он ничего не ест.</target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -118,11 +127,10 @@
         <source>Please go to</source>
         <target>Пожалуйста, перейдите на страницу</target>
       </trans-unit>
-      
-<!--      
+          
       <trans-unit id="1">
-        <source>Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. If you still wish to contribute somehow, below is a list of small practical things, which are needed regularly in the jungle, and are of great value here. So if you really want to take something from your country or buy it in Kathmandu before you come, you can make things smooth at the site by bringing the following:</source>
-        <target>Непрактичные подарки не рекомендуется приносить (картины, вазы и т.д.). Дхарма Сангха не принимает подарков. Если вы всё же хотите внести какой-то вклад, ниже приведён список практичных вещей, которые нужны в джунглях каждый день, и очень здесь ценятся. Так что, если вы действительно хотите привезти что-то из вашей страны или купить в Катманду перед приездом на место медитации, вы очень поможете, если принесёте следующее:</target>
+        <source>Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. Below is a list of small practical things, which are needed regularly in the jungle:</source>
+        <target>Непрактичные подарки не рекомендуется приносить (картины, вазы и т.д.). Дхарма Сангха не принимает подарков. Ниже приведён список практичных вещей, которые пригодятся в джунглях:</target>
       </trans-unit>
       
       <trans-unit id="1">
@@ -131,8 +139,8 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Kitchenware (bigger pots, which bear direct fire, cutting knives, any kitchen tools, not electrical, as there is no much electricity on the site, bigger plastic buckets and storing boxes to keep food safe from monkey-robbers, etc.)</source>
-        <target>Кухонные принадлежности (большие кастрюли, которые выдерживают прямое воздействие огня, ножи, любые кухонные приборы, неэлектрические, так как в джунглях с электричеством трудно, большие пластиковые ведра и коробки, чтобы прятать продукты питания от обезьян-воришек, и т.д.)</target>
+        <source>Kitchenware (bigger pots, which bear direct fire, cutting knives, any non-electric kitchen tools, as there is not much electricity on the site, bigger plastic buckets and storing boxes to keep food safe from monkey-robbers, etc.)</source>
+        <target>Кухонные принадлежности (большие кастрюли, которые выдерживают прямое воздействие огня, ножи, любые кухонные приборы, неэлектрические, так как в джунглях с электричеством трудно, большие пластиковые ведра и коробки, чтобы прятать продукты питания от обезьян-воришек и т.д.)</target>
       </trans-unit>
       
       <trans-unit id="1">
@@ -141,22 +149,22 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>CANDLES – are a big necessity here (not perfumed ones).</source>
-        <target>СВЕЧИ - являются большой необходимостью здесь (только не парфюмерные).</target>
+        <source>CANDLES (not perfumed ones).</source>
+        <target>СВЕЧИ (не ароматические).</target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>If you have a give-away sleeping bag or blankets, it is always good for someone or guests.</source>
-        <target>Если у вас есть лишний спальный мешок или одеяла, они всегда кому-нибудь пригодятся.</target>
+        <source>Sleeping bag or blankets.</source>
+        <target>Спальный мешок или одеяла.</target>
       </trans-unit>    
       
       <trans-unit id="1">
-        <source>Flashlights.</source>
-        <target>Фонарики.</target>
+        <source>Flashlights (solar powered, if possible).</source>
+        <target>Фонарики (по возможности, на солнечных батареях).</target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Sealed medicine with English leaflets (especially for cold-related illnesses, cough, disinfectant preparations for wounds, bands and first aid stuff).</source>
+        <source>Sealed medicine with English leaflets (especially for colds, cough, wound disinfectants, bandages and first aid supplies).</source>
         <target>Герметичные аптечки с инструкциями на английском (для лечения простудных заболеваний, кашля, дезинфицирующие средства для ран, бинты и средства первой медицинской помощи).</target>
       </trans-unit>
       
@@ -167,7 +175,7 @@
       
       <trans-unit id="1">
         <source>100% natural material clothes or mats for sitting on the ground.</source>
-        <target>Одежда из 100% натурального материала или коврики для того, чтобы сидеть на земле.</target>
+        <target>Одежда из 100% натурального материала или коврики, чтобы сидеть на земле.</target>
       </trans-unit>
       
       <trans-unit id="1">
@@ -184,7 +192,7 @@
         <source>Mosquito nets and natural sprays.</source>
         <target>Москитные сетки и натуральные аэрозоли.</target>
       </trans-unit>
---> 
+
       <trans-unit id="1">
         <source>The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkhoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.</source>
         <target>Сначала лучше добраться до Катманду. Затем от Катманду примерно за 6 часов вы сможете доехать до моста Парса на автобусе или личном автомобиле. Чтобы добраться от моста Парса до джунглей Халкория (около 6-7 км), вы сможете арендовать трактор, который принадлежит комитету Бодхи Шраван Дхарма Сангха, или любое другое 4-х колесное транспортное средство. Дорога представляет собой русло пересохшей реки, поэтому довольно ухабистая, в пути потрясёт.</target>

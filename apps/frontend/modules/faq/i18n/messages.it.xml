@@ -8,6 +8,11 @@
         <source>Where is Dharma Sangha now?</source>
         <target>Dove si trova adesso Dharma Sangha?</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Is Dharma Sangha still not eating anything or just eating herbs from the jungle?</source>
+        <target></target>
+      </trans-unit>
   
       <trans-unit id="1">
         <source>Why is he meditating? What does he want to achieve?</source>
@@ -49,12 +54,12 @@
         <target>Che cosa vogliono dire le parole Jyampa, Ginphen, maitrī, Maitreya e mettā ?</target>
       </trans-unit>
             
-<!--
+
       <trans-unit id="1">
-        <source>I am going to Halkhoriya Jungle. I would like to bring some gifts, what is the best choice?</source>
+        <source>I am going to Halkhoriya Jungle. What should I take with me? I also would like to bring some gifts, what is the best choice?</source>
         <target></target>
       </trans-unit>
--->     
+  
       <trans-unit id="1">
         <source>How can I get to Halkhoriya Jungle?</source>
         <target>Come posso raggiungere la giungla di Halkhoriya</target>
@@ -66,6 +71,11 @@
       <trans-unit id="1">
         <source>He is meditating in Halkhoriya Jungle, Nepal's Bara District.</source>
         <target>Si trova nella giungla di Halkhoriya, in Nepal, e medita e detta i Suoi insegnamenti a Khenpo.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>He is not eating anything.</source>
+        <target></target>
       </trans-unit>
 
       <trans-unit id="1">
@@ -118,9 +128,9 @@
         <target>Vai a</target>
       </trans-unit>
 
-<!--      
- <trans-unit id="1">
-        <source>Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. If you still wish to contribute somehow, below is a list of small practical things, which are needed regularly in the jungle, and are of great value here. So if you really want to take something from your country or buy it in Kathmandu before you come, you can make things smooth at the site by bringing the following:</source>
+     
+      <trans-unit id="1">
+        <source>Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. Below is a list of small practical things, which are needed regularly in the jungle:</source>
         <target></target>
       </trans-unit>
       
@@ -130,7 +140,7 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Kitchenware (bigger pots, which bear direct fire, cutting knives, any kitchen tools, not electrical, as there is no much electricity on the site, bigger plastic buckets and storing boxes to keep food safe from monkey-robbers, etc.)</source>
+        <source>Kitchenware (bigger pots, which bear direct fire, cutting knives, any non-electric kitchen tools, as there is not much electricity on the site, bigger plastic buckets and storing boxes to keep food safe from monkey-robbers, etc.)</source>
         <target></target>
       </trans-unit>
       
@@ -140,22 +150,22 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>CANDLES – are a big necessity here (not perfumed ones).</source>
+        <source>CANDLES (not perfumed ones).</source>
         <target></target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>If you have a give-away sleeping bag or blankets, it is always good for someone or guests.</source>
+        <source>Sleeping bag or blankets.</source>
         <target></target>
       </trans-unit>   
       
       <trans-unit id="1">
-        <source>Flashlights.</source>
+        <source>Flashlights (solar powered, if possible).</source>
         <target></target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Sealed medicine with English leaflets (especially for cold-related illnesses, cough, disinfectant preparations for wounds, bands and first aid stuff).</source>
+        <source>Sealed medicine with English leaflets (especially for colds, cough, wound disinfectants, bandages and first aid supplies).</source>
         <target></target>
       </trans-unit>
       
@@ -183,7 +193,7 @@
         <source>Mosquito nets and natural sprays.</source>
         <target></target>
       </trans-unit>
--->     
+     
       <trans-unit id="1">
         <source>The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkhoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.</source>
         <target>Per gli stranieri, la via più semplice è quella di atterrare a Kathnmandu; dalla capitale ci vogliono circa 6 ore di guida per arrivare a Parsa Bridge (con l’autobus o un veicolo privato). Da Parsa Bridge alla giungla di Halkhoriya (6-7 km circa), si può prendere un trattore, di Bodhi Shrawan Dharma Sangha, o un veicolo 4x4. La strada è il letto di un fiume in secca ed è accidentata e sassosa.</target>
