@@ -1,0 +1,1 @@
+<a href="<?php echo preg_replace("/([^#?]+)[#?]?.*/", '$1', sfContext::getInstance()->getRequest()->getUri()); ?>#print_version" target="_blank" id="print_version_trigger" class="page_tools_trigger">[<?php echo __('print version') ?>]</a>

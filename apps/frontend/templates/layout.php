@@ -29,6 +29,7 @@
         <?php include_component( 'text', 'offertranslation' ); ?>
         <?php include_component( 'revisionhistory', 'show' );  ?>        
         <?php include_partial( 'text/embed' );  ?>        
+        <?php include_partial( 'text/print_version' );  ?>        
 	</div>
     <div id="menu">
         <?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	

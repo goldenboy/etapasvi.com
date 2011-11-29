@@ -10,12 +10,28 @@ var last_quote_index  = -1;
 var window_size_hide_el  = 1000;
 
 $(document).ready(function() {
+    var embedded_or_print = false;
     // страница встроена
     if (top !== self) { 
         $("body").addClass("embedded");
+        embedded_or_print = true;
+    }
+    // версия для печати
+    var hash = window.location.hash;
+    if (hash.substring(1) == "print_version") {
+        $("body").addClass("print_version");
+        embedded_or_print = true;
+    }
+    if (embedded_or_print) {
         // сообщение о том, что страница встроена
-        var embed_source = window.location;
-        $("#content").append('<p class="small"><?php echo __("Source") ?>: <a href="' + embed_source + '">' + embed_source + '</a></p>');
+        // путь без параметров и хэша 
+
+        var embed_source = window.location + "";
+        //embed_source = embed_source.substring(0, embed_source.indexOf('#'));
+        //embed_source = embed_source.substring(0, embed_source.indexOf('?'));
+        embed_source = embed_source.replace(/([^#?]+)[#?]?.*/g, "$1");
+
+        $("#content").append('<p class="small"><?php echo __("Source") ?>: <br/><a href="' + embed_source + '">' + embed_source + '</a></p>');
         return;
     }
 
@@ -57,7 +73,8 @@ $(document).ready(function() {
 
     // перемещение Встроить
     $("#embed").insertAfter( "#offer_tr_ctr" );
-    // размещение ссылки Встроить наверх
+    // размещение ссылок
+    $("#print_version_trigger").insertAfter( "#offer_tr_trigger" ).show();
     $("#embed_trigger").insertAfter( "#offer_tr_trigger" );
     
     // текст в футере
