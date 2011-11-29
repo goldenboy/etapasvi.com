@@ -74,6 +74,10 @@
         <source>Stories</source>
         <target>Истории</target>
       </trans-unit>
+	  <trans-unit id="1">
+        <source>Projects</source>
+        <target>Проекты</target>
+      </trans-unit>
       <trans-unit id="1">
         <source>Encyclopedia</source>
         <target>Энциклопедия</target>

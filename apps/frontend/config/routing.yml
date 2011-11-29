@@ -64,13 +64,23 @@ books_show:
   param: { module: news, action: show }
   requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
   
-# books
+# stoires
 stories_index:
   url:   /:sf_culture/stories/index/*
   param: { module: news, action: index, type: stories }
   requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
 stories_show:
   url:   /:sf_culture/stories/show/*
+  param: { module: news, action: show }
+  requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
+
+# projects
+projects_index:
+  url:   /:sf_culture/projects/index/*
+  param: { module: news, action: index, type: projects }
+  requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
+projects_show:
+  url:   /:sf_culture/projects/show/*
   param: { module: news, action: show }
   requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn) }
   
