@@ -385,6 +385,11 @@
         <target>встроить</target>
       </trans-unit>
 
+      <trans-unit id="1">
+        <source>print version</source>
+        <target>версия для печати</target>
+      </trans-unit>
+
 <!-- 404 -->
       <trans-unit id="1">
         <source>Page Not Found or Not Translated</source>

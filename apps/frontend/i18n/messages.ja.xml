@@ -421,6 +421,11 @@
       </trans-unit>
 
       <trans-unit id="1">
+        <source>print version</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
         <source>Page Not Found or Not Translated</source>
         <target></target>
       </trans-unit>
