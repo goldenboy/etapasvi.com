@@ -124,7 +124,7 @@ function showQuotes()
         
         last_quote_index = quote_index;
         if (quote_list[ quote_index ]) {
-            quote_el.html( quote_list[ quote_index ] + '...' );
+            quote_el.html( quote_list[ quote_index ]);
         }        
         $("#quote_p_cont").fadeIn(600);
     }
