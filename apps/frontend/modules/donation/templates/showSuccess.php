@@ -5,11 +5,14 @@
 <h2 class="center"><?php echo __('Purpose') ?></h2>
 
 <?php 
+/*
 $news = NewsPeer::retrieveByPk(98);
 $news_link = $news->getUrl();
+*/
+$purpose_link = url_for('@projects_index');
 ?>
 <p class="center_text">
-<a href="<?php echo $news_link ?>" target="_blank"><?php echo $news_link ?></a>
+<a href="<?php echo $purpose_link ?>" target="_blank"><?php echo $purpose_link ?></a>
 </p>
 <?php /*
 <p>
