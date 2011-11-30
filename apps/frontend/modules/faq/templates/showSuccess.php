@@ -21,7 +21,7 @@
 
 <h2 id="where_is_he"><?php echo ++$counter; ?>. <?php echo __('Where is Dharma Sangha now?') ?></h2>
 <p>
-<?php echo __('He is meditating in Halkhoriya Jungle, Nepal\'s Bara District.') ?>
+<?php echo __('He is meditating in Halkhoriya Jungle, Bara District in Nepal.') ?>
 </p>
 <center>
 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?source=s_q&amp;f=q&amp;hl=ru&amp;geocode=&amp;q=Dharma+Sangha+Meditation+Site&amp;sll=37.0625,-95.677068&amp;sspn=52.152749,79.013672&amp;ie=UTF8&amp;hnear=&amp;radius=15000&amp;t=h&amp;cid=11992413955635615183&amp;oi=map_misc&amp;hq=Dharma+Sangha+Meditation+Sitel&amp;ll=27.202436,85.089074&amp;spn=0.001341,0.002411&amp;iwloc=A&amp;output=embed"></iframe>
