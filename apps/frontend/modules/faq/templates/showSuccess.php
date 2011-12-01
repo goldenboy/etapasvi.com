@@ -23,10 +23,11 @@
 <p>
 <?php echo __('He is meditating in Halkhoriya Jungle, Bara District in Nepal.') ?>
 </p>
+<?php /*
 <center>
 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?source=s_q&amp;f=q&amp;hl=ru&amp;geocode=&amp;q=Dharma+Sangha+Meditation+Site&amp;sll=37.0625,-95.677068&amp;sspn=52.152749,79.013672&amp;ie=UTF8&amp;hnear=&amp;radius=15000&amp;t=h&amp;cid=11992413955635615183&amp;oi=map_misc&amp;hq=Dharma+Sangha+Meditation+Sitel&amp;ll=27.202436,85.089074&amp;spn=0.001341,0.002411&amp;iwloc=A&amp;output=embed"></iframe>
-</center>
-
+</center> 
+*/ ?>
 <h2 id="is_he_eating"><?php echo ++$counter; ?>. <?php echo __('Is Dharma Sangha still not eating anything or just eating herbs from the jungle?') ?></h2>
 <p>
 <?php echo __('He is not eating anything.') ?>
@@ -71,14 +72,14 @@
 
 <h2 id="gifts"><?php echo ++$counter; ?>. <?php echo __('I am going to Halkhoriya Jungle. What should I take with me? I also would like to bring some gifts, what is the best choice?') ?></h2>
 <p>
-<?php echo __('Impractical gifts are not really good to bring (pictures, vases etc). Dharma Sangha does not accept gifts. Below is a list of small practical things, which are needed regularly in the jungle:') ?>
+<?php echo __('Impractical gifts are not really good to bring (pictures, vases, etc). Below is a list of small practical things, which are needed regularly in the jungle:') ?>
 </p>
 <ul>
     <li><?php echo __('Scissors.') ?></li>
-    <li><?php echo __('Kitchenware (bigger pots, which bear direct fire, cutting knives, any non-electric kitchen tools, as there is not much electricity on the site, bigger plastic buckets and storing boxes to keep food safe from monkey-robbers, etc.)') ?></li>
+    <li><?php echo __('Plastic buckets and boxes for storing food to keep it safe from monkey-robbers, etc.') ?></li>
     <li><?php echo __('Pens and copybooks.') ?></li>
     <li><?php echo __('CANDLES (not perfumed ones).') ?></li>
-    <li><?php echo __('Sleeping bag or blankets.') ?></li>
+    <li><?php echo __('Sleeping bag, blankets, mat/mattress.') ?></li>
     <li><?php echo __('Flashlights (solar powered, if possible).') ?></li>
     <li><?php echo __('Sealed medicine with English leaflets (especially for colds, cough, wound disinfectants, bandages and first aid supplies).') ?></li>
     <li><?php echo __('Lighters.') ?></li>
