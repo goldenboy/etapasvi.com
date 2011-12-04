@@ -78,8 +78,10 @@ class photoComponents extends sfComponents
   	}
   	//$this->forward404Unless( $this->photo );
     
-    // если фото не найдено или фото скрыто и у него есть альбом
-  	if (!$this->photo || ($this->photo->getPhotoalbum() && !$this->photo->getShow())) {
+  	$photoalbum = $this->photo->getPhotoalbum();
+  	
+    // если фото не найдено или фото скрыто и у него есть альбом    
+  	if (!$this->photo || ($photoalbum && !$photoalbum->getShow()) || ($photoalbum && !$this->photo->getShow())) {
   		//$action->redirect( $this->photo );
   		//sfActions::forward('photo', 'index');
   		//@sfActions::forward('default', 'error404');
@@ -110,8 +112,7 @@ class photoComponents extends sfComponents
   		// если у элемента нет Заголовка, а в URL передан title, редиректим
   		sfActions::redirect( $this->photo->getUrl() );
   	}
-  	
-  	$photoalbum = $this->photo->getPhotoalbum();
+  	  	
   	if (!empty($photoalbum)) {
   		$photoalbum_id = $photoalbum->getId();
   	}
