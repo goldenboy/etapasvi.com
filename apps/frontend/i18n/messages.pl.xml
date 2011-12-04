@@ -68,7 +68,7 @@
       </trans-unit>
 	  <trans-unit id="1">
         <source>Books</source>
-        <target></target>
+        <target>Książki</target>
       </trans-unit>
 	  <trans-unit id="1">
         <source>Stories</source>
@@ -112,7 +112,7 @@
       </trans-unit>
       <trans-unit id="1">
         <source>Feed</source>
-        <target></target>
+        <target>RSS</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Search</source>

@@ -95,7 +95,7 @@
       
 	  <trans-unit id="1">
         <source>Projects</source>
-        <target></target>
+        <target>プロジェクト</target>
       </trans-unit>
 
       <trans-unit id="1">

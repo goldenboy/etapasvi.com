@@ -6,97 +6,97 @@
 <!-- showSuccess -->
       <trans-unit id="1">
         <source>Purpose</source>
-        <target>Цель</target>
+        <target>Cel</target>
       </trans-unit>                 
       
       <trans-unit id="1">
         <source>Bank account</source>
-        <target>Банковский счёт</target>
+        <target>Konto bankowe</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Account Holder's Name</source>
-        <target>Имя владельца счёта</target>
+        <target>Nazwisko posiadacza konta</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Account Number</source>
-        <target>Номер счёта</target>
+        <target>Numer konta</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Bank Name</source>
-        <target>Название банка</target>
+        <target>Nazwa banku</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Branch</source>
-        <target>Отделение</target>
+        <target>Oddział</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Address</source>
-        <target>Адрес</target>
+        <target>Adres</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>street</source>
-        <target>улица</target>
+        <target>ulica</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>sity</source>
-        <target>город</target>
+        <target>miasto</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>district</source>
-        <target>район</target>
+        <target>okręg/region</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>country</source>
-        <target>страна</target>
+        <target>państwo</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>SWIFT (BIC)</source>
-        <target>SWIFT (БИК)</target>
+        <target>SWIFT (BIC)</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Phone</source>
-        <target>Телефон</target>
+        <target>Tel</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Fax</source>
-        <target>Факс</target>
+        <target>Fax</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Reports</source>
-        <target>Отчёты</target>
+        <target>Raporty</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Income / Expenses</source>
-        <target>Отчёт о полученных и потраченных средствах</target>
+        <target></target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Planned expenses</source>
-        <target>Запланированные расходы</target>
+        <target></target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Currency Converter</source>
-        <target>Конвертер валют</target>
+        <target></target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Donations received</source>
-        <target>Полученные пожертвования</target>
+        <target></target>
       </trans-unit>
 
 <!-- утф -->

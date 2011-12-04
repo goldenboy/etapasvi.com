@@ -111,7 +111,7 @@ $(document).ready(function(){
     <br/><strong><?php echo __('Account Number') ?>:</strong> 00700501204269
     <br/><strong><?php echo __('Bank Name') ?>:</strong> Everest Bank Limited       
     <br/><strong><?php echo __('Branch') ?>:</strong> Simara Branch        
-    <br/><strong><?php echo __('Address') ?>:</strong> Simara Chowk (street), Simara (sity), Bara (district), Nepal (country)
+    <br/><strong><?php echo __('Address') ?>:</strong> Simara Chowk (<?php echo __('street') ?>), Simara (<?php echo __('sity') ?>), Bara (<?php echo __('district') ?>), Nepal (<?php echo __('country') ?>)
     <br/><strong><?php echo __('SWIFT (BIC)') ?>:</strong> EVBLNPKA
     <br/><strong><?php echo __('Phone') ?>:</strong> 977-53-520506 
     <br/><strong><?php echo __('Fax') ?>:</strong> 977-53-520616 

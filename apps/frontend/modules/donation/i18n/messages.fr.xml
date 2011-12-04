@@ -40,6 +40,26 @@
       </trans-unit>
       
       <trans-unit id="1">
+        <source>street</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>sity</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>district</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>country</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
         <source>SWIFT (BIC)</source>
         <target></target>
       </trans-unit>
