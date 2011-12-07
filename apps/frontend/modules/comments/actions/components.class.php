@@ -10,9 +10,11 @@ class commentsComponents extends sfComponents
   	
   	// определение disqus_url
   	// http://bsds.etapasvi.com/issues/97
-  	if (empty($this->comments_page_url)) {
+  	if (empty($this->comments_page_url)) { 	  
   	  $this->comments_page_url = $request->getUri();
   	}
+  	
+  	$this->comments_page_url = CommentsPeer::getCommentsPageUrl($this->comments_page_url);
   	
   	$this->comments_identifier = CommentsPeer::getCommentsIdentifier();
   }

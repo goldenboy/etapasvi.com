@@ -305,6 +305,18 @@ class CommentsPeer extends BaseCommentsPeer
 		return $identifier;
 	}
 
-	
+	/**
+	 * Подготовка URL к выводу в disqus_url
+	 *
+	 * @return unknown
+	 */
+	public static function getCommentsPageUrl($comments_page_url = '') {
+  	  // убираем всё что после ?  	  	  
+  	  $comments_page_url = preg_replace("/\?.*/", "", $comments_page_url) ;
+  	  // подставляем домен  	  
+  	  $comments_page_url = preg_replace('/(http:\/\/)([^\/]+)(\/.*)/', '$1' . UserPeer::DOMAIN_NAME_MAIN . '$3', $comments_page_url);
+  	  
+  	  return $comments_page_url;
+	}
 	
 }
