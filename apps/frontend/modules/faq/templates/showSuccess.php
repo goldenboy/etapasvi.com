@@ -90,10 +90,10 @@
 
 <h2 id="get_to_halkhoriya"><?php echo ++$counter; ?>. <?php echo __('How can I get to Halkhoriya Jungle?') ?></h2>
 <ul>
-    <li><?php echo __('Make sure that Dharma Sangha will accept visitors on the day you are going to the jungle (every Tuesday and Saturday from 11 am to 1 pm for now) by checking updates on website and forum') ?> <a href="http://forum.etapasvi.com">http://forum.etapasvi.com</a>. <?php echo __('Keep in mind that it is not allowed to stay in Halkhoriya overnight and it is not advised to walk in jungle after 5pm, because wild animals are very active in the evening.') ?></li>
-    <li><?php echo __('Come to Kathmandu.') ?></li>
+    <li><?php echo __('Make sure that Dharma Sangha will accept visitors on the day you are going to the jungle (every Tuesday and Saturday from 11 am to 1 pm for now) by checking updates on website and forum') ?> <a href="http://forum.etapasvi.com">http://forum.etapasvi.com</a>. <?php echo __('Keep in mind that it is not allowed to stay in Halkhoriya overnight and it is not advised to walk in jungle after 5pm, because wild animals are very active in the evening. So you should plan to reach in the jungle early in the morning and leave before 5 pm.') ?></li>
+    <li><?php echo __('Come to Kathmandu (if you are not coming from India, or Bhutan, or China.)') ?></li>
     <li><?php echo __('Make arrangements with Committee (contact details will be available later).') ?></li>
-    <li><?php echo __('From Kathmandu you can take a jeep called a "Tata Sumo" (4 hours drive) in Bolkhu place or a bus (10-11 hours drive at night) to Simara.') ?></li>
+    <li><?php echo __('From Kathmandu you can take a jeep "Tata Sumo" (name of popular jeep in the area) in Bolkhu place. The journey by the jeep is a 4-hour drive from Kathmandu to Simara. The other alternative is travelling by bus up to Simara which is 10-11 hour drive at night.') ?></li>
     <li><?php echo __('From Simara you should get to Pilua Junction or Pasaha Bridge (Pilua village bus stop). You can take the 20 minute bus ride or take a "Tata Sumo"  (contact Lama Hotel, owned by Krishna meme, pronounced meh-meh meaning “respected grandfather”, though one need not be as old as a grandfather to earn this title).') ?></li>
     <li><?php echo __('From Pasaha Bridge to Halkhoriya Jungle (about 6-7 km) you can take a tractor which belongs to Committee. The road is a dry river bed and it is rough and bumpy ride.') ?></li>
 </ul>
