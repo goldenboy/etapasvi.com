@@ -176,12 +176,7 @@
       <trans-unit id="1">
         <source>100% natural material clothes or mats for sitting on the ground.</source>
         <target>Одежда из 100% натурального материала или коврики, чтобы сидеть на земле.</target>
-      </trans-unit>
-      
-      <trans-unit id="1">
-        <source>If anyone has a notebook or laptop, which he or she does not need, and which has a long-lasting battery, it would be also appreciated by the young monks, who are helping Khenpo to write and translate the texts of Dharma Sangha prayers and teachings, etc.</source>
-        <target>Если у кого-то есть ненужный ноутбук, который может долгое время работать без подзарядки, он бы очень пригодился молодым монахам, которые помогают Кхенпо записывать и переводить тексты молитв и учения Дхармы Сангхи.</target>
-      </trans-unit>
+      </trans-unit>      
       
       <trans-unit id="1">
         <source>Soap, shampoo, laundry soap.</source>
@@ -194,8 +189,38 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkhoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.</source>
-        <target>Сначала лучше добраться до Катманду. Затем от Катманду примерно за 6 часов вы сможете доехать до моста Парса на автобусе или личном автомобиле. Чтобы добраться от моста Парса до джунглей Халкория (около 6-7 км), вы сможете арендовать трактор, который принадлежит комитету Бодхи Шраван Дхарма Сангха, или любое другое 4-х колесное транспортное средство. Дорога представляет собой русло пересохшей реки, поэтому довольно ухабистая, в пути потрясёт.</target>
+        <source>Make sure that Dharma Sangha will accept visitors on the day you are going to the jungle (every Tuesday and Saturday from 11 am to 1 pm for now) by checking updates on website and forum</source>
+        <target>Убедитесь, что Дхарма Сангха будет принимать посетителей в тот день, когда вы собираетесь прибыть в джунгли (на данный момент каждый вторник и субботу с 11 утра до 1 дня), ознакомившись с информацией на сайте и форуме</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Keep in mind that it is not allowed to stay in Halkhoriya overnight and it is not advised to walk in jungle after 5pm, because wild animals are very active in the evening.</source>
+        <target>Имейте в виду, что в Халкории не разрешается оставаться на ночь, также не рекомендуется ходить в джунгли после 5 вечера, поскольку дикие животные очень активны в вечернее время.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Come to Kathmandu.</source>
+        <target>Доберитесь до Катманду.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Make arrangements with Committee (contact details will be available later).</source>
+        <target>Договоритесь о вашем визите с комитетом (контактная информация будет доступна позже).</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>From Kathmandu you can take a jeep called a "Tata Sumo" (4 hours drive) in Bolkhu place or a bus (10-11 hours drive at night) to Simara.</source>
+        <target>В Катманду Вы можете взять джип, называемый "Тата Сумо" (поездка занимает 4 часа), в Болкху или воспользоваться автобусом (10-11 часов езды ночью), чтобы доехать до города Симара.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>From Simara you should get to Pilua Junction or Pasaha Bridge (Pilua village bus stop). You can take the 20 minute bus ride or take a "Tata Sumo"  (contact Lama Hotel, owned by Krishna meme, pronounced meh-meh meaning “respected grandfather”, though one need not be as old as a grandfather to earn this title).</source>
+        <target>Из Симары Вам надо доехать до развязки в Пилуа или моста Пасаха (автобусная остановка в деревне Пилуа). Вы можете воспользоваться автобусом, поездка займёт 20 минут, или взять "Тата Сумо" (обратитесь в Лама Отель, принадлежащий Кришна меме, произносится как мех-мех, что означает "уважаемый дедушка", однако не обязательно быть дедушекой, чтобы заслужить это обращение).</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>From Pasaha Bridge to Halkhoriya Jungle (about 6-7 km) you can take a tractor which belongs to Committee. The road is a dry river bed and it is rough and bumpy ride.</source>
+        <target>От моста Пасаха до джунглей Халкория (около 6-7 км) Вы можете взять трактор, принадлежащий комитету. Дорога представляет собой русло пересохшей реки, поэтому довольно ухабистая, и в пути потрясёт.</target>
       </trans-unit>
       
       <trans-unit id="1">

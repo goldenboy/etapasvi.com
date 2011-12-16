@@ -176,12 +176,7 @@
       <trans-unit id="1">
         <source>100% natural material clothes or mats for sitting on the ground.</source>
         <target></target>
-      </trans-unit>
-      
-      <trans-unit id="1">
-        <source>If anyone has a notebook or laptop, which he or she does not need, and which has a long-lasting battery, it would be also appreciated by the young monks, who are helping Khenpo to write and translate the texts of Dharma Sangha prayers and teachings, etc.</source>
-        <target></target>
-      </trans-unit>
+      </trans-unit>      
       
       <trans-unit id="1">
         <source>Soap, shampoo, laundry soap.</source>
@@ -194,7 +189,37 @@
       </trans-unit>
   
       <trans-unit id="1">
-        <source>The most convenience place for foreigner is to land in Kathmandu. From Kathmandu it is about 6 hours drive to Parsa Bridge if you can take a bus or a private vehicle. From Parsa Bridge to Halkhoriya Jungle (about 6-7 km) you can take a tractor, which belongs to Bodhi Shrawan Dharma Sangha, or a 4-wheel vehicle to reach there. The road is a dry river bed and it is rough and bumpy ride.</source>
+        <source>Make sure that Dharma Sangha will accept visitors on the day you are going to the jungle (every Tuesday and Saturday from 11 am to 1 pm for now) by checking updates on website and forum</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Keep in mind that it is not allowed to stay in Halkhoriya overnight and it is not advised to walk in jungle after 5pm, because wild animals are very active in the evening.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Come to Kathmandu.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Make arrangements with Committee (contact details will be available later).</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>From Kathmandu you can take a jeep called a "Tata Sumo" (4 hours drive) in Bolkhu place or a bus (10-11 hours drive at night) to Simara.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>From Simara you should get to Pilua Junction or Pasaha Bridge (Pilua village bus stop). You can take the 20 minute bus ride or take a "Tata Sumo"  (contact Lama Hotel, owned by Krishna meme, pronounced meh-meh meaning “respected grandfather”, though one need not be as old as a grandfather to earn this title).</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>From Pasaha Bridge to Halkhoriya Jungle (about 6-7 km) you can take a tractor which belongs to Committee. The road is a dry river bed and it is rough and bumpy ride.</source>
         <target></target>
       </trans-unit>
 
