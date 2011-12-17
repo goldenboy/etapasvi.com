@@ -352,12 +352,12 @@ class sfSuperCache
   /**
    * Удаление файла кэша - i.html заменяется на d.html
    * Поддерживает маски.
-   * Также выполняет удаление кэша на бэкендах.
+   * Также выполняет удаление кэша на фронтендах и бэкендах.
    *
    * @param unknown_type $file_path
    * @return unknown
    */
-  public static function removeCacheFile($file_path, $all_backends = true)
+  public static function removeCacheFile($file_path, $all_servers = true)
   {
   	if (!$file_path) {
   	  return false;
@@ -366,7 +366,7 @@ class sfSuperCache
   	// если передан массив и кол-во элементов больше максимального  	
   	if (is_array($file_path) && count($file_path) > self::MAX_SUBCOMMANDS) {
   		for ($i = 0; $i<ceil(count($file_path)/self::MAX_SUBCOMMANDS); $i++) {
-  			self::removeCacheFile( array_slice($file_path, $i*self::MAX_SUBCOMMANDS, self::MAX_SUBCOMMANDS), $all_backends );
+  			self::removeCacheFile( array_slice($file_path, $i*self::MAX_SUBCOMMANDS, self::MAX_SUBCOMMANDS), $all_servers );
   		}
   		return;
   	}
@@ -399,15 +399,16 @@ class sfSuperCache
   	// При запуске удаления кэша в админке на основном бэкенде, 
   	// PHP инициирует удаление кэша на всех неосновных бэкендах. 
   	// При это удаление на неосновных бэкендах выполняется физически, а не переименование в d.html
-  	if ($all_backends) {
-	  	foreach (UserPeer::$backends as $backend) {
+  	if ($all_servers) {
+	  	foreach (UserPeer::getServers() as $server) {
 	  		// на самом себе не запускаем
-	  		if (empty($backend['web_dir']) || empty($backend['user']) 
-	  			|| empty($backend['host']) || $_SERVER['SERVER_ADDR'] == $backend['host']) {
+	  		if (empty($server['web_dir']) || empty($server['user']) 
+	  			|| empty($server['host']) || $_SERVER['SERVER_ADDR'] == $server['host']) {
 	  			continue;
 	  		}
-	  		$command_backend = "ssh {$backend['user']}@{$backend['host']} \"" . 
-	  							str_replace(sfConfig::get('sf_web_dir'), $backend['web_dir'], $remote_command) . "\"";		
+	  		$command_backend = "ssh {$server['user']}@{$server['host']} \"" . 
+	  							str_replace(sfConfig::get('sf_web_dir'), $server['web_dir'], $remote_command) . "\"";		
+	  							
 	  		pclose(popen($command_backend, "r"));
 	  	}
   	}

@@ -41,7 +41,7 @@ EOF;
   protected function execute($arguments = array(), $options = array())
   {
   	// получение списка вебов из Google Docs
-  	$webs_array = TextPeer::getGoogleDocAsArray(TextPeer::GOOGLE_DOC_SERVERS);
+  	$webs_array = TextPeer::getGoogleDocAsArray(TextPeer::GOOGLE_DOC_FRONTENDS);
   	foreach ($webs_array as $i=>$web_row) {
   		if ($i==0) {
   			continue;

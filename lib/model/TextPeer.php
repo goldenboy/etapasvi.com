@@ -13,7 +13,8 @@ class TextPeer extends BaseTextPeer
   const TRANSLATE_BETWEEN_DELIMITER = '---';
   
   // Google Docs
-  const GOOGLE_DOC_SERVERS = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdGV2QUJlMVQ2RG4yRzJ5NEZjOHZNdlE&single=true&gid=0&output=html';
+  const GOOGLE_DOC_FRONTENDS = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdGV2QUJlMVQ2RG4yRzJ5NEZjOHZNdlE&single=true&gid=0&output=csv';
+  const GOOGLE_DOC_BACKENDS  = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdHZDdlQtLVNnR0ZmcmQwRUk2X3JFeFE&single=true&gid=0&output=csv';
   const GOOGLE_DOC_OFFER_TRANSLATE = 'https://docs.google.com/spreadsheet/formResponse?formkey=dF91dUtXaFFIcEZwNUptc3Z3Z3N3MVE6MQ&amp;embedded=true&amp;ifq';
 
   public static function urlTranslit($text, $culture = '')

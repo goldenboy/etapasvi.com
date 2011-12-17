@@ -7,20 +7,25 @@
 
 class UserPeer extends BaseUserPeer
 {
-	// бэкенды (кроме данного)
-	static public $backends = array(
-	/*	array(
-			'host'	  => 'vaduz.dreamhost.com',
-			'user'	  => 'saynt2day20',
-			'web_dir' => '/home/saynt2day20/back2.etapasvi.com/www'
-		)*/
-		array(
-			'host'	  => '66.147.244.58',
-			'user'	  => 'etapasvi',
-			'web_dir' => '/home8/etapasvi/public_html/www'
-		)
-	);
 	
+//	 бэкенды (кроме данного)
+//	static public $backends = array(
+//	/*	array(
+//			'host'	  => 'vaduz.dreamhost.com',
+//			'user'	  => 'saynt2day20',
+//			'web_dir' => '/home/saynt2day20/back2.etapasvi.com/www'
+//		)*/
+//		array(
+//			'host'	  => '66.147.244.58',
+//			'user'	  => 'etapasvi',
+//			'web_dir' => '/home8/etapasvi/public_html/www'
+//		)
+//	);
+	
+	const SERVERS_ALL 		= 'all';
+	const SERVERS_FRONTENDS = 'frontends';
+	const SERVERS_BACKENDS  = 'backends';
+
 	// языки
 	static protected $cultures = array(
 	
@@ -1327,5 +1332,59 @@ class UserPeer extends BaseUserPeer
 	$routing->setRoutes($routes);
 	
 	return $routing;
+  }
+  
+  /**
+   * Получение информации о серверах.
+   *
+   */
+  public static function getServers($servers = self::SERVERS_ALL)
+  {
+  	// получение списка серверов из Google Docs
+  	$servers_array = array();
+  	switch ($servers) {
+  	  case self::SERVERS_ALL:
+  		$servers_array = TextPeer::getGoogleDocAsArray(TextPeer::GOOGLE_DOC_FRONTENDS);
+  		$servers_array = array_merge($servers_array, TextPeer::getGoogleDocAsArray(TextPeer::GOOGLE_DOC_BACKENDS));
+  		break;
+  	  case self::SERVERS_BACKENDS:
+  		$servers_array = TextPeer::getGoogleDocAsArray(TextPeer::GOOGLE_DOC_BACKENDS);
+  		break;
+  	  case self::SERVERS_FRONTENDS:
+  		$servers_array = TextPeer::getGoogleDocAsArray(TextPeer::GOOGLE_DOC_FRONTENDS);
+  		break;
+  	}
+
+  	// цикл по строкам
+  	foreach ($servers_array as $row) {
+
+  	  $servers_item = array(
+		'number'      => $row[0],
+		'host'	  	  => $row[1],
+		'owner'	  	  => $row[2],
+		'user'	      => $row[3],
+		'web_dir' 	  => $row[4],
+		'owner_email' => $row[5],
+		'hosting'     => $row[6],
+		'comment'     => $row[7]
+  	  );
+  	  
+  	  // названия полей и сервера, у которых не указн путь на сервере пропускаем
+  	  if (substr($servers_item['web_dir'], 0, 1) == '/') {
+  	  	// проверяем не добавлен ли ещё сервер с таким IP
+  	  	$server_added = false;
+  	  	foreach ($servers_list as $server_info) {
+  	  	  if ($server_info['host'] == $servers_item['host']) {
+  	  		$server_added = true;
+  	  		break;
+  	      }
+  	  	}
+  	  	if (!$server_added) {
+  	      $servers_list[] = $servers_item;
+  	  	}
+      }
+  	}
+
+  	return $servers_list;
   }
 }
