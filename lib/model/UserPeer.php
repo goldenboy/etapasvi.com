@@ -1366,11 +1366,12 @@ class UserPeer extends BaseUserPeer
 		'web_dir' 	  => $row[4],
 		'owner_email' => $row[5],
 		'hosting'     => $row[6],
-		'comment'     => $row[7]
+		'active'      => $row[7],
+		'comment'     => $row[8]
   	  );
   	  
   	  // названия полей и сервера, у которых не указн путь на сервере пропускаем
-  	  if (substr($servers_item['web_dir'], 0, 1) == '/') {
+  	  if ($servers_item['active'] == 1) {
   	  	// проверяем не добавлен ли ещё сервер с таким IP
   	  	$server_added = false;
   	  	foreach ($servers_list as $server_info) {
