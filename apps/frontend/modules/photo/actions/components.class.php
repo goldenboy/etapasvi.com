@@ -77,8 +77,9 @@ class photoComponents extends sfComponents
 	  $this->photo = PhotoPeer::retrieveByPk( $this->id );
   	}
   	//$this->forward404Unless( $this->photo );
-    
-  	$photoalbum = $this->photo->getPhotoalbum();
+    if ($this->photo) {
+  		$photoalbum = $this->photo->getPhotoalbum();
+    }
   	
     // если фото не найдено или фото скрыто и у него есть альбом    
   	if (!$this->photo || ($photoalbum && !$photoalbum->getShow()) || ($photoalbum && !$this->photo->getShow())) {
