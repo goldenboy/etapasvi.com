@@ -90,7 +90,7 @@ h1 {
     font-style:normal;
     font-size:16px;
     margin:20px auto 15px;
-    color:#8e8e9c;
+    color:#8E8E9C;
     font-weight:bold;
     padding:0;
     text-align:center;
@@ -158,19 +158,10 @@ acronym {
 
 a:link, 
 a:active { 
-	/*font-weight: bold; */
-	/*color: #7c68a6;*/
-	/*color: #7e709c;*/
-	/*color: #AB93D7;*/
-	color: #9075c2;
+	color: #00a3a3;
 	}
 a:visited { 
-	/*font-weight: bold; 	*/
-	/*color: #B7A5DF;*/
-	/*color: #9685BA;*/
-	/*color: #b1b0c2;*/
-	/*color: #52507a;*/
-	color: #9075c2;
+	color: #00a3a3;
 	}
 a:hover { 
 	/*font-weight: bold; */
@@ -299,7 +290,7 @@ code {
 
 #header #bubble_title {
     background:url("../i/interface_sprite.jpg") no-repeat scroll -697px -184px transparent;
-    color:#c5c3d3;
+    color:#00a3a3;
     cursor:pointer;
     display:block;
     float:right;
@@ -307,9 +298,7 @@ code {
     margin-top:73px;
     padding:0 0 0 24px;
     }
-#header #bubble_title { 
-	color: #9075C2;
-	}
+
 #header #bubble_title span {
 	color: #ADACBD;
     font:bold 8pt/23px georgia;
