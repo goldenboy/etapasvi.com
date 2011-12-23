@@ -180,19 +180,18 @@ a.no_decor {
 	text-decoration: none;
 	}
 a.files {
-    background:url("/i/interface_sprite.jpg") no-repeat scroll -689px -289px transparent;
+    background:url("/i/interface_sprite.jpg") no-repeat scroll -689px -292px transparent;
     height: 21px;
     width: 24px;
     padding:4px 0 4px 29px;
-    line-height:20px;
 }
 a.pdf, 
 a.PDF {
-    background-position: -689px -268px;
+    background-position: -689px -259px;
     }
 a.doc, 
 a.DOC {
-    background-position: -689px -247px;
+    background-position: -689px -228px;
     }
 
 /*ul {
