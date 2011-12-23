@@ -1,4 +1,3 @@
 <cross-domain-policy>
-	<allow-access-from domain="*"/>
-	<allow-access-from domain="*" to-ports="80"/>
+	<allow-access-from domain="etapasvi.com" to-ports="80"/>
 </cross-domain-policy>
