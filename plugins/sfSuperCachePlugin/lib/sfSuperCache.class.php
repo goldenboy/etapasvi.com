@@ -39,7 +39,7 @@ class sfSuperCache
   const REFRESH_CACHE_EXIT_STATUS_ERROR = 1;
       
   // максимальное количество подкоманд
-  const MAX_SUBCOMMANDS = 3000; 
+  const MAX_SUBCOMMANDS = 500; 
 
   // список процессов при обновлении кэша в многопоточном режиме
   private static $refersh_cache_process_list = array();
@@ -400,7 +400,7 @@ class sfSuperCache
   	// PHP инициирует удаление кэша на всех неосновных бэкендах. 
   	// При это удаление на неосновных бэкендах выполняется физически, а не переименование в d.html
   	if ($all_servers) {
-	  	foreach (UserPeer::getServers() as $server) {
+	  	foreach (UserPeer::getServers(UserPeer::SERVERS_FRONTENDS) as $server) {
 	  		// на самом себе не запускаем
 	  		if (empty($server['web_dir']) || empty($server['user']) 
 	  			|| empty($server['host']) || $_SERVER['SERVER_ADDR'] == $server['host']) {
