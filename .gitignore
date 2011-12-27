@@ -16,6 +16,7 @@
 /www/main_back.conf
 /www/backup_download
 /.htaccess
+remove_cache.sh
 
 # чтобы файлы не затирались на бэкендах
 /symfony

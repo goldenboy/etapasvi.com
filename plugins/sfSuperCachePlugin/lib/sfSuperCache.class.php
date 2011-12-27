@@ -39,7 +39,10 @@ class sfSuperCache
   const REFRESH_CACHE_EXIT_STATUS_ERROR = 1;
       
   // максимальное количество подкоманд
-  const MAX_SUBCOMMANDS = 500; 
+  const MAX_SUBCOMMANDS = 500;
+  
+  // имя файла, в который записываются команды на удаление кэша
+  const REMOVE_CACHE_FILE_NAME = 'remove_cache.sh'; 
 
   // список процессов при обновлении кэша в многопоточном режиме
   private static $refersh_cache_process_list = array();
@@ -47,7 +50,7 @@ class sfSuperCache
   private static $refersh_cache_queue        = array();
   
   // список команд на удаление кэша
-  private static $remove_file_path_list        = array();
+  private static $remove_file_path_list      = array();
   
     
   /**
@@ -388,9 +391,12 @@ class sfSuperCache
       	           " > /dev/null 2>&1 &";
   	}
 
+	// добавляем команду в файл 	  		
+	self::addCommandToRemoveCacheFile($command);  	
+  	
   	// страница браузера ждёт и скрипт обрывается через некоторое время
   	// запускаем обработку файлов отдельным процессом
-  	pclose(popen($command, "r"));
+  	//pclose(popen($command, "r"));
   	//shell_exec($command); 
   	//shell_exec('rm -rf ' . $file_path); 
   	
@@ -400,20 +406,39 @@ class sfSuperCache
   	// PHP инициирует удаление кэша на всех неосновных бэкендах. 
   	// При это удаление на неосновных бэкендах выполняется физически, а не переименование в d.html
   	if ($all_servers) {
-	  	foreach (UserPeer::getServers(UserPeer::SERVERS_FRONTENDS) as $server) {
+	  	foreach (UserPeer::getServers() as $server) {
 	  		// на самом себе не запускаем
 	  		if (empty($server['web_dir']) || empty($server['user']) 
-	  			|| empty($server['host']) || $_SERVER['SERVER_ADDR'] == $server['host']) {
+	  			|| $server['web_dir'] == sfConfig::get('sf_web_dir')) {
 	  			continue;
 	  		}
 	  		$command_backend = "ssh {$server['user']}@{$server['host']} \"" . 
-	  							str_replace(sfConfig::get('sf_web_dir'), $server['web_dir'], $remote_command) . "\"";		
-	  							
-	  		pclose(popen($command_backend, "r"));
+	  							str_replace(sfConfig::get('sf_web_dir'), $server['web_dir'], $remote_command) . "\" > /dev/null 2>&1 &";		
+	  		// добавляем команду в файл 	  		
+			self::addCommandToRemoveCacheFile($command_backend);
+	  		
+	  		//pclose(popen($command_backend, "r"));
 	  	}
   	}
   	
   	return true;
+  }
+  
+  /**
+   * Добавление команды на удаление кэша в файл
+   *
+   * @param unknown_type $command
+   */
+  public static function addCommandToRemoveCacheFile($command)
+  {
+    $remove_file_path = sfConfig::get('sf_root_dir') . '/' . self::REMOVE_CACHE_FILE_NAME;
+	try {
+	  $fh = fopen($remove_file_path, 'a') or die("Can't open file: " . $remove_file_path);			
+	  fwrite($fh, "\n" . $command);			
+	  fclose($fh);
+	} catch(Exception $e) {
+	  echo $e->getMessage();
+	}
   }
   
   /**
