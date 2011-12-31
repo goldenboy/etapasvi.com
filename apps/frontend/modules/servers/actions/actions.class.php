@@ -14,7 +14,7 @@ class serversActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
     $this->server_list = TextPeer::getGoogleDocAsArray( 
-      TextPeer::GOOGLE_DOC_SERVERS 
+      TextPeer::GOOGLE_DOC_FRONTENDS 
     );
   }
   
