@@ -33,6 +33,11 @@ Email: <input type="text" style="width:140px" name="email"/> &nbsp;<input type="
 </form>
 <br/>
 <hr class="dashed"/>
+<h2><?php echo __('Social Tools') ?></h2>
+<div class="st_container">
+<?php include_partial('social_tools/show'); ?>
+</div>
+<hr class="dashed"/>
 <h2><?php echo __('Recent Comments') ?></h2>
 <div class="dsq-widget"><script type="text/javascript" src="http://etapasvi.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=32&amp;excerpt_length=200"></script></div><?php /* <a href="http://disqus.com/">Powered by Disqus</a> */ ?>
 <p class="p1_no_top">

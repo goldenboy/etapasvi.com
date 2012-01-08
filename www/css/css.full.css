@@ -1215,11 +1215,19 @@ label.error {
     text-align:center;
     width:350px;
     }
-.cyrcle div {
+.cyrcle div,
+.st_container div {
     height:70px;
     }
-.cyrcle a span {
+.cyrcle a span,
+.st_container a span {
     display:none;
+    }
+.st_container br {
+    display:none;
+    }
+.st_container a {
+    margin: 0 3px 0 0;
     }
     
 /* cultures */
