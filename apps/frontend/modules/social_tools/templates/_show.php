@@ -20,7 +20,7 @@
         <a href="http://etapasvi.livejournal.com/" target="_blank" title="<?php echo __('Live Journal') ?>" class="social_livejournal"><span><?php echo __('Live Journal') ?></span></a> */ ?>
     <?php endif ?>
 
-    <a href="http://www.facebook.com/group.php?gid=113379818705184" target="_blank" title="<?php echo __('Facebook') ?>" class="social_facebook"><span><?php echo __('Facebook') ?></span></a> 
+    <a href="http://www.facebook.com/groups/dharmasangha/" target="_blank" title="<?php echo __('Facebook') ?>" class="social_facebook"><span><?php echo __('Facebook') ?></span></a> 
 
     <?php if ($sf_user->getCulture() == 'hu'): ?>
         <a href="http://groups.google.com/group/buddhafiu/" target="_blank" title="<?php echo __('Google') ?>" class="social_google"><span><?php echo __('Google') ?></span></a>
