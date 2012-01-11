@@ -176,36 +176,24 @@
 </noscript>
 
 </div>
-
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter11795683 = new Ya.Metrika({id:11795683, enableAll: true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/11795683" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <script type="text/javascript">
 <?php /*include_component( 'text', 'js' ); */ ?>
 var _gaq = _gaq || [];
 _gaq.push(
     ['_setAccount', 'UA-4047144-3'],
     ['_setDomainName', 'www.etapasvi.com'],
-    ["_addOrganic", "mail.ru", "q"],
-    ["_addOrganic","rambler.ru", "words"],
-    ["_addOrganic","nigma.ru", "s"],
-    ["_addOrganic","blogs.yandex.ru", "text"],
-    ["_addOrganic","webalta.ru", "q"],
-    ["_addOrganic","aport.ru", "r"],
-    ["_addOrganic","akavita.by", "z"],
-    ["_addOrganic","meta.ua", "q"],
-    ["_addOrganic","bigmir.net", "q"],
-    ["_addOrganic","tut.by", "query"],
-    ["_addOrganic","all.by", "query"],
-    ["_addOrganic","i.ua", "q"],
-    ["_addOrganic","online.ua", "q"],
-    ["_addOrganic","a.ua", "s"],
-    ["_addOrganic","ukr.net", "search_query"],
-    ["_addOrganic","search.com.ua", "q"],
-    ["_addOrganic","search.ua", "query"],
-    ["_addOrganic","poisk.ru", "text"],
-    ["_addOrganic","km.ru", "sq"],
-    ["_addOrganic","liveinternet.ru", "ask"],
-    ["_addOrganic","gogo.ru", "q"],
-    ["_addOrganic","gde.ru", "keywords"],
-    ["_addOrganic","quintura.ru", "request"],
     ['_trackPageview'],
     ['_trackPageLoadTime']
 );
