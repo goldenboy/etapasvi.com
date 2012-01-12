@@ -72,11 +72,11 @@
       </trans-unit>
 	  <trans-unit id="1">
         <source>Stories</source>
-        <target></target>
+        <target>Racconti</target>
       </trans-unit>
 	  <trans-unit id="1">
         <source>Projects</source>
-        <target></target>
+        <target>Progetti</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Encyclopedia</source>
