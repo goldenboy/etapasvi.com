@@ -1,5 +1,5 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
- 
-  RewriteRule ^(.*)$ http://etapasvi.ucoz.com/uploads/all/$1 [QSA,L]  
-</IfModule>
+#<IfModule mod_rewrite.c>
+#  RewriteEngine On
+# 
+#  RewriteRule ^(.*)$ http://etapasvi.ucoz.com/uploads/all/$1 [QSA,L]  
+#</IfModule>
