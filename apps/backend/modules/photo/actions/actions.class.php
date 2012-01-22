@@ -246,7 +246,14 @@ class photoActions extends autophotoActions
       $this->photo->setAuthorI18nEs($photo['author_i18n_es']);
     }
     
-    $this->photo->save();
+    // заключаем в try...catch, чтобы не было 500-й ошибки при сохранении фото с повторным ORDER в альбоме
+    try {
+    	$this->photo->save();
+  	} catch (Exception $e) {
+    	$this->getRequest()->setError('edit', $e->getMessage());
+    	echo $e->getMessage();
+    	exit();
+    }    
     
 	if (!$this->getRequest()->hasErrors() && $this->getRequest()->getFileSize('photo[img]'))
     {
