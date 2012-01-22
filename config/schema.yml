@@ -79,6 +79,8 @@ propel:
     link:             { type: varchar(255) }
     _indexes:
       updated_at:     [updated_at]
+    _uniques:
+      photoalbum_order:     [photoalbum_id, order]
 
   photo_i18n:
     updated_at_extra: ~

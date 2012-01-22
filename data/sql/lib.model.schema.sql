@@ -183,8 +183,8 @@ CREATE TABLE `photo`
 	`thumb_path` VARCHAR(255),
 	`link` VARCHAR(255),
 	PRIMARY KEY (`id`),
+	UNIQUE KEY `photoalbum_order` (`photoalbum_id`, `order`),
 	KEY `updated_at`(`updated_at`),
-	INDEX `photo_FI_1` (`photoalbum_id`),
 	CONSTRAINT `photo_FK_1`
 		FOREIGN KEY (`photoalbum_id`)
 		REFERENCES `photoalbum` (`id`)
