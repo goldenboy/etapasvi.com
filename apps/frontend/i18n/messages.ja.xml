@@ -4,17 +4,17 @@
     <body>
 
       <trans-unit id="1">
-        <source>A message of peace to our world today</source>
+        <source>A message of peace, an appeal to the world</source>
         <target>今日の世界への平和のメッセージです</target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>A message</source>
+        <source>A message of peace</source>
         <target>今日の世界へ</target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>of peace to our world today</source>
+        <source>An appeal to the world</source>
         <target>の平和のメッセージです</target>
       </trans-unit>
       

@@ -3,15 +3,15 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
       <trans-unit id="1">
-        <source>A message of peace to our world today</source>
+        <source>A message of peace, an appeal to the world</source>
         <target>Un messaggio di Pace al nostro mondo, oggi</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>A message</source>
+        <source>A message of peace</source>
         <target>Un messaggio</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>of peace to our world today</source>
+        <source>An appeal to the world</source>
         <target>di Pace al nostro mondo, oggi</target>
       </trans-unit>
       <trans-unit id="1">

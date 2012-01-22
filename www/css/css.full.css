@@ -85,16 +85,20 @@ p,
 
 
 h1 {
-	background:none;
-    font-family:georgia;
-    font-style:normal;
-    font-size:16px;
-    margin:20px auto 15px;
-    color:#8E8E9C;
-    font-weight:bold;
-    padding:0;
-    text-align:center;
-    width:500px;
+    background: none repeat scroll 0 0 transparent;
+    color: #B57978;
+    font-family: Monotype Corsiva;
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 23px;
+    margin: 19px auto 7px;
+    padding: 0;
+    text-align: center;
+    width: 500px;
+    }
+#body_main h1 {
+    margin: 11px auto 7px;
     }
 h1.m_bottom {
 	margin:20px auto 31px;

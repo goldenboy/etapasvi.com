@@ -3,16 +3,16 @@
   <file original="global" source-language="en" datatype="plaintext">
     <body>
       <trans-unit id="1">
-        <source>A message of peace to our world today</source>
-        <target>Послание мира нашему сегодняшнему миру</target>
+        <source>A message of peace, an appeal to the world</source>
+        <target>Послание мира, призыв к миру во всём мире</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>A message</source>
+        <source>A message of peace</source>
         <target>Послание мира</target>
       </trans-unit>
       <trans-unit id="1">
-        <source>of peace to our world today</source>
-        <target>нашему сегодняшнему миру</target>
+        <source>An appeal to the world</source>
+        <target>Призыв к миру во всём мире</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Om Namo Guru Buddha Gyani</source>
