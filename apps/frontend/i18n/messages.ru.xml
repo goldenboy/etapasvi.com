@@ -4,7 +4,7 @@
     <body>
       <trans-unit id="1">
         <source>A message of peace, an appeal to the world</source>
-        <target>Послание мира, призыв к миру во всём мире</target>
+        <target>Послание мира нашему сегодняшнему миру</target>
       </trans-unit>
       <trans-unit id="1">
         <source>A message of peace</source>
@@ -12,7 +12,7 @@
       </trans-unit>
       <trans-unit id="1">
         <source>An appeal to the world</source>
-        <target>Призыв к миру во всём мире</target>
+        <target>нашему сегодняшнему миру</target>
       </trans-unit>
       <trans-unit id="1">
         <source>Om Namo Guru Buddha Gyani</source>
