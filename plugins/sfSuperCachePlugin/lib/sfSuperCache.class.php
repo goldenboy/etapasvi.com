@@ -1275,7 +1275,7 @@ class sfSuperCache
 	  foreach ($matches[1] as $i=>$match) {
 	    $replacement[$match] = $matches[2][$i] . $cur_parh_without_lang;
 	  }		  
-	  $cache_file = strtr($cache_file, $replacement);
+	  //$cache_file = strtr($cache_file, $replacement);
 	}
 	
 	// footer
@@ -1284,7 +1284,7 @@ class sfSuperCache
 	  // мобильная версия
 	  preg_match_all(
   	    "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 	
-	    preg_replace("/.*(Copyright &copy;.*?_trackPageview).*/ism", "$1", $cache_file), 
+	    preg_replace("/.*(&copy; 2009.*?_trackPageview).*/ism", "$1", $cache_file), 
 	    $matches
 	  );
 	} else {
@@ -1300,7 +1300,10 @@ class sfSuperCache
 	  foreach ($matches[1] as $i=>$match) {
 	    $replacement[$match] = $matches[2][$i] . $cur_path;
 	  }		  
-	  $cache_file = strtr($cache_file, $replacement);
+	}
+	
+	if (!empty($replacement)) {
+		$cache_file = strtr($cache_file, $replacement);
 	}
 	
 	// Если мы находимся, например, в новостях http://www.etapasvi.com/ru/news/9555888, то title будет "Новости"
