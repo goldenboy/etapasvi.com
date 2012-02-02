@@ -29,7 +29,10 @@ class sfSuperCache
   
   // строка запуска PHP
   //const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3 -c /etc/php53/php.ini';
-  const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3';    
+  const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3';  
+    
+  // путь к программе для переименования файлов
+  const RENAME_COMMAND = '/home/saynt2day20/opt/rename';    
   
   // количество потоков для обновления кэша при обновлении кэша в многопоточном режиме
   const REFRESH_CACHE_THREADS_COUNT = 5;    
@@ -377,7 +380,7 @@ class sfSuperCache
   	// find /home/saynt2day20/etapasvi.com/www/cache/www.etapasvi.com/ru/photo/64* -name '*i.html' -type f -exec rename 's/i.html/d.html/' {} \;
   	if (is_array($file_path)) {
       	$command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
-      	           "' -type f -exec rename -f 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
+      	           "' -type f -exec " . self::RENAME_COMMAND . " -f 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
       	           " > /dev/null 2>&1 &";
       	$remote_command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
       	           "' -type f -exec rm -f {} \;".
@@ -396,7 +399,7 @@ class sfSuperCache
   	
   	// страница браузера ждёт и скрипт обрывается через некоторое время
   	// запускаем обработку файлов отдельным процессом
-  	//pclose(popen($command, "r"));
+  	pclose(popen($command, "r"));
   	//shell_exec($command); 
   	//shell_exec('rm -rf ' . $file_path); 
   	
