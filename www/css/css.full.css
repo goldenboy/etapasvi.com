@@ -829,6 +829,16 @@ input[type="radio"] {
 .slide_down:after  { 
     content: " ▼";    
     }
+.to_top {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    padding-top: 14px;
+    text-align: right;
+    }
+.clear {
+    clear: both;
+    }
 
 /* comments*/
 .dsq-widget img.dsq-widget-avatar  {
@@ -1071,14 +1081,32 @@ img.newsitem_img {
     vertical-align: middle;
     }
 .embed_photo {
-	margin: 0 auto;
-	width:244px;
+    color: #888888;
+    max-width: 150px;
+    padding: 8px 10px;
+    text-align: center;
+    width: auto;
 	}
-.embed_photo,
-.embed_photo p {
-	color:#888888;
-	margin-top:5px;
-	text-align:center;
+.embed_photo_left {
+    border: 1px solid #DDDDDD;
+    float: left;
+    margin: 3px 10px 1px 0;    
+	}
+.extra_space_left {
+    margin-right: 26px;
+	}
+.embed_photo_right {
+    border: 1px solid #DDDDDD;
+    float: right;
+    margin: 3px 0 1px 10px;
+	}
+.extra_space_right {
+    margin-left: 26px;
+	}
+.embed_photo_center {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
 	}
 .photo_incl {
 	float:left;
@@ -1236,16 +1264,20 @@ label.error {
     
 /* cultures */
 .hieroglyphic #content *,
-.hieroglyphic * {
+.hieroglyphic *,
+.hieroglyphic #footer *,
+.hieroglyphic #footer  {
 	font-size:14px;
     font-family: "宋体";
     line-height:21px;
 	}
 .large_text #content *,
-.large_text * {
+.large_text *,
+.large_text #footer *,
+.large_text #footer {
 	font-size:18px;
 	} 
-    
+
 /* related */
 .related {
 	overflow: hidden;

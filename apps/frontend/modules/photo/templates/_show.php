@@ -9,15 +9,27 @@
 	<?php if ($photo->getImg()): ?>
 		<?php if (!empty($short) && $short): ?>
 			<?php if (!empty($embed)): ?>
-			<div class="embed_photo">
-			<?php endif ?>
-			<a href="<?php echo $photo->getUrl(); ?>" title="<?php echo $title; ?>">
-				<img src="<?php echo $photo->getThumbUrl(); ?>" alt=""/></a>
-            <?php if ($title): ?>
-                <br/><span class="light"><?php echo $title; ?></span>
-            <?php endif ?>	
-			<?php if (!empty($embed)): ?>
-			</div>
+                <?php if (empty($align)): ?>
+                    <?php // $embed_photo_align поочерёдно выравнивает фото по левому и правому краю ?>
+                    <?php if (PhotoPeer::$embed_photo_align != 'left') : ?>
+                        <?php $align = 'left'; ?>
+                    <?php else: ?>
+                        <?php $align = 'right'; ?>
+                    <?php endif ?>
+                <?php endif ?>
+                <?php PhotoPeer::$embed_photo_align = $align; ?>               
+                <div class="embed_photo embed_photo_<?php echo $align; ?><?php if ($in_list): ?> extra_space_<?php echo $align; ?><?php endif ?>">
+                <?php endif ?>
+                <a href="<?php echo $photo->getUrl(); ?>" title="<?php echo $title; ?>">
+                    <img src="<?php echo $photo->getThumbUrl(); ?>" alt=""/></a>
+                <?php if ($title): ?>
+                    <br/><span class="light"><?php echo $title; ?></span>
+                <?php endif ?>
+                <?php if ($show_body && $photo->getBody($sf_user->getCulture(), true)): ?>
+                    <br/><br/><?php echo html_entity_decode($photo->getBodyPrepared()); ?>
+                <?php endif ?>
+                <?php if (!empty($embed)): ?>
+                </div>
 			<?php endif ?>
 		<?php else: ?>				
 

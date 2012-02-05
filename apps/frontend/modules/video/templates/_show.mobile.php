@@ -27,7 +27,7 @@
 			<h2 class="title"><?php echo $title; ?></h2>
 			
 			<p class="center_text p1_no_bottom">
-                <?php include_partial('video/embed', array('code'=>$code)); ?>
+                <?php include_partial('video/code', array('code'=>$code)); ?>
 			</p>
 
 		<?php endif ?>

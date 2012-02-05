@@ -9,10 +9,23 @@ class photoComponents extends sfComponents
     $this->embed = true;
   }
   
+  /**
+   * Вывод превьюшного изображения
+   *
+   */
   public function executePreview()
   {
   	$this->photo = PhotoPeer::retrieveByPk( $this->id );
   }
+  
+  /**
+   * Встраивание полной картинки
+   *
+   */
+  public function executeEmbed()
+  {
+  	$this->photo = PhotoPeer::retrieveByPk( $this->id );
+  }  
 
   public function executeLatest()
   {

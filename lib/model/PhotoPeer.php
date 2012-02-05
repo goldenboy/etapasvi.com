@@ -45,6 +45,8 @@ class PhotoPeer extends BasePhotoPeer
   
   public static $remote_storage;
   
+  public static $embed_photo_align;
+  
   /**
    * Проверка есть ли контент на определённом языке
    *
