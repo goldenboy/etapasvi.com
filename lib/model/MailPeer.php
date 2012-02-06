@@ -3,7 +3,7 @@
 class MailPeer extends BaseMailPeer
 {
 	// отправка почты
-	const MAIL_ADDRESS     = 'etapasvi@gmail.com';
+	const MAIL_ADDRESS     = 'info@etapasvi.com';
 	//const MAIL_USERNAME    = 'etapasvi@gmail.com'; // Gmail
 	const MAIL_USERNAME    = 'admin@etapasvi.com'; // Gmail
 	//const MAIL_PASSWORD    = ''; //Gmail
