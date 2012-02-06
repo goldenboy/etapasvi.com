@@ -86,7 +86,8 @@ class UserPeer extends BaseUserPeer
 		              'hieroglyphic'  		 => true,
 		              //'mail_id' 			 => '77a5eb7cd2',
 		              'comments_category_id' => 686578,
-		              'feedburner_loc' 		 => 'ja_JP'
+		              'feedburner_loc' 		 => 'ja_JP',
+//		              'direction_rtl' 		 => true
 		),
 		'es' => array('name'    			 => 'Español',
 		              'iso'     			 => 'es',
@@ -842,6 +843,24 @@ class UserPeer extends BaseUserPeer
 	    }
 	    if (!empty(self::$cultures[ $culture ][ 'large_text' ])) {
 			return (bool)self::$cultures[ $culture ][ 'large_text' ];
+	    } else {
+	    	return false;
+	    }
+	}
+	
+	/**
+	 * Направление текста - справа налево.
+	 *
+	 * @param unknown_type $culture
+	 * @return unknown
+	 */
+	public static function isCultureDirectionRtl( $culture = '' )
+	{
+	    if (!$culture) {
+	        $culture = sfContext::getInstance()->getUser()->getCulture();
+	    }
+	    if (!empty(self::$cultures[ $culture ][ 'direction_rtl' ])) {
+			return (bool)self::$cultures[ $culture ][ 'direction_rtl' ];
 	    } else {
 	    	return false;
 	    }

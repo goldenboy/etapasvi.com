@@ -3,6 +3,26 @@
 	padding:0;
 }
 
+/* cultures */
+.hieroglyphic #content *,
+.hieroglyphic *,
+.hieroglyphic #footer *,
+.hieroglyphic #footer  {
+	font-size:14px;
+    font-family: "宋体";
+    line-height:21px;
+	}
+.large_text #content *,
+.large_text *,
+.large_text #footer *,
+.large_text #footer {
+	font-size:18px;
+	}
+.direction_rtl #content *,
+.direction_rtl * {
+	direction: rtl;
+	}
+
 /* menu items */
 #body_main #mi_main a,
 #body_news #mi_news a,
@@ -106,12 +126,16 @@ h1.m_bottom {
 
 
 h2 { 
+    clear: both;
 	color:#988F5E;
 	font-family:georgia,sans-serif;
 	font-size:8pt;
 	font-weight:bold;
 	margin:20px 0 10px;
     text-align: left;
+	}
+.direction_rtl h2 { 
+    text-align: right;
 	}
 
 h3 { 
@@ -198,11 +222,6 @@ a.DOC {
     background-position: -689px -228px;
     }
 
-/*ul {
-	list-style-position:outside;
-	list-style-type: disc;
-	margin:0;
-	}*/
 ul {
 	list-style-position:outside;
 	list-style-type: disc;
@@ -213,11 +232,19 @@ ul {
 ul.simple {
 	list-style-type: none;
 	}
-ul.padded{
+ul.padded {
 	list-style-position:outside;
 	padding-left:16px;
 	}
-
+.direction_rtl ul {	
+	margin-left:0;
+	margin-right:15px;
+    text-align: right;
+	}
+.direction_rtl ul.padded {
+	padding-left:0;
+	padding-right:16px;
+	}
 
 ol.in_text {
 	list-style-position:outside;
@@ -236,7 +263,6 @@ ol.in_text li {
 	margin-left:15px;
 	text-align: justify;
 	}
-
 ol {
 	list-style-position:inside;
 	font-family: Verdana; 
@@ -245,6 +271,29 @@ ol.padded {
 	list-style-position:outside;
 	padding-left:22px;
 	}
+
+.direction_rtl ol.in_text {	
+	margin-left:0;
+	margin-right:22px;
+	}
+.direction_rtl ol.contents {
+    text-align: right;
+    }    
+/* IE */
+.direction_rtl ol.in_text li {
+	//margin-left: 0;
+	//margin-right: 7px;
+	}
+.direction_rtl .padded {	
+	margin-left:0;
+	margin-right:15px;
+    text-align: right;
+	}
+.direction_rtl ol.padded {
+	padding-left:0;
+	padding-right:22px;
+	}
+
 dt {
 	font-weight:bold;
 	margin-top: 10px;
@@ -252,6 +301,12 @@ dt {
 dd {
 	padding-left:30px;
 	}
+.direction_rtl dd {
+	padding-left:0;
+	padding-right:30px;
+	}
+
+
 table {
 	border-collapse: collapse;
 	}
@@ -428,6 +483,9 @@ p.p2{
     }
 #share .s_item {
     margin: 9px 0;
+    }
+.direction_rtl #share * {
+    direction: ltr;
     }
 #fb-root {
     display: none;
@@ -844,6 +902,13 @@ input[type="radio"] {
 .dsq-widget img.dsq-widget-avatar  {
     padding: 4px 11px 3px 0;
     }
+.direction_rtl .dsq-widget * {
+    text-align: right;
+    }
+.direction_rtl  img.dsq-widget-avatar {
+    float: right;
+    padding: 4px 0 3px 11px;
+    }
 html #disqus_thread {
     margin-bottom:0;
     }
@@ -986,6 +1051,10 @@ img.newsitem_img {
 	position:relative;
 	top:5px;
 	}
+.direction_rtl img.newsitem_img {
+	float:right;
+	margin:0 0 10px 15px;
+	}
 .newsfull {
 	padding:10px 10px 20px;
 	}
@@ -1014,8 +1083,17 @@ img.newsitem_img {
     margin-bottom:0;
     margin-top:10px;
     }
+.direction_rtl .toolbar {
+    clear: both;
+    position: inherit;
+    right: auto;
+    }
+
 .short_body .spacer {
     height:17px;
+    }
+.direction_rtl   .short_body .spacer {
+    height:6px;
     }
 .read_more_icon,
 .comments_icon {
@@ -1108,6 +1186,24 @@ img.newsitem_img {
     width: 100%;
     max-width: 100%;
 	}
+
+.direction_rtl .embed_photo_left {
+    float: right;
+    margin: 3px 0 1px 10px;
+	}
+.direction_rtl .extra_space_left {
+    margin-right: 0;
+    margin-left: 26px;
+	}
+.direction_rtl .embed_photo_right {
+    float: left;
+    margin: 3px 10px 1px 0;
+	}
+.direction_rtl .extra_space_right {
+    margin-left: 0;
+    margin-right: 26px;
+	}
+
 .photo_incl {
 	float:left;
 	margin: 7px 21px 0 8px;
@@ -1148,6 +1244,9 @@ img.newsitem_img {
 	line-height:16px;
 	padding:0 10px;
 	text-align: left;
+	}
+.direction_rtl .video_list p {
+	text-align: right;
 	}
 .video_list p a {
 	text-decoration:none;
@@ -1261,22 +1360,6 @@ label.error {
 .st_container a {
     margin: 0 3px 0 0;
     }
-    
-/* cultures */
-.hieroglyphic #content *,
-.hieroglyphic *,
-.hieroglyphic #footer *,
-.hieroglyphic #footer  {
-	font-size:14px;
-    font-family: "宋体";
-    line-height:21px;
-	}
-.large_text #content *,
-.large_text *,
-.large_text #footer *,
-.large_text #footer {
-	font-size:18px;
-	} 
 
 /* related */
 .related {
@@ -1291,7 +1374,10 @@ label.error {
     text-align:left;
     vertical-align:top;
     width:154px;
-	}   
+	}
+.direction_rtl .related div {
+    float: right;
+	}
 .related img,
 .related p {
     padding: 0;

@@ -3,6 +3,21 @@
 	padding:0;
 }
 
+/* cultures */
+.hieroglyphic #content * {
+    font-family: "宋体";
+	font-size:1em;
+    line-height:21px;
+	}
+.large_text #content *,
+.large_text * {
+	font-size:1.05em;
+	}
+.direction_rtl #content *,
+.direction_rtl * {
+	direction: rtl;
+	}
+
 /* menu items */
 #mi_main,
 #mi_main a {
@@ -17,17 +32,20 @@ body {
 
 h1 {
     background: none repeat scroll 0 0 transparent;
-    color: #8E8E9C;
-    font-family: georgia;
+    color: #B57978;
+    font-family: Monotype Corsiva;
     font-size: 1.3em;
     font-style: normal;
     font-weight: bold;
     margin: 0 0 7px;
     text-align: left;
 	}
-
+.direction_rtl h1 {
+    text-align: right;
+    }
 
 h2 { 
+    clear: both;
 	color: #988F5E;
     font-family: georgia,sans-serif;
     font-size: 1.1em;
@@ -35,6 +53,10 @@ h2 {
     margin: 20px 0 10px;
     text-align: left;
 	}
+.direction_rtl h2 { 
+    text-align: right;
+	}
+
 h3 { 
 	color: #555753;
     font-family: georgia;
@@ -168,6 +190,9 @@ table {
     margin-top: 6px;
 	text-align: left;
 	}
+.direction_rtl #footer { 	
+	text-align: right;
+	}
 #share {
     border-bottom: 1px solid #ADACBD;
     margin-top: 8px;
@@ -179,6 +204,9 @@ table {
     float: left;    
     padding: 0 3px;
     text-align: left;
+    }
+.direction_rtl .share_item {
+    float: right;    
     }
 .share_item_facebook {
     border: medium none;
@@ -498,6 +526,10 @@ img.newsitem_img {
 	position:relative;
 	top:5px;
 	}
+.direction_rtl img.newsitem_img {
+	float:right;
+	margin:0 0 10px 15px;
+	}
 .newsfull {
     margin-bottom: 12px;
     }
@@ -514,6 +546,9 @@ img.newsitem_img {
 	}
 .short_body p {
     clear: left;
+    }
+.direction_rtl .short_body p {
+    clear: right;
     }
 .read_more_icon ,
 .comments_icon  {
@@ -682,18 +717,7 @@ img.newsitem_img {
     }
 .cyrcle br {
     display: none;
-    }
-    
-/* cultures */
-.hieroglyphic #content * {
-    font-family: "宋体";
-	font-size:1em;
-    line-height:21px;
-	}
-.large_text #content *,
-.large_text * {
-	font-size:1.05em;
-	} 
+    }   
     
 /* related */
 .related {
@@ -720,3 +744,6 @@ img.newsitem_img {
     padding: 0;
     text-align: left;
 }
+.direction_rtl .related div {
+    float: right;
+	}
