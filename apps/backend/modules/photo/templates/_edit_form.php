@@ -66,7 +66,13 @@
   'include_remove' => true,
 )); echo $value ? $value : '&nbsp;' ?>
 
-	<input type="checkbox" value="1" id="photo_watermark" name="photo[watermark]" checked="checked"> watermark
+	<input type="checkbox" value="1" id="photo_watermark" name="photo[watermark]" checked="checked"> watermark 
+    <select name="photo[watermark_position]">
+        <option value="bottom-right">bottom-right</option>
+        <option value="bottom-left">bottom-left</option>
+        <option value="top-left">top-left</option>
+        <option value="top-right">top-right</option>
+    </select>
     </div>
 <?php else: ?>
 <a href="<?php echo html_entity_decode($url_to_login_page)?>" target="_blank">Authorize in Picasa</a>

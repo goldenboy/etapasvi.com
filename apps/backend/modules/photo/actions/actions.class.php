@@ -285,6 +285,12 @@ class photoActions extends autophotoActions
       // сохраняем исходное изображение (без каптчи)
       PhotoPeer::moveFile($tmp_full, sfConfig::get('sf_upload_dir')."/".PhotoPeer::ORIGINAL_DIR."/".$fileName.$ext);
       
+      if ($photo['watermark_position']) {
+		$watermark_position = $photo['watermark_position'];
+	  } else {
+		$watermark_position = 'bottom-right';
+	  }
+      
       try {
 		// thumb      
         $img = new sfImage( $tmp_full );
@@ -298,8 +304,8 @@ class photoActions extends autophotoActions
         	$img->thumbnail(PhotoPeer::IMG_PREVIEW_WIDTH, PhotoPeer::IMG_PREVIEW_HEIGHT, 'scale');  
         }                
         // водяной знак
-        if (isset($photo['watermark'])) {	
-	      $img->overlay(new sfImage(sfConfig::get('sf_web_dir') . '/i/watermark.png'), 'bottom-right');
+        if (isset($photo['watermark'])) {
+	      $img->overlay(new sfImage(sfConfig::get('sf_web_dir') . '/i/watermark.png'), $watermark_position);
         }
         $img->setQuality( PhotoPeer::PREVIEW_QUALITY );        
         $img->saveAs( $tmp_preview );         
@@ -308,7 +314,7 @@ class photoActions extends autophotoActions
         if (isset($photo['watermark'])) {
           // водяной знак
 	      $img = new sfImage( $tmp_full );	
-	      $img->overlay(new sfImage(sfConfig::get('sf_web_dir') . '/i/watermark.png'), 'bottom-right');
+	      $img->overlay(new sfImage(sfConfig::get('sf_web_dir') . '/i/watermark.png'), $watermark_position);
           $img->setQuality( PhotoPeer::FULL_QUALITY );
 	      $img->save();
         }
