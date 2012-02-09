@@ -20,16 +20,16 @@
 		<li><a href="#dharma"><?php echo __('Dharma') ?></a></li>
 		<li><a href="#sangha"><?php echo __('Sangha') ?></a></li>
 		<li><a href="#refuge"><?php echo __('Refuge') ?></a></li>
-		<li><a href="#schools_and_traditions_of_buddhism"><?php echo __('Schools and traditions of Buddhism') ?></a></li>
-		<li><a href="#mahayana"><?php echo __('Mahayana ("Great Vehicle")') ?></a></li>
-		<li><a href="#tibetan_buddhism"><?php echo __('Tibetan Buddhism') ?></a></li>
+<?php /*		<li><a href="#schools_and_traditions_of_buddhism"><?php echo __('Schools and traditions of Buddhism') ?></a></li> */ ?>
+<?php /*		<li><a href="#mahayana"><?php echo __('Mahayana ("Great Vehicle")') ?></a></li> */ ?>
+<?php /*		<li><a href="#tibetan_buddhism"><?php echo __('Tibetan Buddhism') ?></a></li> 
 		<li><a href="#vajrayana"><?php echo __('Vajrayana') ?></a></li>
-		<li><a href="#the_sakya_tradition"><?php echo __('The Sakya Tradition in Tibetan Buddhism') ?></a></li>
+		<li><a href="#the_sakya_tradition"><?php echo __('The Sakya Tradition in Tibetan Buddhism') ?></a></li> */ ?>
+        <li><a href="#tummo"><?php echo __('Tummo') ?></a></li>
 	</ol>
 </td>
 <td>
-	<ol class="in_text" start="22">		
-		<li><a href="#tummo"><?php echo __('Tummo') ?></a></li>
+	<ol class="in_text" start="18">				
 		<li><a href="#bodhisattva"><?php echo __('Bodhisattva') ?></a></li>
 		<li><a href="#six_paramitas"><?php echo __('Six paramitas (perfections)') ?></a></li>
 		<li><a href="#dhyana"><?php echo __('Dhyana') ?></a></li>
@@ -38,12 +38,12 @@
 		<li><a href="#maitreya"><?php echo __('Maitreya') ?></a></li>
 		<li><a href="#asanga"><?php echo __('Asanga') ?></a></li>
 		<li><a href="#the_future_coming_of_maitreya"><?php echo __('The future coming of Maitreya') ?></a></li>
-		<li><a href="#buddha_nature"><?php echo __('Buddha-nature') ?></a></li>
+<?php /*		<li><a href="#buddha_nature"><?php echo __('Buddha-nature') ?></a></li> */ ?>
 		<li><a href="#atman"><?php echo __('Atman (Buddhism)') ?></a></li>
 		<li><a href="#atman_hinduism"><?php echo __('Atman (Hinduism)') ?></a></li>
 		<li><a href="#anatman"><?php echo __('Anatta (Anatman, "not-self")') ?></a></li>
 		<li><a href="#paramatman"><?php echo __('Paramatman (Supersoul)') ?></a></li>
-		<li><a href="#god_in_buddhism"><?php echo __('God in Buddhism') ?></a></li>
+<?php /*		<li><a href="#god_in_buddhism"><?php echo __('God in Buddhism') ?></a></li> */ ?>
 		<li><a href="#bhagavan"><?php echo __('Bhagavan') ?></a></li>
 		<li><a href="#gyani"><?php echo __('Gyani') ?></a></li>
 		<li><a href="#kali_yuga"><?php echo __('Kali Yuga') ?></a></li>
@@ -259,6 +259,7 @@
 	<li><?php echo __('To refrain from intoxicants which lead to loss of mindfulness.') ?></li>
 </ol>
 <a href="#up" class="to_top"><?php echo __('Go to top') ?></a>
+<?php /*
 <h2 id="schools_and_traditions_of_buddhism"><?php echo ++$counter; ?>. <?php echo __('Schools and traditions of Buddhism') ?></h2>
 <?php echo __('Buddhists generally classify themselves as either Theravada or Mahayana. An alternative scheme used by some scholars divides Buddhism into the following three traditions or geographical or cultural areas: Theravada, East Asian Buddhism and Tibetan Buddhism.') ?> 
 <br/><br/>
@@ -275,7 +276,9 @@
 </ul>
 <br/>
 <?php echo __('There is Third Vehicle, Vajrayana, which is practiced in Tibetan Buddhism.') ?>
+
 <a href="#up" class="to_top"><?php echo __('Go to top') ?></a>
+
 <h2 id="mahayana"><?php echo ++$counter; ?>. <?php echo __('Mahayana ("Great Vehicle")') ?></h2>
 <?php echo __('Mahayana is one of two major divisions of Buddhism, along with Theravada.') ?> 
 <br/><br/>
@@ -307,7 +310,9 @@
 </ul>
 <br/>
 <?php echo __('In the course of its history, Mahayana spread throughout Inner Asia and East Asia, where it took on two principal forms: Tibetan Buddhism and East Asian Buddhism. The late stage of Mahayana Buddhism in India are largely Vajrayana schools.') ?> 
+
 <a href="#up" class="to_top"><?php echo __('Go to top') ?></a>
+
 <h2 id="tibetan_buddhism"><?php echo ++$counter; ?>. <?php echo __('Tibetan Buddhism') ?></h2>
 <?php include_component('photo', 'show', array('id'=>108)); ?>
 <?php echo __('Tibetan Buddhism is the body of Buddhist religious doctrine and institutions. It is practiced in Tibet, Nepal, Bhutan, India, Mongolia, Northeast China and parts of Russia (Kalmykia, Buryatia, and Tuva).') ?> 
@@ -346,6 +351,7 @@
 <?php include_component('photo', 'show', array('id'=>112)); ?>
 <?php echo __('The teaching and practice that is the essence of the Sakya tradition is called “Lamdre” or “The Path and its Fruit.” Fundamentally, the philosophical viewpoint expressed in “The Path and its Fruit,” is the “Non differentiation of Samsara and Nirvana.” According to this view, an individual cannot attain Nirvana or cyclic existence, because the mind is the root of both Samara and Nirvana. When the mind is obscured, it takes the form of Samsara and when the mind is freed of obstructions, it takes the form of Nirvana. The ultimate reality is that a person must strive to realize this fundamental inseparability through mediation.') ?> 
 <a href="#up" class="to_top"><?php echo __('Go to top') ?></a>
+*/ ?>
 <h2 id="tummo"><?php echo ++$counter; ?>. <?php echo __('Tummo') ?></h2>
 <?php echo __('Tummo (Tibetan: gtum-mo, also spelled Tumo, or Tum-mo; Sanskrit: caṇḍālī) is a Tibetan word, literally meaning fierce, inner fire. The Sanskrit terms caṇḍālī and kuṇḍalinī are clearly etymologically related.') ?> 
 <br/><br/>
@@ -492,6 +498,7 @@
 
 <?php echo __('Many Buddhist texts contain variations of the legend that Mahakasyapa, a disciple of Gautama Buddha who took over the leadership of the Sangha after Gautama\'s passing, is in deep meditation inside a mountain awaiting the coming of Maitreya so that he can pass him Gautama\'s robe. Gautama Buddha instructed four of his disciples, Mahakasyapa, Kundopadhaniya, Pindola, and Rahula, not to enter nirvana, but instead to remain in the world until Maitreya appears: "You must wait for my Law to come to its end, then you may enter nirvana." Sakyamuni particularly singles out Mahakasyapa.') ?> 
 <a href="#up" class="to_top"><?php echo __('Go to top') ?></a>
+<?php /*
 <h2 id="buddha_nature"><?php echo ++$counter; ?>. <?php echo __('Buddha-nature') ?></h2>
 <?php echo __('Within many schools of Mahayana Buddhism, the Buddha-nature or Buddha Principle (Buddha-dhātu), is taught to be a truly real and pure, but internally hidden immortal potency or element within the mind of all beings, for awakening and becoming a Buddha. Other terms for the Buddha-nature are Tathāgatagarbha and Sugatagarbha.') ?> 
 <br/><br/>
@@ -500,6 +507,7 @@
 <br/><br/>
 <?php echo __('Buddha-nature is completely rejected by Theravada Buddhism due to the fact that the concept comes from later Mahayana sutras which it sees as inauthentic.') ?> 
 <a href="#up" class="to_top"><?php echo __('Go to top') ?></a>
+*/ ?>
 <h2 id="atman"><?php echo ++$counter; ?>. <?php echo __('Atman (Buddhism)') ?></h2>
 <?php echo __('Atman or Atta (Pāli) literally means "self", but is sometimes translated as "soul" or "ego". In Buddhism, the belief in the existence of an unchanging ātman is the prime consequence of ignorance, which is itself the cause of all misery and the foundation of samsāra.') ?> 
 <br/><br/>
@@ -591,6 +599,7 @@
 <br/><br/>
 <?php echo __('Paramatman is one of the aspects of Brahman. The Upanishads compare Atman and Paramatman to two birds sitting like friends on the branch of a tree (body). The Atman eats its fruits (karma), and the Paramatman only observes the Atman as a witness of His friend\'s actions.') ?> 
 <a href="#up" class="to_top"><?php echo __('Go to top') ?></a>
+<?php /*
 <h2 id="god_in_buddhism"><?php echo ++$counter; ?>. <?php echo __('God in Buddhism') ?></h2>
 <?php echo __('A common misconception among non-Buddhists is that the Buddha is the Buddhist counterpart to "God." Buddhism however, is in general non-theistic, in the sense of not teaching the existence of a supreme creator god or depending on any supreme being for enlightenment. The Buddha is a guide and teacher who points the way to enlightenment, however the struggle for enlightenment is one\'s own. The commonly accepted definition of the term "God" is of a being who rules and created the universe. The Buddha of the early texts gives arguments refuting the existence of such a being.') ?> 
 <br/><br/>
@@ -600,6 +609,7 @@
 <br/><br/>
 <?php echo __('Buddhism is neither atheistical nor theistical, and Buddhism is not a mixture of both either. Because the Buddhist teachings do not dwell in either one, thus it is called the Middle Way.') ?> 
 <a href="#up" class="to_top"><?php echo __('Go to top') ?></a>
+*/ ?>
 <h2 id="bhagavan"><?php echo ++$counter; ?>. <?php echo __('Bhagavan') ?></h2>
 <?php echo __('Bhagavan (Bhagwan or Bhagawan) in Hindi and Sanskrit means one who is clad in bhagwa i.e. light orange colour, that represents gyan or knowledge. Thus Bhagwān means one who wears gyan or knowledge.') ?> 
 <br/><br/>
