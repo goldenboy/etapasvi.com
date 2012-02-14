@@ -32,7 +32,7 @@ body {
 
 h1 {
     background: none repeat scroll 0 0 transparent;
-    color: #B57978;
+    color: #a46362;
     font-family: Monotype Corsiva;
     font-size: 1.3em;
     font-style: normal;
@@ -46,9 +46,9 @@ h1 {
 
 h2 { 
     clear: both;
-	color: #988F5E;
-    font-family: georgia,sans-serif;
-    font-size: 1.1em;
+	color: #867d4a;
+    font-family: Georgia,"Times New Roman",serif;
+    font-size: 1.2em;
     font-weight: bold;
     margin: 20px 0 10px;
     text-align: left;
@@ -58,11 +58,10 @@ h2 {
 	}
 
 h3 { 
-	color: #555753;
+    color: #2c2c2c;
     font-family: georgia;
-    font-size: 1em;
+    font-size: 0.9em;
     font-size-adjust: none;
-    font-style: italic;
     font-variant: normal;
     font-weight: bold;
     line-height: 16pt;
@@ -79,10 +78,12 @@ h4 {
 	line-height:16pt;
     text-align: left;
 	}
-
 acronym {
 	border-bottom:1px dotted #555753;
 	}
+strong {
+    color: #2c2c2c;
+    }
 
 
 a:link, 
@@ -106,13 +107,23 @@ ul {
 	margin-left: 15px;
 	text-align: justify;
 	}
+ul.contents {
+    list-style-type: none;
+    margin-left:0;
+    }
+ul.simple {
+	list-style-type: none;
+	}
 ol {
 	list-style-position:inside;
 	font-family: Verdana; 
 	}
+ol.contents {
+    text-align: left;
+    }
 dt {
     font-weight: bold;
-}
+    }
 
 table {
 	border-collapse: collapse;
@@ -534,7 +545,7 @@ img.newsitem_img {
     margin-bottom: 12px;
     }
 .newsfull .title {
-	color:#988F5E;
+	color:#867d4a;
 	}
 .newsfull img.news_img {
 	margin-bottom: 10px;
@@ -589,7 +600,7 @@ img.newsitem_img {
 	vertical-align: middle;
 	}
 .photofull .title {
-	color:#988F5E;
+	color:#867d4a;
 	text-align: center;
 	margin-bottom:5px;
 	}
@@ -642,7 +653,7 @@ img.newsitem_img {
 	padding:0 0 4px;
 	}
 .video .title {
-	color:#988F5E;
+	color:#867d4a;
 	}
 
 /* search */
@@ -655,7 +666,7 @@ img.newsitem_img {
 	text-align: left;
 	background:none;
 	padding:0;
-	font-family: georgia,sans-serif;
+	font-family: Georgia,"Times New Roman",serif;
 	font-size-adjust:none;
 	font-stretch:normal;
 	font-style:normal;
@@ -666,11 +677,11 @@ img.newsitem_img {
 
 .title a {
 	/*color:#ADACBD;*/
-	color:#988F5E;
+	color:#867d4a;
 	text-decoration: none;
 	}
 .title a:visited { 
-	color:#988F5E;
+	color:#867d4a;
 	}
 
 
