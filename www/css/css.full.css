@@ -69,7 +69,7 @@ body.embedded #bubble_quote, body.print_version #bubble_quote,
 body.embedded #bubble_sound, body.print_version #bubble_sound,
 body.embedded h2#top,
 body.embedded h1,
-body.embedded #offer_tr_ctr, body.print_version #offer_tr_ctr,
+body.embedded #page_toolbar, body.print_version #page_toolbar,
 body.embedded #disqus_thread, body.print_version #disqus_thread,
 body.embedded #dsq-brlink, body.print_version #dsq-brlink,
 body.embedded .back, body.print_version .back 
@@ -113,13 +113,15 @@ h1 {
     font-weight: normal;
     letter-spacing: 1px;
     line-height: 23px;
-    margin: 19px auto 7px;
+    margin: 19px auto 30px;
     padding: 0;
     text-align: center;
     width: 500px;
     }
 #body_main h1 {
-    margin: 11px auto 7px;
+    margin-top: 11px;
+    margin-left: auto;
+    margin-right: auto;
     }
 h1.m_bottom {
 	margin:20px auto 31px;
@@ -142,6 +144,7 @@ h2.underlined {
 	}
 
 h3 { 
+    clear: both;
 	color:#2c2c2c;
 	font-family:georgia;
 	font-size:8pt;
@@ -1664,19 +1667,60 @@ label.error {
     }
 
 /* page tools */
-#offer_tr_ctr {
+#page_toolbar {
     text-align: center;
-    margin-bottom: 7px;
+    margin-top: -23px;
+    margin-bottom: 3px;
     }
+
+.pt_btn {
+    background-image: url("/i/interface_sprite.jpg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    }
+.pt_btn_offer_tr {
+    background-position: -438px -278px;
+    }
+.pt_btn_disabled .pt_btn_offer_tr {
+    background-position: -438px -294px;
+    }
+.pt_btn_embed {
+    background-position: -454px -278px;
+    }
+.pt_btn_disabled .pt_btn_embed {
+    background-position: -454px -294px;
+    }
+.pt_btn_print_version {
+    background-position: -406px -278px;
+    }
+.pt_btn_disabled .pt_btn_print_version {
+    background-position: -406px -294px;
+    }
+.pt_btn_revision_history {
+    background-position: -422px -278px;
+    }
+.pt_btn_disabled .pt_btn_revision_history {
+    background-position: -422px -294px;
+    }
+.pt_btn_pdf {
+    background-position: -390px -278px;
+    }
+.pt_btn_disabled .pt_btn_pdf {
+    background-position: -390px -294px;
+    }
+
 #offer_tr,
 #offer_tr_success,
 #offer_tr_iframe_id,
 #offer_tr_iframe,
 #offer_tr_loader,
 #revhistory ,
-#print_version_trigger ,
 #embed  {
     display: none;
+    text-align: left;
     }
 #offer_tr_loader {
     text-align:center;
@@ -1690,6 +1734,7 @@ label.error {
     }
 #revhistory form {
     padding: 13px 10px;
+    text-align: left;
     }
 #embed textarea {
     height: 54px;

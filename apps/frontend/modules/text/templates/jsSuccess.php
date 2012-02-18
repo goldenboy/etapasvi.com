@@ -1,7 +1,371 @@
 <?php include_component('text', 'js') ?>
 
 // main
-var ap_stopAll=function(){};var audioplayer=false;var offer_tr_clone="";var rotate_quotes_interval=15000;var last_quote_index=-1;var window_size_hide_el=1000;$(document).ready(function(){var d=false;if(top!==self){$("body").addClass("embedded");d=true}var c=window.location.hash;if(c.substring(1)=="print_version"){$("body").addClass("print_version");d=true}if(d){var a=window.location+"";a=a.replace(/([^#?]+)[#?]?.*/g,"$1");$("#content").append('<p class="small"><?php echo __("Source") ?>: <br/><a href="'+a+'">'+a+"</a></p>");return}onWindowResize();if(quote_list){showQuotes()}if(audio_list){var b=Math.floor(Math.random()*(audio_list.length));if(audio_list[b]){$("#mp3").attr("title",audio_title_list[b]);$("#mp3 span").html(audio_list[b])}}$("#mp3").jmp3({filepath:"http://k002.kiwi6.com/uploads/hotlink/",width:24});$("span.lang_selector").colorbox({inline:true,href:"#lang_box",opacity:"0.5",transition:"none"});$("#offer_tr_ctr").insertAfter("#content h1:eq(0)");$("#revhistory").insertAfter("#offer_tr_ctr");$("#revhistory_trigger").insertAfter("#offer_tr_trigger");$("#embed").insertAfter("#offer_tr_ctr");$("#print_version_trigger").insertAfter("#offer_tr_trigger").show();$("#embed_trigger").insertAfter("#offer_tr_trigger");if(footer_text){$("#lang_plain").after(footer_text)}$(window).resize(function(){onWindowResize()})});function onWindowResize(){if($(window).width()<window_size_hide_el){$("#wrapper").css("margin","0 auto 0 70px")}else{$("#wrapper").css("margin","0 auto")}}function hideQuotes(){$("#quote_p_cont").fadeOut(600);setTimeout(showQuotes,700)}function showQuotes(){if($(window).width()>window_size_hide_el){var b=$("#bubble_quote p:first");var a=Math.floor(Math.random()*(quote_list.length));if(a==last_quote_index){if(a>1){a=a-1}else{a=quote_list.length-1}}last_quote_index=a;if(quote_list[a]){b.html(quote_list[a])}$("#quote_p_cont").fadeIn(600)}setTimeout(hideQuotes,rotate_quotes_interval)}function showOriginal(){if($("#elOriginal").is(":hidden")){$("#elOriginal").slideDown("slow")}else{$("#elOriginal").slideUp("slow")}}function showAudioBody(b){var a="#elAudioBody"+b;if($(a).is(":hidden")){$(a).slideDown("slow")}else{$(a).slideUp("slow")}}function preparePhotoContent(){$(document).ready(function(){var a;$("#photo_content a.photo_content_link").each(function(b){a=$(this).attr("href");a="javascript: loadPhotoContent('"+a+"'); void(0)";$(this).attr("href",a)})})}var global_photo_href;function loadPhotoContent(c,b,d){if(!c||$("#photo_loader").is("visible")){return}if(!d){d=c.replace(/http:\/\/([^\/]+).*/,"$1")}if(!d){return}c=c.replace(/http:\/\/[^\/]+\//,"");if(b){$("#photo_content .photofull").html('<p id="photo_loader" class="hidden center_text" ><img src="/i/loader.gif" /></p>');$("#disqus_thread").hide();$("#photo_content div.social").remove();$("#photo_content .dsq-brlink").remove()}global_photo_href="http://"+d+"/"+c;var a="/"+c.replace(/\/photo\//,"/photo/content/");$("#photo_loader").show();$("#offer_tr").hide();offer_tr_clone=$("#offer_tr_ctr").clone();$("#photo_content").load(a,function(g,e,h){if(e=="error"){$("#photo_loader").hide();if(global_photo_href){window.location=global_photo_href;return}}else{offer_tr_clone.insertAfter("#content h1:eq(0)");setUrl(global_photo_href,c);var f=$("#photo_content_title").text()+" - eTapasvi.com";if(f){document.title=f}$("#offer_tr_uri").val(global_photo_href);$("#offer_tr_id").val(getElementIdFromUrl(global_photo_href))}})}function getElementIdFromUrl(b){var a=b.match(/^[^\d]+(\d+).*$/);return a[1]}function loadPhotoContentFromHash(b){var a=$.address.value();if(a&&a.substr(0,2)=="/!"){loadPhotoContent(a.substr(2,a.length),true,b)}}function setUrl(a,b){try{if(history&&history.pushState){history.pushState({isMine:true},"title",a)}else{$.address.value("/!"+b)}setUrlMobile(a);setUrlLangList(a)}catch(c){}}function setUrlMobile(a){var b=a.replace("www.","m.");$("#m_link a").each(function(d,c){$(c).attr("href",b)});$("#m_link img").each(function(e,d){var c=$(d).attr("src");$(d).attr("src",c.replace(/(.*&d=).*/,"$1")+b)})}function setUrlLangList(a){cur_href_no_culture=a.replace(/http:\/\/[^\/]+\//,"").replace(/[^\/]+\//,"");$("#lang_list a").each(function(b){culture_href=$(this).attr("href").replace(/(http:\/\/[^\/]+\/[^\/]+\/).*/,"$1"+cur_href_no_culture);$(this).attr("href",culture_href)})}function switchOfferTr(b,a){if(!$("#offer_tr_fields").is(":empty")){if($("#offer_tr").is(":hidden")){pageToolsTriggerShow("offer_tr");if(!$("#offer_tr_success").is(":hidden")){$("#offer_tr_fields textarea").val("")}$("#offer_tr_success").hide()}else{pageToolsTriggerHide("offer_tr")}}else{$("#offer_tr_loader").show();pageToolsTriggerShow("offer_tr");$.ajax({url:b,dataType:"html",success:function(c){$("#offer_tr_fields").html(c);$("#offer_tr_loader").hide();$("#offer_tr").show()},error:function(c){$("#offer_tr_loader").hide()}})}}function offerTrSubmit(){$("#offer_tr_success").show();$("#offer_tr").hide();return true}function showOfferTrMethod(a){$(".offer_tr_method").hide();$("#"+$(a).val()).show()}function switchRevhistory(){if($("#revhistory").is(":hidden")){pageToolsTriggerShow("revhistory")}else{pageToolsTriggerHide("revhistory")}}function switchEmbed(){if($("#embed").is(":hidden")){pageToolsTriggerShow("embed")}else{pageToolsTriggerHide("embed")}}function pageToolsTriggerShow(b){$(".page_tools").each(function(c){pageToolsTriggerHide($(this).attr("id"))});$("#"+b).show();var a=$("#"+b+"_trigger");a.css("text-decoration","none")}function pageToolsTriggerHide(b){if(!$("#"+b).is(":hidden")){$("#"+b).hide();var a=$("#"+b+"_trigger");a.css("text-decoration","underline")}};
+var ap_stopAll = function(){};
+var audioplayer  = false;
+// здесь запоминается форма Предложить перевод, чтобы после подгрузки фото, её восстанавливать
+var page_toolbar_clone  = '';
+// интервал показа цитат
+var rotate_quotes_interval  = 15000;
+// номер последней показанной цитаты
+var last_quote_index  = -1;
+// минимальный размер окна, при котором скрываются элементы
+var window_size_hide_el  = 1000;
+
+$(document).ready(function() {
+    var embedded_or_print = false;
+    // страница встроена
+    if (top !== self) { 
+        $("body").addClass("embedded");
+        embedded_or_print = true;
+    }
+    // версия для печати
+    var hash = window.location.hash;
+    if (hash.substring(1) == "print_version") {
+        $("body").addClass("print_version");
+        embedded_or_print = true;
+    }
+    if (embedded_or_print) {
+        // сообщение о том, что страница встроена
+        // путь без параметров и хэша 
+
+        var embed_source = window.location + "";
+        //embed_source = embed_source.substring(0, embed_source.indexOf('#'));
+        //embed_source = embed_source.substring(0, embed_source.indexOf('?'));
+        embed_source = embed_source.replace(/([^#?]+)[#?]?.*/g, "$1");
+
+        $("#content").append('<p class="small"><?php echo __("Source") ?>: <br/><a href="' + embed_source + '">' + embed_source + '</a></p>');
+        return;
+    }
+
+    // сокрытие элементов в зависимости от размера окна
+    onWindowResize();
+
+    // цитаты отображаются, если есть перевод и размер окна больше минимального
+    if (quote_list) {
+        showQuotes();        
+    }
+    
+    // random audio   
+    if (audio_list) {
+        var audio_index = Math.floor(Math.random( ) * (audio_list.length));
+        if (audio_list[ audio_index ]) {
+            $("#mp3").attr("title", audio_title_list[ audio_index ] );
+            $("#mp3 span").html( audio_list[ audio_index ] );
+        }
+    }    
+    
+	// custom options
+	$("#mp3").jmp3({
+		//filepath: "http://etapasvi.zxq.net/"
+		//filepath: "http://www.etapasvi.com/uploads/audio/",
+		filepath: "http://k002.kiwi6.com/uploads/hotlink/",
+        width: 24
+	});
+
+	// select language
+	$("span.lang_selector").colorbox({inline:true, href:"#lang_box", opacity:"0.5", transition:"none"});
+
+    // перемещение Предложения перевода наверх
+    $("#page_toolbar").insertAfter( "#content h1:eq(0)" );        
+    
+    // текст в футере
+    if (footer_text) {
+        $("#lang_plain").after(footer_text);
+    }
+    
+    // сокрытие элементов в зависимости от размера окна
+    $(window).resize(function() {
+        onWindowResize();
+    });
+});
+
+// сокрытие элементов в зависимости от размера окна
+function onWindowResize() 
+{
+    if ($(window).width() < window_size_hide_el) {
+        $("#wrapper").css('margin', '0 auto 0 70px');
+    } else {
+        $("#wrapper").css('margin', '0 auto');
+    }
+}
+
+// скрывает цитату
+function hideQuotes()
+{
+    // fadeOut для элемента p вешает IE    
+    $("#quote_p_cont").fadeOut(600);
+    setTimeout( showQuotes, 700);
+}
+
+// отображает случайную цитату
+function showQuotes()
+{
+    // если размер окна удовлетворяет, показываем цитату    
+    if ($(window).width() > window_size_hide_el) {
+        var quote_el = $("#bubble_quote p:first");    
+        var quote_index = Math.floor(Math.random( ) * (quote_list.length));
+        // если выбрана прошлая цитата, берём предыдущую в списке или последнюю
+        if (quote_index == last_quote_index) {
+            if (quote_index > 1) {
+                quote_index = quote_index - 1;
+            } else {
+                quote_index = quote_list.length - 1;
+            }
+        }
+        
+        last_quote_index = quote_index;
+        if (quote_list[ quote_index ]) {
+            quote_el.html( quote_list[ quote_index ]);
+        }        
+        $("#quote_p_cont").fadeIn(600);
+    }
+    setTimeout( hideQuotes, rotate_quotes_interval);
+}
+
+// исходный текст учения
+function showOriginal() 
+{
+	if ( $("#elOriginal").is(":hidden") ) {
+		$("#elOriginal").slideDown("slow");
+	} else {
+		$("#elOriginal").slideUp("slow");
+	}
+}
+
+// текст аудиозаписи
+function showAudioBody(id) 
+{    
+    var element_id = "#elAudioBody" + id;
+
+	if ( $(element_id).is(":hidden") ) {
+		$(element_id).slideDown("slow");
+	} else {
+		$(element_id).slideUp("slow");
+	}
+}
+
+//  модификация ссылок для подгрузки содержимого
+function preparePhotoContent()
+{    
+    $(document).ready(function(){
+        var href;
+        $("#photo_content a.photo_content_link").each(function(index) {
+            href = $(this).attr('href');
+
+            href = "javascript: loadPhotoContent('" + href + "'); void(0)";
+            $(this).attr('href', href);
+        });
+    });
+}
+
+// ссылка на текущую фотографию
+var global_photo_href;
+
+// подгрузка содрежимого фото
+function loadPhotoContent(href, hide_content, domain)
+{
+    if (!href || $("#photo_loader").is("visible")) {
+        return;
+    }
+    // получаем домен
+    if (!domain) {
+        domain = href.replace(/http:\/\/([^\/]+).*/, '$1');
+    }
+    if (!domain) {
+        return;
+    }
+
+    // домен не включается
+    href = href.replace(/http:\/\/[^\/]+\//, '');
+
+    if (hide_content) {
+        $("#photo_content .photofull").html( '<p id="photo_loader" class="hidden center_text" ><img src="/i/loader.gif" /></p>' );
+        $("#disqus_thread").hide();
+        $("#photo_content div.social").remove();
+        $("#photo_content .dsq-brlink").remove();
+    }
+    global_photo_href = 'http://' + domain + '/' + href;
+
+    var content_href = '/' + href.replace(/\/photo\//, '/photo/content/');
+    $("#photo_loader").show();
+
+    // сохраняем форму Предложить перевод
+    $("#offer_tr").hide();
+    page_toolbar_clone = $("#page_toolbar").clone();
+
+    // отправка запроса
+    $("#photo_content").load(content_href, function(response, status, xhr) {
+        if (status == "error") {
+            $("#photo_loader").hide();
+            if (global_photo_href) {
+                window.location = global_photo_href;
+                return;
+            }            
+        } else {   
+            // восстанавливаем форму Предложить перевод
+            page_toolbar_clone.insertAfter( "#content h1:eq(0)" );      
+            // модификация URL
+            setUrl(global_photo_href, href);
+            // title
+            var content_title = $("#photo_content_title").text() + ' - eTapasvi.com';
+            if (content_title) {
+                document.title = content_title;
+            }
+            // указывается новый URL в форме Предложить перевод
+            $("#offer_tr_uri").val(global_photo_href);
+            // вытаскивается ID из URL
+            $("#offer_tr_id").val(getElementIdFromUrl(global_photo_href));
+        }
+    });
+}
+
+function getElementIdFromUrl(url)
+{
+    var match = url.match(/^[^\d]+(\d+).*$/);
+    return match[1];
+}
+
+// получение адреса из хэша и загрузка фото
+function loadPhotoContentFromHash(domain)
+{    
+    var hash_url = $.address.value();
+    if (hash_url && hash_url.substr(0, 2) == '/!') {            
+        loadPhotoContent( hash_url.substr(2, hash_url.length), true, domain );
+    }
+}
+
+// установка URL
+function setUrl(full, relative)
+{
+    try {
+        if (history && history.pushState) {
+            history.pushState({isMine:true}, 'title',  full );
+        } else {
+            $.address.value('/!' + relative); 
+        }
+        // меняем ссылку на мобильную версию
+        setUrlMobile(full);
+        setUrlLangList(full);
+    } catch (e) {
+    }
+}
+
+// установка ссылки на мобильную версию
+function setUrlMobile(url)
+{
+    var mobile_url = url.replace("www.", "m.");
+    $("#m_link a").each(function(n,element){
+        $(element).attr("href", mobile_url);
+    });
+    $("#m_link img").each(function(n,element){
+        var m_src = $(element).attr("src");
+        $(element).attr("src", m_src.replace(/(.*&d=).*/, "$1") + mobile_url);
+    });
+}
+
+// установка ссылок в переключателе языка
+function setUrlLangList(href)
+{
+    cur_href_no_culture = href.replace(/http:\/\/[^\/]+\//, '').replace(/[^\/]+\//, '');
+    $("#lang_list a").each(function(index) {
+        culture_href = $(this).attr('href').replace(/(http:\/\/[^\/]+\/[^\/]+\/).*/, '$1' + cur_href_no_culture);
+        
+        $(this).attr('href', culture_href);
+    });  
+}
+
+// отображение формы Предолжить перевод
+function switchOfferTr(fields_url, error_msg) 
+{    
+    // если поля уже загружены
+    if (!$("#offer_tr_fields").is(':empty')) {
+        if ( $("#offer_tr").is(":hidden") ) {
+            pageToolsTriggerShow("offer_tr");
+            
+            // если форма была отправлена
+            if (!$("#offer_tr_success").is(":hidden")) {
+                $("#offer_tr_fields textarea").val('');            
+            }
+            $("#offer_tr_success").hide();
+        } else {
+            pageToolsTriggerHide("offer_tr");
+        }
+    } else {
+        // загрузка полей
+        $("#offer_tr_loader").show();
+        pageToolsTriggerShow("offer_tr");
+        
+        $.ajax({
+            url: fields_url,
+            dataType: "html",
+            success: function(data) {
+                $("#offer_tr_fields").html(data);
+                $("#offer_tr_loader").hide();
+                $("#offer_tr").show();
+            },
+            error: function(data) {
+                $("#offer_tr_loader").hide();
+            }
+        });
+    }
+}
+
+// отправка Перевода
+function offerTrSubmit()
+{    
+    $("#offer_tr_success").show();
+    $("#offer_tr").hide();
+    return true;
+}
+
+// отображения формы отправки перевода
+function showOfferTrMethod(radio)
+{    
+    $(".offer_tr_method").hide();
+    $("#" + $(radio).val() ).show();
+}
+
+// отображение Истории изменений
+function switchRevhistory()
+{
+    if ( $("#revhistory").is(":hidden") ) {
+        pageToolsTriggerShow("revhistory");
+    } else {
+        pageToolsTriggerHide("revhistory");
+    }
+}
+
+// отображение Истории изменений
+function switchEmbed()
+{
+    if ( $("#embed").is(":hidden") ) {
+        pageToolsTriggerShow("embed");
+    } else {
+        pageToolsTriggerHide("embed");
+    }
+}
+
+// показать кнопку
+function pageToolsTriggerShow(mnemonic_id)
+{
+    // скрываются все остальные кнопки
+    $(".page_tools").each(function(index) {
+        pageToolsTriggerHide( $(this).attr('id') );
+    });    
+        
+    $("#"+mnemonic_id).show();
+    $("#"+mnemonic_id+"_trigger").addClass('pt_btn_disabled');
+}
+
+// скрыть кнопку
+function pageToolsTriggerHide(mnemonic_id)
+{
+    if ( !$("#"+mnemonic_id).is(":hidden") ) {
+        $("#"+mnemonic_id).hide();
+        $("#"+mnemonic_id+"_trigger").removeClass('pt_btn_disabled');
+    }
+}
 
 // jmp3
 jQuery.fn.jmp3=function(passedOptions){var playerpath="/swf/";var options={"filepath":"","backcolor":"","forecolor":"ffffff","width":"25","repeat":"no","volume":"50","autoplay":"false","showdownload":"true","showfilename":"true"};if(passedOptions){jQuery.extend(options,passedOptions)}return this.each(function(){var filename=options.filepath+jQuery(this).children().html();var mp3html='<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" ';mp3html+='width="'+options.width+'" height="20" ';mp3html+='codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">';mp3html+='<param name="movie" value="'+playerpath+'singlemp3player.swf?';mp3html+='showDownload='+options.showdownload+'&file='+filename+'&autoStart='+options.autoplay;mp3html+='&backColor='+options.backcolor+'&frontColor='+options.forecolor;mp3html+='&repeatPlay='+options.repeat+'&songVolume='+options.volume+'" />';mp3html+='<param name="wmode" value="transparent" />';mp3html+='<embed wmode="transparent" width="'+options.width+'" height="20" ';mp3html+='src="'+playerpath+'singlemp3player.swf?';mp3html+='showDownload='+options.showdownload+'&file='+filename+'&autoStart='+options.autoplay;mp3html+='&backColor='+options.backcolor+'&frontColor='+options.forecolor;mp3html+='&repeatPlay='+options.repeat+'&songVolume='+options.volume+'" ';mp3html+='type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />';mp3html+='</object>';if(options.showfilename=="false"){jQuery(this).html("")}jQuery(this).prepend(mp3html+"&nbsp;");if(jQuery.browser.msie){this.outerHTML=this.outerHTML}})};

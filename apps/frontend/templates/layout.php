@@ -26,17 +26,14 @@
 <div id="content_wrapper">    
 	<div id="content">
 		<?php echo $sf_content ?>
-        <?php include_component( 'text', 'offertranslation' ); ?>
-        <?php include_component( 'revisionhistory', 'show' );  ?>        
-        <?php include_partial( 'text/embed' );  ?>        
-        <?php include_partial( 'text/print_version' );  ?>        
 	</div>
     <div id="menu">
         <?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	
         <?php include_partial('global/share'); ?>
     </div>
-	<div id="footer">
+	<div id="footer">        
         <div id="f_line"></div>    
+        <?php include_partial( 'global/toolbar' ); ?>
         <span id="lang_plain">
         <?php 
             $uri          = $sf_request->getPathInfo();
@@ -68,7 +65,7 @@
                 |
             <?php endif ?>
         <?php endforeach?>
-        <br/><br/></span>
+        <br/><br/></span>        
         <?php $mobile_url = UserPeer::switchUrlMobile(sfContext::getInstance()->getRequest()->getUri());?>                
         <?php $mobile_url = preg_replace("/\?.*/", '', $mobile_url) ;?>                
         <div id="m_link">
@@ -169,11 +166,13 @@
 <?php /*endif */?>
 </div>
 
+<?php /*
 <noscript>
 	<div id="enable_javascript">
 		<p class="error_list p1 center_text"><?php echo __('Please, enable JavaScript!') ?></p>
 	</div>
 </noscript>
+*/ ?>
 
 </div>
 <div style="display:none;"><script type="text/javascript">

@@ -1,7 +1,8 @@
+// main
 var ap_stopAll = function(){};
 var audioplayer  = false;
 // здесь запоминается форма Предложить перевод, чтобы после подгрузки фото, её восстанавливать
-var offer_tr_clone  = '';
+var page_toolbar_clone  = '';
 // интервал показа цитат
 var rotate_quotes_interval  = 15000;
 // номер последней показанной цитаты
@@ -64,18 +65,7 @@ $(document).ready(function() {
 	$("span.lang_selector").colorbox({inline:true, href:"#lang_box", opacity:"0.5", transition:"none"});
 
     // перемещение Предложения перевода наверх
-    $("#offer_tr_ctr").insertAfter( "#content h1:eq(0)" );
-    
-    // перемещение Версий наверх
-    $("#revhistory").insertAfter( "#offer_tr_ctr" );
-    // размещение ссылки Версий рядом с Предложить перевод    
-    $("#revhistory_trigger").insertAfter( "#offer_tr_trigger" );
-
-    // перемещение Встроить
-    $("#embed").insertAfter( "#offer_tr_ctr" );
-    // размещение ссылок
-    $("#print_version_trigger").insertAfter( "#offer_tr_trigger" ).show();
-    $("#embed_trigger").insertAfter( "#offer_tr_trigger" );
+    $("#page_toolbar").insertAfter( "#content h1:eq(0)" );        
     
     // текст в футере
     if (footer_text) {
@@ -200,7 +190,7 @@ function loadPhotoContent(href, hide_content, domain)
 
     // сохраняем форму Предложить перевод
     $("#offer_tr").hide();
-    offer_tr_clone = $("#offer_tr_ctr").clone();
+    page_toolbar_clone = $("#page_toolbar").clone();
 
     // отправка запроса
     $("#photo_content").load(content_href, function(response, status, xhr) {
@@ -212,7 +202,7 @@ function loadPhotoContent(href, hide_content, domain)
             }            
         } else {   
             // восстанавливаем форму Предложить перевод
-            offer_tr_clone.insertAfter( "#content h1:eq(0)" );      
+            page_toolbar_clone.insertAfter( "#content h1:eq(0)" );      
             // модификация URL
             setUrl(global_photo_href, href);
             // title
@@ -363,9 +353,7 @@ function pageToolsTriggerShow(mnemonic_id)
     });    
         
     $("#"+mnemonic_id).show();
-    // модификация текста ссылки
-    var trigger = $("#"+mnemonic_id+"_trigger");
-    trigger.css('text-decoration', 'none');
+    $("#"+mnemonic_id+"_trigger").addClass('pt_btn_disabled');
 }
 
 // скрыть кнопку
@@ -373,8 +361,6 @@ function pageToolsTriggerHide(mnemonic_id)
 {
     if ( !$("#"+mnemonic_id).is(":hidden") ) {
         $("#"+mnemonic_id).hide();
-        // модификация текста ссылки
-        var trigger = $("#"+mnemonic_id+"_trigger");
-        trigger.css('text-decoration', 'underline');
+        $("#"+mnemonic_id+"_trigger").removeClass('pt_btn_disabled');
     }
 }
