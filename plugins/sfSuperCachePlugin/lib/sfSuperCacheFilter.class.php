@@ -83,7 +83,8 @@ class sfSuperCacheFilter extends sfFilter
       }
       if (!is_dir($dir))
       {
-        mkdir($dir, 0777, true);
+      	// на папки нельзя ставить права 777, чтобы другие пользователи хостинга не могли записывать туда свои файлы
+        mkdir($dir, 0775, true);
       }
       // check conflicts between directories and files with the same name
       if (!is_dir($file))

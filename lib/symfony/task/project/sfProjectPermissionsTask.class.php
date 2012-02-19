@@ -44,10 +44,11 @@ EOF;
    */
   protected function execute($arguments = array(), $options = array())
   {
-    if (file_exists(sfConfig::get('sf_upload_dir')))
+	// На директории, доступные из браузера права 777 не ставим, чтобы другие пользователи хостинга не могли записывать туда свои файлы  	
+    /*if (file_exists(sfConfig::get('sf_upload_dir')))
     {
       $this->chmod(sfConfig::get('sf_upload_dir'), 0777);
-    }
+    }*/
 
     $this->chmod(sfConfig::get('sf_cache_dir'), 0777);
     $this->chmod(sfConfig::get('sf_log_dir'), 0777);
@@ -56,7 +57,8 @@ EOF;
     $dirs = array(
       sfConfig::get('sf_cache_dir'),
       sfConfig::get('sf_log_dir'),
-      sfConfig::get('sf_upload_dir'),
+      // На директории, доступные из браузера права 777 не ставим, чтобы другие пользователи хостинга не могли записывать туда свои файлы
+//      sfConfig::get('sf_upload_dir'),
     );
 
     $dirFinder = sfFinder::type('dir');

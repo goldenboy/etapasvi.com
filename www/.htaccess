@@ -61,8 +61,10 @@ RequestHeader unset Request-Range
 #RewriteCond %{HTTP:Range} bytes=0-.* [NC]
 #RewriteRule .? http://%{SERVER_NAME}/ [R=302,L]
 
+# Запрет доступа к PHP-скриптам
 # Запрет доступа к .конфигурационным файлам
-RewriteRule (\.conf|\.htaccess|\.htpasswd)$ /errors/404.html
+RewriteCond %{REQUEST_URI} !^/(frontend_www_etapasvi_com|frontend_m_etapasvi_com)
+RewriteRule \.(php|cgi|fcgi|conf|htaccess|htpasswd) /errors/404.html
 
 # проверка доменного имени и рекдирект на домен по умолчанию, если передан неверный
 # учитывать, что доменное имя хардкодится в .php
