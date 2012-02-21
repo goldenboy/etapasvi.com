@@ -29,7 +29,8 @@ $slaves_params = array(
 		'db' 		=> 'back2etapasvicom'
 	),*/
 	array(
-		'server' 	=> 'box758.bluehost.com',
+#		'server' 	=> 'box758.bluehost.com',
+		'server' 	=> '173.254.113.128',
 		'port' 		=> '3306',
 		'username' 	=> 'etapasvi_user',
 		'password' 	=> 'M9hC1H6JDAf5ObcFK41s',
