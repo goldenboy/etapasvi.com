@@ -150,12 +150,13 @@ class Photo extends BasePhoto
 	    //return PhotoPeer::remoteStorageGetUrl( $this->getThumbPath(), $this->getImg() );
 	    //return UserPeer::SITE_123PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . PhotoPeer::PHOTO_DIR . '/' . $path . '/' . $file;
 	    	    
+	    $picasa_dimention = '';
 	    $max_dimention = $this->getMaxDimention();
-	    if ($max_dimention <= PhotoPeer::PICASA_MAX_DIMENTION) {
-	    	$picase_dimention = '/s' . $max_dimention;
+	    if ($max_dimention && $max_dimention <= PhotoPeer::PICASA_MAX_DIMENTION) {
+	    	$picasa_dimention = '/s' . $max_dimention;
 	    }
 	    
-	    return PhotoPeer::REMOTE_STORAGE_URL . $path . $picase_dimention . '/' . $file;
+	    return PhotoPeer::REMOTE_STORAGE_URL . $path . $picasa_dimention . '/' . $file;
 	  } else {
 	    return '';	
 	  }

@@ -671,6 +671,62 @@ class photoActions extends autophotoActions
   	}
   }
   
+  /**
+   * Получение размеров полных фотографий (width, height) и сохраненеи в БД
+   *
+   * @param unknown_type $request
+   */
+  public function executeSetdimentions($request)
+  {
+  	ini_set('max_execution_time', 60*60*24);
+  	ini_set('memory_limit', '128M');
+  	
+  	// для открытия некоторых sfImage не хватает памяти
+  	$miss_ids = array(970 );
+  	
+  	//$count = 1400;
+  	//$step  = 100;
+
+  	//for ($i = 0; $i <= $count; $i = $i + $step ) {
+  	$c = new Criteria();
+  	$c->add(PhotoPeer::FULL_PATH, '', Criteria::NOT_EQUAL);
+  	//$c->add(PhotoPeer::ID, 800, Criteria::GREATER_THAN);
+  	//$c->setOffset($i);
+  	//$c->setLimit($step);
+  	
+  	$list = PhotoPeer::doSelect($c);
+  	
+  	foreach ($list as $photo) {  	
+  		
+  		if (in_array($photo->getId(), $miss_ids)) {
+  			continue;
+  		}
+  		
+  		$full_local = $photo->getFullLocal();
+  		
+  	    echo $photo->getId() . ' ' . $full_local . ' ';
+  	   
+  	    $img = new sfImage( $full_local );	
+
+  	    $width  = $img->getWidth();
+  	    $height = $img->getHeight();
+  	    
+  	    echo ' width=' . $width . ' height=' . $height . ' ';
+  	    
+  	    if ($width && $height) {
+			$photo->setWidth( $width );
+			$photo->setHeight( $height );
+			$photo->save();
+  	    } else {
+  	    	echo 'error';
+  	    }
+  	    echo '<br><br>';
+  	}
+  	unset($list);
+
+  	//}
+  }
+  
 }
 
 
