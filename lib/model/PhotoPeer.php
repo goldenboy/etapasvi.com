@@ -15,6 +15,9 @@ class PhotoPeer extends BasePhotoPeer
   
   const PHOTO_DIR 			    = 'photo';
   
+  // максимальный размер фото, который можно запросить из Picasa добавление sXXX к адресу фото
+  const PICASA_MAX_DIMENTION    = 2000;
+  
   // директории на сервере
   // и одновременно названия альбомов в удалённом хранилище
   const FULL_DIR 			    = 'photo';

@@ -99,7 +99,14 @@ class photoActions extends autophotoActions
     {
       $this->photo->setLink($photo['link']);
     }
-    
+    if (isset($photo['width']))
+    {
+      $this->photo->setWidth($photo['width']);
+    }
+    if (isset($photo['height']))
+    {
+      $this->photo->setHeight($photo['height']);
+    }    
     // culture
     if (isset($photo['title_i18n_en']))
     {
@@ -311,9 +318,14 @@ class photoActions extends autophotoActions
         $img->saveAs( $tmp_preview );         
         
         // full        
-        if (isset($photo['watermark'])) {
-          // водяной знак
-	      $img = new sfImage( $tmp_full );	
+		$img = new sfImage( $tmp_full );	
+        	      
+		// исходный размер фото
+		$this->photo->setWidth( $img->getWidth() );
+		$this->photo->setHeight( $img->getHeight() );
+		
+		// водяной знак
+        if (isset($photo['watermark'])) {          
 	      $img->overlay(new sfImage(sfConfig::get('sf_web_dir') . '/i/watermark.png'), $watermark_position);
           $img->setQuality( PhotoPeer::FULL_QUALITY );
 	      $img->save();

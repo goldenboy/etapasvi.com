@@ -16,7 +16,7 @@ generator:
 
     edit:
       display:
-        "NONE": [photoalbum_id, show, order, img, _img, full_path, _full_link, preview_path, _preview_link, thumb_path, _thumb_link, created_at, link]
+        "NONE": [photoalbum_id, show, order, img, _img, full_path, _full_link, preview_path, _preview_link, thumb_path, _thumb_link, created_at, link, width, height]
         "EN":
           - title_i18n_en
           - body_i18n_en

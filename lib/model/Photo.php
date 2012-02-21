@@ -149,7 +149,13 @@ class Photo extends BasePhoto
 	  if ($path && $file) {
 	    //return PhotoPeer::remoteStorageGetUrl( $this->getThumbPath(), $this->getImg() );
 	    //return UserPeer::SITE_123PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . PhotoPeer::PHOTO_DIR . '/' . $path . '/' . $file;
-	    return PhotoPeer::REMOTE_STORAGE_URL . $path . '/' . $file;
+	    	    
+	    $max_dimention = $this->getMaxDimention();
+	    if ($max_dimention <= PhotoPeer::PICASA_MAX_DIMENTION) {
+	    	$picase_dimention = '/s' . $max_dimention;
+	    }
+	    
+	    return PhotoPeer::REMOTE_STORAGE_URL . $path . $picase_dimention . '/' . $file;
 	  } else {
 	    return '';	
 	  }
@@ -290,5 +296,14 @@ class Photo extends BasePhoto
 	    }
 	    
 	    return $created_at;
+	}
+	
+	/**
+	 * Получение максимального из значений Ширины и Высоты
+	 *
+	 * @return unknown
+	 */
+	public function getMaxDimention() {
+	  return max($this->getWidth(), $this->getHeight());
 	}
 }

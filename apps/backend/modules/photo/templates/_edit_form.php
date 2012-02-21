@@ -195,6 +195,34 @@
     </div>
 </div>
 
+<div class="form-row">
+  <?php echo label_for('photo[width]', __($labels['photo{width}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{width}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{width}')): ?>
+    <?php echo form_error('photo{width}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getWidth', array (
+  'size' => 7,
+  'control_name' => 'photo[width]',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[height]', __($labels['photo{height}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{height}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{height}')): ?>
+    <?php echo form_error('photo{height}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getHeight', array (
+  'size' => 7,
+  'control_name' => 'photo[height]',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
 </fieldset>
 <fieldset id="sf_fieldset_en" class="">
 <h2><?php echo __('EN') ?></h2>

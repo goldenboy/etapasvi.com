@@ -77,6 +77,8 @@ propel:
     preview_path:     { type: varchar(255) }
     thumb_path:       { type: varchar(255) }
     link:             { type: varchar(255) }
+    width:            { type: integer }
+    height:           { type: integer }
     _indexes:
       updated_at:     [updated_at]
     _uniques:

@@ -182,6 +182,8 @@ CREATE TABLE `photo`
 	`preview_path` VARCHAR(255),
 	`thumb_path` VARCHAR(255),
 	`link` VARCHAR(255),
+	`width` INTEGER,
+	`height` INTEGER,
 	PRIMARY KEY (`id`),
 	UNIQUE KEY `photoalbum_order` (`photoalbum_id`, `order`),
 	KEY `updated_at`(`updated_at`),
