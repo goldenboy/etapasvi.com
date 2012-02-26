@@ -21,7 +21,7 @@ $author = $photoalbum->getAllAuthors($sf_user->getCulture(), $photo_list);
     <?php echo format_datetime( $photoalbum->getCreatedAt(), 'd MMMM yyyy'); ?> | 
     <?php echo __('Photo') ?>: <?php echo $photoalbum->countPhotos(); ?>
     <?php if ($author): ?>
-        | <strong><?php echo __('Author') ?>:</strong> <?php echo $author ?>
+        | <?php echo __('Author') ?>: <?php echo $author ?>
     <?php endif ?>
 </p>
 <?php $body = $photoalbum->getBody($sf_user->getCulture(), true); ?>
@@ -42,5 +42,5 @@ $author = $photoalbum->getAllAuthors($sf_user->getCulture(), $photo_list);
 
 <?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photoalbum->getId())) ?> 
 
-<br />
+
 <?php include_component('comments', 'show'); ?>	

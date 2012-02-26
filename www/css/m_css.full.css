@@ -81,9 +81,6 @@ h4 {
 acronym {
 	border-bottom:1px dotted #555753;
 	}
-strong {
-    color: #2c2c2c;
-    }
 
 
 a:link, 
@@ -453,7 +450,11 @@ html #disqus_thread {
 #content #dsq-content iframe {
     width: 99%
     }
-
+#wrapper #dsq-global-toolbar {
+    background-color: #F2F2F2;
+    border: 1px solid #DDDDDD;
+    padding: 6px 8px 0;
+    }
 .author {
 	color:#888888;
 	font-family:verdana;

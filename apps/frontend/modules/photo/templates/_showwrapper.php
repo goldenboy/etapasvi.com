@@ -2,9 +2,6 @@
 <link rel="canonical" href="<?php echo url_for('photo/show?id='.$photo->getId() . '&title=' . TextPeer::urlTranslit($photo->getTitle())); ?>" />
 <?php end_slot()*/ ?>
 
-<?php slot('body_id') ?>body_photo<?php end_slot() ?>
-<h1 id="top"><?php echo __('Photo') ?></h1>
-
 <p class="bread_crumbs">	
 <?php
     $photoalbum       = $photo->getPhotoalbum();

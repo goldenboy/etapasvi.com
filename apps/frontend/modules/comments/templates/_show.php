@@ -1,5 +1,16 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
+<?php
+/*
+    // изменение размера всплывающего окна после загрузки комментариев
+    function disqus_config() {        
+        this.callbacks.afterRender = [function() {
+            if (page_mode == "enlarge_photo") {
+                //setTimeout(function(){ cbResize(); }, cb_resize_period);
+            }
+        }];
+    }
+*/ ?>
     var disqus_shortname    = 'etapasvi';
     var disqus_identifier   = '<?php echo $comments_identifier?>';
     <?php if (!empty($comments_page_url)): ?>var disqus_url   = '<?php echo $comments_page_url?>';<?php endif ?>

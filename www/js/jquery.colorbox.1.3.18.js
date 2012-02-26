@@ -567,9 +567,7 @@
 		
 		$loaded.hide()
 		.appendTo($loadingBay.show())// content has to be appended to the DOM for accurate size calculations.
-        // vivisection
-		//.css({width: getWidth(), overflow: settings.scrolling ? 'auto' : 'hidden'})
-		.css({width: getWidth(), overflow: settings.scrolling ? settings.scrolling : 'auto'})
+		.css({width: getWidth(), overflow: settings.scrolling ? 'auto' : 'hidden'})
 		.css({height: getHeight()})// sets the height independently from the width in case the new width influences the value of height.
 		.prependTo($content);
 		

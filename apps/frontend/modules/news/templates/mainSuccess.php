@@ -49,7 +49,7 @@ Email: <input type="text" style="width:140px" name="email"/> &nbsp;<input type="
 Email: <input type="text" style="width:140px" name="email"/> &nbsp;<input type="hidden" value="etapasvi/comments" name="uri"/><input type="hidden" name="loc" value="<?php echo UserPeer::getCultureFeedburderLoc(); ?>"/><input type="submit" class="input_button" value="<?php echo __('Subscribe') ?>" />
 </form>
 <br/>
-<hr class="dashed"/>
+
 <?php include_component('comments', 'show') ?>
 
 <?php include_partial('comments/count'); ?>

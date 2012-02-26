@@ -44,10 +44,10 @@
 				?>
 					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="photo_content_link">
 						<img src="<?php echo $photo->getPreviewUrl(); ?>" 
-						alt="<?php echo $title; ?>" id="photoitem_img"/></a>
+						alt="<?php echo $title; ?>" class="full_photo_img" /></a>
 				<?php else: ?>
 					<img src="<?php echo $photo->getPreviewUrl(); ?>" 
-					alt="<?php echo $title; ?>" id="photoitem_img"/>
+					alt="<?php echo $title; ?>" class="full_photo_img" />
 				<?php endif ?>
 			</div>
 		<?php endif ?>
@@ -82,7 +82,7 @@
                 <?php endif ?>
                  <br/>
                 <a href="<?php echo $photo->getFullUrl(); ?>" 	
-                    title="<?php echo __('Enlarge') ?>" target="_blank" ><?php echo __('Enlarge') ?></a>		
+                    title="<?php echo __('Download') ?>" target="_blank" ><?php echo __('Download') ?></a>		
             </p>
             
             <?php if ($photo->getBody($sf_user->getCulture(), true)): ?>

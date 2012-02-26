@@ -131,7 +131,9 @@ class photoComponents extends sfComponents
   		$photoalbum_id = $photoalbum->getId();
   	}
   	
+  	
   	// получение следующей и предыдущей фотографии
+  	
   	$c = new Criteria();
     $c->add( PhotoPeer::SHOW, 1);
     $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);

@@ -20,45 +20,46 @@
                 <?php PhotoPeer::$embed_photo_align = $align; ?>               
                 <div class="embed_photo embed_photo_<?php echo $align; ?><?php if ($in_list): ?> extra_space_<?php echo $align; ?><?php endif ?>">
                 <?php endif ?>
-                <a href="<?php echo $photo->getUrl(); ?>" title="<?php echo $title; ?>">
+                <a href="<?php echo $photo->getUrl(); ?>" title="<?php echo $title; ?>" onclick="enlargePhoto('<?php echo $photo->getUrl(); ?>');return false;">
                     <img src="<?php echo $photo->getThumbUrl(); ?>" alt=""/></a>
+                <?php /* <script type="text/javascript"> phLinks(); </script>*/ ?>
                 <?php if ($title): ?>
                     <br/><span class="light"><?php echo $title; ?></span>
                 <?php endif ?>
                 <?php if ($show_body && $photo->getBody($sf_user->getCulture(), true)): ?>
                     <br/><br/><?php echo html_entity_decode($photo->getBodyPrepared()); ?>
                 <?php endif ?>
-                <?php if (!empty($embed)): ?>
+                <?php if (!empty($embed)): ?>                
                 </div>
 			<?php endif ?>
 		<?php else: ?>				
 
 			<div class="center_text prev_next" style="<?php if (!$prev_photo):?>padding-left:16px;<?php endif ?> <?php if (!$next_photo):?>padding-right:16px;<?php endif ?>">
-
 			<?php 
 				if ($prev_photo && $photo->getShow()):
                     $prev_url = $prev_photo->getUrl();
 				?>
-					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" class="prev_icon photo_content_link"></a>
+					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" class="prev_icon" onclick="loadPhotoContent('<?php echo $prev_url; ?>');return false;"></a>
 				<?php endif ?>
 
 				<?php 
 				if ($next_photo && $photo->getShow()): 
                     $next_url = $next_photo->getUrl();
 				?>
-					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="photo_content_link">
-						<img src="<?php echo $photo->getPreviewUrl(); ?>" 
-						alt="<?php echo $title; ?>" id="photoitem_img"/></a>
+					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" onclick="loadPhotoContent('<?php echo $next_url; ?>');return false;">
+						<img src="<?php echo $photo->getFullUrl(); ?>" 
+						alt="<?php echo $title; ?>" class="full_photo_img" /></a>
 				<?php else: ?>
-					<img src="<?php echo $photo->getPreviewUrl(); ?>" 
-					alt="<?php echo $title; ?>" id="photoitem_img"/>
-				<?php endif ?>
-
+					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" onclick="loadPhotoContent('<?php echo $prev_url; ?>');return false;"><img src="<?php echo $photo->getFullUrl(); ?>" alt="<?php echo $title; ?>" class="full_photo_img"/></a>
+				<?php endif ?>                
 				<?php 
 				if ($next_photo && $photo->getShow()): 
 				?>
-					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="next_icon photo_content_link"></a>
+					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="next_icon" onclick="loadPhotoContent('<?php echo $next_url; ?>');return false;"></a>
 				<?php endif ?>
+                <?php /*<input type="hidden" id="photo_full_url" value="<?php echo $photo->getFullUrl(); ?>"/> */ ?>
+                <input type="hidden" id="photo_full_width" value="<?php echo $photo->getWidth(); ?>"/>
+                <input type="hidden" id="photo_full_height" value="<?php echo $photo->getHeight(); ?>"/>
 			</div>
 		<?php endif ?>
 	<?php endif ?>		
@@ -67,6 +68,7 @@
 	<?php if (empty($short) || !$short): ?>  
 
         <div class="photo_info">
+            <p id="photo_loader" class="hidden center_text" ><img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/loader.gif" /></p>
             <?php if ($title): ?>
                 <p class="center_text">
                     <strong><?php echo $title; ?></strong>
@@ -84,13 +86,12 @@
                 ?>
                 
                 <?php if ($author): ?>
-                     | <strong><?php echo __('Author') ?>:</strong> <?php echo $author ?>
+                     | <?php echo __('Author') ?>: <?php echo $author ?>
                 <?php endif ?>
-                 | 
-                <a href="<?php echo $photo->getFullUrl(); ?>" 	
-                    title="<?php echo __('Enlarge') ?>" target="_blank" ><?php echo __('Enlarge') ?></a>		
-            </p>
-            <p id="photo_loader" class="hidden center_text" ><img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/loader.gif" /></p>
+                 | <a href="<?php echo $photo->getFullUrl(); ?>" 	
+                    title="<?php echo __('Download') ?>" target="_blank" ><?php echo __('Download') ?></a>		
+                 <span class="ph_enlarge_lnk">| <a href="javascript:enlargePhoto('<?php echo $photo->getUrl(); ?>', true);void(0);" title="<?php echo __('Enlarge') ?>" ><?php echo __('Enlarge') ?></a></span>
+            </p>            
             <?php if ($photo->getBody($sf_user->getCulture(), true)): ?>
                 <br/>
             <?php echo html_entity_decode($photo->getBodyPrepared()); ?><br/>
@@ -101,8 +102,9 @@
                 </p>
             <?php endif ?>            
         </div>
+        <?php /* 
 		<hr class="light"/>
-<?php /* 
+
 		<p class="center_text prev_next">
 			<?php 
 			if ($prev_photo && $photo->getShow()):
@@ -124,6 +126,16 @@
 			<?php endif ?>
 		</p>
  */ ?>
+
+ 			<?php if ($prev_photo && $prev_photo->getShow()): ?>
+				<?php /*<img src="<?php echo $prev_photo->getPreviewUrl(); ?>" style="display:none;"/>*/ ?>
+				<img src="<?php echo $prev_photo->getFullUrl(); ?>" style="display:none;"/>
+ 			<?php endif ?>
+            <?php if ($next_photo && $next_photo->getShow()): ?>
+				<?php /*<img src="<?php echo $next_photo->getPreviewUrl(); ?>" style="display:none;"/> */ ?>
+				<img src="<?php echo $next_photo->getFullUrl(); ?>" style="display:none;"/>
+			<?php endif ?>
+ <?php /*
 	<table class="photo_list">
 		<tr>			
             <td>
@@ -156,6 +168,7 @@
             </td>	
 		</tr>
 	</table>
+    */ ?>
     <div id="photo_content_title" class="hidden"><?php echo __($sf_response->getTitle()); ?></div>
     <div class="photo_info">
         <?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photo->getPhotoalbumId())) ?> 
