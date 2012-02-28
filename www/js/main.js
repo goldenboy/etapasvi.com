@@ -42,6 +42,9 @@ var cb_prev_url = "";
 var cb_prev_title = "";
 // всплывающее окно было открыто на странице с фото
 var cb_from_photo_page = false;
+// адрес страницы для страницы комментариев до открытия всплывающего окна
+var cb_prev_dusqus_url = '';
+var cb_prev_disqus_identifier = '';
 
 
 $(document).ready(function() {
@@ -123,11 +126,6 @@ $(document).ready(function() {
     $(window).resize(function() {
         onWindowResize();
     });
-
-    // подгружено содержимое всплывающего окна
-    //$(document).bind('cbox_complete', function(){
-        //setTimeout(function(){ cbResize(); }, cb_resize_period);
-    //});
 });
 
 // сокрытие элементов в зависимости от размера окна
@@ -396,10 +394,15 @@ function enlargePhoto(href, from_photo_page)
         // фиксируем позицию и устанавливаем высоту контейнера страницы
         $("#wrapper").css({"top": (cb_window_pos*(-1))});
         $(window).scrollTop(0);
-    }
+    }   
+    
     // устанавливаем URL страницы
     cb_prev_url = document.location + "";
     setUrl(href);
+    
+    // запоминаем адрес страницы для скрипта комментариев
+    cb_prev_dusqus_url        = disqus_url;
+    cb_prev_disqus_identifier = disqus_identifier;
     
     cb_prev_title = document.title + "";
     
@@ -435,11 +438,41 @@ function enlargePhoto(href, from_photo_page)
             }
             
             // в IE изменение адресной строки прокручивает окно наверх
-            $(window).scrollTop(cb_window_pos); 
+            $(window).scrollTop(cb_window_pos);
+
+            // восстанавливаем комментарии на основной странице
+            //eval( $("#disqus_config_script").text() );   
+            disqus_url        = cb_prev_dusqus_url;
+            disqus_identifier = cb_prev_disqus_identifier;
             
-            page_mode = prev_page_mode;
-            prev_page_mode = '';
-            cb_window_pos  = 0;
+            if (disqus_url) {
+                $("#disqus_thread").html(
+                    "<script type=\"text/javascript\">" +
+                    $("#disqus_config_script").text() +        		
+                    //"var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; " +
+                    //"dsq.src = $(\"#disqus_script\").attr(\"src\"); " +
+                    //"(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); " + 
+                    "</script>"
+                );
+                // в IE обработка скрипта работает с небольшой задержкой, поэтому скрипт disqs надо подключать немного погодя
+                // при динамической вставке disqus как script в DOM сыпятся ошибки
+                //if ($.browser.msie) {
+                    //setTimeout(function() {
+                        //$("#disqus_thread").html(
+                        //    "<script src=\"" + $("#disqus_script").attr("src") + "\" type=\"text/javascript\"></script>"
+                        //);
+                    //}, 1000);
+                //} else {
+                $("#disqus_thread").html(
+                    "<script src=\"" + $("#disqus_script").attr("src") + "\" type=\"text/javascript\"></script>"
+                );			
+                //}
+            }
+            page_mode           = prev_page_mode;
+            prev_page_mode      = '';
+            cb_window_pos       = 0;
+            cb_prev_dusqus_url  = '';
+            cb_prev_disqus_identifier  = '';
         },
         onComplete: function () {
             // перемещаем page_toolbar из основной страницы во всплывающее окно

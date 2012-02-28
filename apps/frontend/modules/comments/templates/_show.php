@@ -1,5 +1,5 @@
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script type="text/javascript" id="disqus_config_script">
 <?php
 /*
     // изменение размера всплывающего окна после загрузки комментариев
@@ -63,7 +63,7 @@
 ?>
 <?php /*<iframe src="/<?php echo $sf_user->getCulture(); ?>/text/disqusembed" width="0" height="0" id="disqus_iframe"></iframe> 
 */ ?>
-<script type="text/javascript" src="/<?php echo $sf_user->getCulture(); ?>/text/disqusembed" ></script>
+<script type="text/javascript" src="/<?php echo $sf_user->getCulture(); ?>/text/disqusembed" id="disqus_script"></script>
 
 <?php
 /*
