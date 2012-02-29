@@ -3,6 +3,7 @@
 /cache/*
 /log/*
 /secu
+/tools
 #data/sql/*
 /www/cache/m.etapasvi.com/*
 /www/cache/www.etapasvi.com/*
