@@ -45,7 +45,7 @@ class sfSuperCache
   const MAX_SUBCOMMANDS = 500;
   
   // имя файла, в который записываются команды на удаление кэша
-  const REMOVE_CACHE_FILE_NAME = 'remove_cache.sh'; 
+  const REMOVE_CACHE_FILE_NAME = 'log/remove_cache.sh'; 
 
   // список процессов при обновлении кэша в многопоточном режиме
   private static $refersh_cache_process_list = array();

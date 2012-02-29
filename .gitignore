@@ -20,6 +20,8 @@
 /www/backup_download
 /.htaccess
 remove_cache.sh
+/favicon.gif
+/favicon.ico
 
 # чтобы файлы не затирались на бэкендах
 /symfony
