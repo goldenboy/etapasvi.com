@@ -2,6 +2,8 @@
 *.git
 /cache/*
 /log/*
+/secu
+#data/sql/*
 /www/cache/m.etapasvi.com/*
 /www/cache/www.etapasvi.com/*
 #/lib/model/om/*

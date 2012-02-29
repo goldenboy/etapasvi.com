@@ -412,9 +412,9 @@ or translate directly in the area below and click "Send" button to send:<br/><br
     }    
     
     // преобразование 
-    // /home/saynt2day20/etapasvi.com/apps/frontend/modules/contactus/i18n/messages.ru.xml
+    // /home/user/etapasvi.com/apps/frontend/modules/contactus/i18n/messages.ru.xml
     // в
-    // /home/saynt2day20/etapasvi.com/www/uploads/translate/other/contactus.xml        
+    // /home/user/etapasvi.com/www/uploads/translate/other/contactus.xml        
     
     // обрабатывается образцовый язык
     $result_file_name = $this->getModuleFromPath($filename) . '.' . self::OTHER_MESSAGES_CODE . '.' . self::FILE_EXT;    
@@ -437,9 +437,9 @@ or translate directly in the area below and click "Send" button to send:<br/><br
     }    
     
     // преобразование 
-    // /home/saynt2day20/etapasvi.com/apps/frontend/modules/contactus/i18n/messages.ru.xml
+    // /home/user/etapasvi.com/apps/frontend/modules/contactus/i18n/messages.ru.xml
     // в
-    // /home/saynt2day20/etapasvi.com/www/uploads/translate/ru/contactus.ru.xml   
+    // /home/user/etapasvi.com/www/uploads/translate/ru/contactus.ru.xml   
      
     // по имени исходного файла определяем язык
     $culture = $this->getCultureFromPath($filename);         

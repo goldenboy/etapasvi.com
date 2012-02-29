@@ -32,7 +32,7 @@ class sfSuperCache
   const PHP_RUN_COMMAND = '/usr/local/bin/php-5.3';  
     
   // путь к программе для переименования файлов
-  const RENAME_COMMAND = '/home/saynt2day20/opt/rename';    
+  const RENAME_SCRIPT = 'rename.sh';
   
   // количество потоков для обновления кэша при обновлении кэша в многопоточном режиме
   const REFRESH_CACHE_THREADS_COUNT = 5;    
@@ -377,10 +377,13 @@ class sfSuperCache
   		return;
   	}
   	
-  	// find /home/saynt2day20/etapasvi.com/www/cache/www.etapasvi.com/ru/photo/64* -name '*i.html' -type f -exec rename 's/i.html/d.html/' {} \;
+  	// find /home/user/etapasvi.com/www/cache/www.etapasvi.com/ru/photo/64* -name '*i.html' -type f -exec rename 's/i.html/d.html/' {} \;
   	if (is_array($file_path)) {
+  		
+  		$rename_command = sfConfig::get('sf_root_dir') . '/' . self::RENAME_SCRIPT;
+  		
       	$command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
-      	           "' -type f -exec " . self::RENAME_COMMAND . " -f 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
+      	           "' -type f -exec " . $rename_command . " -f 's/".self::CACHE_FILE_EXT."/".self::CACHE_FILE_DELETED_EXT."/' {} \;".
       	           " > /dev/null 2>&1 &";
       	$remote_command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_EXT.
       	           "' -type f -exec rm -f {} \;".
@@ -489,7 +492,7 @@ class sfSuperCache
   	  return false;
   	}
   	 
-  	// find /home/saynt2day20/etapasvi.com/www/cache/www.etapasvi.com/ru/photo/64* -name '*i.html' -type f -exec rename 's/i.html/d.html/' {} \;
+  	// find /home/user/etapasvi.com/www/cache/www.etapasvi.com/ru/photo/64* -name '*i.html' -type f -exec rename 's/i.html/d.html/' {} \;
   	if (is_array($file_path)) {
       	$command = "find " . implode(' ' , $file_path) . " -name '*".self::CACHE_FILE_DELETED_EXT.
       	           "' -type f -exec rename 's/".self::CACHE_FILE_DELETED_EXT."/".self::CACHE_FILE_EXT."/' {} \;".
@@ -579,7 +582,7 @@ class sfSuperCache
   	$cacheDir = self::getCacheDir($domain_name);  	
   	
   	// объём кэша на диске
-  	// [vaduz]$ du -ch /home/saynt2day20/etapasvi.com/www/cache | grep total
+  	// [vaduz]$ du -ch /home/user/etapasvi.com/www/cache | grep total
 	// 20M     total
   	$size = shell_exec('du -ch ' . $cacheDir . ' | grep total');
   	
@@ -591,7 +594,7 @@ class sfSuperCache
   	}
   	
   	// количество файлов (минус .htaccess)
-	// [vaduz]$ find /home/saynt2day20/etapasvi.com/www/cache -type f | wc -l
+	// [vaduz]$ find /home/user/etapasvi.com/www/cache -type f | wc -l
 	// 15
 	$files_command = 'find ' . $cacheDir . ' ' . $path_filter . ' -name \'*' . self::CACHE_FILE_EXT . '\' -type f | wc -l';
   	$files        = shell_exec($files_command); // - 1;
@@ -916,8 +919,8 @@ class sfSuperCache
       $pid = pcntl_waitpid(-1, $status, WNOHANG);
     }
     
-    //$log = file_get_contents('/home/saynt2day20/tmp/refresh_cache_signals.txt');
-    //file_put_contents('/home/saynt2day20/tmp/refresh_cache_signals.txt', $log . "\r\nsigno=" . $signo . ', pid=' . $pid . ', status=' . $status );
+    //$log = file_get_contents('/home/user/tmp/refresh_cache_signals.txt');
+    //file_put_contents('/home/user/tmp/refresh_cache_signals.txt', $log . "\r\nsigno=" . $signo . ', pid=' . $pid . ', status=' . $status );
 
     // Make sure we get all of the exited children
     while ($pid > 0) {
@@ -992,7 +995,7 @@ class sfSuperCache
 	// поэтому решено не запускать Таск симфони, а создавать дочерний процесс, который запустит функцию обновления кэша
 	// http://bsds.etapasvi.com/issues/107
 	
-  	// cd /home/saynt2day20/etapasvi.com && 
+  	// cd /home/user/etapasvi.com && 
   	// ./symfony project:refreshcache --multi_process=0 --console=1 --exclude_path_regexp=XC9waG90b1wvKD8hYWxidW0p 
   	// --include_path_regexp=XC9lblwvcGhvdG9cLzQwMA== > /dev/null 2>&1 &
   	$command = 'cd ' . sfConfig::get('sf_root_dir') . ' && ' 
@@ -1197,7 +1200,7 @@ class sfSuperCache
     $log_list = array();
       
     // получаем список файлов
-    // -rw-r--r-- 1 saynt2day20 pg2567308  28523 2011-06-15 13:37 /tmp/refresh_cache_4729.log
+    // -rw-r--r-- 1 user pg2567308  28523 2011-06-15 13:37 /tmp/refresh_cache_4729.log
   	$log_files_row_info      = shell_exec('ls -lat ' . self::refreshCacheGetLogPath('*'));  	  	
   	$log_files_row_info_list = explode("\n", $log_files_row_info);  	  
   	

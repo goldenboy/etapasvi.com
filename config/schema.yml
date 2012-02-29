@@ -2,7 +2,7 @@
 # ./symfony propel:build-sql  #
 # перестаёт создвать SQL по данному файлу - причина может быть в комментариях. - какой-то косяк в #
 # $this->lines = explode("\n", $this->cleanup($value)); #
-# /home/saynt2day20/etapasvi.com/lib/symfony/yaml/sfYamlParser.php #
+# /lib/symfony/yaml/sfYamlParser.php #
 # 
 # и проверить, что кодировка UTF-8
 #

@@ -51,7 +51,7 @@ EOF;
 
     // saynt2day
     // Добавить поле updated_at в основной объект и в i18n нельзя:
-    // Fatal error: Cannot redeclare BaseNews::getUpdatedAt() in /home/saynt2day20/etapasvi.com/lib/model/om/BaseNews.php on line 1885
+    // Fatal error: Cannot redeclare BaseNews::getUpdatedAt() in /home/user/etapasvi.com/lib/model/om/BaseNews.php on line 1885
     // поэтому добавлен updated_at_extra
     //if ($column = $this->getParameter('update_column'))
     if ( ($column = $this->getParameter('update_column')) || ($column = $this->getParameter('update_column_extra')))
