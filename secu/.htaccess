@@ -1,3 +1,0 @@
-<Files .htpasswd> 
-deny from all 
-</Files>
