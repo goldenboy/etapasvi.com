@@ -31,7 +31,7 @@ var p_cb_vert_padding  = 0;
 // вертикальную позицию в окне
 var cb_window_pos = 0;
 // период вызова resize всплывающего окна
-var cb_resize_period = 1000;
+var cb_resize_period = 100;
 // пространство, изначально выделяемое для комментариев
 var cb_comments_height = 500;
 // после открытия resize всплывающего окна ещё не делаллся
@@ -316,6 +316,7 @@ function resizePhotoColorbox(full_photo_img)
     //$("#colorbox a.photo_frame").css( {"width": (rect_width - p_cb_horiz_padding)} );
 
     cb_width = rect_width+p_cb_horiz_margin;
+    //cb_height = rect_height+cb_comments_height;
     
     // если колорбокс только открылся, делать resize нельзя,
     // т.к. объекты внутри ещё не подгружены    
@@ -339,7 +340,13 @@ function cbResize(scroll_to_pos)
     // т.к. после открытия колорбокс сам делает ресайз
     if (cb_first_resize) {
         cb_first_resize = false;
-        return;
+        // webkit-браузеры при окрытии всплывающего окна выставляют высоту не по контенту, а по своему усмотрению
+        // если вызвать ресайз через какое-то время, высота будет подобрана верно
+        if ($.browser.webkit) {
+            setTimeout(function(){ cbResize(); }, cb_resize_period);
+        } else {
+            return;
+        }
     }
     /*if (!cb_width) {
         setTimeout(function(){ cbResize(); }, cb_resize_period);
@@ -348,6 +355,7 @@ function cbResize(scroll_to_pos)
     //if (!no_scroll_to_top) {
     //$(window).scrollTop(0);
     //}
+
     $.colorbox.resize({width: cb_width});
     // прокручиваем окно к указанной позиции    
     if (typeof scroll_to_pos != "undefined") {
