@@ -33,4 +33,5 @@
     <a href="http://www.youtube.com/user/etapasvi" target="_blank" title="<?php echo __('YouTube') ?>" class="social_youtube"><span><?php echo __('YouTube') ?></span></a>
     <br/>
     <a href="https://picasaweb.google.com/105320929368395530858" target="_blank" title="<?php echo __('Picasa') ?>" class="social_picasa"><span><?php echo __('Picasa') ?></span></a>     
+    <a href="https://github.com/etapasvi/etapasvi.com" target="_blank" title="<?php echo __('GitHub') ?>" class="social_github"><span><?php echo __('GitHub') ?></span></a>
     <a href="http://feeds.feedburner.com/<?php echo $sf_user->getCulture(); ?>/etapasvi" target="_blank" title="<?php echo __('RSS') ?>" class="social_rss"><span><?php echo __('RSS') ?></span></a>
