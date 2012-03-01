@@ -5,13 +5,14 @@ Technology
 ------------
 
 Linux
+Nginx/Apache
 PHP 5.2+
 MySQL 5+
 Symfony 1.3.9
 
 Installation
 ------------
-1. Create file /config/databases.yml:
+1. Create /config/databases.yml file:
     dev:
       propel:
         param:
@@ -32,10 +33,13 @@ Installation
           persistent: true
           pooling: true
 
-2. Execute SQL-queries from /data/sql in your database.
+2. Perform SQL-queries from /data/sql in your database.
 
 3. Clear symfony cache:
     ./symfony cc
+
+4. Nginx config can be obtained from 
+    /www/nginx_web.conf
 
 Database archive
 ------------
