@@ -11,12 +11,12 @@ $_SERVER['HTTP_HOST']        = 'm.etapasvi.com';
 $_SERVER['HTTP_X_FORWARDED_HOST']   = $_SERVER['HTTP_HOST'];
 
 // Если на сервере веб-директория не /www/, заменяем:
-//    [DOCUMENT_ROOT] => /home8/etapasvi/public_html
+//    [DOCUMENT_ROOT] => /home/user/public_html
 //    [REQUEST_URI] => /t.php
 //    [SCRIPT_NAME] => /www/t.php
 //    [PHP_SELF] => /www/t.php
 // на
-//    [DOCUMENT_ROOT] => /home/saynt2day20/etapasvi.com/www
+//    [DOCUMENT_ROOT] => /home/user/etapasvi.com/www
 //    [REQUEST_URI] => /t.php
 //    [SCRIPT_NAME] => /t.php
 //    [PHP_SELF] => /t.php
@@ -38,7 +38,7 @@ if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
 //    [SCRIPT_URI] => http://www.etapasvi.com/frontfrontend2.php/ru/photo/836
 //    [dsid] => 16681366
 //    [ds_id_16681366] => 
-//    [DH_USER] => saynt2day20
+//    [DH_USER] => user
 //    [HTTP_HOST] => www.etapasvi.com
 //    [HTTP_CONNECTION] => close
 //    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 5.1) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.91 Safari/534.30
@@ -53,9 +53,9 @@ if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
 //    [SERVER_ADDR] => 173.236.246.98
 //    [SERVER_PORT] => 80
 //    [REMOTE_ADDR] => 94.241.62.174
-//    [DOCUMENT_ROOT] => /home/saynt2day20/etapasvi.com/www
+//    [DOCUMENT_ROOT] => /home/user/etapasvi.com/www
 //    [SERVER_ADMIN] => webmaster@etapasvi.com
-//    [SCRIPT_FILENAME] => /home/saynt2day20/etapasvi.com/www/frontfrontend2.php
+//    [SCRIPT_FILENAME] => /home/user/etapasvi.com/www/frontfrontend2.php
 //    [REMOTE_PORT] => 4778
 //    [GATEWAY_INTERFACE] => CGI/1.1
 //    [SERVER_PROTOCOL] => HTTP/1.1
@@ -69,33 +69,33 @@ if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
 //    [REQUEST_TIME] => 1308160639
 
 // из консоли
-//    [GEM_HOME] => /home/saynt2day20/.gems/
+//    [GEM_HOME] => /home/user/.gems/
 //    [TERM] => xterm
 //    [SHELL] => /bin/bash
 //    [SSH_CLIENT] => 94.241.62.174 4482 22
 //    [SSH_TTY] => /dev/pts/15
-//    [USER] => saynt2day20
-//    [MAIL] => /home/saynt2day20/Maildir/
-//    [PATH] => /home/saynt2day20/.gems/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games
+//    [USER] => user
+//    [MAIL] => /home/user/Maildir/
+//    [PATH] => /home/user/.gems/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games
 //    [LC_COLLATE] => C
-//    [PWD] => /home/saynt2day20
+//    [PWD] => /home/user
 //    [LANG] => en_US.UTF-8
 //    [PS1] => [\h]$
 //    [SHLVL] => 1
-//    [HOME] => /home/saynt2day20
-//    [LOGNAME] => saynt2day20
-//    [GEM_PATH] => /home/saynt2day20/.gems/:/usr/lib/ruby/gems/1.8
+//    [HOME] => /home/user
+//    [LOGNAME] => user
+//    [GEM_PATH] => /home/user/.gems/:/usr/lib/ruby/gems/1.8
 //    [SSH_CONNECTION] => 94.241.62.174 4482 69.163.225.189 22
 //    [_] => /usr/local/bin/php
-//    [PHP_SELF] => /home/saynt2day20/etapasvi.com/www/frontfrontend2.php
-//    [SCRIPT_NAME] => /home/saynt2day20/etapasvi.com/www/frontfrontend2.php
-//    [SCRIPT_FILENAME] => /home/saynt2day20/etapasvi.com/www/frontfrontend2.php
-//    [PATH_TRANSLATED] => /home/saynt2day20/etapasvi.com/www/frontfrontend2.php
+//    [PHP_SELF] => /home/user/etapasvi.com/www/frontfrontend2.php
+//    [SCRIPT_NAME] => /home/user/etapasvi.com/www/frontfrontend2.php
+//    [SCRIPT_FILENAME] => /home/user/etapasvi.com/www/frontfrontend2.php
+//    [PATH_TRANSLATED] => /home/user/etapasvi.com/www/frontfrontend2.php
 //    [DOCUMENT_ROOT] =>
 //    [REQUEST_TIME] => 1308160648
 //    [argv] => Array
 //        (
-//            [0] => /home/saynt2day20/etapasvi.com/www/frontfrontend2.php
+//            [0] => /home/user/etapasvi.com/www/frontfrontend2.php
 //            [1] => /ru/
 //        )
 //
@@ -115,10 +115,10 @@ if (!empty($_SERVER['SHELL']) || empty($_SERVER['DOCUMENT_ROOT'])) {
 	// http://www.etapasvi.com/frontfrontend2.php/ru/photo/836
 	$_SERVER['SCRIPT_URI']       = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_URL'];
 	
-	// /home/saynt2day20/etapasvi.com/www
+	// /home/user/etapasvi.com/www
 	$_SERVER['DOCUMENT_ROOT']    = preg_replace("/\/[^\/]+$/", '/', $_SERVER['argv'][0]);
 	
-	// /home/saynt2day20/etapasvi.com/www/frontfrontend2.php
+	// /home/user/etapasvi.com/www/frontfrontend2.php
 	$_SERVER['SCRIPT_FILENAME']  = $_SERVER['argv'][0];
 	
 	// /frontfrontend2.php/ru/photo/836

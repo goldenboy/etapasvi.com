@@ -1,16 +1,3 @@
-# если размещать в вышестоящем .htaccess, на некоторых площадках потом
-# не удаётся отключить с помощью Allow
-Require user dev
-
-# Если находимся не на перечисленных доменах, требуется авторизация
-SetEnvIfNoCase Host ^(etapasvi\.com|www.etapasvi\.com|m.etapasvi\.com)$ nopassreq
-
-Order Allow,Deny
-Allow from env=nopassreq
-# внешние IP сервера, на котором запускается пингер
-Allow from 69.163.225.189 173.236.247.197
-Satisfy any
-
 # Отключение просмотра списка файлов директории
 Options -indexes
 

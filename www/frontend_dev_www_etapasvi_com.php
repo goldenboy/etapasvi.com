@@ -1,15 +1,4 @@
 <?php
-// режим отладки
-if ((!empty($_GET['debug_key']) && $_GET['debug_key'] == 'b7a3cc471e49223dbb4a89e7d85ab6df')) {
-
-	// ставим куку на сутки
-	setcookie('debug_key', 'b7a3cc471e49223dbb4a89e7d85ab6df', time()+24*60*60, '/');
-} elseif (empty($_COOKIE['debug_key']) || $_COOKIE['debug_key'] != 'b7a3cc471e49223dbb4a89e7d85ab6df') {
-    die('Access denied');
-}
-
-//phpinfo();
-//exit();
 /*
 Header("Cache-Control: must-revalidate");
 
@@ -27,12 +16,12 @@ if (!in_array(@$_SERVER['REMOTE_ADDR'], array('94.241.41.3', '::1')))
 }*/
 
 // Если на сервере веб-директория не /www/, заменяем:
-//    [DOCUMENT_ROOT] => /home8/etapasvi/public_html
+//    [DOCUMENT_ROOT] => /home/user/public_html
 //    [REQUEST_URI] => /t.php
 //    [SCRIPT_NAME] => /www/t.php
 //    [PHP_SELF] => /www/t.php
 // на
-//    [DOCUMENT_ROOT] => /home/saynt2day20/etapasvi.com/www
+//    [DOCUMENT_ROOT] => /home/user/etapasvi.com/www
 //    [REQUEST_URI] => /t.php
 //    [SCRIPT_NAME] => /t.php
 //    [PHP_SELF] => /t.php

@@ -24,6 +24,7 @@ remove_cache.sh
 /favicon.ico
 /www/cgi-bin
 /www/uploads/misc
+/www/.htpasswd
 
 # чтобы файлы не затирались на бэкендах
 /symfony

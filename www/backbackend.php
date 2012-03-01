@@ -1,12 +1,12 @@
 <?php
 
 // Если на сервере веб-директория не /www/, заменяем:
-//    [DOCUMENT_ROOT] => /home8/etapasvi/public_html
+//    [DOCUMENT_ROOT] => /home/user/public_html
 //    [REQUEST_URI] => /t.php
 //    [SCRIPT_NAME] => /www/t.php
 //    [PHP_SELF] => /www/t.php
 // на
-//    [DOCUMENT_ROOT] => /home/saynt2day20/etapasvi.com/www
+//    [DOCUMENT_ROOT] => /home/user/etapasvi.com/www
 //    [REQUEST_URI] => /t.php
 //    [SCRIPT_NAME] => /t.php
 //    [PHP_SELF] => /t.php
