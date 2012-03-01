@@ -1,16 +1,5 @@
 <?php
-function http_authenticate($user,$pass,$pass_file='.htpasswd',$access_allowed = '',$crypt_type='DES'){
-    // the stuff below is just an example useage that restricts
-    // user names and passwords to only alpha-numeric characters.
-    //if(!ctype_alnum($user)){
-        // invalid user name
-    //    return FALSE;
-    //}
-    
-    //if(!ctype_alnum($pass)){
-        // invalid password
-    //    return FALSE;
-    //}
+function http_authenticate($user,$pass,$pass_file='.htpasswd',$crypt_type='DES'){
     // get the information from the htpasswd file
     if(file_exists($pass_file) && is_readable($pass_file)){
         // the password file exists, open it
@@ -21,6 +10,10 @@ function http_authenticate($user,$pass,$pass_file='.htpasswd',$access_allowed = 
                 list($fuser,$fpass)=explode(':',$line);
 
                 if($fuser==$user){
+                	if ($pass == $fpass){
+                        // authentication success.
+						return $fpass;
+                    }
                     // the submitted user name matches this line
                     // in the file
                     switch($crypt_type){
@@ -43,16 +36,9 @@ function http_authenticate($user,$pass,$pass_file='.htpasswd',$access_allowed = 
                             fclose($fp);
                             return FALSE;
                     }
-                    echo '$test_pw=' . $test_pw;
-                    echo '$fpass=' . $fpass;
                     if($test_pw == $fpass){
                         // authentication success.
-                        fclose($fp);
-						if (in_array($fgroup, $access_allowed)) {
-							return TRUE;	
-						} else {
-							return false;
-						}
+						return $fpass;
                     }else{
                         return FALSE;
                     }
@@ -68,6 +54,26 @@ function http_authenticate($user,$pass,$pass_file='.htpasswd',$access_allowed = 
     }
 }
 
+
+// Basic auth
+if (!$_COOKIE['dev_password'] && count($_GET)) {
+	$get_keys = array_keys($_GET);
+	$dev_password = $_GET[ $get_keys[0] ];
+	$dev_login    = $get_keys[0];
+} else {
+	$dev_password = $_COOKIE['dev_password'];
+	$dev_login    = $_COOKIE['dev_login'];
+}
+$dev_password_encrypted = http_authenticate($dev_login, $dev_password, dirname(__FILE__).'/.htpasswd');
+if ($dev_password_encrypted){
+    // ok
+    setcookie('dev_login', $dev_login, time()+10*60, '/');
+    setcookie('dev_password', $dev_password_encrypted, time()+10*60, '/');
+} else {
+    echo 'Access denied';
+    exit;
+}
+
 // Если на сервере веб-директория не /www/, заменяем:
 //    [DOCUMENT_ROOT] => /home/user/public_html
 //    [REQUEST_URI] => /t.php
@@ -78,16 +84,6 @@ function http_authenticate($user,$pass,$pass_file='.htpasswd',$access_allowed = 
 //    [REQUEST_URI] => /t.php
 //    [SCRIPT_NAME] => /t.php
 //    [PHP_SELF] => /t.php
-
-
-// Basic auth
-if (http_authenticate('dev', $_GET['dev'], dirname(__FILE__).'/.htpasswd')){
-    // ok
-} else {
-    echo 'Access denied';
-    exit;
-}
-
 if (preg_match("/^\/www\/.*/", $_SERVER['SCRIPT_NAME'])) {
 	$_SERVER['DOCUMENT_ROOT'] .= '/www';
 	$_SERVER['SCRIPT_NAME']   = preg_replace("/^\/www/", '', $_SERVER['SCRIPT_NAME']);

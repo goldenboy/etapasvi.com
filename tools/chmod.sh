@@ -23,11 +23,6 @@ find ${PROJECT_DIR}.git/objects/ -type f -exec chmod 444 {} \;
 # кэш страниц
 find ${PROJECT_DIR}www/cache/ -type f -exec chmod 666 {} \;
 
-# .sh скрипты
-find ${PROJECT_DIR} -type f -name '*.sh' -exec chmod 755 {} \;
-chmod 755 ${PROJECT_DIR}symfony
-chmod 755 ${PROJECT_DIR}tools/log_monitor
-
 # файлы логов
 # cache
 # проставляет 777
@@ -42,3 +37,9 @@ find ${PROJECT_DIR}log -type f -exec chmod 666 {} \;
 # кэш симфони
 find ${PROJECT_DIR}cache -type d -exec chmod 777 {} \;
 find ${PROJECT_DIR}cache -type f -exec chmod 666 {} \;
+
+
+# .sh скрипты
+find ${PROJECT_DIR} -type f -name '*.sh' -exec chmod 755 {} \;
+chmod 755 ${PROJECT_DIR}symfony
+chmod 755 ${PROJECT_DIR}tools/log_monitor
