@@ -17,7 +17,9 @@ Symfony 1.3.9
 Installation
 ------------
 
-1. Create /config/databases.yml file:
+1. Create `/config/databases.yml` file:
+
+###
 
     dev:
       propel:
@@ -39,7 +41,7 @@ Installation
           persistent: true
           pooling: true
 
-2. In your database perform SQL-queries from /data/sql folder.
+2. In your database perform SQL-queries from `/data/sql` folder.
 
 3. Clear symfony cache:
 
@@ -53,7 +55,7 @@ Installation
 Database archive
 ------------
 
-[http://www.etapasvi.com/uploads/misc/db.tar.gz.gpg][1]
+[http://www.etapasvi.com/uploads/misc/db.tar.gz.gpg][1] (shared just for backup purposes)
 
 Contributing
 ------------
