@@ -4,15 +4,7 @@ README
 Technology
 ------------
 
-Linux
-
-Nginx/Apache
-
-PHP 5.2+
-
-MySQL 5+
-
-Symfony 1.3.9
+`Linux` `Nginx/Apache` `PHP 5.2+` `MySQL 5+` `Symfony 1.3.9`
 
 Installation
 ------------
