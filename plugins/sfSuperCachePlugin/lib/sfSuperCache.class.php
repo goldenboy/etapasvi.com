@@ -406,13 +406,21 @@ class sfSuperCache
   	//shell_exec($command); 
   	//shell_exec('rm -rf ' . $file_path); 
   	
-  	// запуск удаления кэша на бэкендах
+  	// Запуск удаления кэша на бэкендах  и фронтендах.
   	// Файлы кэша с бэкендов переносятся на основной через определённые промежутки (replicate_cache.sh). 
-  	// При запуске удаления кэша в админке на основном бэкенде, 
-  	// PHP инициирует удаление кэша на всех неосновных бэкендах. 
-  	// При это удаление на неосновных бэкендах выполняется физически, а не переименование в d.html
+  	// При запуске удаления кэша в админке на основном бэкенде, PHP инициирует удаление кэша на всех неосновных бэкендах и фронтендах. 
+  	// При этом удаление на неосновных бэкендах и фронтендах выполняется физически, а не переименование в d.html
   	if ($all_servers) {
-	  	foreach (UserPeer::getServers() as $server) {
+  		$frontends = UserPeer::getServers(UserPeer::SERVERS_FRONTENDS);
+  		$backends  = UserPeer::getServers(UserPeer::SERVERS_BACKENDS);
+  		
+  		$server_list = array_merge($frontends, $backends);
+
+	  	foreach ($server_list as $server) {
+	  		// if server is not active, continue
+	  		if (!$server['active']) {
+	  			continue;
+	  		}
 	  		// на самом себе не запускаем
 	  		if (empty($server['web_dir']) || empty($server['user']) 
 	  			|| $server['web_dir'] == sfConfig::get('sf_web_dir')) {

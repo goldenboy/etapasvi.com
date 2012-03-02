@@ -13,9 +13,10 @@ class TextPeer extends BaseTextPeer
   const TRANSLATE_BETWEEN_DELIMITER = '---';
   
   // Google Docs
-  const GOOGLE_DOC_FRONTENDS = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdGV2QUJlMVQ2RG4yRzJ5NEZjOHZNdlE&single=true&gid=0&output=csv';
-  const GOOGLE_DOC_BACKENDS  = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdHZDdlQtLVNnR0ZmcmQwRUk2X3JFeFE&single=true&gid=0&output=csv';
   const GOOGLE_DOC_OFFER_TRANSLATE = 'https://docs.google.com/spreadsheet/formResponse?formkey=dF91dUtXaFFIcEZwNUptc3Z3Z3N3MVE6MQ&amp;embedded=true&amp;ifq';
+  
+  // Goole Docs content
+  public static $google_doc_cache = array();
 
   public static function urlTranslit($text, $culture = '')
   {
@@ -324,6 +325,11 @@ class TextPeer extends BaseTextPeer
 	 */
 	public function getGoogleDocAsArray($url)
 	{
+		// read from cache
+		if (self::$google_doc_cache[$url]) {
+			return self::$google_doc_cache[$url];
+		}
+		
 	    // указываем, что будем получать документ в CSV
 	    $url = str_replace('output=html', 'output=csv', $url);
 	    if (strstr($url, 'output=csv')) {
@@ -334,7 +340,13 @@ class TextPeer extends BaseTextPeer
         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
             $result[] = $data;            
         }
-        fclose($handle);
+        fclose($handle);   
+        
+        if (!$result) {
+        	throw new Exception("Could not load: {$url}");
+        }
+        
+        self::$google_doc_cache[$url] = $result;
 
 	    return $result;
 	}

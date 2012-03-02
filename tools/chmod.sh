@@ -1,7 +1,7 @@
 #!/bin/sh
 # ”становка разрешений на файлы и директории
 
-SCRIPT_DIR=`which $0 | xargs dirname`
+SCRIPT_DIR=`which $0 | xargs dirname | xargs readlink -m`
 # внимание: может содержать относительный путь
 PROJECT_DIR="${SCRIPT_DIR}/../"
 

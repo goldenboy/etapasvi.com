@@ -7,7 +7,6 @@
 
 class UserPeer extends BaseUserPeer
 {
-	const SERVERS_ALL 		= 'all';
 	const SERVERS_FRONTENDS = 'frontends';
 	const SERVERS_BACKENDS  = 'backends';
 
@@ -1342,37 +1341,66 @@ class UserPeer extends BaseUserPeer
    * Получение информации о серверах.
    *
    */
-  public static function getServers($servers = self::SERVERS_ALL)
+  public static function getServers($servers)
   {
   	// получение списка серверов из Google Docs
   	$servers_array = array();
+  	
+  	if (!$servers) {
+  		return array();
+  	}
+  	
+	$config = self::getToolsConfig();
+  	
   	switch ($servers) {
-  	  case self::SERVERS_ALL:
-  		$servers_array = TextPeer::getGoogleDocAsArray(TextPeer::GOOGLE_DOC_FRONTENDS);
-  		$servers_array = array_merge($servers_array, TextPeer::getGoogleDocAsArray(TextPeer::GOOGLE_DOC_BACKENDS));
-  		break;
   	  case self::SERVERS_BACKENDS:
-  		$servers_array = TextPeer::getGoogleDocAsArray(TextPeer::GOOGLE_DOC_BACKENDS);
+  		$servers_array = TextPeer::getGoogleDocAsArray($config['google_docs']['backends']);
   		break;
   	  case self::SERVERS_FRONTENDS:
-  		$servers_array = TextPeer::getGoogleDocAsArray(TextPeer::GOOGLE_DOC_FRONTENDS);
+  		$servers_array = TextPeer::getGoogleDocAsArray($config['google_docs']['frontends']);
   		break;
   	}
 
   	// цикл по строкам
   	foreach ($servers_array as $row) {
 
-  	  $servers_item = array(
-		'number'      => $row[0],
-		'host'	  	  => $row[1],
-		'owner'	  	  => $row[2],
-		'user'	      => $row[3],
-		'web_dir' 	  => $row[4],
-		'owner_email' => $row[5],
-		'hosting'     => $row[6],
-		'active'      => $row[7],
-		'comment'     => $row[8]
-  	  );
+	  switch ($servers) {
+	  	case self::SERVERS_BACKENDS:
+	  	  $servers_item = array(
+			'number'      	=> $row[0],
+			'host'	  	  	=> $row[1],
+			'owner'	  	  	=> $row[2],
+			'user'	      	=> $row[3],
+			'web_dir' 	  	=> $row[4],
+			'owner_email' 	=> $row[5],
+			'hosting'     	=> $row[6],
+			'db_server'   	=> $row[7],
+			'db_port'     	=> $row[8],
+			'db_username' 	=> $row[9],
+			'db_password' 	=> $row[10],
+			'db_name'     	=> $row[11],
+			'git_remote'    => $row[12],
+			'replicate_db'  => $row[13],
+			'active'     	=> $row[14],
+			'comment'     	=> $row[15]
+	  	  );
+	  	  break;
+	  	  
+	  	case self::SERVERS_FRONTENDS:
+	  	  $servers_item = array(
+			'number'      => $row[0],
+			'host'	  	  => $row[1],
+			'owner'	  	  => $row[2],
+			'user'	      => $row[3],
+			'web_dir' 	  => $row[4],
+			'owner_email' => $row[5],
+			'hosting'     => $row[6],
+			'rsync_www'   => $row[7],
+			'active'      => $row[8],
+			'comment'     => $row[9]
+	  	  );
+	  	  break;
+	  }  	
   	  
   	  // названия полей и сервера, у которых не указн путь на сервере пропускаем
   	  if ($servers_item['active'] == 1) {
@@ -1391,5 +1419,15 @@ class UserPeer extends BaseUserPeer
   	}
 
   	return $servers_list;
+  }
+  
+  /**
+   * Get config from tools/config/config.yml
+   *
+   */
+  public static function getToolsConfig()
+  {	
+	$config = sfYaml::load(sfConfig::get('sf_root_dir') . '/tools/config/config.yml');	
+	return $config;	
   }
 }

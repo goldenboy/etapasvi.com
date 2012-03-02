@@ -809,9 +809,13 @@ class newsActions extends autonewsActions
   	  } else {
   	  	$delete = false;
   	  }
-	  $this->clear_pathes = sfSuperCache::alterCacheByPath($delete, $_POST['path'], $all_cultures);		
-	  // запуск удаления запомненных путей
-  	  sfSuperCache::executRemoveFilePathListProcess();
+  	  try {
+		$this->clear_pathes = sfSuperCache::alterCacheByPath($delete, $_POST['path'], $all_cultures);		
+		// запуск удаления запомненных путей
+	    sfSuperCache::executRemoveFilePathListProcess();
+  	  } catch(Exception $e) {
+  	  	$this->error_message = $e->getMessage();
+  	  }
   	}  	  
   	
   	// Удаление страниц кэша, которое необходимо выполнять при добавлении/изменении любого окнтента.

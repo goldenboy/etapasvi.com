@@ -20,6 +20,11 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
 <br/>
 <?php endif ?>
 
+<?php if ($error_message): ?>
+    <strong><?php echo $error_message ?></strong>
+    <br/><br/>
+<?php endif ?>
+
 <form action="" method="post" >  
     <select name="refresh_cache_domain_name">
         <option value="">all</option>

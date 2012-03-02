@@ -13,9 +13,13 @@ class serversActions extends sfActions
 	
   public function executeShow(sfWebRequest $request)
   {
-    $this->server_list = TextPeer::getGoogleDocAsArray( 
-      TextPeer::GOOGLE_DOC_FRONTENDS 
-    );
+  	$config = UserPeer::getToolsConfig();
+  	
+  	try {
+	    $this->server_list = TextPeer::getGoogleDocAsArray( 
+	      $config['google_docs']['frontends']
+	    );
+  	} catch (Exception $e) {}
   }
   
 }
