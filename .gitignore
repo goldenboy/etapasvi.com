@@ -5,8 +5,8 @@
 /secu
 /tools
 #data/sql/*
-/www/cache/m.etapasvi.com/*
-/www/cache/www.etapasvi.com/*
+/www/cache/*m.etapasvi.com/*
+/www/cache/*www.etapasvi.com/*
 #/lib/model/om/*
 #/lib/model/map/*
 /lib/filter/base/*
