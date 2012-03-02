@@ -5,7 +5,7 @@
 
 // when script lanunched in console HTTP_HOST is not set, so it should be hardcoded
 // otherwise links on website will be generated incorrectly by Symfony
-if (!$_SERVER['HTTP_HOST']) {
+if (!$_SERVER['HTTP_HOST'] || !strstr($_SERVER['HTTP_HOST'], "dev.")) {
 	$_SERVER['HTTP_HOST']        		= 'www.etapasvi.com';
 }
 // используется Yahoo
