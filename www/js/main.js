@@ -31,7 +31,7 @@ var p_cb_vert_padding  = 0;
 // вертикальную позицию в окне
 var cb_window_pos = 0;
 // период вызова resize всплывающего окна
-var cb_resize_period = 100;
+var cb_resize_period = 1000;
 // пространство, изначально выделяемое для комментариев
 var cb_comments_height = 500;
 // после открытия resize всплывающего окна ещё не делаллся
@@ -318,14 +318,7 @@ function resizePhotoColorbox(full_photo_img)
     cb_width = rect_width+p_cb_horiz_margin;
     //cb_height = rect_height+cb_comments_height;
     
-    // если колорбокс только открылся, делать resize нельзя,
-    // т.к. объекты внутри ещё не подгружены    
     cbResize();
-    //setTimeout(function(){ cbResize(); }, cb_resize_period);
-    
-    //setTimeout(function(){ $.colorbox.resize(); }, cb_resize_period);
-    // каждую секунду вызываем resize
-    //setTimeout(function(){ cbResize(); }, cb_resize_period);
 }
 
 // установка размеров всплывающего окна

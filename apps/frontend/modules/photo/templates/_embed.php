@@ -1,7 +1,7 @@
 <?php if ($photo): ?>		
     <div class="box center_text">
         <?php if ($photo->getImg()): ?>		
-            <a href="<?php echo $photo->getUrl(); ?>"><img src="<?php echo $photo->getPreviewUrl(); ?>" alt="<?php echo $photo->getTitle(); ?>" /></a>
+            <a href="<?php echo $photo->getUrl(); ?>" onclick="enlargePhoto('<?php echo $photo->getUrl(); ?>');return false;"><img src="<?php echo $photo->getPreviewUrl(); ?>" alt="<?php echo $photo->getTitle(); ?>" /></a>
         <?php endif ?>
         <?php 
         // если есть Заголовок на языке пользователя, выводим, его
