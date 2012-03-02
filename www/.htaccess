@@ -142,7 +142,7 @@ RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [L,R=301]
 RewriteCond %{DOCUMENT_ROOT}/cache/%{HTTP_HOST}/%{REQUEST_URI}i.html -f
 # Without "AllowOverride FileInfo" one can't user SetEnv and RewriteCond
 RewriteCond %{HTTP_HOST} !^dev\.
-RewriteRule ^(.*)$ http://dev.www.etapasvi.com/ru/1 [L,R=301]
+RewriteRule ^(.*) cache/%{HTTP_HOST}/$1i.html [L]
 
 # для площадки, где веб-директория не совпаадет с www
 RewriteCond %{REQUEST_URI} ^/www/
