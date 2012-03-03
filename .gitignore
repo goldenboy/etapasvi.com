@@ -25,6 +25,8 @@ remove_cache.sh
 /www/cgi-bin
 /www/uploads/misc
 /www/.htpasswd
+/www/nginx_upstreams.conf
+/www/nginx_web_auth.conf
 
 # чтобы файлы не затирались на бэкендах
 /symfony
