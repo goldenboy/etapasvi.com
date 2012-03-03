@@ -19,6 +19,7 @@ chmod -R 640 ${PROJECT_DIR}config/*
 # GIT
 find ${PROJECT_DIR}.git/ -type f -exec chmod 664 {} \;
 find ${PROJECT_DIR}.git/objects/ -type f -exec chmod 444 {} \;
+find ${PROJECT_DIR}.git/hooks/ -type f -exec chmod 755 {} \;
 
 # кэш страниц
 find ${PROJECT_DIR}www/cache/ -type f -exec chmod 666 {} \;
