@@ -50,7 +50,7 @@ RequestHeader unset Request-Range
 
 # Запрет доступа к PHP-скриптам
 # Запрет доступа к .конфигурационным файлам
-RewriteCond %{REQUEST_URI} !^/(frontend_www_etapasvi_com|frontend_m_etapasvi_com|frontend_dev_www_etapasvi_com|backbackend)
+RewriteCond %{REQUEST_URI} !^/(www/)?(frontend_www_etapasvi_com|frontend_m_etapasvi_com|frontend_dev_www_etapasvi_com|backbackend)
 RewriteRule \.(php|cgi|fcgi|conf|htaccess|htpasswd) /errors/404.html
 
 # проверка доменного имени и рекдирект на домен по умолчанию, если передан неверный
