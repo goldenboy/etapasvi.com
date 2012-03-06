@@ -130,6 +130,10 @@ class Photoalbum extends BasePhotoalbum
 		//$authors = explode(',', $this->getAuthor($culture));
 		foreach ($photo_list as $photo) {
 			$author = trim($photo->getAuthor($culture, true));
+			// skip unknown authors
+			if ($author == '?') {
+				continue;
+			}
 			if ($author && !in_array($author, $authors)) {
 				$authors[] = $author;
 			}
