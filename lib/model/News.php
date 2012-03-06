@@ -131,7 +131,10 @@ class News extends BaseNews
 	  if ($path && $file) {
 	    //return PhotoPeer::remoteStorageGetUrl( $this->getThumbPath(), $this->getImg() );
 	    //return UserPeer::SITE_123PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . NewsPeer::PHOTO_DIR . '/' . $path . '/' . $file;
-	    return PhotoPeer::REMOTE_STORAGE_URL . $path . '/' . $file;
+	    
+	    // If file requested without specifying it's size, Picasa would choose size by itself
+	    // for example return 512x512 while real size is 546x546
+	    return PhotoPeer::REMOTE_STORAGE_URL . $path . '/s' . NewsPeer::IMG_WIDTH . '/' . $file;
 	  } else {
 	    return '';	
 	  }
