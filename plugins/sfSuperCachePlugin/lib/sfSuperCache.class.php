@@ -1277,45 +1277,69 @@ class sfSuperCache
   	// текущий путь, начинающийся со /
   	$cur_path = sfContext::getInstance()->getRequest()->getPathInfo();
   	
-  	// lang_list
+  	// get blocks of HTML in which links should be altered
   	preg_match_all(
-  	  "/href=\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . ")\/[^\/\"]+\/)[^\"]+)\"/ism", 
-	  preg_replace("/.*(<div.*id=\"(?:lang_list|culture_list)\".*?<\/div>).*/ism", "$1", $cache_file), 
-	  $matches);
-	
-	if (!empty($matches[1]) && !empty($matches[2])) {
-	  // текущий путь без языка
-	  $cur_parh_without_lang = preg_replace("/^\/[^\/]+\//", "", $cur_path);
-	  foreach ($matches[1] as $i=>$match) {
-	    $replacement[$match] = $matches[2][$i] . $cur_parh_without_lang;
-	  }		  
-	  //$cache_file = strtr($cache_file, $replacement);
-	}
-	
-	// footer
-	// заменяем ссылки в переключателе языка и ссылке на мобильную версию
-	if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' ) {
-	  // мобильная версия
-	  preg_match_all(
-  	    "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 	
-	    preg_replace("/.*(&copy; 2009.*?_trackPageview).*/ism", "$1", $cache_file), 
-	    $matches
-	  );
-	} else {
-	  // полная версия
-	  preg_match_all(
-  	    "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 	
-	    preg_replace("/.*(<div.*id=\"footer\".*?(bubble_click)).*/ism", "$1", $cache_file), 
-	    $matches
-	  );
+  	  "/UDLS(?:.*?)UDLE/ism", 
+	  $cache_file, 
+	  $blocks);
+
+	// get urls of the links
+	foreach ($blocks[0] as $block) {
+	  	preg_match_all(
+	  	  "/href=\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . ")\/(?:" 
+	  	  . implode('|', UserPeer::getCultures())
+	  	  . ")\/)[^\"]+)\"/ism", 
+		  $block, 
+		  $matches);
+		  
+		if (!empty($matches[1]) && !empty($matches[2])) {
+		  // текущий путь без языка
+		  $cur_parh_without_lang = preg_replace("/^\/[^\/]+\//", "", $cur_path);
+		  foreach ($matches[1] as $i=>$match) {
+		    $replacement[$match] = $matches[2][$i] . $cur_parh_without_lang;
+		  }		  
+		} 
 	}
   	
-	if (!empty($matches[1]) && !empty($matches[2])) {
-	  foreach ($matches[1] as $i=>$match) {
-	    $replacement[$match] = $matches[2][$i] . $cur_path;
-	  }		  
-	}
-	
+  	// lang_list
+//  	preg_match_all(
+//  	  "/href=\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . ")\/[^\/\"]+\/)[^\"]+)\"/ism", 
+//	  preg_replace("/.*(<div.*id=\"(?:lang_list|culture_list)\".*?<\/div>).*/ism", "$1", $cache_file), 
+//	  $matches);
+//	
+//	if (!empty($matches[1]) && !empty($matches[2])) {
+//	  // текущий путь без языка
+//	  $cur_parh_without_lang = preg_replace("/^\/[^\/]+\//", "", $cur_path);
+//	  foreach ($matches[1] as $i=>$match) {
+//	    $replacement[$match] = $matches[2][$i] . $cur_parh_without_lang;
+//	  }		  
+//	}
+//	
+//	// footer
+//	// заменяем ссылки в переключателе языка и ссылке на мобильную версию
+//	if ( sfContext::getInstance()->getConfiguration()->getEnvironment() == 'mobile' ) {
+//	  // мобильная версия
+//	  preg_match_all(
+//  	    "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 	
+//	    preg_replace("/.*(&copy; 2009.*?_trackPageview).*/ism", "$1", $cache_file), 
+//	    $matches
+//	  );
+//	} else {
+//	  // полная версия
+//
+//	  preg_match_all(
+//  	    "/\"((http:\/\/(?:" . sfConfig::get('app_domain_name_full') ."|" . sfConfig::get('app_domain_name_mobile') . "))\/[^\"]+)\"/ism", 	
+//	    preg_replace("/.*(id=\"footer\".*?(bubble_click)).*/ism", "$1", $cache_file), 
+//	    $matches
+//	  );
+//	}
+//	  	
+//	if (!empty($matches[1]) && !empty($matches[2])) {
+//	  foreach ($matches[1] as $i=>$match) {
+//	    $replacement[$match] = $matches[2][$i] . $cur_path;
+//	  }		  
+//	}
+
 	if (!empty($replacement)) {
 		$cache_file = strtr($cache_file, $replacement);
 	}

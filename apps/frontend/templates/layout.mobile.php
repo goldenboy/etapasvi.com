@@ -55,7 +55,7 @@
     <?php /* id используется в /lib/symfony/exception/sfError404Exception.class.php */ ?>
 	<div id="footer">        
         <?php include_partial('global/share'); ?>        
-        <div id="culture_list">
+        <div id="culture_list"><!--UDLS-->
             <?php 
                 $uri          = $sf_request->getPathInfo();
                 foreach( UserPeer::getCultures() as $culture) {
@@ -75,7 +75,7 @@
                     <a href="http://<?php echo sfConfig::get('app_domain_name') . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name']?>"><?php echo UserPeer::getCultureIso( $culture )?></a>&nbsp;
                 <?php endif ?>
             <?php endforeach?>
-        </div>
+        <!--UDLE--></div>
 		<?php echo __('Copyright') ?> &copy; 2009-<?php echo date("Y"); ?>, www.eTapasvi.com
         <?php 
             // Генерация ссылки на Полную версию
@@ -85,7 +85,7 @@
                 $url_full = $url_full . 'version/full';
             }
         ?>
-		<br/><?php /*<strong><?php echo __('Mobile') ?></strong> | */ ?><a href="<?php echo $url_full; ?>"><?php echo __('Classic') ?></a>
+		<br/><?php /*<strong><?php echo __('Mobile') ?></strong> | */ ?><!--UDLS--><a href="<?php echo $url_full; ?>"><?php echo __('Classic') ?></a><!--UDLE-->
 	</div>
 </div>
 

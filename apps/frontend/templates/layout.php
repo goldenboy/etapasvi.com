@@ -34,7 +34,7 @@
 	<div id="footer">        
         <div id="f_line"></div>    
         <?php include_partial( 'global/toolbar' ); ?>
-        <span id="lang_plain">
+        <span id="lang_plain"><!--UDLS-->
         <?php 
             $uri          = $sf_request->getPathInfo();
             foreach( UserPeer::getCultures() as $culture) {
@@ -65,13 +65,13 @@
                 |
             <?php endif ?>
         <?php endforeach?>
-        <br/><br/></span>        
+        <!--UDLE--><br/><br/></span>        
         <?php $mobile_url = UserPeer::switchUrlMobile(sfContext::getInstance()->getRequest()->getUri());?>                
         <?php $mobile_url = preg_replace("/\?.*/", '', $mobile_url) ;?>                
         <div id="m_link">
             <br/>
             <a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><img src="http://qrcode.kaywa.com/img.php?s=3&amp;d=<?php echo urlencode($mobile_url); ?>" alt="<?php echo __('Mobile') ?>"/></a>
-            <br/><a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><?php echo __('Mobile') ?></a>
+            <br/><!--UDLS--><a href="<?php echo $mobile_url; ?>" title="<?php echo __('Mobile') ?>"><?php echo __('Mobile') ?></a><!--UDLE-->
         </div>
 	</div>
 </div>
@@ -105,7 +105,7 @@
 	<span class="lang_name lang_selector b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><img src="http://<?php echo $app_domain_name; ?>/i/fg.png" alt="<?php echo UserPeer::getCultureIso( $user_culture );?>" /></span> 
 	<?php /* <span class="slide_arrow lang_selector">▼</span>*/ ?>
     <?php /* id используется в /lib/symfony/exception/sfError404Exception.class.php */ ?>
-	<div id="lang_list">
+	<div id="lang_list"><!--UDLS-->
         <table id="lang_box">
         <?php $i = 0; ?>
 		<?php foreach($user_cultures_data as $culture => $culture_data): ?>	
@@ -129,7 +129,7 @@
             <?php endif ?>
             <?php $i++ ?>
 		<?php endforeach ?>		
-        </table>
+        </table><!--UDLE-->
     </div>	
 </div>
 
