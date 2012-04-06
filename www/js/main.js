@@ -33,7 +33,7 @@ var cb_window_pos = 0;
 // период вызова resize всплывающего окна
 var cb_resize_period = 1000;
 // пространство, изначально выделяемое для комментариев
-var cb_comments_height = 500;
+var cb_comments_height = 398;
 // после открытия resize всплывающего окна ещё не делаллся
 var cb_first_resize = true;
 // URL до открытия всплывающего окна
@@ -45,6 +45,8 @@ var cb_from_photo_page = false;
 // адрес страницы для страницы комментариев до открытия всплывающего окна
 var cb_prev_dusqus_url = '';
 var cb_prev_disqus_identifier = '';
+// циклический ресайз после открытия фото во всплывающем окне
+var first_cyclic_resize = true;
 
 
 $(document).ready(function() {
@@ -316,7 +318,9 @@ function resizePhotoColorbox(full_photo_img)
     //$("#colorbox a.photo_frame").css( {"width": (rect_width - p_cb_horiz_padding)} );
 
     cb_width = rect_width+p_cb_horiz_margin;
-    //cb_height = rect_height+cb_comments_height;
+    cb_height = rect_height+cb_comments_height;
+    
+    first_cyclic_resize = true;
     
     cbResize();
 }
@@ -335,9 +339,17 @@ function cbResize(scroll_to_pos)
         cb_first_resize = false;
         // webkit-браузеры при окрытии всплывающего окна выставляют высоту не по контенту, а по своему усмотрению
         // если вызвать ресайз через какое-то время, высота будет подобрана верно
+        
         if ($.browser.webkit) {
             setTimeout(function(){ cbResize(); }, cb_resize_period);
         } else {
+            return;
+        }
+    } else {
+        // если высота всплывающего окна удовлетворительная, выходим
+        // иначе вызываем ресайз высплывающего окна
+        if (!first_cyclic_resize && $("#cboxLoadedContent").height() >= cb_height) {
+            first_cyclic_resize = false;
             return;
         }
     }
@@ -354,6 +366,10 @@ function cbResize(scroll_to_pos)
     if (typeof scroll_to_pos != "undefined") {
         $(window).scrollTop(scroll_to_pos);
     }
+    
+    // функция ресайза запускается до тех пор, пока высота всплывающего окна не будет адекватной
+    setTimeout(function(){ cbResize(); }, cb_resize_period);
+    first_cyclic_resize = false;
 }
 
 //  модификация ссылок на фотографии (не испольузется)
