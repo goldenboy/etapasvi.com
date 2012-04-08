@@ -12,10 +12,13 @@ if (strstr($module_action, '?')) {
 	<?php $show_prev = $first_page != $page && ($page - $plus_digits >= 2); ?>
 	<?php $show_next = $last_page != $page && ($page + $plus_digits <= $last_page - 1); ?>
 
+	<?php if ($page > 1 && $last_page > 2): ?>
+		<a href="<?php echo url_for($module_action.$splitter.'page='.($page-1)) ?>" class="arrow_prev">&lt;</a>&nbsp;
+	<?php endif ?>
+    
 	<?php if ($show_prev): ?>
 		<a href="<?php echo /*($orderby != '') ? url_for($module_action.$splitter.$orderby) : */url_for($module_action) ?>" class="arrow_prev">1</a>&nbsp;
-		<a href="<?php 
-			echo $page - $plus_digits; ?>" class="arrow_prev">..</a>&nbsp;
+		<a href="<?php echo $page - $plus_digits; ?>" class="arrow_prev">..</a>&nbsp;
 	<?php endif ?>
 	
 	<?php foreach ($page_numbers_list as $page_number): ?>	
@@ -31,5 +34,10 @@ if (strstr($module_action, '?')) {
 		<a href="<?php echo url_for($module_action.$splitter.'page='.($page + $plus_digits)/*.$orderby*/) ?>" class="arrow_next">..</a>&nbsp;
 		<a href="<?php echo url_for($module_action.$splitter.'page='.$last_page/*.$orderby*/) ?>" class="arrow_next"><?php echo $last_page; ?></a>&nbsp;
 	<?php endif ?>
+    
+	<?php if ($page < $last_page): ?>
+		<a href="<?php echo url_for($module_action.$splitter.'page='.($page+1)) ?>" class="arrow_prev">&gt;</a>&nbsp;
+	<?php endif ?>
+    
 </div>
 <?php endif ?>
