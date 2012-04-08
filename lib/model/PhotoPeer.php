@@ -4,8 +4,8 @@ class PhotoPeer extends BasePhotoPeer
 {
   const IMG_THUMB_WIDTH 		= 150;	
   const IMG_THUMB_HEIGHT 		= 150; 
-  const IMG_PREVIEW_WIDTH 		= 500;	
-  const IMG_PREVIEW_HEIGHT 		= 500;    
+  const IMG_PREVIEW_WIDTH 		= 544;	
+  const IMG_PREVIEW_HEIGHT 		= 544;    
   const ITEMS_PER_PAGE 			= 10000; //12;
   const LATEST_COUNT 			= 3;
   

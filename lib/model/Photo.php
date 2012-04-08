@@ -171,8 +171,10 @@ class Photo extends BasePhoto
 
 	  if ($path && $file) {
 	    //return PhotoPeer::remoteStorageGetUrl( $this->getThumbPath(), $this->getImg() );
-	    //return UserPeer::SITE_123PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . PhotoPeer::PHOTO_DIR . '/' . $path . '/' . $file;
-	    return PhotoPeer::REMOTE_STORAGE_URL . $path . '/' . $file;
+	    //return UserPeer::SITE_123PROTOCOL . '://' . $_SERVER['HTTP_HOST'] . '/' . UploadPeer::DIR . '/' . PhotoPeer::PHOTO_DIR . '/' . $path . '/' . $file;        
+	    $picasa_dimention = '/s' . PhotoPeer::IMG_PREVIEW_WIDTH;
+        
+	    return PhotoPeer::REMOTE_STORAGE_URL . $path . $picasa_dimention . '/' . $file;
 	  } else {
 	    return '';	
 	  }
