@@ -62,6 +62,15 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
     </select>
     <input type="submit" value="View" name="log">
 </form>
+
+<hr/>
+<br/>
+
+<form action="" method="post" >
+<input type="submit" name="submit_purge_cloudfront" value="Purge CloudFront Cache">
+<pre><?php echo $cloudfront_result ?></pre>
+</form>
+
 <hr/>
 <br/>
 

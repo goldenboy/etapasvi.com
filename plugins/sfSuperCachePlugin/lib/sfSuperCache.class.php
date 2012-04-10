@@ -1379,6 +1379,58 @@ class sfSuperCache
       return false;
     }
   }
-  
+
+  /**
+   * Вызов метода CloudFlare
+   *
+   * @param unknown_type $method
+   */
+  public static function cloudFlareRequest($method)
+  {
+  	if (!$method) {
+  		return 'CloudLare API method is not defined';
+  	}
+  	
+    $url = "https://www.cloudflare.com/api_json.html";
+    
+    // получаем токен
+    $config = self::getToolsConfig();
+    if (!$config['cloudflare']['api_key']) {
+    	return 'CloudFlare API key is not defined';
+    }
+    
+    if (!$config['cloudflare']['website']) {
+    	return 'CloudFlare website is not defined';
+    }
+    
+    if (!$config['cloudflare']['user']) {
+    	return 'CloudFlare user is not defined';
+    }  
+    
+    $data = array(
+	  "a"   => $method,
+	  "z"   => $config['cloudflare']['website'],
+	  "u"   => $config['cloudflare']['user'],
+	  "tkn" => $config['cloudflare']['api_key'],
+    );
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_VERBOSE, 1);
+    curl_setopt($ch, CURLOPT_FORBID_REUSE, true); 
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data ); 
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    $http_result 	= curl_exec($ch);
+    $error 			= curl_error($ch);
+    $http_code 		= curl_getinfo($ch ,CURLINFO_HTTP_CODE);
+    curl_close($ch);
+   
+    if ($http_code != 200) {
+	  return "Error: $error";
+    } else {
+      return $http_result;
+    }
+  }
   
 }

@@ -6,7 +6,7 @@
 <br/><br/>
 
 <?php include_component('news', 'showText', array('id'=>59)); ?>
-<a href="http://himalaya.socanth.cam.ac.uk/collections/journals/nepaliaawaz/pdf/Nepali_Aawaz_01_09.pdf" class="files pdf" target="_blank">The story of Ram Bahadur Bomjom (Nepali Aawaz fortnightly)</a> [2.87 Mb]<<br/><br/>
+<a href="http://himalaya.socanth.cam.ac.uk/collections/journals/nepaliaawaz/pdf/Nepali_Aawaz_01_09.pdf" class="files pdf" target="_blank">The story of Ram Bahadur Bomjom (Nepali Aawaz fortnightly)</a> [2.87 Mb]<br/><br/>
 
 <ol class="in_text">
 	<li><a href="#family_and_childhood"><?php echo __('Family and Childhood') ?></a></li>

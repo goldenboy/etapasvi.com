@@ -838,6 +838,13 @@ class newsActions extends autonewsActions
   	if (!empty($_POST['info'])) {
 	  $this->cache_info = sfSuperCache::getInfo($_POST['info_domain_name'], $_POST['info_path_filter']);	
   	}
+  	
+  	// очистка кэша CloudFlare
+  	if (!empty($_POST['submit_purge_cloudfront'])) {
+	  $purge_cloudfront_result = sfSuperCache::cloudFlareRequest('fpurge_ts');
+	  $this->cloudfront_result = $purge_cloudfront_result;
+  	}  	
+  	
   }
   
   /**
