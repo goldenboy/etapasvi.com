@@ -1387,24 +1387,33 @@ class sfSuperCache
    */
   public static function cloudFlareRequest($method)
   {
-  	if (!$method) {
-  		return 'CloudLare API method is not defined';
-  	}
+  	$result = array(
+  	  'result' => 'failure',
+  	  'msg'    => ''
+  	);
   	
+  	if (!$method) {
+  	  $result['msg'] = 'CloudLare API method is not defined';
+  	  return $result;
+  	}
+
     $url = "https://www.cloudflare.com/api_json.html";
     
     // получаем токен
-    $config = self::getToolsConfig();
+    $config = UserPeer::getToolsConfig();
     if (!$config['cloudflare']['api_key']) {
-    	return 'CloudFlare API key is not defined';
+  	  $result['msg'] = '';
+  	  return $result;    	
     }
     
     if (!$config['cloudflare']['website']) {
-    	return 'CloudFlare website is not defined';
+  	  $result['msg'] = 'CloudFlare website is not defined';
+  	  return $result;      	
     }
     
     if (!$config['cloudflare']['user']) {
-    	return 'CloudFlare user is not defined';
+  	  $result['msg'] = 'CloudFlare user is not defined';
+  	  return $result;
     }  
     
     $data = array(
@@ -1412,24 +1421,35 @@ class sfSuperCache
 	  "z"   => $config['cloudflare']['website'],
 	  "u"   => $config['cloudflare']['user'],
 	  "tkn" => $config['cloudflare']['api_key'],
+	  "v"   => 1,
     );
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_VERBOSE, 1);
-    curl_setopt($ch, CURLOPT_FORBID_REUSE, true); 
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data ); 
-    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-    $http_result 	= curl_exec($ch);
-    $error 			= curl_error($ch);
-    $http_code 		= curl_getinfo($ch ,CURLINFO_HTTP_CODE);
-    curl_close($ch);
+    try {
+	  $ch = curl_init();
+	  curl_setopt($ch, CURLOPT_VERBOSE, 1);
+	  curl_setopt($ch, CURLOPT_FORBID_REUSE, true); 
+	  curl_setopt($ch, CURLOPT_URL, $url);
+	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	  curl_setopt($ch, CURLOPT_POST, 1);
+	  curl_setopt($ch, CURLOPT_POSTFIELDS, $data ); 
+	  curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+	  $result 		= curl_exec($ch);
+	  $error 			= curl_error($ch);
+	  $http_code 		= curl_getinfo($ch ,CURLINFO_HTTP_CODE);
+	  curl_close($ch);
+    } catch (Exception $e) {
+  	  $result['msg'] = $e->getMessage();   	
+      return $result;
+    }
    
     if ($http_code != 200) {
-	  return "Error: $error";
+  	  $result['msg'] = "Error: $error";
+  	  return $result;
     } else {
-      return $http_result;
+      $result_object = json_decode($result);
+      return array(
+      	'result' => $result_object->result,
+      	'msg' => $result_object->msg,
+      );
     }
   }
   

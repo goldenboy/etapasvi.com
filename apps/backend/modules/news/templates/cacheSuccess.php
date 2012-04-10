@@ -67,8 +67,18 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
 <br/>
 
 <form action="" method="post" >
-<input type="submit" name="submit_purge_cloudfront" value="Purge CloudFront Cache">
-<pre><?php echo $cloudfront_result ?></pre>
+<input type="submit" name="submit_purge_cloudfront" value="Purge CloudFront Cache">   
+    <?php if ($cloudfront_result): ?>
+        <br/>
+        Result: 
+        <?php if ($cloudfront_result['result'] == 'success'): ?>
+            <strong style="color:green">
+        <?php else: ?>
+            <strong style="color:red">
+        <?php endif ?>    
+        <?php echo $cloudfront_result['result'] ?></strong><br/>
+        Msg: <?php echo $cloudfront_result['msg'] ?>
+    <?php endif ?>
 </form>
 
 <hr/>
