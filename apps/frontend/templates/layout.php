@@ -29,12 +29,9 @@
 	</div>
     <div id="menu">
         <?php include_partial('global/menu', array('body_id'=>$body_id /*, 'is_logged_in'=>UserPeer::authIsLoggedIn()*/) ); ?>	
-        <?php include_partial('global/share'); ?>
-    </div>
-	<div id="footer">        
-        <div id="f_line"></div>    
-        <?php include_partial( 'global/toolbar' ); ?>
-        <span id="lang_plain"><!--UDLS-->
+        <?php  include_partial('global/share');  ?>
+        <?php /*<h3 class="menu_title"><?php echo __('Language') ?>:</h3>*/ ?>
+        <span id="lang_column"><!--UDLS-->     
         <?php 
             $uri          = $sf_request->getPathInfo();
             foreach( UserPeer::getCultures() as $culture) {
@@ -44,12 +41,12 @@
             $params = str_replace( $user_cultures, '/', $uri);
             $user_cultures_data = UserPeer::getCulturesData();
             // всё, что идёт после #
-            /*preg_match('/#.*$/', $uri, $matches);
-            if (!empty($matches[0])) {
-                $anchor = $matches[0];
-            } else {
-                $anchor = '';
-            }*/
+            //preg_match('/#.*$/', $uri, $matches);
+            //if (!empty($matches[0])) {
+            //    $anchor = $matches[0];
+            //} else {
+             //   $anchor = '';
+            //}
             $i = 0;
         ?>
         <?php foreach($user_cultures_data as $culture => $culture_data): ?>                                
@@ -57,15 +54,55 @@
             <?php if ($i > count(UserPeer::getCultures())) break; ?>
             
             <?php if ($user_culture == $culture): ?>
-                <strong><?php echo UserPeer::getCultureIso( $culture ) ?></strong> 
+                <u><?php echo UserPeer::getCultureName( $culture ) ?></u>
             <?php else: ?>
-                <a href="http://<?php echo $app_domain_name . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name']?>"><?php echo UserPeer::getCultureIso( $culture )?></a>
+                <a href="http://<?php echo $app_domain_name . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name'] ?>"><?php echo $culture_data['name'] ?></a>
+            <?php endif ?>
+            <?php if ($i != count($user_cultures)): ?>
+                <br/>
+            <?php endif ?>
+        <?php endforeach?>
+        <!--UDLE--></span> 
+
+    </div>
+	<div id="footer">        
+        <div id="f_line"></div>    
+        <?php include_partial( 'global/toolbar' ); ?>
+        <span id="lang_plain"></span>
+        <?php /* <span id="lang_plain"><!--UDLS-->
+        <?php 
+            $uri          = $sf_request->getPathInfo();
+            foreach( UserPeer::getCultures() as $culture) {
+                $user_cultures[] = '/' . $culture . '/';
+            }
+
+            $params = str_replace( $user_cultures, '/', $uri);
+            $user_cultures_data = UserPeer::getCulturesData();
+            // всё, что идёт после #
+            preg_match('/#.*$/', $uri, $matches);
+            //if (!empty($matches[0])) {
+            //    $anchor = $matches[0];
+            //} else {
+            //    $anchor = '';
+            //}
+            $i = 0;
+        ?>
+        <?php foreach($user_cultures_data as $culture => $culture_data): ?>                                
+            <?php $i++ ?>
+            <?php if ($i > count(UserPeer::getCultures())) break; ?>
+            
+            <?php if ($user_culture == $culture): ?>
+                <strong><?php echo UserPeer::getCultureName( $culture ) ?></strong> 
+            <?php else: ?>
+                <a href="http://<?php echo $app_domain_name . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name'] ?>"><?php echo $culture_data['name'] ?></a>
             <?php endif ?>
             <?php if ($i != count($user_cultures)): ?>
                 |
             <?php endif ?>
         <?php endforeach?>
-        <!--UDLE--><br/><br/></span>        
+        <!--UDLE--><br/><br/></span>   
+    */ ?>
+     
         <?php $mobile_url = UserPeer::switchUrlMobile(sfContext::getInstance()->getRequest()->getUri());?>                
         <?php $mobile_url = preg_replace("/\?.*/", '', $mobile_url) ;?>                
         <div id="m_link">

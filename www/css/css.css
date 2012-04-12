@@ -48,7 +48,8 @@
 #body_stories #mi_stories a,
 #body_projects #mi_projects a,
 #body_servers #mi_servers a {
-    border-bottom:1px solid;
+    color: #2C2C2C;
+    text-decoration: underline;
     }
 /*    
 #menu #mi_books a {
@@ -411,22 +412,6 @@ p.p2{
 	margin:0;
     white-space:nowrap;
 	}
-	
-#menu p{
-	text-align:center;
-	margin: 10px 0 10px 0;
-	width: 160px;
-	padding: 2px;
-	}
-
-#menu h3 {
-	background:none repeat scroll 0 0 transparent;
-	color:#ADACBD;
-	font:bold 10px georgia;
-	margin:10px 0 2px;
-	padding:0;
-	text-decoration:none;
-	}
 
 #menu  ul {
 	list-style-image:none;
@@ -434,19 +419,19 @@ p.p2{
 	list-style-type:none;
 	}
 #menu  ul li {
-	line-height:16px;
+	line-height:15px;
 	}
-#menu a:link,
-#menu a:visited { 
+#menu ul a:link,
+#menu ul a:visited { 
 	color:gray;
 	text-decoration:none;
 	}
-#menu a.alert:link,
-#menu a.alert:visited { 
+#menu ul a.alert:link,
+#menu ul a.alert:visited { 
 	color:#df3f3f;
 	}
-#menu a:hover { 
-	border-bottom:1px dotted gray;
+#menu ul a:hover { 
+	text-decoration: underline;
 	}
 #requirements {
 	margin-left: 600px; 
@@ -464,9 +449,9 @@ p.p2{
 	}
 
 #content {
-    min-height:496px;
+    min-height:853px;
     height:auto!important; /* Для всех браузеров кроме <IE6 */
-    height:496px;
+    height:853px;
     }
 #footer {
     font-family:verdana;
@@ -493,7 +478,7 @@ p.p2{
     }
 #share {
     float: left;
-    margin-top:30px;
+    margin-top:3px;
     }
 #share .s_item {
     margin: 9px 0;
@@ -635,6 +620,34 @@ p.p2{
 	text-align: center;
 	padding-left:1px;
 	}
+#lang_column {
+    clear: both;
+    color: #2C2C2C;
+    cursor: pointer;
+    float: left;
+    line-height: 16px;
+    margin-top: 3px;
+	}
+#lang_column a:link,
+#lang_column a:visited { 
+	color:gray;
+	text-decoration:none;
+	}
+#lang_column a.alert:link,
+#lang_column a.alert:visited { 
+	color:#df3f3f;
+	}
+#lang_column a:hover { 
+	text-decoration: underline;
+	}
+.menu_title {
+    clear: left;
+    color: #2C2C2C;
+    float: left;
+    font-weight: bold;
+    margin-top: 3px;
+    }
+
     /*
 #bubble_login {
 	background:transparent url(../i/bg_circle_medium.jpg) no-repeat scroll 0 0;
