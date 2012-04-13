@@ -1,5 +1,5 @@
 <?php if (count($revisionhistory)): ?>
-<a href="javascript:switchRevhistory()" id="revhistory_trigger" class="page_tools_trigger" title="<?php echo __('revision history') ?>"><i class="pt_btn pt_btn_revision_history"></i></a>
+<a href="javascript:switchRevhistory()" id="revhistory_trigger" class="page_tools_trigger" title="<?php echo __('revision history') ?>"><?php /*<i class="pt_btn pt_btn_revision_history"></i>*/ ?><?php echo __('Revision history') ?></a>
 
 <div id="revhistory" class="page_tools">        
     <form action="http://www.w3.org/2007/10/htmldiff" target="_blank" class="box">

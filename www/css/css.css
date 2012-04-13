@@ -449,9 +449,9 @@ p.p2{
 	}
 
 #content {
-    min-height:853px;
+    min-height:496px;
     height:auto!important; /* Для всех браузеров кроме <IE6 */
-    height:853px;
+    height:496px;
     }
 #footer {
     font-family:verdana;
@@ -478,7 +478,7 @@ p.p2{
     }
 #share {
     float: left;
-    margin-top:3px;
+    margin-top: 8px;
     }
 #share .s_item {
     margin: 9px 0;
@@ -576,15 +576,15 @@ p.p2{
 }*/
 
 #bubble_lang { 
-	background: url("../i/interface_sprite.jpg") no-repeat scroll -530px -185px transparent;
+    background: url("../i/interface_sprite.jpg") no-repeat scroll -530px -185px transparent;
     color: #9685BA;
     font: 8pt/16pt georgia;
     height: 55px;
     left: 263px;
-    padding: 46px 0 0 2px;
+    padding: 52px 0 0 2px;
     position: absolute;
     text-align: center;
-    top: -48px;
+    top: -54px;
     width: 90px;
 	}
 .slide_arrow {
@@ -621,25 +621,24 @@ p.p2{
 	padding-left:1px;
 	}
 #lang_column {
-    clear: both;
-    color: #2C2C2C;
-    cursor: pointer;
-    float: left;
+    color: gray;
     line-height: 16px;
-    margin-top: 3px;
+    margin-top: 8px;
+    padding: 0 38px;
+    text-align: center;
+    text-transform: lowercase;
 	}
+#lang_column strong {
+    color: gray;
+    }
 #lang_column a:link,
 #lang_column a:visited { 
-	color:gray;
+    color: gray;
 	text-decoration:none;
 	}
-#lang_column a.alert:link,
-#lang_column a.alert:visited { 
-	color:#df3f3f;
-	}
-#lang_column a:hover { 
-	text-decoration: underline;
-	}
+#lang_column a:hover {
+    text-decoration:underline;
+    }
 .menu_title {
     clear: left;
     color: #2C2C2C;
@@ -1734,8 +1733,15 @@ label.error {
 /* page tools */
 #page_toolbar {
     text-align: center;
-    margin-top: -24px;
-    margin-bottom: 3px;
+    margin-bottom: 11px;
+    margin-top: -21px;
+    }
+#page_toolbar a {
+    text-decoration:none;
+    }
+#page_toolbar a:hover,
+#page_toolbar a.pt_btn_disabled {
+    text-decoration:underline;
     }
 #cboxContent   #page_toolbar {
     margin-top: 0;
@@ -1748,6 +1754,8 @@ label.error {
     display: inline-block;
     height: 16px;
     width: 16px;
+    position: relative;
+    top: 5px;
     }
 .pt_btn_offer_tr {
     background-position: -438px -278px;

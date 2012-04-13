@@ -124,7 +124,7 @@ $(document).ready(function() {
     // текст в футере
     if (footer_text) {
         $("#lang_plain").after(footer_text);
-    }
+    }   
     
     // сокрытие элементов в зависимости от размера окна
     $(window).resize(function() {
