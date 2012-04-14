@@ -133,9 +133,10 @@
 </div>
 
 <div id="bubble_lang">	
+<?php /*
 	<span class="lang_name lang_selector b-fg b-fg_<?php echo strtoupper(UserPeer::getCultureIso( $user_culture ));?>" title="<?php echo UserPeer::getCultureName( $user_culture );?>"><img src="http://<?php echo $app_domain_name; ?>/i/fg.png" alt="<?php echo UserPeer::getCultureIso( $user_culture );?>" /></span> 
-	<?php /* <span class="slide_arrow lang_selector">▼</span>*/ ?>
-    <?php /* id используется в /lib/symfony/exception/sfError404Exception.class.php */ ?>
+	<?php // <span class="slide_arrow lang_selector">▼</span> ?>
+    <?php // id используется в /lib/symfony/exception/sfError404Exception.class.php  ?>
 	<div id="lang_list"><!--UDLS-->
         <table id="lang_box">
         <?php $i = 0; ?>
@@ -162,6 +163,7 @@
 		<?php endforeach ?>		
         </table><!--UDLE-->
     </div>	
+*/ ?>    
 </div>
 
 <div id="bubble_quote">

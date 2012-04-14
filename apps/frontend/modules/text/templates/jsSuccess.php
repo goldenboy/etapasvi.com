@@ -115,7 +115,7 @@ $(document).ready(function() {
 	});
 
 	// select language
-	$("span.lang_selector").colorbox({inline:true, fixed:true, href:"#lang_box", opacity:"0.5", transition:"none", close:"X"});
+	//$("span.lang_selector").colorbox({inline:true, fixed:true, href:"#lang_box", opacity:"0.5", transition:"none", close:"X"});
 
     // перемещение ѕредложени€ перевода наверх
 

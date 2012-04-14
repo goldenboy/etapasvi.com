@@ -623,7 +623,7 @@ p.p2{
 #lang_column {
     color: gray;
     line-height: 16px;
-    margin-top: 8px;
+    margin-top: 6px;
     padding: 0 38px;
     text-align: center;
     text-transform: lowercase;
@@ -1734,7 +1734,7 @@ label.error {
 #page_toolbar {
     text-align: center;
     margin-bottom: 11px;
-    margin-top: -21px;
+    margin-top: -24px;
     }
 #page_toolbar a {
     text-decoration:none;
