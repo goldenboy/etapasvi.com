@@ -68,8 +68,12 @@ $purpose_link = url_for('@projects_index');
 </form>
 </div>
 */ ?>
+
+<?php /*
 <h2 class="center"><?php echo __('SMS') ?></h2>
 <p class="center_text">
+*/ ?>
+
 <?php /*
 <script type="text/javascript">
 smsDonateId = 412067;
@@ -81,8 +85,9 @@ smsDonateLanguage = "english";
 <script type="text/javascript" src="http://donate.smscoin.com/js/smsdonate.js"></script>
 */ 
 ?>
-
+<?php /*
 <script src="http://www.zaypay.com/pay/116564.js" type="text/javascript"></script><a href="http://www.zaypay.com/pay/116564" onclick="ZPayment(this); return false"><img src="http://www.zaypay.com/pay/116564/img" border="0" /></a>  
+*/ ?>
 
 <?php /*
 <script type="text/javascript">
@@ -92,7 +97,9 @@ $(document).ready(function(){
 </script>
 */ ?>
 
+<?php /*
 </p>
+*/ ?>
 
 <h2 class="center"><?php echo __('Bank account') ?></h2>
 <p class="center_text">    
