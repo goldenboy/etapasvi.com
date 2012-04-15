@@ -66,7 +66,7 @@
 		<li id="mi_forum"><a href="http://forum.etapasvi.com" title="<?php echo __('Forum') ?>"><?php echo __('Forum') ?></a></li>
 		<li id="mi_social_tools"><a href="<?php echo url_for('@social_tools', true); ?>" title="<?php echo __('Social Tools') ?>"><?php echo __('Social Tools') ?></a></li>        
 		<li id="mi_search"><a href="<?php echo url_for('@search', true); ?>" title="<?php echo __('Search') ?>"><?php echo __('Search') ?></a></li>
-        <li id="mi_servers"><a href="<?php echo url_for('@servers', true); ?>" title="<?php echo __('Servers') ?>"><?php echo __('Servers') ?></a></li>
+        <?php /* <li id="mi_servers"><a href="<?php echo url_for('@servers', true); ?>" title="<?php echo __('Servers') ?>"><?php echo __('Servers') ?></a></li> */ ?>
 		<li id="mi_contactus"><a href="<?php echo url_for('@contactus', true); ?>" title="<?php echo __('Contact Us') ?>"><?php echo __('Contact Us') ?></a></li>
 	</ul>
 <?php /* 
