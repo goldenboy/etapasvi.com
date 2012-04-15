@@ -420,13 +420,14 @@ function enlargePhoto(href, from_photo_page)
     setUrl(href);
     
     // запоминаем адрес страницы для скрипта комментариев
-    cb_prev_dusqus_url        = disqus_url;
-    cb_prev_disqus_identifier = disqus_identifier;
-    
+    if (typeof disqus_url != "undefined") {
+        cb_prev_dusqus_url        = disqus_url;
+        cb_prev_disqus_identifier = disqus_identifier;
+    }
     cb_prev_title = document.title + "";
     
     cb_first_resize = true;
-    
+
     $.colorbox({
         href:getContentUrl(href),
         initialWidth:min_photo_full_width,
