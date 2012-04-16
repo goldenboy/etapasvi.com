@@ -17,8 +17,8 @@ class textActions extends sfActions
    */
   public function executeJs(sfWebRequest $request)
   {
-  	/*$this->getResponse()->setHttpHeader('Content-type', 'application/javascript; charset=utf-8');
-  	
+  	$this->getResponse()->setHttpHeader('Content-type', 'application/javascript; charset=UTF-8');
+  	/*
     // получаем список Цитат
     $c = new Criteria();
     $c->add(QuoteI18nPeer::TITLE, '', Criteria::NOT_EQUAL);
@@ -38,7 +38,7 @@ class textActions extends sfActions
    */
   public function executeDisqusembed(sfWebRequest $request)
   {
-  	$this->getResponse()->setHttpHeader('Content-type', 'application/javascript; charset=utf-8');
+  	$this->getResponse()->setHttpHeader('Content-type', 'application/javascript; charset=UTF-8');
   	
     $this->embed = file_get_contents( CommentsPeer::DISQUS_EMBED );
     

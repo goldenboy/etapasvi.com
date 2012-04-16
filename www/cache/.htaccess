@@ -1,4 +1,11 @@
-<IfModule mod_headers.c>
+#<IfModule mod_headers.c>
+
+  <FilesMatch "(js|disqusembed)">
+    Header set Content-Type "application/javascript; charset=UTF-8"
+#    Header unset Last-Modified
+#    Header set Expires "Fri, 21 Dec 2020 00:00:00 GMT"
+#    Header set Cache-Control "public, no-transform"
+  </FilesMatch>
 
 #  Header set Expires	"Thu, 17 Mar 2011 18:05:38 GMT"
 #  Header set Cache-Control "private, max-age=86400"
@@ -7,4 +14,4 @@
 # для news/rss
   AddDefaultCharset UTF-8
 
-</IfModule>
+#</IfModule>
