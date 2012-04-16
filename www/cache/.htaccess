@@ -1,6 +1,7 @@
 #<IfModule mod_headers.c>
 
-  <FilesMatch "(js|disqusembed)">
+# we are not sending JS-headers for disqusembed, as in this case it is minimized by CloudFlare and do not work
+  <FilesMatch "js">
     Header set Content-Type "application/javascript; charset=UTF-8"
 #    Header unset Last-Modified
 #    Header set Expires "Fri, 21 Dec 2020 00:00:00 GMT"

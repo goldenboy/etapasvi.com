@@ -38,7 +38,8 @@ class textActions extends sfActions
    */
   public function executeDisqusembed(sfWebRequest $request)
   {
-  	$this->getResponse()->setHttpHeader('Content-type', 'application/javascript; charset=UTF-8');
+  	// we are not sending JS-headers for disqusembed, as in this case it is minimized by CloudFlare and do not work
+  	//$this->getResponse()->setHttpHeader('Content-type', 'application/javascript; charset=UTF-8');
   	
     $this->embed = file_get_contents( CommentsPeer::DISQUS_EMBED );
     
