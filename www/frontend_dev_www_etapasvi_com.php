@@ -72,7 +72,7 @@ if ($dev_password_encrypted){
     setcookie('dev_password', $dev_password_encrypted, time()+10*60, '/');
 } else {
     echo 'Access denied';
-    exit;
+    //exit;
 }
 
 /*

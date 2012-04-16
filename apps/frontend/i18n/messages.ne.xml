@@ -264,9 +264,9 @@
 
 <!--  offer translation -->
       <trans-unit id="1">
-        <source>offer translation</source>
+        <source>Translate</source>
         <target></target>
-      </trans-unit> 
+      </trans-unit>
 
       <trans-unit id="1">
         <source>Error occured while loading form. Please, try again.</source>
@@ -381,12 +381,12 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>embed</source>
+        <source>Embed</source>
         <target></target>
       </trans-unit>
 
       <trans-unit id="1">
-        <source>print version</source>
+        <source>Print version</source>
         <target></target>
       </trans-unit>
 

@@ -264,8 +264,8 @@
 
 <!--  offer translation -->
       <trans-unit id="1">
-        <source>offer translation</source>
-        <target>предложить перевод</target>
+        <source>Translate</source>
+        <target>Перевести</target>
       </trans-unit> 
 
       <trans-unit id="1">
@@ -381,13 +381,13 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>embed</source>
-        <target>встроить</target>
+        <source>Embed</source>
+        <target>Встроить</target>
       </trans-unit>
 
       <trans-unit id="1">
-        <source>print version</source>
-        <target>версия для печати</target>
+        <source>Print version</source>
+        <target>Версия для печати</target>
       </trans-unit>
 
 <!-- 404 -->
