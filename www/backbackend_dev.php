@@ -90,6 +90,11 @@ if (preg_match("/^\/www\/.*/", $_SERVER['SCRIPT_NAME'])) {
 	$_SERVER['PHP_SELF']      = preg_replace("/^\/www/", '', $_SERVER['PHP_SELF']);
 }
 
+
+ini_set( 'error_reporting', 'E_NONE' );
+ini_set( 'display_errors', 'off' );
+error_reporting(E_ALL);
+
 require_once(dirname(__FILE__).'/../config/ProjectConfiguration.class.php');
 
 $configuration = ProjectConfiguration::getApplicationConfiguration('backend', 'dev', true);
@@ -98,9 +103,5 @@ ini_set( 'error_reporting', 'E_ALL' );
 ini_set( 'display_errors', 'on' );
 error_reporting(E_ALL);
 */
-
-ini_set( 'error_reporting', 'E_NONE' );
-ini_set( 'display_errors', 'off' );
-error_reporting(E_ALL);
 
 sfContext::createInstance($configuration)->dispatch();

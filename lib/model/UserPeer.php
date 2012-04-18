@@ -111,7 +111,31 @@ class UserPeer extends BaseUserPeer
 		              'large_text'	 		 => true,
 		              'comments_category_id' => 1110606,
 		              //'feedburner_loc' 		 => 'ru_RU'
-		)
+		),
+		// Mandarin Chinese (Simplified script) - упрошённый китайский
+		'zh_CN'  => array(
+					  'name'          		 => '简体中文',
+		              'iso'           		 => 'zh-cn',
+		              'hieroglyphic'  		 => true,
+		              //'mail_id' 	  		 => '33bb475372',
+		              'comments_category_id' => 686582,
+		              'feedburner_loc' 		 => ''
+		),		
+		// Taiwan / Lee Ming / Traditional Chinese language
+		'he' => array(
+					  'name'     			 => 'עברית',
+                      'iso'      			 => 'he',				
+		              'hieroglyphic'  		 => true,
+		              'comments_category_id' => 1417916,
+		              'feedburner_loc' 		 => ''
+         ),
+		'zh_TW' => array(
+					  'name'     			 => '简体中文',
+                      'iso'      			 => 'zh-tw',				
+		              'hieroglyphic'  		 => true,
+		              'comments_category_id' => 1417917,
+		              'feedburner_loc' 		 => ''
+         ),         
 	);
 	
 	 
@@ -244,7 +268,7 @@ class UserPeer extends BaseUserPeer
       ),
       'zh_TW' => array('name'     => '简体中文',
                        'en'       => 'Chinese (Taiwan)',
-                       'iso'      => 'zh'
+                       'iso'      => 'zh-tw'
       ),
       'zh_HK' => array('name'     => '简体中文',
                        'en'       => 'Chinese (Hong Kong SAR)',

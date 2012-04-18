@@ -93,6 +93,9 @@ RewriteRule ^$ http://%{HTTP_HOST}/pl/ [L,R=301]
 RewriteCond %{HTTP:Accept-Language} ^fr.* [NC]
 RewriteRule ^$ http://%{HTTP_HOST}/fr/ [L,R=301]
 
+RewriteCond %{HTTP:Accept-Language} ^zh-tw [NC]
+RewriteRule ^$ http://%{HTTP_HOST}/zh_TW/ [L,R=301]
+
 RewriteCond %{HTTP:Accept-Language} ^zh.* [NC]
 RewriteRule ^$ http://%{HTTP_HOST}/zh_CN/ [L,R=301]  
 
@@ -117,11 +120,16 @@ RewriteRule ^$ http://%{HTTP_HOST}/ne/ [L,R=301]
 RewriteCond %{HTTP:Accept-Language} ^bn.* [NC]
 RewriteRule ^$ http://%{HTTP_HOST}/bn/ [L,R=301]
 
-RewriteCond %{HTTP:Accept-Language} !^(en.*|ru.*|cs.*|hu.*|pl.*|fr.*|zh.*|vi.*|ja.*|es.*|it.*|et.*|ne.*|bn.*) [NC]
+RewriteCond %{HTTP:Accept-Language} ^he.* [NC]
+RewriteRule ^$ http://%{HTTP_HOST}/he/ [L,R=301]
+
+
+
+RewriteCond %{HTTP:Accept-Language} !^(en.*|ru.*|cs.*|hu.*|pl.*|fr.*|zh.*|vi.*|ja.*|es.*|it.*|et.*|ne.*|bn.*|he.*) [NC]
 RewriteRule ^$ http://%{HTTP_HOST}/en/ [L,R=301]
 
 # Добавление слэша в конце языка: /ru -> /ru/
-RewriteCond %{REQUEST_URI} ^/(www/)?(en|ru|cs|hu|pl|fr|zh_CN|vi|ja|es|it|et|ne|bn)$ [NC]
+RewriteCond %{REQUEST_URI} ^/(www/)?(en|ru|cs|hu|pl|fr|zh_CN|vi|ja|es|it|et|ne|bn|he|zh_TW)$ [NC]
 RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [L,R=301]
 
 #  # Редирект на мобильную версию
