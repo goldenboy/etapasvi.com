@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+<!-- indexSuccess -->
+      <trans-unit id="1">
+        <source>No News</source>
+        <target></target>
+      </trans-unit>
+
+<!-- mainSuccess -->
+      <trans-unit id="14">
+        <source>Latest Photos</source>
+        <target>תמונות אחרונות</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Video</source>
+        <target>וידאו אחרון</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Latest Audio</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>view all</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe to News</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Unsubscribe</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>or</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Recent Comments</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Subscribe to Comments</source>
+        <target></target>
+      </trans-unit>
+
+<!-- showSuccess -->
+      <trans-unit id="1">
+        <source>Original text</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Sangha does not often use the pronoun "I" in speeches, it is added to make translation easier to understand. The use of "I" is in fact rare. First person verbal indications (-chhu) are more common than the personal pronoun "I" (ma, though not to be confused with the same word, which is the post-position for "in" or "at", such as "tyo samay ma" – at that time) and sometimes the word "my" (mero). Most common is the use of "one's own" (aphno).</source>
+        <target></target>
+      </trans-unit>
+      
+<!-- teachingsSuccess -->
+
+	  <trans-unit id="1">
+        <source>Dictionary</source>
+        <target></target>
+      </trans-unit>	  
+
+	 <trans-unit id="1">
+        <source>by Andy Good/LTJ</source>
+        <target></target>
+      </trans-unit>
+
+<!-- feedSuccess -->
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>

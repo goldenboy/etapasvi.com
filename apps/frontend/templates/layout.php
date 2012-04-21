@@ -87,9 +87,9 @@
             <?php if ($i > count(UserPeer::getCultures())) break; ?>
             
             <?php if ($user_culture == $culture): ?>
-                <strong><?php echo UserPeer::getCultureName( $culture ) ?></strong> 
+                <strong title="<?php echo $culture_data['name'] ?>" <?php if ($culture_data['large_text']):?>class="large_culture"<?php endif ?>><?php echo UserPeer::getCultureName( $culture ) ?></strong> 
             <?php else: ?>
-                <a href="http://<?php echo $app_domain_name . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name'] ?>"><?php echo $culture_data['name'] ?></a>
+                <a href="http://<?php echo $app_domain_name . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name'] ?>" <?php if ($culture_data['large_text']): ?>class="large_culture"<?php endif ?>><?php echo $culture_data['name'] ?></a>
             <?php endif ?>
             <?php if ($i != count($user_cultures)): ?>
                 |

@@ -32,7 +32,7 @@
         <?php if ($i > count(UserPeer::getCultures())) break; ?>
         
         <?php if ($user_culture == $culture): ?>
-            <strong><?php echo UserPeer::getCultureIso( $culture ) ?></strong>
+            <strong title="<?php echo $culture_data['name'] ?>"><?php echo UserPeer::getCultureIso( $culture ) ?></strong>
         <?php else: ?>
             <a href="http://<?php echo $app_domain_name . '/'.$culture.$params; ?>" title="<?php echo $culture_data['name'] ?>"><?php echo $culture_data['iso'] ?></a>
         <?php endif ?>

@@ -135,11 +135,23 @@ $(document).ready(function() {
 // сокрытие элементов в зависимости от размера окна
 function onWindowResize() 
 {
-    if ($(window).width() < window_size_hide_el) {
-        $("#wrapper").css('margin-left', '70px');
+
+    if (!$("body").hasClass('direction_rtl')) {
+        // left aligned text
+        if ($(window).width() < window_size_hide_el) {
+            $("#wrapper").css('margin-left', '70px');
+        } else {
+            $("#wrapper").css('margin-left', 'auto');
+        }        
     } else {
-        $("#wrapper").css('margin-left', 'auto');
+        // right aligned text
+        if ($(window).width() < window_size_hide_el) {
+            $("#wrapper").css('margin-right', '70px');
+        } else {
+            $("#wrapper").css('margin-right', 'auto');
+        } 
     }
+
     // если просматриваем фото
     if (page_mode == 'enlarge_photo') {
         // если в функции сделать alert, Mozilla зависает

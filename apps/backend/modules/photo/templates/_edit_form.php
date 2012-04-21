@@ -692,58 +692,6 @@
 </div>
 
 </fieldset>
-<fieldset id="sf_fieldset_it" class="">
-<h2><?php echo __('IT') ?></h2>
-
-
-<div class="form-row">
-  <?php echo label_for('photo[title_i18n_it]', __($labels['photo{title_i18n_it}']), '') ?>
-  <div class="content<?php if ($sf_request->hasError('photo{title_i18n_it}')): ?> form-error<?php endif; ?>">
-  <?php if ($sf_request->hasError('photo{title_i18n_it}')): ?>
-    <?php echo form_error('photo{title_i18n_it}', array('class' => 'form-error-msg')) ?>
-  <?php endif; ?>
-
-  <?php $value = object_input_tag($photo, 'getTitleI18nIt', array (
-  'disabled' => false,
-  'control_name' => 'photo[title_i18n_it]',
-  'maxlength' => 255,
-  'style' => 'width:80%',
-)); echo $value ? $value : '&nbsp;' ?>
-    </div>
-</div>
-
-<div class="form-row">
-  <?php echo label_for('photo[body_i18n_it]', __($labels['photo{body_i18n_it}']), '') ?>
-  <div class="content<?php if ($sf_request->hasError('photo{body_i18n_it}')): ?> form-error<?php endif; ?>">
-  <?php if ($sf_request->hasError('photo{body_i18n_it}')): ?>
-    <?php echo form_error('photo{body_i18n_it}', array('class' => 'form-error-msg')) ?>
-  <?php endif; ?>
-
-  <?php $value = object_textarea_tag($photo, 'getBodyI18nIt', array (
-  'control_name' => 'photo[body_i18n_it]',
-  'disabled' => false,
-  'size' => '118x6',
-)); echo $value ? $value : '&nbsp;' ?>
-    </div>
-</div>
-
-<div class="form-row">
-  <?php echo label_for('photo[author_i18n_it]', __($labels['photo{author_i18n_it}']), '') ?>
-  <div class="content<?php if ($sf_request->hasError('photo{author_i18n_it}')): ?> form-error<?php endif; ?>">
-  <?php if ($sf_request->hasError('photo{author_i18n_it}')): ?>
-    <?php echo form_error('photo{author_i18n_it}', array('class' => 'form-error-msg')) ?>
-  <?php endif; ?>
-
-  <?php $value = object_input_tag($photo, 'getAuthorI18nIt', array (
-  'disabled' => false,
-  'control_name' => 'photo[author_i18n_it]',
-  'maxlength' => 255,
-  'style' => 'width:80%',
-)); echo $value ? $value : '&nbsp;' ?>
-    </div>
-</div>
-
-</fieldset>
 
 <fieldset id="sf_fieldset_ja" class="">
 <h2><?php echo __('JA') ?></h2>
@@ -842,6 +790,320 @@
   <?php $value = object_input_tag($photo, 'getAuthorI18nEs', array (
   'disabled' => false,
   'control_name' => 'photo[author_i18n_es]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+</fieldset>
+
+<fieldset id="sf_fieldset_it" class="">
+<h2><?php echo __('IT') ?></h2>
+
+
+<div class="form-row">
+  <?php echo label_for('photo[title_i18n_it]', __($labels['photo{title_i18n_it}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{title_i18n_it}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{title_i18n_it}')): ?>
+    <?php echo form_error('photo{title_i18n_it}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getTitleI18nIt', array (
+  'disabled' => false,
+  'control_name' => 'photo[title_i18n_it]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[body_i18n_it]', __($labels['photo{body_i18n_it}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{body_i18n_it}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{body_i18n_it}')): ?>
+    <?php echo form_error('photo{body_i18n_it}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_textarea_tag($photo, 'getBodyI18nIt', array (
+  'control_name' => 'photo[body_i18n_it]',
+  'disabled' => false,
+  'size' => '118x6',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[author_i18n_it]', __($labels['photo{author_i18n_it}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{author_i18n_it}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{author_i18n_it}')): ?>
+    <?php echo form_error('photo{author_i18n_it}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getAuthorI18nIt', array (
+  'disabled' => false,
+  'control_name' => 'photo[author_i18n_it]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+</fieldset>
+
+<fieldset id="sf_fieldset_et" class="">
+<h2><?php echo __('ET') ?></h2>
+
+
+<div class="form-row">
+  <?php echo label_for('photo[title_i18n_et]', __($labels['photo{title_i18n_et}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{title_i18n_et}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{title_i18n_et}')): ?>
+    <?php echo form_error('photo{title_i18n_et}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getTitleI18nEt', array (
+  'disabled' => false,
+  'control_name' => 'photo[title_i18n_et]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[body_i18n_et]', __($labels['photo{body_i18n_et}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{body_i18n_et}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{body_i18n_et}')): ?>
+    <?php echo form_error('photo{body_i18n_et}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_textarea_tag($photo, 'getBodyI18nEt', array (
+  'control_name' => 'photo[body_i18n_et]',
+  'disabled' => false,
+  'size' => '118x6',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[author_i18n_et]', __($labels['photo{author_i18n_et}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{author_i18n_et}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{author_i18n_et}')): ?>
+    <?php echo form_error('photo{author_i18n_et}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getAuthorI18nEt', array (
+  'disabled' => false,
+  'control_name' => 'photo[author_i18n_et]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+</fieldset>
+<fieldset id="sf_fieldset_ne" class="">
+<h2><?php echo __('NE') ?></h2>
+
+
+<div class="form-row">
+  <?php echo label_for('photo[title_i18n_ne]', __($labels['photo{title_i18n_ne}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{title_i18n_ne}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{title_i18n_ne}')): ?>
+    <?php echo form_error('photo{title_i18n_ne}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getTitleI18nNe', array (
+  'disabled' => false,
+  'control_name' => 'photo[title_i18n_ne]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[body_i18n_ne]', __($labels['photo{body_i18n_ne}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{body_i18n_ne}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{body_i18n_ne}')): ?>
+    <?php echo form_error('photo{body_i18n_ne}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_textarea_tag($photo, 'getBodyI18nNe', array (
+  'control_name' => 'photo[body_i18n_ne]',
+  'disabled' => false,
+  'size' => '118x6',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[author_i18n_ne]', __($labels['photo{author_i18n_ne}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{author_i18n_ne}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{author_i18n_ne}')): ?>
+    <?php echo form_error('photo{author_i18n_ne}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getAuthorI18nNe', array (
+  'disabled' => false,
+  'control_name' => 'photo[author_i18n_ne]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+</fieldset>
+<fieldset id="sf_fieldset_bn" class="">
+<h2><?php echo __('BN') ?></h2>
+
+
+<div class="form-row">
+  <?php echo label_for('photo[title_i18n_bn]', __($labels['photo{title_i18n_bn}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{title_i18n_bn}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{title_i18n_bn}')): ?>
+    <?php echo form_error('photo{title_i18n_bn}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getTitleI18nBn', array (
+  'disabled' => false,
+  'control_name' => 'photo[title_i18n_bn]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[body_i18n_bn]', __($labels['photo{body_i18n_bn}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{body_i18n_bn}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{body_i18n_bn}')): ?>
+    <?php echo form_error('photo{body_i18n_bn}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_textarea_tag($photo, 'getBodyI18nBn', array (
+  'control_name' => 'photo[body_i18n_bn]',
+  'disabled' => false,
+  'size' => '118x6',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[author_i18n_bn]', __($labels['photo{author_i18n_bn}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{author_i18n_bn}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{author_i18n_bn}')): ?>
+    <?php echo form_error('photo{author_i18n_bn}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getAuthorI18nBn', array (
+  'disabled' => false,
+  'control_name' => 'photo[author_i18n_bn]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+</fieldset>
+<fieldset id="sf_fieldset_he" class="">
+<h2><?php echo __('HE') ?></h2>
+
+
+<div class="form-row">
+  <?php echo label_for('photo[title_i18n_he]', __($labels['photo{title_i18n_he}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{title_i18n_he}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{title_i18n_he}')): ?>
+    <?php echo form_error('photo{title_i18n_he}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getTitleI18nHe', array (
+  'disabled' => false,
+  'control_name' => 'photo[title_i18n_he]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[body_i18n_he]', __($labels['photo{body_i18n_he}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{body_i18n_he}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{body_i18n_he}')): ?>
+    <?php echo form_error('photo{body_i18n_he}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_textarea_tag($photo, 'getBodyI18nHe', array (
+  'control_name' => 'photo[body_i18n_he]',
+  'disabled' => false,
+  'size' => '118x6',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[author_i18n_he]', __($labels['photo{author_i18n_he}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{author_i18n_he}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{author_i18n_he}')): ?>
+    <?php echo form_error('photo{author_i18n_he}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getAuthorI18nHe', array (
+  'disabled' => false,
+  'control_name' => 'photo[author_i18n_he]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+</fieldset>
+<fieldset id="sf_fieldset_zh_tw" class="">
+<h2><?php echo __('ZH_TW') ?></h2>
+
+
+<div class="form-row">
+  <?php echo label_for('photo[title_i18n_zh_tw]', __($labels['photo{title_i18n_zh_tw}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{title_i18n_zh_tw}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{title_i18n_zh_tw}')): ?>
+    <?php echo form_error('photo{title_i18n_zh_tw}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getTitleI18nZhTw', array (
+  'disabled' => false,
+  'control_name' => 'photo[title_i18n_zh_tw]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[body_i18n_zh_tw]', __($labels['photo{body_i18n_zh_tw}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{body_i18n_zh_tw}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{body_i18n_zh_tw}')): ?>
+    <?php echo form_error('photo{body_i18n_zh_tw}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_textarea_tag($photo, 'getBodyI18nZhTw', array (
+  'control_name' => 'photo[body_i18n_zh_tw]',
+  'disabled' => false,
+  'size' => '118x6',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[author_i18n_zh_tw]', __($labels['photo{author_i18n_zh_tw}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{author_i18n_zh_tw}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{author_i18n_zh_tw}')): ?>
+    <?php echo form_error('photo{author_i18n_zh_tw}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getAuthorI18nZhTw', array (
+  'disabled' => false,
+  'control_name' => 'photo[author_i18n_zh_tw]',
   'maxlength' => 255,
   'style' => 'width:80%',
 )); echo $value ? $value : '&nbsp;' ?>

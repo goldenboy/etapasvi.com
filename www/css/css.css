@@ -148,6 +148,11 @@ h2.underlined {
 .direction_rtl h2 { 
     text-align: right;
 	}
+.hieroglyphic #content .title,
+.hieroglyphic #content h1,
+.hieroglyphic #content h2 {
+    font-weight: bold;
+    }
 
 h3 { 
     clear: both;
@@ -464,10 +469,16 @@ p.p2{
 #footer a img {
     text-decoration:none;
     }
+.large_culture {
+    font-size: 14px;
+    }
 /* IE 7 */
 *:first-child+html #footer {
     /*margin:20px 0 40px;*/
     margin:0;
+    }
+#lang_plain {
+    font-size: 11px;
     }
 #f_line {
     border-bottom: 1px solid #ADACBD;
@@ -624,10 +635,26 @@ p.p2{
     color: gray;
     line-height: 16px;
     margin-top: 6px;
-    padding: 0 38px;
+    padding: 0;
     text-align: center;
     text-transform: lowercase;
 	}
+.hieroglyphic #content #lang_column,
+.large_text #lang_column {
+    font-family: verdana;
+    font-size: 9.5px;
+    line-height: 13px;
+    }
+.hieroglyphic #content #lang_column *,
+.large_text #lang_column * {
+    font-family: verdana;
+    font-size: 9.5px;
+    }
+.hieroglyphic #content .page_tools_trigger,
+.large_text .page_tools_trigger {
+    font-family: verdana;
+    font-size: 9.5px;
+    }
 #lang_column strong {
     color: gray;
     }
@@ -773,6 +800,9 @@ textarea,
 	font-weight: normal;
 	font-size: 1em;
 	}
+.large_text .gsc-search-button {
+    height: 26px;
+    }
 input[type="checkbox"], 
 input[type="radio"] {
     border: 0;
@@ -1050,6 +1080,10 @@ html #disqus_thread {
     text-align:center;
     margin:11px 0;
     }
+.large_text .navigation *,
+.hieroglyphic #content .navigation * {
+    font-size: 12px;
+    }
 .nav_selected {
     background:none repeat scroll 0 0 #adacbd;
     color:white;
@@ -1286,6 +1320,10 @@ img.newsitem_img {
     height: 16px;
     width: 16px;     
     }
+.direction_rtl #content .prev_next {
+    direction: ltr;
+    }
+
 .prev_icon {
     background-position: -342px -294px;
     }
@@ -1359,6 +1397,14 @@ img.newsitem_img {
 	color:#867d4a;
 	}
 
+.goto_section {
+    margin: 0;
+    float: right;
+    overflow: hidden;
+    }
+.direction_rtl .goto_section {
+    float: left;
+    }
 
 .prev_next img {
 	vertical-align: middle;
@@ -1429,6 +1475,9 @@ label.error {
 .st_container a {
     margin: 0 -5px 0 0;
     }
+.large_text #content .st_container {
+    font-size: 10px;
+    }
 
 /* related */
 .related {
@@ -1446,19 +1495,94 @@ label.error {
 	}
 .direction_rtl .related div {
     float: right;
+    margin-right:0;
+    margin-left:10px;
+    text-align: right;
 	}
 .related img,
 .related p {
     padding: 0;
     margin: 0;
     text-align: left;
+    }
+.direction_rtl .related p {
+    text-align: right;
     }   
 .related .video_list td {
     border: 0;
     padding: 0;
     text-align: left;
-}
+    }
+.direction_rtl .related td {
+    text-align: right;
+    }
 
+/* direction_rtl */
+.direction_rtl #menu {
+    left: auto;
+	right: 584px;
+	}
+.direction_rtl #bubble_click {
+    left: auto;
+	right: -308px;
+	}
+.direction_rtl #bubble_quote  {
+    left: auto;
+	right: -241px;
+	}
+.direction_rtl #bubble_mantra   {
+    left: auto;
+	right: -2px;
+	}
+.direction_rtl #header   {
+    left: auto;
+	right: -266px;
+	}
+.direction_rtl #header #bubble_title   {
+    float: left;
+	}
+.direction_rtl #bubble_sound   {
+    right: 450px;
+	}
+.direction_rtl #bubble_lang   {
+    left: auto;
+    right: 263px;
+	}
+.direction_rtl #menu ul   {
+    float: right;
+	}
+.direction_rtl #menu  {
+    text-align: right;
+	}
+/* IE */
+.direction_rtl #menu {
+    //left: 684px;
+	}
+.direction_rtl #bubble_click,
+.direction_rtl #bubble_title ,
+.direction_rtl #bubble_mantra ,
+.direction_rtl #bubble_lang ,
+.direction_rtl #bubble_quote ,
+.direction_rtl #bubble_sound {
+    background-image:url("../i/interface_sprite_rtl.jpg");
+    }
+.direction_rtl #header {    
+    width: 848px;
+    }
+.direction_rtl #header #bubble_title,
+.direction_rtl #header #bubble_title span {
+    color: white;
+    }
+.direction_rtl #share {
+    width: 300px;
+    }
+.direction_rtl #share .s_item {
+    float: right;
+    overflow: visible;
+    clear: both;
+    }
+
+    
 /*	Пиктограммы государственных флагов в спрайте */
 /*	@author Артём Поликарпов, artpolikarpov.ru (artpolikarpov@gmail.com) */
 /*  @author Никита Иванов (исходные пиктограммы флагов), nickivanov.ru (nickivanov@nickivanov.ru) */

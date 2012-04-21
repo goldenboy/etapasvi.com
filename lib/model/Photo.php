@@ -244,7 +244,7 @@ class Photo extends BasePhoto
 	 * @return unknown
 	 */
 	public function getRssTitle() {
-	  return $this->getTitle();
+	  return $this->getTitle(null, true);
 	}
 	
 	/**

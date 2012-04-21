@@ -65,7 +65,7 @@ generator:
           - author_i18n_fr
           - translated_by_i18n_fr
           - link_i18n_fr
-        "zh_CN":
+        "ZH_CN":
           - title_i18n_zh_CN
           - extradate_i18n_zh_CN
           - shortbody_i18n_zh_CN
@@ -73,7 +73,7 @@ generator:
           - author_i18n_zh_CN
           - translated_by_i18n_zh_CN
           - link_i18n_zh_CN
-        "vi":
+        "VI":
           - title_i18n_vi
           - extradate_i18n_vi
           - shortbody_i18n_vi
@@ -81,7 +81,7 @@ generator:
           - author_i18n_vi
           - translated_by_i18n_vi
           - link_i18n_vi
-        "de":
+        "DE":
           - title_i18n_de
           - extradate_i18n_de
           - shortbody_i18n_de
@@ -89,7 +89,7 @@ generator:
           - author_i18n_de
           - translated_by_i18n_de
           - link_i18n_de
-        "it":
+        "IT":
           - title_i18n_it
           - extradate_i18n_it
           - shortbody_i18n_it
@@ -97,7 +97,7 @@ generator:
           - author_i18n_it
           - translated_by_i18n_it
           - link_i18n_it
-        "jp":
+        "JP":
           - title_i18n_ja
           - extradate_i18n_ja
           - shortbody_i18n_ja
@@ -137,6 +137,22 @@ generator:
           - author_i18n_bn
           - translated_by_i18n_bn
           - link_i18n_bn
+        "HE":
+          - title_i18n_he
+          - extradate_i18n_he
+          - shortbody_i18n_he
+          - body_i18n_he
+          - author_i18n_he
+          - translated_by_i18n_he
+          - link_i18n_he
+        "ZH_TW":
+          - title_i18n_zh_tw
+          - extradate_i18n_zh_tw
+          - shortbody_i18n_zh_tw
+          - body_i18n_zh_tw
+          - author_i18n_zh_tw
+          - translated_by_i18n_zh_tw
+          - link_i18n_zh_tw
       fields:
         img:
           name: Image
@@ -506,5 +522,53 @@ generator:
           name: Translated by
           params: disabled=false maxlength=255 style="width:80%"
         link_i18n_bn:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_he:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_he:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_he:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_he:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_he:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_he:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_he:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_zh_tw:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_zh_tw:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_zh_tw:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_zh_tw:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_zh_tw:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_zh_tw:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_zh_tw:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"

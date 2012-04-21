@@ -79,13 +79,6 @@ generator:
           - title_i18n_de
           - body_i18n_de
           - author_i18n_de
-        "IT":
-          - img_i18n_it
-          - _img_i18n_it
-          - code_i18n_it
-          - title_i18n_it
-          - body_i18n_it
-          - author_i18n_it
         "JA":
           - img_i18n_ja
           - _img_i18n_ja
@@ -100,6 +93,13 @@ generator:
           - title_i18n_es
           - body_i18n_es
           - author_i18n_es
+        "IT":
+          - img_i18n_it
+          - _img_i18n_it
+          - code_i18n_it
+          - title_i18n_it
+          - body_i18n_it
+          - author_i18n_it
         "ET":
           - img_i18n_et
           - _img_i18n_et
@@ -107,6 +107,34 @@ generator:
           - title_i18n_et
           - body_i18n_et
           - author_i18n_et
+        "NE":
+          - img_i18n_ne
+          - _img_i18n_ne
+          - code_i18n_ne
+          - title_i18n_ne
+          - body_i18n_ne
+          - author_i18n_ne
+        "BN":
+          - img_i18n_bn
+          - _img_i18n_bn
+          - code_i18n_bn
+          - title_i18n_bn
+          - body_i18n_bn
+          - author_i18n_bn
+        "HE":
+          - img_i18n_he
+          - _img_i18n_he
+          - code_i18n_he
+          - title_i18n_he
+          - body_i18n_he
+          - author_i18n_he
+        "ZH_TW":
+          - img_i18n_zh_tw
+          - _img_i18n_zh_tw
+          - code_i18n_zh_tw
+          - title_i18n_zh_tw
+          - body_i18n_zh_tw
+          - author_i18n_zh_tw
       fields:
 
         img_i18n_en:
@@ -287,27 +315,7 @@ generator:
           params: disabled=false size=118x6
         author_i18n_de:
           name: Author
-          params: disabled=false maxlength=255 style="width:80%"
-          
-        img_i18n_it:
-          name: Image
-          params: disabled=false maxlength=255 style="width:80%"
-          _img_i18n_it:
-          name: Image   
-        code_i18n_it:
-          name: Code
-          type: textarea_tag
-          params: disabled=false size=118x6
-        title_i18n_it:
-          name: Title
-          params: disabled=false maxlength=255 style="width:80%"
-        body_i18n_it:
-          name: Body
-          type: textarea_tag
-          params: disabled=false size=118x6
-        author_i18n_it:
-          name: Author
-          params: disabled=false maxlength=255 style="width:80%"
+          params: disabled=false maxlength=255 style="width:80%"         
 
         img_i18n_ja:
           name: Image
@@ -349,6 +357,26 @@ generator:
           name: Author
           params: disabled=false maxlength=255 style="width:80%"
 
+        img_i18n_it:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_it:
+          name: Image   
+        code_i18n_it:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_it:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_it:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_it:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
         img_i18n_et:
           name: Image
           params: disabled=false maxlength=255 style="width:80%"
@@ -366,5 +394,85 @@ generator:
           type: textarea_tag
           params: disabled=false size=118x6
         author_i18n_et:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        img_i18n_ne:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_ne:
+          name: Image   
+        code_i18n_ne:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_ne:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_ne:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_ne:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        img_i18n_bn:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_bn:
+          name: Image   
+        code_i18n_bn:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_bn:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_bn:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_bn:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        img_i18n_he:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_he:
+          name: Image   
+        code_i18n_he:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_he:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_he:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_he:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        img_i18n_zh_tw:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_zh_tw:
+          name: Image   
+        code_i18n_zh_tw:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_zh_tw:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_zh_tw:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_zh_tw:
           name: Author
           params: disabled=false maxlength=255 style="width:80%"

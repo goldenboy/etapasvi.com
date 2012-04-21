@@ -84,7 +84,7 @@ class Video extends BaseVideo
 	 * @return unknown
 	 */
 	public function getRssTitle() {
-	  return $this->getTitle();
+	  return $this->getTitle(null, true);
 	}
 	
 	/**

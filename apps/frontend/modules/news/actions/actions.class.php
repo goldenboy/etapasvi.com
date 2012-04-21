@@ -179,6 +179,7 @@ class newsActions extends sfActions
 	    );
 	  }
 	}
+
 	$this->items = $items;  	
   }
   
@@ -232,18 +233,19 @@ LIMIT 0, 50
  	// Добавляем SELECT'ы выбора элементов
 	$sub_query = '';
     $sub_query_counter = 0;
+    $cur_culture = sfContext::getInstance()->getUser()->getCulture();
     
-    // добавляем в ваборку каждый тип элемента
+    // добавляем в выборку каждый тип элемента
 	foreach (NewsPeer::$feed_item_types as $type) {
 	  $table_name = strtolower($type);
 	  $c = new Criteria();
 	  
 	  // для RSS вызывается специальный метод, т.к. Фото без названий не должны показываться
-	  if (!$rss) {
-	    $fn = array($type . 'Peer', 'addVisibleCriteria');
-	  } else {
-	  	$fn = array($type . 'Peer', 'addVisibleCriteria');
-	  }	  
+	  //if (!$rss) {
+	  $fn = array($type . 'Peer', 'addVisibleCriteria');
+	  //} else {
+	  //	$fn = array($type . 'Peer', 'addVisibleCriteria');
+	  //}	  
 	  
 	  try {
 	    call_user_func( $fn, $c );  	
@@ -260,27 +262,59 @@ LIMIT 0, 50
 	    $criteria_sql      = str_replace('SQL (may not be complete): ', '', $criteria_sql_list[1]);
 	    
 	    // если в условии нет таблицы i18n, добавляем, чтобы получить updated_at_extra
-	    if (!strstr($criteria_sql, '_i18n')) {
-	    	$criteria_sql = str_replace('FROM ', "FROM {$table_name}_i18n, ", $criteria_sql);
-	    }	    
+	    //if (!strstr($criteria_sql, '_i18n')) {
+	    //	$criteria_sql = str_replace(' WHERE ', ", {$table_name}_i18n WHERE ", $criteria_sql);
+	    //}	    
+	    // join clause
+	    if ($rss && (constant($table_name . 'Peer::ALL_CULTURES') || in_array($table_name, array('photo', 'audio')))) {
+	    	if (in_array($table_name, array('photo', 'audio'))) {
+	    		$join_sql = "FROM {$table_name} LEFT JOIN {$table_name}_i18n ON ({$table_name}_i18n.ID = {$table_name}.ID 
+	    						AND ({$table_name}_i18n.CULTURE = '{$cur_culture}' OR {$table_name}_i18n.CULTURE = '" . sfConfig::get('sf_default_culture') . "')) WHERE";
+	    	} else {
+	    		$join_sql = "FROM {$table_name} LEFT JOIN {$table_name}_i18n ON ({$table_name}_i18n.ID = {$table_name}.ID 
+	    						AND ({$table_name}_i18n.CULTURE = '{$cur_culture}' OR 
+	    						({$table_name}.ALL_CULTURES = 1 AND {$table_name}_i18n.CULTURE = '" . sfConfig::get('sf_default_culture') . "'))) WHERE";
+	    	}
+	    } else {
+	    	$join_sql = "FROM {$table_name} LEFT JOIN {$table_name}_i18n ON ({$table_name}_i18n.ID = {$table_name}.ID 
+	    		AND {$table_name}_i18n.CULTURE = '{$cur_culture}') WHERE";	
+	    }
+	    
+	    $criteria_sql = preg_replace(
+	    	'/FROM.*WHERE/', 
+	    	$join_sql, 
+	    	$criteria_sql
+	    );
 	    
 	    // прописываем выбираемые параметры
 	    $criteria_sql      = str_replace(
 	    	'SELECT  FROM', 
-	    	"SELECT {$table_name}.id, if({$table_name}.updated_at > {$table_name}_i18n.updated_at_extra, {$table_name}.updated_at, {$table_name}_i18n.updated_at_extra) as updated_at, '" 
+	    	"SELECT {$table_name}.id, if({$table_name}.updated_at > {$table_name}_i18n.updated_at_extra || {$table_name}_i18n.updated_at_extra is NULL, 
+	    	{$table_name}.updated_at, {$table_name}_i18n.updated_at_extra) as updated_at, '" 
 	    	. $type . "' as item_type FROM", 
 	    	$criteria_sql
 		);
 		
 	    //if (strstr($criteria_sql, '_i18n')) {
-    	$criteria_sql .= " and {$table_name}_i18n.id = {$table_name}.id 
-    					   and {$table_name}_i18n.culture = '" .  sfContext::getInstance()->getUser()->getCulture() . "'";
+    	//$criteria_sql .= " and {$table_name}_i18n.id = {$table_name}.id ";
+    	
+    	// items with ALL_CULTURE attribute are shown if item exists in the current language or ALL_CULTURES = 1
+    	// photo and audio are shown always
+    	if (constant($table_name . 'Peer::ALL_CULTURES')) {
+    		if (!$rss) {
+    			$criteria_sql .= " and ({$table_name}_i18n.culture = '" .  $cur_culture . "' OR " .
+    						       constant($table_name . 'Peer::ALL_CULTURES') . " = 1) ";
+    		}
+    	} elseif (!in_array($table_name, array('photo', 'audio'))) {
+    		$criteria_sql .= " and {$table_name}_i18n.culture = '" .  $cur_culture . "'";
+    	}
+    					   
 	    //}
 	    
 	    // для RSS 
 	    if ($rss) {
 	    	// ограничиваем по дате
-	    	$criteria_sql .= " and updated_at >= '" . date("Y-m-d H:i:s", strtotime(NewsPeer::RSS_PERIOD)) . "' ";
+	    	//$criteria_sql .= " and updated_at >= '" . date("Y-m-d H:i:s", strtotime(NewsPeer::RSS_PERIOD)) . "' ";
 	    	// выбираются только элементы с заголовками
 	    	$criteria_sql .= " and {$table_name}_i18n.title != '' ";
 	    }
@@ -290,6 +324,8 @@ LIMIT 0, 50
 	    foreach ($criteria_params[1] as $i=>$param) {
 	      $criteria_sql = str_replace(':p' . ($i + 1), $param, $criteria_sql);
 	    }	    
+	    
+	    $criteria_sql .= " GROUP BY {$table_name}.ID ";
 	    
 	    if ($sub_query_counter > 0) {
 	      $sub_query .= ' UNION ';
@@ -356,6 +392,7 @@ LIMIT 0, 50
 	
 	// группируем элементы по типам
 	$grouped_items = array();
+
 	foreach ($all_items as $i=>$item) {
 
 	  if ($i != 0 && $item['item_type'] == $all_items[$i - 1]['item_type']) {
@@ -398,7 +435,7 @@ LIMIT 0, 50
 	    
 		$this->feed_list[] = array('type'=>$type, 'list'=>$list_sorted);
 	}
-	
+
 	// список номеров страниц навигации - 5 влево и вправо от текущей страницы
 	$this->page_numbers_list = array();
 	for($i = $this->page - $plus_digits; $i < $this->page + $plus_digits; $i++) {

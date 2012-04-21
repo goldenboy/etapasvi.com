@@ -621,6 +621,62 @@ class newsActions extends autonewsActions
     {
       $this->news->setLinkI18nBn($news['link_i18n_bn']);
     }
+if (isset($news['title_i18n_he']))
+    {
+      $this->news->setTitleI18nHe($news['title_i18n_he']);
+    }
+    if (isset($news['extradate_i18n_he']))
+    {
+      $this->news->setExtradateI18nHe($news['extradate_i18n_he']);
+    }
+    if (isset($news['shortbody_i18n_he']))
+    {
+      $this->news->setShortbodyI18nHe($news['shortbody_i18n_he']);
+    }
+    if (isset($news['body_i18n_he']))
+    {
+      $this->news->setBodyI18nHe($news['body_i18n_he']);
+    }
+    if (isset($news['author_i18n_he']))
+    {
+      $this->news->setAuthorI18nHe($news['author_i18n_he']);
+    }
+    if (isset($news['translated_by_i18n_he']))
+    {
+      $this->news->setTranslatedByI18nHe($news['translated_by_i18n_he']);
+    }
+    if (isset($news['link_i18n_he']))
+    {
+      $this->news->setLinkI18nHe($news['link_i18n_he']);
+    }
+    if (isset($news['title_i18n_zh_tw']))
+    {
+      $this->news->setTitleI18nZhTw($news['title_i18n_zh_tw']);
+    }
+    if (isset($news['extradate_i18n_zh_tw']))
+    {
+      $this->news->setExtradateI18nZhTw($news['extradate_i18n_zh_tw']);
+    }
+    if (isset($news['shortbody_i18n_zh_tw']))
+    {
+      $this->news->setShortbodyI18nZhTw($news['shortbody_i18n_zh_tw']);
+    }
+    if (isset($news['body_i18n_zh_tw']))
+    {
+      $this->news->setBodyI18nZhTw($news['body_i18n_zh_tw']);
+    }
+    if (isset($news['author_i18n_zh_tw']))
+    {
+      $this->news->setAuthorI18nZhTw($news['author_i18n_zh_tw']);
+    }
+    if (isset($news['translated_by_i18n_zh_tw']))
+    {
+      $this->news->setTranslatedByI18nZhTw($news['translated_by_i18n_zh_tw']);
+    }
+    if (isset($news['link_i18n_zh_tw']))
+    {
+      $this->news->setLinkI18nZhTw($news['link_i18n_zh_tw']);
+    }
   }  
   
   

@@ -71,7 +71,6 @@ class UserPeer extends BaseUserPeer
 		              //'mail_id' 			 => '77a5eb7cd2',
 		              'comments_category_id' => 686578,
 		              'feedburner_loc' 		 => 'ja_JP',
-//		              'direction_rtl' 		 => true
 		),
 		'es' => array('name'    			 => 'Español',
 		              'iso'     			 => 'es',
@@ -126,11 +125,13 @@ class UserPeer extends BaseUserPeer
 					  'name'     			 => 'עברית',
                       'iso'      			 => 'he',				
 		              'hieroglyphic'  		 => true,
+		              'large_text'	 		 => true,
 		              'comments_category_id' => 1417916,
-		              'feedburner_loc' 		 => ''
+		              'feedburner_loc' 		 => '',
+		              'direction_rtl' 		 => true
          ),
 		'zh_TW' => array(
-					  'name'     			 => '简体中文',
+					  'name'     			 => '傳統漢字',
                       'iso'      			 => 'zh-tw',				
 		              'hieroglyphic'  		 => true,
 		              'comments_category_id' => 1417917,
