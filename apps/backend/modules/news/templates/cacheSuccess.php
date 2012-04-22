@@ -1,5 +1,113 @@
 <h1>cache</h1>
 
+<hr/>
+<h3>Refresh</h3>
+<form action="" method="post" >
+<input type="submit" name="submit_console_refresh" value="Refresh">   
+<select name="console_refresh_pid">
+    <?php foreach($console_refresh_processes_list as $refresh_processes): ?>
+        <option value="<?php echo $refresh_processes['pid'] ?>" >
+        <?php 
+        foreach($refresh_processes as $key=>$value) {
+            echo $key . ':' . $value . ' | ';
+        } 
+        ?>
+        </option>
+    <?php endforeach ?>
+</select>
+<input type="submit" value="Kill" name="submit_console_refresh_kill">
+</form>
+
+<hr/>
+<h3>CloudFlare</h3>
+
+<form action="" method="post" >
+<input type="submit" name="submit_purge_cloudfront" value="Purge CloudFront Cache">   
+    <?php if ($cloudfront_result): ?>
+        <br/>
+        Result: 
+        <?php if ($cloudfront_result['result'] == 'success'): ?>
+            <strong style="color:green">
+        <?php else: ?>
+            <strong style="color:red">
+        <?php endif ?>    
+        <?php echo $cloudfront_result['result'] ?></strong><br/>
+        Msg: <?php echo $cloudfront_result['msg'] ?>
+    <?php endif ?>
+</form>
+
+<hr/>
+<h3>Clear cache</h3>
+<form action="" method="post" >
+    Item by ID: 
+    <input type="text" value="<?php if (!empty($_POST['clear_item_id'])): echo $_POST['clear_item_id']; endif; ?>" name="clear_item_id" /> 
+    <select name="clear_item_type_name">
+        <?php foreach($item_types as $item_type): ?>
+            <option value="<?php echo $item_type->getName(); ?>" 
+                <?php if ($item_type->getName() == $_POST['clear_item_type_name']): ?>selected="selected"<?php endif ?>
+            ><?php echo $item_type->getName(); ?></option>
+        <?php endforeach ?>
+    </select>    
+    <select name="clear_item_culture">
+        <option value="all">all</option>
+        <?php foreach(UserPeer::getCultures() as $culture): ?>
+            <option value="<?php echo $culture; ?>" 
+                <?php if ($culture == $_POST['clear_item_culture']): ?>selected="selected"<?php endif ?>
+            ><?php echo $culture; ?></option>
+        <?php endforeach ?>
+    </select>    
+	<input type="submit" value="Clear" name="clear_item_submit" /> 	
+</form>
+<br/>
+
+<form action="" method="post" >
+    Clear on any content change: 
+    <select name="clear_on_any_change_culture">
+        <option value="all">all</option>
+        <?php foreach(UserPeer::getCultures() as $culture): ?>
+            <option value="<?php echo $culture; ?>" 
+                <?php if ($culture == $_POST['clear_on_any_change_culture']): ?>selected="selected"<?php endif ?>
+            ><?php echo $culture; ?></option>
+        <?php endforeach ?>
+    </select>    
+	<input type="submit" value="Clear" name="clear_on_any_change_submit" /> 	
+</form>
+<br/>
+
+<form action="" method="post" >
+    Path: <input type="text" name="path" value="<?php if (!empty($_POST['path'])): echo $_POST['path']; endif; ?>" size="100"/>     
+    <input type="checkbox" <?php if (empty($_POST['path']) || !empty($_POST['al_cultures'])): ?>checked="checked"<?php endif ?> name="al_cultures" /> All cultures
+	<input type="submit" value="Delete" name="clear" /> 
+	<input type="submit" value="Restore" name="restore" />
+</form>
+<?php if (!empty($clear_pathes)): ?>
+Cleared: <?php echo count($clear_pathes); ?><br/>
+<?php foreach($clear_pathes as $path): ?>
+    <?php echo $path; ?><br/>
+<?php endforeach; ?>
+<?php endif ?>
+<br/>
+<hr/>
+<h3>Cache info</h3>
+
+<form action="" method="post" >  
+    <select name="info_domain_name">
+        <option value="">all</option>
+        <?php foreach(UserPeer::$domain_name_list as $domain): ?>
+            <option value="<?php echo $domain ?>" <?php if (!empty($_POST['info_domain_name']) && $domain == $_POST['info_domain_name']): ?>selected="selected"<?php endif ?> ><?php echo $domain ?></option>
+        <?php endforeach ?>
+    </select>
+    Path filter: <input type="text" name="info_path_filter" size="50" value="<?php if (!empty($_POST['info_path_filter'])):?><?php echo $_POST['info_path_filter'];?><?php else: ?>*<?php endif ?>" />
+	<input type="submit" value="Info" name="info" />
+</form>
+<?php if (!empty($cache_info)): ?>
+<?php foreach($cache_info as $param=>$value): ?>
+    <?php echo $param; ?>: <?php echo $value; ?><br/>
+<?php endforeach; ?>
+<?php endif ?>
+
+<hr/>
+<h3>PHP refresh cache</h3>
 <?php if (count($refresh_cache_daemon_info)): ?>
 <?php
 foreach($refresh_cache_daemon_info as $key=>$value) {
@@ -62,92 +170,3 @@ foreach($refresh_cache_daemon_info as $key=>$value) {
     </select>
     <input type="submit" value="View" name="log">
 </form>
-
-<hr/>
-<br/>
-
-<form action="" method="post" >
-<input type="submit" name="submit_purge_cloudfront" value="Purge CloudFront Cache">   
-    <?php if ($cloudfront_result): ?>
-        <br/>
-        Result: 
-        <?php if ($cloudfront_result['result'] == 'success'): ?>
-            <strong style="color:green">
-        <?php else: ?>
-            <strong style="color:red">
-        <?php endif ?>    
-        <?php echo $cloudfront_result['result'] ?></strong><br/>
-        Msg: <?php echo $cloudfront_result['msg'] ?>
-    <?php endif ?>
-</form>
-
-<hr/>
-<br/>
-
-<form action="" method="post" >
-    Item by ID: 
-    <input type="text" value="<?php if (!empty($_POST['clear_item_id'])): echo $_POST['clear_item_id']; endif; ?>" name="clear_item_id" /> 
-    <select name="clear_item_type_name">
-        <?php foreach($item_types as $item_type): ?>
-            <option value="<?php echo $item_type->getName(); ?>" 
-                <?php if ($item_type->getName() == $_POST['clear_item_type_name']): ?>selected="selected"<?php endif ?>
-            ><?php echo $item_type->getName(); ?></option>
-        <?php endforeach ?>
-    </select>    
-    <select name="clear_item_culture">
-        <option value="all">all</option>
-        <?php foreach(UserPeer::getCultures() as $culture): ?>
-            <option value="<?php echo $culture; ?>" 
-                <?php if ($culture == $_POST['clear_item_culture']): ?>selected="selected"<?php endif ?>
-            ><?php echo $culture; ?></option>
-        <?php endforeach ?>
-    </select>    
-	<input type="submit" value="Clear" name="clear_item_submit" /> 	
-</form>
-<br/>
-
-<form action="" method="post" >
-    Clear on any content change: 
-    <select name="clear_on_any_change_culture">
-        <option value="all">all</option>
-        <?php foreach(UserPeer::getCultures() as $culture): ?>
-            <option value="<?php echo $culture; ?>" 
-                <?php if ($culture == $_POST['clear_on_any_change_culture']): ?>selected="selected"<?php endif ?>
-            ><?php echo $culture; ?></option>
-        <?php endforeach ?>
-    </select>    
-	<input type="submit" value="Clear" name="clear_on_any_change_submit" /> 	
-</form>
-<br/>
-
-<form action="" method="post" >
-    Path: <input type="text" name="path" value="<?php if (!empty($_POST['path'])): echo $_POST['path']; endif; ?>" size="100"/>     
-    <input type="checkbox" <?php if (empty($_POST['path']) || !empty($_POST['al_cultures'])): ?>checked="checked"<?php endif ?> name="al_cultures" /> All cultures
-	<input type="submit" value="Delete" name="clear" /> 
-	<input type="submit" value="Restore" name="restore" />
-</form>
-<?php if (!empty($clear_pathes)): ?>
-Cleared: <?php echo count($clear_pathes); ?><br/>
-<?php foreach($clear_pathes as $path): ?>
-    <?php echo $path; ?><br/>
-<?php endforeach; ?>
-<?php endif ?>
-<br/>
-<hr/>
-<br/>
-
-<form action="" method="post" >  
-    <select name="info_domain_name">
-        <option value="">all</option>
-        <?php foreach(UserPeer::$domain_name_list as $domain): ?>
-            <option value="<?php echo $domain ?>" <?php if (!empty($_POST['info_domain_name']) && $domain == $_POST['info_domain_name']): ?>selected="selected"<?php endif ?> ><?php echo $domain ?></option>
-        <?php endforeach ?>
-    </select>
-    Path filter: <input type="text" name="info_path_filter" size="50" value="<?php if (!empty($_POST['info_path_filter'])):?><?php echo $_POST['info_path_filter'];?><?php else: ?>*<?php endif ?>" />
-	<input type="submit" value="Info" name="info" />
-</form>
-<?php if (!empty($cache_info)): ?>
-<?php foreach($cache_info as $param=>$value): ?>
-    <?php echo $param; ?>: <?php echo $value; ?><br/>
-<?php endforeach; ?>
-<?php endif ?>

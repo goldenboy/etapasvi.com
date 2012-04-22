@@ -34,6 +34,9 @@ class sfSuperCache
   // путь к программе для переименования файлов
   const RENAME_SCRIPT = 'rename.sh';
   
+  // console cache refresh script
+  const REFRESH_SCRIPT = 'tools/refresh_cache.sh';
+  
   // количество потоков для обновления кэша при обновлении кэша в многопоточном режиме
   const REFRESH_CACHE_THREADS_COUNT = 5;    
   
@@ -1451,6 +1454,65 @@ class sfSuperCache
       	'msg' => $result_object->msg,
       );
     }
+  }
+  
+  /**
+   * Concole cache refresh
+   *
+   */
+  public static function consoleRefreshCache()
+  {
+  	if (count( self::listConsoleRefreshProcesses())) {
+  		return;
+  	}
+  	$command = 'nohup ' . sfConfig::get('sf_root_dir') . '/' . self::REFRESH_SCRIPT . '  > /dev/null 2>&1 &';  	
+
+	pclose(popen($command, "r"));  	
+  }
+  
+  public static function listConsoleRefreshProcesses()
+  {
+    $process_list = array();
+    // команда для поиска команды, обновляющей кэш  
+    $grep_command = 'grep "' . self::REFRESH_SCRIPT . '"';
+
+  	$process_list_str = shell_exec('ps aux | ' . $grep_command);
+  	
+    $process_list = explode("\n", $process_list_str);    
+    
+    // убираем из списка процессов ищущий процесс
+  	foreach ($process_list as $k=>$v) {
+	  if ( (strstr($v, self::REFRESH_SCRIPT) && strstr($v, 'sh -c') || strstr($v, 'grep')) || !$v) {
+		unset($process_list[$k]);
+		continue;
+	  }	  
+
+      $process_info = explode(" ", $v);
+      if ($process_info[1]) {
+        $pid = $process_info[1];
+      } else {
+        $pid = $process_info[2];
+      }	
+      
+      $process_list[ $k ] = array();
+      
+      // PID
+      $process_list[ $k ][ 'pid' ] = $pid;
+      $process_list[ $k ][ 'info' ] = $v;
+  	}
+  	
+	return $process_list;
+  }
+  /**
+   * Убиваем процесс
+   *
+   * @param unknown_type $pid
+   * @return unknown
+   */
+  public static function consoleRefreshCacheProcessKill($pid)
+  {  
+  	$command = 'kill -s 9 ' . $pid;
+    pclose(popen($command, "r"));	  
   }
   
 }

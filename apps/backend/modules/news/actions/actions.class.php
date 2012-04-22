@@ -899,7 +899,18 @@ if (isset($news['title_i18n_he']))
   	if (!empty($_POST['submit_purge_cloudfront'])) {
 	  $purge_cloudfront_result = sfSuperCache::cloudFlareRequest('fpurge_ts');
 	  $this->cloudfront_result = $purge_cloudfront_result;
-  	}  	
+  	}  
+
+  	// Console cache refresh
+  	if (!empty($_POST['submit_console_refresh'])) {
+	  sfSuperCache::consoleRefreshCache('fpurge_ts');
+  	}
+  
+  	if (!empty($_POST['submit_console_refresh_kill'])) {
+	  sfSuperCache::consoleRefreshCacheProcessKill($_POST['console_refresh_pid']);
+  	}
+  	 	  	
+  	$this->console_refresh_processes_list = sfSuperCache::listConsoleRefreshProcesses();
   	
   }
   
