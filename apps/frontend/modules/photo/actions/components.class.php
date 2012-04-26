@@ -132,8 +132,7 @@ class photoComponents extends sfComponents
   	}
   	
   	
-  	// получение следующей и предыдущей фотографии
-  	
+  	// получение следующей и предыдущей фотографии  	
   	$c = new Criteria();
     $c->add( PhotoPeer::SHOW, 1);
     $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);
@@ -144,6 +143,16 @@ class photoComponents extends sfComponents
     $c->addAscendingOrderByColumn( PhotoPeer::ORDER );
     $this->next_photo = PhotoPeer::doSelectOne( $c );
     
+    // пробуем получить первую фотографию в качестве следующей    
+    if (!$this->next_photo && !empty($photoalbum_id)) {
+	  	$c = new Criteria();
+	    $c->add( PhotoPeer::SHOW, 1);
+	    $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);
+	    $c->add( PhotoPeer::PHOTOALBUM_ID, $photoalbum_id);	   
+	    $c->addAscendingOrderByColumn( PhotoPeer::ORDER );
+	    $this->next_photo = PhotoPeer::doSelectOne( $c );
+    }
+    
   	$c = new Criteria();
     $c->add( PhotoPeer::SHOW, 1);
     $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);
@@ -152,6 +161,15 @@ class photoComponents extends sfComponents
     }
     $c->add( PhotoPeer::ORDER, $this->photo->getOrder(), Criteria::LESS_EQUAL);
     $c->addDescendingOrderByColumn( PhotoPeer::ORDER );
-    $this->prev_photo = PhotoPeer::doSelectOne( $c );         	
+    $this->prev_photo = PhotoPeer::doSelectOne( $c );   
+    // получаем последнюю фото в качестве предыдущей
+    if (!$this->prev_photo && !empty($photoalbum_id)) {    
+	  	$c = new Criteria();
+	    $c->add( PhotoPeer::SHOW, 1);
+	    $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);
+	    $c->add( PhotoPeer::PHOTOALBUM_ID, $photoalbum_id);	    
+	    $c->addDescendingOrderByColumn( PhotoPeer::ORDER );
+	    $this->prev_photo = PhotoPeer::doSelectOne( $c ); 
+    }
   }
 }
