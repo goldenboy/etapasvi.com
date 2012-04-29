@@ -6,13 +6,13 @@
 
 <ol class="in_text">
 	<li><a href="#where_is_he"><?php echo __('Where is Dharma Sangha now?') ?></a></li>
-	<li><a href="#is_he_eating"><?php echo __('Is Dharma Sangha still not eating anything or just eating herbs from the jungle?') ?></a></li>
+<?php /*	<li><a href="#is_he_eating"><?php echo __('Is Dharma Sangha still not eating anything or just eating herbs from the jungle?') ?></a></li> */ ?>
 	<li><a href="#why_is_he_meditating"><?php echo __('Why is he meditating? What does he want to achieve?') ?></a></li>
 	<li><a href="#is_he_enlightened"><?php echo __('Is Dharma Sangha already enlightened?') ?></a></li>
 	<li><a href="#buddha"><?php echo __('Has he already become a Buddha?') ?></a></li>
 	<li><a href="#teaching"><?php echo __('Is his teaching based on Buddhism or any other religions like Hinduism?') ?></a></li>
-	<li><a href="#bodhi_shravan_dharma_sangha"><?php echo __('What does "Bodhi Shravan Dharma Sangha" mean?') ?></a></li>
-	<li><a href="#blessing"><?php echo __('How can I receive blessing from Dharma Sangha?') ?></a></li>
+<?php /*	<li><a href="#bodhi_shravan_dharma_sangha"><?php echo __('What does "Bodhi Shravan Dharma Sangha" mean?') ?></a></li> 
+	<li><a href="#blessing"><?php echo __('How can I receive blessing from Dharma Sangha?') ?></a></li> */ ?>
 	<li><a href="#gifts"><?php echo __('I am going to Halkhoriya Jungle. What should I take with me? I also would like to bring some gifts, what is the best choice?') ?></a></li>
 	<li><a href="#get_to_halkhoriya"><?php echo __('How can I get to Halkhoriya Jungle?') ?></a></li> 
 	<li><a href="#ratanpur_and_terthup"><?php echo __('How to reach Ratanpur and Terthup?') ?></a></li>
@@ -27,13 +27,13 @@
 <center>
 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?source=s_q&amp;f=q&amp;hl=ru&amp;geocode=&amp;q=Dharma+Sangha+Meditation+Site&amp;sll=37.0625,-95.677068&amp;sspn=52.152749,79.013672&amp;ie=UTF8&amp;hnear=&amp;radius=15000&amp;t=h&amp;cid=11992413955635615183&amp;oi=map_misc&amp;hq=Dharma+Sangha+Meditation+Sitel&amp;ll=27.202436,85.089074&amp;spn=0.001341,0.002411&amp;iwloc=A&amp;output=embed"></iframe>
 </center> 
-*/ ?>
+
 
 <h3 id="is_he_eating"><?php echo ++$counter; ?>. <?php echo __('Is Dharma Sangha still not eating anything or just eating herbs from the jungle?') ?></h3>
 <p>
 <?php echo __('He is not eating anything.') ?>
 </p>
-
+*/ ?>
 <h3 id="why_is_he_meditating"><?php echo ++$counter; ?>. <?php echo __('Why is he meditating? What does he want to achieve?') ?></h3>
 <p>
 <?php echo __('Dharma Sangha wants to liberate the whole world by spreading Dharma and insight he’ve gained through his meditation.') ?>
@@ -55,6 +55,7 @@
 <?php echo __('It is actually called Bodhi Shravan Dharma Sangha, but it includes all religions, no one is excluded. Dharma Sangha will be moving forward by including all existing religions of the world.') ?>
 </p>
 
+<?php /*
 <h3 id="bodhi_shravan_dharma_sangha"><?php echo ++$counter; ?>. <?php echo __('What does "Bodhi Shravan Dharma Sangha" mean?') ?></h3>
 <ul>
     <li><?php echo __('Bodhi: enlightenment, awakened.') ?></li>
@@ -66,10 +67,12 @@
 <?php echo __('Thus "Bodhi Shravan Dharma Sangha" is the wisdom as heeded from enlightened ones.') ?>
 </p>
 
+
 <h3 id="blessing"><?php echo ++$counter; ?>. <?php echo __('How can I receive blessing from Dharma Sangha?') ?></h3>
 <p>
 <?php echo __('Please go to') ?> "<a href="<?php echo url_for('@blessing'); ?>"><?php echo __('Blessing') ?></a>".
 </p>
+*/ ?>
 
 <h3 id="gifts"><?php echo ++$counter; ?>. <?php echo __('I am going to Halkhoriya Jungle. What should I take with me? I also would like to bring some gifts, what is the best choice?') ?></h3>
 <p>
