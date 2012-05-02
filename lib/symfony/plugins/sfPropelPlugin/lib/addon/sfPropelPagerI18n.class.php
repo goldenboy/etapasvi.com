@@ -41,7 +41,7 @@ class sfPropelPagerI18n extends sfPropelPager
    *
    * @param Criteria $c
    */
-  public function setCriteriaI18n($c)
+  public function setCriteriaI18n($c, $without_culture = false)
   {
     $this->criteria = $c;
 	// saynt2day
@@ -52,25 +52,27 @@ class sfPropelPagerI18n extends sfPropelPager
       constant($this->getClass() . 'Peer::' . $this->joinField),
       constant($this->getClass() . 'I18nPeer::' . $this->joinField),
       Criteria::INNER_JOIN
-    );*/
+    );*/   
     
-    /*
-    $this->criteria->addJoin(
-      constant($this->getClass() . 'Peer::' . $this->joinField),
-      constant($this->getClass() . 'I18nPeer::' . $this->joinField)
-    );*/
-    
-    //$this->criteria->add(constant($this->getClass() . 'I18nPeer::CULTURE'), $this->currentCulture);
-    
-    //$c->add(constant($this->getClass() . 'I18nPeer::CULTURE'), $this->currentCulture);
-    //$this->criteria->add(constant($this->getClass() . 'I18nPeer::CULTURE'), $this->currentCulture);
-    
-    // current culture or withour corresponding record in I18n table
-    //$c_all_cultures = $this->criteria->getNewCriterion(constant($this->getClass() . 'I18nPeer::CULTURE'), $this->currentCulture);
-    //$c_all_cultures->addOr(  $c->getNewCriterion(constant($this->getClass() . 'I18nPeer::CULTURE'), $default_culture) );
-	//$this->criteria->add($c_all_cultures);
-
-    $this->criteria->addGroupByColumn(constant($this->getClass() . 'Peer::' . $this->joinField));
+    // if there is no ALL_CULTURES field in Criteria
+    if (!$without_culture) {
+	  $this->criteria->addJoin(
+	    constant($this->getClass() . 'Peer::' . $this->joinField),
+	    constant($this->getClass() . 'I18nPeer::' . $this->joinField)
+	  );
+	    
+	  $this->criteria->add(constant($this->getClass() . 'I18nPeer::CULTURE'), $this->currentCulture);
+	    
+	  $c->add(constant($this->getClass() . 'I18nPeer::CULTURE'), $this->currentCulture);
+	  $this->criteria->add(constant($this->getClass() . 'I18nPeer::CULTURE'), $this->currentCulture);
+	    
+	  // current culture or withour corresponding record in I18n table
+	  //$c_all_cultures = $this->criteria->getNewCriterion(constant($this->getClass() . 'I18nPeer::CULTURE'), $this->currentCulture);
+	  //$c_all_cultures->addOr(  $c->getNewCriterion(constant($this->getClass() . 'I18nPeer::CULTURE'), $default_culture) );
+	  //$this->criteria->add($c_all_cultures);
+    } else {
+      $this->criteria->addGroupByColumn(constant($this->getClass() . 'Peer::' . $this->joinField));
+    }
   }
 
   /**

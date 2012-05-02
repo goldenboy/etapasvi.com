@@ -53,7 +53,7 @@ class audioActions extends sfActions
     AudioPeer::addVisibleCriteria($c);
         
 	$pager = new sfPropelPagerI18n('Audio', AudioPeer::ITEMS_PER_PAGE);
-    $pager->setCriteriaI18n($c);
+    $pager->setCriteriaI18n($c, true);
     $pager->setPage($this->getRequestParameter('page', 1));
     $pager->init();
     $this->pager = $pager;

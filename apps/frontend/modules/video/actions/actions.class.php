@@ -26,7 +26,7 @@ class videoActions extends sfActions
     VideoPeer::addVisibleCriteria($c);
         
 	$pager = new sfPropelPagerI18n('Video', VideoPeer::ITEMS_PER_PAGE);
-    $pager->setCriteriaI18n($c);
+    $pager->setCriteriaI18n($c, true);
     $pager->setPage($this->getRequestParameter('page', 1));
     $pager->init();
     $this->pager = $pager;
