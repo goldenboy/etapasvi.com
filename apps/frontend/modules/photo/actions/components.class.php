@@ -45,6 +45,8 @@ class photoComponents extends sfComponents
     // выбираем первую
     $c = new Criteria();
     $c->add( PhotoPeer::SHOW, 1);
+    $c->addJoin( PhotoalbumPeer::ID, PhotoPeer::PHOTOALBUM_ID);
+    $c->add( PhotoalbumPeer::SHOW, 1);
     $c->addDescendingOrderByColumn( PhotoPeer::ID );
     $c->setLimit( 1 );
     $first_photo_list = PhotoPeer::doSelectWithI18n( $c );
@@ -60,6 +62,8 @@ class photoComponents extends sfComponents
 		   
 		    $c = new Criteria();
 		    $c->add( PhotoPeer::SHOW, 1);	
+            $c->addJoin( PhotoalbumPeer::ID, PhotoPeer::PHOTOALBUM_ID);
+            $c->add( PhotoalbumPeer::SHOW, 1);
 		    $c->add( PhotoPeer::PHOTOALBUM_ID, $prev_ids, Criteria::NOT_IN);    
 
 		    $c->addDescendingOrderByColumn( PhotoPeer::ID );
