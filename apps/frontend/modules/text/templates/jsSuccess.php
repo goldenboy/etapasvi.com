@@ -229,8 +229,9 @@ function preparePhotoContent()
         
         // title
         var content_title = $("#photo_content_title").text() + ' - eTapasvi.com';
+
         if (content_title) {
-            document.title = content_title;
+            document.title = unescapeHTML(content_title);
         }
 
         // преобразование ссылок на предыдущую и следующую фото
@@ -242,6 +243,11 @@ function preparePhotoContent()
             $(this).attr('href', href);
         });*/
     });
+}
+
+// преобразование HTML-сущностей в их печатные аналоги
+function unescapeHTML(html) {
+   return $("<div />").html(html).text();
 }
 
 // подгонка размера фото
