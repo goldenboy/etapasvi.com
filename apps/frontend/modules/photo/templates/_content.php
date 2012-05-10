@@ -7,7 +7,7 @@ if (!empty($photo)) {
 }
 ?>
 
-<?php include_component('photo', 'showwrapper', array('id'=>$id, 'title'=>$title, 'photo'=>$photo)); ?>
+<?php include_component('photo', 'showwrapper', array('id'=>$id, 'title'=>$title, 'photo'=>$photo, 'no_check_title'=>$no_check_title, 'next_photo'=>$next_photo, 'prev_photo'=>$prev_photo, 'item2item_html'=>$item2item_html)); ?>
 <?php /* include_partial('comments/tools', array('empty'=>true));*/ ?>
 
 <?php 
@@ -17,7 +17,7 @@ if (!empty($photo)) {
 <script type="text/javascript">
     preparePhotoContent();
     <?php /*
-    // èçìåíåíèå ðàçìåðà âñïëûâàþùåãî îêíà ïîñëå çàãðóçêè êîììåíòàðèåâ
+    // Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ð° Ð²ÑÐ¿Ð»Ñ‹Ð²Ð°ÑŽÑ‰ÐµÐ³Ð¾ Ð¾ÐºÐ½Ð° Ð¿Ð¾ÑÐ»Ðµ Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐ¸ ÐºÐ¾Ð¼Ð¼ÐµÐ½Ñ‚Ð°Ñ€Ð¸ÐµÐ²
     function disqus_config() {
     alert(1):
         this.callbacks.afterRender = [function() {
@@ -29,5 +29,10 @@ if (!empty($photo)) {
     }
     */ ?>
 </script>
-<?php include_component('comments', 'show', array('for'=>strtolower(ItemtypesPeer::ITEM_TYPE_NAME_PHOTO), 'id'=>$id, 'culture'=>$sf_user->getCulture(), 'comments_page_url'=>$comments_page_url)) ?>	
+<div id="photo_comments">
+<br/>
+<a href="#" onclick="showPhotoComments(this)"><?php echo __('Comments') ?></a>: <a href="#disqus_thread" onclick="showPhotoComments(this)" data-disqus-identifier="<?php echo CommentsPeer::getCommentsIdentifier(); ?>" class="no_decor">0</a>
+<?php include_partial('comments/count'); ?>
+<div id="photo_comments_code" style="display:none"><?php echo base64_encode( get_component('comments', 'show', array('for'=>strtolower(ItemtypesPeer::ITEM_TYPE_NAME_PHOTO), 'id'=>$id, 'culture'=>$sf_user->getCulture(), 'comments_page_url'=>$comments_page_url)) ); ?></div>
+</div>
 </div>

@@ -364,7 +364,7 @@ class sfRoute implements Serializable
 
 	    	if (count($matches) >= 3) {
 	    		$url = '/' . $matches[1] . '/' . $matches[2] . '/' . $matches[3] . '/id/' . $matches[4];
-    	    	if ($matches[5]) {
+    	    	if (!empty($matches[5])) {
     	    		$url .= '/title/' . $matches[5];
     	    	}
 	    	}

@@ -94,20 +94,23 @@ class photoComponents extends sfComponents
 	  $this->photo = PhotoPeer::retrieveByPk( $this->id );
   	}
   	//$this->forward404Unless( $this->photo );
-    if ($this->photo) {
-  		$photoalbum = $this->photo->getPhotoalbum();
-    }
   	
-    // если фото не найдено или фото скрыто и у него есть альбом    
-  	if (!$this->photo || ($photoalbum && !$photoalbum->getShow()) || ($photoalbum && !$this->photo->getShow())) {
+  	// in album content we do not check and set title
+  	if (!$this->no_check_title){
+      if ($this->photo) {
+  		$photoalbum = $this->photo->getPhotoalbum();
+      }
+  	
+      // если фото не найдено или фото скрыто и у него есть альбом    
+  	  if (!$this->photo || ($photoalbum && !$photoalbum->getShow()) || ($photoalbum && !$this->photo->getShow())) {
   		//$action->redirect( $this->photo );
   		//sfActions::forward('photo', 'index');
   		//@sfActions::forward('default', 'error404');
   		throw new sfError404Exception();
-  	}
+  	  }
   	
-  	$photo_title = $this->photo->getTitle();
-  	if ( $photo_title ) {
+  	  $photo_title = $this->photo->getTitle();
+  	  if ( $photo_title ) {
   		
   	    // если на траницу перешли с другого языка, то title неверный
   	    $photo_title_translit = TextPeer::urlTranslit($photo_title);
@@ -126,9 +129,10 @@ class photoComponents extends sfComponents
 	    //$title = $i18n->__('Dharma Sangha') . ' -';	    
 	    $response = $this->getResponse(); 
 	    $response->setTitle($photo_title); 	
-  	} elseif (!$photo_title && $this->title) {
+  	  } elseif (!$photo_title && $this->title) {
   		// если у элемента нет Заголовка, а в URL передан title, редиректим
   		sfActions::redirect( $this->photo->getUrl() );
+      }
   	}
   	  	
   	if (!empty($photoalbum)) {
@@ -136,44 +140,48 @@ class photoComponents extends sfComponents
   	}
   	
   	
-  	// получение следующей и предыдущей фотографии  	
-  	$c = new Criteria();
-    $c->add( PhotoPeer::SHOW, 1);
-    $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);
-    if (!empty($photoalbum_id)) {
-      $c->add( PhotoPeer::PHOTOALBUM_ID, $photoalbum_id);
-    }
-    $c->add( PhotoPeer::ORDER, $this->photo->getOrder(), Criteria::GREATER_EQUAL);
-    $c->addAscendingOrderByColumn( PhotoPeer::ORDER );
-    $this->next_photo = PhotoPeer::doSelectOne( $c );
+  	// получение следующей и предыдущей фотографии  
+  	if (!$this->next_photo) {
+  	  $c = new Criteria();
+      $c->add( PhotoPeer::SHOW, 1);
+      $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);
+      if (!empty($photoalbum_id)) {
+        $c->add( PhotoPeer::PHOTOALBUM_ID, $photoalbum_id);
+      }
+      $c->add( PhotoPeer::ORDER, $this->photo->getOrder(), Criteria::GREATER_EQUAL);
+      $c->addAscendingOrderByColumn( PhotoPeer::ORDER );
+      $this->next_photo = PhotoPeer::doSelectOne( $c );
     
-    // пробуем получить первую фотографию в качестве следующей    
-    if (!$this->next_photo && !empty($photoalbum_id)) {
+      // пробуем получить первую фотографию в качестве следующей    
+      if (!$this->next_photo && !empty($photoalbum_id)) {
 	  	$c = new Criteria();
 	    $c->add( PhotoPeer::SHOW, 1);
 	    $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);
 	    $c->add( PhotoPeer::PHOTOALBUM_ID, $photoalbum_id);	   
 	    $c->addAscendingOrderByColumn( PhotoPeer::ORDER );
 	    $this->next_photo = PhotoPeer::doSelectOne( $c );
-    }
+      }
+  	}
     
-  	$c = new Criteria();
-    $c->add( PhotoPeer::SHOW, 1);
-    $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);
-    if (!empty($photoalbum_id)) {
-      $c->add( PhotoPeer::PHOTOALBUM_ID, $photoalbum_id);
-    }
-    $c->add( PhotoPeer::ORDER, $this->photo->getOrder(), Criteria::LESS_EQUAL);
-    $c->addDescendingOrderByColumn( PhotoPeer::ORDER );
-    $this->prev_photo = PhotoPeer::doSelectOne( $c );   
-    // получаем последнюю фото в качестве предыдущей
-    if (!$this->prev_photo && !empty($photoalbum_id)) {    
+  	if (!$this->prev_photo) {
+  	  $c = new Criteria();
+      $c->add( PhotoPeer::SHOW, 1);
+      $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);
+      if (!empty($photoalbum_id)) {
+        $c->add( PhotoPeer::PHOTOALBUM_ID, $photoalbum_id);
+      }
+      $c->add( PhotoPeer::ORDER, $this->photo->getOrder(), Criteria::LESS_EQUAL);
+      $c->addDescendingOrderByColumn( PhotoPeer::ORDER );
+      $this->prev_photo = PhotoPeer::doSelectOne( $c );   
+      // получаем последнюю фото в качестве предыдущей
+      if (!$this->prev_photo && !empty($photoalbum_id)) {    
 	  	$c = new Criteria();
 	    $c->add( PhotoPeer::SHOW, 1);
 	    $c->add( PhotoPeer::ID, $this->photo->getId(), Criteria::NOT_EQUAL);
 	    $c->add( PhotoPeer::PHOTOALBUM_ID, $photoalbum_id);	    
 	    $c->addDescendingOrderByColumn( PhotoPeer::ORDER );
 	    $this->prev_photo = PhotoPeer::doSelectOne( $c ); 
-    }
+      }
+  	}
   }
 }

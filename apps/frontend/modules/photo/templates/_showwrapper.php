@@ -14,5 +14,5 @@
 </p>
 
 <div class="box photofull">
-    <?php include_partial('show', array('photo'=>$photo, 'next_photo'=>$next_photo, 'prev_photo'=>$prev_photo) ); ?>
+    <?php include_partial('show', array('photo'=>$photo, 'next_photo'=>$next_photo, 'prev_photo'=>$prev_photo, 'item2item_html'=>$item2item_html) ); ?>
 </div>

@@ -290,7 +290,7 @@ class CommentsPeer extends BaseCommentsPeer
 			}
 			
 			// хардкод для подгружаемых фото
-			if ($module == 'photo' && $action == 'content') {
+			if ( $module == 'photo' && ($action == 'content' || $action == 'albumcontent') ) {
 			    $action = 'show';
 			}
 		  	

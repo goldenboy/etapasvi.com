@@ -62,6 +62,20 @@ class photoActions extends sfActions
   */
   public function executeShow(sfWebRequest $request)
   {  	
+  	// redirect to an album if not mobile version
+  	/*if (sfContext::getInstance()->getConfiguration()->getEnvironment() != 'mobile') {
+  		$this->photo = PhotoPeer::retrieveByPk( $request->getParameter('id') );
+  		if ($this->photo) {
+  			$photoalbum = $this->photo->getPhotoalbum();
+  		}
+  		if ($photoalbum) {
+  			$this->redirect( $photoalbum->getUrl() . '#test' );
+  			exit();
+  		} else {
+  			
+  		}
+  	}*/
+  	
   	$this->id 	 = $request->getParameter('id');
   	$this->title = $request->getParameter('title');
   }
@@ -101,7 +115,7 @@ class photoActions extends sfActions
     $_SESSION['back_to_photo'] = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
   }*/
   
-  public function executeAlbum(sfWebRequest $request)
+  public function executeAlbum(sfWebRequest $request, $check_title = true)
   { 
   	// альбом
   	$this->photoalbum = PhotoalbumPeer::retrieveByPk( $this->getRequestParameter('id') );
@@ -127,27 +141,33 @@ class photoActions extends sfActions
     	$this->forward404();
     }
     
-    $title = $this->photoalbum->getTitle();
-    if ($title) {
+    if ($check_title) {
+      $title = $this->photoalbum->getTitle();
+      if ($title) {
         
-      // проверка, соответствует ли переданный title названию альбома
-      $title_translit = TextPeer::urlTranslit($title);
-      if ( $request->getParameter('title') != $title_translit ) {
+        // проверка, соответствует ли переданный title названию альбома
+        $title_translit = TextPeer::urlTranslit($title);
+        if ( $request->getParameter('title') != $title_translit ) {
+          $this->redirect( $this->photoalbum->getUrl() );
+        }  	
+        
+        $response = $this->getResponse(); 
+	    $response->setTitle($title);
+      } elseif ($request->getParameter('title')) {
+        // если у фотоальбома нет заголовка, а в URL он передан    
         $this->redirect( $this->photoalbum->getUrl() );
-      }  	
-        
-      $response = $this->getResponse(); 
-	  $response->setTitle($title);
-    } elseif ($request->getParameter('title')) {
-      // если у фотоальбома нет заголовка, а в URL он передан    
-      $this->redirect( $this->photoalbum->getUrl() );
+      }
     }
-
     
     // запоминаем адрес
     //$_SESSION['back_to_photo'] = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
   }  
   
+  /**
+   * List of albums
+   *
+   * @param sfWebRequest $request
+   */
   public function executeAlbums(sfWebRequest $request)
   {  	
     $c = new Criteria();
@@ -164,6 +184,16 @@ class photoActions extends sfActions
     if ($request->getParameter('page') > $this->pager->getLastPage()) {
     	$this->forward404();
     }    
+  }
+  
+  /**
+   * Content of the photos of album
+   *
+   * @param sfWebRequest $request
+   */
+  public function executeAlbumcontent(sfWebRequest $request)
+  {  	
+	$this->executeAlbum($request, false);
   }
   
 }

@@ -1200,6 +1200,9 @@ img.newsitem_img {
     }
 
 /* photo */
+#photo_comments_code {
+    display: none;
+    }
 .photoalbum_container {
     border-bottom: 0;
     }

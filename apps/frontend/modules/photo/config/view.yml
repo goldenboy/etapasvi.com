@@ -18,3 +18,8 @@ contentSuccess:
   metas:
     title:        Photo
   has_layout:     false
+  
+albumcontentSuccess:
+  metas:
+    title:        Photo
+  has_layout:     false

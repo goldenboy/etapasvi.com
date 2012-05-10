@@ -5,6 +5,12 @@
     // если есть «аголовок на английском, выводим его   
     $title = $photo->getTitle($sf_user->getCulture(), true);    
     ?>
+    <?php 
+        $photoalbum = $photo->getPhotoalbum();
+        if ($photoalbum) {
+            $photoalbum_id = $photoalbum->getId();
+        }
+    ?>
 
 	<?php if ($photo->getImg()): ?>
 		<?php if (!empty($short) && $short): ?>
@@ -20,7 +26,7 @@
                 <?php PhotoPeer::$embed_photo_align = $align; ?>               
                 <div class="embed_photo embed_photo_<?php echo $align; ?><?php if ($in_list): ?> extra_space_<?php echo $align; ?><?php endif ?>">
                 <?php endif ?>
-                <a href="<?php echo $photo->getUrl(); ?>" title="<?php echo $title; ?>" onclick="enlargePhoto('<?php echo $photo->getUrl(); ?>');return false;">
+                <a href="<?php echo $photo->getUrl(); ?>" title="<?php echo $title; ?>" onclick="enlargePhoto('<?php echo $photo->getUrl(); ?>', false, '<?php echo $photoalbum_id; ?>', this);return false;">
                     <img src="<?php echo $photo->getThumbUrl(); ?>" alt=""/></a>
                 <?php /* <script type="text/javascript"> phLinks(); </script>*/ ?>
                 <?php if ($title): ?>
@@ -39,23 +45,23 @@
 				if ($prev_photo && $photo->getShow()):
                     $prev_url = $prev_photo->getUrl();
 				?>
-					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" class="prev_icon" onclick="loadPhotoContent('<?php echo $prev_url; ?>');return false;"></a>
+					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" class="prev_icon" onclick="loadPhotoContent('<?php echo $prev_url; ?>', '<?php echo $photoalbum_id; ?>');return false;"></a>
 				<?php endif ?>
 
 				<?php 
 				if ($next_photo && $photo->getShow()): 
                     $next_url = $next_photo->getUrl();
 				?>
-					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" onclick="loadPhotoContent('<?php echo $next_url; ?>');return false;">
+					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" onclick="loadPhotoContent('<?php echo $next_url; ?>', '<?php echo $photoalbum_id; ?>');return false;">
 						<img src="<?php echo $photo->getFullUrl(); ?>" 
 						alt="<?php echo $title; ?>" class="full_photo_img" /></a>
 				<?php else: ?>
-					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" onclick="loadPhotoContent('<?php echo $prev_url; ?>');return false;"><img src="<?php echo $photo->getFullUrl(); ?>" alt="<?php echo $title; ?>" class="full_photo_img"/></a>
+					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" onclick="loadPhotoContent('<?php echo $prev_url; ?>', '<?php echo $photoalbum_id; ?>');return false;"><img src="<?php echo $photo->getFullUrl(); ?>" alt="<?php echo $title; ?>" class="full_photo_img"/></a>
 				<?php endif ?>                
 				<?php 
 				if ($next_photo && $photo->getShow()): 
 				?>
-					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="next_icon" onclick="loadPhotoContent('<?php echo $next_url; ?>');return false;"></a>
+					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="next_icon" onclick="loadPhotoContent('<?php echo $next_url; ?>', '<?php echo $photoalbum_id; ?>');return false;"></a>
 				<?php endif ?>
                 <?php /*<input type="hidden" id="photo_full_url" value="<?php echo $photo->getFullUrl(); ?>"/> */ ?>
                 <input type="hidden" id="photo_full_width" value="<?php echo $photo->getWidth(); ?>"/>
@@ -78,6 +84,9 @@
                 <span class="date"><?php echo format_datetime( $photo->getCreatedAt('Y-m-d H:i:s', true), 'd MMMM yyyy'); ?></span>             
                 <?php 
                     $photoalbum = $photo->getPhotoalbum();
+                    if ($photoalbum) {
+                        $photoalbum_id = $photoalbum->getId();
+                    }
                     $author     = $photo->getAuthor($sf_user->getCulture(), true);
                     
                     if ($author == '?') {
@@ -89,8 +98,10 @@
                      | <?php echo __('Author') ?>: <?php echo $author ?>
                 <?php endif ?>
                  | <a href="<?php echo $photo->getFullUrl(); ?>" 	
-                    title="<?php echo __('Download') ?>" target="_blank" ><?php echo __('Download') ?></a>		
-                 <span class="ph_enlarge_lnk">| <a href="javascript:enlargePhoto('<?php echo $photo->getUrl(); ?>', true);void(0);" title="<?php echo __('Enlarge') ?>" ><?php echo __('Enlarge') ?></a></span>
+                    title="<?php echo __('Download') ?>" target="_blank" ><?php echo __('Download') ?></a>	
+                 <?php if ($photoalbum_id): ?>                    
+                    <span class="ph_enlarge_lnk">| <a href="javascript:enlargePhoto('<?php echo $photo->getUrl(); ?>', true, '<?php echo $photoalbum_id; ?>');void(0);" title="<?php echo __('Enlarge') ?>" ><?php echo __('Enlarge') ?></a></span>
+                 <?php endif ?>
             </p>            
             <?php if ($photo->getBody($sf_user->getCulture(), true)): ?>
                 <br/>
@@ -171,7 +182,11 @@
     */ ?>
     <div id="photo_content_title" class="hidden"><?php echo __($sf_response->getTitle()); ?></div>
     <div class="photo_info">
-        <?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photo->getPhotoalbumId())) ?> 
+        <?php if (!$item2item_html): ?>
+            <?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photo->getPhotoalbumId())) ?> 
+        <?php else: ?>
+            <?php echo html_entity_decode($item2item_html); ?>
+        <?php endif ?>
     </div>
 	<?php endif ?>    
 <?php endif ?>
