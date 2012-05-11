@@ -56,7 +56,7 @@
 						<img src="<?php echo $photo->getFullUrl(); ?>" 
 						alt="<?php echo $title; ?>" class="full_photo_img" /></a>
 				<?php else: ?>
-					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" onclick="loadPhotoContent('<?php echo $prev_url; ?>', '<?php echo $photoalbum_id; ?>');return false;"><img src="<?php echo $photo->getFullUrl(); ?>" alt="<?php echo $title; ?>" class="full_photo_img"/></a>
+					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" onclick="loadPhotoContent('<?php echo $prev_url; ?>', '<?php echo $photoalbum_id; ?>');return false;"><img src="<?php echo $photo->getFullUrl(); ?>" alt="<?php echo $title; ?>" class="full_photo_img"/></a>                    
 				<?php endif ?>                
 				<?php 
 				if ($next_photo && $photo->getShow()): 
@@ -67,14 +67,14 @@
                 <input type="hidden" id="photo_full_width" value="<?php echo $photo->getWidth(); ?>"/>
                 <input type="hidden" id="photo_full_height" value="<?php echo $photo->getHeight(); ?>"/>
 			</div>
+            <img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/jquery/colorbox/loading.gif" id="photo_loader" class="hidden center_text"  />
 		<?php endif ?>
 	<?php endif ?>		
 
 
 	<?php if (empty($short) || !$short): ?>  
 
-        <div class="photo_info">
-            <p id="photo_loader" class="hidden center_text" ><img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/loader.gif" /></p>
+        <div class="photo_info">            
             <?php if ($title): ?>
                 <p class="center_text">
                     <strong><?php echo $title; ?></strong>
@@ -180,7 +180,7 @@
 		</tr>
 	</table>
     */ ?>
-    <div id="photo_content_title" class="hidden"><?php echo __($sf_response->getTitle()); ?></div>
+    <div id="photo_content_title" class="hidden"><?php if ($title): ?><?php echo $title; ?> <?php else: echo __('Photo')?><?php endif ?> - <?php echo sfConfig::get('app_site_name'); ?></div>
     <div class="photo_info">
         <?php if (!$item2item_html): ?>
             <?php include_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photo->getPhotoalbumId())) ?> 

@@ -33,7 +33,7 @@ var p_cb_vert_padding  = 0;
 // вертикальную позицию в окне
 var cb_window_pos = 0;
 // период вызова resize всплывающего окна
-var cb_resize_period = 1000;
+var cb_resize_period = 200;
 // пространство, изначально выделяемое для комментариев
 //var cb_comments_height = 398;
 var cb_comments_height = 0;
@@ -227,11 +227,13 @@ function preparePhotoContent()
             var full_photo_img = $("#colorbox img.full_photo_img");            
             // замена превью на полную версию фото
             //full_photo_img.attr("src", $("#photo_full_url").val());
-            resizePhotoColorbox(full_photo_img);           
+            resizePhotoColorbox(full_photo_img);
+            $("#photo_content .prev_next").css('visibility', 'hidden');
+            $("#photo_loader").show();
         }        
         
         // title
-        var content_title = $("#photo_content_title").text() + ' - eTapasvi.com';
+        var content_title = $("#photo_content_title").text();
 
         if (content_title) {
             document.title = unescapeHTML(content_title);
@@ -345,14 +347,17 @@ function resizePhotoColorbox(full_photo_img)
     
     first_cyclic_resize = true;
     
-    cbResize();
+    cbResize();    
 }
 
 // установка размеров всплывающего окна
 // необходимо вызывать resize с явно указанными размерами, 
 // т.к. после открытия colorbox больше не считывает размеры содержимого
 function cbResize(scroll_to_pos)
-{
+{    
+    $("#photo_loader").hide();
+    $("#photo_content .prev_next").css('visibility', 'visible');
+
     if (page_mode != "enlarge_photo") {
         return;
     }
@@ -392,7 +397,7 @@ function cbResize(scroll_to_pos)
     
     // функция ресайза запускается до тех пор, пока высота всплывающего окна не будет адекватной
     setTimeout(function(){ cbResize(); }, cb_resize_period);
-    first_cyclic_resize = false;
+    first_cyclic_resize = false;    
 }
 
 //  модификация ссылок на фотографии (не испольузется)
@@ -455,19 +460,15 @@ function enlargePhoto(href, from_photo_page, photoalbum_id, parent_el)
     cb_first_resize = true;       
 
     var small_photo_src = $(parent_el).find('img').attr('src');
-    var colorbox_html;
-    if (small_photo_src) {
-        colorbox_html = '<div id="photo_content"><div class="center"><img src="' + $(parent_el).find('img').attr('src') + '" width="80%"><br/><img src="http://www.etapasvi.com/i/loader.gif"></div></div>';
-    } else {
-        colorbox_html = '<div id="photo_content"><div class="center"><img src="http://www.etapasvi.com/i/loader.gif"></div></div>';
-    }
+    var colorbox_html = '<div id="photo_content"><div class="center"><img src="/i/jquery/colorbox/loading.gif" style="margin-top:85px"></div></div>';
+
     $.colorbox({
 //        href:getContentUrl(href),
         html: colorbox_html,
         initialWidth: min_photo_full_width,
         initialHeight: min_photo_full_height,
         width: min_photo_full_width + 'px',
-//        height: min_photo_full_height + 'px',
+        height: min_photo_full_height + 'px',
 //        top:"0px",
         opacity:"0.5",
         close:"X",
@@ -627,7 +628,7 @@ function loadPhotoContent(href, photoalbum_id, hide_content, domain)
     href = href.replace(/http:\/\/[^\/]+\//, '');
 
     if (hide_content) {
-        $("#photo_content .photofull").html( '<p id="photo_loader" class="hidden center_text" ><img src="/i/loader.gif" /></p>' );
+        $("#photo_content .photofull").html( '<p id="photo_loader" class="hidden center_text" ><img src="/i/jquery/colorbox/loading.gif" /></p>' );
         $("#disqus_thread").hide();
         $("#photo_content div.social").remove();
         $("#photo_content .dsq-brlink").remove();
