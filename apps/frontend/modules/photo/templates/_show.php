@@ -67,7 +67,7 @@
                 <input type="hidden" id="photo_full_width" value="<?php echo $photo->getWidth(); ?>"/>
                 <input type="hidden" id="photo_full_height" value="<?php echo $photo->getHeight(); ?>"/>
 			</div>
-            <img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/jquery/colorbox/loading.gif" id="photo_loader" class="hidden center_text"  />
+            <?php /*<img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/jquery/colorbox/loading.gif" id="photo_loader" class="hidden center_text" />*/ ?>
 		<?php endif ?>
 	<?php endif ?>		
 

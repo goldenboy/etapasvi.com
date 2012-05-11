@@ -1229,7 +1229,7 @@ img.newsitem_img {
     margin-left:9px;
     margin-right:9px;
     }
-.photofull {
+.photofull {    
     padding:20px 0 3px;
     }
 .photofull .title {
@@ -1408,7 +1408,9 @@ img.newsitem_img {
 .direction_rtl .goto_section {
     float: left;
     }
-
+.prev_next {
+    background: url("/i/jquery/colorbox/loading.gif") no-repeat scroll 50% 45% transparent;
+    }
 .prev_next img {
 	vertical-align: middle;
 	}

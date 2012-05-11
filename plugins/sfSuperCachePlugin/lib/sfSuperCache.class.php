@@ -238,7 +238,12 @@ class sfSuperCache
   	        
   	      $photoalbum = $item_for_clearing;
   	        
-          $urls_for_clearing[] = $photoalbum->getUrl();
+          $photoalbum_url = $photoalbum->getUrl();
+          $urls_for_clearing[] = $photoalbum_url;
+          
+          // photoalbum content with photos
+          $urls_for_clearing[] = str_replace('/album/', '/albumcontent/', $photoalbum_url);
+                    
       	  // все фото в фотоальбоме
       	  $c = new Criteria();
       	  $c->add(PhotoPeer::PHOTOALBUM_ID, $photoalbum->getId());
@@ -248,7 +253,7 @@ class sfSuperCache
       	  	$urls_for_clearing[] = $photo_url;
       	  	// плюс ссылка на контент
       	  	// http://www.etapasvi.com/en/photo/content/1243  	  	
-      	  	$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
+      	  	//$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
       	  }
   	    }
   	    
@@ -277,7 +282,12 @@ class sfSuperCache
   	  $photoalbum = $item->getPhotoalbum();
 
   	  // очищается фотоальбом
-  	  $urls_for_clearing[] = $photoalbum->getUrl();
+      $photoalbum_url = $photoalbum->getUrl();
+      $urls_for_clearing[] = $photoalbum_url;
+      
+      // photoalbum content with photos
+      $urls_for_clearing[] = str_replace('/album/', '/albumcontent/', $photoalbum_url);
+      
   	  // все фото в фотоальбоме
   	  $c = new Criteria();
   	  $c->add(PhotoPeer::PHOTOALBUM_ID, $photoalbum->getId());
@@ -287,7 +297,7 @@ class sfSuperCache
   	  	$urls_for_clearing[] = $photo_url;
   	  	// плюс ссылка на контент
   	  	// http://www.etapasvi.com/en/photo/content/1243  	  	
-  	  	$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
+  	  	//$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
   	  }
   	}
     
@@ -302,7 +312,7 @@ class sfSuperCache
   	  	$urls_for_clearing[] = $photo_url;
   	  	// плюс ссылка на контент
   	  	// http://www.etapasvi.com/en/photo/content/1243  	  	
-  	  	$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
+  	  	//$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
   	  }
   	}
   	

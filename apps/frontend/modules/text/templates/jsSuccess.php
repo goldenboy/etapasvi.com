@@ -52,6 +52,8 @@ var cb_prev_disqus_identifier = '';
 var first_cyclic_resize = true;
 // content list of the album
 var album_content = {};
+// photo is being loaded
+var loading_photo = false;
 
 
 $(document).ready(function() {
@@ -228,8 +230,8 @@ function preparePhotoContent()
             // замена превью на полную версию фото
             //full_photo_img.attr("src", $("#photo_full_url").val());
             resizePhotoColorbox(full_photo_img);
-            $("#photo_content .prev_next").css('visibility', 'hidden');
-            $("#photo_loader").show();
+            // align loader in the middle of the photo and show it
+            $("#colorbox #photo_content .prev_next a").css('visibility', 'hidden');
         }        
         
         // title
@@ -355,8 +357,7 @@ function resizePhotoColorbox(full_photo_img)
 // т.к. после открытия colorbox больше не считывает размеры содержимого
 function cbResize(scroll_to_pos)
 {    
-    $("#photo_loader").hide();
-    $("#photo_content .prev_next").css('visibility', 'visible');
+    $("#colorbox #photo_content .prev_next a").css('visibility', 'visible');
 
     if (page_mode != "enlarge_photo") {
         return;
@@ -460,7 +461,7 @@ function enlargePhoto(href, from_photo_page, photoalbum_id, parent_el)
     cb_first_resize = true;       
 
     var small_photo_src = $(parent_el).find('img').attr('src');
-    var colorbox_html = '<div id="photo_content"><div class="center"><img src="/i/jquery/colorbox/loading.gif" style="margin-top:85px"></div></div>';
+    var colorbox_html = '<div id="photo_content"><div class="center" ><img src="/i/jquery/colorbox/loading.gif" style="margin:85px 0"></div></div>';
 
     $.colorbox({
 //        href:getContentUrl(href),
@@ -601,7 +602,7 @@ function getContentUrl(href)
 // подгрузка содержимого фото
 function loadPhotoContent(href, photoalbum_id, hide_content, domain)
 {
-    if (!href || $("#photo_loader").is("visible")) {
+    if (!href || loading_photo) {
         return;
     }
     
@@ -635,7 +636,7 @@ function loadPhotoContent(href, photoalbum_id, hide_content, domain)
     }
     global_photo_href = 'http://' + domain + '/' + href;
     
-    $("#photo_loader").show();
+    loading_photo = true;
 
     // сохраняем форму Предложить перевод
     //$("#offer_tr").hide();
@@ -703,6 +704,7 @@ function setPhotoHtml(photo_html, photo_id)
     $("#offer_tr_uri").val(global_photo_href);
     // вытаскивается ID из URL
     $("#offer_tr_id").val(photo_id);
+    loading_photo = false;
 }
 
 // get any element if from URL
