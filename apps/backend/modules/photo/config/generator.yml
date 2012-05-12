@@ -49,10 +49,6 @@ generator:
           - title_i18n_vi
           - body_i18n_vi
           - author_i18n_vi
-        "DE":
-          - title_i18n_de
-          - body_i18n_de
-          - author_i18n_de
         "IT":
           - title_i18n_it
           - body_i18n_it
@@ -89,6 +85,10 @@ generator:
           - title_i18n_zh_tw
           - body_i18n_zh_tw
           - author_i18n_zh_tw
+        "DE":
+          - title_i18n_de
+          - body_i18n_de
+          - author_i18n_de
       fields:
         img:
           name: Image
@@ -184,18 +184,7 @@ generator:
           params: disabled=false size=118x6
         author_i18n_vi:
           name: Author
-          params: disabled=false maxlength=255 style="width:80%"
-          
-        title_i18n_de:
-          name: Title
-          params: disabled=false maxlength=255 style="width:80%"
-        body_i18n_de:
-          name: Body
-          type: textarea_tag
-          params: disabled=false size=118x6
-        author_i18n_de:
-          name: Author
-          params: disabled=false maxlength=255 style="width:80%"
+          params: disabled=false maxlength=255 style="width:80%"         
           
         title_i18n_it:
           name: Title
@@ -293,5 +282,16 @@ generator:
           type: textarea_tag
           params: disabled=false size=118x6
         author_i18n_zh_tw:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_de:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_de:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_de:
           name: Author
           params: disabled=false maxlength=255 style="width:80%"

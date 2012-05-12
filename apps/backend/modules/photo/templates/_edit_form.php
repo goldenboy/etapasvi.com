@@ -640,58 +640,6 @@
 </div>
 
 </fieldset>
-<fieldset id="sf_fieldset_de" class="">
-<h2><?php echo __('DE') ?></h2>
-
-
-<div class="form-row">
-  <?php echo label_for('photo[title_i18n_de]', __($labels['photo{title_i18n_de}']), '') ?>
-  <div class="content<?php if ($sf_request->hasError('photo{title_i18n_de}')): ?> form-error<?php endif; ?>">
-  <?php if ($sf_request->hasError('photo{title_i18n_de}')): ?>
-    <?php echo form_error('photo{title_i18n_de}', array('class' => 'form-error-msg')) ?>
-  <?php endif; ?>
-
-  <?php $value = object_input_tag($photo, 'getTitleI18nDe', array (
-  'disabled' => false,
-  'control_name' => 'photo[title_i18n_de]',
-  'maxlength' => 255,
-  'style' => 'width:80%',
-)); echo $value ? $value : '&nbsp;' ?>
-    </div>
-</div>
-
-<div class="form-row">
-  <?php echo label_for('photo[body_i18n_de]', __($labels['photo{body_i18n_de}']), '') ?>
-  <div class="content<?php if ($sf_request->hasError('photo{body_i18n_de}')): ?> form-error<?php endif; ?>">
-  <?php if ($sf_request->hasError('photo{body_i18n_de}')): ?>
-    <?php echo form_error('photo{body_i18n_de}', array('class' => 'form-error-msg')) ?>
-  <?php endif; ?>
-
-  <?php $value = object_textarea_tag($photo, 'getBodyI18nDe', array (
-  'control_name' => 'photo[body_i18n_de]',
-  'disabled' => false,
-  'size' => '118x6',
-)); echo $value ? $value : '&nbsp;' ?>
-    </div>
-</div>
-
-<div class="form-row">
-  <?php echo label_for('photo[author_i18n_de]', __($labels['photo{author_i18n_de}']), '') ?>
-  <div class="content<?php if ($sf_request->hasError('photo{author_i18n_de}')): ?> form-error<?php endif; ?>">
-  <?php if ($sf_request->hasError('photo{author_i18n_de}')): ?>
-    <?php echo form_error('photo{author_i18n_de}', array('class' => 'form-error-msg')) ?>
-  <?php endif; ?>
-
-  <?php $value = object_input_tag($photo, 'getAuthorI18nDe', array (
-  'disabled' => false,
-  'control_name' => 'photo[author_i18n_de]',
-  'maxlength' => 255,
-  'style' => 'width:80%',
-)); echo $value ? $value : '&nbsp;' ?>
-    </div>
-</div>
-
-</fieldset>
 
 <fieldset id="sf_fieldset_ja" class="">
 <h2><?php echo __('JA') ?></h2>
@@ -1111,7 +1059,58 @@
 </div>
 
 </fieldset>
+<fieldset id="sf_fieldset_de" class="">
+<h2><?php echo __('DE') ?></h2>
 
+
+<div class="form-row">
+  <?php echo label_for('photo[title_i18n_de]', __($labels['photo{title_i18n_de}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{title_i18n_de}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{title_i18n_de}')): ?>
+    <?php echo form_error('photo{title_i18n_de}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getTitleI18nDe', array (
+  'disabled' => false,
+  'control_name' => 'photo[title_i18n_de]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[body_i18n_de]', __($labels['photo{body_i18n_de}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{body_i18n_de}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{body_i18n_de}')): ?>
+    <?php echo form_error('photo{body_i18n_de}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_textarea_tag($photo, 'getBodyI18nDe', array (
+  'control_name' => 'photo[body_i18n_de]',
+  'disabled' => false,
+  'size' => '118x6',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+<div class="form-row">
+  <?php echo label_for('photo[author_i18n_de]', __($labels['photo{author_i18n_de}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('photo{author_i18n_de}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('photo{author_i18n_de}')): ?>
+    <?php echo form_error('photo{author_i18n_de}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($photo, 'getAuthorI18nDe', array (
+  'disabled' => false,
+  'control_name' => 'photo[author_i18n_de]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+
+</fieldset>
 
 <?php include_partial('edit_actions', array('photo' => $photo)) ?>
 

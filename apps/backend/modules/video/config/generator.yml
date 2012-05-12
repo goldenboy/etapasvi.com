@@ -72,13 +72,6 @@ generator:
           - title_i18n_vi
           - body_i18n_vi
           - author_i18n_vi
-        "DE":
-          - img_i18n_de
-          - _img_i18n_de
-          - code_i18n_de
-          - title_i18n_de
-          - body_i18n_de
-          - author_i18n_de
         "JA":
           - img_i18n_ja
           - _img_i18n_ja
@@ -135,6 +128,13 @@ generator:
           - title_i18n_zh_tw
           - body_i18n_zh_tw
           - author_i18n_zh_tw
+        "DE":
+          - img_i18n_de
+          - _img_i18n_de
+          - code_i18n_de
+          - title_i18n_de
+          - body_i18n_de
+          - author_i18n_de
       fields:
 
         img_i18n_en:
@@ -295,27 +295,7 @@ generator:
           params: disabled=false size=118x6
         author_i18n_vi:
           name: Author
-          params: disabled=false maxlength=255 style="width:80%"
-          
-        img_i18n_de:
-          name: Image
-          params: disabled=false maxlength=255 style="width:80%"
-          _img_i18n_de:
-          name: Image   
-        code_i18n_de:
-          name: Code
-          type: textarea_tag
-          params: disabled=false size=118x6
-        title_i18n_de:
-          name: Title
-          params: disabled=false maxlength=255 style="width:80%"
-        body_i18n_de:
-          name: Body
-          type: textarea_tag
-          params: disabled=false size=118x6
-        author_i18n_de:
-          name: Author
-          params: disabled=false maxlength=255 style="width:80%"         
+          params: disabled=false maxlength=255 style="width:80%"               
 
         img_i18n_ja:
           name: Image
@@ -476,3 +456,23 @@ generator:
         author_i18n_zh_tw:
           name: Author
           params: disabled=false maxlength=255 style="width:80%"
+
+        img_i18n_de:
+          name: Image
+          params: disabled=false maxlength=255 style="width:80%"
+          _img_i18n_de:
+          name: Image   
+        code_i18n_de:
+          name: Code
+          type: textarea_tag
+          params: disabled=false size=118x6
+        title_i18n_de:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        body_i18n_de:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_de:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"  

@@ -84,9 +84,7 @@ class UserPeer extends BaseUserPeer
 		              'comments_category_id' => 686577,
 		              'feedburner_loc' 		 => ''
 		),
-/*		              
-		'de' => array('name'    => 'de - Deutsch',
-		              'iso'     => 'de'),			              
+/*		              		              
 
 		'sk' => array('name'    => 'sk - Slovenčina',
 		              'iso'     => 'sk'),	
@@ -136,7 +134,11 @@ class UserPeer extends BaseUserPeer
 		              'hieroglyphic'  		 => true,
 		              'comments_category_id' => 1417917,
 		              'feedburner_loc' 		 => ''
-         ),         
+         ),
+		'de' => array('name'     			 => 'Deutsch',
+                      'iso'      			 => 'de',						             
+		              'comments_category_id' => 1456893,
+		              'feedburner_loc' 		 => ''),
 	);
 	
 	 

@@ -107,7 +107,6 @@ class photoActions extends autophotoActions
     {
       $this->photo->setHeight($photo['height']);
     }    
-    // culture
     if (isset($photo['title_i18n_en']))
     {
       $this->photo->setTitleI18nEn($photo['title_i18n_en']);
@@ -204,17 +203,17 @@ class photoActions extends autophotoActions
     {
       $this->photo->setAuthorI18nVi($photo['author_i18n_vi']);
     }
-    if (isset($photo['title_i18n_de']))
+    if (isset($photo['title_i18n_it']))
     {
-      $this->photo->setTitleI18nDe($photo['title_i18n_de']);
+      $this->photo->setTitleI18nIt($photo['title_i18n_it']);
     }
-    if (isset($photo['body_i18n_de']))
+    if (isset($photo['body_i18n_it']))
     {
-      $this->photo->setBodyI18nDe($photo['body_i18n_de']);
+      $this->photo->setBodyI18nIt($photo['body_i18n_it']);
     }
-    if (isset($photo['author_i18n_de']))
+    if (isset($photo['author_i18n_it']))
     {
-      $this->photo->setAuthorI18nDe($photo['author_i18n_de']);
+      $this->photo->setAuthorI18nIt($photo['author_i18n_it']);
     }
     if (isset($photo['title_i18n_ja']))
     {
@@ -240,19 +239,7 @@ class photoActions extends autophotoActions
     {
       $this->photo->setAuthorI18nEs($photo['author_i18n_es']);
     }
-    if (isset($photo['title_i18n_it']))
-    {
-      $this->photo->setTitleI18nIt($photo['title_i18n_it']);
-    }
-    if (isset($photo['body_i18n_it']))
-    {
-      $this->photo->setBodyI18nIt($photo['body_i18n_it']);
-    }
-    if (isset($photo['author_i18n_it']))
-    {
-      $this->photo->setAuthorI18nIt($photo['author_i18n_it']);
-    }
-	if (isset($photo['title_i18n_et']))
+    if (isset($photo['title_i18n_et']))
     {
       $this->photo->setTitleI18nEt($photo['title_i18n_et']);
     }
@@ -311,6 +298,18 @@ class photoActions extends autophotoActions
     if (isset($photo['author_i18n_zh_tw']))
     {
       $this->photo->setAuthorI18nZhTw($photo['author_i18n_zh_tw']);
+    }
+    if (isset($photo['title_i18n_de']))
+    {
+      $this->photo->setTitleI18nDe($photo['title_i18n_de']);
+    }
+    if (isset($photo['body_i18n_de']))
+    {
+      $this->photo->setBodyI18nDe($photo['body_i18n_de']);
+    }
+    if (isset($photo['author_i18n_de']))
+    {
+      $this->photo->setAuthorI18nDe($photo['author_i18n_de']);
     }
     
     // заключаем в try...catch, чтобы не было 500-й ошибки при сохранении фото с повторным ORDER в альбоме

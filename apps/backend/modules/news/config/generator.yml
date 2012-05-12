@@ -81,14 +81,6 @@ generator:
           - author_i18n_vi
           - translated_by_i18n_vi
           - link_i18n_vi
-        "DE":
-          - title_i18n_de
-          - extradate_i18n_de
-          - shortbody_i18n_de
-          - body_i18n_de
-          - author_i18n_de
-          - translated_by_i18n_de
-          - link_i18n_de
         "IT":
           - title_i18n_it
           - extradate_i18n_it
@@ -153,6 +145,14 @@ generator:
           - author_i18n_zh_tw
           - translated_by_i18n_zh_tw
           - link_i18n_zh_tw
+        "DE":
+          - title_i18n_de
+          - extradate_i18n_de
+          - shortbody_i18n_de
+          - body_i18n_de
+          - author_i18n_de
+          - translated_by_i18n_de
+          - link_i18n_de
       fields:
         img:
           name: Image
@@ -355,31 +355,7 @@ generator:
           params: disabled=false maxlength=255 style="width:80%"
         link_i18n_vi:
           name: Link
-          params: disabled=false maxlength=255 style="width:80%"
-          
-        title_i18n_de:
-          name: Title
-          params: disabled=false maxlength=255 style="width:80%"
-        extradate_i18n_de:
-          name: Extra date
-          params: disabled=false maxlength=255 style="width:80%"
-        shortbody_i18n_de:
-          name: Short body
-          type: textarea_tag
-          params: disabled=false size=118x6
-        body_i18n_de:
-          name: Body
-          type: textarea_tag
-          params: disabled=false size=118x6
-        author_i18n_de:
-          name: Author
-          params: disabled=false maxlength=255 style="width:80%"
-        translated_by_i18n_de:
-          name: Translated by
-          params: disabled=false maxlength=255 style="width:80%"
-        link_i18n_de:
-          name: Link
-          params: disabled=false maxlength=255 style="width:80%"
+          params: disabled=false maxlength=255 style="width:80%"                  
           
         title_i18n_it:
           name: Title
@@ -570,5 +546,29 @@ generator:
           name: Translated by
           params: disabled=false maxlength=255 style="width:80%"
         link_i18n_zh_tw:
+          name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+
+        title_i18n_de:
+          name: Title
+          params: disabled=false maxlength=255 style="width:80%"
+        extradate_i18n_de:
+          name: Extra date
+          params: disabled=false maxlength=255 style="width:80%"
+        shortbody_i18n_de:
+          name: Short body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        body_i18n_de:
+          name: Body
+          type: textarea_tag
+          params: disabled=false size=118x6
+        author_i18n_de:
+          name: Author
+          params: disabled=false maxlength=255 style="width:80%"
+        translated_by_i18n_de:
+          name: Translated by
+          params: disabled=false maxlength=255 style="width:80%"
+        link_i18n_de:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"

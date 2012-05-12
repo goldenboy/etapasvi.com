@@ -201,7 +201,7 @@ class newsActions extends autonewsActions
     {
       $this->news->setOriginal($news['original']);
     }    
-    if (isset($news['title_i18n_en']))
+if (isset($news['title_i18n_en']))
     {
       $this->news->setTitleI18nEn($news['title_i18n_en']);
     }
@@ -425,34 +425,6 @@ class newsActions extends autonewsActions
     {
       $this->news->setLinkI18nVi($news['link_i18n_vi']);
     }
-    if (isset($news['title_i18n_de']))
-    {
-      $this->news->setTitleI18nDe($news['title_i18n_de']);
-    }
-    if (isset($news['extradate_i18n_de']))
-    {
-      $this->news->setExtradateI18nDe($news['extradate_i18n_de']);
-    }
-    if (isset($news['shortbody_i18n_de']))
-    {
-      $this->news->setShortbodyI18nDe($news['shortbody_i18n_de']);
-    }
-    if (isset($news['body_i18n_de']))
-    {
-      $this->news->setBodyI18nDe($news['body_i18n_de']);
-    }
-    if (isset($news['author_i18n_de']))
-    {
-      $this->news->setAuthorI18nDe($news['author_i18n_de']);
-    }
-    if (isset($news['translated_by_i18n_de']))
-    {
-      $this->news->setTranslatedByI18nDe($news['translated_by_i18n_de']);
-    }
-    if (isset($news['link_i18n_de']))
-    {
-      $this->news->setLinkI18nDe($news['link_i18n_de']);
-    }
     if (isset($news['title_i18n_it']))
     {
       $this->news->setTitleI18nIt($news['title_i18n_it']);
@@ -481,7 +453,7 @@ class newsActions extends autonewsActions
     {
       $this->news->setLinkI18nIt($news['link_i18n_it']);
     }
- 	if (isset($news['title_i18n_ja']))
+    if (isset($news['title_i18n_ja']))
     {
       $this->news->setTitleI18nJa($news['title_i18n_ja']);
     }
@@ -621,7 +593,7 @@ class newsActions extends autonewsActions
     {
       $this->news->setLinkI18nBn($news['link_i18n_bn']);
     }
-if (isset($news['title_i18n_he']))
+    if (isset($news['title_i18n_he']))
     {
       $this->news->setTitleI18nHe($news['title_i18n_he']);
     }
@@ -676,6 +648,34 @@ if (isset($news['title_i18n_he']))
     if (isset($news['link_i18n_zh_tw']))
     {
       $this->news->setLinkI18nZhTw($news['link_i18n_zh_tw']);
+    }
+    if (isset($news['title_i18n_de']))
+    {
+      $this->news->setTitleI18nDe($news['title_i18n_de']);
+    }
+    if (isset($news['extradate_i18n_de']))
+    {
+      $this->news->setExtradateI18nDe($news['extradate_i18n_de']);
+    }
+    if (isset($news['shortbody_i18n_de']))
+    {
+      $this->news->setShortbodyI18nDe($news['shortbody_i18n_de']);
+    }
+    if (isset($news['body_i18n_de']))
+    {
+      $this->news->setBodyI18nDe($news['body_i18n_de']);
+    }
+    if (isset($news['author_i18n_de']))
+    {
+      $this->news->setAuthorI18nDe($news['author_i18n_de']);
+    }
+    if (isset($news['translated_by_i18n_de']))
+    {
+      $this->news->setTranslatedByI18nDe($news['translated_by_i18n_de']);
+    }
+    if (isset($news['link_i18n_de']))
+    {
+      $this->news->setLinkI18nDe($news['link_i18n_de']);
     }
   }  
   
