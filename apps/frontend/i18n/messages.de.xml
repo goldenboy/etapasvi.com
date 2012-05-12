@@ -1,0 +1,402 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+        <source>A message of peace, an appeal to the world</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>A message of peace</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>An appeal to the world</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Om Namo Guru Buddha Gyani</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Please, enable JavaScript!</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Copyright</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>All Rights Reserved</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Home</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Buddha Boy</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Palden Dorje</source>
+        <target></target>
+      </trans-unit>     
+      <trans-unit id="1">
+        <source>Dharma Sangha</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>News</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Photo</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Video</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Biography</source>
+        <target></target>
+      </trans-unit>      
+	  <trans-unit id="1">
+        <source>Teachings</source>
+        <target></target>
+      </trans-unit>
+	  <trans-unit id="1">
+        <source>Books</source>
+        <target></target>
+      </trans-unit>
+	  <trans-unit id="1">
+        <source>Stories</source>
+        <target></target>
+      </trans-unit>
+	  <trans-unit id="1">
+        <source>Projects</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Encyclopedia</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Live Stream</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Hall</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Social Tools</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Other</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Twitter</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>LJ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Live Journal</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Feed</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Search</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Contact Us</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Forum</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Blessing</source>
+        <target></target>
+      </trans-unit>  
+      <trans-unit id="1">
+        <source>FAQ</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Audio</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Religious Forest</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Donation</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Chat</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Servers</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
+        <target></target>
+      </trans-unit>      
+      <trans-unit id="1">
+        <source>This page is translation of corresponding English page, switch into English language to see original text.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Website is developed and supported on a voluntary basis.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>If you can help in any way – email at</source>
+        <target></target>
+      </trans-unit>
+
+<!-- News _show -->
+      <trans-unit id="1">
+        <source>Read more</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Comments</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Source</source>
+        <target></target>
+      </trans-unit>
+
+<!-- misc -->
+      <trans-unit id="1">
+        <source>Go to top</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Text</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Author</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>teaching</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Translated by</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Download</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Date</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Updated on</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Enlarge</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Terthup Dharma Hall</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Back</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Footnote</source>
+        <target>Fußnote</target>
+      </trans-unit>
+      
+<!-- audio -->
+      <trans-unit id="1">
+        <source>Size</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Duration</source>
+        <target></target>
+      </trans-unit>
+      
+<!-- mobile -->
+      <trans-unit id="1">
+        <source>Mobile</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Classic</source>
+        <target></target>
+      </trans-unit>
+
+<!-- video -->
+      <trans-unit id="1">
+        <source>Watch on YouTube</source>
+        <target></target>
+      </trans-unit>
+
+<!--  offer translation -->
+      <trans-unit id="1">
+        <source>Translate</source>
+        <target></target>
+      </trans-unit> 
+
+      <trans-unit id="1">
+        <source>Error occured while loading form. Please, try again.</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Thanks! Your translation has been sent.</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Translate News, Photo, Audio or Video, presented on this page into any language.</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Translate website interface from English into any other language.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Watch video tutorial</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Tips for translators:</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Carefully read/watch instructions – respect your time and website programmer's time.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>If you would like to correct translation you sent, send both incorrect and correct versions in your language. It would allow programmer to find text, which should be replaced with correct one.</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Before performing translation make sure, that text you are going to translate is not translated yet on website.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Distortion and misinterpretation of information during translation is not acceptable.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>In translated text replace Photo, Video and Audio elements with [photo], [video] and [audio] marks correspondingly.</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Received translations are usually processed once a week, you can track how they are added on website in</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>for example, if you translate news item, copy it's title and whole text into this field</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>for example, if you translate news item, paste translation of it's title and text into this field</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Translation</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Language</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>optional</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Send</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Comment</source>
+        <target></target>
+      </trans-unit> 
+      
+<!-- Revision history -->
+
+      <trans-unit id="1">
+        <source>revision history</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Current revision</source>
+        <target></target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Compare selected revisions</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Embed</source>
+        <target></target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Print version</source>
+        <target></target>
+      </trans-unit>
+
+<!-- 404 -->
+      <trans-unit id="1">
+        <source>Page Not Found or Not Translated</source>
+        <target></target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>
