@@ -633,6 +633,7 @@ p.p2{
 	}
 #lang_column {
     color: gray;
+    cursor: default;
     line-height: 16px;
     margin-top: 6px;
     padding: 0;
@@ -657,6 +658,7 @@ p.p2{
     }
 #lang_column strong {
     color: gray;
+    cursor: default;
     }
 #lang_column a:link,
 #lang_column a:visited { 
@@ -2027,4 +2029,76 @@ label.error {
 .cboxIE6 #cboxMiddleLeft,
 .cboxIE6 #cboxMiddleRight {
     _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+}
+
+
+/*
+Tipsy: http://onehackoranother.com/projects/jquery/tipsy/
+*/
+
+.tipsy {
+    /*font-size: 10px;*/
+    padding: 5px;
+    position: absolute;
+    z-index: 100000;
+}
+.tipsy-inner {
+    background-color: #F2F2F2;
+    border: 1px solid darkgray;
+    max-width: 200px;
+    padding: 5px 8px 4px;
+    text-align: center;
+}
+.tipsy-inner {
+    border-radius: 3px 3px 3px 3px;
+}
+.tipsy-arrow {
+    background: url("/i/jquery/tipsy/tipsy.gif") no-repeat scroll left top transparent;
+    height: 5px;
+    position: absolute;
+    width: 9px;
+}
+.tipsy-n .tipsy-arrow {
+    left: 50%;
+    margin-left: -4px;
+    top: 0;
+}
+.tipsy-nw .tipsy-arrow {
+    left: 10px;
+    top: 0;
+}
+.tipsy-ne .tipsy-arrow {
+    right: 10px;
+    top: 0;
+}
+.tipsy-s .tipsy-arrow {
+    background-position: left bottom;
+    bottom: 0;
+    left: 50%;
+    margin-left: -4px;
+}
+.tipsy-sw .tipsy-arrow {
+    background-position: left bottom;
+    bottom: 0;
+    left: 10px;
+}
+.tipsy-se .tipsy-arrow {
+    background-position: left bottom;
+    bottom: 0;
+    right: 10px;
+}
+.tipsy-e .tipsy-arrow {
+    background-position: right top;
+    height: 9px;
+    margin-top: -4px;
+    right: 0;
+    top: 50%;
+    width: 5px;
+}
+.tipsy-w .tipsy-arrow {
+    height: 9px;
+    left: 0;
+    margin-top: -4px;
+    top: 50%;
+    width: 5px;
 }
