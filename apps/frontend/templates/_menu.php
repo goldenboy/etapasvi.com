@@ -68,6 +68,12 @@
 		<li id="mi_search"><a href="<?php echo url_for('@search', true); ?>" title="<?php echo __('Search') ?>"><?php echo __('Search') ?></a></li>
         <?php /* <li id="mi_servers"><a href="<?php echo url_for('@servers', true); ?>" title="<?php echo __('Servers') ?>"><?php echo __('Servers') ?></a></li> */ ?>
 		<li id="mi_contactus"><a href="<?php echo url_for('@contactus', true); ?>" title="<?php echo __('Contact Us') ?>"><?php echo __('Contact Us') ?></a></li>
+		<li>&nbsp;</li>
+		<li>
+            <form action="<?php echo url_for('@search', true); ?>">
+            <input type="text" id="quick_search_input" name="text"/> <input type="submit" class="input_button" value="Поиск" />
+            </form>
+        </li>
 	</ul>
 <?php /* 
 	<h3><?php echo __('Idea of the Week') ?></h3>

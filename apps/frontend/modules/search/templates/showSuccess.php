@@ -3,7 +3,7 @@
 <h1 class="m_bottom"><?php echo __('Search') ?></h1>
 
 <!-- Google Custom Search Element -->
-<div id="cse" style="width:100%;">Loading</div>
+<div id="cse" style="width:100%;">Loading...</div>
 <script src="//www.google.ru/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
   var _gaq = _gaq || [];
@@ -27,6 +27,17 @@
     customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
     customSearchControl.setSearchStartingCallback(null, _trackQuery);
     customSearchControl.draw('cse');
+
+    // search text passed in text
+    var parameters = getUrlParameters();
+    var text = decodeURIComponent( parameters['text'] );
+
+    if (text && text != "undefined" && typeof text != "undefined" && !$("#gsc-i-id1").val()) {
+      // change "+" to space  
+      text = text.replace("+", " ");
+      $("#gsc-i-id1").val(text);
+      $(".gsc-search-button").click();
+    }
   }, true);
 </script>
 <link rel="stylesheet" href="//www.google.com/cse/style/look/default.css" type="text/css" />

@@ -1380,7 +1380,12 @@ img.newsitem_img {
 	}
 
 /* search */
-
+#quick_search_input {
+    width: 41px;
+    }
+#quick_search_input.focused {
+    width: 80px;
+    }
 
 /* other */
 .title {

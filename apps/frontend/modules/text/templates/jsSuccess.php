@@ -138,6 +138,16 @@ $(document).ready(function() {
     
     // всплывающие названия языков
     $("#lang_column a,strong").tipsy({gravity: 's', opacity:1});
+
+    // быстрый поиск
+    $("#quick_search_input").focus(function() {
+        $(this).addClass('focused');
+    });
+    $("#quick_search_input").focusout(function() {
+        setTimeout('$("#quick_search_input").removeClass("focused")', 200);
+    });
+    
+
 });
 
 // сокрытие элементов в зависимости от размера окна
@@ -891,6 +901,20 @@ function showPhotoComments(trigger_el)
         cb_comments_height = 398;
         resizePhotoColorbox();
     }
+}
+
+// get URL parameter
+function getUrlParameters()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
 }
 
 // jmp3
