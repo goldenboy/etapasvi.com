@@ -76,7 +76,8 @@ class UserPeer extends BaseUserPeer
 		              'iso'     			 => 'es',
 		              //'mail_id' 			 => '6f9b50c196',
 		              'comments_category_id' => 686579,
-		              'feedburner_loc' 		 => 'es_ES'
+		              'feedburner_loc' 		 => 'es_ES',
+		              'disqus_culture' 		 => 'es_ES'
 		),
 		'it' => array('name'    			 => 'Italiano',
 		              'iso'     			 => 'it',
@@ -101,6 +102,7 @@ class UserPeer extends BaseUserPeer
 		              'hieroglyphic'  		 => true,
 		              'comments_category_id' => 1102690,
 		              //'feedburner_loc' 		 => 'ru_RU'
+		              'disqus_culture' 		 => 'en'
 		),
 		'bn' => array('name'    			 => 'বাংলা',
 		              'iso'     			 => 'bn',
@@ -108,6 +110,7 @@ class UserPeer extends BaseUserPeer
 		              'large_text'	 		 => true,
 		              'comments_category_id' => 1110606,
 		              //'feedburner_loc' 		 => 'ru_RU'
+					  'disqus_culture' 		 => 'en'
 		),
 		// Mandarin Chinese (Simplified script) - упрошённый китайский
 		'zh_CN'  => array(
@@ -117,8 +120,7 @@ class UserPeer extends BaseUserPeer
 		              //'mail_id' 	  		 => '33bb475372',
 		              'comments_category_id' => 686582,
 		              'feedburner_loc' 		 => ''
-		),		
-		// Taiwan / Lee Ming / Traditional Chinese language
+		),				
 		'he' => array(
 					  'name'     			 => 'עברית',
                       'iso'      			 => 'he',				
@@ -128,17 +130,21 @@ class UserPeer extends BaseUserPeer
 		              'feedburner_loc' 		 => '',
 		              'direction_rtl' 		 => true
          ),
+         // Taiwan / Lee Ming / Traditional Chinese language
 		'zh_TW' => array(
 					  'name'     			 => '傳統漢字',
                       'iso'      			 => 'zh-tw',				
 		              'hieroglyphic'  		 => true,
 		              'comments_category_id' => 1417917,
-		              'feedburner_loc' 		 => ''
+		              'feedburner_loc' 		 => '',
+		              'disqus_culture' 		 => 'zh_HANT'
          ),
 		'de' => array('name'     			 => 'Deutsch',
                       'iso'      			 => 'de',						             
-		              'comments_category_id' => 1456893,
-		              'feedburner_loc' 		 => ''),
+		              'comments_category_id' => 1456,893,
+		              'feedburner_loc' 		 => '',
+		              'disqus_culture' 		 => 'de_formal'
+		),
 	);
 	
 	 
@@ -479,7 +485,8 @@ class UserPeer extends BaseUserPeer
       ),
       'pt' => array('name'     => 'Português',
                     'en'       => 'Portuguese (Portugal)',
-                    'iso'      => 'pt'
+                    'iso'      => 'pt',
+                    'disqus_culture' => 'pt_EU',
       ),
 //      'pt_BR' => array('name'     => 'Português',
 //                       'en'       => 'Portuguese (Brazil)',
@@ -511,7 +518,8 @@ class UserPeer extends BaseUserPeer
       ),
       'sr' => array('name'     => 'Српски језик',
                     'en'       => 'Serbian (Latin)',
-                    'iso'      => 'sr'
+                    'iso'      => 'sr',
+                    'disqus_culture'      => 'sr_LATIN'
       ),
       'sk' => array('name'     => 'Slovenčina',
                     'en'       => 'Slovak',
@@ -603,7 +611,8 @@ class UserPeer extends BaseUserPeer
 //      ),
       'sv' => array('name'     => 'Svenska',
                     'en'       => 'Swedish',
-                    'iso'      => 'sv'
+                    'iso'      => 'sv',
+                    'disqus_culture' => 'sv_SE',
       ),
 
       // неизвестный
@@ -750,6 +759,41 @@ class UserPeer extends BaseUserPeer
 	public static function getCultureMain( $culture )
 	{
 		return substr( sfContext::getInstance()->getUser()->getCulture(), 0, 2 );
+	}
+	
+	/**
+	 * Get Diqus ISO culture code
+	 * http://docs.disqus.com/help/97/
+	 * 
+	 * ISO 639-1 two-letter code exceptions
+	 * Most languages can be set using their standard two-letter ISO 639-1 code (full list). Exceptions are:
+	 * 
+	 * Chinese (Traditional) = zh_HANT
+	 * German (Formal) = de_formal
+	 * German (Informal) = de_inf
+	 * Portuguese (Brazil) = pt_BR
+	 * Portuguese (European) = pt_EU
+	 * Serbian (Cyrillic) = sr_CYRL
+	 * Serbian (Latin) = sr_LATIN
+	 * Spanish (Argentina) = es_AR
+	 * Spanish (Mexico) = es_MX
+	 * Spanish (Spain) = es_ES
+	 * Swedish = sv_SE
+	 *
+	 * @param unknown_type $culture
+	 * @return unknown
+	 */
+	public static function getDisqusCulture( $culture )
+	{	
+		if (!$culture) {
+			$culture = sfContext::getInstance()->getUser()->getCulture();
+		}
+		
+		if (self::$cultures[ $culture ]['disqus_culture']) {
+			return self::$cultures[ $culture ]['disqus_culture'];
+		} else {
+			return self::getCultureMain($culture);	
+		}		
 	}	
 	
 	/**

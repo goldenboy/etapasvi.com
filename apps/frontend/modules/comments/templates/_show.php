@@ -15,7 +15,12 @@
     var disqus_identifier   = '<?php echo $comments_identifier?>';
     <?php if (!empty($comments_page_url)): ?>var disqus_url   = '<?php echo $comments_page_url?>';<?php endif ?>
     var disqus_category_id  = '<?php echo UserPeer::getCultureCommentsCategoryId() ?>';
-    var disqus_language     = '<?php echo UserPeer::getCultureMain() ?>';
+    <?php /* var disqus_language     = '<?php echo UserPeer::getCultureMain() ?>'; */ ?>
+
+    var disqus_config = function () { 
+      this.language = "<?php echo UserPeer::getDisqusCulture() ?>";
+    };
+
     <?php /*
     $(document).ready(function(){
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.cache = true;
@@ -63,7 +68,10 @@
 ?>
 <?php /*<iframe src="/<?php echo $sf_user->getCulture(); ?>/text/disqusembed" width="0" height="0" id="disqus_iframe"></iframe> 
 */ ?>
+<?php /*
 <script type="text/javascript" src="/<?php echo $sf_user->getCulture(); ?>/text/disqusembed" id="disqus_script"></script>
+*/ ?>
+<script type="text/javascript" src="http://etapasvi.disqus.com/embed.js" ></script>
 
 <?php
 /*
