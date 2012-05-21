@@ -141,7 +141,7 @@ class UserPeer extends BaseUserPeer
          ),
 		'de' => array('name'     			 => 'Deutsch',
                       'iso'      			 => 'de',						             
-		              'comments_category_id' => 1456,893,
+		              'comments_category_id' => 1456893,
 		              'feedburner_loc' 		 => '',
 		              'disqus_culture' 		 => 'de_formal'
 		),
