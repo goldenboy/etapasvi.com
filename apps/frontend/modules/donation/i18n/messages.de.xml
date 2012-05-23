@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>
+
+      <trans-unit id="1">
+        <source>Purpose</source>
+        <target>Zweck</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Bank account</source>
+        <target>Bankverbindung</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Account Holder's Name</source>
+        <target>Name des Kontoinhabers</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Account Number</source>
+        <target>Kontonummer</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Bank Name</source>
+        <target>Name der Bank</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Branch</source>
+        <target>Niederlassung</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Address</source>
+        <target>Adresse</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>street</source>
+        <target>Straße</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>sity</source>
+        <target>Ort</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>district</source>
+        <target>Distrikt</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>country</source>
+        <target>Land</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>SWIFT (BIC)</source>
+        <target>SWIFT (BIC)</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Phone</source>
+        <target>Telefon</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Fax</source>
+        <target>Fax</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Reports</source>
+        <target>Berichte</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Income / Expenses</source>
+        <target>Einnahmen / Ausgaben</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Planned expenses</source>
+        <target>Geplante Ausgaben</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Currency Converter</source>
+        <target>Währungsumrechner</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Donations received</source>
+        <target>Erhaltene Spenden</target>
+      </trans-unit>
+      
+<!-- утф -->
+    </body>
+  </file>
+</xliff>
