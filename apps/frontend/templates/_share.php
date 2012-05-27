@@ -2,6 +2,15 @@
 <div id="share">
 
 <div class="s_item">
+    <script id="_wauw2u" type="text/javascript">var _wau = _wau || [];
+    _wau.push(["colored", "ppc9yoe3440f", "w2u", "F2F2F2808080"]);
+    (function() {var s=document.createElement("script"); s.async=true;
+    s.src="http://widgets.amung.us/colored.js";
+    document.getElementsByTagName("head")[0].appendChild(s);
+    })();</script>
+</div>
+
+<div class="s_item">
     <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="etapasvi" data-lang="<?php echo UserPeer::getCultureIso($sf_user->getCulture()); ?>">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> 
 </div>
 

@@ -235,6 +235,6 @@ _gaq.push(
  ga.setAttribute('async', 'true');
  document.documentElement.firstChild.appendChild(ga);
 })();</script>
-<img style="width:0px;height:0px" src="http://www.maploco.com/vm24/s/3901457.png" />
+<?php /*<img style="width:0px;height:0px" src="http://www.maploco.com/vm24/s/3901457.png" />*/ ?>
 </body>
 </html>

@@ -29,7 +29,7 @@
     <?php elseif ($sf_user->getCulture() != 'ru'): ?>
         <a href="http://groups.google.com/group/buddhaboy" target="_blank" title="<?php echo __('Google') ?>" class="social_google"><span><?php echo __('Google') ?></span></a>
     <? endif ?>
-    <a href="http://m.maploco.com/details/3542bmdt" target="_blank" title="<?php echo __('Visitor Map') ?>" class="social_visitor_map"><span><?php echo __('Visitor Map') ?></span></a>    
+    <a href="http://whos.amung.us/stats/ppc9yoe3440f/" target="_blank" title="<?php echo __('Visitor Map') ?>" class="social_visitor_map"><span><?php echo __('Visitor Map') ?></span></a>    
     <a href="http://www.youtube.com/user/etapasvi" target="_blank" title="<?php echo __('YouTube') ?>" class="social_youtube"><span><?php echo __('YouTube') ?></span></a>
     <br/>
     <a href="https://picasaweb.google.com/105320929368395530858" target="_blank" title="<?php echo __('Picasa') ?>" class="social_picasa"><span><?php echo __('Picasa') ?></span></a>     

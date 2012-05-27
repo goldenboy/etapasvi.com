@@ -37,7 +37,13 @@ Email: <input type="text" style="width:140px" name="email"/> &nbsp;<input type="
 <div class="st_container">
 <?php include_partial('social_tools/show'); ?>
 </div>
-<hr class="dashed"/>
+<h2><?php echo __('Visitor Map') ?></h2>
+<script id="_wauk0a">var _wau = _wau || [];
+_wau.push(["map", "ppc9yoe3440f", "k0a", "566", "283", "classic", "heart-red"]);
+(function() {var s=document.createElement("script"); s.async=true;
+s.src="http://widgets.amung.us/map.js";
+document.getElementsByTagName("head")[0].appendChild(s);
+})();</script>
 <h2><?php echo __('Recent Comments') ?></h2>
 <div class="dsq-widget"><script type="text/javascript" src="http://etapasvi.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=0&amp;avatar_size=32&amp;excerpt_length=200"></script></div><?php /* <a href="http://disqus.com/">Powered by Disqus</a> */ ?>
 <p class="p1_no_top">

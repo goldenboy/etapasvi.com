@@ -192,6 +192,11 @@
         <source>Servers</source>
         <target></target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Visitor Map</source>
+        <target></target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
