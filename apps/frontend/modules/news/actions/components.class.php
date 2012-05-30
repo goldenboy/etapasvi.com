@@ -44,7 +44,7 @@ class newsComponents extends sfComponents
   {
 	$this->newsitem = NewsPeer::retrieveByPk( $this->id );
 
-	if (sfContext::getInstance()->getActionName() != 'preview') {
+	//if (sfContext::getInstance()->getActionName() != 'preview') {
   	  if ( !$this->newsitem || !$this->newsitem->getBody() || !$this->newsitem->getShow()) {
   		//sfActions::forward('default', 'error404');
   		//@sfActions::forward404('123');
@@ -60,7 +60,7 @@ class newsComponents extends sfComponents
 	  ) {
 		sfActions::redirect( $newitem_url );
 	  }
-	}
+	//}
   	
 	// установка заголовка страницы
 	$news_title = $this->newsitem->getTitle();
