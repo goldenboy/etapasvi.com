@@ -2,404 +2,452 @@
 <xliff version="1.0">
   <file original="global" source-language="en" datatype="plaintext">
     <body>
+
       <trans-unit id="1">
         <source>A message of peace, an appeal to the world</source>
-        <target></target>
+        <target>Eine Botschaft des Friedens, ein Appell an die Welt</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>A message of peace</source>
-        <target></target>
+        <target>Eine Botschaft des Friedens</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>An appeal to the world</source>
-        <target></target>
+        <target>Ein Appell an die Welt</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Om Namo Guru Buddha Gyani</source>
-        <target></target>
+        <target>Om Namo Guru Buddha Gyani</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Please, enable JavaScript!</source>
-        <target></target>
+        <target>Bitte erlaube JavaScript!</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Copyright</source>
-        <target></target>
+        <target>Copyright</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>All Rights Reserved</source>
-        <target></target>
+        <target>Alle Rechte vorbehalten</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Home</source>
-        <target></target>
+        <target>Startseite</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Buddha Boy</source>
-        <target></target>
+        <target>Buddha Boy</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Palden Dorje</source>
-        <target></target>
-      </trans-unit>     
+        <target>Palden Dorje</target>
+      </trans-unit>
+
       <trans-unit id="1">
         <source>Dharma Sangha</source>
-        <target></target>
+        <target>Dharma Sangha</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>News</source>
-        <target></target>
+        <target>Neue Nachrichten</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Photo</source>
-        <target></target>
+        <target>Photo</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Video</source>
-        <target></target>
+        <target>Video</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Biography</source>
-        <target></target>
-      </trans-unit>      
-	  <trans-unit id="1">
+        <target>Biographie</target>
+      </trans-unit>
+
+      <trans-unit id="1">
         <source>Teachings</source>
-        <target></target>
+        <target>Lehren</target>
       </trans-unit>
-	  <trans-unit id="1">
+
+      <trans-unit id="1">
         <source>Books</source>
-        <target></target>
+        <target>Bücher</target>
       </trans-unit>
-	  <trans-unit id="1">
+
+      <trans-unit id="1">
         <source>Stories</source>
-        <target></target>
+        <target>Berichte</target>
       </trans-unit>
-	  <trans-unit id="1">
+
+      <trans-unit id="1">
         <source>Projects</source>
-        <target></target>
+        <target>Projekte</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Encyclopedia</source>
-        <target></target>
+        <target>Enzyklopädie</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Live Stream</source>
-        <target></target>
+        <target>Live Stream</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Dharma Hall</source>
-        <target></target>
+        <target>Dharma Halle</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Social Tools</source>
-        <target></target>
+        <target>Soziale Tools</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Other</source>
-        <target></target>
+        <target>Sonstiges</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Twitter</source>
-        <target></target>
+        <target>Twitter</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>LJ</source>
-        <target></target>
+        <target>LJ</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Live Journal</source>
-        <target></target>
+        <target>Live Journal</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Feed</source>
-        <target></target>
+        <target>Feed</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Search</source>
-        <target></target>
+        <target>Suche</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Contact Us</source>
-        <target></target>
+        <target>Kontaktiere uns</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Forum</source>
-        <target></target>
+        <target>Forum</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Blessing</source>
-        <target></target>
-      </trans-unit>  
+        <target>Segnung</target>
+      </trans-unit>
+
       <trans-unit id="1">
         <source>FAQ</source>
-        <target></target>
+        <target>Häufig gestellte Fragen/Antworten</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Audio</source>
-        <target></target>
+        <target>Audio</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Religious Forest</source>
-        <target></target>
+        <target>Spiritueller Wald</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Donation</source>
-        <target></target>
+        <target>Spenden</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Chat</source>
-        <target></target>
+        <target>Chat</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Servers</source>
-        <target></target>
+        <target>Servers</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Visitor Map</source>
-        <target></target>
+        <target>Besucher-Weltkarte</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.</source>
-        <target></target>
-      </trans-unit>      
+        <target>Dharma Sangha (vormals Palden Dorje, Ram Bahadur Bomjan, Buddha Boy aus Nepal): neue Nachrichten, Photo, Video, Biographie, Reden.</target>
+      </trans-unit>
+
       <trans-unit id="1">
         <source>This page is translation of corresponding English page, switch into English language to see original text.</source>
-        <target></target>
+        <target>Diese Seite ist eine Übersetzung der entsprechenden englischen Seite, wechsel in die englische Sprache, um den Originaltext zu sehen.</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Website is developed and supported on a voluntary basis.</source>
-        <target></target>
+        <target>Die Webseite wird auf freiwilliger Basis entwickelt und unterstützt.</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>If you can help in any way – email at</source>
-        <target></target>
+        <target>Wenn du in irgendeiner Weise helfen kannst - sende eine email an </target>
       </trans-unit>
 
-<!-- News _show -->
       <trans-unit id="1">
         <source>Read more</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Comments</source>
-        <target></target>
-      </trans-unit>
-      <trans-unit id="1">
-        <source>Source</source>
-        <target></target>
+        <target>weiterlesen</target>
       </trans-unit>
 
-<!-- misc -->
+      <trans-unit id="1">
+        <source>Comments</source>
+        <target>Kommentare</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>Source</source>
+        <target>Quelle</target>
+      </trans-unit>
+
       <trans-unit id="1">
         <source>Go to top</source>
-        <target></target>
+        <target>gehe nach oben</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Text</source>
-        <target></target>
+        <target>Text</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Author</source>
-        <target></target>
+        <target>Author</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>teaching</source>
-        <target></target>
+        <target>Lehre</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Translated by</source>
-        <target></target>
+        <target>Übersetzt von</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Download</source>
-        <target></target>
+        <target>Herunterladen</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Date</source>
-        <target></target>
+        <target>Datum</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Updated on</source>
-        <target></target>
+        <target>Aktualisiert am</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Enlarge</source>
-        <target></target>
+        <target>Vergrößern</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Terthup Dharma Hall</source>
-        <target></target>
+        <target>Terthup Dharma Halle</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Back</source>
-        <target></target>
+        <target>Zurück</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Footnote</source>
         <target>Fußnote</target>
       </trans-unit>
-      
-<!-- audio -->
+
       <trans-unit id="1">
         <source>Size</source>
-        <target></target>
+        <target>Größe</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Duration</source>
-        <target></target>
+        <target>Dauer</target>
       </trans-unit>
-      
-<!-- mobile -->
+
       <trans-unit id="1">
         <source>Mobile</source>
-        <target></target>
+        <target>Mobil</target>
       </trans-unit>
+
       <trans-unit id="1">
         <source>Classic</source>
-        <target></target>
+        <target>Klassisch</target>
       </trans-unit>
 
-<!-- video -->
       <trans-unit id="1">
         <source>Watch on YouTube</source>
-        <target></target>
+        <target>Siehe auf YouTube</target>
       </trans-unit>
 
-<!--  offer translation -->
       <trans-unit id="1">
         <source>Translate</source>
-        <target></target>
-      </trans-unit> 
+        <target>Übersetze</target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>Error occured while loading form. Please, try again.</source>
-        <target></target>
+        <target>Während des Ladens ist ein Fehler aufgetreten. Versuche es bitte noch einmal.</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Thanks! Your translation has been sent.</source>
-        <target></target>
+        <target>Danke! Deine Übersetzung wurde versandt.</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Translate News, Photo, Audio or Video, presented on this page into any language.</source>
-        <target></target>
+        <target>Übersetze neue Nachrichten, Photo, Audio oder Video, die auf dieser Seite präsentiert werden, in eine andere Sprache.</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Translate website interface from English into any other language.</source>
-        <target></target>
+        <target>Übersetze das ""Interface"" der Webseite von Englisch in eine andere Sprache.</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Watch video tutorial</source>
-        <target></target>
+        <target>Schau das Video der Gemeinschaft</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Tips for translators:</source>
-        <target></target>
+        <target>Tipps für Übersetzer:</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Carefully read/watch instructions – respect your time and website programmer's time.</source>
-        <target></target>
+        <target>Lese/beachte die Instruktionen sorgfältig - berücksichtige deine Zeit und die Zeit des Programmierers der Webseite.</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>If you would like to correct translation you sent, send both incorrect and correct versions in your language. It would allow programmer to find text, which should be replaced with correct one.</source>
-        <target></target>
+        <target>Wenn du deine Übersetzung korrigieren willst, sende beide, die nicht korrigierte und die korrigierte Version in deiner Sprache. Dies hilft dem Programmierer den Text zu finden, der mit dem korrigierten ersetzt werden soll.</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Before performing translation make sure, that text you are going to translate is not translated yet on website.</source>
-        <target></target>
+        <target>Bevor du eine Übersetzung fertigst stelle sicher, dass der Text, den du übersetzen willst, nicht bereits auf der Webseite existiert.</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Distortion and misinterpretation of information during translation is not acceptable.</source>
-        <target></target>
+        <target>Entstellungen und Fehlinterpretationen von Informationen können bei der Übersetzung nicht akzeptiert werden.</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>In translated text replace Photo, Video and Audio elements with [photo], [video] and [audio] marks correspondingly.</source>
-        <target></target>
+        <target>Ersetze Photo-, Video- und Audio-Elemente im übersetzten Text mit entsprechenden Kennzeichnungen [Photo], [Video] und [Audio].</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Received translations are usually processed once a week, you can track how they are added on website in</source>
-        <target></target>
+        <target>Empfangene Übersetzungen werden gewöhnlich einmal pro Woche hochgeladen, du kannst das Hinzufügen auf der Webseite verfolgen unter </target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>for example, if you translate news item, copy it's title and whole text into this field</source>
-        <target></target>
+        <target>wenn du z. B. einen Artikel aus ""neue Nachrichten"" übersetzt, kopiere den Titel und den gesamten Text in dieses Feld</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>for example, if you translate news item, paste translation of it's title and text into this field</source>
-        <target></target>
+        <target>wenn du z. B. eine Artikel aus ""neue Nachrichten"" übersetzt, kopiere die Übersetzung des Titels und Textes in dieses Feld</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Translation</source>
-        <target></target>
+        <target>Übersetzung</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Language</source>
-        <target></target>
+        <target>Sprache</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>optional</source>
-        <target></target>
+        <target>optional</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Send</source>
-        <target></target>
+        <target>Senden</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Comment</source>
-        <target></target>
-      </trans-unit> 
-      
-<!-- Revision history -->
+        <target>Kommentar</target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>revision history</source>
-        <target></target>
+        <target>durchgesehene/bisherige Darstellung</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Current revision</source>
-        <target></target>
+        <target>Gültige Durchsicht/Darstellung</target>
       </trans-unit>
-      
+
       <trans-unit id="1">
         <source>Compare selected revisions</source>
-        <target></target>
+        <target>Vergleiche die ausgewählten Darstellungen</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Embed</source>
-        <target></target>
+        <target>Einbetten</target>
       </trans-unit>
 
       <trans-unit id="1">
         <source>Print version</source>
-        <target></target>
+        <target>Druckversion</target>
       </trans-unit>
 
-<!-- 404 -->
       <trans-unit id="1">
         <source>Page Not Found or Not Translated</source>
-        <target></target>
+        <target>Seite wurde nicht gefunden oder nicht übersetzt.</target>
       </trans-unit>
-
+      
 <!-- утф -->
     </body>
   </file>
