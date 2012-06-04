@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file original="global" source-language="en" datatype="plaintext">
+    <body>   
+
+      <trans-unit id="1">
+        <source>You can send your photos, names and messages to</source>
+        <target>Du kannst deine Photos, Namen und Nachrichten an</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>with subject "For blessing", Dharma Sangha will see all received requests and bless them.</source>
+        <target>mit dem Betreff "For Blessing/Zur Segnung" senden; Dharma Sangha bekommt alle eingegangenen Anfragen zu sehen und segnet sie.</target>
+      </trans-unit>
+
+<!-- утф -->
+    </body>
+  </file>
+</xliff>
