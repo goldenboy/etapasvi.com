@@ -1,1 +1,1 @@
-<?php include_partial('news/list', array('news_list'=>array($newsitem))); ?>
+<?php include_partial('news/list', array('news_list'=>$newslist)); ?>

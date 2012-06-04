@@ -32,11 +32,11 @@ class newsComponents extends sfComponents
   	
   	$c->addDescendingOrderByColumn( NewsPeer::ORDER );
   	//$c->addDescendingOrderByColumn( NewsPeer::ID );
-  	$c->setLimit(1);
+  	$c->setLimit(NewsPeer::LATEST_COUNT);
   	$newslist = NewsPeer::doSelectWithI18n( $c );
   	$newsitem = $newslist[0];
-    if ($newsitem) {
-      $this->newsitem = $newsitem;
+    if ($newslist) {
+      $this->newslist = $newslist;
     } 
   }   
   

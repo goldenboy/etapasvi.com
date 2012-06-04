@@ -11,6 +11,9 @@ class NewsPeer extends BaseNewsPeer
   
   const NEWS_PER_PAGE 	= 5;
   
+  // number of news displayed in the latest section
+  const LATEST_COUNT 	= 1;
+  
   // период, за который отображаются элементы в RSS
   const RSS_PERIOD 	    		= '-3 month';
   // максимальная длина Описания для RSS
