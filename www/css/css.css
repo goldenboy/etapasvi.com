@@ -449,7 +449,7 @@ p.p2{
 #content_wrapper {
 	left:0;
 	position:absolute;
-	top:47px;
+	top:50px;
 	width:566px;
 	}
 
@@ -551,7 +551,7 @@ p.p2{
 #bubble_mantra {
 	background: url("../i/interface_sprite.jpg") no-repeat scroll -530px 0 transparent;
     color: #9685BA;
-    height: 70px;
+    height: 67px;
     left: -2px;
     padding: 115px 0 0;
     position: absolute;
