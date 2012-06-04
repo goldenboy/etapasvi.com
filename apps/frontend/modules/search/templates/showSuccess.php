@@ -34,7 +34,7 @@
 
     if (text && text != "undefined" && typeof text != "undefined" && !$("#gsc-i-id1").val()) {
       // change "+" to space  
-      text = text.replace("+", " ");
+      text = text.replaceAll("+", " ");
       $("#gsc-i-id1").val(text);
       $(".gsc-search-button").click();
     }
