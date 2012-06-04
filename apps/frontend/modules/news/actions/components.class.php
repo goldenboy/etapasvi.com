@@ -30,8 +30,8 @@ class newsComponents extends sfComponents
   	//$c->add( NewsI18nPeer::BODY, '', Criteria::NOT_EQUAL );
   	NewsPeer::addVisibleCriteria( $c );
   	
-  	//$c->addDescendingOrderByColumn( NewsPeer::ORDER );
-  	$c->addDescendingOrderByColumn( NewsPeer::ID );
+  	$c->addDescendingOrderByColumn( NewsPeer::ORDER );
+  	//$c->addDescendingOrderByColumn( NewsPeer::ID );
   	$c->setLimit(1);
   	$newslist = NewsPeer::doSelectWithI18n( $c );
   	$newsitem = $newslist[0];
