@@ -101,6 +101,7 @@ $(document).ready(function(){
 </p>
 */ ?>
 
+<?php /*
 <h2 class="center"><?php echo __('Bank account') ?></h2>
 <p class="center_text">    
 <?php /*
@@ -113,7 +114,7 @@ $(document).ready(function(){
     <br/><strong>Address:</strong> P.O.Box 3990, Lazimpat, Kathmandu, Nepal
     <br/><strong>Tel:</strong> 977-1-4418456
     <br/><strong>Fax No:</strong> 977-1-4417428
-*/ ?>
+* ?>
     <strong><?php echo __('Account Holder\'s Name') ?>:</strong> Nil Bdr / Tomasz Hen
     <br/><strong><?php echo __('Account Number') ?>:</strong> 00700501204269
     <br/><strong><?php echo __('Bank Name') ?>:</strong> Everest Bank Limited       
@@ -124,7 +125,7 @@ $(document).ready(function(){
     <br/><strong><?php echo __('Fax') ?>:</strong> 977-53-520616 
     <br/><strong>Email:</strong> eblsim@ebl.com.np
 </p>
-
+*/ ?>
 <h2 class="center"><?php echo __('Reports') ?></h2>
 <div class="center_text">
 <a href="https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdDlYNjBLZWVSaUlhaVg4ZG55S0VZdXc&single=true&gid=0&output=html" target="_blank"><?php echo __('Donations received') ?></a> | <a href="https://docs.google.com/document/pub?id=1bIX95gsuNxFDxrTbopjKXTK3ypPk894SHiKZmEOoBGU" target="_blank"><?php echo __('Planned expenses') ?></a> | <a href="https://docs.google.com/document/pub?id=1v46QPZq6iZnVWhmBRWRBSdVIqHW7kAsONfnbIWfViAI" target="_blank"><?php echo __('Income / Expenses') ?></a>
