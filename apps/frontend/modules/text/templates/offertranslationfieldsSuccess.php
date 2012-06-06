@@ -4,8 +4,12 @@
 <p>
     <input type="radio" name="offer_tr_method" value="offer_tr_method_messages" onclick="showOfferTrMethod(this)"> <?php echo __('Translate website interface from English into any other language.') ?>
 </p>
-<p>
-    <a href="http://www.youtube.com/watch?v=WI4c1vT_yXg" target="_blank"><?php echo __('Watch video tutorial') ?></a>    
+<p class="light small">
+    <?php echo __('Video tutorials:') ?>
+    <ul class="light small">
+        <li><a href="http://www.youtube.com/watch?v=WI4c1vT_yXg" target="_blank" class="external"><?php echo __('Translation Guide') ?></a></li>
+        <li><a href="http://www.youtube.com/watch?v=F3E9-2FjdzA" target="_blank" class="external"><?php echo __('Video subtitles translation') ?></a></li>
+    </ul>
 </p>
 <p class="light small">
     <?php echo __('Tips for translators:') ?>
