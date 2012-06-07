@@ -293,8 +293,18 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Watch video tutorial</source>
-        <target>Смотреть видео-руководство</target>
+        <source>Video tutorials:</source>
+        <target>Видео-инструкции:</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Translation Guide</source>
+        <target>Руководство по переводу</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Video subtitles translation</source>
+        <target>Перевод субтитров к видео</target>
       </trans-unit>
       
       <trans-unit id="1">
