@@ -126,6 +126,20 @@ $(document).ready(function(){
     <br/><strong>Email:</strong> eblsim@ebl.com.np
 </p>
 */ ?>
+
+<h2 class="center"><?php echo __('Bank account') ?></h2>
+<p class="center_text">    
+    <strong><?php echo __('Account Holder\'s Name') ?>:</strong> Darshan Limbu / Nil Bahadur Thing
+    <br/><strong><?php echo __('Account Number') ?>:</strong> 00700501204924
+    <br/><strong><?php echo __('Bank Name') ?>:</strong> Everest Bank Limited       
+    <br/><strong><?php echo __('Branch') ?>:</strong> Simara Branch        
+    <br/><strong><?php echo __('Address') ?>:</strong> Simara Chowk (<?php echo __('street') ?>), Simara (<?php echo __('sity') ?>), Bara (<?php echo __('district') ?>), Nepal (<?php echo __('country') ?>)
+    <br/><strong><?php echo __('SWIFT (BIC)') ?>:</strong> EVBLNPKA
+    <br/><strong><?php echo __('Phone') ?>:</strong> 977-53-520506 
+    <br/><strong><?php echo __('Fax') ?>:</strong> 977-53-520616 
+    <br/><strong>Email:</strong> eblsim@ebl.com.np
+</p>
+
 <h2 class="center"><?php echo __('Reports') ?></h2>
 <div class="center_text">
 <a href="https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0ApLTjOcBiwykdDlYNjBLZWVSaUlhaVg4ZG55S0VZdXc&single=true&gid=0&output=html" target="_blank"><?php echo __('Donations received') ?></a> | <a href="https://docs.google.com/document/pub?id=1bIX95gsuNxFDxrTbopjKXTK3ypPk894SHiKZmEOoBGU" target="_blank"><?php echo __('Planned expenses') ?></a> | <a href="https://docs.google.com/document/pub?id=1v46QPZq6iZnVWhmBRWRBSdVIqHW7kAsONfnbIWfViAI" target="_blank"><?php echo __('Income / Expenses') ?></a>
