@@ -25,9 +25,17 @@
 	}
 
 body { 
-    font-family: Verdana;
+    font-family: Arial;
     font-size: 0.8em;
 	margin: 0px; 
+	}
+    
+p, 
+.p { 
+	margin:10px 0;
+	text-align: justify;
+	overflow: hidden;
+	zoom: 1;
 	}
 
 h1 {
@@ -59,8 +67,7 @@ h2 {
 
 h3 { 
     color: #2c2c2c;
-    font-family: georgia;
-    font-size: 0.9em;
+    font-size: 1em;
     font-size-adjust: none;
     font-variant: normal;
     font-weight: bold;

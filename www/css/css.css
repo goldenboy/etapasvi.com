@@ -90,7 +90,7 @@ body.enlarge_photo #dsq-content {
 
 /* basic elements */
 body { 
-    font: 0.7em/15px Verdana;
+    font: 12px Arial;
 	text-align: justify;
 	margin: 0px; 
 	}
@@ -156,13 +156,12 @@ h2.underlined {
 
 h3 { 
     clear: both;
-	color:#2c2c2c;
-	font-family:georgia;
-	font-size:8pt;
-	font-size-adjust:none;
-	font-variant:normal;
-	font-weight:bold;
-	line-height:16pt;
+    color: #2C2C2C;
+    font-size: 13px;
+    font-size-adjust: none;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 16pt;
     margin-bottom: 6px;
     text-align: left;
 	}
@@ -404,6 +403,7 @@ p.p2{
 	}
 
 #menu {
+    font: 11px Verdana;
 	left: 584px;
     overflow:visible;
     position: absolute;
