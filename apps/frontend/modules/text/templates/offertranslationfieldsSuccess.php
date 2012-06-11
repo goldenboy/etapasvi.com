@@ -1,3 +1,13 @@
+<script type="text/javascript">
+    window.CKEDITOR_BASEPATH = '/js/ckeditor/';
+</script>
+<script type="text/javascript" src="/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        CKEDITOR.replace( 'entry.0.single' );
+        CKEDITOR.replace( 'entry.1.single' );
+    });
+</script>
 <p>
     <input type="radio" name="offer_tr_method" value="offer_tr_method_form" onclick="showOfferTrMethod(this)"> <?php echo __('Translate News, Photo, Audio or Video, presented on this page into any language.') ?>
 </p>
@@ -32,12 +42,12 @@
     <p>
         <?php echo __('Text') ?>:<br/>
         <span class="light">(<?php echo __('for example, if you translate news item, copy it\'s title and whole text into this field') ?>)</span>
-        <br/><textarea name="entry.0.single" rows="8" ></textarea>
+        <br/><textarea name="entry.0.single" rows="8" id="entry.0.single"></textarea>
     </p>
     <p>
         <?php echo __('Translation') ?>:<br/>
         <span class="light">(<?php echo __('for example, if you translate news item, paste translation of it\'s title and text into this field') ?>)</span>
-        <br/><textarea name="entry.1.single" rows="8" ></textarea>
+        <br/><textarea name="entry.1.single" rows="20" id="entry.1.single"></textarea>
     </p>
     <table cellspacing="0" cellpadding="0" class="form_table">
     <tr>
