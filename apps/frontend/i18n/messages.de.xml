@@ -317,6 +317,11 @@
         <source>Watch on YouTube</source>
         <target>Siehe auf YouTube</target>
       </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Click "CC" in the player to show captions</source>
+        <target></target>
+      </trans-unit>
 
       <trans-unit id="1">
         <source>Translate</source>

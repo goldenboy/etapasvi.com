@@ -265,6 +265,10 @@
         <source>Watch on YouTube</source>
         <target>Смотреть на YouTube</target>
       </trans-unit>
+      <trans-unit id="1">
+        <source>Click "CC" in the player to show captions</source>
+        <target>Нажмите "СС" в плеере, чтобы включить субтитры</target>
+      </trans-unit>
 
 <!--  offer translation -->
       <trans-unit id="1">
