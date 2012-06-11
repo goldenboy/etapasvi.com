@@ -4,6 +4,12 @@
  *
  */
 
+// URL rewrite to /lang/photo/view
+preg_match("/\/([^\/]+)\/photo\/[0-9]+/", $_SERVER['REQUEST_URI'], $matches);
+if (count($matches)) {
+	$_SERVER['REQUEST_URI'] = '/' . $matches[1] . '/photo/view';
+}
+
 // when script lanunched in console HTTP_HOST is not set, so it should be hardcoded
 // otherwise links on website will be generated incorrectly by Symfony
 if (!$_SERVER['HTTP_HOST'] || !strstr($_SERVER['HTTP_HOST'], "dev.")) {

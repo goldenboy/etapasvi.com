@@ -14,6 +14,10 @@ showSuccess:
   metas:
     title:        Photo
     
+viewSuccess:
+  metas:
+    title:        Photo
+    
 contentSuccess:
   metas:
     title:        Photo

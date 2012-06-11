@@ -80,6 +80,16 @@ class photoActions extends sfActions
   	$this->title = $request->getParameter('title');
   }
   
+ /**
+  * Пустая страница для подгрузки фото
+  *
+  * @param sfWebRequest $request
+  */
+  public function executeView(sfWebRequest $request)
+  {  	  	
+
+  }
+  
   /**
    * Содержимое страницы фото
    *
@@ -115,18 +125,26 @@ class photoActions extends sfActions
     $_SESSION['back_to_photo'] = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
   }*/
   
-  public function executeAlbum(sfWebRequest $request, $check_title = true)
+  public function executeAlbum(sfWebRequest $request, $albumcontent = false)
   { 
   	// альбом
-  	$this->photoalbum = PhotoalbumPeer::retrieveByPk( $this->getRequestParameter('id') );
-  		
-    $this->forward404Unless( $this->photoalbum );
-    
+  	if (!$albumcontent) {
+  		$this->photoalbum = PhotoalbumPeer::retrieveByPk( $this->getRequestParameter('id') );  		
+    	$this->forward404Unless( $this->photoalbum );
+  	}
+
+  	$album_id = $this->getRequestParameter('id');
+  	
     $c = new Criteria();
-    $c->add( PhotoPeer::SHOW, 1);
-    $c->add( PhotoPeer::PHOTOALBUM_ID, $this->getRequestParameter('id'));
-    $c->addAscendingOrderByColumn( PhotoPeer::ORDER );
     PhotoPeer::addVisibleCriteria($c);
+    if ($album_id) {
+    	$c->add( PhotoPeer::PHOTOALBUM_ID, $album_id);
+    } else {
+    	$c->add( PhotoPeer::PHOTOALBUM_ID, null, Criteria::ISNULL);
+    	$c->remove( PhotoPeer::SHOW );
+    }
+    $c->addAscendingOrderByColumn( PhotoPeer::ORDER );
+    
     
 	//$pager = new sfPropelPagerI18n('Photo', PhotoPeer::ITEMS_PER_PAGE);
     //$pager->setCriteriaI18n($c);
@@ -141,7 +159,7 @@ class photoActions extends sfActions
     	$this->forward404();
     }
     
-    if ($check_title) {
+    if (!$albumcontent) {
       $title = $this->photoalbum->getTitle();
       if ($title) {
         
@@ -193,7 +211,30 @@ class photoActions extends sfActions
    */
   public function executeAlbumcontent(sfWebRequest $request)
   {  	
-	$this->executeAlbum($request, false);
+	$this->executeAlbum($request, true);
+  }
+  
+  /**
+   * Список альбомов и фотографий
+   *
+   * @param sfWebRequest $request
+   */
+  public function executeMap(sfWebRequest $request)
+  {
+	$c = new Criteria();
+	$c->clearSelectColumns();
+	$c->addSelectColumn(PhotoPeer::ID);
+	$c->addSelectColumn(PhotoPeer::PHOTOALBUM_ID);
+    PhotoPeer::addVisibleCriteria($c);
+    
+    $photo_list = PhotoPeer::doSelect($c);
+    $map = array();
+    foreach ($photo_list as $photo) {
+	  $map[ $photo->getId() ] = $photo->getPhotoalbumId();
+    }
+    
+    echo json_encode($map);
+    return sfView::NONE;
   }
   
 }

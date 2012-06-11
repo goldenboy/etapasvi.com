@@ -685,19 +685,42 @@ function loadPhotoContent(href, photoalbum_id, hide_content, domain)
                     album_content[ photoalbum_id ][ matches[1] ] = matches[0];
                 }
                 if (!album_content[ photoalbum_id ] || !album_content[ photoalbum_id ][ photo_id ]) {
-                    document.location = href;
+                    //document.location = href;
                     return;
                 }
                 setPhotoHtml(album_content[ photoalbum_id ][ photo_id ], photo_id);
-            },
+            }/*,
             error: function(data) {   
                 document.location = href;
-            }
+            }*/
         });
     } else {
         setPhotoHtml(album_content[ photoalbum_id ][ photo_id ], photo_id);
     }
     preparePhotoContent();
+}
+
+// load photo when we don't know it's album id
+function loadPhotoContentByPhotoId(href)
+{
+    var photo_id        = getPhotoIdFromUrl(href);
+    var culture         = getCultureFromUrl(document.location + "");
+    var photo_map_url   = '/' + culture + '/photo/map';
+    
+    if (!photo_id) {
+        return;
+    }
+    $.ajax({
+        url: photo_map_url,
+        dataType: 'json',
+        success: function(data) {    
+            var photoalbum_id = '';
+            if (typeof data[ photo_id ] != "undefined") {
+                photoalbum_id = data[ photo_id ];
+            }
+            loadPhotoContent(href, photoalbum_id);
+        }
+    });
 }
 
 // set photo HTML 

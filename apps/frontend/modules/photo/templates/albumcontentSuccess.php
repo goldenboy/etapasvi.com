@@ -2,7 +2,9 @@
 <?php if (count($photo_list)): ?>
     <?php
         // get item2item
-        $item2item_html = get_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photoalbum->getId()));        
+        if ($photoalbum) {
+            $item2item_html = get_component('item2item', 'show', array('item_type'=>ItemtypesPeer::ITEM_TYPE_PHOTOALBUM, 'item_id'=>$photoalbum->getId()));        
+        }
     ?>
     <?php foreach($photo_list as $i=>$photo): ?>
         <?php 

@@ -185,6 +185,8 @@ class sfSuperCache
   	$urls_for_clearing[] = $routing->generate('feed', array('sf_culture'=>$culture)) . '*';
   	// RSS
   	$urls_for_clearing[] = $routing->generate('news_rss', array('sf_culture'=>$culture)) . '*';
+  	// Photoalbum view
+  	$urls_for_clearing[] = $routing->generate('photo_view', array('sf_culture'=>$culture)) . '*';
   	
   	if ($culture == 'all') {
   	  $all_cultures = true;
@@ -243,8 +245,12 @@ class sfSuperCache
           
           // photoalbum content with photos
           $urls_for_clearing[] = str_replace('/album/', '/albumcontent/', $photoalbum_url);
+          
+      	  // photoalbum photos map
+      	  $urls_for_clearing[] = preg_replace('/album.*/', 'map', $photoalbum_url);
                     
       	  // все фото в фотоальбоме
+      	  /*
       	  $c = new Criteria();
       	  $c->add(PhotoPeer::PHOTOALBUM_ID, $photoalbum->getId());
       	  $photoalbum_photos = PhotoPeer::doSelect($c);
@@ -255,6 +261,7 @@ class sfSuperCache
       	  	// http://www.etapasvi.com/en/photo/content/1243  	  	
       	  	//$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
       	  }
+      	  */
   	    }
   	    
   	  } catch (Exception $e) {
@@ -288,7 +295,11 @@ class sfSuperCache
       // photoalbum content with photos
       $urls_for_clearing[] = str_replace('/album/', '/albumcontent/', $photoalbum_url);
       
+      // photoalbum photos map
+      $urls_for_clearing[] = preg_replace('/album.*/', 'map', $photoalbum_url);
+      
   	  // все фото в фотоальбоме
+  	  /*
   	  $c = new Criteria();
   	  $c->add(PhotoPeer::PHOTOALBUM_ID, $photoalbum->getId());
   	  $photoalbum_photos = PhotoPeer::doSelect($c);
@@ -298,7 +309,7 @@ class sfSuperCache
   	  	// плюс ссылка на контент
   	  	// http://www.etapasvi.com/en/photo/content/1243  	  	
   	  	//$urls_for_clearing[] = str_replace('/photo/', '/photo/content/', $photo_url);
-  	  }
+  	  }*/
   	}
     
   	// Фотоальбом

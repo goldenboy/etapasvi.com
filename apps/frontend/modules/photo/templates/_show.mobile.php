@@ -14,6 +14,8 @@
 			<a href="<?php echo $photo->getUrl(); ?>" title="<?php echo $title; ?>">
 				<img src="<?php echo $photo->getThumbUrl(); ?>" 
 				alt="<?php echo $title; ?>" class="photoitem_img"/></a>
+            <a href="<?php echo $photo->getFullUrl(); ?>" 	
+                    title="<?php echo __('Download') ?>" target="_blank" ><?php echo __('Download') ?></a>
 			<?php if (!empty($embed)): /*?>
 			<p class="no_decor small">
 				<?php echo $title; ?>

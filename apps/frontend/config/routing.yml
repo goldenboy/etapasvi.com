@@ -202,6 +202,10 @@ photo_show:
 photoalbum_index:
   url:   /:sf_culture/photo/albums
   requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn|he|zh_TW|de) }
+  
+photo_view:
+  url:   /:sf_culture/photo/view
+  requirements: { sf_culture: (?:en|ru|cs|hu|sk|uk|es|pl|fr|zh_CN|vi|de|it|ja|es|et|ne|bn|he|zh_TW|de) }
 
 video_index:
   url:   /:sf_culture/video/index
