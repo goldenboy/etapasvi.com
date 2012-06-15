@@ -16,7 +16,7 @@ class commentsComponents extends sfComponents
   	
   	$this->comments_page_url = CommentsPeer::getCommentsPageUrl($this->comments_page_url);
   	
-  	$this->comments_identifier = CommentsPeer::getCommentsIdentifier();
+  	$this->comments_identifier = CommentsPeer::getCommentsIdentifier('', '', '', array('id'=>$this->id));
   }
 //  public function executePost(sfWebRequest $request)
 //  {	

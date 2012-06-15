@@ -293,8 +293,10 @@ class CommentsPeer extends BaseCommentsPeer
 			if ( $module == 'photo' && ($action == 'content' || $action == 'albumcontent') ) {
 			    $action = 'show';
 			}
-		  	
-		  	$parameters  = array('id' => $sf_context->getRequest()->getParameter('id'));
+
+			if (!$parameters['id']) {
+		  		$parameters  = array('id' => $sf_context->getRequest()->getParameter('id'));
+			}
 		}
 		$identifier = 	'/' . $culture . '/' . $module . '/' . $action;
 		foreach ($parameters as $k=>$v) {
