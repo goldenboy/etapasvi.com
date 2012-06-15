@@ -812,9 +812,9 @@ function setUrlMobile(url)
 function setUrlLangList(href)
 {
     cur_href_no_culture = href.replace(/http:\/\/[^\/]+\//, '').replace(/[^\/]+\//, '');
-    $("#lang_list a").each(function(index) {
+
+    $("#lang_column a, #lang_plain a").each(function(index) {
         culture_href = $(this).attr('href').replace(/(http:\/\/[^\/]+\/[^\/]+\/).*/, '$1' + cur_href_no_culture);
-        
         $(this).attr('href', culture_href);
     });  
 }
