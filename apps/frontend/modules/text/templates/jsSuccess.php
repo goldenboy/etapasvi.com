@@ -696,7 +696,7 @@ function loadPhotoContent(href, photoalbum_id, hide_content, domain)
         });
     } else {
         setPhotoHtml(album_content[ photoalbum_id ][ photo_id ], photo_id);
-    }
+    }    
     preparePhotoContent();
 }
 
@@ -740,6 +740,13 @@ function setPhotoHtml(photo_html, photo_id)
     $("#offer_tr_uri").val(global_photo_href);
     // вытаскивается ID из URL
     $("#offer_tr_id").val(photo_id);
+    
+    // if link points to the comment, show comments
+    var hash_url = $.address.value();
+    if (hash_url && hash_url.substr(0, 9) == '/comment-') {            
+        showPhotoComments();
+    }    
+    
     loading_photo = false;
 }
 
