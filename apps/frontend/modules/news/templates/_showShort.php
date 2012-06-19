@@ -1,14 +1,16 @@
 <?php if ($newsitem && $newsitem->getBody() != ''): ?>
 
-	<?php $href = $newsitem->getUrl(); ?>
-
+	<?php $href = $newsitem->getUrl(); ?>    
     <h2 class="title">
         <a href="<?php echo $href; ?>" title="<?php echo __('News') ?>">
             <?php echo $newsitem->getTitle(); ?> <?php /*if ($newsitem->getIsTeaching()): ?>[<?php echo __('teaching') ?>]<?php endif */?>
         </a>
+        <a class="small simple" href="<?php echo url_for('@' . $newsitem->getTypeName() . '_index'); ?>">[<?php echo __($newsitem->getTypeNameCapital()) ?>]</a>
     </h2>
-    <div class="date"><?php if ($newsitem->getExtradate()): ?><?php echo $newsitem->getExtradate(); ?> / <?php elseif ($newsitem->getDate()): ?><?php echo format_datetime( $newsitem->getDate(), 'd MMMM yyyy'); ?> / <?php endif ?>
-        <?php echo __('Updated on') ?> <?php echo format_datetime( $newsitem->getUpdatedAtMax(), 'd MMMM yyyy'); ?>
+
+    <div class="date"> 
+        <?php if ($newsitem->getExtradate()): ?><?php echo $newsitem->getExtradate(); ?> / <?php elseif ($newsitem->getDate()): ?><?php echo format_datetime( $newsitem->getDate(), 'd MMMM yyyy'); ?> / <?php endif ?>
+        <?php echo __('Updated on') ?> <?php echo format_datetime( $newsitem->getUpdatedAtMax(), 'd MMMM yyyy'); ?>        
     </div>
     <div class="short_body p">
         <?php if ($newsitem->getImg() && $newsitem->getThumbUrl()): ?>

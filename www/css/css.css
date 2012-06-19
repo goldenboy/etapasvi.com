@@ -1407,6 +1407,15 @@ img.newsitem_img {
 .title a:visited { 
 	color:#867d4a;
 	}
+.title a.simple {
+	color: #00A3A3;
+    text-decoration: underline;
+    position: relative;
+    top: -1px;
+	}
+.title a.simple:visited { 
+	color:#00A3A3;
+	}
 
 .goto_section {
     margin: 0;
