@@ -1,10 +1,5 @@
 <?php slot('alternate') ?>
-<?php
-    $user_cultures_data = UserPeer::getCulturesData();
-    foreach($user_cultures_data as $culture => $culture_data):
-?>
-<link rel="alternate" type="application/rss+xml" title="<?php echo $culture_data['name'] ?>" href="http://feeds.feedburner.com/<?php echo $culture; ?>/etapasvi" />
-<?php endforeach?>
+<link rel="alternate" type="application/rss+xml" title="<?php echo __('Feed') ?>" href="http://feeds.feedburner.com/<?php echo $sf_user->getCulture(); ?>/etapasvi" />
 <?php end_slot() ?>
 
 <?php slot('body_id') ?>body_main<?php end_slot() ?>
