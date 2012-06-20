@@ -1,3 +1,12 @@
+<?php slot('alternate') ?>
+<?php
+    $user_cultures_data = UserPeer::getCulturesData();
+    foreach($user_cultures_data as $culture => $culture_data):
+?>
+<link rel="alternate" type="application/rss+xml" title="<?php echo $culture_data['name'] ?>" href="http://feeds.feedburner.com/<?php echo $culture; ?>/etapasvi" />
+<?php endforeach?>
+<?php end_slot() ?>
+
 <?php slot('body_id') ?>body_main<?php end_slot() ?>
 
 <h1><?php echo __('A message of peace') ?><br/><?php echo __('An appeal to the world') ?></h1>

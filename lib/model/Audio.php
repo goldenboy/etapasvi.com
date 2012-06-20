@@ -151,7 +151,10 @@ class Audio extends BaseAudio
 	 */
 	public function getRssTitle() {
 	  $culture = sfContext::getInstance()->getUser()->getCulture();
-	  return $this->getAuthor($culture, true) . ' - ' . $this->getTitle($culture, true);
+	  $context = sfContext::getInstance();
+	  $i18n    =  $context->getI18N();
+	
+	  return '[' . $i18n->__('Audio') . '] ' . $this->getAuthor($culture, true) . ' - ' . $this->getTitle($culture, true);
 	}
 	
 	/**

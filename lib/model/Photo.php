@@ -244,7 +244,10 @@ class Photo extends BasePhoto
 	 * @return unknown
 	 */
 	public function getRssTitle() {
-	  return $this->getTitle(null, true);
+	  $context = sfContext::getInstance();
+	  $i18n    =  $context->getI18N();
+	
+	  return '[' . $i18n->__('Photo') . '] ' . $this->getTitle(null, true);
 	}
 	
 	/**

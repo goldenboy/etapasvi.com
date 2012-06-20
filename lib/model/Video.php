@@ -84,7 +84,10 @@ class Video extends BaseVideo
 	 * @return unknown
 	 */
 	public function getRssTitle() {
-	  return $this->getTitle(null, true);
+	  $context = sfContext::getInstance();
+	  $i18n    =  $context->getI18N();
+	
+	  return '[' . $i18n->__('Video') . '] ' . $this->getTitle(null, true);
 	}
 	
 	/**
