@@ -3,7 +3,7 @@
 <channel>
     <title>eTapasvi.com</title>
   	<link>http://<?php echo $link ?></link>
-    <description><?php echo __('Dharma Sangha (aka Palden Dorje, Ram Bahadur Bomjan, Buddha Boy from Nepal): News, Photo, Video, Biography, Speeches.') ?></description>        
+    <description><?php echo __('Maha Sambodhi Dharma Sangha: Teachings, News, Photo, Video, Audio, Biography.') ?></description>        
     <language><?php echo $language ?></language>
     <lastBuildDate><?php echo $last_build_date ?></lastBuildDate>
     <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://www.etapasvi.com/<?php echo $language ?>/news/rss" />

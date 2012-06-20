@@ -167,7 +167,7 @@ class newsActions extends sfActions
 	  	 if ($group['type'] != ItemtypesPeer::ITEM_TYPE_NAME_PHOTO && 
 	  	     $group['type'] != ItemtypesPeer::ITEM_TYPE_NAME_VIDEO && $description
 	  	 ) {
-	  	 	$description = strip_tags( $description ) . '...';
+	  	 	$description = $description . '...';
 	  	 } 
 	  	
 	     $items[] = array(
