@@ -54,7 +54,12 @@ var first_cyclic_resize = true;
 var album_content = {};
 // photo is being loaded
 var loading_photo = false;
-
+// url and size of the photos
+var photo_preview_info = [];
+var photo_full_info = [];
+// calculated width and height of the photo in Colorbox
+var new_photo_width;
+var new_photo_height;
 
 $(document).ready(function() {
     var embedded_or_print = false;
@@ -282,8 +287,9 @@ function resizePhotoColorbox(full_photo_img)
     var w_width  = $(window).width() * 1;
     var w_height = $(window).height() * 1;
     // размеры фото
-    var p_width  = $("#photo_full_width").val() * 1;
-    var p_height = $("#photo_full_height").val() * 1;
+    var p_width  = photo_full_info['width'] * 1;
+    var p_height = photo_full_info['height'] * 1;
+
     // подобранные размеры
     var rect_width;
     var rect_height;
@@ -312,10 +318,7 @@ function resizePhotoColorbox(full_photo_img)
         rect_height = min_photo_full_height;
     }   
 
-    // пропорционально изменяем размеры фото
-    var new_photo_width;
-    var new_photo_height;
-    
+    // пропорционально изменяем размеры фото    
     p_width     += 0.0;
     p_height    += 0.0;
     rect_width  += 0.0;
@@ -412,6 +415,8 @@ function cbResize(scroll_to_pos)
     // функция ресайза запускается до тех пор, пока высота всплывающего окна не будет адекватной
     setTimeout(function(){ cbResize(); }, cb_resize_period);
     first_cyclic_resize = false;    
+    
+    switchBetweenFullAndPreview();
 }
 
 //  модификация ссылок на фотографии (не испольузется)
@@ -688,6 +693,7 @@ function loadPhotoContent(href, photoalbum_id, hide_content, domain)
                     //document.location = href;
                     return;
                 }
+  
                 setPhotoHtml(album_content[ photoalbum_id ][ photo_id ], photo_id);
             }/*,
             error: function(data) {   
@@ -726,11 +732,63 @@ function loadPhotoContentByPhotoId(href)
 // set photo HTML 
 function setPhotoHtml(photo_html, photo_id)
 {
+
     if (!photo_html) {
         return;
     }
     // модификация URL
     setUrl(global_photo_href);
+                 
+    // get Preview infoz
+    var matches = photo_html.match(/id="photo_preview_info" value="([^"]+)"/g);
+    var match_item = "";
+
+    for (i in matches) {
+        match_item = matches[ i ] + "";
+        // in IE matches containes more elements than in other browsers
+        if (match_item.match(/photo_preview_info/)) {
+            photo_preview_info_str = match_item;
+        }
+    }
+    if (photo_preview_info_str) {
+        photo_preview_info_str = photo_preview_info_str.replace(/id="photo_preview_info" value="/g, '').replace(/"/g, '').replaceAll(/'/, '"');
+        photo_preview_info     = $.parseJSON(photo_preview_info_str);
+    } else {
+        photo_preview_info = [];
+    }
+
+    if (isReplaceWithPreviewNeeded()) {
+        photo_html = photo_html.replace(/src="([^"]+)" class="full_photo_img"/g, 'src="' + photo_preview_info['url'] + '" class="full_photo_img"');
+
+        // set prev photo to Preview
+        if (typeof photo_preview_info['prev_url'] != "undefined") {
+            photo_html = photo_html.replace(/src="([^"]+)" id="prev_photo_preview"/g, 'src="' + photo_preview_info['prev_url'] + '" id="prev_photo_preview"');
+        }
+        // set next photo to Preview
+        if (typeof photo_preview_info['next_url'] != "undefined") {
+            photo_html = photo_html.replace(/src="([^"]+)" id="next_photo_preview"/g, 'src="' + photo_preview_info['next_url'] + '" id="next_photo_preview"');
+        }
+    }
+    
+    // get Full info
+    var matches = photo_html.match(/id="photo_full_info" value="([^"]+)"/g);
+
+    for (i in matches) {
+        match_item = matches[ i ] + "";
+        // in IE matches containes more elements than in other browsers
+        if (match_item.match(/photo_full_info/)) {
+            photo_full_info_str = match_item;
+        }
+    }
+
+    if (photo_full_info_str) {
+        photo_full_info_str = photo_full_info_str.replace(/id="photo_full_info" value="/g, '').replace(/"/g, '').replaceAll(/'/, '"');
+        photo_full_info     = $.parseJSON(photo_full_info_str);
+    } else {
+        photo_full_info = [];
+    }
+
+    switchBetweenFullAndPreview();
 
     $("#photo_content").replaceWith(photo_html);
     // восстанавливаем форму Предложить перевод
@@ -748,6 +806,37 @@ function setPhotoHtml(photo_html, photo_id)
     }    
     
     loading_photo = false;
+}
+
+// switch between Full and Preview photos depending on viewport size
+function switchBetweenFullAndPreview()
+{
+    // replace IMG address with Preview if needed
+    var img_el = $("#photo_content .full_photo_img");
+
+    if (isReplaceWithPreviewNeeded()) {
+        if (photo_preview_info['url'] && img_el.attr('src') != photo_preview_info['url']) {
+            img_el.attr('src', photo_preview_info['url']);
+        }        
+    } else {
+        if (photo_full_info['url'] && img_el.attr('src') != photo_full_info['url']) {
+            img_el.attr('src', photo_full_info['url']);
+        } 
+    }
+}
+
+// Check if photo should be replaced with Preview
+function isReplaceWithPreviewNeeded()
+{
+    if (page_mode != 'enlarge_photo' 
+        || (page_mode == 'enlarge_photo' 
+            && ((typeof new_photo_width != "undefined" && new_photo_width >= new_photo_height && new_photo_width <= min_photo_full_width)
+            || (typeof new_photo_height != "undefined" && new_photo_height > new_photo_width && new_photo_height <= min_photo_full_width)))
+    ) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // get any element if from URL

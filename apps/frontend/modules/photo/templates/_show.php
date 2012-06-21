@@ -53,19 +53,19 @@
                     $next_url = $next_photo->getUrl();
 				?>
 					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" onclick="loadPhotoContent('<?php echo $next_url; ?>', '<?php echo $photoalbum_id; ?>');return false;">
-						<img src="<?php echo $photo->getFullUrl(); ?>" 
-						alt="<?php echo $title; ?>" class="full_photo_img" /></a>
+                        <?php /* attention: img is used in replace in JS */ ?>
+						<img src="<?php echo $photo->getFullUrl(); ?>" class="full_photo_img"
+						alt="<?php echo $title; ?>"  /></a>
 				<?php else: ?>
-					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" onclick="loadPhotoContent('<?php echo $prev_url; ?>', '<?php echo $photoalbum_id; ?>');return false;"><img src="<?php echo $photo->getFullUrl(); ?>" alt="<?php echo $title; ?>" class="full_photo_img"/></a>                    
+					<a href="<?php echo $prev_url; ?>" title="<?php echo __('Prev') ?>" onclick="loadPhotoContent('<?php echo $prev_url; ?>', '<?php echo $photoalbum_id; ?>');return false;"><img src="<?php echo $photo->getFullUrl(); ?>" class="full_photo_img" alt="<?php echo $title; ?>" /></a>                    
 				<?php endif ?>                
 				<?php 
 				if ($next_photo && $photo->getShow()): 
 				?>
 					<a href="<?php echo $next_url; ?>" title="<?php echo __('Next') ?>" class="next_icon" onclick="loadPhotoContent('<?php echo $next_url; ?>', '<?php echo $photoalbum_id; ?>');return false;"></a>
 				<?php endif ?>
-                <?php /*<input type="hidden" id="photo_full_url" value="<?php echo $photo->getFullUrl(); ?>"/> */ ?>
-                <input type="hidden" id="photo_full_width" value="<?php echo $photo->getWidth(); ?>"/>
-                <input type="hidden" id="photo_full_height" value="<?php echo $photo->getHeight(); ?>"/>
+                <input type="hidden" id="photo_full_info" value="{'url':'<?php echo $photo->getFullUrl(); ?>', 'width':'<?php echo $photo->getWidth(); ?>', 'height':'<?php echo $photo->getHeight(); ?>'}"/>
+                <input type="hidden" id="photo_preview_info" value="{'url':'<?php echo $photo->getPreviewUrl(); ?>','prev_url':'<?php echo ($prev_photo && $prev_photo->getShow() ? $prev_photo->getPreviewUrl() : ''); ?>','next_url':'<?php echo ($next_photo && $next_photo->getShow() ? $next_photo->getPreviewUrl() : ''); ?>'}" />
 			</div>
             <?php /*<img src="http://<?php echo sfConfig::get('app_domain_name'); ?>/i/jquery/colorbox/loading.gif" id="photo_loader" class="hidden center_text" />*/ ?>
 		<?php endif ?>
@@ -140,11 +140,11 @@
 
  			<?php if ($prev_photo && $prev_photo->getShow()): ?>
 				<?php /*<img src="<?php echo $prev_photo->getPreviewUrl(); ?>" style="display:none;"/>*/ ?>
-				<img src="<?php echo $prev_photo->getFullUrl(); ?>" style="display:none;"/>
+				<img src="<?php echo $prev_photo->getFullUrl(); ?>" id="prev_photo_preview" style="display:none;"/>
  			<?php endif ?>
             <?php if ($next_photo && $next_photo->getShow()): ?>
 				<?php /*<img src="<?php echo $next_photo->getPreviewUrl(); ?>" style="display:none;"/> */ ?>
-				<img src="<?php echo $next_photo->getFullUrl(); ?>" style="display:none;"/>
+				<img src="<?php echo $next_photo->getFullUrl(); ?>" id="next_photo_preview" style="display:none;"/>
 			<?php endif ?>
  <?php /*
 	<table class="photo_list">
