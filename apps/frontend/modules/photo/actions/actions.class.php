@@ -233,7 +233,13 @@ class photoActions extends sfActions
 	  $map[ $photo->getId() ] = $photo->getPhotoalbumId();
     }
     
-    echo json_encode($map);
+    //echo json_encode($map);
+    //return sfView::NONE;
+    
+    $this->getResponse()->setContentType('application/json');    
+    $data_json = json_encode($map);
+    
+    $this->getResponse()->setContent($data_json);
     return sfView::NONE;
   }
   
