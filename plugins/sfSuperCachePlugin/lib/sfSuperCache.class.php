@@ -1424,29 +1424,29 @@ class sfSuperCache
     $url = "https://www.cloudflare.com/api_json.html";
     
     // получаем токен
-    $config = UserPeer::getToolsConfig();
-    if (!$config['cloudflare']['api_key']) {
-  	  $result['msg'] = '';
+    if (!sfConfig::get('app_cloudflare_api_key')) {
+  	  $result['msg'] = 'Cloudlfare API Key is not defined';
   	  return $result;    	
     }
     
-    if (!$config['cloudflare']['website']) {
+    if (!sfConfig::get('app_cloudflare_website')) {
   	  $result['msg'] = 'CloudFlare website is not defined';
   	  return $result;      	
     }
     
-    if (!$config['cloudflare']['user']) {
+    if (!sfConfig::get('app_cloudflare_user')) {
   	  $result['msg'] = 'CloudFlare user is not defined';
   	  return $result;
     }  
     
     $data = array(
 	  "a"   => $method,
-	  "z"   => $config['cloudflare']['website'],
-	  "u"   => $config['cloudflare']['user'],
-	  "tkn" => $config['cloudflare']['api_key'],
+	  "z"   => sfConfig::get('app_cloudflare_website'),
+	  "u"   => sfConfig::get('app_cloudflare_user'),
+	  "tkn" => sfConfig::get('app_cloudflare_api_key'),
 	  "v"   => 1,
     );
+
     try {
 	  $ch = curl_init();
 	  curl_setopt($ch, CURLOPT_VERBOSE, 1);

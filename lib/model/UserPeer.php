@@ -1421,14 +1421,12 @@ class UserPeer extends BaseUserPeer
   		return array();
   	}
   	
-	$config = self::getToolsConfig();
-  	
   	switch ($servers) {
   	  case self::SERVERS_BACKENDS:
-  		$servers_array = TextPeer::getGoogleDocAsArray($config['google_docs']['backends']);
+  		$servers_array = TextPeer::getGoogleDocAsArray(sfConfig::get('app_backends'));
   		break;
   	  case self::SERVERS_FRONTENDS:
-  		$servers_array = TextPeer::getGoogleDocAsArray($config['google_docs']['frontends']);
+  		$servers_array = TextPeer::getGoogleDocAsArray(sfConfig::get('app_frontends'));
   		break;
   	}
 
