@@ -27,6 +27,8 @@ remove_cache.sh
 /www/.htpasswd
 /www/nginx_upstreams.conf
 /www/nginx_web_auth.conf
+# personal config
+/config/app.yml
 
 # чтобы файлы не затирались на бэкендах
 /symfony

@@ -41,6 +41,16 @@ class sfDefineEnvironmentConfigHandler extends sfYamlConfigHandler
       $prefix .= $moduleName."_";
     }
 
+    // vivisection
+    // move /config/app.xml at the end, so that it's valus redefine all others
+    foreach ($configFiles as $configFile) {
+      if (strstr($configFile, '/config/app.yml') && !strstr($configFile, 'frontend')
+          && !strstr($configFile, 'backend') && !strstr($configFile, 'plugin')
+      ) {
+      	$configFiles[] = $configFile;
+      }
+    }
+    
     // parse the yaml
     $config = self::getConfiguration($configFiles);
 
