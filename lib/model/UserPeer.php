@@ -783,7 +783,7 @@ class UserPeer extends BaseUserPeer
 	 * @param unknown_type $culture
 	 * @return unknown
 	 */
-	public static function getDisqusCulture( $culture )
+	public static function getDisqusCulture( $culture = '' )
 	{	
 		if (!$culture) {
 			$culture = sfContext::getInstance()->getUser()->getCulture();
