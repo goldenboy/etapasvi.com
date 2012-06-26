@@ -2,11 +2,13 @@
 
 include(dirname(__FILE__).'/../../bootstrap/functional.php');
 
+$params = sfYaml::load(dirname(__FILE__).'/fixtures/fixtures.yml');
+
 $browser = new sfTestFunctional(new sfBrowser());
 
 $browser->
   setHttpHeader('Host', sfConfig::get('app_domain_name'))->
-  get('/en/photo/albumcontent/77')->
+  get('/en/photo/albumcontent/' . $params['albumcontent_id'])->
 
   with('request')->begin()->
     isParameter('module', 'photo')->
@@ -16,7 +18,7 @@ $browser->
   with('response')->begin()->
     isStatusCode(200)->
 // to show a photo
-    matches('/id="ph1oto_preview_info" value="([^"]+)"/')->
+    matches('/id="photo_preview_info" value="([^"]+)"/')->
     matches('/photo_preview_info/')->
     matches('/photo_preview_info/')->
     matches('/id="photo_preview_info" value="/')->
