@@ -10,7 +10,7 @@
         <strong><?php echo __('News'); ?>:</strong>
         <br/>
     <?php foreach($news_list as $news_index=>$news_item): ?>
-        ● <a href="<?php echo $news_item->getUrl(); ?>"><?php echo $news_item->getTitle(); ?></a><br/>
+        – <a href="<?php echo $news_item->getUrl(); ?>"><?php echo $news_item->getTitle(); ?></a><br/>
     <?php endforeach ?>				
     </p>
 <?php endif ?>
