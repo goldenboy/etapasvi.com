@@ -547,8 +547,10 @@
   <?php endif; ?>
 
   <?php $value = object_input_tag($news, 'getDocI18nCs', array (
-  'disabled' => true,
+  'disabled' => false,
   'control_name' => 'news[doc_i18n_cs]',
+  'maxlength' => 255,
+  'style' => 'width:80%',
 )); echo $value ? $value : '&nbsp;' ?>
     </div>
 </div>
