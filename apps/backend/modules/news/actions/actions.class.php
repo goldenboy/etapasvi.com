@@ -229,6 +229,10 @@ if (isset($news['title_i18n_en']))
     {
       $this->news->setLinkI18nEn($news['link_i18n_en']);
     }
+    if (isset($news['doc_i18n_en']))
+    {
+      $this->news->setDocI18nEn($news['doc_i18n_en']);
+    }
     if (isset($news['title_i18n_ru']))
     {
       $this->news->setTitleI18nRu($news['title_i18n_ru']);
@@ -256,6 +260,10 @@ if (isset($news['title_i18n_en']))
     if (isset($news['link_i18n_ru']))
     {
       $this->news->setLinkI18nRu($news['link_i18n_ru']);
+    }
+    if (isset($news['doc_i18n_ru']))
+    {
+      $this->news->setDocI18nRu($news['doc_i18n_ru']);
     }
     if (isset($news['title_i18n_cs']))
     {
@@ -285,6 +293,10 @@ if (isset($news['title_i18n_en']))
     {
       $this->news->setLinkI18nCs($news['link_i18n_cs']);
     }
+    if (isset($news['doc_i18n_cs']))
+    {
+      $this->news->setDocI18nCs($news['doc_i18n_cs']);
+    }
     if (isset($news['title_i18n_hu']))
     {
       $this->news->setTitleI18nHu($news['title_i18n_hu']);
@@ -312,6 +324,10 @@ if (isset($news['title_i18n_en']))
     if (isset($news['link_i18n_hu']))
     {
       $this->news->setLinkI18nHu($news['link_i18n_hu']);
+    }
+    if (isset($news['doc_i18n_hu']))
+    {
+      $this->news->setDocI18nHu($news['doc_i18n_hu']);
     }
     if (isset($news['title_i18n_pl']))
     {
@@ -341,6 +357,10 @@ if (isset($news['title_i18n_en']))
     {
       $this->news->setLinkI18nPl($news['link_i18n_pl']);
     }
+    if (isset($news['doc_i18n_pl']))
+    {
+      $this->news->setDocI18nPl($news['doc_i18n_pl']);
+    }
     if (isset($news['title_i18n_fr']))
     {
       $this->news->setTitleI18nFr($news['title_i18n_fr']);
@@ -368,6 +388,10 @@ if (isset($news['title_i18n_en']))
     if (isset($news['link_i18n_fr']))
     {
       $this->news->setLinkI18nFr($news['link_i18n_fr']);
+    }
+    if (isset($news['doc_i18n_fr']))
+    {
+      $this->news->setDocI18nFr($news['doc_i18n_fr']);
     }
     if (isset($news['title_i18n_zh_cn']))
     {
@@ -397,6 +421,10 @@ if (isset($news['title_i18n_en']))
     {
       $this->news->setLinkI18nZhCN($news['link_i18n_zh_cn']);
     }
+    if (isset($news['doc_i18n_zh_cn']))
+    {
+      $this->news->setDocI18nZhCN($news['doc_i18n_zh_cn']);
+    }
     if (isset($news['title_i18n_vi']))
     {
       $this->news->setTitleI18nVi($news['title_i18n_vi']);
@@ -424,6 +452,10 @@ if (isset($news['title_i18n_en']))
     if (isset($news['link_i18n_vi']))
     {
       $this->news->setLinkI18nVi($news['link_i18n_vi']);
+    }
+    if (isset($news['doc_i18n_vi']))
+    {
+      $this->news->setDocI18nVi($news['doc_i18n_vi']);
     }
     if (isset($news['title_i18n_it']))
     {
@@ -453,6 +485,10 @@ if (isset($news['title_i18n_en']))
     {
       $this->news->setLinkI18nIt($news['link_i18n_it']);
     }
+    if (isset($news['doc_i18n_it']))
+    {
+      $this->news->setDocI18nIt($news['doc_i18n_it']);
+    }
     if (isset($news['title_i18n_ja']))
     {
       $this->news->setTitleI18nJa($news['title_i18n_ja']);
@@ -480,6 +516,10 @@ if (isset($news['title_i18n_en']))
     if (isset($news['link_i18n_ja']))
     {
       $this->news->setLinkI18nJa($news['link_i18n_ja']);
+    }
+    if (isset($news['doc_i18n_ja']))
+    {
+      $this->news->setDocI18nJa($news['doc_i18n_ja']);
     }
     if (isset($news['title_i18n_es']))
     {
@@ -509,6 +549,10 @@ if (isset($news['title_i18n_en']))
     {
       $this->news->setLinkI18nEs($news['link_i18n_es']);
     }
+    if (isset($news['doc_i18n_es']))
+    {
+      $this->news->setDocI18nEs($news['doc_i18n_es']);
+    }
     if (isset($news['title_i18n_et']))
     {
       $this->news->setTitleI18nEt($news['title_i18n_et']);
@@ -536,6 +580,10 @@ if (isset($news['title_i18n_en']))
     if (isset($news['link_i18n_et']))
     {
       $this->news->setLinkI18nEt($news['link_i18n_et']);
+    }
+    if (isset($news['doc_i18n_et']))
+    {
+      $this->news->setDocI18nEt($news['doc_i18n_et']);
     }
     if (isset($news['title_i18n_ne']))
     {
@@ -565,6 +613,10 @@ if (isset($news['title_i18n_en']))
     {
       $this->news->setLinkI18nNe($news['link_i18n_ne']);
     }
+    if (isset($news['doc_i18n_ne']))
+    {
+      $this->news->setDocI18nNe($news['doc_i18n_ne']);
+    }
     if (isset($news['title_i18n_bn']))
     {
       $this->news->setTitleI18nBn($news['title_i18n_bn']);
@@ -592,6 +644,10 @@ if (isset($news['title_i18n_en']))
     if (isset($news['link_i18n_bn']))
     {
       $this->news->setLinkI18nBn($news['link_i18n_bn']);
+    }
+    if (isset($news['doc_i18n_bn']))
+    {
+      $this->news->setDocI18nBn($news['doc_i18n_bn']);
     }
     if (isset($news['title_i18n_he']))
     {
@@ -621,6 +677,10 @@ if (isset($news['title_i18n_en']))
     {
       $this->news->setLinkI18nHe($news['link_i18n_he']);
     }
+    if (isset($news['doc_i18n_he']))
+    {
+      $this->news->setDocI18nHe($news['doc_i18n_he']);
+    }
     if (isset($news['title_i18n_zh_tw']))
     {
       $this->news->setTitleI18nZhTw($news['title_i18n_zh_tw']);
@@ -649,6 +709,10 @@ if (isset($news['title_i18n_en']))
     {
       $this->news->setLinkI18nZhTw($news['link_i18n_zh_tw']);
     }
+    if (isset($news['doc_i18n_zh_tw']))
+    {
+      $this->news->setDocI18nZhTW($news['doc_i18n_zh_tw']);
+    }
     if (isset($news['title_i18n_de']))
     {
       $this->news->setTitleI18nDe($news['title_i18n_de']);
@@ -676,6 +740,10 @@ if (isset($news['title_i18n_en']))
     if (isset($news['link_i18n_de']))
     {
       $this->news->setLinkI18nDe($news['link_i18n_de']);
+    }
+    if (isset($news['doc_i18n_de']))
+    {
+      $this->news->setDocI18nDe($news['doc_i18n_de']);
     }
   }  
   

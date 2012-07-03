@@ -53,6 +53,7 @@ propel:
     translated_by:    { type: varchar(255) }
     link:             { type: varchar(255) }
     extradate:        { type: varchar(255) }
+    doc:              { type: varchar(255) }
     _indexes:
       updated_at_extra:     [updated_at_extra]
     

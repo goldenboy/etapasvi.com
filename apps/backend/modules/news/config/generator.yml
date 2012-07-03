@@ -25,6 +25,7 @@ generator:
           - author_i18n_en
           - translated_by_i18n_en
           - link_i18n_en
+          - doc_i18n_en
         "RU":
           - title_i18n_ru
           - extradate_i18n_ru
@@ -33,6 +34,7 @@ generator:
           - author_i18n_ru
           - translated_by_i18n_ru
           - link_i18n_ru
+          - doc_i18n_ru
         "CS":
           - title_i18n_cs
           - extradate_i18n_cs
@@ -41,6 +43,7 @@ generator:
           - author_i18n_cs
           - translated_by_i18n_cs
           - link_i18n_cs
+          - doc_i18n_cs
         "HU":
           - title_i18n_hu
           - extradate_i18n_hu
@@ -49,6 +52,7 @@ generator:
           - author_i18n_hu
           - translated_by_i18n_hu
           - link_i18n_hu
+          - doc_i18n_hu
         "PL":
           - title_i18n_pl
           - extradate_i18n_pl
@@ -57,6 +61,7 @@ generator:
           - author_i18n_pl
           - translated_by_i18n_pl
           - link_i18n_pl
+          - doc_i18n_pl
         "FR":
           - title_i18n_fr
           - extradate_i18n_fr
@@ -65,6 +70,7 @@ generator:
           - author_i18n_fr
           - translated_by_i18n_fr
           - link_i18n_fr
+          - doc_i18n_fr
         "ZH_CN":
           - title_i18n_zh_CN
           - extradate_i18n_zh_CN
@@ -73,6 +79,7 @@ generator:
           - author_i18n_zh_CN
           - translated_by_i18n_zh_CN
           - link_i18n_zh_CN
+          - doc_i18n_zh_CN
         "VI":
           - title_i18n_vi
           - extradate_i18n_vi
@@ -81,6 +88,7 @@ generator:
           - author_i18n_vi
           - translated_by_i18n_vi
           - link_i18n_vi
+          - doc_i18n_vi
         "IT":
           - title_i18n_it
           - extradate_i18n_it
@@ -89,6 +97,7 @@ generator:
           - author_i18n_it
           - translated_by_i18n_it
           - link_i18n_it
+          - doc_i18n_it
         "JP":
           - title_i18n_ja
           - extradate_i18n_ja
@@ -97,6 +106,7 @@ generator:
           - author_i18n_ja
           - translated_by_i18n_ja
           - link_i18n_ja
+          - doc_i18n_ja
         "ES":
           - title_i18n_es
           - extradate_i18n_es
@@ -105,6 +115,7 @@ generator:
           - author_i18n_es
           - translated_by_i18n_es
           - link_i18n_es
+          - doc_i18n_es
         "ET":
           - title_i18n_et
           - extradate_i18n_et
@@ -113,6 +124,7 @@ generator:
           - author_i18n_et
           - translated_by_i18n_et
           - link_i18n_et
+          - doc_i18n_et
         "NE":
           - title_i18n_ne
           - extradate_i18n_ne
@@ -121,6 +133,7 @@ generator:
           - author_i18n_ne
           - translated_by_i18n_ne
           - link_i18n_ne
+          - doc_i18n_ne
         "BN":
           - title_i18n_bn
           - extradate_i18n_bn
@@ -129,6 +142,7 @@ generator:
           - author_i18n_bn
           - translated_by_i18n_bn
           - link_i18n_bn
+          - doc_i18n_bn
         "HE":
           - title_i18n_he
           - extradate_i18n_he
@@ -137,14 +151,16 @@ generator:
           - author_i18n_he
           - translated_by_i18n_he
           - link_i18n_he
+          - doc_i18n_he
         "ZH_TW":
-          - title_i18n_zh_tw
-          - extradate_i18n_zh_tw
-          - shortbody_i18n_zh_tw
-          - body_i18n_zh_tw
-          - author_i18n_zh_tw
-          - translated_by_i18n_zh_tw
-          - link_i18n_zh_tw
+          - title_i18n_zh_TW
+          - extradate_i18n_zh_TW
+          - shortbody_i18n_zh_TW
+          - body_i18n_zh_TW
+          - author_i18n_zh_TW
+          - translated_by_i18n_zh_TW
+          - link_i18n_zh_TW
+          - doc_i18n_zh_TW
         "DE":
           - title_i18n_de
           - extradate_i18n_de
@@ -153,6 +169,7 @@ generator:
           - author_i18n_de
           - translated_by_i18n_de
           - link_i18n_de
+          - doc_i18n_de
       fields:
         img:
           name: Image
@@ -188,6 +205,9 @@ generator:
         link_i18n_en:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_en:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
 
         title_i18n_ru:
           name: Title
@@ -211,6 +231,9 @@ generator:
           params: disabled=false maxlength=255 style="width:80%"
         link_i18n_ru:
           name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_ru:
+          name: Doc
           params: disabled=false maxlength=255 style="width:80%"
 
         title_i18n_cs:
@@ -236,6 +259,9 @@ generator:
         link_i18n_cs:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_en:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
           
         title_i18n_hu:
           name: Title
@@ -260,6 +286,9 @@ generator:
         link_i18n_hu:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"                 
+        doc_i18n_hu:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
 
         title_i18n_pl:
           name: Title
@@ -283,6 +312,9 @@ generator:
           params: disabled=false maxlength=255 style="width:80%"
         link_i18n_pl:
           name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_pl:
+          name: Doc
           params: disabled=false maxlength=255 style="width:80%"
 
         title_i18n_fr:
@@ -308,6 +340,9 @@ generator:
         link_i18n_fr:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_fr:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
           
         title_i18n_zh_cn:
           name: Title
@@ -332,6 +367,9 @@ generator:
         link_i18n_zh_cn:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"          
+        doc_i18n_zh_cn:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
           
         title_i18n_vi:
           name: Title
@@ -356,7 +394,10 @@ generator:
         link_i18n_vi:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"                  
-          
+        doc_i18n_vi:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
+
         title_i18n_it:
           name: Title
           params: disabled=false maxlength=255 style="width:80%"
@@ -380,7 +421,10 @@ generator:
         link_i18n_it:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"
-          
+        doc_i18n_it:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
+
         title_i18n_ja:
           name: Title
           params: disabled=false maxlength=255 style="width:80%"
@@ -403,6 +447,9 @@ generator:
           params: disabled=false maxlength=255 style="width:80%"
         link_i18n_ja:
           name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_ja:
+          name: Doc
           params: disabled=false maxlength=255 style="width:80%"
 
         title_i18n_es:
@@ -428,6 +475,9 @@ generator:
         link_i18n_es:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_es:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
 
         title_i18n_et:
           name: Title
@@ -451,6 +501,9 @@ generator:
           params: disabled=false maxlength=255 style="width:80%"
         link_i18n_et:
           name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_et:
+          name: Doc
           params: disabled=false maxlength=255 style="width:80%"
           
         title_i18n_ne:
@@ -476,6 +529,9 @@ generator:
         link_i18n_ne:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_ne:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
           
         title_i18n_bn:
           name: Title
@@ -499,6 +555,9 @@ generator:
           params: disabled=false maxlength=255 style="width:80%"
         link_i18n_bn:
           name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_bn:
+          name: Doc
           params: disabled=false maxlength=255 style="width:80%"
 
         title_i18n_he:
@@ -524,6 +583,9 @@ generator:
         link_i18n_he:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_he:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
 
         title_i18n_zh_tw:
           name: Title
@@ -548,6 +610,9 @@ generator:
         link_i18n_zh_tw:
           name: Link
           params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_zh_tw:
+          name: Doc
+          params: disabled=false maxlength=255 style="width:80%"
 
         title_i18n_de:
           name: Title
@@ -571,4 +636,7 @@ generator:
           params: disabled=false maxlength=255 style="width:80%"
         link_i18n_de:
           name: Link
+          params: disabled=false maxlength=255 style="width:80%"
+        doc_i18n_de:
+          name: Doc
           params: disabled=false maxlength=255 style="width:80%"

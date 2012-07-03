@@ -123,6 +123,7 @@ CREATE TABLE `news_i18n`
 	`translated_by` VARCHAR(255),
 	`link` VARCHAR(255),
 	`extradate` VARCHAR(255),
+	`doc` VARCHAR(255),
 	`id` INTEGER  NOT NULL,
 	`culture` VARCHAR(7)  NOT NULL,
 	PRIMARY KEY (`id`,`culture`),
