@@ -42,9 +42,9 @@
                     $body = html_entity_decode($video->getBodyPrepared($sf_user->getCulture(), true));
                 ?>
                 <?php if ($body): ?>
-                    <?php echo $body; ?>
-                    <br/><br/>
+                    <?php echo $body; ?><br/>
                 <?php endif?>
+                <br/>
                 
 				<?php 
                 $author     = $video->getAuthor($sf_user->getCulture(), true);
