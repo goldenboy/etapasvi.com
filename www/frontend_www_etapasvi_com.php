@@ -13,6 +13,12 @@ if (count($matches)) {
 	$_SERVER['REQUEST_URI'] = '/' . $matches[1] . '/photo/view';
 }
 
+// URL rewrite for savetapasviforest.info to /lang/savemaitreyaland/show
+preg_match("/\/([^\/]+)\/.*/", $_SERVER['REQUEST_URI'], $matches);
+if ($_SERVER['HTTP_HOST'] == 'www.savetapasviforest.info') {
+	$_SERVER['REQUEST_URI'] = '/' . $matches[1] . '/savemaitreyaland/show';
+}
+
 // when script lanunched in console HTTP_HOST is not set, so it should be hardcoded
 // otherwise links on website will be generated incorrectly by Symfony
 if (!$_SERVER['HTTP_HOST'] || !strstr($_SERVER['HTTP_HOST'], "dev.")) {

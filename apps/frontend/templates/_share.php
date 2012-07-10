@@ -1,6 +1,7 @@
 <?php $uri = sfContext::getInstance()->getRequest()->getUri(); ?>
 <div id="share">
 
+<?php if (!$no_counter): ?>
 <div class="s_item">
     <script id="_wauw2u" type="text/javascript">var _wau = _wau || [];
     _wau.push(["colored", "ppc9yoe3440f", "w2u", "F2F2F2808080"]);
@@ -9,6 +10,7 @@
     document.getElementsByTagName("head")[0].appendChild(s);
     })();</script>
 </div>
+<?php endif ?>
 
 <div class="s_item">
     <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="etapasvi" data-lang="<?php echo UserPeer::getCultureIso($sf_user->getCulture()); ?>">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> 
