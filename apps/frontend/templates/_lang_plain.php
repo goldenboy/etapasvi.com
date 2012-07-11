@@ -6,7 +6,9 @@
     if (!$user_culture) {
         $user_culture = $sf_user->getCulture();
     }
-    $uri          = $sf_request->getPathInfo();
+    if (!$uri){
+        $uri          = $sf_request->getPathInfo();
+    }
     foreach( UserPeer::getCultures() as $culture) {
         $user_cultures[] = '/' . $culture . '/';
     }

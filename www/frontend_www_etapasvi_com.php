@@ -21,7 +21,7 @@ if ($_SERVER['HTTP_HOST'] == 'www.savetapasviforest.info') {
 
 // when script lanunched in console HTTP_HOST is not set, so it should be hardcoded
 // otherwise links on website will be generated incorrectly by Symfony
-if (!$_SERVER['HTTP_HOST'] || !strstr($_SERVER['HTTP_HOST'], "dev.")) {
+if (!$_SERVER['HTTP_HOST'] || (!strstr($_SERVER['HTTP_HOST'], "dev.") && !strstr($_SERVER['HTTP_HOST'], "www.savetapasviforest.info"))) {
 	$_SERVER['HTTP_HOST']        		= 'www.etapasvi.com';
 }
 // используется Yahoo

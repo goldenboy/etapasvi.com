@@ -1,4 +1,8 @@
-<?php $uri = sfContext::getInstance()->getRequest()->getUri(); ?>
+<?php 
+if (!$uri) {
+    $uri = sfContext::getInstance()->getRequest()->getUri(); 
+}
+?>
 <div id="share">
 
 <?php if (!$no_counter): ?>

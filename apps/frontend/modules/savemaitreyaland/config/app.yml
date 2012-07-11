@@ -1,13 +1,4 @@
 # default values
 all:
-  site_name: SaveTapasviJungle.com
-  protocol: http
-  domain_name: www.savetapasvijungle.com
-  
-  domain_name_full: www.savetapasvijungle.com
-  domain_name_mobile: www.savetapasvijungle.com
   
   vk_api_id: 3032258
-    
-mobile:
-  domain_name: www.savetapasvijungle.com

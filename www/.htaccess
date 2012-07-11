@@ -159,12 +159,13 @@ RewriteRule ^(.*)$ http://www.savetapasviforest.info [L,R=301]
 SetEnvIf Request_URI "^/([^\/]+)/.*" CULTURE=$1
 
 # savetapasviforest.info always opens the same page
-#RewriteCond %{HTTP_HOST} ^.*savetapasviforest\.info$
-#RewriteCond %{DOCUMENT_ROOT}/cache/%{HTTP_HOST}/%{ENV:CULTURE}/photo/viewi.html -f
-#RewriteRule ^([^\/]+)/photo/.* cache/%{HTTP_HOST}/$1/photo/viewi.html [L]
+RewriteCond %{HTTP_HOST} ^www\.savetapasviforest\.info$
+RewriteCond %{DOCUMENT_ROOT}/cache/%{HTTP_HOST}/%{ENV:CULTURE}/savemaitreyaland/showi.html -f
+RewriteRule ^(.*)$ cache/%{HTTP_HOST}/%{ENV:CULTURE}/savemaitreyaland/showi.html [L]
 
 # photo
 RewriteCond %{REQUEST_URI} ^/[^\/]+/photo/[0-9]+.*
+RewriteCond %{HTTP_HOST} ^.*etapasvi\.com$
 RewriteCond %{DOCUMENT_ROOT}/cache/%{HTTP_HOST}/%{ENV:CULTURE}/photo/viewi.html -f
 RewriteCond %{HTTP_HOST} !^dev\.
 RewriteRule ^([^\/]+)/photo/.* cache/%{HTTP_HOST}/$1/photo/viewi.html [L]
@@ -172,12 +173,14 @@ RewriteRule ^([^\/]+)/photo/.* cache/%{HTTP_HOST}/$1/photo/viewi.html [L]
 # for the hosting where web dir is not /www
 RewriteCond %{REQUEST_URI} ^/www/
 RewriteCond %{REQUEST_URI} ^/[^\/]+/photo/[0-9]+.*
+RewriteCond %{HTTP_HOST} ^.*etapasvi\.com$
 RewriteCond %{DOCUMENT_ROOT}/www/cache/%{HTTP_HOST}/%{ENV:CULTURE}/photo/viewi.html -f
 RewriteCond %{HTTP_HOST} !^dev\.
 RewriteRule ^([^\/]+)/photo/.* cache/%{HTTP_HOST}/$1/photo/viewi.html [L]
 
 # Если в кэше домена есть страница, берём её оттуда (sfSuperCachePlugin)
 #RewriteCond %{REQUEST_METHOD} GET
+RewriteCond %{HTTP_HOST} ^.*etapasvi\.com$
 RewriteCond %{DOCUMENT_ROOT}/cache/%{HTTP_HOST}/%{REQUEST_URI}i.html -f
 # Without "AllowOverride FileInfo" one can't user SetEnv and RewriteCond
 RewriteCond %{HTTP_HOST} !^dev\.
@@ -185,6 +188,7 @@ RewriteRule ^(.*) cache/%{HTTP_HOST}/$1i.html [L]
 
 # для площадки, где веб-директория не совпаадет с www
 RewriteCond %{REQUEST_URI} ^/www/
+RewriteCond %{HTTP_HOST} ^.*etapasvi\.com$
 RewriteCond %{DOCUMENT_ROOT}/www/cache/%{HTTP_HOST}/%{REQUEST_URI}i.html -f
 # Without "AllowOverride FileInfo" one can't user SetEnv and RewriteCond
 RewriteCond %{HTTP_HOST} !^dev\.
