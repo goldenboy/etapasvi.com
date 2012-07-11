@@ -24,7 +24,7 @@
 <div class="s_item">
         <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?33"></script>
         <script type="text/javascript">
-          VK.init({apiId: 2405715, onlyWidgets: true});
+          VK.init({apiId: <?php echo sfConfig::get('app_vk_api_id'); ?>, onlyWidgets: true});
         </script>
         <div id="vk_like"></div>
         <script type="text/javascript">

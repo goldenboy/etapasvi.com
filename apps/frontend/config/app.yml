@@ -7,6 +7,7 @@ all:
   
   domain_name_full: www.etapasvi.com
   domain_name_mobile: m.etapasvi.com
+  vk_api_id: 2405715
   
 mobile:
   domain_name: m.etapasvi.com
