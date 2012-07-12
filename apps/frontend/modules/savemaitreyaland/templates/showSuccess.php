@@ -19,7 +19,7 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 </head>
 <body>
 
-<h1><?php echo __('Save Tapasvi Forest') ?></h1>        
+<h1><?php echo __('Save Nepal Tapasvi Forest') ?></h1>        
 
 <span class="desc"><?php echo __('Expand and Preserve Nepal\'s Dharmic Forest') ?></span>
 
@@ -29,27 +29,29 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 	<div id="wowslider-container1">
 	<div class="ws_images"><ul>
     
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/263437_10150699069905226_7171240_n.jpg" alt="" title="A destructive attitude towards the forest has already led to a number of irreversible environmental disasters in various regions of our planet." id="wows1_1"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/1.jpg" alt="" title="<?php echo __('A destructive attitude towards the forest has already led to a number of irreversible environmental disasters in various regions of our planet.') ?>" id="wows1_0"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/dscn0544.jpg" alt="" title="As is happening all over the planet, forests in Nepal are being cut and polluted for monetary gains, which leads to disappearance of birds, animals and plants." id="wows1_0"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/2.jpg" alt="" title="<?php echo __('As is happening all over the planet, forests in Nepal are being cut and polluted for monetary gains, which leads to disappearance of birds, animals and plants.') ?>" id="wows1_1"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/img_9392.jpg" alt="" title="Nepal has been classified by the United Nations Environmental Programme (UNEP) as the highest risk zone in Asia in terms of the ecological crisis." id="wows1_2"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/3.jpg" alt="" title="<?php echo __('Nepal has been classified by the United Nations Environmental Programme (UNEP) as the highest risk zone in Asia in terms of the ecological crisis.') ?>" id="wows1_2"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/img_8960.jpg" alt="" title="Now we have the opportunity to protect the flora and fauna of a pristine jungle in Nepal." id="wows1_3"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/4.jpg" alt="" title="<?php echo __('Now we have the opportunity to protect the flora and fauna of a pristine jungle in Nepal.') ?>" id="wows1_3"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/785.jpg" alt="" title="Maha Sambodhi Dharma Sangha has been meditating for six years (2005-2011) “for the happiness and well-being of the world, for the jungle, for conservation of plants” (&lt;a href='http://www.etapasvi.com/en/video/25/the-boy-with-divine-powers-documentary-on-buddha-boy' target='_blank' &gt;Discovery Channel Documentary&lt;/a&gt;.)" id="wows1_4"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/5.jpg" alt="" title="<?php echo __('Maha Sambodhi Dharma Sangha has been meditating for six years (2005-2011) “for the happiness and well-being of the world, for the jungle, for conservation of plants” (') ?>&lt;a href='http://www.etapasvi.com/en/video/25/the-boy-with-divine-powers-documentary-on-buddha-boy' target='_blank' &gt;<?php echo __('Discovery Channel Documentary') ?>&lt;/a&gt;.)" id="wows1_4"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/1362.jpg" alt="" title="The jungle area surrounding Tapasvi’s (spiritual practitioner) meditation site is an ancient land. " id="wows1_5"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('The jungle area surrounding Tapasvi’s (spiritual practitioner) meditation site is an ancient land.') ?>" id="wows1_5"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/img_9020.jpg" alt="" title="A very small part of this jungle has been already legalized as The Dharmic Forest (Dharma – universal and cosmic truth, righteous duty, virtuous path, liberating law.)" id="wows1_6"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/7.jpg" alt="" title="<?php echo __('A very small part of this jungle has been already legalized as The Dharmic Forest (Dharma – universal and cosmic truth, righteous duty, virtuous path, liberating law.)') ?>" id="wows1_6"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/dscn0559.jpg" alt="" title="It is forbidden to cut trees or grass, kill living beings or pollute the area inside of this area." id="wows1_7"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/8.jpg" alt="" title="<?php echo __('It is forbidden to cut trees or grass, kill living beings or pollute the area inside of this area.') ?>" id="wows1_7"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/270030_10150699092860226_5170591_n.jpg" alt="" title="If the whole area were given The Dharmic Forest status, this would allow it become a safe sanctuary for numerous beautiful birds, animals and plants and help in their conservation." id="wows1_8"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/9.jpg" alt="" title="<?php echo __('If the whole area were given The Dharmic Forest status, this would allow it become a safe sanctuary for numerous beautiful birds, animals and plants and help in their conservation.') ?>" id="wows1_8"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/img_8759.jpg" alt="" title="Now it's your turn." id="wows1_9"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/10.jpg" alt="" title="<?php echo __('Destiny of the living creatures and plants is in your hands.') ?>" id="wows1_9"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/260400_10150699094915226_5401026_n.jpg" alt="" title="" id="wows1_9"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/12.jpg" alt="" title="<?php echo __('Now it\'s your turn...') ?>" id="wows1_11"/></li>
+
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/11.jpg" alt="" title="" id="wows1_10"/></li>
 
 </ul></div>
 

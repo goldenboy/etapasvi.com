@@ -130,6 +130,7 @@
 #wowslider-container1 .ws-title{
 	position: absolute;
 	bottom:26px;
+    font-weight: bold;
 	left: 18px;
 	margin-right:23px;
 	z-index: 50;
@@ -139,11 +140,15 @@
     font-family: Tahoma,Arial,Helvetica;
 	font-size: 14px;
 	opacity:0.6;
-	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);	
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);	
 }
 #wowslider-container1 .ws-title div{
 	padding-top:5px;
 	font-size: 12px;
+}
+#wowslider-container1 .ws-title a {
+    color: white;
+    text-decoration: underline;
 }
 
 /* bottom center */
