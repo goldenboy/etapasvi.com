@@ -37,7 +37,7 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/4.jpg" alt="" title="<?php echo __('Now we have the opportunity to protect the flora and fauna of a pristine jungle in Nepal.') ?>" id="wows1_3"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/5.jpg" alt="" title="<?php echo __('Maha Sambodhi Dharma Sangha has been meditating for six years (2005-2011) “for the happiness and well-being of the world, for the jungle, for conservation of plants” (') ?>&lt;a href='http://www.etapasvi.com/en/video/25/the-boy-with-divine-powers-documentary-on-buddha-boy' target='_blank' &gt;<?php echo __('Discovery Channel Documentary') ?>&lt;/a&gt;.)" id="wows1_4"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/5.jpg" alt="" title="<?php echo __('Maha Sambodhi Dharma Sangha has been meditating for six years (2005-2011) “for the happiness and well-being of the world, for the jungle, for conservation of plants”') ?> (&lt;a href='<?php echo preg_replace('/http:\/\/[^\/]+\//', 'http://' . $app_domain_name . '/', VideoPeer::getUrl(25)); ?>' target='_blank' &gt;<?php echo __('Discovery Channel Documentary') ?>&lt;/a&gt;.)" id="wows1_4"/></li>
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('The jungle area surrounding Tapasvi’s (spiritual practitioner) meditation site is an ancient land.') ?>" id="wows1_5"/></li>
 
@@ -62,11 +62,11 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 	<script type="text/javascript" src="http://<?php echo $app_domain_name; ?>/js/wow_slider/engine1/script.js"></script>
 	<!-- End WOWSlider.com BODY section -->
 
-<a href="javascript:$('#petition_container').show(); $('html, body').animate({scrollTop: $('#petition_container').offset().top}, 3000); void(0);" class="action_btn">Take action</a> 
-<a href="javascript:$('#petition_container').fadeOut('slow'); void(0);" class="no_action_btn">Stay indifferent</a>
+<a href="javascript:$('#petition_container').show(); $('html, body').animate({scrollTop: $('#petition_container').offset().top}, 3000); void(0);" class="action_btn"><?php echo __('Take action') ?></a> 
+<a href="javascript:$('#petition_container').fadeOut('slow'); void(0);" class="no_action_btn"><?php echo __('Stay indifferent') ?></a>
 
 <div id="petition_container">
-<?php echo __('We, the undersigned, respectfully submit to the Ministry of Forests & Soil Conservation, Nepal, this petition for due consideration to grant the legal status of "Dharmic Forest" to the entire jungle area including Pathlaiya, Halkoriya, and Ratanpuri. This petition is also addressed to all Citizens of Nepal whose proactive and loving participation is urgently needed by this beautiful part of Nepal\'s Nature now being threatened.') ?>
+<?php echo __('We, the undersigned, respectfully submit to the Ministry of Forests and Soil Conservation, Nepal, this petition for due consideration to grant the legal status of "Dharmic Forest" to the entire jungle area including Pathlaiya, Halkoriya, and Ratanpuri. This petition is also addressed to all Citizens of Nepal whose proactive and loving participation is urgently needed by this beautiful part of Nepal\'s Nature now being threatened.') ?>
 <br/><br/>
 <script type="text/javascript" src="http://dingo.care2.com/petitions/embed.js"></script><div class="care2PetitionEmbed" rssPath="http://www.thepetitionsite.com/xml/petitions/853/615/922/feed.swf" adSize="large" publisherId="345996060" grabbed="0" flags="#000000" buttonColor="#1aaca6" style="margin: 0 auto; width: 460px;"></div>
 <div class="instr"><?php echo __('Instructions: fill out your details and click "Sign petition" button and then click it again on the next page to approve signing.') ?></div>

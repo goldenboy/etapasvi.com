@@ -55,4 +55,16 @@ class VideoPeer extends BaseVideoPeer
     self::addVisibleCriteria($c);
   }
   
+  /**
+   * Get URL by ID
+   */
+  public static function getUrl($id)
+  {
+    $item = VideoPeer::retrieveByPk( $id );
+    if ($item) {
+        return $item->getUrl();
+    } else {
+        return '';
+    }
+  }
 }

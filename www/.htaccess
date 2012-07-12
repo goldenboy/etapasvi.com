@@ -58,8 +58,8 @@ RewriteRule \.(php|cgi|fcgi|conf|htaccess|htpasswd) /errors/404.html
 RewriteCond %{HTTP_HOST} ^[^\.]*etapasvi\.com$
 RewriteRule ^(.*)$ http://www.etapasvi.com/$1 [L,R=301]
 
-RewriteCond %{HTTP_HOST} ^[^\.]*savetapasviforest\.info$
-RewriteRule ^(.*)$ http://www.savetapasviforest.info/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^[^\.]*savenepaltapasviforest\.info$
+RewriteRule ^(.*)$ http://www.savenepaltapasviforest.info/$1 [L,R=301]
 
 # Перезапись отключена для:  
 # - в запросе есть точка, т.е запрашивается файл
@@ -137,10 +137,10 @@ RewriteCond %{REQUEST_URI} ^/(www/)?(en|ru|cs|hu|pl|fr|zh_CN|vi|ja|es|it|et|ne|b
 RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [L,R=301]
 
 # only /lang/ pages are allowed
-RewriteCond %{HTTP_HOST} ^www\.savetapasviforest\.info$
+RewriteCond %{HTTP_HOST} ^.*savenepaltapasviforest\.info$
 RewriteCond %{REQUEST_URI} !^/(en|ru|cs|hu|pl|fr|zh_CN|vi|ja|es|it|et|ne|bn|he|zh_TW|de)/(\?)?$
 RewriteCond %{REQUEST_URI} !^.*\..*$
-RewriteRule ^(.*)$ http://www.savetapasviforest.info [L,R=301]
+RewriteRule ^(.*)$ http://www.savenepaltapasviforest.info [L,R=301]
 
 #  # Редирект на мобильную версию
 #  # с Полной версии
@@ -158,10 +158,10 @@ RewriteRule ^(.*)$ http://www.savetapasviforest.info [L,R=301]
 # get culture into the variable
 SetEnvIf Request_URI "^/([^\/]+)/.*" CULTURE=$1
 
-# savetapasviforest.info always opens the same page
-RewriteCond %{HTTP_HOST} ^www\.savetapasviforest\.info$
-RewriteCond %{DOCUMENT_ROOT}/cache/%{HTTP_HOST}/%{ENV:CULTURE}/savemaitreyaland/showi.html -f
-RewriteRule ^(.*)$ cache/%{HTTP_HOST}/%{ENV:CULTURE}/savemaitreyaland/showi.html [L]
+# savenepaltapasviforest.info always opens the same page
+RewriteCond %{HTTP_HOST} ^www\.savenepaltapasviforest\.info$
+RewriteCond %{DOCUMENT_ROOT}/cache/%{HTTP_HOST}/%{ENV:CULTURE}/savenepaltapasviforest/showi.html -f
+RewriteRule ^(.*)$ cache/%{HTTP_HOST}/%{ENV:CULTURE}/savenepaltapasviforest/showi.html [L]
 
 # photo
 RewriteCond %{REQUEST_URI} ^/[^\/]+/photo/[0-9]+.*

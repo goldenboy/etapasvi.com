@@ -80,4 +80,17 @@ class NewsPeer extends BaseNewsPeer
   {  
     self::addVisibleCriteria($c);
   }
+  
+  /**
+   * Get URL of News by ID
+   */
+  public static function getUrl($id)
+  {
+    $newsitem = NewsPeer::retrieveByPk( $id );
+    if ($newsitem) {
+        return $newsitem->getUrl();
+    } else {
+        return '';
+    }
+  }
 }
