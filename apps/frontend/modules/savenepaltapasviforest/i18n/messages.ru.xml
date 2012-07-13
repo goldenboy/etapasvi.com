@@ -34,13 +34,18 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Maha Sambodhi Dharma Sangha has been meditating for six years (2005-2011) “for the happiness and well-being of the world, for the jungle, for conservation of plants”</source>
-        <target>Маха Самбодхи Дхарма Сангха медитировал в течение шести лет (2005–2011) «ради счастья и благополучия мира, ради джунглей и животных, ради сохранения растений»</target>
+        <source>Maha Sambodhi Dharma Sangha has been meditating for six years (2005-2011) “for the happiness and well-being of the world, for the jungle, for conservation of plants” (</source>
+        <target>Маха Самбодхи Дхарма Сангха медитировал в течение шести лет (2005–2011) «ради счастья и благополучия мира, ради джунглей и животных, ради сохранения растений» (</target>
       </trans-unit>
       
       <trans-unit id="1">
         <source>Discovery Channel Documentary</source>
         <target>Фильм Дискавери</target>
+      </trans-unit>
+
+      <trans-unit id="1">
+        <source>.)</source>
+        <target>).</target>
       </trans-unit>
       
       <trans-unit id="1">

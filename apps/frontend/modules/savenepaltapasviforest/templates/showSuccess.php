@@ -37,7 +37,7 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/4.jpg" alt="" title="<?php echo __('Now we have the opportunity to protect the flora and fauna of a pristine jungle in Nepal.') ?>" id="wows1_3"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/5.jpg" alt="" title="<?php echo __('Maha Sambodhi Dharma Sangha has been meditating for six years (2005-2011) “for the happiness and well-being of the world, for the jungle, for conservation of plants”') ?> (&lt;a href='<?php echo preg_replace('/http:\/\/[^\/]+\//', 'http://' . $app_domain_name . '/', VideoPeer::getUrl(25)); ?>' target='_blank' &gt;<?php echo __('Discovery Channel Documentary') ?>&lt;/a&gt;.)" id="wows1_4"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/5.jpg" alt="" title="<?php echo __('Maha Sambodhi Dharma Sangha has been meditating for six years (2005-2011) “for the happiness and well-being of the world, for the jungle, for conservation of plants” (') ?>&lt;a href='<?php echo preg_replace('/http:\/\/[^\/]+\//', 'http://' . $app_domain_name . '/', VideoPeer::getUrl(25)); ?>' target='_blank' &gt;<?php echo __('Discovery Channel Documentary') ?>&lt;/a&gt;<?php echo __('.)') ?>" id="wows1_4"/></li>
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('The jungle area surrounding Tapasvi’s (spiritual practitioner) meditation site is an ancient land.') ?>" id="wows1_5"/></li>
 
@@ -74,7 +74,7 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 </div>
 
 <div id="footer">
-<?php include_partial( 'global/share', array('no_counter'=>true, 'uri'=>$uri) ); ?>
+<?php include_partial( 'global/share', array('no_counter'=>true, 'uri'=>$uri, 'only_horizontal'=>true) ); ?>
 <div class="f_line"></div>
 <?php include_partial( 'global/lang_plain', array('app_domain_name'=>sfConfig::get('app_save_jungle_domain_name'), 'uri'=>'/' . $user_culture . '/') ); ?>
 

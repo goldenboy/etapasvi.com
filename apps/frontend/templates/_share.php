@@ -96,7 +96,7 @@ if (!$uri) {
       js.src = "//connect.facebook.net/en_US/all.js#appId=242428519102205&xfbml=1";
       d.getElementsByTagName('head')[0].appendChild(js);
     }(document));</script>
-    <div class="fb-like" data-send="false" data-layout="<?php if (UserPeer::isCultureDirectionRtl($sf_user->getCulture())): ?>box_count<?php else: ?>button_count<?php endif ?>" data-show-faces="true" ></div>
+    <div class="fb-like" data-send="false" data-layout="<?php if (!$only_horizontal && UserPeer::isCultureDirectionRtl($sf_user->getCulture())): ?>box_count<?php else: ?>button_count<?php endif ?>" data-show-faces="true" ></div>
 </div>
     
 <?php /*
