@@ -5,7 +5,6 @@
 <?php include_http_metas() ?>
 <?php include_metas() ?>
 <?php include_slot('meta') ?>
-<meta name="description" content="<?php echo __('Preserve and Expand Nepal\'s Dharmic Forest') ?>" />
 <title><?php echo __(html_entity_decode($sf_response->getTitle())); ?></title>
 <?php 
 $app_domain_name = sfConfig::get('app_domain_name'); 
@@ -21,7 +20,7 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 
 <h1><?php echo __('Save Nepal Tapasvi Forest') ?></h1>        
 
-<span class="desc"><?php echo __('Preserve and Expand Nepal\'s Dharmic Forest') ?></span>
+<span class="desc"><?php echo __('Preserve and Expand Nepal Dharmic Forest') ?></span>
 
 <?php /* include_component('news', 'showText', array('id'=>71));  */ ?>
 
