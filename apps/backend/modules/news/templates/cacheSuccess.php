@@ -25,14 +25,30 @@
 <input type="submit" name="submit_purge_cloudfront" value="Purge CloudFront Cache">   
     <?php if ($cloudfront_result): ?>
         <br/>
-        Result: 
+        Result:
         <?php if ($cloudfront_result['result'] == 'success'): ?>
             <strong style="color:green">
         <?php else: ?>
             <strong style="color:red">
         <?php endif ?>    
-        <?php echo $cloudfront_result['result'] ?></strong><br/>
+        <?php echo $cloudfront_result['result'] ?></strong>, 
         Msg: <?php echo $cloudfront_result['msg'] ?>
+                   
+        <dl>
+        <?php foreach ($cloudfront_result['websites'] as $cf_website => $cf_info): ?>
+            <dt><?php echo $cf_website; ?><dt>
+            <dd>
+                Result:
+                <?php if ($cf_info['result'] == 'success'): ?>
+                    <strong style="color:green">
+                <?php else: ?>
+                    <strong style="color:red">
+                <?php endif ?>    
+                <?php echo $cf_info['result'] ?></strong>, 
+                Msg: <?php echo $cf_info['msg'] ?>
+            <dd>
+        <?php endforeach ?>
+        </dl>
     <?php endif ?>
 </form>
 

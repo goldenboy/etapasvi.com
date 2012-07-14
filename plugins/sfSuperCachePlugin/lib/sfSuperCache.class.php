@@ -1411,70 +1411,78 @@ class sfSuperCache
    */
   public static function cloudFlareRequest($method)
   {
-  	$result = array(
-  	  'result' => 'failure',
-  	  'msg'    => ''
+  	$result_array = array(
+  	  'websites' => array(),
+  	  'result' 	 => '',
+  	  'msg' 	 => '',
   	);
+
+  	$websites = preg_split("/,/", sfConfig::get('app_cloudflare_websites'));
   	
   	if (!$method) {
-  	  $result['msg'] = 'CloudLare API method is not defined';
-  	  return $result;
+  	  $result_array['msg'] = 'CloudLare API method is not defined';
+  	  return $result_array;
   	}
 
     $url = "https://www.cloudflare.com/api_json.html";
     
     // получаем токен
     if (!sfConfig::get('app_cloudflare_api_key')) {
-  	  $result['msg'] = 'Cloudlfare API Key is not defined';
-  	  return $result;    	
+  	  $result_array['msg'] = 'Cloudlfare API Key is not defined';
+  	  return $result_array;    	
     }
     
-    if (!sfConfig::get('app_cloudflare_website')) {
-  	  $result['msg'] = 'CloudFlare website is not defined';
-  	  return $result;      	
+    if (!$websites) {
+  	  $result_array['msg'] = 'CloudFlare website is not defined';
+  	  return $result_array;      	
     }
     
     if (!sfConfig::get('app_cloudflare_user')) {
-  	  $result['msg'] = 'CloudFlare user is not defined';
-  	  return $result;
-    }  
+  	  $result_array['msg'] = 'CloudFlare user is not defined';
+  	  return $result_array;
+    }      
     
-    $data = array(
-	  "a"   => $method,
-	  "z"   => sfConfig::get('app_cloudflare_website'),
-	  "u"   => sfConfig::get('app_cloudflare_user'),
-	  "tkn" => sfConfig::get('app_cloudflare_api_key'),
-	  "v"   => 1,
-    );
-
-    try {
-	  $ch = curl_init();
-	  curl_setopt($ch, CURLOPT_VERBOSE, 1);
-	  curl_setopt($ch, CURLOPT_FORBID_REUSE, true); 
-	  curl_setopt($ch, CURLOPT_URL, $url);
-	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	  curl_setopt($ch, CURLOPT_POST, 1);
-	  curl_setopt($ch, CURLOPT_POSTFIELDS, $data ); 
-	  curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-	  $result 		= curl_exec($ch);
-	  $error 			= curl_error($ch);
-	  $http_code 		= curl_getinfo($ch ,CURLINFO_HTTP_CODE);
-	  curl_close($ch);
-    } catch (Exception $e) {
-  	  $result['msg'] = $e->getMessage();   	
-      return $result;
-    }
-   
-    if ($http_code != 200) {
-  	  $result['msg'] = "Error: $error";
-  	  return $result;
-    } else {
-      $result_object = json_decode($result);
-      return array(
-      	'result' => $result_object->result,
-      	'msg' => $result_object->msg,
+    foreach ($websites as $website) {
+      $data = array(
+	    "a"   => $method,
+	    //"z"   => sfConfig::get('app_cloudflare_websites'),
+	    "z"   => $website,
+	    "u"   => sfConfig::get('app_cloudflare_user'),
+	    "tkn" => sfConfig::get('app_cloudflare_api_key'),
+	    "v"   => 1,
       );
+
+      try {
+	    $ch = curl_init();
+	    curl_setopt($ch, CURLOPT_VERBOSE, 1);
+	    curl_setopt($ch, CURLOPT_FORBID_REUSE, true); 
+	    curl_setopt($ch, CURLOPT_URL, $url);
+	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	    curl_setopt($ch, CURLOPT_POST, 1);
+	    curl_setopt($ch, CURLOPT_POSTFIELDS, $data ); 
+	    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+	    $result 		= curl_exec($ch);
+	    $error 			= curl_error($ch);
+	    $http_code 		= curl_getinfo($ch ,CURLINFO_HTTP_CODE);
+	    curl_close($ch);
+      } catch (Exception $e) {
+        $result_array['msg'] = $e->getMessage();   	
+        return $result_array;
+      }
+   
+      if ($http_code != 200) {
+  	    $result_array['websites'][ $website ]['msg'] = "Error: $error";
+  	    return $result;
+      } else {
+        $result_object = json_decode($result);
+        $result_array['websites'][ $website ] = array(
+      	  'result' => $result_object->result,
+      	  'msg' => $result_object->msg,
+        );
+      }
     }
+  
+    return $result_array;
   }
   
   /**
