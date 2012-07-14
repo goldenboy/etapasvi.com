@@ -42,7 +42,7 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/7.jpg" alt="" title="<?php echo __('The jungle area surrounding Tapasvi’s (spiritual practitioner) meditation site is an ancient land.') ?>" id="wows1_5"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('Halkhoriya is the historical forest: some events, described in the the oldest epics (Ramayana, Mahabharata), took place here; the divine avatar Ram and legendary warrior Arjuna came to this place thousands years ago.') ?>" id="wows1_6"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('Halkhoriya is the historical forest: some events, described in the oldest epics (Ramayana, Mahabharata), took place here; the divine avatar Ram and legendary warrior Arjuna came to this place thousands years ago.') ?>" id="wows1_6"/></li>
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/13.jpg" alt="" title="<?php echo __('A very small part of this jungle has been already legalized as The Dharmic Forest (Dharma – universal and cosmic truth, righteous duty, virtuous path, liberating law.)') ?>" id="wows1_7"/></li>
 
