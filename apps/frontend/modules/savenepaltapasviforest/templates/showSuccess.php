@@ -21,6 +21,8 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 <h1><?php echo __('Save Nepal Tapasvi Forest') ?></h1>        
 
 <span class="desc"><?php echo __('Preserve and Expand Nepal Dharmic Forest') ?></span>
+<br/>
+<?php include_partial( 'global/lang_plain', array('app_domain_name'=>sfConfig::get('app_save_jungle_domain_name'), 'uri'=>'/' . $user_culture . '/') ); ?>
 
 <?php /* include_component('news', 'showText', array('id'=>71));  */ ?>
 
@@ -40,7 +42,7 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/7.jpg" alt="" title="<?php echo __('The jungle area surrounding Tapasvi’s (spiritual practitioner) meditation site is an ancient land.') ?>" id="wows1_5"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('Halkhoriya is the historical forest, where Shiva and Co lived, and where the legendary battles of Arjuna and Co were fought.') ?>" id="wows1_6"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('Halkhoriya is the historical forest, where Shiva and His disciples, legendary Arjuna and his brothers lived.') ?>" id="wows1_6"/></li>
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/13.jpg" alt="" title="<?php echo __('A very small part of this jungle has been already legalized as The Dharmic Forest (Dharma – universal and cosmic truth, righteous duty, virtuous path, liberating law.)') ?>" id="wows1_7"/></li>
 
@@ -77,7 +79,6 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 <div id="footer">
 <?php include_partial( 'global/share', array('no_counter'=>true, 'uri'=>$uri, 'only_horizontal'=>true, 'vk_api_id'=>sfConfig::get('app_save_jungle_vk_api_id')) ); ?>
 <div class="f_line"></div>
-<?php include_partial( 'global/lang_plain', array('app_domain_name'=>sfConfig::get('app_save_jungle_domain_name'), 'uri'=>'/' . $user_culture . '/') ); ?>
 
 <a href="http://www.etapasvi.com" class="simple">www.eTapasvi.com</a>
 </div>
