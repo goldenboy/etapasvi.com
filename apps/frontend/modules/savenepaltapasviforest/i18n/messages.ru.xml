@@ -9,8 +9,8 @@
       </trans-unit>
 
       <trans-unit id="1">
-        <source>Expand and Preserve Nepal's Dharmic Forest</source>
-        <target>Расширим и защитим Лес Дхармы Непала</target>
+        <source>Preserve and Expand Nepal's Dharmic Forest</source>
+        <target>Защитим и расширим Лес Дхармы Непала</target>
       </trans-unit>
       
       <trans-unit id="1">
@@ -51,6 +51,11 @@
       <trans-unit id="1">
         <source>The jungle area surrounding Tapasvi’s (spiritual practitioner) meditation site is an ancient land.</source>
         <target>Джунгли, окружающие место медитации Тапасви (духовно практикующий) – это древнейшие земли.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Halkhoriya is the historical forest, where Shiva and Co lived, and where the legendary battles of Arjuna and Co were fought.</source>
+        <target>Халкория – это исторический лес, где жил Шива и где происходили легендарные сражения Арджуны.</target>
       </trans-unit>
       
       <trans-unit id="1">

@@ -9,5 +9,9 @@ all:
   domain_name_mobile: m.etapasvi.com
   vk_api_id: 2405715
   
+#  save_jungle
+  save_jungle_domain_name: www.savenepaltapasviforest.info
+  save_jungle_vk_api_id: 3035394
+  
 mobile:
   domain_name: m.etapasvi.com

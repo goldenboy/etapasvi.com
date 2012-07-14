@@ -21,7 +21,7 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 
 <h1><?php echo __('Save Nepal Tapasvi Forest') ?></h1>        
 
-<span class="desc"><?php echo __('Expand and Preserve Nepal\'s Dharmic Forest') ?></span>
+<span class="desc"><?php echo __('Preserve and Expand Nepal\'s Dharmic Forest') ?></span>
 
 <?php /* include_component('news', 'showText', array('id'=>71));  */ ?>
 
@@ -39,19 +39,21 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/5.jpg" alt="" title="<?php echo __('Maha Sambodhi Dharma Sangha has been meditating for six years (2005-2011) “for the happiness and well-being of the world, for the jungle, for conservation of plants” (') ?>&lt;a href='<?php echo preg_replace('/http:\/\/[^\/]+\//', 'http://' . $app_domain_name . '/', VideoPeer::getUrl(25)); ?>' target='_blank' &gt;<?php echo __('Discovery Channel Documentary') ?>&lt;/a&gt;<?php echo __('.)') ?>" id="wows1_4"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('The jungle area surrounding Tapasvi’s (spiritual practitioner) meditation site is an ancient land.') ?>" id="wows1_5"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/7.jpg" alt="" title="<?php echo __('The jungle area surrounding Tapasvi’s (spiritual practitioner) meditation site is an ancient land.') ?>" id="wows1_5"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/7.jpg" alt="" title="<?php echo __('A very small part of this jungle has been already legalized as The Dharmic Forest (Dharma – universal and cosmic truth, righteous duty, virtuous path, liberating law.)') ?>" id="wows1_6"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('Halkhoriya is the historical forest, where Shiva and Co lived, and where the legendary battles of Arjuna and Co were fought.') ?>" id="wows1_6"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/8.jpg" alt="" title="<?php echo __('It is forbidden to cut trees or grass, kill living beings or pollute the area inside of this area.') ?>" id="wows1_7"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/13.jpg" alt="" title="<?php echo __('A very small part of this jungle has been already legalized as The Dharmic Forest (Dharma – universal and cosmic truth, righteous duty, virtuous path, liberating law.)') ?>" id="wows1_7"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/9.jpg" alt="" title="<?php echo __('If the whole area were given The Dharmic Forest status, this would allow it become a safe sanctuary for numerous beautiful birds, animals and plants and help in their conservation.') ?>" id="wows1_8"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/8.jpg" alt="" title="<?php echo __('It is forbidden to cut trees or grass, kill living beings or pollute the area inside of this area.') ?>" id="wows1_8"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/10.jpg" alt="" title="<?php echo __('Destiny of the living creatures and plants is in your hands.') ?>" id="wows1_9"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/9.jpg" alt="" title="<?php echo __('If the whole area were given The Dharmic Forest status, this would allow it become a safe sanctuary for numerous beautiful birds, animals and plants and help in their conservation.') ?>" id="wows1_9"/></li>
+
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/10.jpg" alt="" title="<?php echo __('Destiny of the living creatures and plants is in your hands.') ?>" id="wows1_10"/></li>
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/12.jpg" alt="" title="<?php echo __('Now it\'s your turn...') ?>" id="wows1_11"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/11.jpg" alt="" title="" id="wows1_10"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/11.jpg" alt="" title="" id="wows1_12"/></li>
 
 </ul></div>
 
@@ -74,7 +76,7 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 </div>
 
 <div id="footer">
-<?php include_partial( 'global/share', array('no_counter'=>true, 'uri'=>$uri, 'only_horizontal'=>true) ); ?>
+<?php include_partial( 'global/share', array('no_counter'=>true, 'uri'=>$uri, 'only_horizontal'=>true, 'vk_api_id'=>sfConfig::get('app_save_jungle_vk_api_id')) ); ?>
 <div class="f_line"></div>
 <?php include_partial( 'global/lang_plain', array('app_domain_name'=>sfConfig::get('app_save_jungle_domain_name'), 'uri'=>'/' . $user_culture . '/') ); ?>
 
