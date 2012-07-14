@@ -5,7 +5,7 @@
 <?php include_http_metas() ?>
 <?php include_metas() ?>
 <?php include_slot('meta') ?>
-
+<meta name="description" content="<?php echo __('Preserve and Expand Nepal\'s Dharmic Forest') ?>" />
 <title><?php echo __(html_entity_decode($sf_response->getTitle())); ?></title>
 <?php 
 $app_domain_name = sfConfig::get('app_domain_name'); 
