@@ -57,6 +57,10 @@
     }
 */
 
+#menu #mi_dharmic_forest a {
+    color: #df3f3f;
+    }
+
 /* embedded */
 body.embedded .bread_crumbs,
 body.embedded #menu, body.print_version #menu,

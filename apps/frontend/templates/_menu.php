@@ -18,6 +18,7 @@
 		<li id="mi_faq"><a href="<?php echo url_for('@faq', true); ?>" title="<?php echo __('FAQ') ?>"><?php echo __('FAQ') ?></a></li>
 		<li id="mi_blessing"><a href="<?php echo url_for('@blessing', true); ?>" title="<?php echo __('Blessing') ?>"><?php echo __('Blessing') ?></a></li>
 		<li id="mi_project"><a href="<?php echo url_for('@project', true); ?>" title="<?php echo __('Dharma Hall') ?>"><?php echo __('Dharma Hall') ?></a></li>
+		<li id="mi_dharmic_forest"><a href="http://www.savenepaltapasviforest.info" title="<?php echo __('Dharmic Forest') ?>" target="_blank"><?php echo __('Dharmic Forest') ?></a></li>
 <?php /*
 		<li id="mi_religious_forest"><a href="<?php echo url_for('@religious_forest', true); ?>" title="<?php echo __('Religious Forest') ?>"><?php echo __('Religious Forest') ?></a></li>
 */
