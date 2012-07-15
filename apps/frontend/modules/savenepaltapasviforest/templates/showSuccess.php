@@ -42,9 +42,13 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/7.jpg" alt="" title="<?php echo __('The jungle area surrounding Tapasvi’s (spiritual practitioner) meditation site is an ancient land.') ?>" id="wows1_5"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('Halkhoriya is the historical forest: some events, described in the oldest epics (Ramayana, Mahabharata), took place here; the divine avatar Ram and legendary warrior Arjuna came to this place thousands years ago.') ?>" id="wows1_6"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/6.jpg" alt="" title="<?php echo __('Halkhoriya is the historical forest...') ?>" id="wows1_6"/></li>
 
-<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/13.jpg" alt="" title="<?php echo __('A very small part of this jungle has been already legalized as The Dharmic Forest (Dharma – universal and cosmic truth, righteous duty, virtuous path, liberating law.)') ?>" id="wows1_7"/></li>
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/14.jpg" alt="" title="<?php echo __('Some events, described in the oldest epics (Ramayana, Mahabharata), took place here; the divine avatar Ram and legendary warrior Arjuna came to this place thousands years ago.') ?>" id="wows1_6"/></li>
+
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/15.jpg" alt="" title="<?php echo __('A very small part of this jungle has been already legalized as The Dharmic Forest.') ?>" id="wows1_7"/></li>
+
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/13.jpg" alt="" title="<?php echo __('Dharma – universal and cosmic truth, righteous duty, virtuous path, liberating law.') ?>" id="wows1_7"/></li>
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/8.jpg" alt="" title="<?php echo __('It is forbidden to cut trees or grass, kill living beings or pollute the area inside of this area.') ?>" id="wows1_8"/></li>
 
@@ -53,6 +57,8 @@ $uri = 'http://' . sfConfig::get('app_save_jungle_domain_name') . '/' . $user_cu
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/10.jpg" alt="" title="<?php echo __('Destiny of the living creatures and plants is in your hands.') ?>" id="wows1_10"/></li>
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/12.jpg" alt="" title="<?php echo __('Now it\'s your turn...') ?>" id="wows1_11"/></li>
+
+<li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/16.jpg" alt="" title="" id="wows1_12"/></li>
 
 <li><img src="http://<?php echo $app_domain_name; ?>/i/jquery/wow_slider/images/11.jpg" alt="" title="" id="wows1_12"/></li>
 

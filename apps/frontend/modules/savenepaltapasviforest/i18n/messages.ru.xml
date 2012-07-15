@@ -54,13 +54,23 @@
       </trans-unit>
       
       <trans-unit id="1">
-        <source>Halkhoriya is the historical forest: some events, described in the oldest epics (Ramayana, Mahabharata), took place here; the divine avatar Ram and legendary warrior Arjuna came to this place thousands years ago.</source>
-        <target>Халкория – это исторический лес: некоторые события, описанные в старинных эпосах (Рамаяна, Махабхарата), происходили здесь; божественный аватар Рам и легендарный воин Арджуна были в этом месте тысячи лет назад.</target>
+        <source>Halkhoriya is the historical forest...</source>
+        <target>Халкория – это исторический лес...</target>
       </trans-unit>
       
       <trans-unit id="1">
-        <source>A very small part of this jungle has been already legalized as The Dharmic Forest (Dharma – universal and cosmic truth, righteous duty, virtuous path, liberating law.)</source>
-        <target>Очень небольшая часть джунглей уже утверждена как Лес Дхармы (Дхарма – универсальная или абсолютная истина, праведный долг, добродетельный путь, освобождающий закон).</target>
+        <source>Some events, described in the oldest epics (Ramayana, Mahabharata), took place here; the divine avatar Ram and legendary warrior Arjuna came to this place thousands years ago.</source>
+        <target>Некоторые события, описанные в старинных эпосах (Рамаяна, Махабхарата), происходили здесь; божественный аватар Рам и легендарный воин Арджуна были в этом месте тысячи лет назад.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>A very small part of this jungle has been already legalized as The Dharmic Forest.</source>
+        <target>Очень небольшая часть джунглей уже утверждена как Лес Дхармы.</target>
+      </trans-unit>
+      
+      <trans-unit id="1">
+        <source>Dharma – universal and cosmic truth, righteous duty, virtuous path, liberating law.</source>
+        <target>Дхарма – универсальная или абсолютная истина, праведный долг, добродетельный путь, освобождающий закон.</target>
       </trans-unit>
       
       <trans-unit id="1">
